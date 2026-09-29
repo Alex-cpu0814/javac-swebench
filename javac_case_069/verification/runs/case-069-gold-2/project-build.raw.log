@@ -1,0 +1,43 @@
+Buildfile: /testbed/build.xml
+
+bindings:
+
+init:
+    [mkdir] Created dir: /testbed/bin
+
+check-dependencies:
+  [kotlinc] /testbed/bin/libs/kotlinc/build.txt doesn't exist
+
+update-dependencies:
+    [mkdir] Created dir: /testbed/bin/libs
+    [mkdir] Created dir: /testbed/bin/libs/java
+
+-lib-download:
+
+BUILD FAILED
+/testbed/build.xml:30: The following error occurred while executing this line:
+/testbed/update-dependencies.xml:42: The following error occurred while executing this line:
+/testbed/update-dependencies.xml:48: The following error occurred while executing this line:
+/testbed/update-dependencies.xml:72: The following error occurred while executing this line:
+/testbed/config/build-definitions.xml:273: The following error occurred while executing this line:
+/testbed/config/build-definitions.xml:259: The following error occurred while executing this line:
+/testbed/config/build-definitions.xml:260: java.net.UnknownHostException: central.maven.org
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at java.net.Socket.connect(Socket.java:556)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:465)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:560)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:246)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:341)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:359)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1245)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1179)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1073)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1007)
+	at org.apache.tools.ant.taskdefs.Get$GetThread.openConnection(Get.java:778)
+	at org.apache.tools.ant.taskdefs.Get$GetThread.get(Get.java:688)
+	at org.apache.tools.ant.taskdefs.Get$GetThread.run(Get.java:678)
+
+Total time: 0 seconds

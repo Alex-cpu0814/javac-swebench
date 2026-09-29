@@ -1,0 +1,1526 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 2.54kB 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:d57e5d0e3e5dd4cabb74feccfdb36249a58c76a3354a33ee8737813df93b7e0d
+#2 ...
+
+#3 [auth] library/eclipse-temurin:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:d57e5d0e3e5dd4cabb74feccfdb36249a58c76a3354a33ee8737813df93b7e0d
+#2 DONE 21.7s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 54B done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:d57e5d0e3e5dd4cabb74feccfdb36249a58c76a3354a33ee8737813df93b7e0d
+#5 resolve docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:d57e5d0e3e5dd4cabb74feccfdb36249a58c76a3354a33ee8737813df93b7e0d
+#5 ...
+
+#6 [auth] library/eclipse-temurin:pull token for registry-1.docker.io
+#6 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:d57e5d0e3e5dd4cabb74feccfdb36249a58c76a3354a33ee8737813df93b7e0d
+#5 resolve docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:d57e5d0e3e5dd4cabb74feccfdb36249a58c76a3354a33ee8737813df93b7e0d 21.2s done
+#5 DONE 21.2s
+
+#7 [2/5] RUN apt-get update     && apt-get install -y --fix-missing --no-install-recommends ant ca-certificates file g++ gcc git make python3 python-is-python3 unzip xz-utils     && apt-get clean     && rm -rf /var/lib/apt/lists/*
+#7 CACHED
+
+#8 [3/5] RUN git clone --no-checkout "https://github.com/LWJGL/lwjgl3.git" /testbed     && cd /testbed     && git checkout --detach "427e278dc2402aca025cacd58a80eb4eaa8c4832"     && git remote remove origin     && git config core.autocrlf false     && git for-each-ref --format='delete %(refname)' refs/heads refs/remotes refs/tags | git update-ref --stdin     && git reflog expire --expire=now --all     && git gc --prune=now     && test "$(git rev-parse HEAD)" = "427e278dc2402aca025cacd58a80eb4eaa8c4832"     && test -z "$(git status --porcelain)"     && mkdir -p /benchmark /inputs /results
+#8 CACHED
+
+#9 [4/5] RUN cd /testbed     && sed -i 's#http://central.maven.org/maven2#https://repo1.maven.org/maven2#g' config/build-definitions.xml     && ant -Dbuild.offline=false         -Dbinding.assimp=false -Dbinding.bgfx=false -Dbinding.egl=false         -Dbinding.glfw=false -Dbinding.jawt=false -Dbinding.jemalloc=false         -Dbinding.lmdb=false -Dbinding.lz4=false -Dbinding.nanovg=false         -Dbinding.nfd=false -Dbinding.nuklear=false -Dbinding.odbc=false         -Dbinding.openal=false -Dbinding.opencl=false -Dbinding.opengl=false         -Dbinding.opengles=false -Dbinding.openvr=false -Dbinding.par=false         -Dbinding.remotery=false -Dbinding.rpmalloc=false -Dbinding.sse=false         -Dbinding.stb=false -Dbinding.tinyexr=false -Dbinding.tinyfd=false         -Dbinding.tootle=false -Dbinding.vma=false -Dbinding.vulkan=false         -Dbinding.xxhash=false -Dbinding.yoga=false -Dbinding.zstd=false         compile-templates compile-tests compile-native     && git checkout -- config/build-definitions.xml
+#9 0.350 Buildfile: /testbed/build.xml
+#9 0.549 
+#9 0.549 bindings:
+#9 0.878 
+#9 0.878 init:
+#9 0.884     [mkdir] Created dir: /testbed/bin
+#9 0.902 
+#9 0.902 check-dependencies:
+#9 0.904   [kotlinc] /testbed/bin/libs/kotlinc/build.txt doesn't exist
+#9 0.916 
+#9 0.916 update-dependencies:
+#9 0.916     [mkdir] Created dir: /testbed/bin/libs
+#9 0.917     [mkdir] Created dir: /testbed/bin/libs/java
+#9 0.930 
+#9 0.930 -lib-download:
+#9 2.240 
+#9 2.240 -kotlinc-download:
+#9 2.241   [kotlinc] Getting: https://github.com/JetBrains/kotlin/releases/download/v1.2.60/kotlin-compiler-1.2.60.zip
+#9 2.241   [kotlinc] To: /testbed/bin/libs/kotlin-compiler-1.2.60.zip
+#9 2.805   [kotlinc] https://github.com/JetBrains/kotlin/releases/download/v1.2.60/kotlin-compiler-1.2.60.zip moved to https://release-assets.githubusercontent.com/github-production-release-asset/3432266/da9e8e88-95b8-11e8-83c2-9d27aa985dd0?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-09-29T09%3A53%3A41Z&rscd=attachment%3B+filename%3Dkotlin-compiler-1.2.60.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-09-29T08%3A53%3A28Z&ske=2026-09-29T09%3A53%3A41Z&sks=b&skv=2018-11-09&sig=NS0RnwvJhSELq5WdVYpCozjYIIBhbSMKFf8wT7Jodzs%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MDY3NTE1MywibmJmIjoxNzkwNjczMzUzLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.FP1OpCxz6S7bW8ChHjfJF7qr6ctXgJw4XPmM3boBivw&response-content-disposition=attachment%3B%20filename%3Dkotlin-compiler-1.2.60.zip&response-content-type=application%2Foctet-stream
+#9 4.301   [kotlinc] ....................................................
+#9 4.867   [kotlinc] ....................................................
+#9 5.059   [kotlinc] ....................................................
+#9 5.144   [kotlinc] ....................................................
+#9 5.270   [kotlinc] ....................................................
+#9 5.364   [kotlinc] ....................................................
+#9 5.408   [kotlinc] ....................................................
+#9 5.448   [kotlinc] ....................................................
+#9 5.485   [kotlinc] ....................................................
+#9 5.555   [kotlinc] ....................................................
+#9 5.609   [kotlinc] ....................................................
+#9 5.655   [kotlinc] ....................................................
+#9 5.694   [kotlinc] ....................................................
+#9 5.726   [kotlinc] ....................................................
+#9 5.752   [kotlinc] ....................................................
+#9 5.787   [kotlinc] ....................................................
+#9 5.816   [kotlinc] ....................................................
+#9 5.844   [kotlinc] ....................................................
+#9 5.871   [kotlinc] ....................................................
+#9 5.901   [kotlinc] ....................................................
+#9 5.926   [kotlinc] ....................................................
+#9 5.954   [kotlinc] ....................................................
+#9 6.066   [kotlinc] ....................................................
+#9 6.084   [kotlinc] ....................................................
+#9 6.151   [kotlinc] ....................................................
+#9 6.187   [kotlinc] ....................................................
+#9 6.218   [kotlinc] ....................................................
+#9 6.289   [kotlinc] ....................................................
+#9 6.323   [kotlinc] ....................................................
+#9 6.361   [kotlinc] ....................................................
+#9 6.385   [kotlinc] ....................................................
+#9 6.422   [kotlinc] ....................................................
+#9 6.490   [kotlinc] ....................................................
+#9 6.542   [kotlinc] ....................................................
+#9 6.574   [kotlinc] ....................................................
+#9 6.636   [kotlinc] ....................................................
+#9 6.684   [kotlinc] ....................................................
+#9 6.714   [kotlinc] ....................................................
+#9 6.783   [kotlinc] ....................................................
+#9 6.818   [kotlinc] ....................................................
+#9 6.876   [kotlinc] ....................................................
+#9 6.926   [kotlinc] ....................................................
+#9 6.994   [kotlinc] ....................................................
+#9 7.018   [kotlinc] ..........................
+#9 7.028   [kotlinc] Expanding: /testbed/bin/libs/kotlin-compiler-1.2.60.zip into /testbed/bin/libs
+#9 7.328   [kotlinc] Deleting: /testbed/bin/libs/kotlin-compiler-1.2.60.zip
+#9 7.333   [kotlinc] The Kotlin compiler was updated to build: 1.2.60
+#9 7.345 
+#9 7.345 -compile-generator:
+#9 7.347 [Generator] Compiling Kotlin generator...
+#9 7.348     [mkdir] Created dir: /testbed/bin/classes/generator
+#9 7.918   [kotlinc] Compiling [/testbed/modules/generator/src/main/kotlin] => [/testbed/bin/classes/generator]
+#9 8.146   [kotlinc] info: kotlinc-jvm 1.2.60 (JRE 1.8.0_502-b07)
+#9 20.46   [kotlinc] info: PERF: INIT: Compiler initialized in 565 ms
+#9 20.46   [kotlinc] info: PERF: ANALYZE: 18 files (8735 lines) in 8343 ms - 1046.985 loc/s
+#9 20.46   [kotlinc] info: PERF: GENERATE: 18 files (8735 lines) in 3147 ms - 2775.659 loc/s
+#9 20.46   [kotlinc] info: PERF: GC time for PS Scavenge is 163 ms
+#9 20.46   [kotlinc] info: PERF: GC time for PS MarkSweep is 275 ms
+#9 20.46   [kotlinc] info: PERF: JIT time is 63421 ms
+#9 20.46   [kotlinc] info: PERF: Find Java class performed 18 times, total time 2 ms
+#9 20.46   [kotlinc] info: PERF: Type info performed 29106 times, total time 6332 ms
+#9 20.46   [kotlinc] info: PERF: Call resolve performed 16340 times, total time 4607 ms
+#9 20.46   [kotlinc] info: PERF: Binary class from Kotlin file performed 279 times, total time 40 ms
+#9 20.46     [touch] Creating /testbed/bin/classes/generator/touch.txt
+#9 20.47 [javac: Generator Tools & Doclets] Compiling 6 source files to /testbed/bin/classes/generator
+#9 21.14 
+#9 21.14 compile-templates:
+#9 21.15 [Templates] Compiling Kotlin templates. This will take 1-2 minutes...
+#9 21.15     [mkdir] Created dir: /testbed/bin/classes/templates
+#9 21.15   [kotlinc] Compiling [/testbed/modules/lwjgl/core/src/templates/kotlin/core/dyncall, /testbed/modules/lwjgl/core/src/templates/kotlin/core/jni, /testbed/modules/lwjgl/core/src/templates/kotlin/core/libc, /testbed/modules/lwjgl/core/src/templates/kotlin/core/linux, /testbed/modules/lwjgl/core/src/templates/kotlin/core/macos, /testbed/modules/lwjgl/core/src/templates/kotlin/core/templates, /testbed/modules/lwjgl/core/src/templates/kotlin/core/windows, /testbed/modules/lwjgl/core/src/templates/kotlin] => [/testbed/bin/classes/templates]
+#9 21.15   [kotlinc] info: kotlinc-jvm 1.2.60 (JRE 1.8.0_502-b07)
+#9 23.25   [kotlinc] info: PERF: INIT: Compiler initialized in 66 ms
+#9 23.25   [kotlinc] info: PERF: ANALYZE: 32 files (7288 lines) in 1605 ms - 4540.810 loc/s
+#9 23.25   [kotlinc] info: PERF: GENERATE: 32 files (7288 lines) in 385 ms - 18929.870 loc/s
+#9 23.25   [kotlinc] info: PERF: GC time for PS Scavenge is 193 ms
+#9 23.25   [kotlinc] info: PERF: GC time for PS MarkSweep is 275 ms
+#9 23.25   [kotlinc] info: PERF: JIT time is 77079 ms
+#9 23.25   [kotlinc] info: PERF: Find Java class performed 18 times, total time 2 ms
+#9 23.25   [kotlinc] info: PERF: Type info performed 41459 times, total time 7790 ms
+#9 23.25   [kotlinc] info: PERF: Call resolve performed 21931 times, total time 5865 ms
+#9 23.25   [kotlinc] info: PERF: Binary class from Kotlin file performed 490 times, total time 67 ms
+#9 23.25   [kotlinc] info: PERF: Find Java class performed 5 times, total time 0 ms
+#9 23.25     [touch] Creating /testbed/bin/classes/templates/touch.txt
+#9 23.25 
+#9 23.25 bindings:
+#9 23.28 
+#9 23.28 init:
+#9 23.29 
+#9 23.29 check-dependencies:
+#9 23.30 
+#9 23.30 generate:
+#9 23.65 [Generator] 	UPDATING: modules/lwjgl/core/src/generated/java/org/lwjgl/system/JNI.java
+#9 23.70 [Generator] 	UPDATING: modules/lwjgl/core/src/generated/c/org_lwjgl_system_JNI.c
+#9 23.70 
+#9 23.70 compile:
+#9 23.70     [mkdir] Created dir: /testbed/bin/classes/lwjgl/core
+#9 23.71 [javac: core] Compiling 88 source files to /testbed/bin/classes/lwjgl/core
+#9 24.58     [mkdir] Created dir: /testbed/bin/classes/lwjgl/jemalloc
+#9 24.58     [mkdir] Created dir: /testbed/bin/classes/lwjgl/assimp
+#9 24.58     [mkdir] Created dir: /testbed/bin/classes/lwjgl/nanovg
+#9 24.58     [mkdir] Created dir: /testbed/bin/classes/lwjgl/lz4
+#9 24.58     [mkdir] Created dir: /testbed/bin/classes/lwjgl/lmdb
+#9 24.58     [mkdir] Created dir: /testbed/bin/classes/lwjgl/egl
+#9 24.58     [mkdir] Created dir: /testbed/bin/classes/lwjgl/jawt
+#9 24.58     [mkdir] Created dir: /testbed/bin/classes/lwjgl/bgfx
+#9 24.58     [mkdir] Created dir: /testbed/bin/classes/lwjgl/par
+#9 24.58     [mkdir] Created dir: /testbed/bin/classes/lwjgl/nuklear
+#9 24.58     [mkdir] Created dir: /testbed/bin/classes/lwjgl/openvr
+#9 24.58     [mkdir] Created dir: /testbed/bin/classes/lwjgl/remotery
+#9 24.58     [mkdir] Created dir: /testbed/bin/classes/lwjgl/opencl
+#9 24.58     [mkdir] Created dir: /testbed/bin/classes/lwjgl/nfd
+#9 24.58     [mkdir] Created dir: /testbed/bin/classes/lwjgl/odbc
+#9 24.58     [mkdir] Created dir: /testbed/bin/classes/lwjgl/tinyexr
+#9 24.58     [mkdir] Created dir: /testbed/bin/classes/lwjgl/tinyfd
+#9 24.58     [mkdir] Created dir: /testbed/bin/classes/lwjgl/openal
+#9 24.58     [mkdir] Created dir: /testbed/bin/classes/lwjgl/tootle
+#9 24.58     [mkdir] Created dir: /testbed/bin/classes/lwjgl/stb
+#9 24.58     [mkdir] Created dir: /testbed/bin/classes/lwjgl/rpmalloc
+#9 24.58     [mkdir] Created dir: /testbed/bin/classes/lwjgl/sse
+#9 24.58     [mkdir] Created dir: /testbed/bin/classes/lwjgl/vulkan
+#9 24.59     [mkdir] Created dir: /testbed/bin/classes/lwjgl/xxhash
+#9 24.59     [mkdir] Created dir: /testbed/bin/classes/lwjgl/yoga
+#9 24.59     [mkdir] Created dir: /testbed/bin/classes/lwjgl/zstd
+#9 24.59     [mkdir] Created dir: /testbed/bin/classes/lwjgl/opengl
+#9 24.59     [mkdir] Created dir: /testbed/bin/classes/lwjgl/opengles
+#9 24.59     [mkdir] Created dir: /testbed/bin/classes/lwjgl/glfw
+#9 24.59     [mkdir] Created dir: /testbed/bin/classes/lwjgl/ovr
+#9 24.59     [mkdir] Created dir: /testbed/bin/classes/lwjgl/vma
+#9 24.59 
+#9 24.59 compile-tests:
+#9 24.59     [mkdir] Created dir: /testbed/bin/classes/test
+#9 24.59 [javac: core tests] Compiling 9 source files to /testbed/bin/classes/test
+#9 24.70 [javac: opencl tests] Compiling 2 source files to /testbed/bin/classes/test
+#9 24.71 [javac: par tests] Compiling 1 source file to /testbed/bin/classes/test
+#9 24.71 [javac: sse tests] Compiling 1 source file to /testbed/bin/classes/test
+#9 24.71 [javac: rpmalloc tests] Compiling 1 source file to /testbed/bin/classes/test
+#9 24.73 [javac: yoga tests] Compiling 22 source files to /testbed/bin/classes/test
+#9 24.75 [javac: sse tests] /testbed/modules/lwjgl/sse/src/test/java/org/lwjgl/util/simd/SSETest.java:10: error: cannot find symbol
+#9 24.75 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:13: error: cannot find symbol
+#9 24.75 [javac: par tests] import static org.lwjgl.util.par.ParShapes.*;
+#9 24.75 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:16: error: cannot find symbol
+#9 24.75 [javac: opencl tests] import static org.lwjgl.opencl.CL11.*;
+#9 24.75 [javac: rpmalloc tests] /testbed/modules/lwjgl/rpmalloc/src/test/java/org/lwjgl/system/rpmalloc/RPMallocTest.java:18: error: cannot find symbol
+#9 24.75 [javac: rpmalloc tests] import static org.lwjgl.system.rpmalloc.RPmalloc.*;
+#9 24.75 [javac: rpmalloc tests]                                        ^
+#9 24.75 [javac: rpmalloc tests]   symbol:   class RPmalloc
+#9 24.75 [javac: rpmalloc tests]   location: package org.lwjgl.system.rpmalloc
+#9 24.75 [javac: par tests]                                 ^
+#9 24.75 [javac: par tests]   symbol:   class ParShapes
+#9 24.75 [javac: par tests]   location: package org.lwjgl.util.par
+#9 24.75 [javac: sse tests] import static org.lwjgl.util.simd.SSE.*;
+#9 24.75 [javac: sse tests]                                  ^
+#9 24.75 [javac: sse tests]   symbol:   class SSE
+#9 24.75 [javac: opencl tests]                               ^
+#9 24.75 [javac: opencl tests]   symbol:   class CL11
+#9 24.75 [javac: opencl tests]   location: package org.lwjgl.opencl
+#9 24.75 [javac: sse tests]   location: package org.lwjgl.util.simd
+#9 24.75 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/InfoUtil.java:12: error: cannot find symbol
+#9 24.75 [javac: opencl tests] import static org.lwjgl.opencl.CL10.*;
+#9 24.75 [javac: opencl tests]                               ^
+#9 24.75 [javac: opencl tests]   symbol:   class CL10
+#9 24.75 [javac: opencl tests]   location: package org.lwjgl.opencl
+#9 24.75 [javac: sse tests] /testbed/modules/lwjgl/sse/src/test/java/org/lwjgl/util/simd/SSETest.java:11: error: cannot find symbol
+#9 24.75 [javac: sse tests] import static org.lwjgl.util.simd.SSE3.*;
+#9 24.75 [javac: sse tests]                                  ^
+#9 24.75 [javac: sse tests]   symbol:   class SSE3
+#9 24.75 [javac: sse tests]   location: package org.lwjgl.util.simd
+#9 24.75 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:27: error: cannot find symbol
+#9 24.75 [javac: opencl tests]     private static CLContextCallback CONTEXT_CALLBACK;
+#9 24.75 [javac: opencl tests]                    ^
+#9 24.75 [javac: opencl tests]   symbol:   class CLContextCallback
+#9 24.75 [javac: opencl tests]   location: class CLTest
+#9 24.75 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:20: error: cannot find symbol
+#9 24.75 [javac: par tests]         assertNull(par_shapes_create_cylinder(1, 1)); // bad
+#9 24.75 [javac: par tests]                    ^
+#9 24.75 [javac: rpmalloc tests] /testbed/modules/lwjgl/rpmalloc/src/test/java/org/lwjgl/system/rpmalloc/RPMallocTest.java:25: error: cannot find symbol
+#9 24.75 [javac: rpmalloc tests]         rpmalloc_initialize();
+#9 24.75 [javac: rpmalloc tests]         ^
+#9 24.75 [javac: rpmalloc tests]   symbol:   method rpmalloc_initialize()
+#9 24.75 [javac: rpmalloc tests]   location: class RPMallocTest
+#9 24.76 [javac: sse tests] /testbed/modules/lwjgl/sse/src/test/java/org/lwjgl/util/simd/SSETest.java:18: error: cannot find symbol
+#9 24.76 [javac: sse tests]         int flushZeroMode     = _MM_GET_FLUSH_ZERO_MODE();
+#9 24.76 [javac: sse tests]                                 ^
+#9 24.76 [javac: par tests]   symbol:   method par_shapes_create_cylinder(int,int)
+#9 24.76 [javac: rpmalloc tests] /testbed/modules/lwjgl/rpmalloc/src/test/java/org/lwjgl/system/rpmalloc/RPMallocTest.java:27: error: cannot find symbol
+#9 24.76 [javac: rpmalloc tests]         rpfree(rpmalloc(8));
+#9 24.76 [javac: par tests]   location: class ParTest
+#9 24.76 [javac: rpmalloc tests]                ^
+#9 24.76 [javac: rpmalloc tests]   symbol:   method rpmalloc(int)
+#9 24.76 [javac: rpmalloc tests]   location: class RPMallocTest
+#9 24.76 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:21: error: cannot find symbol
+#9 24.76 [javac: par tests]         assertNull(par_shapes_create_cylinder(1, 3)); // bad
+#9 24.76 [javac: par tests]                    ^
+#9 24.76 [javac: par tests]   symbol:   method par_shapes_create_cylinder(int,int)
+#9 24.76 [javac: par tests]   location: class ParTest
+#9 24.76 [javac: sse tests]   symbol:   method _MM_GET_FLUSH_ZERO_MODE()
+#9 24.76 [javac: sse tests]   location: class SSETest
+#9 24.76 [javac: rpmalloc tests] /testbed/modules/lwjgl/rpmalloc/src/test/java/org/lwjgl/system/rpmalloc/RPMallocTest.java:29: error: cannot find symbol
+#9 24.76 [javac: rpmalloc tests]         rpmalloc_finalize();
+#9 24.76 [javac: rpmalloc tests]         ^
+#9 24.76 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/InfoUtil.java:25: error: cannot find symbol
+#9 24.76 [javac: opencl tests]             checkCLError(clGetPlatformInfo(cl_platform_id, param_name, (ByteBuffer)null, pp));
+#9 24.76 [javac: opencl tests]                          ^
+#9 24.76 [javac: opencl tests]   symbol:   method clGetPlatformInfo(long,int,ByteBuffer,PointerBuffer)
+#9 24.76 [javac: opencl tests]   location: class InfoUtil
+#9 24.76 [javac: sse tests] /testbed/modules/lwjgl/sse/src/test/java/org/lwjgl/util/simd/SSETest.java:19: error: cannot find symbol
+#9 24.76 [javac: sse tests]         int roundingMode      = _MM_GET_ROUNDING_MODE();
+#9 24.76 [javac: sse tests]                                 ^
+#9 24.76 [javac: sse tests]   symbol:   method _MM_GET_ROUNDING_MODE()
+#9 24.76 [javac: sse tests]   location: class SSETest
+#9 24.76 [javac: rpmalloc tests]   symbol:   method rpmalloc_finalize()
+#9 24.76 [javac: rpmalloc tests]   location: class RPMallocTest
+#9 24.76 [javac: rpmalloc tests] /testbed/modules/lwjgl/rpmalloc/src/test/java/org/lwjgl/system/rpmalloc/RPMallocTest.java:33: error: cannot find symbol
+#9 24.76 [javac: rpmalloc tests]         rpmalloc_initialize();
+#9 24.76 [javac: rpmalloc tests]         ^
+#9 24.76 [javac: rpmalloc tests]   symbol:   method rpmalloc_initialize()
+#9 24.76 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/InfoUtil.java:29: error: cannot find symbol
+#9 24.76 [javac: sse tests] /testbed/modules/lwjgl/sse/src/test/java/org/lwjgl/util/simd/SSETest.java:20: error: cannot find symbol
+#9 24.76 [javac: sse tests]         int denormalsZeroMode = _MM_GET_DENORMALS_ZERO_MODE();
+#9 24.76 [javac: sse tests]                                 ^
+#9 24.76 [javac: sse tests]   symbol:   method _MM_GET_DENORMALS_ZERO_MODE()
+#9 24.76 [javac: sse tests]   location: class SSETest
+#9 24.76 [javac: opencl tests]             checkCLError(clGetPlatformInfo(cl_platform_id, param_name, buffer, null));
+#9 24.76 [javac: opencl tests]                          ^
+#9 24.76 [javac: opencl tests]   symbol:   method clGetPlatformInfo(long,int,ByteBuffer,<null>)
+#9 24.76 [javac: opencl tests]   location: class InfoUtil
+#9 24.76 [javac: rpmalloc tests]   location: class RPMallocTest
+#9 24.76 [javac: sse tests] /testbed/modules/lwjgl/sse/src/test/java/org/lwjgl/util/simd/SSETest.java:24: error: cannot find symbol
+#9 24.76 [javac: sse tests]             _MM_SET_EXCEPTION_STATE(0);
+#9 24.76 [javac: sse tests]             ^
+#9 24.76 [javac: sse tests]   symbol:   method _MM_SET_EXCEPTION_STATE(int)
+#9 24.76 [javac: sse tests]   location: class SSETest
+#9 24.76 [javac: sse tests] /testbed/modules/lwjgl/sse/src/test/java/org/lwjgl/util/simd/SSETest.java:25: error: cannot find symbol
+#9 24.76 [javac: sse tests]             assertEquals(_MM_GET_EXCEPTION_STATE(), 0);
+#9 24.76 [javac: sse tests]                          ^
+#9 24.76 [javac: sse tests]   symbol:   method _MM_GET_EXCEPTION_STATE()
+#9 24.76 [javac: sse tests]   location: class SSETest
+#9 24.76 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:22: error: cannot find symbol
+#9 24.76 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/InfoUtil.java:38: error: cannot find symbol
+#9 24.76 [javac: opencl tests]             checkCLError(clGetPlatformInfo(cl_platform_id, param_name, (ByteBuffer)null, pp));
+#9 24.76 [javac: opencl tests]                          ^
+#9 24.76 [javac: par tests]         par_shapes_free_mesh(Objects.requireNonNull(par_shapes_create_cylinder(3, 1))); // good
+#9 24.76 [javac: par tests]                                                     ^
+#9 24.76 [javac: par tests]   symbol:   method par_shapes_create_cylinder(int,int)
+#9 24.76 [javac: opencl tests]   symbol:   method clGetPlatformInfo(long,int,ByteBuffer,PointerBuffer)
+#9 24.76 [javac: opencl tests]   location: class InfoUtil
+#9 24.76 [javac: sse tests] /testbed/modules/lwjgl/sse/src/test/java/org/lwjgl/util/simd/SSETest.java:28: error: cannot find symbol
+#9 24.76 [javac: sse tests]             assertEquals(_MM_GET_EXCEPTION_STATE() & _MM_EXCEPT_DENORM, 0);
+#9 24.76 [javac: sse tests]                          ^
+#9 24.76 [javac: sse tests]   symbol:   method _MM_GET_EXCEPTION_STATE()
+#9 24.76 [javac: sse tests]   location: class SSETest
+#9 24.76 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/InfoUtil.java:42: error: cannot find symbol
+#9 24.77 [javac: opencl tests]             checkCLError(clGetPlatformInfo(cl_platform_id, param_name, buffer, null));
+#9 24.77 [javac: opencl tests]                          ^
+#9 24.77 [javac: sse tests] /testbed/modules/lwjgl/sse/src/test/java/org/lwjgl/util/simd/SSETest.java:28: error: cannot find symbol
+#9 24.77 [javac: sse tests]             assertEquals(_MM_GET_EXCEPTION_STATE() & _MM_EXCEPT_DENORM, 0);
+#9 24.77 [javac: sse tests]                                                      ^
+#9 24.77 [javac: sse tests]   symbol:   variable _MM_EXCEPT_DENORM
+#9 24.77 [javac: sse tests]   location: class SSETest
+#9 24.77 [javac: opencl tests]   symbol:   method clGetPlatformInfo(long,int,ByteBuffer,<null>)
+#9 24.77 [javac: opencl tests]   location: class InfoUtil
+#9 24.77 [javac: rpmalloc tests] /testbed/modules/lwjgl/rpmalloc/src/test/java/org/lwjgl/system/rpmalloc/RPMallocTest.java:46: error: cannot find symbol
+#9 24.77 [javac: par tests]   location: class ParTest
+#9 24.77 [javac: rpmalloc tests]                     rpmalloc_thread_initialize();
+#9 24.77 [javac: rpmalloc tests]                     ^
+#9 24.77 [javac: rpmalloc tests]   symbol:   method rpmalloc_thread_initialize()
+#9 24.77 [javac: rpmalloc tests]   location: class RPMallocTest
+#9 24.77 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:24: error: cannot find symbol
+#9 24.77 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/InfoUtil.java:51: error: cannot find symbol
+#9 24.77 [javac: opencl tests]             checkCLError(clGetDeviceInfo(cl_device_id, param_name, pl, null));
+#9 24.77 [javac: opencl tests]                          ^
+#9 24.77 [javac: opencl tests]   symbol:   method clGetDeviceInfo(long,int,IntBuffer,<null>)
+#9 24.77 [javac: opencl tests]   location: class InfoUtil
+#9 24.77 [javac: sse tests] /testbed/modules/lwjgl/sse/src/test/java/org/lwjgl/util/simd/SSETest.java:34: error: cannot find symbol
+#9 24.77 [javac: sse tests]             assertEquals(_MM_GET_EXCEPTION_STATE() & _MM_EXCEPT_DENORM, _MM_EXCEPT_DENORM);
+#9 24.77 [javac: sse tests]                          ^
+#9 24.77 [javac: sse tests]   symbol:   method _MM_GET_EXCEPTION_STATE()
+#9 24.77 [javac: sse tests]   location: class SSETest
+#9 24.77 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/InfoUtil.java:59: error: cannot find symbol
+#9 24.77 [javac: opencl tests]             checkCLError(clGetDeviceInfo(cl_device_id, param_name, pl, null));
+#9 24.77 [javac: opencl tests]                          ^
+#9 24.77 [javac: opencl tests]   symbol:   method clGetDeviceInfo(long,int,LongBuffer,<null>)
+#9 24.77 [javac: opencl tests]   location: class InfoUtil
+#9 24.77 [javac: rpmalloc tests] /testbed/modules/lwjgl/rpmalloc/src/test/java/org/lwjgl/system/rpmalloc/RPMallocTest.java:47: error: cannot find symbol
+#9 24.77 [javac: rpmalloc tests]                     rpfree(rpmalloc(8));
+#9 24.77 [javac: rpmalloc tests]                            ^
+#9 24.77 [javac: rpmalloc tests]   symbol:   method rpmalloc(int)
+#9 24.77 [javac: rpmalloc tests]   location: class RPMallocTest
+#9 24.77 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/InfoUtil.java:67: error: cannot find symbol
+#9 24.77 [javac: opencl tests]             checkCLError(clGetDeviceInfo(cl_device_id, param_name, pp, null));
+#9 24.77 [javac: opencl tests]                          ^
+#9 24.77 [javac: opencl tests]   symbol:   method clGetDeviceInfo(long,int,PointerBuffer,<null>)
+#9 24.77 [javac: opencl tests]   location: class InfoUtil
+#9 24.77 [javac: par tests]         ParShapesMesh m = Objects.requireNonNull(par_shapes_create_cylinder(5, 6));
+#9 24.77 [javac: par tests]         ^
+#9 24.77 [javac: par tests]   symbol:   class ParShapesMesh
+#9 24.77 [javac: par tests]   location: class ParTest
+#9 24.77 [javac: sse tests] /testbed/modules/lwjgl/sse/src/test/java/org/lwjgl/util/simd/SSETest.java:34: error: cannot find symbol
+#9 24.77 [javac: sse tests]             assertEquals(_MM_GET_EXCEPTION_STATE() & _MM_EXCEPT_DENORM, _MM_EXCEPT_DENORM);
+#9 24.77 [javac: sse tests]                                                      ^
+#9 24.77 [javac: sse tests]   symbol:   variable _MM_EXCEPT_DENORM
+#9 24.77 [javac: sse tests]   location: class SSETest
+#9 24.77 [javac: rpmalloc tests] /testbed/modules/lwjgl/rpmalloc/src/test/java/org/lwjgl/system/rpmalloc/RPMallocTest.java:48: error: cannot find symbol
+#9 24.77 [javac: rpmalloc tests]                     rpmalloc_thread_finalize();
+#9 24.77 [javac: rpmalloc tests]                     ^
+#9 24.77 [javac: rpmalloc tests]   symbol:   method rpmalloc_thread_finalize()
+#9 24.77 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:24: error: cannot find symbol
+#9 24.77 [javac: par tests]         ParShapesMesh m = Objects.requireNonNull(par_shapes_create_cylinder(5, 6));
+#9 24.77 [javac: par tests]                                                  ^
+#9 24.77 [javac: par tests]   symbol:   method par_shapes_create_cylinder(int,int)
+#9 24.77 [javac: par tests]   location: class ParTest
+#9 24.77 [javac: sse tests] /testbed/modules/lwjgl/sse/src/test/java/org/lwjgl/util/simd/SSETest.java:34: error: cannot find symbol
+#9 24.77 [javac: sse tests]             assertEquals(_MM_GET_EXCEPTION_STATE() & _MM_EXCEPT_DENORM, _MM_EXCEPT_DENORM);
+#9 24.77 [javac: sse tests]                                                                         ^
+#9 24.77 [javac: sse tests]   symbol:   variable _MM_EXCEPT_DENORM
+#9 24.77 [javac: sse tests]   location: class SSETest
+#9 24.77 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/InfoUtil.java:75: error: cannot find symbol
+#9 24.77 [javac: opencl tests]             checkCLError(clGetDeviceInfo(cl_device_id, param_name, (ByteBuffer)null, pp));
+#9 24.77 [javac: opencl tests]                          ^
+#9 24.77 [javac: opencl tests]   symbol:   method clGetDeviceInfo(long,int,ByteBuffer,PointerBuffer)
+#9 24.77 [javac: opencl tests]   location: class InfoUtil
+#9 24.77 [javac: rpmalloc tests]   location: class RPMallocTest
+#9 24.77 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/InfoUtil.java:79: error: cannot find symbol
+#9 24.77 [javac: opencl tests]             checkCLError(clGetDeviceInfo(cl_device_id, param_name, buffer, null));
+#9 24.77 [javac: opencl tests]                          ^
+#9 24.77 [javac: opencl tests]   symbol:   method clGetDeviceInfo(long,int,ByteBuffer,<null>)
+#9 24.77 [javac: opencl tests]   location: class InfoUtil
+#9 24.77 [javac: rpmalloc tests] /testbed/modules/lwjgl/rpmalloc/src/test/java/org/lwjgl/system/rpmalloc/RPMallocTest.java:61: error: cannot find symbol
+#9 24.77 [javac: rpmalloc tests]         rpmalloc_finalize();
+#9 24.77 [javac: rpmalloc tests]         ^
+#9 24.77 [javac: rpmalloc tests]   symbol:   method rpmalloc_finalize()
+#9 24.77 [javac: rpmalloc tests]   location: class RPMallocTest
+#9 24.77 [javac: rpmalloc tests] /testbed/modules/lwjgl/rpmalloc/src/test/java/org/lwjgl/system/rpmalloc/RPMallocTest.java:68: error: cannot find symbol
+#9 24.77 [javac: rpmalloc tests]             rpmalloc_initialize();
+#9 24.77 [javac: rpmalloc tests]             ^
+#9 24.77 [javac: rpmalloc tests]   symbol:   method rpmalloc_initialize()
+#9 24.77 [javac: rpmalloc tests]   location: class RPMallocTest
+#9 24.77 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/InfoUtil.java:88: error: cannot find symbol
+#9 24.77 [javac: opencl tests]             checkCLError(clGetMemObjectInfo(cl_mem, param_name, pp, null));
+#9 24.77 [javac: opencl tests]                          ^
+#9 24.77 [javac: rpmalloc tests] /testbed/modules/lwjgl/rpmalloc/src/test/java/org/lwjgl/system/rpmalloc/RPMallocTest.java:71: error: cannot find symbol
+#9 24.77 [javac: rpmalloc tests]             RPMallocConfig config = RPMallocConfig.mallocStack(stack);
+#9 24.77 [javac: rpmalloc tests]             ^
+#9 24.77 [javac: rpmalloc tests]   symbol:   class RPMallocConfig
+#9 24.77 [javac: rpmalloc tests]   location: class RPMallocTest
+#9 24.77 [javac: opencl tests]   symbol:   method clGetMemObjectInfo(long,int,PointerBuffer,<null>)
+#9 24.77 [javac: opencl tests]   location: class InfoUtil
+#9 24.77 [javac: rpmalloc tests] /testbed/modules/lwjgl/rpmalloc/src/test/java/org/lwjgl/system/rpmalloc/RPMallocTest.java:71: error: cannot find symbol
+#9 24.77 [javac: rpmalloc tests]             RPMallocConfig config = RPMallocConfig.mallocStack(stack);
+#9 24.77 [javac: rpmalloc tests]                                     ^
+#9 24.77 [javac: rpmalloc tests]   symbol:   variable RPMallocConfig
+#9 24.77 [javac: rpmalloc tests]   location: class RPMallocTest
+#9 24.77 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:32: error: cannot find symbol
+#9 24.77 [javac: par tests]         m = Objects.requireNonNull(par_shapes_create_cylinder(slices, stacks));
+#9 24.77 [javac: par tests]                                    ^
+#9 24.77 [javac: par tests]   symbol:   method par_shapes_create_cylinder(int,int)
+#9 24.77 [javac: par tests]   location: class ParTest
+#9 24.78 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/InfoUtil.java:96: error: cannot find symbol
+#9 24.78 [javac: opencl tests]             checkCLError(clGetMemObjectInfo(cl_mem, param_name, pi, null));
+#9 24.78 [javac: opencl tests]                          ^
+#9 24.78 [javac: opencl tests]   symbol:   method clGetMemObjectInfo(long,int,IntBuffer,<null>)
+#9 24.78 [javac: opencl tests]   location: class InfoUtil
+#9 24.78 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:38: error: cannot find symbol
+#9 24.78 [javac: par tests]         m = Objects.requireNonNull(par_shapes_create_parametric_sphere(slices, stacks));
+#9 24.78 [javac: par tests]                                    ^
+#9 24.78 [javac: par tests]   symbol:   method par_shapes_create_parametric_sphere(int,int)
+#9 24.78 [javac: par tests]   location: class ParTest
+#9 24.78 [javac: sse tests] /testbed/modules/lwjgl/sse/src/test/java/org/lwjgl/util/simd/SSETest.java:38: error: cannot find symbol
+#9 24.78 [javac: sse tests]             _MM_SET_EXCEPTION_STATE(0);
+#9 24.78 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:44: error: cannot find symbol
+#9 24.78 [javac: par tests]         m = Objects.requireNonNull(par_shapes_create_parametric_sphere(slices, stacks));
+#9 24.78 [javac: par tests]                                    ^
+#9 24.78 [javac: par tests]   symbol:   method par_shapes_create_parametric_sphere(int,int)
+#9 24.78 [javac: par tests]   location: class ParTest
+#9 24.78 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/InfoUtil.java:104: error: cannot find symbol
+#9 24.78 [javac: opencl tests]             checkCLError(clGetProgramBuildInfo(cl_program_id, cl_device_id, param_name, pl, null));
+#9 24.78 [javac: opencl tests]                          ^
+#9 24.78 [javac: opencl tests]   symbol:   method clGetProgramBuildInfo(long,long,int,IntBuffer,<null>)
+#9 24.78 [javac: opencl tests]   location: class InfoUtil
+#9 24.78 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:50: error: cannot find symbol
+#9 24.78 [javac: par tests]         m = Objects.requireNonNull(par_shapes_create_parametric_sphere(slices, stacks));
+#9 24.78 [javac: par tests]                                    ^
+#9 24.78 [javac: par tests]   symbol:   method par_shapes_create_parametric_sphere(int,int)
+#9 24.78 [javac: par tests]   location: class ParTest
+#9 24.78 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/InfoUtil.java:112: error: cannot find symbol
+#9 24.78 [javac: opencl tests]             checkCLError(clGetProgramBuildInfo(cl_program_id, cl_device_id, param_name, (ByteBuffer)null, pp));
+#9 24.78 [javac: opencl tests]                          ^
+#9 24.78 [javac: opencl tests]   symbol:   method clGetProgramBuildInfo(long,long,int,ByteBuffer,PointerBuffer)
+#9 24.78 [javac: opencl tests]   location: class InfoUtil
+#9 24.78 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:56: error: cannot find symbol
+#9 24.78 [javac: rpmalloc tests] /testbed/modules/lwjgl/rpmalloc/src/test/java/org/lwjgl/system/rpmalloc/RPMallocTest.java:72: error: cannot find symbol
+#9 24.78 [javac: rpmalloc tests]             config.set(rpmalloc_config());
+#9 24.78 [javac: sse tests]             ^
+#9 24.78 [javac: sse tests]   symbol:   method _MM_SET_EXCEPTION_STATE(int)
+#9 24.78 [javac: sse tests]   location: class SSETest
+#9 24.78 [javac: sse tests] /testbed/modules/lwjgl/sse/src/test/java/org/lwjgl/util/simd/SSETest.java:39: error: cannot find symbol
+#9 24.78 [javac: par tests]         ParShapesMesh a = Objects.requireNonNull(par_shapes_create_klein_bottle(10, 20));
+#9 24.78 [javac: par tests]         ^
+#9 24.78 [javac: par tests]   symbol:   class ParShapesMesh
+#9 24.78 [javac: par tests]   location: class ParTest
+#9 24.78 [javac: sse tests]             assertEquals(_MM_GET_EXCEPTION_STATE(), 0);
+#9 24.78 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/InfoUtil.java:116: error: cannot find symbol
+#9 24.78 [javac: opencl tests]             checkCLError(clGetProgramBuildInfo(cl_program_id, cl_device_id, param_name, buffer, null));
+#9 24.78 [javac: opencl tests]                          ^
+#9 24.78 [javac: opencl tests]   symbol:   method clGetProgramBuildInfo(long,long,int,ByteBuffer,<null>)
+#9 24.78 [javac: opencl tests]   location: class InfoUtil
+#9 24.78 [javac: sse tests]                          ^
+#9 24.78 [javac: sse tests]   symbol:   method _MM_GET_EXCEPTION_STATE()
+#9 24.78 [javac: sse tests]   location: class SSETest
+#9 24.78 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:56: error: cannot find symbol
+#9 24.78 [javac: par tests]         ParShapesMesh a = Objects.requireNonNull(par_shapes_create_klein_bottle(10, 20));
+#9 24.78 [javac: par tests]                                                  ^
+#9 24.78 [javac: par tests]   symbol:   method par_shapes_create_klein_bottle(int,int)
+#9 24.78 [javac: par tests]   location: class ParTest
+#9 24.78 [javac: rpmalloc tests]                        ^
+#9 24.78 [javac: rpmalloc tests]   symbol:   method rpmalloc_config()
+#9 24.78 [javac: rpmalloc tests]   location: class RPMallocTest
+#9 24.78 [javac: rpmalloc tests] /testbed/modules/lwjgl/rpmalloc/src/test/java/org/lwjgl/system/rpmalloc/RPMallocTest.java:74: error: cannot find symbol
+#9 24.78 [javac: rpmalloc tests]             rpmalloc_finalize();
+#9 24.78 [javac: rpmalloc tests]             ^
+#9 24.78 [javac: rpmalloc tests]   symbol:   method rpmalloc_finalize()
+#9 24.78 [javac: rpmalloc tests]   location: class RPMallocTest
+#9 24.78 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/InfoUtil.java:127: error: cannot find symbol
+#9 24.78 [javac: opencl tests]         if (errcode != CL_SUCCESS) {
+#9 24.78 [javac: opencl tests]                        ^
+#9 24.78 [javac: opencl tests]   symbol:   variable CL_SUCCESS
+#9 24.78 [javac: rpmalloc tests] /testbed/modules/lwjgl/rpmalloc/src/test/java/org/lwjgl/system/rpmalloc/RPMallocTest.java:77: error: cannot find symbol
+#9 24.78 [javac: rpmalloc tests]             long memoryMapCB   = memGetAddress(config.address() + RPMallocConfig.MEMORY_MAP);
+#9 24.78 [javac: rpmalloc tests]                                                                   ^
+#9 24.78 [javac: rpmalloc tests]   symbol:   variable RPMallocConfig
+#9 24.78 [javac: rpmalloc tests]   location: class RPMallocTest
+#9 24.78 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:57: error: cannot find symbol
+#9 24.78 [javac: sse tests] /testbed/modules/lwjgl/sse/src/test/java/org/lwjgl/util/simd/SSETest.java:41: error: cannot find symbol
+#9 24.78 [javac: sse tests]             _MM_SET_FLUSH_ZERO_MODE(_MM_FLUSH_ZERO_ON);
+#9 24.78 [javac: sse tests]                                     ^
+#9 24.78 [javac: sse tests]   symbol:   variable _MM_FLUSH_ZERO_ON
+#9 24.78 [javac: sse tests]   location: class SSETest
+#9 24.78 [javac: sse tests] /testbed/modules/lwjgl/sse/src/test/java/org/lwjgl/util/simd/SSETest.java:42: error: cannot find symbol
+#9 24.78 [javac: sse tests]             _MM_SET_DENORMALS_ZERO_MODE(_MM_DENORMALS_ZERO_ON);
+#9 24.78 [javac: sse tests]                                         ^
+#9 24.78 [javac: sse tests]   symbol:   variable _MM_DENORMALS_ZERO_ON
+#9 24.78 [javac: sse tests]   location: class SSETest
+#9 24.78 [javac: sse tests] /testbed/modules/lwjgl/sse/src/test/java/org/lwjgl/util/simd/SSETest.java:48: error: cannot find symbol
+#9 24.78 [javac: sse tests]             assertEquals(_MM_GET_EXCEPTION_STATE() & _MM_EXCEPT_DENORM, 0);
+#9 24.78 [javac: sse tests]                          ^
+#9 24.78 [javac: sse tests]   symbol:   method _MM_GET_EXCEPTION_STATE()
+#9 24.78 [javac: opencl tests]   location: class InfoUtil
+#9 24.78 [javac: par tests]         ParShapesMesh b = Objects.requireNonNull(par_shapes_create_plane(3, 3));
+#9 24.78 [javac: par tests]         ^
+#9 24.78 [javac: par tests]   symbol:   class ParShapesMesh
+#9 24.78 [javac: par tests]   location: class ParTest
+#9 24.79 [javac: sse tests]   location: class SSETest
+#9 24.79 [javac: sse tests] /testbed/modules/lwjgl/sse/src/test/java/org/lwjgl/util/simd/SSETest.java:48: error: cannot find symbol
+#9 24.79 [javac: sse tests]             assertEquals(_MM_GET_EXCEPTION_STATE() & _MM_EXCEPT_DENORM, 0);
+#9 24.79 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:57: error: cannot find symbol
+#9 24.79 [javac: par tests]         ParShapesMesh b = Objects.requireNonNull(par_shapes_create_plane(3, 3));
+#9 24.79 [javac: par tests]                                                  ^
+#9 24.79 [javac: par tests]   symbol:   method par_shapes_create_plane(int,int)
+#9 24.79 [javac: par tests]   location: class ParTest
+#9 24.79 [javac: rpmalloc tests] /testbed/modules/lwjgl/rpmalloc/src/test/java/org/lwjgl/system/rpmalloc/RPMallocTest.java:78: error: cannot find symbol
+#9 24.79 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:32: error: cannot find symbol
+#9 24.79 [javac: opencl tests]             CL.getFunctionProvider();
+#9 24.79 [javac: opencl tests]             ^
+#9 24.79 [javac: opencl tests]   symbol:   variable CL
+#9 24.79 [javac: opencl tests]   location: class CLTest
+#9 24.79 [javac: sse tests]                                                      ^
+#9 24.79 [javac: rpmalloc tests]             long memoryUnmapCB = memGetAddress(config.address() + RPMallocConfig.MEMORY_UNMAP);
+#9 24.79 [javac: rpmalloc tests]                                                                   ^
+#9 24.79 [javac: rpmalloc tests]   symbol:   variable RPMallocConfig
+#9 24.79 [javac: rpmalloc tests]   location: class RPMallocTest
+#9 24.79 [javac: sse tests]   symbol:   variable _MM_EXCEPT_DENORM
+#9 24.79 [javac: sse tests]   location: class SSETest
+#9 24.79 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:33: error: cannot find symbol
+#9 24.79 [javac: opencl tests]             CL.destroy();
+#9 24.79 [javac: opencl tests]             ^
+#9 24.79 [javac: opencl tests]   symbol:   variable CL
+#9 24.79 [javac: opencl tests]   location: class CLTest
+#9 24.79 [javac: sse tests] /testbed/modules/lwjgl/sse/src/test/java/org/lwjgl/util/simd/SSETest.java:52: error: cannot find symbol
+#9 24.79 [javac: sse tests]             _MM_SET_DENORMALS_ZERO_MODE(denormalsZeroMode);
+#9 24.79 [javac: sse tests]             ^
+#9 24.79 [javac: sse tests]   symbol:   method _MM_SET_DENORMALS_ZERO_MODE(int)
+#9 24.79 [javac: sse tests]   location: class SSETest
+#9 24.79 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:41: error: cannot find symbol
+#9 24.79 [javac: opencl tests]             CL.create();
+#9 24.79 [javac: opencl tests]             ^
+#9 24.79 [javac: opencl tests]   symbol:   variable CL
+#9 24.79 [javac: opencl tests]   location: class CLTest
+#9 24.79 [javac: sse tests] /testbed/modules/lwjgl/sse/src/test/java/org/lwjgl/util/simd/SSETest.java:53: error: cannot find symbol
+#9 24.79 [javac: sse tests]             _MM_SET_ROUNDING_MODE(roundingMode);
+#9 24.79 [javac: sse tests]             ^
+#9 24.79 [javac: sse tests]   symbol:   method _MM_SET_ROUNDING_MODE(int)
+#9 24.79 [javac: sse tests]   location: class SSETest
+#9 24.79 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:45: error: cannot find symbol
+#9 24.79 [javac: sse tests] /testbed/modules/lwjgl/sse/src/test/java/org/lwjgl/util/simd/SSETest.java:54: error: cannot find symbol
+#9 24.79 [javac: sse tests]             _MM_SET_FLUSH_ZERO_MODE(flushZeroMode);
+#9 24.79 [javac: sse tests]             ^
+#9 24.79 [javac: sse tests]   symbol:   method _MM_SET_FLUSH_ZERO_MODE(int)
+#9 24.79 [javac: sse tests]   location: class SSETest
+#9 24.79 [javac: opencl tests]                 checkCLError(clGetPlatformIDs(null, pi));
+#9 24.79 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:72: error: cannot find symbol
+#9 24.79 [javac: par tests]         ParShapesMesh a, b;
+#9 24.79 [javac: opencl tests]                              ^
+#9 24.79 [javac: sse tests] 21 errors
+#9 24.79 [javac: par tests]         ^
+#9 24.79 [javac: par tests]   symbol:   class ParShapesMesh
+#9 24.79 [javac: par tests]   location: class ParTest
+#9 24.80 [javac: opencl tests]   symbol:   method clGetPlatformIDs(<null>,IntBuffer)
+#9 24.80 [javac: opencl tests]   location: class CLTest
+#9 24.80 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:75: error: cannot find symbol
+#9 24.80 [javac: par tests]         a = Objects.requireNonNull(par_shapes_create_cylinder(20, 3));
+#9 24.80 [javac: par tests]                                    ^
+#9 24.80 [javac: par tests]   symbol:   method par_shapes_create_cylinder(int,int)
+#9 24.80 [javac: par tests]   location: class ParTest
+#9 24.80 [javac: rpmalloc tests] /testbed/modules/lwjgl/rpmalloc/src/test/java/org/lwjgl/system/rpmalloc/RPMallocTest.java:97: error: cannot find symbol
+#9 24.80 [javac: rpmalloc tests]                 ByteBuffer b = rpmalloc(8);
+#9 24.80 [javac: rpmalloc tests]                                ^
+#9 24.80 [javac: rpmalloc tests]   symbol:   method rpmalloc(int)
+#9 24.80 [javac: rpmalloc tests]   location: class RPMallocTest
+#9 24.80 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:49: error: cannot find symbol
+#9 24.80 [javac: opencl tests]                 checkCLError(clGetPlatformIDs(platforms, (IntBuffer)null));
+#9 24.80 [javac: opencl tests]                              ^
+#9 24.80 [javac: opencl tests]   symbol:   method clGetPlatformIDs(PointerBuffer,IntBuffer)
+#9 24.80 [javac: opencl tests]   location: class CLTest
+#9 24.80 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:76: error: cannot find symbol
+#9 24.80 [javac: par tests]         b = Objects.requireNonNull(par_shapes_create_cylinder(4, 3));
+#9 24.80 [javac: par tests]                                    ^
+#9 24.80 [javac: par tests]   symbol:   method par_shapes_create_cylinder(int,int)
+#9 24.80 [javac: par tests]   location: class ParTest
+#9 24.80 [javac: rpmalloc tests] /testbed/modules/lwjgl/rpmalloc/src/test/java/org/lwjgl/system/rpmalloc/RPMallocTest.java:100: error: cannot find symbol
+#9 24.80 [javac: rpmalloc tests]                 rpfree(b);
+#9 24.80 [javac: rpmalloc tests]                 ^
+#9 24.80 [javac: rpmalloc tests]   symbol:   method rpfree(ByteBuffer)
+#9 24.80 [javac: rpmalloc tests]   location: class RPMallocTest
+#9 24.80 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:54: error: cannot find symbol
+#9 24.80 [javac: opencl tests]                     checkCLError(clGetDeviceIDs(platform, CL_DEVICE_TYPE_ALL, null, pi));
+#9 24.80 [javac: opencl tests]                                                           ^
+#9 24.80 [javac: opencl tests]   symbol:   variable CL_DEVICE_TYPE_ALL
+#9 24.80 [javac: opencl tests]   location: class CLTest
+#9 24.80 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:59: error: cannot find symbol
+#9 24.80 [javac: opencl tests]             CL.destroy();
+#9 24.80 [javac: opencl tests]             ^
+#9 24.80 [javac: opencl tests]   symbol:   variable CL
+#9 24.80 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:16: error: cannot find symbol
+#9 24.80 [javac: yoga tests] import static org.lwjgl.util.yoga.Yoga.*;
+#9 24.80 [javac: yoga tests]                                  ^
+#9 24.80 [javac: yoga tests]   symbol:   class Yoga
+#9 24.80 [javac: yoga tests]   location: package org.lwjgl.util.yoga
+#9 24.80 [javac: opencl tests]   location: class CLTest
+#9 24.80 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:86: error: cannot find symbol
+#9 24.80 [javac: par tests]         a = Objects.requireNonNull(par_shapes_create_cylinder(20, 3));
+#9 24.80 [javac: par tests]                                    ^
+#9 24.80 [javac: par tests]   symbol:   method par_shapes_create_cylinder(int,int)
+#9 24.80 [javac: par tests]   location: class ParTest
+#9 24.80 [javac: rpmalloc tests] /testbed/modules/lwjgl/rpmalloc/src/test/java/org/lwjgl/system/rpmalloc/RPMallocTest.java:102: error: cannot find symbol
+#9 24.80 [javac: rpmalloc tests]                 rpmalloc_finalize();
+#9 24.80 [javac: rpmalloc tests]                 ^
+#9 24.80 [javac: rpmalloc tests]   symbol:   method rpmalloc_finalize()
+#9 24.80 [javac: rpmalloc tests]   location: class RPMallocTest
+#9 24.80 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:452: error: cannot find symbol
+#9 24.80 [javac: yoga tests]     static final class YogaValue extends YGValue {
+#9 24.80 [javac: yoga tests]                                          ^
+#9 24.80 [javac: yoga tests]   symbol:   class YGValue
+#9 24.80 [javac: yoga tests]   location: class YogaNode
+#9 24.80 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:87: error: cannot find symbol
+#9 24.80 [javac: par tests]         b = Objects.requireNonNull(par_shapes_create_cylinder(4, 3));
+#9 24.80 [javac: par tests]                                    ^
+#9 24.80 [javac: par tests]   symbol:   method par_shapes_create_cylinder(int,int)
+#9 24.80 [javac: par tests]   location: class ParTest
+#9 24.80 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:69: error: cannot find symbol
+#9 24.80 [javac: opencl tests]             CONTEXT_CALLBACK = CLContextCallback.create((errinfo, private_info, cb, user_data) -> {
+#9 24.80 [javac: opencl tests]                                ^
+#9 24.80 [javac: opencl tests]   symbol:   variable CLContextCallback
+#9 24.80 [javac: opencl tests]   location: class CLTest
+#9 24.80 [javac: rpmalloc tests] 19 errors
+#9 24.80 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:114: error: cannot find symbol
+#9 24.80 [javac: par tests]         a = Objects.requireNonNull(par_shapes_create_cylinder(15, 3));
+#9 24.80 [javac: par tests]                                    ^
+#9 24.80 [javac: par tests]   symbol:   method par_shapes_create_cylinder(int,int)
+#9 24.80 [javac: par tests]   location: class ParTest
+#9 24.80 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaConfig.java:9: error: cannot find symbol
+#9 24.80 [javac: yoga tests] import static org.lwjgl.util.yoga.Yoga.*;
+#9 24.80 [javac: yoga tests]                                  ^
+#9 24.80 [javac: yoga tests]   symbol:   class Yoga
+#9 24.80 [javac: yoga tests]   location: package org.lwjgl.util.yoga
+#9 24.80 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:138: error: cannot find symbol
+#9 24.80 [javac: par tests]         ParShapesMesh a, b;
+#9 24.80 [javac: par tests]         ^
+#9 24.80 [javac: par tests]   symbol:   class ParShapesMesh
+#9 24.80 [javac: par tests]   location: class ParTest
+#9 24.80 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:140: error: cannot find symbol
+#9 24.80 [javac: par tests]         a = Objects.requireNonNull(par_shapes_create_disk(1.0f, slices, center, normal));
+#9 24.80 [javac: par tests]                                    ^
+#9 24.80 [javac: par tests]   symbol:   method par_shapes_create_disk(float,int,FloatBuffer,FloatBuffer)
+#9 24.80 [javac: par tests]   location: class ParTest
+#9 24.80 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:289: error: cannot find symbol
+#9 24.80 [javac: yoga tests]     YGValue getWidth(YGValue __result) {
+#9 24.80 [javac: yoga tests]                      ^
+#9 24.80 [javac: yoga tests]   symbol:   class YGValue
+#9 24.80 [javac: yoga tests]   location: class YogaNode
+#9 24.80 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:289: error: cannot find symbol
+#9 24.80 [javac: yoga tests]     YGValue getWidth(YGValue __result) {
+#9 24.80 [javac: yoga tests]     ^
+#9 24.80 [javac: yoga tests]   symbol:   class YGValue
+#9 24.80 [javac: yoga tests]   location: class YogaNode
+#9 24.80 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:293: error: cannot find symbol
+#9 24.80 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:151: error: cannot find symbol
+#9 24.80 [javac: par tests]         b = Objects.requireNonNull(par_shapes_create_disk(0.2f, slices, center, normal));
+#9 24.80 [javac: par tests]                                    ^
+#9 24.80 [javac: par tests]   symbol:   method par_shapes_create_disk(float,int,FloatBuffer,FloatBuffer)
+#9 24.80 [javac: par tests]   location: class ParTest
+#9 24.80 [javac: yoga tests]     YGValue getHeight(YGValue __result) {
+#9 24.80 [javac: yoga tests]                       ^
+#9 24.80 [javac: yoga tests]   symbol:   class YGValue
+#9 24.80 [javac: yoga tests]   location: class YogaNode
+#9 24.81 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:74: error: cannot find symbol
+#9 24.81 [javac: opencl tests]             CL.create();
+#9 24.81 [javac: opencl tests]             ^
+#9 24.81 [javac: opencl tests]   symbol:   variable CL
+#9 24.81 [javac: opencl tests]   location: class CLTest
+#9 24.81 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:293: error: cannot find symbol
+#9 24.81 [javac: yoga tests]     YGValue getHeight(YGValue __result) {
+#9 24.81 [javac: yoga tests]     ^
+#9 24.81 [javac: yoga tests]   symbol:   class YGValue
+#9 24.81 [javac: yoga tests]   location: class YogaNode
+#9 24.81 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:166: error: cannot find symbol
+#9 24.81 [javac: par tests]         a = Objects.requireNonNull(par_shapes_create_disk(2.0f, slices, center, normal));
+#9 24.81 [javac: par tests]                                    ^
+#9 24.81 [javac: par tests]   symbol:   method par_shapes_create_disk(float,int,FloatBuffer,FloatBuffer)
+#9 24.81 [javac: par tests]   location: class ParTest
+#9 24.81 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:78: error: cannot find symbol
+#9 24.81 [javac: opencl tests]                 checkCLError(clGetPlatformIDs(null, pi));
+#9 24.81 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:297: error: cannot find symbol
+#9 24.81 [javac: yoga tests]     YGValue getMinWidth(YGValue __result) {
+#9 24.81 [javac: yoga tests]                         ^
+#9 24.81 [javac: yoga tests]   symbol:   class YGValue
+#9 24.81 [javac: yoga tests]   location: class YogaNode
+#9 24.81 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:297: error: cannot find symbol
+#9 24.81 [javac: yoga tests]     YGValue getMinWidth(YGValue __result) {
+#9 24.81 [javac: opencl tests]                              ^
+#9 24.81 [javac: opencl tests]   symbol:   method clGetPlatformIDs(<null>,IntBuffer)
+#9 24.81 [javac: opencl tests]   location: class CLTest
+#9 24.81 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:167: error: cannot find symbol
+#9 24.81 [javac: par tests]         b = Objects.requireNonNull(par_shapes_create_rock(1, 2));
+#9 24.81 [javac: par tests]                                    ^
+#9 24.81 [javac: par tests]   symbol:   method par_shapes_create_rock(int,int)
+#9 24.81 [javac: par tests]   location: class ParTest
+#9 24.81 [javac: yoga tests]     ^
+#9 24.81 [javac: yoga tests]   symbol:   class YGValue
+#9 24.81 [javac: yoga tests]   location: class YogaNode
+#9 24.81 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:301: error: cannot find symbol
+#9 24.81 [javac: yoga tests]     YGValue getMinHeight(YGValue __result) {
+#9 24.81 [javac: yoga tests]                          ^
+#9 24.81 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:81: error: cannot find symbol
+#9 24.81 [javac: opencl tests]                 checkCLError(clGetPlatformIDs(platforms, (IntBuffer)null));
+#9 24.81 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:183: error: cannot find symbol
+#9 24.81 [javac: par tests]         a = Objects.requireNonNull(par_shapes_create_disk(2.0f, slices, center, normal));
+#9 24.81 [javac: par tests]                                    ^
+#9 24.81 [javac: par tests]   symbol:   method par_shapes_create_disk(float,int,FloatBuffer,FloatBuffer)
+#9 24.81 [javac: par tests]   location: class ParTest
+#9 24.81 [javac: opencl tests]                              ^
+#9 24.81 [javac: opencl tests]   symbol:   method clGetPlatformIDs(PointerBuffer,IntBuffer)
+#9 24.81 [javac: yoga tests]   symbol:   class YGValue
+#9 24.81 [javac: opencl tests]   location: class CLTest
+#9 24.81 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:184: error: cannot find symbol
+#9 24.81 [javac: par tests]         b = Objects.requireNonNull(par_shapes_create_dodecahedron());
+#9 24.81 [javac: par tests]                                    ^
+#9 24.81 [javac: par tests]   symbol:   method par_shapes_create_dodecahedron()
+#9 24.81 [javac: par tests]   location: class ParTest
+#9 24.81 [javac: yoga tests]   location: class YogaNode
+#9 24.81 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:301: error: cannot find symbol
+#9 24.81 [javac: yoga tests]     YGValue getMinHeight(YGValue __result) {
+#9 24.81 [javac: yoga tests]     ^
+#9 24.81 [javac: yoga tests]   symbol:   class YGValue
+#9 24.81 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:231: error: cannot find symbol
+#9 24.81 [javac: yoga tests]   location: class YogaNode
+#9 24.81 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:86: error: cannot find symbol
+#9 24.81 [javac: opencl tests]                     checkCLError(clGetDeviceIDs(platform, CL_DEVICE_TYPE_ALL, null, pi));
+#9 24.81 [javac: opencl tests]                                                           ^
+#9 24.81 [javac: opencl tests]   symbol:   variable CL_DEVICE_TYPE_ALL
+#9 24.81 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:305: error: cannot find symbol
+#9 24.81 [javac: yoga tests]     YGValue getMaxWidth(YGValue __result) {
+#9 24.81 [javac: yoga tests]                         ^
+#9 24.81 [javac: yoga tests]   symbol:   class YGValue
+#9 24.81 [javac: yoga tests]   location: class YogaNode
+#9 24.81 [javac: opencl tests]   location: class CLTest
+#9 24.81 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:305: error: cannot find symbol
+#9 24.81 [javac: yoga tests]     YGValue getMaxWidth(YGValue __result) {
+#9 24.81 [javac: par tests]         a = Objects.requireNonNull(par_shapes_create_disk(2.5f, tess, O, J));
+#9 24.81 [javac: yoga tests]     ^
+#9 24.81 [javac: yoga tests]   symbol:   class YGValue
+#9 24.81 [javac: yoga tests]   location: class YogaNode
+#9 24.81 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:309: error: cannot find symbol
+#9 24.81 [javac: yoga tests]     YGValue getMaxHeight(YGValue __result) {
+#9 24.81 [javac: yoga tests]                          ^
+#9 24.81 [javac: yoga tests]   symbol:   class YGValue
+#9 24.81 [javac: yoga tests]   location: class YogaNode
+#9 24.81 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:309: error: cannot find symbol
+#9 24.81 [javac: yoga tests]     YGValue getMaxHeight(YGValue __result) {
+#9 24.81 [javac: yoga tests]     ^
+#9 24.81 [javac: yoga tests]   symbol:   class YGValue
+#9 24.81 [javac: yoga tests]   location: class YogaNode
+#9 24.81 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:341: error: cannot find symbol
+#9 24.81 [javac: yoga tests]     YGValue getMargin(YogaEdge edge, YGValue __result) {
+#9 24.81 [javac: par tests]                                    ^
+#9 24.81 [javac: par tests]   symbol:   method par_shapes_create_disk(float,int,FloatBuffer,FloatBuffer)
+#9 24.81 [javac: par tests]   location: class ParTest
+#9 24.81 [javac: yoga tests]                                      ^
+#9 24.81 [javac: yoga tests]   symbol:   class YGValue
+#9 24.81 [javac: yoga tests]   location: class YogaNode
+#9 24.81 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:89: error: cannot find symbol
+#9 24.81 [javac: opencl tests]                     checkCLError(clGetDeviceIDs(platform, CL_DEVICE_TYPE_ALL, devices, (IntBuffer)null));
+#9 24.81 [javac: opencl tests]                                                           ^
+#9 24.81 [javac: opencl tests]   symbol:   variable CL_DEVICE_TYPE_ALL
+#9 24.81 [javac: opencl tests]   location: class CLTest
+#9 24.81 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:232: error: cannot find symbol
+#9 24.81 [javac: par tests]         b = Objects.requireNonNull(par_shapes_create_cylinder(tess, 3));
+#9 24.81 [javac: par tests]                                    ^
+#9 24.81 [javac: par tests]   symbol:   method par_shapes_create_cylinder(int,int)
+#9 24.81 [javac: par tests]   location: class ParTest
+#9 24.81 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:341: error: cannot find symbol
+#9 24.81 [javac: yoga tests]     YGValue getMargin(YogaEdge edge, YGValue __result) {
+#9 24.81 [javac: yoga tests]     ^
+#9 24.81 [javac: yoga tests]   symbol:   class YGValue
+#9 24.81 [javac: yoga tests]   location: class YogaNode
+#9 24.81 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:93: error: cannot find symbol
+#9 24.81 [javac: opencl tests]                         .put(0, CL_CONTEXT_PLATFORM)
+#9 24.81 [javac: opencl tests]                                 ^
+#9 24.81 [javac: opencl tests]   symbol:   variable CL_CONTEXT_PLATFORM
+#9 24.81 [javac: opencl tests]   location: class CLTest
+#9 24.81 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:233: error: cannot find symbol
+#9 24.81 [javac: par tests]         ParShapesMesh c = Objects.requireNonNull(par_shapes_create_torus(15, tess, 0.1f));
+#9 24.81 [javac: par tests]         ^
+#9 24.81 [javac: par tests]   symbol:   class ParShapesMesh
+#9 24.81 [javac: par tests]   location: class ParTest
+#9 24.82 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:345: error: cannot find symbol
+#9 24.82 [javac: yoga tests]     YGValue getPadding(YogaEdge edge, YGValue __result) {
+#9 24.82 [javac: yoga tests]                                       ^
+#9 24.82 [javac: yoga tests]   symbol:   class YGValue
+#9 24.82 [javac: yoga tests]   location: class YogaNode
+#9 24.82 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:103: error: cannot find symbol
+#9 24.82 [javac: opencl tests]             CL.destroy();
+#9 24.82 [javac: opencl tests]             ^
+#9 24.82 [javac: opencl tests]   symbol:   variable CL
+#9 24.82 [javac: opencl tests]   location: class CLTest
+#9 24.82 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:345: error: cannot find symbol
+#9 24.82 [javac: yoga tests]     YGValue getPadding(YogaEdge edge, YGValue __result) {
+#9 24.82 [javac: yoga tests]     ^
+#9 24.82 [javac: yoga tests]   symbol:   class YGValue
+#9 24.82 [javac: yoga tests]   location: class YogaNode
+#9 24.82 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:233: error: cannot find symbol
+#9 24.82 [javac: par tests]         ParShapesMesh c = Objects.requireNonNull(par_shapes_create_torus(15, tess, 0.1f));
+#9 24.82 [javac: par tests]                                                  ^
+#9 24.82 [javac: par tests]   symbol:   method par_shapes_create_torus(int,int,float)
+#9 24.82 [javac: par tests]   location: class ParTest
+#9 24.82 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:349: error: cannot find symbol
+#9 24.82 [javac: yoga tests]     YGValue getPosition(YogaEdge edge, YGValue __result) {
+#9 24.82 [javac: yoga tests]                                        ^
+#9 24.82 [javac: yoga tests]   symbol:   class YGValue
+#9 24.82 [javac: yoga tests]   location: class YogaNode
+#9 24.82 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:234: error: cannot find symbol
+#9 24.82 [javac: par tests]         ParShapesMesh d = Objects.requireNonNull(par_shapes_create_disk(1, tess, top_center, J));
+#9 24.82 [javac: par tests]         ^
+#9 24.82 [javac: par tests]   symbol:   class ParShapesMesh
+#9 24.82 [javac: par tests]   location: class ParTest
+#9 24.82 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:117: error: cannot find symbol
+#9 24.82 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:349: error: cannot find symbol
+#9 24.82 [javac: yoga tests]     YGValue getPosition(YogaEdge edge, YGValue __result) {
+#9 24.82 [javac: yoga tests]     ^
+#9 24.82 [javac: yoga tests]   symbol:   class YGValue
+#9 24.82 [javac: yoga tests]   location: class YogaNode
+#9 24.82 [javac: opencl tests]             long queue = clCreateCommandQueue(context, device, 0, errcode_ret);
+#9 24.82 [javac: opencl tests]                          ^
+#9 24.82 [javac: opencl tests]   symbol:   method clCreateCommandQueue(long,long,int,IntBuffer)
+#9 24.82 [javac: opencl tests]   location: class CLTest
+#9 24.82 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:414: error: cannot find symbol
+#9 24.82 [javac: yoga tests]     YGValue getFlexBasis(YGValue __result) {
+#9 24.82 [javac: yoga tests]                          ^
+#9 24.82 [javac: yoga tests]   symbol:   class YGValue
+#9 24.82 [javac: yoga tests]   location: class YogaNode
+#9 24.82 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:121: error: cannot find symbol
+#9 24.82 [javac: opencl tests]             long buffer = clCreateBuffer(context, CL_MEM_READ_ONLY, 128, errcode_ret);
+#9 24.82 [javac: opencl tests]                                                   ^
+#9 24.82 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:414: error: cannot find symbol
+#9 24.82 [javac: yoga tests]     YGValue getFlexBasis(YGValue __result) {
+#9 24.82 [javac: yoga tests]     ^
+#9 24.82 [javac: yoga tests]   symbol:   class YGValue
+#9 24.82 [javac: yoga tests]   location: class YogaNode
+#9 24.82 [javac: opencl tests]   symbol:   variable CL_MEM_READ_ONLY
+#9 24.82 [javac: opencl tests]   location: class CLTest
+#9 24.82 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:234: error: cannot find symbol
+#9 24.82 [javac: par tests]         ParShapesMesh d = Objects.requireNonNull(par_shapes_create_disk(1, tess, top_center, J));
+#9 24.82 [javac: par tests]                                                  ^
+#9 24.82 [javac: par tests]   symbol:   method par_shapes_create_disk(int,int,FloatBuffer,FloatBuffer)
+#9 24.82 [javac: par tests]   location: class ParTest
+#9 24.82 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:125: error: cannot find symbol
+#9 24.82 [javac: opencl tests]             checkCLError(clReleaseCommandQueue(queue));
+#9 24.82 [javac: opencl tests]                          ^
+#9 24.82 [javac: opencl tests]   symbol:   method clReleaseCommandQueue(long)
+#9 24.82 [javac: opencl tests]   location: class CLTest
+#9 24.82 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:126: error: cannot find symbol
+#9 24.82 [javac: opencl tests]             checkCLError(clReleaseMemObject(buffer));
+#9 24.82 [javac: opencl tests]                          ^
+#9 24.82 [javac: opencl tests]   symbol:   method clReleaseMemObject(long)
+#9 24.82 [javac: opencl tests]   location: class CLTest
+#9 24.82 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:453: error: cannot find symbol
+#9 24.82 [javac: yoga tests]         static final YGValue UNDEFINED = YGValue.create().set(YogaConstants.UNDEFINED, YogaUnit.UNDEFINED);
+#9 24.82 [javac: yoga tests]                      ^
+#9 24.82 [javac: yoga tests]   symbol:   class YGValue
+#9 24.82 [javac: yoga tests]   location: class YogaValue
+#9 24.82 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:454: error: cannot find symbol
+#9 24.82 [javac: yoga tests]         static final YGValue ZERO      = YGValue.create().set(0, YogaUnit.POINT);
+#9 24.82 [javac: yoga tests]                      ^
+#9 24.82 [javac: yoga tests]   symbol:   class YGValue
+#9 24.82 [javac: yoga tests]   location: class YogaValue
+#9 24.82 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:302: error: cannot find symbol
+#9 24.82 [javac: par tests]         ParShapesMesh mesh = Objects.requireNonNull(par_shapes_create_lsystem(program, 5, 60));
+#9 24.82 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:127: error: cannot find symbol
+#9 24.82 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:455: error: cannot find symbol
+#9 24.82 [javac: yoga tests]         static final YGValue AUTO      = YGValue.create().set(YogaConstants.UNDEFINED, YogaUnit.AUTO);
+#9 24.82 [javac: yoga tests]                      ^
+#9 24.82 [javac: yoga tests]   symbol:   class YGValue
+#9 24.82 [javac: yoga tests]   location: class YogaValue
+#9 24.82 [javac: opencl tests]             checkCLError(clReleaseContext(context));
+#9 24.82 [javac: opencl tests]                          ^
+#9 24.82 [javac: opencl tests]   symbol:   method clReleaseContext(long)
+#9 24.82 [javac: opencl tests]   location: class CLTest
+#9 24.82 [javac: par tests]         ^
+#9 24.82 [javac: par tests]   symbol:   class ParShapesMesh
+#9 24.82 [javac: par tests]   location: class ParTest
+#9 24.82 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:302: error: cannot find symbol
+#9 24.82 [javac: par tests]         ParShapesMesh mesh = Objects.requireNonNull(par_shapes_create_lsystem(program, 5, 60));
+#9 24.82 [javac: par tests]                                                     ^
+#9 24.82 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:133: error: cannot find symbol
+#9 24.82 [javac: opencl tests]             if ((getDeviceInfoLong(device, CL_DEVICE_EXECUTION_CAPABILITIES) & CL_EXEC_NATIVE_KERNEL) == 0) {
+#9 24.82 [javac: opencl tests]                                            ^
+#9 24.82 [javac: opencl tests]   symbol:   variable CL_DEVICE_EXECUTION_CAPABILITIES
+#9 24.82 [javac: opencl tests]   location: class CLTest
+#9 24.82 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:433: error: cannot find symbol
+#9 24.82 [javac: yoga tests]         static boolean isUndefined(YGValue value) {
+#9 24.82 [javac: yoga tests]                                    ^
+#9 24.82 [javac: yoga tests]   symbol:   class YGValue
+#9 24.82 [javac: yoga tests]   location: class YogaConstants
+#9 24.82 [javac: par tests]   symbol:   method par_shapes_create_lsystem(String,int,int)
+#9 24.82 [javac: par tests]   location: class ParTest
+#9 24.82 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:133: error: cannot find symbol
+#9 24.82 [javac: opencl tests]             if ((getDeviceInfoLong(device, CL_DEVICE_EXECUTION_CAPABILITIES) & CL_EXEC_NATIVE_KERNEL) == 0) {
+#9 24.82 [javac: opencl tests]                                                                                ^
+#9 24.82 [javac: opencl tests]   symbol:   variable CL_EXEC_NATIVE_KERNEL
+#9 24.82 [javac: opencl tests]   location: class CLTest
+#9 24.82 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaConfig.java:16: error: cannot find symbol
+#9 24.82 [javac: yoga tests]     private YGCloneNodeFunc cloneNodeFunc;
+#9 24.82 [javac: yoga tests]             ^
+#9 24.82 [javac: yoga tests]   symbol:   class YGCloneNodeFunc
+#9 24.82 [javac: yoga tests]   location: class YogaConfig
+#9 24.82 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaConfig.java:30: error: cannot find symbol
+#9 24.82 [javac: yoga tests]     void setOnCloneNode(@Nullable YGCloneNodeFuncI callback) {
+#9 24.82 [javac: yoga tests]                                   ^
+#9 24.82 [javac: yoga tests]   symbol:   class YGCloneNodeFuncI
+#9 24.82 [javac: yoga tests]   location: class YogaConfig
+#9 24.82 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:142: error: cannot find symbol
+#9 24.82 [javac: opencl tests]             long queue = clCreateCommandQueue(context, device, 0, errcode_ret);
+#9 24.82 [javac: opencl tests]                          ^
+#9 24.82 [javac: opencl tests]   symbol:   method clCreateCommandQueue(long,long,int,IntBuffer)
+#9 24.82 [javac: opencl tests]   location: class CLTest
+#9 24.82 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:303: error: cannot find symbol
+#9 24.82 [javac: par tests]         ParShapesMesh disk = Objects.requireNonNull(par_shapes_create_disk(10, 30, O, J));
+#9 24.82 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:146: error: cannot find symbol
+#9 24.82 [javac: opencl tests]             long buffer = clCreateBuffer(context, CL_MEM_READ_ONLY, 128, errcode_ret);
+#9 24.82 [javac: opencl tests]                                                   ^
+#9 24.82 [javac: opencl tests]   symbol:   variable CL_MEM_READ_ONLY
+#9 24.82 [javac: opencl tests]   location: class CLTest
+#9 24.82 [javac: par tests]         ^
+#9 24.82 [javac: par tests]   symbol:   class ParShapesMesh
+#9 24.82 [javac: par tests]   location: class ParTest
+#9 24.82 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:149: error: cannot find symbol
+#9 24.82 [javac: opencl tests]             int BUFFER_SIZE = (int)getMemObjectInfoPointer(buffer, CL_MEM_SIZE);
+#9 24.82 [javac: opencl tests]                                                                    ^
+#9 24.82 [javac: opencl tests]   symbol:   variable CL_MEM_SIZE
+#9 24.82 [javac: opencl tests]   location: class CLTest
+#9 24.82 [javac: par tests] /testbed/modules/lwjgl/par/src/test/java/org/lwjgl/util/par/ParTest.java:303: error: cannot find symbol
+#9 24.82 [javac: par tests]         ParShapesMesh disk = Objects.requireNonNull(par_shapes_create_disk(10, 30, O, J));
+#9 24.82 [javac: par tests]                                                     ^
+#9 24.82 [javac: par tests]   symbol:   method par_shapes_create_disk(int,int,FloatBuffer,FloatBuffer)
+#9 24.82 [javac: par tests]   location: class ParTest
+#9 24.82 [javac: par tests] 37 errors
+#9 24.82 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:149: warning: [cast] redundant cast to <any>
+#9 24.82 [javac: opencl tests]             int BUFFER_SIZE = (int)getMemObjectInfoPointer(buffer, CL_MEM_SIZE);
+#9 24.82 [javac: opencl tests]                               ^
+#9 24.83 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:158: error: cannot find symbol
+#9 24.83 [javac: opencl tests]             checkCLError(clEnqueueWriteBuffer(queue, buffer, true, 0, bufferContents, null, null));
+#9 24.83 [javac: opencl tests]                          ^
+#9 24.83 [javac: opencl tests]   symbol:   method clEnqueueWriteBuffer(long,long,boolean,int,ByteBuffer,<null>,<null>)
+#9 24.83 [javac: opencl tests]   location: class CLTest
+#9 24.83 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:180: error: cannot find symbol
+#9 24.83 [javac: opencl tests]             CLNativeKernel kernel;
+#9 24.83 [javac: opencl tests]             ^
+#9 24.83 [javac: opencl tests]   symbol:   class CLNativeKernel
+#9 24.83 [javac: opencl tests]   location: class CLTest
+#9 24.83 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:182: error: cannot find symbol
+#9 24.83 [javac: opencl tests]                 clEnqueueNativeKernel(queue, kernel = CLNativeKernel.create(argAddress -> {
+#9 24.83 [javac: opencl tests]                                                       ^
+#9 24.83 [javac: opencl tests]   symbol:   variable CLNativeKernel
+#9 24.83 [javac: opencl tests]   location: class CLTest
+#9 24.83 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNodeTest.java:19: error: cannot find symbol
+#9 24.83 [javac: yoga tests] import static org.lwjgl.util.yoga.Yoga.*;
+#9 24.83 [javac: yoga tests]                                  ^
+#9 24.83 [javac: yoga tests]   symbol:   class Yoga
+#9 24.83 [javac: yoga tests]   location: package org.lwjgl.util.yoga
+#9 24.83 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNodeTest.java:59: error: cannot find symbol
+#9 24.83 [javac: yoga tests]     private static YGMeasureFunc getTestMeasureFunc(float testWidth, float testHeight) {
+#9 24.83 [javac: yoga tests]                    ^
+#9 24.83 [javac: yoga tests]   symbol:   class YGMeasureFunc
+#9 24.83 [javac: yoga tests]   location: class YogaNodeTest
+#9 24.83 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:203: error: cannot find symbol
+#9 24.83 [javac: opencl tests]             CLEventCallback eventCallback;
+#9 24.83 [javac: opencl tests]             ^
+#9 24.83 [javac: opencl tests]   symbol:   class CLEventCallback
+#9 24.83 [javac: opencl tests]   location: class CLTest
+#9 24.83 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:205: error: cannot find symbol
+#9 24.83 [javac: opencl tests]                 clSetEventCallback(e, CL_COMPLETE, eventCallback = CLEventCallback.create(
+#9 24.83 [javac: opencl tests]                                       ^
+#9 24.83 [javac: opencl tests]   symbol:   variable CL_COMPLETE
+#9 24.83 [javac: opencl tests]   location: class CLTest
+#9 24.83 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:205: error: cannot find symbol
+#9 24.83 [javac: opencl tests]                 clSetEventCallback(e, CL_COMPLETE, eventCallback = CLEventCallback.create(
+#9 24.83 [javac: opencl tests]                                                                    ^
+#9 24.83 [javac: opencl tests]   symbol:   variable CLEventCallback
+#9 24.83 [javac: opencl tests]   location: class CLTest
+#9 24.83 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:217: error: cannot find symbol
+#9 24.83 [javac: opencl tests]             checkCLError(clReleaseEvent(e));
+#9 24.83 [javac: opencl tests]                          ^
+#9 24.83 [javac: opencl tests]   symbol:   method clReleaseEvent(long)
+#9 24.83 [javac: opencl tests]   location: class CLTest
+#9 24.83 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:219: error: cannot find symbol
+#9 24.83 [javac: opencl tests]             checkCLError(clReleaseCommandQueue(queue));
+#9 24.83 [javac: opencl tests]                          ^
+#9 24.83 [javac: opencl tests]   symbol:   method clReleaseCommandQueue(long)
+#9 24.83 [javac: opencl tests]   location: class CLTest
+#9 24.83 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:220: error: cannot find symbol
+#9 24.83 [javac: opencl tests]             checkCLError(clReleaseContext(context));
+#9 24.83 [javac: opencl tests]                          ^
+#9 24.83 [javac: opencl tests]   symbol:   method clReleaseContext(long)
+#9 24.83 [javac: opencl tests]   location: class CLTest
+#9 24.83 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:231: error: cannot find symbol
+#9 24.83 [javac: opencl tests]             long buffer = clCreateBuffer(context, CL_MEM_READ_ONLY, 128, errcode_ret);
+#9 24.83 [javac: opencl tests]                                                   ^
+#9 24.83 [javac: opencl tests]   symbol:   variable CL_MEM_READ_ONLY
+#9 24.83 [javac: opencl tests]   location: class CLTest
+#9 24.83 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:237: error: cannot find symbol
+#9 24.83 [javac: opencl tests]             CLMemObjectDestructorCallback memDestructorCallback;
+#9 24.83 [javac: opencl tests]             ^
+#9 24.83 [javac: opencl tests]   symbol:   class CLMemObjectDestructorCallback
+#9 24.83 [javac: opencl tests]   location: class CLTest
+#9 24.83 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:239: error: cannot find symbol
+#9 24.83 [javac: opencl tests]                 clSetMemObjectDestructorCallback(buffer, memDestructorCallback = CLMemObjectDestructorCallback.create(
+#9 24.83 [javac: opencl tests]                                                                                  ^
+#9 24.83 [javac: opencl tests]   symbol:   variable CLMemObjectDestructorCallback
+#9 24.83 [javac: opencl tests]   location: class CLTest
+#9 24.83 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:243: error: cannot find symbol
+#9 24.83 [javac: opencl tests]             assertEquals(getMemObjectInfoInt(buffer, CL_MEM_REFERENCE_COUNT), 1);
+#9 24.83 [javac: opencl tests]                                                      ^
+#9 24.83 [javac: opencl tests]   symbol:   variable CL_MEM_REFERENCE_COUNT
+#9 24.83 [javac: opencl tests]   location: class CLTest
+#9 24.83 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:245: error: cannot find symbol
+#9 24.83 [javac: opencl tests]             checkCLError(clRetainMemObject(buffer));
+#9 24.83 [javac: opencl tests]                          ^
+#9 24.83 [javac: opencl tests]   symbol:   method clRetainMemObject(long)
+#9 24.83 [javac: opencl tests]   location: class CLTest
+#9 24.83 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:246: error: cannot find symbol
+#9 24.83 [javac: opencl tests]             assertEquals(getMemObjectInfoInt(buffer, CL_MEM_REFERENCE_COUNT), 2);
+#9 24.83 [javac: opencl tests]                                                      ^
+#9 24.83 [javac: opencl tests]   symbol:   variable CL_MEM_REFERENCE_COUNT
+#9 24.83 [javac: opencl tests]   location: class CLTest
+#9 24.83 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:248: error: cannot find symbol
+#9 24.83 [javac: opencl tests]             checkCLError(clReleaseMemObject(buffer));
+#9 24.83 [javac: opencl tests]                          ^
+#9 24.83 [javac: opencl tests]   symbol:   method clReleaseMemObject(long)
+#9 24.83 [javac: opencl tests]   location: class CLTest
+#9 24.83 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:249: error: cannot find symbol
+#9 24.83 [javac: opencl tests]             assertEquals(getMemObjectInfoInt(buffer, CL_MEM_REFERENCE_COUNT), 1);
+#9 24.83 [javac: opencl tests]                                                      ^
+#9 24.83 [javac: opencl tests]   symbol:   variable CL_MEM_REFERENCE_COUNT
+#9 24.83 [javac: opencl tests]   location: class CLTest
+#9 24.83 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:252: error: cannot find symbol
+#9 24.83 [javac: opencl tests]             checkCLError(clReleaseMemObject(buffer));
+#9 24.83 [javac: opencl tests]                          ^
+#9 24.83 [javac: opencl tests]   symbol:   method clReleaseMemObject(long)
+#9 24.83 [javac: opencl tests]   location: class CLTest
+#9 24.84 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:264: error: cannot find symbol
+#9 24.84 [javac: opencl tests]             checkCLError(clReleaseContext(context));
+#9 24.84 [javac: opencl tests]                          ^
+#9 24.84 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:30: error: cannot find symbol
+#9 24.84 [javac: yoga tests]         this(YGNodeNew());
+#9 24.84 [javac: yoga tests]              ^
+#9 24.84 [javac: yoga tests]   symbol:   method YGNodeNew()
+#9 24.84 [javac: yoga tests]   location: class YogaNode
+#9 24.84 [javac: opencl tests]   symbol:   method clReleaseContext(long)
+#9 24.84 [javac: opencl tests]   location: class CLTest
+#9 24.84 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:34: error: cannot find symbol
+#9 24.84 [javac: yoga tests]         this(YGNodeNewWithConfig(config.handle));
+#9 24.84 [javac: yoga tests]              ^
+#9 24.84 [javac: yoga tests]   symbol:   method YGNodeNewWithConfig(long)
+#9 24.84 [javac: yoga tests]   location: class YogaNode
+#9 24.84 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:276: error: cannot find symbol
+#9 24.84 [javac: opencl tests]             long e = clCreateUserEvent(context, errcode_ret);
+#9 24.84 [javac: opencl tests]                      ^
+#9 24.84 [javac: opencl tests]   symbol:   method clCreateUserEvent(long,IntBuffer)
+#9 24.84 [javac: opencl tests]   location: class CLTest
+#9 24.84 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:40: error: cannot find symbol
+#9 24.84 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:282: error: cannot find symbol
+#9 24.84 [javac: opencl tests]             CLEventCallback eventCallback;
+#9 24.84 [javac: opencl tests]             ^
+#9 24.84 [javac: opencl tests]   symbol:   class CLEventCallback
+#9 24.84 [javac: opencl tests]   location: class CLTest
+#9 24.84 [javac: yoga tests]         YGNodeSetContext(node, weakGlobalRef);
+#9 24.84 [javac: yoga tests]         ^
+#9 24.84 [javac: yoga tests]   symbol:   method YGNodeSetContext(long,long)
+#9 24.84 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:284: error: cannot find symbol
+#9 24.84 [javac: opencl tests]                 clSetEventCallback(e, CL_COMPLETE, eventCallback = CLEventCallback.create((event, event_command_exec_status, user_data) -> {
+#9 24.84 [javac: opencl tests]                                       ^
+#9 24.84 [javac: opencl tests]   symbol:   variable CL_COMPLETE
+#9 24.84 [javac: opencl tests]   location: class CLTest
+#9 24.84 [javac: yoga tests]   location: class YogaNode
+#9 24.84 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:284: error: cannot find symbol
+#9 24.84 [javac: opencl tests]                 clSetEventCallback(e, CL_COMPLETE, eventCallback = CLEventCallback.create((event, event_command_exec_status, user_data) -> {
+#9 24.84 [javac: opencl tests]                                                                    ^
+#9 24.84 [javac: opencl tests]   symbol:   variable CLEventCallback
+#9 24.84 [javac: opencl tests]   location: class CLTest
+#9 24.84 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:45: error: cannot find symbol
+#9 24.84 [javac: yoga tests]         return memGlobalRefToObject(YGNodeGetContext(node));
+#9 24.84 [javac: yoga tests]                                     ^
+#9 24.84 [javac: yoga tests]   symbol:   method YGNodeGetContext(long)
+#9 24.84 [javac: yoga tests]   location: class YogaNode
+#9 24.84 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:286: error: cannot find symbol
+#9 24.84 [javac: opencl tests]                     assertEquals(event_command_exec_status, CL_COMPLETE);
+#9 24.84 [javac: opencl tests]                                                             ^
+#9 24.84 [javac: opencl tests]   symbol:   variable CL_COMPLETE
+#9 24.84 [javac: opencl tests]   location: class CLTest
+#9 24.84 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:50: error: cannot find symbol
+#9 24.84 [javac: yoga tests]         YogaNode clone = new YogaNode(YGNodeClone(node));
+#9 24.84 [javac: yoga tests]                                       ^
+#9 24.84 [javac: yoga tests]   symbol:   method YGNodeClone(long)
+#9 24.84 [javac: yoga tests]   location: class YogaNode
+#9 24.84 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:62: error: cannot find symbol
+#9 24.84 [javac: yoga tests]         YogaNode clone = new YogaNode(YGNodeClone(this.node));
+#9 24.84 [javac: yoga tests]                                       ^
+#9 24.84 [javac: yoga tests]   symbol:   method YGNodeClone(long)
+#9 24.84 [javac: yoga tests]   location: class YogaNode
+#9 24.84 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:63: error: cannot find symbol
+#9 24.84 [javac: yoga tests]         YGNodeRemoveAllChildren(clone.node);
+#9 24.84 [javac: yoga tests]         ^
+#9 24.84 [javac: yoga tests]   symbol:   method YGNodeRemoveAllChildren(long)
+#9 24.84 [javac: yoga tests]   location: class YogaNode
+#9 24.84 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:293: error: cannot find symbol
+#9 24.84 [javac: opencl tests]             checkCLError(clSetUserEventStatus(e, CL_COMPLETE));
+#9 24.84 [javac: opencl tests]                                                  ^
+#9 24.84 [javac: opencl tests]   symbol:   variable CL_COMPLETE
+#9 24.84 [javac: opencl tests]   location: class CLTest
+#9 24.84 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:70: error: cannot find symbol
+#9 24.84 [javac: yoga tests]         YGNodeFree(node);
+#9 24.84 [javac: yoga tests]         ^
+#9 24.84 [javac: yoga tests]   symbol:   method YGNodeFree(long)
+#9 24.84 [javac: yoga tests]   location: class YogaNode
+#9 24.84 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:303: error: cannot find symbol
+#9 24.84 [javac: opencl tests]             checkCLError(clReleaseEvent(e));
+#9 24.84 [javac: opencl tests]                          ^
+#9 24.84 [javac: opencl tests]   symbol:   method clReleaseEvent(long)
+#9 24.84 [javac: opencl tests]   location: class CLTest
+#9 24.84 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:305: error: cannot find symbol
+#9 24.84 [javac: opencl tests]             checkCLError(clReleaseContext(context));
+#9 24.84 [javac: opencl tests]                          ^
+#9 24.84 [javac: opencl tests]   symbol:   method clReleaseContext(long)
+#9 24.84 [javac: opencl tests]   location: class CLTest
+#9 24.84 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:317: error: cannot find symbol
+#9 24.84 [javac: opencl tests]             long buffer = clCreateBuffer(context, CL_MEM_READ_ONLY, 128, errcode_ret);
+#9 24.84 [javac: opencl tests]                                                   ^
+#9 24.84 [javac: opencl tests]   symbol:   variable CL_MEM_READ_ONLY
+#9 24.84 [javac: opencl tests]   location: class CLTest
+#9 24.84 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:322: error: cannot find symbol
+#9 24.84 [javac: opencl tests]             try (CLBufferRegion bufferRegion = CLBufferRegion.malloc()) {
+#9 24.84 [javac: opencl tests]                  ^
+#9 24.84 [javac: opencl tests]   symbol:   class CLBufferRegion
+#9 24.84 [javac: opencl tests]   location: class CLTest
+#9 24.85 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:322: error: cannot find symbol
+#9 24.85 [javac: opencl tests]             try (CLBufferRegion bufferRegion = CLBufferRegion.malloc()) {
+#9 24.85 [javac: opencl tests]                                                ^
+#9 24.85 [javac: opencl tests]   symbol:   variable CLBufferRegion
+#9 24.85 [javac: opencl tests]   location: class CLTest
+#9 24.85 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:91: error: cannot find symbol
+#9 24.85 [javac: yoga tests]         YGNodeInsertChild(node, child.node, index);
+#9 24.85 [javac: yoga tests]         ^
+#9 24.85 [javac: yoga tests]   symbol:   method YGNodeInsertChild(long,long,int)
+#9 24.85 [javac: yoga tests]   location: class YogaNode
+#9 24.85 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:326: error: cannot find symbol
+#9 24.85 [javac: opencl tests]                 subbuffer = nclCreateSubBuffer(buffer, CL_MEM_READ_ONLY, CL_BUFFER_CREATE_TYPE_REGION, bufferRegion.address(), memAddress(errcode_ret));
+#9 24.85 [javac: opencl tests]                                                        ^
+#9 24.85 [javac: opencl tests]   symbol:   variable CL_MEM_READ_ONLY
+#9 24.85 [javac: opencl tests]   location: class CLTest
+#9 24.85 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:97: error: cannot find symbol
+#9 24.85 [javac: yoga tests]         YGNodeInsertSharedChild(node, child.node, index);
+#9 24.85 [javac: yoga tests]         ^
+#9 24.85 [javac: yoga tests]   symbol:   method YGNodeInsertSharedChild(long,long,int)
+#9 24.85 [javac: yoga tests]   location: class YogaNode
+#9 24.85 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:326: error: cannot find symbol
+#9 24.85 [javac: opencl tests]                 subbuffer = nclCreateSubBuffer(buffer, CL_MEM_READ_ONLY, CL_BUFFER_CREATE_TYPE_REGION, bufferRegion.address(), memAddress(errcode_ret));
+#9 24.85 [javac: opencl tests]                                                                          ^
+#9 24.85 [javac: opencl tests]   symbol:   variable CL_BUFFER_CREATE_TYPE_REGION
+#9 24.85 [javac: opencl tests]   location: class CLTest
+#9 24.85 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:103: error: cannot find symbol
+#9 24.85 [javac: yoga tests]         return create(YGNodeGetChild(node, index));
+#9 24.85 [javac: yoga tests]                       ^
+#9 24.85 [javac: yoga tests]   symbol:   method YGNodeGetChild(long,int)
+#9 24.85 [javac: yoga tests]   location: class YogaNode
+#9 24.85 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:107: error: cannot find symbol
+#9 24.85 [javac: yoga tests]         YGNodeRemoveChild(node, YGNodeGetChild(node, index));
+#9 24.85 [javac: yoga tests]                                 ^
+#9 24.85 [javac: yoga tests]   symbol:   method YGNodeGetChild(long,int)
+#9 24.85 [javac: yoga tests]   location: class YogaNode
+#9 24.85 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:112: error: cannot find symbol
+#9 24.85 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:331: error: cannot find symbol
+#9 24.85 [javac: opencl tests]             checkCLError(clReleaseMemObject(buffer));
+#9 24.85 [javac: opencl tests]                          ^
+#9 24.85 [javac: opencl tests]   symbol:   method clReleaseMemObject(long)
+#9 24.85 [javac: opencl tests]   location: class CLTest
+#9 24.85 [javac: yoga tests]         return YGNodeGetChildCount(node);
+#9 24.85 [javac: yoga tests]                ^
+#9 24.85 [javac: yoga tests]   symbol:   method YGNodeGetChildCount(long)
+#9 24.85 [javac: yoga tests]   location: class YogaNode
+#9 24.85 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:332: error: cannot find symbol
+#9 24.85 [javac: opencl tests]             checkCLError(clReleaseMemObject(subbuffer));
+#9 24.85 [javac: opencl tests]                          ^
+#9 24.85 [javac: opencl tests]   symbol:   method clReleaseMemObject(long)
+#9 24.85 [javac: opencl tests]   location: class CLTest
+#9 24.85 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:117: error: cannot find symbol
+#9 24.85 [javac: yoga tests]         long owner = YGNodeGetOwner(node);
+#9 24.85 [javac: yoga tests]                      ^
+#9 24.85 [javac: yoga tests]   symbol:   method YGNodeGetOwner(long)
+#9 24.85 [javac: yoga tests]   location: class YogaNode
+#9 24.85 [javac: opencl tests] /testbed/modules/lwjgl/opencl/src/test/java/org/lwjgl/opencl/CLTest.java:333: error: cannot find symbol
+#9 24.85 [javac: opencl tests]             checkCLError(clReleaseContext(context));
+#9 24.85 [javac: opencl tests]                          ^
+#9 24.85 [javac: opencl tests]   symbol:   method clReleaseContext(long)
+#9 24.85 [javac: opencl tests]   location: class CLTest
+#9 24.85 [javac: opencl tests] 78 errors
+#9 24.85 [javac: opencl tests] 1 warning
+#9 24.85 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:122: error: cannot find symbol
+#9 24.85 [javac: yoga tests]         YGNodeStyleSetAlignContent(node, alignContent.value);
+#9 24.85 [javac: yoga tests]         ^
+#9 24.85 [javac: yoga tests]   symbol:   method YGNodeStyleSetAlignContent(long,int)
+#9 24.85 [javac: yoga tests]   location: class YogaNode
+#9 24.85 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:126: error: cannot find symbol
+#9 24.85 [javac: yoga tests]         YGNodeStyleSetAlignItems(node, alignItems.value);
+#9 24.85 [javac: yoga tests]         ^
+#9 24.85 [javac: yoga tests]   symbol:   method YGNodeStyleSetAlignItems(long,int)
+#9 24.85 [javac: yoga tests]   location: class YogaNode
+#9 24.85 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:130: error: cannot find symbol
+#9 24.85 [javac: yoga tests]         YGNodeStyleSetAlignSelf(node, alignSelf.value);
+#9 24.85 [javac: yoga tests]         ^
+#9 24.85 [javac: yoga tests]   symbol:   method YGNodeStyleSetAlignSelf(long,int)
+#9 24.85 [javac: yoga tests]   location: class YogaNode
+#9 24.85 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:134: error: cannot find symbol
+#9 24.85 [javac: yoga tests]         YGNodeStyleSetBorder(node, edge.value, border);
+#9 24.85 [javac: yoga tests]         ^
+#9 24.85 [javac: yoga tests]   symbol:   method YGNodeStyleSetBorder(long,int,float)
+#9 24.85 [javac: yoga tests]   location: class YogaNode
+#9 24.85 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:138: error: cannot find symbol
+#9 24.85 [javac: yoga tests]         YGNodeStyleSetDirection(node, direction.value);
+#9 24.85 [javac: yoga tests]         ^
+#9 24.85 [javac: yoga tests]   symbol:   method YGNodeStyleSetDirection(long,int)
+#9 24.85 [javac: yoga tests]   location: class YogaNode
+#9 24.85 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:142: error: cannot find symbol
+#9 24.85 [javac: yoga tests]         YGNodeStyleSetDisplay(node, display.value);
+#9 24.85 [javac: yoga tests]         ^
+#9 24.85 [javac: yoga tests]   symbol:   method YGNodeStyleSetDisplay(long,int)
+#9 24.85 [javac: yoga tests]   location: class YogaNode
+#9 24.85 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:146: error: cannot find symbol
+#9 24.85 [javac: yoga tests]         YGNodeStyleSetFlexBasis(node, flexBasis);
+#9 24.85 [javac: yoga tests]         ^
+#9 24.85 [javac: yoga tests]   symbol:   method YGNodeStyleSetFlexBasis(long,float)
+#9 24.85 [javac: yoga tests]   location: class YogaNode
+#9 24.85 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:150: error: cannot find symbol
+#9 24.85 [javac: yoga tests]         YGNodeStyleSetFlexBasisPercent(node, flexBasis);
+#9 24.85 [javac: yoga tests]         ^
+#9 24.85 [javac: yoga tests]   symbol:   method YGNodeStyleSetFlexBasisPercent(long,float)
+#9 24.85 [javac: yoga tests]   location: class YogaNode
+#9 24.85 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:154: error: cannot find symbol
+#9 24.85 [javac: yoga tests]         YGNodeStyleSetFlexBasisAuto(node);
+#9 24.85 [javac: yoga tests]         ^
+#9 24.85 [javac: yoga tests]   symbol:   method YGNodeStyleSetFlexBasisAuto(long)
+#9 24.85 [javac: yoga tests]   location: class YogaNode
+#9 24.85 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:158: error: cannot find symbol
+#9 24.85 [javac: yoga tests]         YGNodeStyleSetFlexGrow(node, flexGrow);
+#9 24.85 [javac: yoga tests]         ^
+#9 24.85 [javac: yoga tests]   symbol:   method YGNodeStyleSetFlexGrow(long,float)
+#9 24.85 [javac: yoga tests]   location: class YogaNode
+#9 24.85 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:162: error: cannot find symbol
+#9 24.85 [javac: yoga tests]         YGNodeStyleSetFlex(node, flex);
+#9 24.85 [javac: yoga tests]         ^
+#9 24.85 [javac: yoga tests]   symbol:   method YGNodeStyleSetFlex(long,float)
+#9 24.85 [javac: yoga tests]   location: class YogaNode
+#9 24.85 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:166: error: cannot find symbol
+#9 24.85 [javac: yoga tests]         YGNodeStyleSetFlexShrink(node, flexShrink);
+#9 24.85 [javac: yoga tests]         ^
+#9 24.85 [javac: yoga tests]   symbol:   method YGNodeStyleSetFlexShrink(long,float)
+#9 24.85 [javac: yoga tests]   location: class YogaNode
+#9 24.85 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:170: error: cannot find symbol
+#9 24.85 [javac: yoga tests]         YGNodeStyleSetJustifyContent(node, justifyContent.value);
+#9 24.85 [javac: yoga tests]         ^
+#9 24.85 [javac: yoga tests]   symbol:   method YGNodeStyleSetJustifyContent(long,int)
+#9 24.85 [javac: yoga tests]   location: class YogaNode
+#9 24.86 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:174: error: cannot find symbol
+#9 24.86 [javac: yoga tests]         YGNodeStyleSetWidth(node, width);
+#9 24.86 [javac: yoga tests]         ^
+#9 24.86 [javac: yoga tests]   symbol:   method YGNodeStyleSetWidth(long,float)
+#9 24.86 [javac: yoga tests]   location: class YogaNode
+#9 24.86 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:178: error: cannot find symbol
+#9 24.86 [javac: yoga tests]         YGNodeStyleSetWidthPercent(node, width);
+#9 24.86 [javac: yoga tests]         ^
+#9 24.86 [javac: yoga tests]   symbol:   method YGNodeStyleSetWidthPercent(long,float)
+#9 24.86 [javac: yoga tests]   location: class YogaNode
+#9 24.86 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:182: error: cannot find symbol
+#9 24.86 [javac: yoga tests]         YGNodeStyleSetMinWidth(node, minWidth);
+#9 24.86 [javac: yoga tests]         ^
+#9 24.86 [javac: yoga tests]   symbol:   method YGNodeStyleSetMinWidth(long,float)
+#9 24.86 [javac: yoga tests]   location: class YogaNode
+#9 24.86 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:186: error: cannot find symbol
+#9 24.86 [javac: yoga tests]         YGNodeStyleSetMaxWidth(node, maxWidth);
+#9 24.86 [javac: yoga tests]         ^
+#9 24.86 [javac: yoga tests]   symbol:   method YGNodeStyleSetMaxWidth(long,float)
+#9 24.86 [javac: yoga tests]   location: class YogaNode
+#9 24.86 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:190: error: cannot find symbol
+#9 24.86 [javac: yoga tests]         YGNodeStyleSetMinWidthPercent(node, minWidth);
+#9 24.86 [javac: yoga tests]         ^
+#9 24.86 [javac: yoga tests]   symbol:   method YGNodeStyleSetMinWidthPercent(long,float)
+#9 24.86 [javac: yoga tests]   location: class YogaNode
+#9 24.86 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:194: error: cannot find symbol
+#9 24.86 [javac: yoga tests]         YGNodeStyleSetMaxWidthPercent(node, maxWidth);
+#9 24.86 [javac: yoga tests]         ^
+#9 24.86 [javac: yoga tests]   symbol:   method YGNodeStyleSetMaxWidthPercent(long,float)
+#9 24.86 [javac: yoga tests]   location: class YogaNode
+#9 24.86 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:198: error: cannot find symbol
+#9 24.86 [javac: yoga tests]         YGNodeStyleSetHeight(node, height);
+#9 24.86 [javac: yoga tests]         ^
+#9 24.86 [javac: yoga tests]   symbol:   method YGNodeStyleSetHeight(long,float)
+#9 24.86 [javac: yoga tests]   location: class YogaNode
+#9 24.86 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:202: error: cannot find symbol
+#9 24.86 [javac: yoga tests]         YGNodeStyleSetHeightPercent(node, height);
+#9 24.86 [javac: yoga tests]         ^
+#9 24.86 [javac: yoga tests]   symbol:   method YGNodeStyleSetHeightPercent(long,float)
+#9 24.86 [javac: yoga tests]   location: class YogaNode
+#9 24.86 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:206: error: cannot find symbol
+#9 24.86 [javac: yoga tests]         YGNodeStyleSetMinHeight(node, minHeight);
+#9 24.86 [javac: yoga tests]         ^
+#9 24.86 [javac: yoga tests]   symbol:   method YGNodeStyleSetMinHeight(long,float)
+#9 24.86 [javac: yoga tests]   location: class YogaNode
+#9 24.86 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:210: error: cannot find symbol
+#9 24.86 [javac: yoga tests]         YGNodeStyleSetMaxHeight(node, maxHeight);
+#9 24.86 [javac: yoga tests]         ^
+#9 24.86 [javac: yoga tests]   symbol:   method YGNodeStyleSetMaxHeight(long,float)
+#9 24.86 [javac: yoga tests]   location: class YogaNode
+#9 24.86 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:214: error: cannot find symbol
+#9 24.86 [javac: yoga tests]         YGNodeStyleSetMinHeightPercent(node, minHeight);
+#9 24.86 [javac: yoga tests]         ^
+#9 24.86 [javac: yoga tests]   symbol:   method YGNodeStyleSetMinHeightPercent(long,float)
+#9 24.86 [javac: yoga tests]   location: class YogaNode
+#9 24.86 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:218: error: cannot find symbol
+#9 24.86 [javac: yoga tests]         YGNodeStyleSetMaxHeightPercent(node, maxHeight);
+#9 24.86 [javac: yoga tests]         ^
+#9 24.86 [javac: yoga tests]   symbol:   method YGNodeStyleSetMaxHeightPercent(long,float)
+#9 24.86 [javac: yoga tests]   location: class YogaNode
+#9 24.86 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:222: error: cannot find symbol
+#9 24.86 [javac: yoga tests]         YGNodeStyleSetAspectRatio(node, aspectRatio);
+#9 24.86 [javac: yoga tests]         ^
+#9 24.86 [javac: yoga tests]   symbol:   method YGNodeStyleSetAspectRatio(long,float)
+#9 24.86 [javac: yoga tests]   location: class YogaNode
+#9 24.86 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:226: error: cannot find symbol
+#9 24.86 [javac: yoga tests]         YGNodeStyleSetPositionType(node, type.value);
+#9 24.86 [javac: yoga tests]         ^
+#9 24.86 [javac: yoga tests]   symbol:   method YGNodeStyleSetPositionType(long,int)
+#9 24.86 [javac: yoga tests]   location: class YogaNode
+#9 24.86 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:230: error: cannot find symbol
+#9 24.86 [javac: yoga tests]         YGNodeStyleSetPosition(node, edge.value, position);
+#9 24.86 [javac: yoga tests]         ^
+#9 24.86 [javac: yoga tests]   symbol:   method YGNodeStyleSetPosition(long,int,float)
+#9 24.86 [javac: yoga tests]   location: class YogaNode
+#9 24.86 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:234: error: cannot find symbol
+#9 24.86 [javac: yoga tests]         YGNodeStyleSetPositionPercent(node, edge.value, position);
+#9 24.86 [javac: yoga tests]         ^
+#9 24.86 [javac: yoga tests]   symbol:   method YGNodeStyleSetPositionPercent(long,int,float)
+#9 24.86 [javac: yoga tests]   location: class YogaNode
+#9 24.86 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:238: error: cannot find symbol
+#9 24.86 [javac: yoga tests]         YGNodeStyleSetFlexDirection(node, direction.value);
+#9 24.86 [javac: yoga tests]         ^
+#9 24.86 [javac: yoga tests]   symbol:   method YGNodeStyleSetFlexDirection(long,int)
+#9 24.86 [javac: yoga tests]   location: class YogaNode
+#9 24.86 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:242: error: cannot find symbol
+#9 24.86 [javac: yoga tests]         YGNodeStyleSetMargin(node, edge.value, margin);
+#9 24.86 [javac: yoga tests]         ^
+#9 24.86 [javac: yoga tests]   symbol:   method YGNodeStyleSetMargin(long,int,float)
+#9 24.86 [javac: yoga tests]   location: class YogaNode
+#9 24.86 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:246: error: cannot find symbol
+#9 24.86 [javac: yoga tests]         YGNodeStyleSetMarginPercent(node, edge.value, margin);
+#9 24.86 [javac: yoga tests]         ^
+#9 24.86 [javac: yoga tests]   symbol:   method YGNodeStyleSetMarginPercent(long,int,float)
+#9 24.86 [javac: yoga tests]   location: class YogaNode
+#9 24.86 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:250: error: cannot find symbol
+#9 24.86 [javac: yoga tests]         YGNodeStyleSetMarginAuto(node, edge.value);
+#9 24.86 [javac: yoga tests]         ^
+#9 24.86 [javac: yoga tests]   symbol:   method YGNodeStyleSetMarginAuto(long,int)
+#9 24.86 [javac: yoga tests]   location: class YogaNode
+#9 24.86 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:254: error: cannot find symbol
+#9 24.86 [javac: yoga tests]         YGNodeStyleSetOverflow(node, overflow.value);
+#9 24.86 [javac: yoga tests]         ^
+#9 24.86 [javac: yoga tests]   symbol:   method YGNodeStyleSetOverflow(long,int)
+#9 24.86 [javac: yoga tests]   location: class YogaNode
+#9 24.86 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:258: error: cannot find symbol
+#9 24.86 [javac: yoga tests]         YGNodeStyleSetPadding(node, edge.value, padding);
+#9 24.87 [javac: yoga tests]         ^
+#9 24.87 [javac: yoga tests]   symbol:   method YGNodeStyleSetPadding(long,int,float)
+#9 24.87 [javac: yoga tests]   location: class YogaNode
+#9 24.87 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:262: error: cannot find symbol
+#9 24.87 [javac: yoga tests]         YGNodeStyleSetPaddingPercent(node, edge.value, padding);
+#9 24.87 [javac: yoga tests]         ^
+#9 24.87 [javac: yoga tests]   symbol:   method YGNodeStyleSetPaddingPercent(long,int,float)
+#9 24.87 [javac: yoga tests]   location: class YogaNode
+#9 24.87 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:266: error: cannot find symbol
+#9 24.87 [javac: yoga tests]         YGNodeStyleSetFlexWrap(node, flexWrap.value);
+#9 24.87 [javac: yoga tests]         ^
+#9 24.87 [javac: yoga tests]   symbol:   method YGNodeStyleSetFlexWrap(long,int)
+#9 24.87 [javac: yoga tests]   location: class YogaNode
+#9 24.87 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:270: error: cannot find symbol
+#9 24.87 [javac: yoga tests]         YGNodeCalculateLayout(node, width, height, YGNodeStyleGetDirection(node));
+#9 24.87 [javac: yoga tests]                                                    ^
+#9 24.87 [javac: yoga tests]   symbol:   method YGNodeStyleGetDirection(long)
+#9 24.87 [javac: yoga tests]   location: class YogaNode
+#9 24.87 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:274: error: cannot find symbol
+#9 24.87 [javac: yoga tests]         return YGNodeLayoutGetLeft(node);
+#9 24.87 [javac: yoga tests]                ^
+#9 24.87 [javac: yoga tests]   symbol:   method YGNodeLayoutGetLeft(long)
+#9 24.87 [javac: yoga tests]   location: class YogaNode
+#9 24.87 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:278: error: cannot find symbol
+#9 24.87 [javac: yoga tests]         return YGNodeLayoutGetTop(node);
+#9 24.87 [javac: yoga tests]                ^
+#9 24.87 [javac: yoga tests]   symbol:   method YGNodeLayoutGetTop(long)
+#9 24.87 [javac: yoga tests]   location: class YogaNode
+#9 24.87 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:282: error: cannot find symbol
+#9 24.87 [javac: yoga tests]         return YGNodeLayoutGetWidth(node);
+#9 24.87 [javac: yoga tests]                ^
+#9 24.87 [javac: yoga tests]   symbol:   method YGNodeLayoutGetWidth(long)
+#9 24.87 [javac: yoga tests]   location: class YogaNode
+#9 24.87 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:286: error: cannot find symbol
+#9 24.87 [javac: yoga tests]         return YGNodeLayoutGetHeight(node);
+#9 24.87 [javac: yoga tests]                ^
+#9 24.87 [javac: yoga tests]   symbol:   method YGNodeLayoutGetHeight(long)
+#9 24.87 [javac: yoga tests]   location: class YogaNode
+#9 24.87 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:314: error: cannot find symbol
+#9 24.87 [javac: yoga tests]         return YGNodeStyleGetAspectRatio(node);
+#9 24.87 [javac: yoga tests]                ^
+#9 24.87 [javac: yoga tests]   symbol:   method YGNodeStyleGetAspectRatio(long)
+#9 24.87 [javac: yoga tests]   location: class YogaNode
+#9 24.87 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:318: error: cannot find symbol
+#9 24.87 [javac: yoga tests]         YGNodeCopyStyle(this.node, src.node);
+#9 24.87 [javac: yoga tests]         ^
+#9 24.87 [javac: yoga tests]   symbol:   method YGNodeCopyStyle(long,long)
+#9 24.87 [javac: yoga tests]   location: class YogaNode
+#9 24.87 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:322: error: cannot find symbol
+#9 24.87 [javac: yoga tests]         return YGNodeLayoutGetBorder(node, edge.value);
+#9 24.87 [javac: yoga tests]                ^
+#9 24.87 [javac: yoga tests]   symbol:   method YGNodeLayoutGetBorder(long,int)
+#9 24.87 [javac: yoga tests]   location: class YogaNode
+#9 24.87 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:326: error: cannot find symbol
+#9 24.87 [javac: yoga tests]         return YGNodeLayoutGetMargin(node, edge.value);
+#9 24.87 [javac: yoga tests]                ^
+#9 24.87 [javac: yoga tests]   symbol:   method YGNodeLayoutGetMargin(long,int)
+#9 24.87 [javac: yoga tests]   location: class YogaNode
+#9 24.87 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:330: error: cannot find symbol
+#9 24.87 [javac: yoga tests]         return YGNodeLayoutGetPadding(node, edge.value);
+#9 24.87 [javac: yoga tests]                ^
+#9 24.87 [javac: yoga tests]   symbol:   method YGNodeLayoutGetPadding(long,int)
+#9 24.87 [javac: yoga tests]   location: class YogaNode
+#9 24.87 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:334: error: cannot find symbol
+#9 24.87 [javac: yoga tests]         return YGNodeStyleGetBorder(node, edge.value);
+#9 24.87 [javac: yoga tests]                ^
+#9 24.87 [javac: yoga tests]   symbol:   method YGNodeStyleGetBorder(long,int)
+#9 24.87 [javac: yoga tests]   location: class YogaNode
+#9 24.87 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:338: error: cannot find symbol
+#9 24.87 [javac: yoga tests]         return YGNodeStyleGetFlexDirection(node);
+#9 24.87 [javac: yoga tests]                ^
+#9 24.87 [javac: yoga tests]   symbol:   method YGNodeStyleGetFlexDirection(long)
+#9 24.87 [javac: yoga tests]   location: class YogaNode
+#9 24.87 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:354: error: cannot find symbol
+#9 24.87 [javac: yoga tests]         return YGNodeLayoutGetDidLegacyStretchFlagAffectLayout(node);
+#9 24.87 [javac: yoga tests]                ^
+#9 24.87 [javac: yoga tests]   symbol:   method YGNodeLayoutGetDidLegacyStretchFlagAffectLayout(long)
+#9 24.87 [javac: yoga tests]   location: class YogaNode
+#9 24.87 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:371: error: cannot find symbol
+#9 24.87 [javac: yoga tests]         return getEnumFromValue(YogaDirection.values(), YGNodeStyleGetDirection(node));
+#9 24.87 [javac: yoga tests]                                                         ^
+#9 24.87 [javac: yoga tests]   symbol:   method YGNodeStyleGetDirection(long)
+#9 24.87 [javac: yoga tests]   location: class YogaNode
+#9 24.88 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:375: error: cannot find symbol
+#9 24.88 [javac: yoga tests]         return getEnumFromValue(YogaDirection.values(), YGNodeLayoutGetDirection(node));
+#9 24.88 [javac: yoga tests]                                                         ^
+#9 24.88 [javac: yoga tests]   symbol:   method YGNodeLayoutGetDirection(long)
+#9 24.88 [javac: yoga tests]   location: class YogaNode
+#9 24.88 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:379: error: cannot find symbol
+#9 24.88 [javac: yoga tests]         return getEnumFromValue(YogaJustify.values(), YGNodeStyleGetJustifyContent(node));
+#9 24.88 [javac: yoga tests]                                                       ^
+#9 24.88 [javac: yoga tests]   symbol:   method YGNodeStyleGetJustifyContent(long)
+#9 24.88 [javac: yoga tests]   location: class YogaNode
+#9 24.88 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:383: error: cannot find symbol
+#9 24.88 [javac: yoga tests]         return getEnumFromValue(YogaAlign.values(), YGNodeStyleGetAlignItems(node));
+#9 24.88 [javac: yoga tests]                                                     ^
+#9 24.88 [javac: yoga tests]   symbol:   method YGNodeStyleGetAlignItems(long)
+#9 24.88 [javac: yoga tests]   location: class YogaNode
+#9 24.88 [javac: yoga tests] /testbed/modules/lwjgl/yoga/src/test/java/org/lwjgl/util/yoga/YogaNode.java:387: error: cannot find symbol
+#9 24.88 [javac: yoga tests]         return getEnumFromValue(YogaAlign.values(), YGNodeStyleGetAlignSelf(node));
+#9 24.88 [javac: yoga tests]                                                     ^
+#9 24.88 [javac: yoga tests]   symbol:   method YGNodeStyleGetAlignSelf(long)
+#9 24.88 [javac: yoga tests]   location: class YogaNode
+#9 24.89 
+#9 24.89 BUILD FAILED
+#9 24.89 /testbed/build.xml:411: The following error occurred while executing this line:
+#9 24.89 /testbed/config/build-bindings.xml:188: The following error occurred while executing this line:
+#9 24.89 /testbed/build.xml:421: 
+#9 24.89 Compile failed; see the compiler error output for details.
+#9 24.89 Compile failed; see the compiler error output for details.
+#9 24.89 Compile failed; see the compiler error output for details.
+#9 24.89 Compile failed; see the compiler error output for details.
+#9 24.89 Compile failed; see the compiler error output for details.
+#9 24.89 
+#9 24.89 Total time: 24 seconds
+#9 ERROR: process "/bin/sh -c cd /testbed     && sed -i 's#http://central.maven.org/maven2#https://repo1.maven.org/maven2#g' config/build-definitions.xml     && ant -Dbuild.offline=false         -Dbinding.assimp=false -Dbinding.bgfx=false -Dbinding.egl=false         -Dbinding.glfw=false -Dbinding.jawt=false -Dbinding.jemalloc=false         -Dbinding.lmdb=false -Dbinding.lz4=false -Dbinding.nanovg=false         -Dbinding.nfd=false -Dbinding.nuklear=false -Dbinding.odbc=false         -Dbinding.openal=false -Dbinding.opencl=false -Dbinding.opengl=false         -Dbinding.opengles=false -Dbinding.openvr=false -Dbinding.par=false         -Dbinding.remotery=false -Dbinding.rpmalloc=false -Dbinding.sse=false         -Dbinding.stb=false -Dbinding.tinyexr=false -Dbinding.tinyfd=false         -Dbinding.tootle=false -Dbinding.vma=false -Dbinding.vulkan=false         -Dbinding.xxhash=false -Dbinding.yoga=false -Dbinding.zstd=false         compile-templates compile-tests compile-native     && git checkout -- config/build-definitions.xml" did not complete successfully: exit code: 1
+------
+ > [4/5] RUN cd /testbed     && sed -i 's#http://central.maven.org/maven2#https://repo1.maven.org/maven2#g' config/build-definitions.xml     && ant -Dbuild.offline=false         -Dbinding.assimp=false -Dbinding.bgfx=false -Dbinding.egl=false         -Dbinding.glfw=false -Dbinding.jawt=false -Dbinding.jemalloc=false         -Dbinding.lmdb=false -Dbinding.lz4=false -Dbinding.nanovg=false         -Dbinding.nfd=false -Dbinding.nuklear=false -Dbinding.odbc=false         -Dbinding.openal=false -Dbinding.opencl=false -Dbinding.opengl=false         -Dbinding.opengles=false -Dbinding.openvr=false -Dbinding.par=false         -Dbinding.remotery=false -Dbinding.rpmalloc=false -Dbinding.sse=false         -Dbinding.stb=false -Dbinding.tinyexr=false -Dbinding.tinyfd=false         -Dbinding.tootle=false -Dbinding.vma=false -Dbinding.vulkan=false         -Dbinding.xxhash=false -Dbinding.yoga=false -Dbinding.zstd=false         compile-templates compile-tests compile-native     && git checkout -- config/build-definitions.xml:
+24.89 /testbed/build.xml:411: The following error occurred while executing this line:
+24.89 /testbed/config/build-bindings.xml:188: The following error occurred while executing this line:
+24.89 /testbed/build.xml:421: 
+24.89 Compile failed; see the compiler error output for details.
+24.89 Compile failed; see the compiler error output for details.
+24.89 Compile failed; see the compiler error output for details.
+24.89 Compile failed; see the compiler error output for details.
+24.89 Compile failed; see the compiler error output for details.
+24.89 
+24.89 Total time: 24 seconds
+------
+Dockerfile:35
+--------------------
+  34 |     # still has network access; evaluation itself runs with --network none.
+  35 | >>> RUN cd /testbed \
+  36 | >>>     && sed -i 's#http://central.maven.org/maven2#https://repo1.maven.org/maven2#g' config/build-definitions.xml \
+  37 | >>>     && ant -Dbuild.offline=false \
+  38 | >>>         -Dbinding.assimp=false -Dbinding.bgfx=false -Dbinding.egl=false \
+  39 | >>>         -Dbinding.glfw=false -Dbinding.jawt=false -Dbinding.jemalloc=false \
+  40 | >>>         -Dbinding.lmdb=false -Dbinding.lz4=false -Dbinding.nanovg=false \
+  41 | >>>         -Dbinding.nfd=false -Dbinding.nuklear=false -Dbinding.odbc=false \
+  42 | >>>         -Dbinding.openal=false -Dbinding.opencl=false -Dbinding.opengl=false \
+  43 | >>>         -Dbinding.opengles=false -Dbinding.openvr=false -Dbinding.par=false \
+  44 | >>>         -Dbinding.remotery=false -Dbinding.rpmalloc=false -Dbinding.sse=false \
+  45 | >>>         -Dbinding.stb=false -Dbinding.tinyexr=false -Dbinding.tinyfd=false \
+  46 | >>>         -Dbinding.tootle=false -Dbinding.vma=false -Dbinding.vulkan=false \
+  47 | >>>         -Dbinding.xxhash=false -Dbinding.yoga=false -Dbinding.zstd=false \
+  48 | >>>         compile-templates compile-tests compile-native \
+  49 | >>>     && git checkout -- config/build-definitions.xml
+  50 |     
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c cd /testbed     && sed -i 's#http://central.maven.org/maven2#https://repo1.maven.org/maven2#g' config/build-definitions.xml     && ant -Dbuild.offline=false         -Dbinding.assimp=false -Dbinding.bgfx=false -Dbinding.egl=false         -Dbinding.glfw=false -Dbinding.jawt=false -Dbinding.jemalloc=false         -Dbinding.lmdb=false -Dbinding.lz4=false -Dbinding.nanovg=false         -Dbinding.nfd=false -Dbinding.nuklear=false -Dbinding.odbc=false         -Dbinding.openal=false -Dbinding.opencl=false -Dbinding.opengl=false         -Dbinding.opengles=false -Dbinding.openvr=false -Dbinding.par=false         -Dbinding.remotery=false -Dbinding.rpmalloc=false -Dbinding.sse=false         -Dbinding.stb=false -Dbinding.tinyexr=false -Dbinding.tinyfd=false         -Dbinding.tootle=false -Dbinding.vma=false -Dbinding.vulkan=false         -Dbinding.xxhash=false -Dbinding.yoga=false -Dbinding.zstd=false         compile-templates compile-tests compile-native     && git checkout -- config/build-definitions.xml" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/7xmr7pd831uchpglczdmm34v9

@@ -1,0 +1,12 @@
+{
+  "schema_version": "3.0",
+  "instance_id": "LWJGL__lwjgl3-409",
+  "base_commit": "427e278dc2402aca025cacd58a80eb4eaa8c4832",
+  "working_tree_clean": true,
+  "fix_commit_present": false,
+  "model_patch_present": false,
+  "test_patch_present": false,
+  "gold_patch_present": false,
+  "evaluation_assets_injected_at_runtime": true,
+  "network_disabled_during_audit": true
+}

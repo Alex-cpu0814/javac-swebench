@@ -1,0 +1,222 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.25kB done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:d57e5d0e3e5dd4cabb74feccfdb36249a58c76a3354a33ee8737813df93b7e0d
+#2 ...
+
+#3 [auth] library/eclipse-temurin:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:d57e5d0e3e5dd4cabb74feccfdb36249a58c76a3354a33ee8737813df93b7e0d
+#2 DONE 23.5s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 54B done
+#4 DONE 0.1s
+
+#5 [1/4] FROM docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:d57e5d0e3e5dd4cabb74feccfdb36249a58c76a3354a33ee8737813df93b7e0d
+#5 resolve docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:d57e5d0e3e5dd4cabb74feccfdb36249a58c76a3354a33ee8737813df93b7e0d
+#5 ...
+
+#6 [auth] library/eclipse-temurin:pull token for registry-1.docker.io
+#6 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:d57e5d0e3e5dd4cabb74feccfdb36249a58c76a3354a33ee8737813df93b7e0d
+#5 resolve docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:d57e5d0e3e5dd4cabb74feccfdb36249a58c76a3354a33ee8737813df93b7e0d 21.6s done
+#5 DONE 21.6s
+
+#5 [1/4] FROM docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:d57e5d0e3e5dd4cabb74feccfdb36249a58c76a3354a33ee8737813df93b7e0d
+#5 CACHED
+
+#7 [2/4] RUN apt-get update     && apt-get install -y --no-install-recommends ant ca-certificates file g++ gcc git make python3 python-is-python3 unzip xz-utils     && apt-get clean     && rm -rf /var/lib/apt/lists/*
+#7 1.429 Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+#7 1.536 Get:2 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
+#7 2.513 Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+#7 3.081 Get:4 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1321 kB]
+#7 3.552 Get:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+#7 4.025 Get:6 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [84.6 kB]
+#7 4.602 Get:7 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
+#7 5.745 Get:8 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
+#7 5.948 Get:9 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [7829 kB]
+#7 7.401 Get:10 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]
+#7 8.173 Get:11 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [4359 kB]
+#7 9.943 Get:12 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
+#7 12.35 Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1623 kB]
+#7 27.82 Ign:14 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages
+#7 29.84 Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [8129 kB]
+#7 32.09 Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [4702 kB]
+#7 33.18 Get:17 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [82.9 kB]
+#7 33.85 Get:18 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [35.6 kB]
+#7 34.75 Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [93.2 kB]
+#7 34.77 Fetched 48.6 MB in 34s (1411 kB/s)
+#7 34.77 Reading package lists...
+#7 35.74 Reading package lists...
+#7 36.65 Building dependency tree...
+#7 36.87 Reading state information...
+#7 37.13 ca-certificates is already the newest version (20260601~22.04.1).
+#7 37.13 The following additional packages will be installed:
+#7 37.13   binutils binutils-common binutils-x86-64-linux-gnu ca-certificates-java cpp
+#7 37.13   cpp-11 default-jre-headless g++-11 gcc-11 gcc-11-base git-man java-common
+#7 37.13   libasan6 libasound2 libasound2-data libatomic1 libavahi-client3
+#7 37.13   libavahi-common-data libavahi-common3 libbinutils libc-dev-bin libc6
+#7 37.13   libc6-dev libcc1-0 libcrypt-dev libctf-nobfd0 libctf0 libcups2
+#7 37.13   libcurl3-gnutls libdbus-1-3 liberror-perl libgcc-11-dev libgdbm-compat4
+#7 37.13   libgdbm6 libglib2.0-0 libgomp1 libgraphite2-3 libharfbuzz0b libisl23 libitm1
+#7 37.13   libjpeg-turbo8 libjpeg8 liblcms2-2 liblsan0 libmagic-mgc libmagic1 libmpc3
+#7 37.13   libmpdec3 libmpfr6 libnsl-dev libnspr4 libnss3 libpcsclite1 libperl5.34
+#7 37.13   libpython3-stdlib libpython3.10-minimal libpython3.10-stdlib libquadmath0
+#7 37.13   libstdc++-11-dev libtirpc-dev libtsan0 libubsan1 linux-libc-dev media-types
+#7 37.13   openjdk-11-jre-headless perl perl-base perl-modules-5.34 python3-minimal
+#7 37.13   python3.10 python3.10-minimal rpcsvc-proto
+#7 37.13 Suggested packages:
+#7 37.13   ant-doc default-jdk | java-compiler | java-sdk binutils-doc cpp-doc
+#7 37.13   gcc-11-locales default-jre g++-multilib g++-11-multilib gcc-11-doc
+#7 37.13   gcc-multilib manpages-dev autoconf automake libtool flex bison gdb gcc-doc
+#7 37.13   gcc-11-multilib gettext-base git-daemon-run | git-daemon-sysvinit git-doc
+#7 37.13   git-email git-gui gitk gitweb git-cvs git-mediawiki git-svn
+#7 37.13   libasound2-plugins alsa-utils glibc-doc cups-common gdbm-l10n liblcms2-utils
+#7 37.13   pcscd libstdc++-11-doc make-doc libnss-mdns fonts-dejavu-extra
+#7 37.13   fonts-ipafont-gothic fonts-ipafont-mincho fonts-wqy-microhei
+#7 37.13   | fonts-wqy-zenhei fonts-indic perl-doc libterm-readline-gnu-perl
+#7 37.13   | libterm-readline-perl-perl libtap-harness-archive-perl python3-doc
+#7 37.13   python3-tk python3-venv python3.10-venv python3.10-doc binfmt-support zip
+#7 37.13 Recommended packages:
+#7 37.13   ant-optional patch less ssh-client alsa-ucm-conf alsa-topology-conf manpages
+#7 37.13   manpages-dev libc-devtools libnss-nis libnss-nisplus dbus libglib2.0-data
+#7 37.13   shared-mime-info xdg-user-dirs netbase
+#7 37.29 The following NEW packages will be installed:
+#7 37.29   ant binutils binutils-common binutils-x86-64-linux-gnu ca-certificates-java
+#7 37.29   cpp cpp-11 default-jre-headless file g++ g++-11 gcc gcc-11 gcc-11-base git
+#7 37.29   git-man java-common libasan6 libasound2 libasound2-data libatomic1
+#7 37.29   libavahi-client3 libavahi-common-data libavahi-common3 libbinutils
+#7 37.29   libc-dev-bin libc6-dev libcc1-0 libcrypt-dev libctf-nobfd0 libctf0 libcups2
+#7 37.29   libcurl3-gnutls libdbus-1-3 liberror-perl libgcc-11-dev libgdbm-compat4
+#7 37.29   libgdbm6 libglib2.0-0 libgomp1 libgraphite2-3 libharfbuzz0b libisl23 libitm1
+#7 37.29   libjpeg-turbo8 libjpeg8 liblcms2-2 liblsan0 libmagic-mgc libmagic1 libmpc3
+#7 37.29   libmpdec3 libmpfr6 libnsl-dev libnspr4 libnss3 libpcsclite1 libperl5.34
+#7 37.29   libpython3-stdlib libpython3.10-minimal libpython3.10-stdlib libquadmath0
+#7 37.29   libstdc++-11-dev libtirpc-dev libtsan0 libubsan1 linux-libc-dev make
+#7 37.29   media-types openjdk-11-jre-headless perl perl-modules-5.34 python-is-python3
+#7 37.29   python3 python3-minimal python3.10 python3.10-minimal rpcsvc-proto unzip
+#7 37.29   xz-utils
+#7 37.30 The following packages will be upgraded:
+#7 37.30   libc6 perl-base
+#7 38.86 2 upgraded, 80 newly installed, 0 to remove and 11 not upgraded.
+#7 38.86 Need to get 136 MB of archives.
+#7 38.86 After this operation, 502 MB of additional disk space will be used.
+#7 38.86 Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 perl-base amd64 5.34.0-3ubuntu1.9 [1762 kB]
+#7 40.63 Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libc6 amd64 2.35-0ubuntu3.15 [3234 kB]
+#7 42.25 Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3.10-minimal amd64 3.10.12-1~22.04.18 [817 kB]
+#7 44.12 Get:4 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3.10-minimal amd64 3.10.12-1~22.04.18 [2277 kB]
+#7 44.82 Get:5 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-minimal amd64 3.10.6-1~22.04.1 [24.3 kB]
+#7 45.48 Get:6 http://archive.ubuntu.com/ubuntu jammy/main amd64 media-types all 7.0.0 [25.5 kB]
+#7 46.36 Get:7 http://archive.ubuntu.com/ubuntu jammy/main amd64 libmpdec3 amd64 2.5.1-2build2 [86.8 kB]
+#7 48.04 Get:8 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3.10-stdlib amd64 3.10.12-1~22.04.18 [1850 kB]
+#7 49.45 Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3.10 amd64 3.10.12-1~22.04.18 [508 kB]
+#7 49.93 Get:10 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3-stdlib amd64 3.10.6-1~22.04.1 [6812 B]
+#7 50.55 Get:11 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3 amd64 3.10.6-1~22.04.1 [22.8 kB]
+#7 52.22 Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 perl-modules-5.34 all 5.34.0-3ubuntu1.9 [2977 kB]
+#7 53.03 Get:13 http://archive.ubuntu.com/ubuntu jammy/main amd64 libgdbm6 amd64 1.23-1 [33.9 kB]
+#7 53.49 Get:14 http://archive.ubuntu.com/ubuntu jammy/main amd64 libgdbm-compat4 amd64 1.23-1 [6606 B]
+#7 55.28 Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libperl5.34 amd64 5.34.0-3ubuntu1.9 [4796 kB]
+#7 56.65 Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 perl amd64 5.34.0-3ubuntu1.9 [232 kB]
+#7 57.74 Get:17 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libdbus-1-3 amd64 1.12.20-2ubuntu4.1 [189 kB]
+#7 59.34 Get:18 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libglib2.0-0 amd64 2.72.4-0ubuntu2.10 [1469 kB]
+#7 60.56 Get:19 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libmagic-mgc amd64 1:5.41-3ubuntu0.1 [257 kB]
+#7 61.46 Get:20 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libmagic1 amd64 1:5.41-3ubuntu0.1 [87.2 kB]
+#7 62.12 Get:21 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 file amd64 1:5.41-3ubuntu0.1 [21.5 kB]
+#7 63.00 Get:22 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 xz-utils amd64 5.2.5-2ubuntu1.1 [84.8 kB]
+#7 63.96 Get:23 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnspr4 amd64 2:4.35-0ubuntu0.22.04.1 [119 kB]
+#7 65.45 Get:24 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnss3 amd64 2:3.98-0ubuntu0.22.04.4 [1347 kB]
+#7 65.96 Get:25 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 ca-certificates-java all 20190909ubuntu1.3 [12.3 kB]
+#7 66.41 Get:26 http://archive.ubuntu.com/ubuntu jammy/main amd64 java-common all 0.72build2 [6782 B]
+#7 67.04 Get:27 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libavahi-common-data amd64 0.8-5ubuntu5.5 [24.0 kB]
+#7 67.66 Get:28 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libavahi-common3 amd64 0.8-5ubuntu5.5 [23.9 kB]
+#7 68.33 Get:29 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libavahi-client3 amd64 0.8-5ubuntu5.5 [28.1 kB]
+#7 69.47 Get:30 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcups2 amd64 2.4.1op1-1ubuntu4.21 [266 kB]
+#7 70.53 Get:31 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 liblcms2-2 amd64 2.12~rc1-2ubuntu0.1 [159 kB]
+#7 71.52 Get:32 http://archive.ubuntu.com/ubuntu jammy/main amd64 libjpeg-turbo8 amd64 2.1.2-0ubuntu1 [134 kB]
+#7 71.98 Get:33 http://archive.ubuntu.com/ubuntu jammy/main amd64 libjpeg8 amd64 8c-2ubuntu10 [2264 B]
+#7 72.58 Get:34 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libasound2-data all 1.2.6.1-1ubuntu1.2 [19.3 kB]
+#7 73.82 Get:35 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libasound2 amd64 1.2.6.1-1ubuntu1.2 [391 kB]
+#7 74.72 Get:36 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgraphite2-3 amd64 1.3.14-1ubuntu0.1 [71.6 kB]
+#7 76.02 Get:37 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libharfbuzz0b amd64 2.7.4-1ubuntu3.2 [353 kB]
+#7 91.57 Err:38 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpcsclite1 amd64 1.9.5-3ubuntu1
+#7 91.57   500  connecting to archive.ubuntu.com:80 container connecting via static system HTTP proxy http://127.0.0.1:10081: reading HTTP GET: read tcp 127.0.0.1:53591->127.0.0.1:10081: wsarecv: An existing connection was forcibly closed by the remote host. [IP: 91.189.91.82 80]
+#7 95.30 Get:39 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 openjdk-11-jre-headless amd64 11.0.32.1+1-1ubuntu1~22.04 [42.6 MB]
+#7 98.92 Get:40 http://archive.ubuntu.com/ubuntu jammy/main amd64 default-jre-headless amd64 2:1.11-72build2 [3042 B]
+#7 100.6 Get:41 http://archive.ubuntu.com/ubuntu jammy/universe amd64 ant all 1.10.12-1 [2100 kB]
+#7 116.1 Ign:42 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 binutils-common amd64 2.38-4ubuntu2.12
+#7 117.6 Get:43 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libbinutils amd64 2.38-4ubuntu2.12 [663 kB]
+#7 117.9 Get:42 http://security.ubuntu.com/ubuntu jammy-updates/main amd64 binutils-common amd64 2.38-4ubuntu2.12 [223 kB]
+#7 118.6 Get:44 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libctf-nobfd0 amd64 2.38-4ubuntu2.12 [108 kB]
+#7 119.5 Get:45 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libctf0 amd64 2.38-4ubuntu2.12 [103 kB]
+#7 121.3 Get:46 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 binutils-x86-64-linux-gnu amd64 2.38-4ubuntu2.12 [2324 kB]
+#7 121.8 Get:47 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 binutils amd64 2.38-4ubuntu2.12 [3184 B]
+#7 122.9 Get:48 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 gcc-11-base amd64 11.4.0-1ubuntu1~22.04.3 [216 kB]
+#7 124.4 Get:49 http://archive.ubuntu.com/ubuntu jammy/main amd64 libisl23 amd64 0.24-2build1 [727 kB]
+#7 126.0 Get:50 http://archive.ubuntu.com/ubuntu jammy/main amd64 libmpfr6 amd64 4.1.0-3build3 [1425 kB]
+#7 126.8 Get:51 http://archive.ubuntu.com/ubuntu jammy/main amd64 libmpc3 amd64 1.2.1-2build1 [46.9 kB]
+#7 128.9 Get:52 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 cpp-11 amd64 11.4.0-1ubuntu1~22.04.3 [10.0 MB]
+#7 130.2 Get:53 http://archive.ubuntu.com/ubuntu jammy/main amd64 cpp amd64 4:11.2.0-1ubuntu1 [27.7 kB]
+#7 131.0 Get:54 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcc1-0 amd64 12.3.0-1ubuntu1~22.04.3 [48.3 kB]
+#7 132.0 Get:55 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgomp1 amd64 12.3.0-1ubuntu1~22.04.3 [127 kB]
+#7 132.6 Get:56 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libitm1 amd64 12.3.0-1ubuntu1~22.04.3 [30.2 kB]
+#7 133.1 Get:57 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libatomic1 amd64 12.3.0-1ubuntu1~22.04.3 [10.5 kB]
+#7 134.7 Get:58 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libasan6 amd64 11.4.0-1ubuntu1~22.04.3 [2283 kB]
+#7 136.3 Get:59 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 liblsan0 amd64 12.3.0-1ubuntu1~22.04.3 [1069 kB]
+#7 138.0 Get:60 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libtsan0 amd64 11.4.0-1ubuntu1~22.04.3 [2260 kB]
+#7 139.5 Get:61 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libubsan1 amd64 12.3.0-1ubuntu1~22.04.3 [976 kB]
+#7 140.5 Get:62 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libquadmath0 amd64 12.3.0-1ubuntu1~22.04.3 [154 kB]
+#7 142.2 Get:63 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgcc-11-dev amd64 11.4.0-1ubuntu1~22.04.3 [2517 kB]
+#7 144.9 Get:64 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 gcc-11 amd64 11.4.0-1ubuntu1~22.04.3 [20.1 MB]
+#7 146.5 Get:65 http://archive.ubuntu.com/ubuntu jammy/main amd64 gcc amd64 4:11.2.0-1ubuntu1 [5112 B]
+#7 147.1 Get:66 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libc-dev-bin amd64 2.35-0ubuntu3.15 [20.3 kB]
+#7 148.8 Get:67 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 linux-libc-dev amd64 5.15.0-194.204 [1344 kB]
+#7 149.8 Get:68 http://archive.ubuntu.com/ubuntu jammy/main amd64 libcrypt-dev amd64 1:4.4.27-1 [112 kB]
+#7 150.6 Get:69 http://archive.ubuntu.com/ubuntu jammy/main amd64 rpcsvc-proto amd64 1.4.2-0ubuntu6 [68.5 kB]
+#7 151.7 Get:70 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libtirpc-dev amd64 1.3.2-2ubuntu0.1 [192 kB]
+#7 152.6 Get:71 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnsl-dev amd64 1.3.0-2build2 [71.3 kB]
+#7 154.3 Get:72 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libc6-dev amd64 2.35-0ubuntu3.15 [2100 kB]
+#7 156.0 Get:73 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libstdc++-11-dev amd64 11.4.0-1ubuntu1~22.04.3 [2101 kB]
+#7 158.4 Get:74 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 g++-11 amd64 11.4.0-1ubuntu1~22.04.3 [11.4 MB]
+#7 159.4 Get:75 http://archive.ubuntu.com/ubuntu jammy/main amd64 g++ amd64 4:11.2.0-1ubuntu1 [1412 B]
+#7 160.6 Get:76 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcurl3-gnutls amd64 7.81.0-1ubuntu1.29 [286 kB]
+#7 161.2 Get:77 http://archive.ubuntu.com/ubuntu jammy/main amd64 liberror-perl all 0.17029-1 [26.5 kB]
+#7 162.7 Get:78 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 git-man all 1:2.34.1-1ubuntu1.17 [954 kB]
+#7 164.4 Get:79 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 git amd64 1:2.34.1-1ubuntu1.17 [3174 kB]
+#7 165.6 Get:80 http://archive.ubuntu.com/ubuntu jammy/main amd64 make amd64 4.3-4.1build1 [180 kB]
+#7 166.1 Get:81 http://archive.ubuntu.com/ubuntu jammy/main amd64 python-is-python3 all 3.9.2-2 [2788 B]
+#7 167.2 Get:82 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 unzip amd64 6.0-26ubuntu3.2 [175 kB]
+#7 167.2 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/pcsc-lite/libpcsclite1_1.9.5-3ubuntu1_amd64.deb  500  connecting to archive.ubuntu.com:80 container connecting via static system HTTP proxy http://127.0.0.1:10081: reading HTTP GET: read tcp 127.0.0.1:53591->127.0.0.1:10081: wsarecv: An existing connection was forcibly closed by the remote host. [IP: 91.189.91.82 80]
+#7 167.2 E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+#7 167.2 Fetched 136 MB in 2min 10s (1048 kB/s)
+#7 ERROR: process "/bin/sh -c apt-get update     && apt-get install -y --no-install-recommends ant ca-certificates file g++ gcc git make python3 python-is-python3 unzip xz-utils     && apt-get clean     && rm -rf /var/lib/apt/lists/*" did not complete successfully: exit code: 100
+------
+ > [2/4] RUN apt-get update     && apt-get install -y --no-install-recommends ant ca-certificates file g++ gcc git make python3 python-is-python3 unzip xz-utils     && apt-get clean     && rm -rf /var/lib/apt/lists/*:
+160.6 Get:76 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcurl3-gnutls amd64 7.81.0-1ubuntu1.29 [286 kB]
+161.2 Get:77 http://archive.ubuntu.com/ubuntu jammy/main amd64 liberror-perl all 0.17029-1 [26.5 kB]
+162.7 Get:78 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 git-man all 1:2.34.1-1ubuntu1.17 [954 kB]
+164.4 Get:79 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 git amd64 1:2.34.1-1ubuntu1.17 [3174 kB]
+165.6 Get:80 http://archive.ubuntu.com/ubuntu jammy/main amd64 make amd64 4.3-4.1build1 [180 kB]
+166.1 Get:81 http://archive.ubuntu.com/ubuntu jammy/main amd64 python-is-python3 all 3.9.2-2 [2788 B]
+167.2 Get:82 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 unzip amd64 6.0-26ubuntu3.2 [175 kB]
+167.2 E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/main/p/pcsc-lite/libpcsclite1_1.9.5-3ubuntu1_amd64.deb  500  connecting to archive.ubuntu.com:80 container connecting via static system HTTP proxy http://127.0.0.1:10081: reading HTTP GET: read tcp 127.0.0.1:53591->127.0.0.1:10081: wsarecv: An existing connection was forcibly closed by the remote host. [IP: 91.189.91.82 80]
+167.2 E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+167.2 Fetched 136 MB in 2min 10s (1048 kB/s)
+------
+Dockerfile:12
+--------------------
+  11 |     
+  12 | >>> RUN apt-get update \
+  13 | >>>     && apt-get install -y --no-install-recommends ant ca-certificates file g++ gcc git make python3 python-is-python3 unzip xz-utils \
+  14 | >>>     && apt-get clean \
+  15 | >>>     && rm -rf /var/lib/apt/lists/*
+  16 |     
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c apt-get update     && apt-get install -y --no-install-recommends ant ca-certificates file g++ gcc git make python3 python-is-python3 unzip xz-utils     && apt-get clean     && rm -rf /var/lib/apt/lists/*" did not complete successfully: exit code: 100
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/3kuu3h4rpl2xucuphypyrso5q

@@ -1,0 +1,261 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 2.76kB 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:d57e5d0e3e5dd4cabb74feccfdb36249a58c76a3354a33ee8737813df93b7e0d
+#2 ...
+
+#3 [auth] library/eclipse-temurin:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:d57e5d0e3e5dd4cabb74feccfdb36249a58c76a3354a33ee8737813df93b7e0d
+#2 DONE 23.0s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 54B done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:d57e5d0e3e5dd4cabb74feccfdb36249a58c76a3354a33ee8737813df93b7e0d
+#5 resolve docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:d57e5d0e3e5dd4cabb74feccfdb36249a58c76a3354a33ee8737813df93b7e0d
+#5 ...
+
+#6 [auth] library/eclipse-temurin:pull token for registry-1.docker.io
+#6 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:d57e5d0e3e5dd4cabb74feccfdb36249a58c76a3354a33ee8737813df93b7e0d
+#5 resolve docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:d57e5d0e3e5dd4cabb74feccfdb36249a58c76a3354a33ee8737813df93b7e0d 21.3s done
+#5 DONE 21.3s
+
+#7 [2/5] RUN apt-get update     && apt-get install -y --fix-missing --no-install-recommends ant ca-certificates file g++ gcc git make python3 python-is-python3 unzip xz-utils     && apt-get clean     && rm -rf /var/lib/apt/lists/*
+#7 CACHED
+
+#8 [3/5] RUN git clone --no-checkout "https://github.com/LWJGL/lwjgl3.git" /testbed     && cd /testbed     && git checkout --detach "427e278dc2402aca025cacd58a80eb4eaa8c4832"     && git remote remove origin     && git config core.autocrlf false     && git for-each-ref --format='delete %(refname)' refs/heads refs/remotes refs/tags | git update-ref --stdin     && git reflog expire --expire=now --all     && git gc --prune=now     && test "$(git rev-parse HEAD)" = "427e278dc2402aca025cacd58a80eb4eaa8c4832"     && test -z "$(git status --porcelain)"     && mkdir -p /benchmark /inputs /results
+#8 CACHED
+
+#9 [4/5] RUN cd /testbed     && sed -i 's#http://central.maven.org/maven2#https://repo1.maven.org/maven2#g' config/build-definitions.xml     && ant -Dbuild.offline=false         -Dbinding.assimp=false -Dbinding.bgfx=false -Dbinding.egl=false         -Dbinding.glfw=false -Dbinding.jawt=false -Dbinding.jemalloc=false         -Dbinding.lmdb=false -Dbinding.lz4=false -Dbinding.nanovg=false         -Dbinding.nfd=false -Dbinding.nuklear=false -Dbinding.odbc=false         -Dbinding.openal=false -Dbinding.opencl=false -Dbinding.opengl=false         -Dbinding.opengles=false -Dbinding.openvr=false -Dbinding.par=false         -Dbinding.remotery=false -Dbinding.rpmalloc=false -Dbinding.sse=false         -Dbinding.stb=false -Dbinding.tinyexr=false -Dbinding.tinyfd=false         -Dbinding.tootle=false -Dbinding.vma=false -Dbinding.vulkan=false         -Dbinding.xxhash=false -Dbinding.yoga=false -Dbinding.zstd=false         compile-templates compile-native     && mkdir -p bin/classes/test     && javac -cp "bin/classes/lwjgl/core:bin/libs/java/jsr305.jar:bin/libs/java/testng.jar"         -d bin/classes/test         modules/lwjgl/core/src/test/java/org/lwjgl/system/MemoryUtilTest.java     && git checkout -- config/build-definitions.xml
+#9 0.325 Buildfile: /testbed/build.xml
+#9 0.520 
+#9 0.520 bindings:
+#9 0.839 
+#9 0.839 init:
+#9 0.845     [mkdir] Created dir: /testbed/bin
+#9 0.865 
+#9 0.865 check-dependencies:
+#9 0.868   [kotlinc] /testbed/bin/libs/kotlinc/build.txt doesn't exist
+#9 0.886 
+#9 0.886 update-dependencies:
+#9 0.887     [mkdir] Created dir: /testbed/bin/libs
+#9 0.887     [mkdir] Created dir: /testbed/bin/libs/java
+#9 0.897 
+#9 0.897 -lib-download:
+#9 2.285 
+#9 2.285 -kotlinc-download:
+#9 2.285   [kotlinc] Getting: https://github.com/JetBrains/kotlin/releases/download/v1.2.60/kotlin-compiler-1.2.60.zip
+#9 2.285   [kotlinc] To: /testbed/bin/libs/kotlin-compiler-1.2.60.zip
+#9 2.966   [kotlinc] https://github.com/JetBrains/kotlin/releases/download/v1.2.60/kotlin-compiler-1.2.60.zip moved to https://release-assets.githubusercontent.com/github-production-release-asset/3432266/da9e8e88-95b8-11e8-83c2-9d27aa985dd0?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-09-29T10%3A07%3A24Z&rscd=attachment%3B+filename%3Dkotlin-compiler-1.2.60.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-09-29T09%3A06%3A43Z&ske=2026-09-29T10%3A07%3A24Z&sks=b&skv=2018-11-09&sig=FN4iOpLlpMdnbQpbwSVzlseSL380%2BkaCDmKxRRiM04w%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MDY3NTQ1NCwibmJmIjoxNzkwNjczNjU0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.EKCbcpOHCA_VUebTqcJc5pbJVbuRTAzb9g2K0lG2-cI&response-content-disposition=attachment%3B%20filename%3Dkotlin-compiler-1.2.60.zip&response-content-type=application%2Foctet-stream
+#9 4.461   [kotlinc] ....................................................
+#9 5.091   [kotlinc] ....................................................
+#9 5.295   [kotlinc] ....................................................
+#9 5.393   [kotlinc] ....................................................
+#9 5.513   [kotlinc] ....................................................
+#9 5.577   [kotlinc] ....................................................
+#9 5.616   [kotlinc] ....................................................
+#9 5.672   [kotlinc] ....................................................
+#9 5.731   [kotlinc] ....................................................
+#9 5.764   [kotlinc] ....................................................
+#9 5.801   [kotlinc] ....................................................
+#9 5.904   [kotlinc] ....................................................
+#9 5.934   [kotlinc] ....................................................
+#9 5.966   [kotlinc] ....................................................
+#9 6.003   [kotlinc] ....................................................
+#9 6.029   [kotlinc] ....................................................
+#9 6.053   [kotlinc] ....................................................
+#9 6.073   [kotlinc] ....................................................
+#9 6.095   [kotlinc] ....................................................
+#9 6.126   [kotlinc] ....................................................
+#9 6.160   [kotlinc] ....................................................
+#9 6.184   [kotlinc] ....................................................
+#9 6.215   [kotlinc] ....................................................
+#9 6.244   [kotlinc] ....................................................
+#9 6.272   [kotlinc] ....................................................
+#9 6.303   [kotlinc] ....................................................
+#9 6.330   [kotlinc] ....................................................
+#9 6.381   [kotlinc] ....................................................
+#9 6.406   [kotlinc] ....................................................
+#9 6.433   [kotlinc] ....................................................
+#9 6.458   [kotlinc] ....................................................
+#9 6.504   [kotlinc] ....................................................
+#9 6.532   [kotlinc] ....................................................
+#9 6.557   [kotlinc] ....................................................
+#9 6.617   [kotlinc] ....................................................
+#9 6.671   [kotlinc] ....................................................
+#9 6.697   [kotlinc] ....................................................
+#9 6.743   [kotlinc] ....................................................
+#9 6.813   [kotlinc] ....................................................
+#9 6.837   [kotlinc] ....................................................
+#9 6.882   [kotlinc] ....................................................
+#9 6.912   [kotlinc] ....................................................
+#9 6.934   [kotlinc] ....................................................
+#9 6.946   [kotlinc] .........................
+#9 6.955   [kotlinc] Expanding: /testbed/bin/libs/kotlin-compiler-1.2.60.zip into /testbed/bin/libs
+#9 7.244   [kotlinc] Deleting: /testbed/bin/libs/kotlin-compiler-1.2.60.zip
+#9 7.248   [kotlinc] The Kotlin compiler was updated to build: 1.2.60
+#9 7.263 
+#9 7.263 -compile-generator:
+#9 7.265 [Generator] Compiling Kotlin generator...
+#9 7.266     [mkdir] Created dir: /testbed/bin/classes/generator
+#9 7.799   [kotlinc] Compiling [/testbed/modules/generator/src/main/kotlin] => [/testbed/bin/classes/generator]
+#9 7.998   [kotlinc] info: kotlinc-jvm 1.2.60 (JRE 1.8.0_502-b07)
+#9 19.70   [kotlinc] info: PERF: INIT: Compiler initialized in 485 ms
+#9 19.70   [kotlinc] info: PERF: ANALYZE: 18 files (8735 lines) in 7721 ms - 1131.330 loc/s
+#9 19.70   [kotlinc] info: PERF: GENERATE: 18 files (8735 lines) in 3228 ms - 2706.010 loc/s
+#9 19.70   [kotlinc] info: PERF: GC time for PS Scavenge is 159 ms
+#9 19.70   [kotlinc] info: PERF: GC time for PS MarkSweep is 267 ms
+#9 19.70   [kotlinc] info: PERF: JIT time is 56451 ms
+#9 19.70   [kotlinc] info: PERF: Find Java class performed 18 times, total time 2 ms
+#9 19.70   [kotlinc] info: PERF: Type info performed 29106 times, total time 5737 ms
+#9 19.70   [kotlinc] info: PERF: Call resolve performed 16340 times, total time 4141 ms
+#9 19.70   [kotlinc] info: PERF: Binary class from Kotlin file performed 279 times, total time 40 ms
+#9 19.70     [touch] Creating /testbed/bin/classes/generator/touch.txt
+#9 19.72 [javac: Generator Tools & Doclets] Compiling 6 source files to /testbed/bin/classes/generator
+#9 20.40 
+#9 20.40 compile-templates:
+#9 20.40 [Templates] Compiling Kotlin templates. This will take 1-2 minutes...
+#9 20.40     [mkdir] Created dir: /testbed/bin/classes/templates
+#9 20.41   [kotlinc] Compiling [/testbed/modules/lwjgl/core/src/templates/kotlin/core/dyncall, /testbed/modules/lwjgl/core/src/templates/kotlin/core/jni, /testbed/modules/lwjgl/core/src/templates/kotlin/core/libc, /testbed/modules/lwjgl/core/src/templates/kotlin/core/linux, /testbed/modules/lwjgl/core/src/templates/kotlin/core/macos, /testbed/modules/lwjgl/core/src/templates/kotlin/core/templates, /testbed/modules/lwjgl/core/src/templates/kotlin/core/windows, /testbed/modules/lwjgl/core/src/templates/kotlin] => [/testbed/bin/classes/templates]
+#9 20.41   [kotlinc] info: kotlinc-jvm 1.2.60 (JRE 1.8.0_502-b07)
+#9 22.52   [kotlinc] info: PERF: INIT: Compiler initialized in 55 ms
+#9 22.52   [kotlinc] info: PERF: ANALYZE: 32 files (7288 lines) in 1645 ms - 4430.395 loc/s
+#9 22.52   [kotlinc] info: PERF: GENERATE: 32 files (7288 lines) in 367 ms - 19858.311 loc/s
+#9 22.52   [kotlinc] info: PERF: GC time for PS Scavenge is 189 ms
+#9 22.52   [kotlinc] info: PERF: GC time for PS MarkSweep is 267 ms
+#9 22.52   [kotlinc] info: PERF: JIT time is 69806 ms
+#9 22.52   [kotlinc] info: PERF: Find Java class performed 18 times, total time 2 ms
+#9 22.52   [kotlinc] info: PERF: Type info performed 41459 times, total time 7233 ms
+#9 22.52   [kotlinc] info: PERF: Call resolve performed 21931 times, total time 5429 ms
+#9 22.52   [kotlinc] info: PERF: Binary class from Kotlin file performed 490 times, total time 65 ms
+#9 22.52   [kotlinc] info: PERF: Find Java class performed 5 times, total time 0 ms
+#9 22.52     [touch] Creating /testbed/bin/classes/templates/touch.txt
+#9 22.52 
+#9 22.52 bindings:
+#9 22.56 
+#9 22.56 init:
+#9 22.57 
+#9 22.57 check-dependencies:
+#9 22.58 
+#9 22.58 generate:
+#9 23.01 [Generator] 	UPDATING: modules/lwjgl/core/src/generated/java/org/lwjgl/system/JNI.java
+#9 23.01 [Generator] 	UPDATING: modules/lwjgl/core/src/generated/c/org_lwjgl_system_JNI.c
+#9 23.02 
+#9 23.02 compile:
+#9 23.02     [mkdir] Created dir: /testbed/bin/classes/lwjgl/core
+#9 23.03 [javac: core] Compiling 88 source files to /testbed/bin/classes/lwjgl/core
+#9 23.93     [mkdir] Created dir: /testbed/bin/classes/lwjgl/lmdb
+#9 23.93     [mkdir] Created dir: /testbed/bin/classes/lwjgl/bgfx
+#9 23.93     [mkdir] Created dir: /testbed/bin/classes/lwjgl/jawt
+#9 23.93     [mkdir] Created dir: /testbed/bin/classes/lwjgl/assimp
+#9 23.93     [mkdir] Created dir: /testbed/bin/classes/lwjgl/nuklear
+#9 23.93     [mkdir] Created dir: /testbed/bin/classes/lwjgl/nfd
+#9 23.93     [mkdir] Created dir: /testbed/bin/classes/lwjgl/jemalloc
+#9 23.93     [mkdir] Created dir: /testbed/bin/classes/lwjgl/openal
+#9 23.93     [mkdir] Created dir: /testbed/bin/classes/lwjgl/egl
+#9 23.93     [mkdir] Created dir: /testbed/bin/classes/lwjgl/opencl
+#9 23.93     [mkdir] Created dir: /testbed/bin/classes/lwjgl/xxhash
+#9 23.93     [mkdir] Created dir: /testbed/bin/classes/lwjgl/nanovg
+#9 23.93     [mkdir] Created dir: /testbed/bin/classes/lwjgl/odbc
+#9 23.93     [mkdir] Created dir: /testbed/bin/classes/lwjgl/lz4
+#9 23.93     [mkdir] Created dir: /testbed/bin/classes/lwjgl/openvr
+#9 23.93     [mkdir] Created dir: /testbed/bin/classes/lwjgl/yoga
+#9 23.93     [mkdir] Created dir: /testbed/bin/classes/lwjgl/par
+#9 23.93     [mkdir] Created dir: /testbed/bin/classes/lwjgl/stb
+#9 23.93     [mkdir] Created dir: /testbed/bin/classes/lwjgl/rpmalloc
+#9 23.94     [mkdir] Created dir: /testbed/bin/classes/lwjgl/tinyexr
+#9 23.94     [mkdir] Created dir: /testbed/bin/classes/lwjgl/zstd
+#9 23.94     [mkdir] Created dir: /testbed/bin/classes/lwjgl/sse
+#9 23.94     [mkdir] Created dir: /testbed/bin/classes/lwjgl/tootle
+#9 23.94     [mkdir] Created dir: /testbed/bin/classes/lwjgl/tinyfd
+#9 23.94     [mkdir] Created dir: /testbed/bin/classes/lwjgl/vulkan
+#9 23.94     [mkdir] Created dir: /testbed/bin/classes/lwjgl/remotery
+#9 23.95     [mkdir] Created dir: /testbed/bin/classes/lwjgl/opengl
+#9 23.95     [mkdir] Created dir: /testbed/bin/classes/lwjgl/glfw
+#9 23.95     [mkdir] Created dir: /testbed/bin/classes/lwjgl/ovr
+#9 23.95     [mkdir] Created dir: /testbed/bin/classes/lwjgl/opengles
+#9 23.95     [mkdir] Created dir: /testbed/bin/classes/lwjgl/vma
+#9 23.95 
+#9 23.95 compile-native:
+#9 23.96     [mkdir] Created dir: /testbed/bin/linux/x64
+#9 23.97 
+#9 23.97 compile-native-platform:
+#9 24.06     [mkdir] Created dir: /testbed/bin/linux/x64/core
+#9 24.17  [Compiler] In file included from /testbed/modules/lwjgl/core/src/generated/c/linux/org_lwjgl_system_linux_DynamicLinkLoader.c:7:
+#9 24.17  [Compiler] ../../../../modules/lwjgl/core/src/main/c/linux/LinuxLWJGL.h:7:10: fatal error: X11/X.h: No such file or directory
+#9 24.17  [Compiler]     7 | #include <X11/X.h>
+#9 24.17  [Compiler]       |          ^~~~~~~~~
+#9 24.17  [Compiler] compilation terminated.
+#9 24.17  [Compiler] /testbed/modules/lwjgl/core/src/generated/c/org_lwjgl_system_dyncall_DynCall.c:7:10: fatal error: dyncall.h: No such file or directory
+#9 24.17  [Compiler]     7 | #include "dyncall.h"
+#9 24.17  [Compiler]       |          ^~~~~~~~~~~
+#9 24.17  [Compiler] compilation terminated.
+#9 24.17  [Compiler] /testbed/modules/lwjgl/core/src/generated/c/org_lwjgl_system_dyncall_DynCallback.c:7:10: fatal error: dyncall_callback.h: No such file or directory
+#9 24.17  [Compiler]     7 | #include "dyncall_callback.h"
+#9 24.17  [Compiler]       |          ^~~~~~~~~~~~~~~~~~~~
+#9 24.17  [Compiler] compilation terminated.
+#9 24.17  [Compiler] /testbed/modules/lwjgl/core/src/generated/c/org_lwjgl_system_dyncall_DynLoad.c:7:10: fatal error: dynload.h: No such file or directory
+#9 24.17  [Compiler]     7 | #include "dynload.h"
+#9 24.17  [Compiler]       |          ^~~~~~~~~~~
+#9 24.17  [Compiler] compilation terminated.
+#9 24.34  [Compiler] /testbed/modules/lwjgl/core/src/main/c/org_lwjgl_system_Callback.c:9:10: fatal error: dyncall_callback.h: No such file or directory
+#9 24.34  [Compiler]     9 | #include "dyncall_callback.h"
+#9 24.34  [Compiler]       |          ^~~~~~~~~~~~~~~~~~~~
+#9 24.34  [Compiler] compilation terminated.
+#9 24.34 
+#9 24.34 BUILD FAILED
+#9 24.34 /testbed/build.xml:406: The following error occurred while executing this line:
+#9 24.34 /testbed/config/linux/build.xml:155: The following error occurred while executing this line:
+#9 24.34 /testbed/config/linux/build.xml:91: The following error occurred while executing this line:
+#9 24.34 /testbed/config/linux/build.xml:39: apply returned: 1
+#9 24.34 
+#9 24.34 Total time: 24 seconds
+#9 ERROR: process "/bin/sh -c cd /testbed     && sed -i 's#http://central.maven.org/maven2#https://repo1.maven.org/maven2#g' config/build-definitions.xml     && ant -Dbuild.offline=false         -Dbinding.assimp=false -Dbinding.bgfx=false -Dbinding.egl=false         -Dbinding.glfw=false -Dbinding.jawt=false -Dbinding.jemalloc=false         -Dbinding.lmdb=false -Dbinding.lz4=false -Dbinding.nanovg=false         -Dbinding.nfd=false -Dbinding.nuklear=false -Dbinding.odbc=false         -Dbinding.openal=false -Dbinding.opencl=false -Dbinding.opengl=false         -Dbinding.opengles=false -Dbinding.openvr=false -Dbinding.par=false         -Dbinding.remotery=false -Dbinding.rpmalloc=false -Dbinding.sse=false         -Dbinding.stb=false -Dbinding.tinyexr=false -Dbinding.tinyfd=false         -Dbinding.tootle=false -Dbinding.vma=false -Dbinding.vulkan=false         -Dbinding.xxhash=false -Dbinding.yoga=false -Dbinding.zstd=false         compile-templates compile-native     && mkdir -p bin/classes/test     && javac -cp \"bin/classes/lwjgl/core:bin/libs/java/jsr305.jar:bin/libs/java/testng.jar\"         -d bin/classes/test         modules/lwjgl/core/src/test/java/org/lwjgl/system/MemoryUtilTest.java     && git checkout -- config/build-definitions.xml" did not complete successfully: exit code: 1
+------
+ > [4/5] RUN cd /testbed     && sed -i 's#http://central.maven.org/maven2#https://repo1.maven.org/maven2#g' config/build-definitions.xml     && ant -Dbuild.offline=false         -Dbinding.assimp=false -Dbinding.bgfx=false -Dbinding.egl=false         -Dbinding.glfw=false -Dbinding.jawt=false -Dbinding.jemalloc=false         -Dbinding.lmdb=false -Dbinding.lz4=false -Dbinding.nanovg=false         -Dbinding.nfd=false -Dbinding.nuklear=false -Dbinding.odbc=false         -Dbinding.openal=false -Dbinding.opencl=false -Dbinding.opengl=false         -Dbinding.opengles=false -Dbinding.openvr=false -Dbinding.par=false         -Dbinding.remotery=false -Dbinding.rpmalloc=false -Dbinding.sse=false         -Dbinding.stb=false -Dbinding.tinyexr=false -Dbinding.tinyfd=false         -Dbinding.tootle=false -Dbinding.vma=false -Dbinding.vulkan=false         -Dbinding.xxhash=false -Dbinding.yoga=false -Dbinding.zstd=false         compile-templates compile-native     && mkdir -p bin/classes/test     && javac -cp "bin/classes/lwjgl/core:bin/libs/java/jsr305.jar:bin/libs/java/testng.jar"         -d bin/classes/test         modules/lwjgl/core/src/test/java/org/lwjgl/system/MemoryUtilTest.java     && git checkout -- config/build-definitions.xml:
+24.34  [Compiler]       |          ^~~~~~~~~~~~~~~~~~~~
+24.34  [Compiler] compilation terminated.
+24.34 
+24.34 BUILD FAILED
+24.34 /testbed/build.xml:406: The following error occurred while executing this line:
+24.34 /testbed/config/linux/build.xml:155: The following error occurred while executing this line:
+24.34 /testbed/config/linux/build.xml:91: The following error occurred while executing this line:
+24.34 /testbed/config/linux/build.xml:39: apply returned: 1
+24.34 
+24.34 Total time: 24 seconds
+------
+Dockerfile:35
+--------------------
+  34 |     # still has network access; evaluation itself runs with --network none.
+  35 | >>> RUN cd /testbed \
+  36 | >>>     && sed -i 's#http://central.maven.org/maven2#https://repo1.maven.org/maven2#g' config/build-definitions.xml \
+  37 | >>>     && ant -Dbuild.offline=false \
+  38 | >>>         -Dbinding.assimp=false -Dbinding.bgfx=false -Dbinding.egl=false \
+  39 | >>>         -Dbinding.glfw=false -Dbinding.jawt=false -Dbinding.jemalloc=false \
+  40 | >>>         -Dbinding.lmdb=false -Dbinding.lz4=false -Dbinding.nanovg=false \
+  41 | >>>         -Dbinding.nfd=false -Dbinding.nuklear=false -Dbinding.odbc=false \
+  42 | >>>         -Dbinding.openal=false -Dbinding.opencl=false -Dbinding.opengl=false \
+  43 | >>>         -Dbinding.opengles=false -Dbinding.openvr=false -Dbinding.par=false \
+  44 | >>>         -Dbinding.remotery=false -Dbinding.rpmalloc=false -Dbinding.sse=false \
+  45 | >>>         -Dbinding.stb=false -Dbinding.tinyexr=false -Dbinding.tinyfd=false \
+  46 | >>>         -Dbinding.tootle=false -Dbinding.vma=false -Dbinding.vulkan=false \
+  47 | >>>         -Dbinding.xxhash=false -Dbinding.yoga=false -Dbinding.zstd=false \
+  48 | >>>         compile-templates compile-native \
+  49 | >>>     && mkdir -p bin/classes/test \
+  50 | >>>     && javac -cp "bin/classes/lwjgl/core:bin/libs/java/jsr305.jar:bin/libs/java/testng.jar" \
+  51 | >>>         -d bin/classes/test \
+  52 | >>>         modules/lwjgl/core/src/test/java/org/lwjgl/system/MemoryUtilTest.java \
+  53 | >>>     && git checkout -- config/build-definitions.xml
+  54 |     
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c cd /testbed     && sed -i 's#http://central.maven.org/maven2#https://repo1.maven.org/maven2#g' config/build-definitions.xml     && ant -Dbuild.offline=false         -Dbinding.assimp=false -Dbinding.bgfx=false -Dbinding.egl=false         -Dbinding.glfw=false -Dbinding.jawt=false -Dbinding.jemalloc=false         -Dbinding.lmdb=false -Dbinding.lz4=false -Dbinding.nanovg=false         -Dbinding.nfd=false -Dbinding.nuklear=false -Dbinding.odbc=false         -Dbinding.openal=false -Dbinding.opencl=false -Dbinding.opengl=false         -Dbinding.opengles=false -Dbinding.openvr=false -Dbinding.par=false         -Dbinding.remotery=false -Dbinding.rpmalloc=false -Dbinding.sse=false         -Dbinding.stb=false -Dbinding.tinyexr=false -Dbinding.tinyfd=false         -Dbinding.tootle=false -Dbinding.vma=false -Dbinding.vulkan=false         -Dbinding.xxhash=false -Dbinding.yoga=false -Dbinding.zstd=false         compile-templates compile-native     && mkdir -p bin/classes/test     && javac -cp \"bin/classes/lwjgl/core:bin/libs/java/jsr305.jar:bin/libs/java/testng.jar\"         -d bin/classes/test         modules/lwjgl/core/src/test/java/org/lwjgl/system/MemoryUtilTest.java     && git checkout -- config/build-definitions.xml" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/ru1j3f14zjq28fchda3b03ool

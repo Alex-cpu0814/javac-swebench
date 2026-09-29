@@ -1,0 +1,17 @@
+[LWJGL] Version: 3.2.1 SNAPSHOT
+[LWJGL] 	 OS: Linux v6.18.33.2-microsoft-standard-WSL2
+[LWJGL] 	JRE: 1.8.0_502 amd64
+[LWJGL] 	JVM: OpenJDK 64-Bit Server VM v25.502-b07 by Temurin
+[LWJGL] Loading library (system): lwjgl
+[LWJGL] 	Loaded from java.library.path: bin/libs/liblwjgl.so
+[LWJGL] MemoryUtil accessor: MemoryAccessorUnsafe
+[LWJGL] Warning: Failed to instantiate memory allocator: org.lwjgl.system.jemalloc.JEmallocAllocator. Using the system default.
+[LWJGL] MemoryUtil allocator: DebugAllocator
+
+===============================================
+Command line suite
+Total tests run: 11, Failures: 0, Skips: 0
+===============================================
+
+testTextDecoding (org.lwjgl.system.MemoryUtilTest) ... FAIL
+testUTF8 (org.lwjgl.system.MemoryUtilTest) ... FAIL

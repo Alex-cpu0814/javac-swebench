@@ -1,0 +1,5 @@
+diff --git a/gradle.properties b/gradle.properties
+--- a/gradle.properties
++++ b/gradle.properties
+@@ -7,0 +8 @@ lwjglVersion=3.2.1
++

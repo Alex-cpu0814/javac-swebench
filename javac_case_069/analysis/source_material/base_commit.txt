@@ -1,0 +1,7 @@
+commit 427e278dc2402aca025cacd58a80eb4eaa8c4832
+Author:     Ioannis Tsakpinis <iotsakp@gmail.com>
+AuthorDate: Wed Aug 29 14:20:49 2018 +0300
+Commit:     Ioannis Tsakpinis <iotsakp@gmail.com>
+CommitDate: Wed Aug 29 14:20:49 2018 +0300
+
+    fix(vma): uninitialized memory access

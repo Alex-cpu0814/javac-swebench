@@ -1,0 +1,27 @@
+{
+  "schema_version": "3.0",
+  "kind": "image_build",
+  "build_id": "case-069-build-4",
+  "status": "error",
+  "reason": "docker_build_failed",
+  "started_at": "2026-09-29T09:15:06.923Z",
+  "finished_at": "2026-09-29T09:16:15.758Z",
+  "duration_ms": 68843,
+  "source": {
+    "repo": "https://github.com/LWJGL/lwjgl3.git",
+    "base_commit": "427e278dc2402aca025cacd58a80eb4eaa8c4832"
+  },
+  "image": {
+    "name": "javac-case-069-lwjgl3:benchmark-v2",
+    "id": null,
+    "repo_digests": []
+  },
+  "logs": {
+    "events": "events.jsonl",
+    "docker_build_stdout": "docker-build.stdout.raw.log",
+    "docker_build_stderr": "docker-build.stderr.raw.log",
+    "image_audit_stdout": null,
+    "image_audit_stderr": null,
+    "image_audit": null
+  }
+}

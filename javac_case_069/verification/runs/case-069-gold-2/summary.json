@@ -1,0 +1,62 @@
+{
+  "schema_version": "3.0",
+  "kind": "patch_evaluation",
+  "run_id": "case-069-gold-2",
+  "label": null,
+  "instance_id": "LWJGL__lwjgl3-409",
+  "status": "unresolved",
+  "reason": "project_build_failed",
+  "started_at": "2026-09-29T09:09:58.937Z",
+  "finished_at": "2026-09-29T09:10:01.672Z",
+  "duration_ms": 2734,
+  "application_order": [
+    "model_patch",
+    "test_patch",
+    "tests"
+  ],
+  "model_patch_sha256": "0759c6a821a7e79a0612a9368c7fab6b4bdba3affd2da56fa9669b5bc2db44c6",
+  "test_patch_sha256": "485db1f47f04a6e28dfce1d9e335a6b770b4ca964f1dc4f5177ca779e21e399f",
+  "image": {
+    "name": "javac-case-069-lwjgl3:benchmark-v1",
+    "id": "sha256:2365c0a57b8354f38223a889c8d7382afdef94512ad5a32a18bd0bb634cc9cfe",
+    "repo_digests": [
+      "javac-case-069-lwjgl3@sha256:2365c0a57b8354f38223a889c8d7382afdef94512ad5a32a18bd0bb634cc9cfe"
+    ]
+  },
+  "container_exit_code": 1,
+  "phase": {
+    "phase": "project_build",
+    "outcome": "unresolved",
+    "reason": "project_build_failed",
+    "test_exit_code": null,
+    "instance_id": "LWJGL__lwjgl3-409"
+  },
+  "grading": {
+    "tests_observed": 0,
+    "FAIL_TO_PASS": {
+      "expected": 1,
+      "passed": 0,
+      "failed": 0,
+      "skipped": 0,
+      "missing": 1
+    },
+    "PASS_TO_PASS": {
+      "expected": 1,
+      "passed": 0,
+      "failed": 0,
+      "skipped": 0,
+      "missing": 1
+    },
+    "unexpected_failures": 0
+  },
+  "logs": {
+    "events": "events.jsonl",
+    "docker_stdout": "docker-run.stdout.raw.log",
+    "docker_stderr": "docker-run.stderr.raw.log",
+    "model_patch": "model-patch.raw.log",
+    "test_patch": "test-patch.raw.log",
+    "project_build": "project-build.raw.log",
+    "tests": null,
+    "grading": "grading.json"
+  }
+}

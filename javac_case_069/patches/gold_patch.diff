@@ -1,0 +1,46 @@
+diff --git a/modules/lwjgl/core/src/main/java/org/lwjgl/system/MemoryTextDecoding.java b/modules/lwjgl/core/src/main/java/org/lwjgl/system/MemoryTextDecoding.java
+index 24c556e5f..b318cc164 100644
+--- a/modules/lwjgl/core/src/main/java/org/lwjgl/system/MemoryTextDecoding.java
++++ b/modules/lwjgl/core/src/main/java/org/lwjgl/system/MemoryTextDecoding.java
+@@ -123,7 +123,7 @@ final class MemoryTextDecoding {
+             return "";
+         }
+ 
+-        return memCharBuffer(memAddress(buffer) + offset, length).toString();
++        return memCharBuffer(memAddress0(buffer) + offset, length).toString();
+     }
+ 
+ }
+\ No newline at end of file
+diff --git a/modules/lwjgl/core/src/main/java9/org/lwjgl/system/MemoryTextDecoding.java b/modules/lwjgl/core/src/main/java9/org/lwjgl/system/MemoryTextDecoding.java
+index 3b2ed3d40..eb9baea3a 100644
+--- a/modules/lwjgl/core/src/main/java9/org/lwjgl/system/MemoryTextDecoding.java
++++ b/modules/lwjgl/core/src/main/java9/org/lwjgl/system/MemoryTextDecoding.java
+@@ -28,7 +28,7 @@ final class MemoryTextDecoding {
+         }
+ 
+         byte[] bytes = new byte[length];
+-        memByteBuffer(memAddress(buffer) + offset, length).get(bytes);
++        memByteBuffer(memAddress0(buffer) + offset, length).get(bytes);
+         return new String(bytes, StandardCharsets.ISO_8859_1);
+     }
+ 
+@@ -41,7 +41,7 @@ final class MemoryTextDecoding {
+         }
+ 
+         byte[] bytes = new byte[length];
+-        memByteBuffer(memAddress(buffer) + offset, length).get(bytes);
++        memByteBuffer(memAddress0(buffer) + offset, length).get(bytes);
+         return new String(bytes, StandardCharsets.UTF_8);
+     }
+ 
+@@ -53,7 +53,7 @@ final class MemoryTextDecoding {
+             return "";
+         }
+ 
+-        return memCharBuffer(memAddress(buffer) + offset, length).toString();
++        return memCharBuffer(memAddress0(buffer) + offset, length).toString();
+     }
+ 
+ }
+\ No newline at end of file

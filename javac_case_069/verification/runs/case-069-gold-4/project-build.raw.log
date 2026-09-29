@@ -1,0 +1,76 @@
+Buildfile: /testbed/build.xml
+
+bindings:
+
+init:
+
+check-dependencies:
+
+-compile-generator:
+[Generator] Compiling Kotlin generator...
+  [kotlinc] Compiling [/testbed/modules/generator/src/main/kotlin] => [/testbed/bin/classes/generator]
+  [kotlinc] info: kotlinc-jvm 1.2.60 (JRE 1.8.0_502-b07)
+  [kotlinc] info: PERF: INIT: Compiler initialized in 552 ms
+  [kotlinc] info: PERF: ANALYZE: 18 files (8735 lines) in 7914 ms - 1103.740 loc/s
+  [kotlinc] info: PERF: GENERATE: 18 files (8735 lines) in 3064 ms - 2850.849 loc/s
+  [kotlinc] info: PERF: GC time for PS Scavenge is 116 ms
+  [kotlinc] info: PERF: GC time for PS MarkSweep is 123 ms
+  [kotlinc] info: PERF: JIT time is 53211 ms
+  [kotlinc] info: PERF: Find Java class performed 18 times, total time 2 ms
+  [kotlinc] info: PERF: Type info performed 29106 times, total time 5686 ms
+  [kotlinc] info: PERF: Call resolve performed 16340 times, total time 4145 ms
+  [kotlinc] info: PERF: Binary class from Kotlin file performed 279 times, total time 41 ms
+[javac: Generator Tools & Doclets] Compiling 6 source files to /testbed/bin/classes/generator
+
+compile-templates:
+[Templates] Compiling Kotlin templates. This will take 1-2 minutes...
+  [kotlinc] Compiling [/testbed/modules/lwjgl/core/src/templates/kotlin/core/dyncall, /testbed/modules/lwjgl/core/src/templates/kotlin/core/jni, /testbed/modules/lwjgl/core/src/templates/kotlin/core/libc, /testbed/modules/lwjgl/core/src/templates/kotlin/core/linux, /testbed/modules/lwjgl/core/src/templates/kotlin/core/macos, /testbed/modules/lwjgl/core/src/templates/kotlin/core/templates, /testbed/modules/lwjgl/core/src/templates/kotlin/core/windows, /testbed/modules/lwjgl/core/src/templates/kotlin] => [/testbed/bin/classes/templates]
+  [kotlinc] info: kotlinc-jvm 1.2.60 (JRE 1.8.0_502-b07)
+  [kotlinc] info: PERF: INIT: Compiler initialized in 51 ms
+  [kotlinc] info: PERF: ANALYZE: 32 files (7288 lines) in 1665 ms - 4377.177 loc/s
+  [kotlinc] info: PERF: GENERATE: 32 files (7288 lines) in 385 ms - 18929.870 loc/s
+  [kotlinc] info: PERF: GC time for PS Scavenge is 177 ms
+  [kotlinc] info: PERF: GC time for PS MarkSweep is 123 ms
+  [kotlinc] info: PERF: JIT time is 65122 ms
+  [kotlinc] info: PERF: Find Java class performed 18 times, total time 2 ms
+  [kotlinc] info: PERF: Type info performed 41459 times, total time 7210 ms
+  [kotlinc] info: PERF: Call resolve performed 21931 times, total time 5457 ms
+  [kotlinc] info: PERF: Binary class from Kotlin file performed 490 times, total time 63 ms
+  [kotlinc] info: PERF: Find Java class performed 5 times, total time 0 ms
+
+bindings:
+
+init:
+
+check-dependencies:
+
+generate:
+[Generator] 	UPDATING: modules/lwjgl/core/src/generated/java/org/lwjgl/system/JNI.java
+[Generator] 	UPDATING: modules/lwjgl/core/src/generated/c/org_lwjgl_system_JNI.c
+
+compile:
+[javac: core] Compiling 88 source files to /testbed/bin/classes/lwjgl/core
+
+compile-native:
+
+compile-native-platform:
+      [gcc] Linking lwjgl
+
+BUILD FAILED
+/testbed/build.xml:406: The following error occurred while executing this line:
+/testbed/config/linux/build.xml:155: The following error occurred while executing this line:
+/testbed/config/linux/build.xml:168: 
+The following error occurred while executing this line:
+/testbed/config/build-definitions.xml:284: The following error occurred while executing this line:
+/testbed/config/build-definitions.xml:259: The following error occurred while executing this line:
+/testbed/config/build-definitions.xml:260: java.net.UnknownHostException: build.lwjgl.org
+The following error occurred while executing this line:
+/testbed/config/build-definitions.xml:284: The following error occurred while executing this line:
+/testbed/config/build-definitions.xml:259: The following error occurred while executing this line:
+/testbed/config/build-definitions.xml:260: java.net.UnknownHostException: build.lwjgl.org
+The following error occurred while executing this line:
+/testbed/config/build-definitions.xml:284: The following error occurred while executing this line:
+/testbed/config/build-definitions.xml:259: The following error occurred while executing this line:
+/testbed/config/build-definitions.xml:260: java.net.UnknownHostException: build.lwjgl.org
+
+Total time: 18 seconds

@@ -1,0 +1,6 @@
+{
+  "phase": "model_patch",
+  "outcome": "unresolved",
+  "reason": "model_patch_apply_failed",
+  "test_exit_code": null
+}

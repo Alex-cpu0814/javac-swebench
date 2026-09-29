@@ -1,0 +1,15 @@
+{
+  "schema_version": "3.0",
+  "run_id": "case-069-gold-5",
+  "tests_observed": 2,
+  "FAIL_TO_PASS": {
+    "org.lwjgl.system.MemoryUtilTest.testTextDecoding": "FAILED"
+  },
+  "PASS_TO_PASS": {
+    "org.lwjgl.system.MemoryUtilTest.testUTF8": "FAILED"
+  },
+  "unexpected_failures": [
+    "org.lwjgl.system.MemoryUtilTest.testTextDecoding",
+    "org.lwjgl.system.MemoryUtilTest.testUTF8"
+  ]
+}

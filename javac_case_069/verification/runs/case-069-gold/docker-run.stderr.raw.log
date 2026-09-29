@@ -1,0 +1,3 @@
+docker: Error response from daemon: Duplicate mount point: /benchmark/run_evaluation.sh
+
+Run 'docker run --help' for more information

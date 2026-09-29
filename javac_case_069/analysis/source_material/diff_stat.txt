@@ -1,0 +1,6 @@
+ .idea/runConfigurations/TESTS.xml                  | 12 ++----
+ doc/notes/3.2.1.md                                 |  2 +
+ .../java/org/lwjgl/system/MemoryTextDecoding.java  |  2 +-
+ .../java9/org/lwjgl/system/MemoryTextDecoding.java |  6 +--
+ .../test/java/org/lwjgl/system/MemoryUtilTest.java | 49 ++++++++++++++++++++++
+ 5 files changed, 58 insertions(+), 13 deletions(-)

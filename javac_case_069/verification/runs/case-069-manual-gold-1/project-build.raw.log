@@ -1,0 +1,55 @@
+Buildfile: /testbed/build.xml
+
+bindings:
+
+init:
+
+check-dependencies:
+
+-compile-generator:
+[Generator] Compiling Kotlin generator...
+  [kotlinc] Compiling [/testbed/modules/generator/src/main/kotlin] => [/testbed/bin/classes/generator]
+  [kotlinc] info: kotlinc-jvm 1.2.60 (JRE 1.8.0_502-b07)
+  [kotlinc] info: PERF: INIT: Compiler initialized in 595 ms
+  [kotlinc] info: PERF: ANALYZE: 18 files (8735 lines) in 7530 ms - 1160.027 loc/s
+  [kotlinc] info: PERF: GENERATE: 18 files (8735 lines) in 3019 ms - 2893.342 loc/s
+  [kotlinc] info: PERF: GC time for PS Scavenge is 120 ms
+  [kotlinc] info: PERF: GC time for PS MarkSweep is 129 ms
+  [kotlinc] info: PERF: JIT time is 50466 ms
+  [kotlinc] info: PERF: Find Java class performed 18 times, total time 3 ms
+  [kotlinc] info: PERF: Type info performed 29106 times, total time 5517 ms
+  [kotlinc] info: PERF: Call resolve performed 16340 times, total time 4051 ms
+  [kotlinc] info: PERF: Binary class from Kotlin file performed 279 times, total time 41 ms
+[javac: Generator Tools & Doclets] Compiling 6 source files to /testbed/bin/classes/generator
+
+compile-templates:
+[Templates] Compiling Kotlin templates. This will take 1-2 minutes...
+  [kotlinc] Compiling [/testbed/modules/lwjgl/core/src/templates/kotlin/core/dyncall, /testbed/modules/lwjgl/core/src/templates/kotlin/core/jni, /testbed/modules/lwjgl/core/src/templates/kotlin/core/libc, /testbed/modules/lwjgl/core/src/templates/kotlin/core/linux, /testbed/modules/lwjgl/core/src/templates/kotlin/core/macos, /testbed/modules/lwjgl/core/src/templates/kotlin/core/templates, /testbed/modules/lwjgl/core/src/templates/kotlin/core/windows, /testbed/modules/lwjgl/core/src/templates/kotlin] => [/testbed/bin/classes/templates]
+  [kotlinc] info: kotlinc-jvm 1.2.60 (JRE 1.8.0_502-b07)
+  [kotlinc] info: PERF: INIT: Compiler initialized in 59 ms
+  [kotlinc] info: PERF: ANALYZE: 32 files (7288 lines) in 1555 ms - 4686.817 loc/s
+  [kotlinc] info: PERF: GENERATE: 32 files (7288 lines) in 373 ms - 19538.874 loc/s
+  [kotlinc] info: PERF: GC time for PS Scavenge is 173 ms
+  [kotlinc] info: PERF: GC time for PS MarkSweep is 129 ms
+  [kotlinc] info: PERF: JIT time is 61352 ms
+  [kotlinc] info: PERF: Find Java class performed 18 times, total time 3 ms
+  [kotlinc] info: PERF: Type info performed 41459 times, total time 6937 ms
+  [kotlinc] info: PERF: Call resolve performed 21931 times, total time 5273 ms
+  [kotlinc] info: PERF: Binary class from Kotlin file performed 490 times, total time 64 ms
+  [kotlinc] info: PERF: Find Java class performed 5 times, total time 0 ms
+
+bindings:
+
+init:
+
+check-dependencies:
+
+generate:
+[Generator] 	UPDATING: modules/lwjgl/core/src/generated/java/org/lwjgl/system/JNI.java
+[Generator] 	UPDATING: modules/lwjgl/core/src/generated/c/org_lwjgl_system_JNI.c
+
+compile:
+[javac: core] Compiling 88 source files to /testbed/bin/classes/lwjgl/core
+
+BUILD SUCCESSFUL
+Total time: 17 seconds

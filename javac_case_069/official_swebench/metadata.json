@@ -1,0 +1,64 @@
+{
+  "dataset_schema_version": "1.0",
+  "source_case": "JC-009",
+  "dataset_variant": "SWE-bench-compatible custom record",
+  "verification": {
+    "docker_verified": true,
+    "model_evaluator_verified": true,
+    "fix_passes": true,
+    "base_fails": true,
+    "model_evaluator_verification_type": "isolated_runtime_injection_with_core_only_headless_TestNG",
+    "evaluation_assets_injected_at_runtime": true,
+    "image_contains_test_patch": false,
+    "image_contains_gold_patch": false,
+    "image_contains_fix_commit": false,
+    "template_version": "1.0",
+    "image_build_id": "case-069-build-8",
+    "image": "javac-case-069-lwjgl3:benchmark-v6",
+    "gold_run_id": "case-069-gold-7",
+    "base_run_id": "case-069-base-3",
+    "gold_grading": {
+      "FAIL_TO_PASS": {"passed": 1, "expected": 1},
+      "PASS_TO_PASS": {"passed": 1, "expected": 1},
+      "unexpected_failures": 0
+    },
+    "base_grading": {
+      "FAIL_TO_PASS": {"failed": 1, "expected": 1},
+      "PASS_TO_PASS": {"passed": 1, "expected": 1},
+      "unexpected_failures": 1
+    }
+  },
+  "created_at_source": "GitHub API for LWJGL issue #409 and upstream commit 94f8bd69e176be3e48b4376281fed778e76ab8df",
+  "FAIL_TO_PASS_COUNT": 1,
+  "PASS_TO_PASS_COUNT": 1,
+  "FAIL_TO_PASS": [
+    "org.lwjgl.system.MemoryUtilTest.testTextDecoding"
+  ],
+  "PASS_TO_PASS": [
+    "org.lwjgl.system.MemoryUtilTest.testUTF8"
+  ],
+  "standard_layout": {
+    "schema_version": "2.0",
+    "case_directory": "javac_case_069",
+    "analysis": "analysis/",
+    "patches": "patches/",
+    "official_swebench": "official_swebench/",
+    "evaluator": "evaluator/",
+    "verification": "verification/"
+  },
+  "test_source": "official_upstream_regression_test",
+  "notes": [
+    "The first table candidate JC-008 was skipped because it is a tinyfd/UI update; JC-009 is core-only and headless.",
+    "The evaluator emits canonical unittest-shaped markers from TestNG output for deterministic grading."
+  ],
+  "base_commit": "427e278dc2402aca025cacd58a80eb4eaa8c4832",
+  "fix_commit": "94f8bd69e176be3e48b4376281fed778e76ab8df",
+  "repo": "LWJGL/lwjgl3",
+  "instance_id": "LWJGL__lwjgl3-409",
+  "issue_id": 409,
+  "project_version": "3.2.1",
+  "test_files": [
+    "modules/lwjgl/core/src/test/java/org/lwjgl/system/MemoryUtilTest.java"
+  ],
+  "model_evaluator_image": "javac-case-069-lwjgl3:benchmark-v6"
+}

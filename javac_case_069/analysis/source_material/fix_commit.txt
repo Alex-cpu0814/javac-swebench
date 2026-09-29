@@ -1,0 +1,7 @@
+commit 94f8bd69e176be3e48b4376281fed778e76ab8df
+Author:     Ioannis Tsakpinis <iotsakp@gmail.com>
+AuthorDate: Wed Aug 29 16:20:12 2018 +0300
+Commit:     Ioannis Tsakpinis <iotsakp@gmail.com>
+CommitDate: Wed Aug 29 16:42:54 2018 +0300
+
+    fix(core): text decoding from buffer with non-zero position. Close #409

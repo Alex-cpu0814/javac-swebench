@@ -1,0 +1,16 @@
+{
+  "template_version": "1.0",
+  "case_number": "069",
+  "instance_id": "LWJGL__lwjgl3-409",
+  "instance_file": "official_swebench/instance_069.json",
+  "repo_url": "https://github.com/LWJGL/lwjgl3.git",
+  "base_commit": "427e278dc2402aca025cacd58a80eb4eaa8c4832",
+  "fix_commit": "94f8bd69e176be3e48b4376281fed778e76ab8df",
+  "image": "javac-case-069-lwjgl3:benchmark-v1",
+  "python_version": "3.10",
+  "python_sha256": "unused",
+  "extra_apt_packages": ["ant", "gcc", "g++", "make", "file", "unzip", "xz-utils"],
+  "runtime_assets": [
+    {"source": "evaluator/case_adapter.sh", "target": "/benchmark/case_adapter.sh"}
+  ]
+}

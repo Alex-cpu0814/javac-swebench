@@ -1,0 +1,52 @@
+running build
+running setup_java
+Using JAVA_HOME: /opt/java/openjdk
+running build_java
+/opt/java/openjdk/bin/javac -deprecation -d build/java -classpath src/ src/jep/ClassEnquirer.java src/jep/Run.java src/jep/NDArray.java src/jep/ClassList.java src/jep/Util.java src/jep/NamingConventionClassEnquirer.java src/jep/Proxy.java src/jep/JepScriptEngineFactory.java src/jep/TestNumpyGILFreeze.java src/jep/Test.java src/jep/TestNumpyMemoryLeak.java src/jep/Jep.java src/jep/JepScriptEngine.java src/jep/TestNumpyArrayToString.java src/jep/InvocationHandler.java src/jep/JepException.java src/jep/TestNumpy.java src/jep/python/PyObject.java src/jep/python/PyClass.java src/jep/python/PyModule.java
+running build_javah
+/opt/java/openjdk/bin/javah -classpath build/java -o build/include/jep.h jep.Jep
+/opt/java/openjdk/bin/javah -classpath build/java -o build/include/jep_object.h jep.python.PyObject
+/opt/java/openjdk/bin/javah -classpath build/java -o build/include/invocationhandler.h jep.InvocationHandler
+running build_jar
+copying src/jep/classlist_6.txt to build/java/jep/classlist_6.txt
+copying src/jep/classlist_7.txt to build/java/jep/classlist_7.txt
+copying src/jep/classlist_8.txt to build/java/jep/classlist_8.txt
+/opt/java/openjdk/bin/jar -cfe build/java/jep.jar jep.Run -C build/java/ jep
+running build_py
+creating build/lib.linux-x86_64-2.7
+creating build/lib.linux-x86_64-2.7/jep
+copying jep/jdbc.py -> build/lib.linux-x86_64-2.7/jep
+copying jep/hook.py -> build/lib.linux-x86_64-2.7/jep
+copying jep/version.py -> build/lib.linux-x86_64-2.7/jep
+copying jep/console.py -> build/lib.linux-x86_64-2.7/jep
+copying jep/__init__.py -> build/lib.linux-x86_64-2.7/jep
+running build_ext
+building 'jep' extension
+creating build/temp.linux-x86_64-2.7
+creating build/temp.linux-x86_64-2.7/src
+creating build/temp.linux-x86_64-2.7/src/jep
+creating build/temp.linux-x86_64-2.7/src/jep/python
+gcc -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPACKAGE=jep -DUSE_DEALLOC=1 -DUSE_NUMPY=1 -DVERSION="3.2.0" -I/opt/java/openjdk/include -I/opt/java/openjdk/include/linux -Isrc/jep -Ibuild/include -I/opt/python-2.7.18/include/python2.7 -c src/jep/pyjarray.c -o build/temp.linux-x86_64-2.7/src/jep/pyjarray.o
+gcc -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPACKAGE=jep -DUSE_DEALLOC=1 -DUSE_NUMPY=1 -DVERSION="3.2.0" -I/opt/java/openjdk/include -I/opt/java/openjdk/include/linux -Isrc/jep -Ibuild/include -I/opt/python-2.7.18/include/python2.7 -c src/jep/invocationhandler.c -o build/temp.linux-x86_64-2.7/src/jep/invocationhandler.o
+gcc -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPACKAGE=jep -DUSE_DEALLOC=1 -DUSE_NUMPY=1 -DVERSION="3.2.0" -I/opt/java/openjdk/include -I/opt/java/openjdk/include/linux -Isrc/jep -Ibuild/include -I/opt/python-2.7.18/include/python2.7 -c src/jep/pyembed.c -o build/temp.linux-x86_64-2.7/src/jep/pyembed.o
+gcc -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPACKAGE=jep -DUSE_DEALLOC=1 -DUSE_NUMPY=1 -DVERSION="3.2.0" -I/opt/java/openjdk/include -I/opt/java/openjdk/include/linux -Isrc/jep -Ibuild/include -I/opt/python-2.7.18/include/python2.7 -c src/jep/pyjmethodwrapper.c -o build/temp.linux-x86_64-2.7/src/jep/pyjmethodwrapper.o
+gcc -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPACKAGE=jep -DUSE_DEALLOC=1 -DUSE_NUMPY=1 -DVERSION="3.2.0" -I/opt/java/openjdk/include -I/opt/java/openjdk/include/linux -Isrc/jep -Ibuild/include -I/opt/python-2.7.18/include/python2.7 -c src/jep/jep.c -o build/temp.linux-x86_64-2.7/src/jep/jep.o
+gcc -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPACKAGE=jep -DUSE_DEALLOC=1 -DUSE_NUMPY=1 -DVERSION="3.2.0" -I/opt/java/openjdk/include -I/opt/java/openjdk/include/linux -Isrc/jep -Ibuild/include -I/opt/python-2.7.18/include/python2.7 -c src/jep/pyjfield.c -o build/temp.linux-x86_64-2.7/src/jep/pyjfield.o
+gcc -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPACKAGE=jep -DUSE_DEALLOC=1 -DUSE_NUMPY=1 -DVERSION="3.2.0" -I/opt/java/openjdk/include -I/opt/java/openjdk/include/linux -Isrc/jep -Ibuild/include -I/opt/python-2.7.18/include/python2.7 -c src/jep/pyjmethod.c -o build/temp.linux-x86_64-2.7/src/jep/pyjmethod.o
+gcc -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPACKAGE=jep -DUSE_DEALLOC=1 -DUSE_NUMPY=1 -DVERSION="3.2.0" -I/opt/java/openjdk/include -I/opt/java/openjdk/include/linux -Isrc/jep -Ibuild/include -I/opt/python-2.7.18/include/python2.7 -c src/jep/pyjclass.c -o build/temp.linux-x86_64-2.7/src/jep/pyjclass.o
+gcc -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPACKAGE=jep -DUSE_DEALLOC=1 -DUSE_NUMPY=1 -DVERSION="3.2.0" -I/opt/java/openjdk/include -I/opt/java/openjdk/include/linux -Isrc/jep -Ibuild/include -I/opt/python-2.7.18/include/python2.7 -c src/jep/pyjobject.c -o build/temp.linux-x86_64-2.7/src/jep/pyjobject.o
+gcc -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPACKAGE=jep -DUSE_DEALLOC=1 -DUSE_NUMPY=1 -DVERSION="3.2.0" -I/opt/java/openjdk/include -I/opt/java/openjdk/include/linux -Isrc/jep -Ibuild/include -I/opt/python-2.7.18/include/python2.7 -c src/jep/pyjlist.c -o build/temp.linux-x86_64-2.7/src/jep/pyjlist.o
+gcc -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPACKAGE=jep -DUSE_DEALLOC=1 -DUSE_NUMPY=1 -DVERSION="3.2.0" -I/opt/java/openjdk/include -I/opt/java/openjdk/include/linux -Isrc/jep -Ibuild/include -I/opt/python-2.7.18/include/python2.7 -c src/jep/util.c -o build/temp.linux-x86_64-2.7/src/jep/util.o
+In file included from /usr/local/include/numpy/ndarraytypes.h:1822,
+                 from /usr/local/include/numpy/ndarrayobject.h:12,
+                 from /usr/local/include/numpy/arrayobject.h:4,
+                 from src/jep/util.c:66:
+/usr/local/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: #warning "Using deprecated NumPy API, disable it with " "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+   17 | #warning "Using deprecated NumPy API, disable it with " \
+      |  ^~~~~~~
+gcc -fno-strict-aliasing -g -O2 -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -DPACKAGE=jep -DUSE_DEALLOC=1 -DUSE_NUMPY=1 -DVERSION="3.2.0" -I/opt/java/openjdk/include -I/opt/java/openjdk/include/linux -Isrc/jep -Ibuild/include -I/opt/python-2.7.18/include/python2.7 -c src/jep/python/jep_object.c -o build/temp.linux-x86_64-2.7/src/jep/python/jep_object.o
+gcc -shared build/temp.linux-x86_64-2.7/src/jep/pyjarray.o build/temp.linux-x86_64-2.7/src/jep/invocationhandler.o build/temp.linux-x86_64-2.7/src/jep/pyembed.o build/temp.linux-x86_64-2.7/src/jep/pyjmethodwrapper.o build/temp.linux-x86_64-2.7/src/jep/jep.o build/temp.linux-x86_64-2.7/src/jep/pyjfield.o build/temp.linux-x86_64-2.7/src/jep/pyjmethod.o build/temp.linux-x86_64-2.7/src/jep/pyjclass.o build/temp.linux-x86_64-2.7/src/jep/pyjobject.o build/temp.linux-x86_64-2.7/src/jep/pyjlist.o build/temp.linux-x86_64-2.7/src/jep/util.o build/temp.linux-x86_64-2.7/src/jep/python/jep_object.o -L/opt/java/openjdk/jre/lib/amd64/server/ -L/opt/python-2.7.18/lib -ljvm -lpython2.7 -ldl -lpython2.7 -o build/lib.linux-x86_64-2.7/jep.so -L/opt/python-2.7.18/lib
+running build_scripts
+creating build/scripts-2.7
+copying and adjusting src/scripts/jep -> build/scripts-2.7
+changing mode of build/scripts-2.7/jep from 644 to 755

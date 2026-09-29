@@ -1,0 +1,17 @@
+{
+  "template_version": "1.0",
+  "case_number": "100",
+  "instance_id": "ninia__jep-9-exceptions",
+  "instance_file": "official_swebench/instance_100.json",
+  "repo_url": "https://github.com/ninia/jep.git",
+  "base_commit": "bbf96b5cbb83fe9e4edef71d410d29460084d5fc",
+  "fix_commit": "d2ab3f0343a518948ee44f09279e7ccf6922b856",
+  "image": "javac-case-100-jep:benchmark-v1",
+  "python_version": "2.7.18",
+  "python_sha256": "DA3080E3B488F648A3D7A4560DDEE895284C3380B11D6DE75EDB986526B9A814",
+  "extra_apt_packages": [],
+  "runtime_assets": [
+    {"source": "evaluator/case_adapter.sh", "target": "/benchmark/case_adapter.sh"},
+    {"source": "evaluator/run_tests_verbose.py", "target": "/benchmark/run_tests_verbose.py"}
+  ]
+}

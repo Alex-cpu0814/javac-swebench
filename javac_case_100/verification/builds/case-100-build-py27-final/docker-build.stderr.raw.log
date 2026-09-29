@@ -1,0 +1,59 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 3.59kB 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:d57e5d0e3e5dd4cabb74feccfdb36249a58c76a3354a33ee8737813df93b7e0d
+#2 ...
+
+#3 [auth] library/eclipse-temurin:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:d57e5d0e3e5dd4cabb74feccfdb36249a58c76a3354a33ee8737813df93b7e0d
+#2 DONE 22.8s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 54B 0.0s done
+#4 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:d57e5d0e3e5dd4cabb74feccfdb36249a58c76a3354a33ee8737813df93b7e0d
+#5 resolve docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:d57e5d0e3e5dd4cabb74feccfdb36249a58c76a3354a33ee8737813df93b7e0d
+#5 ...
+
+#6 [auth] library/eclipse-temurin:pull token for registry-1.docker.io
+#6 DONE 0.0s
+
+#5 [1/7] FROM docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:d57e5d0e3e5dd4cabb74feccfdb36249a58c76a3354a33ee8737813df93b7e0d
+#5 resolve docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:d57e5d0e3e5dd4cabb74feccfdb36249a58c76a3354a33ee8737813df93b7e0d 21.3s done
+#5 DONE 21.3s
+
+#7 [3/7] RUN curl -fsSL "https://www.python.org/ftp/python/2.7.18/Python-2.7.18.tgz"         -o "/tmp/Python-2.7.18.tgz"     && echo "DA3080E3B488F648A3D7A4560DDEE895284C3380B11D6DE75EDB986526B9A814  /tmp/Python-2.7.18.tgz" | sha256sum -c -     && mkdir -p /tmp/python-src     && tar -xzf "/tmp/Python-2.7.18.tgz" -C /tmp/python-src --strip-components=1     && cd /tmp/python-src     && ./configure --prefix="/opt/python-2.7.18" --enable-shared     && make -j"$(nproc)"     && make install     && echo "/opt/python-2.7.18/lib" > "/etc/ld.so.conf.d/python-2.7.18.conf"     && ldconfig     && ln -sf "/opt/python-2.7.18/bin/python2.7" /usr/local/bin/python     && ln -sf "/opt/python-2.7.18/bin/python2.7" /usr/local/bin/python2     && rm -rf "/tmp/Python-2.7.18.tgz" /tmp/python-src
+#7 CACHED
+
+#8 [6/7] RUN git clone --no-checkout "https://github.com/ninia/jep.git" /testbed     && cd /testbed     && git checkout --detach "bbf96b5cbb83fe9e4edef71d410d29460084d5fc"     && git remote remove origin     && git config core.autocrlf false     && git for-each-ref --format='delete %(refname)' refs/heads refs/remotes refs/tags         | git update-ref --stdin     && git reflog expire --expire=now --all     && git gc --prune=now     && test "$(git rev-parse HEAD)" = "bbf96b5cbb83fe9e4edef71d410d29460084d5fc"     && test -z "$(git status --porcelain)"     && mkdir -p /benchmark /inputs /results
+#8 CACHED
+
+#9 [2/7] RUN apt-get update     && apt-get install -y --no-install-recommends         ca-certificates         curl         file         g++         gcc         git         make         patch         tar         xz-utils         zlib1g-dev         libbz2-dev         libffi-dev         liblzma-dev         libncurses5-dev         libreadline-dev         libsqlite3-dev         libssl-dev         tk-dev         uuid-dev     && apt-get clean     && rm -rf /var/lib/apt/lists/*
+#9 CACHED
+
+#10 [4/7] RUN curl -fsSL https://bootstrap.pypa.io/pip/2.7/get-pip.py -o /tmp/get-pip.py     && python /tmp/get-pip.py     && /opt/python-2.7.18/bin/pip install --no-cache-dir numpy==1.16.6     && ln -s "$(python -c 'import numpy; print(numpy.get_include())')/numpy" /usr/local/include/numpy     && rm -f /tmp/get-pip.py
+#10 CACHED
+
+#11 [5/7] RUN if [[ -n "" ]]; then         apt-get update         && apt-get install -y --no-install-recommends          && apt-get clean         && rm -rf /var/lib/apt/lists/*;     fi
+#11 CACHED
+
+#12 [7/7] WORKDIR /testbed
+#12 CACHED
+
+#13 exporting to image
+#13 exporting layers done
+#13 exporting manifest sha256:354b28c7578df1f5389ca1a8b4501e3cac4b214d78f69c654dc3eded39e7994d done
+#13 exporting config sha256:cc591c68c08c498892748431f1f6d7547c6838ee26a5c998f863bee224c18f7c done
+#13 exporting attestation manifest sha256:280f01062752156041811dea71517cbdfa5d2bb74d9968a0caf88142e23ae2bf 0.0s done
+#13 exporting manifest list sha256:be480bb4f1310e82d3b624cc62a6901dc084b6db19bd16ae44a50d19400e22bb 0.0s done
+#13 naming to docker.io/library/javac-case-100-jep:benchmark-v1 done
+#13 unpacking to docker.io/library/javac-case-100-jep:benchmark-v1 done
+#13 DONE 0.1s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/3cdk52cb5qoylkn8skfrqim8x

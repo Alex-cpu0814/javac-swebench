@@ -1,0 +1,16 @@
+{
+  "case_number": 100,
+  "candidate_id": "ninia__jep-9-exceptions",
+  "repo": "ninia/jep",
+  "issue_id": null,
+  "pull_request_id": 9,
+  "base_commit": "bbf96b5cbb83fe9e4edef71d410d29460084d5fc",
+  "fix_commit": "d2ab3f0343a518948ee44f09279e7ccf6922b856",
+  "commit_message": "improved import, improved exception handling",
+  "source": "https://github.com/ninia/jep/commit/d2ab3f0343a518948ee44f09279e7ccf6922b856",
+  "problem": "Common Java exceptions should map to corresponding Python built-in exceptions, and Java class imports should raise ImportError when a class is unavailable.",
+  "test_strategy": "Apply the official exception and import test changes to Base, then compare the five discriminating tests and the existing regression suite against the Fix.",
+  "verification_status": "resolved",
+  "fail_to_pass_count": 5,
+  "pass_to_pass_count": 69
+}

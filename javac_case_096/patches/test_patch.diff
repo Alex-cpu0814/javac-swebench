@@ -1,0 +1,123 @@
+diff --git a/src/jep/test/TestCloseTerminatedThread.java b/src/jep/test/TestCloseTerminatedThread.java
+new file mode 100644
+index 0000000..a5a96e5
+--- /dev/null
++++ b/src/jep/test/TestCloseTerminatedThread.java
+@@ -0,0 +1,39 @@
++package jep.test;
++
++import jep.Jep;
++
++public class TestCloseTerminatedThread {
++
++    public static void main(String[] args) throws Exception {
++        for (int i = 0; i < 3; i++) {
++            final Jep[] holder = new Jep[1];
++            final Throwable[] failure = new Throwable[1];
++
++            Thread creator = new Thread(new Runnable() {
++                @Override
++                public void run() {
++                    try {
++                        holder[0] = new Jep(false, ".");
++                        holder[0].eval("value = 1");
++                    } catch (Throwable t) {
++                        failure[0] = t;
++                    }
++                }
++            }, "jep-creator-" + i);
++
++            creator.start();
++            creator.join();
++
++            if (failure[0] != null) {
++                throw new RuntimeException("Jep creation failed", failure[0]);
++            }
++            if (holder[0] == null) {
++                throw new RuntimeException("Jep instance was not created");
++            }
++
++            holder[0].close();
++        }
++
++        System.out.println("CLOSE_OK");
++    }
++}
+diff --git a/tests/__init__.py b/tests/__init__.py
+index eea0c94..1fdcdd6 100644
+--- a/tests/__init__.py
++++ b/tests/__init__.py
+@@ -11,3 +11,4 @@ from .test_compare import *
+ from .test_dir import *
+ from .test_numpy import *
+ 
++from .test_close_terminated_thread import *
+diff --git a/tests/jep_pipe.py b/tests/jep_pipe.py
+new file mode 100644
+index 0000000..9ec3224
+--- /dev/null
++++ b/tests/jep_pipe.py
+@@ -0,0 +1,31 @@
++from __future__ import print_function
++
++import subprocess
++from subprocess import PIPE
++
++
++def jep_pipe(argv):
++    process = subprocess.Popen(argv, stdout=PIPE, stderr=PIPE)
++    stdout, stderr = process.communicate()
++    if process.returncode != 0:
++        raise AssertionError(
++            "child process failed with exit code {0}\nstdout:\n{1}\nstderr:\n{2}".format(
++                process.returncode,
++                stdout.decode("utf-8", "replace"),
++                stderr.decode("utf-8", "replace")
++            )
++        )
++    return stdout
++
++
++def build_java_process_cmd(java_test_name):
++    from java.lang import System
++
++    classpath = System.getProperty("java.class.path")
++    library_path = "-Djava.library.path=" + System.getProperty(
++        "java.library.path"
++    )
++
++    return [
++        "java", "-ea", "-cp", classpath, library_path, java_test_name
++    ]
+diff --git a/tests/test_close_terminated_thread.py b/tests/test_close_terminated_thread.py
+new file mode 100644
+index 0000000..4d923db
+--- /dev/null
++++ b/tests/test_close_terminated_thread.py
+@@ -0,0 +1,26 @@
++from __future__ import print_function
++
++import subprocess
++import unittest
++
++from tests.jep_pipe import build_java_process_cmd
++
++
++class TestCloseTerminatedThread(unittest.TestCase):
++
++    def test_close_terminated_thread(self):
++        process = subprocess.Popen(
++            build_java_process_cmd("jep.test.TestCloseTerminatedThread"),
++            stdout=subprocess.PIPE,
++            stderr=subprocess.PIPE
++        )
++        stdout, stderr = process.communicate()
++
++        if process.returncode != 0:
++            raise AssertionError(
++                "child JVM failed with exit code {0}\nstdout:\n{1}\nstderr:\n{2}".format(
++                    process.returncode,
++                    stdout.decode("utf-8", "replace"),
++                    stderr.decode("utf-8", "replace")
++                )
++            )

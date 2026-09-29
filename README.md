@@ -1,6 +1,6 @@
 # Java-C SWE-bench-compatible cases
 
-This repository contains three `ninia/jep` cross-language bug cases converted
+This repository contains four `ninia/jep` cross-language bug cases converted
 to a SWE-bench-compatible record format.
 
 | Case | Instance ID | Issue | FAIL_TO_PASS | PASS_TO_PASS | Evaluator generation |
@@ -8,6 +8,7 @@ to a SWE-bench-compatible record format.
 | 092 | `ninia__jep-77` | 77 | 1 | 121 | v3 single-image, runtime injection |
 | 093 | `ninia__jep-79` | 79 | 1 | 130 | v3 single-image, runtime injection (CentOS 7) |
 | 094 | `ninia__jep-40` | 40 | 1 | 95 | v3 single-image, runtime injection (Ubuntu) |
+| 096 | `ninia__jep-22` | 22 | 1 | 78 | v3 single-image, runtime injection (local image audited; gold target passed) |
 
 ## Case 092
 

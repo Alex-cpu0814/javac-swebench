@@ -1,0 +1,23 @@
+{
+  "template_version": "1.0",
+  "case_number": "096",
+  "instance_id": "ninia__jep-22",
+  "instance_file": "official_swebench/instance_096.json",
+  "repo_url": "https://github.com/ninia/jep.git",
+  "base_commit": "e4f13ea277ce4809688dde766cc9fd173ec6f63d",
+  "fix_commit": "767509de81f3a11b1ca54e23619d3226944a141e",
+  "image": "yutu0814/javac-case-096-jep:benchmark-v3",
+  "python_version": "3.4.10",
+  "python_sha256": "217757699249ab432571b381386d441e12b433100ab5f908051fcb7cced2539d",
+  "extra_apt_packages": [],
+  "runtime_assets": [
+    {
+      "source": "evaluator/case_adapter.sh",
+      "target": "/benchmark/case_adapter.sh"
+    },
+    {
+      "source": "evaluator/run_tests_verbose.py",
+      "target": "/benchmark/run_tests_verbose.py"
+    }
+  ]
+}

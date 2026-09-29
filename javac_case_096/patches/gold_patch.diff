@@ -1,0 +1,155 @@
+diff --git a/src/jep/ClassList.java b/src/jep/ClassList.java
+index 53224db..b24ef9f 100755
+--- a/src/jep/ClassList.java
++++ b/src/jep/ClassList.java
+@@ -155,6 +155,13 @@ public class ClassList implements ClassEnquirer {
+      */
+     private void loadClassList() throws JepException {
+         String version = System.getProperty("java.version");
++
++        /*
++         * The thread's context ClassLoader is useful if resources have a
++         * different ClassLoader than classes (e.g. tomcat), while the Jep.class
++         * ClassLoader is useful if running inside an OSGi container as a Bundle
++         * (e.g. eclipse).
++         */
+         ClassLoader[] classloadersToTry = new ClassLoader[] {
+                 Thread.currentThread().getContextClassLoader(),
+                 Jep.class.getClassLoader() };
+diff --git a/src/jep/Jep.java b/src/jep/Jep.java
+index 3bd72f8..816abcb 100644
+--- a/src/jep/Jep.java
++++ b/src/jep/Jep.java
+@@ -55,10 +55,7 @@ import jep.python.PyObject;
+  */
+ public final class Jep implements Closeable {
+ 
+-    private static final String THREAD_WARN = "JEP WARNING: "
+-            + "Unsafe reuse of thread ";
+-
+-    private static final String REUSE_WARN = " for another Python interpreter.\nPlease close() the previous Jep instance to ensure stability.";
++    private static final String THREAD_WARN = "JEP THREAD WARNING: ";
+ 
+     private boolean closed = false;
+ 
+@@ -261,8 +258,12 @@ public final class Jep implements Closeable {
+              * avoid this scenario.
+              */
+             Thread current = Thread.currentThread();
+-            String warn = THREAD_WARN + current.getName() + REUSE_WARN;
+-            System.err.println(warn);
++            StringBuilder warning = new StringBuilder(THREAD_WARN)
++                    .append("Unsafe reuse of thread ")
++                    .append(current.getName())
++                    .append(" for another Python sub-interpreter.\n")
++                    .append("Please close() the previous Jep instance to ensure stability.");
++            System.err.println(warning.toString());
+         }
+ 
+         if (cl == null)
+@@ -1085,10 +1086,27 @@ public final class Jep implements Closeable {
+         if (this.closed)
+             return;
+ 
+-        /*
+-         * close() seems to get away with not checking isValidThread() since it
+-         * does very little JNI interaction, mostly just cpython code
+-         */
++        if (!Thread.currentThread().equals(thread)) {
++            /*
++             * TODO: Possibly throw a JepException if this is detected. This is
++             * inherently unsafe, the thread state information inside Python can
++             * get screwed up if a sub-interpreter is closed from a different
++             * thread. Py_EndInterpreter is assuming that the interpreter is
++             * being ended from the same thread. If close() is called from a
++             * different thread, at best you will lose a little bit of memory,
++             * at worst you will screw up Python's internal tracking of thread
++             * state, which could lead to freezes or crashes.
++             * 
++             * This remains a warning for the time being to provide time for
++             * applications to be updated to avoid this scenario.
++             */
++            Thread current = Thread.currentThread();
++            StringBuilder warning = new StringBuilder(THREAD_WARN)
++                    .append("Unsafe close() of Python sub-interpreter by thread ")
++                    .append(current.getName())
++                    .append(".\nPlease close() from the creating thread to ensure stability.");
++            System.err.println(warning);
++        }
+ 
+         // close all the PyObjects we created
+         for (int i = 0; i < this.pythonObjects.size(); i++)
+@@ -1103,11 +1121,4 @@ public final class Jep implements Closeable {
+ 
+     private native void close(long tstate);
+ 
+-    /**
+-     * Attempts to close the interpreter if it hasn't been correctly closed.
+-     */
+-    @Override
+-    protected void finalize() {
+-        this.close();
+-    }
+ }
+diff --git a/src/jep/jep.c b/src/jep/jep.c
+index 2480444..24aa1ee 100644
+--- a/src/jep/jep.c
++++ b/src/jep/jep.c
+@@ -226,7 +226,7 @@ JNIEXPORT void JNICALL Java_jep_Jep_setClassLoader
+  */
+ JNIEXPORT void JNICALL Java_jep_Jep_close
+ (JNIEnv *env, jobject obj, jlong tstate) {
+-    pyembed_thread_close((intptr_t) tstate);
++    pyembed_thread_close(env, (intptr_t) tstate);
+ }
+ 
+ 
+diff --git a/src/jep/pyembed.c b/src/jep/pyembed.c
+index 71c1195..c62a35d 100644
+--- a/src/jep/pyembed.c
++++ b/src/jep/pyembed.c
+@@ -309,10 +309,9 @@ intptr_t pyembed_thread_init(JNIEnv *env, jobject cl, jobject caller) {
+ }
+ 
+ 
+-void pyembed_thread_close(intptr_t _jepThread) {
++void pyembed_thread_close(JNIEnv *env, intptr_t _jepThread) {
+     JepThread     *jepThread;
+     PyObject      *tdict, *key;
+-    JNIEnv        *env;
+ 
+     jepThread = (JepThread *) _jepThread;
+     if(!jepThread) {
+@@ -320,12 +319,6 @@ void pyembed_thread_close(intptr_t _jepThread) {
+         return;
+     }
+     
+-    env = jepThread->env;
+-    if(!env) {
+-        printf("WARNING: thread_close, invalid env pointer.\n");
+-        return;
+-    }
+-
+     PyEval_AcquireThread(jepThread->tstate);
+ 
+     key = PyString_FromString(DICT_KEY);
+diff --git a/src/jep/pyembed.h b/src/jep/pyembed.h
+index f70d53a..878710f 100644
+--- a/src/jep/pyembed.h
++++ b/src/jep/pyembed.h
+@@ -67,13 +67,13 @@ void pyembed_startup(void);
+ void pyembed_shutdown(void);
+ 
+ intptr_t pyembed_thread_init(JNIEnv*, jobject, jobject);
+-void pyembed_thread_close(intptr_t);
++void pyembed_thread_close(JNIEnv*, intptr_t);
+ 
+ void pyembed_close(void);
+ void pyembed_run(JNIEnv*, intptr_t, char*);
+ jobject pyembed_invoke_method(JNIEnv*, intptr_t,const char*, jobjectArray, jintArray);
+ jobject pyembed_invoke(JNIEnv*, PyObject*, jobjectArray, jintArray);
+-void pyembed_eval(JNIEnv *, intptr_t, char*);
++void pyembed_eval(JNIEnv*, intptr_t, char*);
+ int pyembed_compile_string(JNIEnv*, intptr_t, char*);
+ void pyembed_setloader(JNIEnv*, intptr_t, jobject);
+ jobject pyembed_getvalue(JNIEnv*, intptr_t, char*);

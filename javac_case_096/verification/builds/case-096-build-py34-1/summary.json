@@ -1,0 +1,29 @@
+{
+  "schema_version": "3.0",
+  "kind": "image_build",
+  "build_id": "case-096-build-py34-1",
+  "status": "success",
+  "reason": "docker_build_and_runtime_audit_passed",
+  "source": {
+    "repo": "https://github.com/ninia/jep.git",
+    "base_commit": "e4f13ea277ce4809688dde766cc9fd173ec6f63d"
+  },
+  "environment": {
+    "python": "3.4.10",
+    "java": "OpenJDK 8u502"
+  },
+  "image": {
+    "name": "javac-case-096-jep:benchmark-v3",
+    "id": "sha256:8377bd71afd8d7673a7effb4473bbf204e57a1cad7c41fcc54caa11d3c7c1657",
+    "repo_digests": [
+      "javac-case-096-jep@sha256:8377bd71afd8d7673a7effb4473bbf204e57a1cad7c41fcc54caa11d3c7c1657",
+      "yutu0814/javac-case-096-jep@sha256:8377bd71afd8d7673a7effb4473bbf204e57a1cad7c41fcc54caa11d3c7c1657"
+    ]
+  },
+  "runtime_audit": {
+    "python_version": "Python 3.4.10",
+    "java_version": "openjdk version \"1.8.0_502\"",
+    "checked_out_head": "e4f13ea277ce4809688dde766cc9fd173ec6f63d",
+    "worktree_clean": true
+  }
+}

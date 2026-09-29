@@ -1,0 +1,95 @@
+test_read_file (test_array.TestArray) ... ok
+test_slice (test_array.TestArray) ... ok
+test_bool_array (test_call.TestTypes) ... ok
+test_double (test_call.TestTypes) ... ok
+test_enum (test_call.TestTypes) ... ok
+test_equals (test_call.TestTypes) ... ok
+test_float (test_call.TestTypes) ... ok
+test_float_array (test_call.TestTypes) ... ok
+test_getobj (test_call.TestTypes) ... ok
+test_getstring_array (test_call.TestTypes) ... ok
+test_int_array (test_call.TestTypes) ... ok
+test_intobj (test_call.TestTypes) ... ok
+test_long (test_call.TestTypes) ... ok
+test_object_array (test_call.TestTypes) ... ok
+test_short_array (test_call.TestTypes) ... ok
+test_string (test_call.TestTypes) ... ok
+test_string_string_array (test_call.TestTypes) ... ok
+test_classloader_method_cache (test_classloader_method_cache.TestClassLoaderMethodCache) ... ok
+test_date_compare (test_compare.TestCompare) ... ok
+test_int_compare (test_compare.TestCompare) ... ok
+test_dir_list (test_dir.TestDir) ... ok
+test_arithmetic_error (test_exceptions.TestExceptions) ... ok
+test_import_error (test_exceptions.TestExceptions) ... ok
+test_index_error (test_exceptions.TestExceptions) ... ok
+test_io_error (test_exceptions.TestExceptions) ... ok
+test_io_exception (test_exceptions.TestExceptions) ... ok
+test_null_pointer_exception (test_exceptions.TestExceptions) ... ok
+test_number_format (test_exceptions.TestExceptions) ... ok
+test_type_error (test_exceptions.TestExceptions) ... ok
+test_value_err (test_exceptions.TestExceptions) ... ok
+test_class_import (test_import.TestImport) ... ok
+test_java_sql (test_import.TestImport) ... ok
+test_not_found (test_import.TestImport) ... ok
+test_restricted_classloader (test_import.TestImport) ... ok
+test_without_restricted_classloader (test_import.TestImport) ... ok
+test_batch (test_jdbc.TestJdbc) ... ok
+test_datetime (test_jdbc.TestJdbc) ... ok
+test_dbapi_primitives (test_jdbc.TestJdbc) ... ok
+test_java_sql (test_jdbc.TestJdbc) ... ok
+test_add (test_lists.TestLists) ... ok
+test_addequals (test_lists.TestLists) ... ok
+test_contains (test_lists.TestLists) ... ok
+test_getitem (test_lists.TestLists) ... ok
+test_getslice (test_lists.TestLists) ... ok
+test_len (test_lists.TestLists) ... ok
+test_loop (test_lists.TestLists) ... ok
+test_multiply (test_lists.TestLists) ... ok
+test_multiplyequals (test_lists.TestLists) ... ok
+test_sequence (test_lists.TestLists) ... ok
+test_setitem (test_lists.TestLists) ... ok
+test_setslice (test_lists.TestLists) ... ok
+test_map (test_maps.TestMaps) ... ok
+testArgReturn (test_numpy.TestNumpy) ... ok
+testArrayParams (test_numpy.TestNumpy) ... ok
+testMultiDimensional (test_numpy.TestNumpy) ... ok
+testSetGet (test_numpy.TestNumpy) ... ok
+test_byte_value (test_regressions.TestRegressions) ... ok
+test_out (test_regressions.TestRegressions) ... ok
+test_boolean_field (test_types.TestFields) ... ok
+test_byte_field (test_types.TestFields) ... ok
+test_char_field (test_types.TestFields) ... ok
+test_class_field (test_types.TestFields) ... ok
+test_double_field (test_types.TestFields) ... ok
+test_equals (test_types.TestFields) ... ok
+test_float_field (test_types.TestFields) ... ok
+test_int_field (test_types.TestFields) ... ok
+test_long_field (test_types.TestFields) ... ok
+test_short_field (test_types.TestFields) ... ok
+test_static_boolean_field (test_types.TestFields) ... ok
+test_static_byte_field (test_types.TestFields) ... ok
+test_static_char_field (test_types.TestFields) ... ok
+test_static_class_field (test_types.TestFields) ... ok
+test_static_double_field (test_types.TestFields) ... ok
+test_static_float_field (test_types.TestFields) ... ok
+test_static_int_field (test_types.TestFields) ... ok
+test_static_long_field (test_types.TestFields) ... ok
+test_static_short_field (test_types.TestFields) ... ok
+test_static_string (test_types.TestFields) ... ok
+test_string (test_types.TestFields) ... ok
+
+----------------------------------------------------------------------
+Ran 79 tests in 0.625s
+
+OK
+Exception ignored in: <module 'threading' from '/opt/python-3.4.10/lib/python3.4/threading.py'>
+Traceback (most recent call last):
+  File "/opt/python-3.4.10/lib/python3.4/threading.py", line 1283, in _shutdown
+    t = _pickSomeNonDaemonThread()
+  File "/opt/python-3.4.10/lib/python3.4/threading.py", line 1290, in _pickSomeNonDaemonThread
+    for t in enumerate():
+  File "/opt/python-3.4.10/lib/python3.4/threading.py", line 1260, in enumerate
+    return list(_active.values()) + list(_limbo.values())
+  File "/benchmark/run_tests_verbose.py", line 12, in <module>
+    raise SystemExit(0 if result.wasSuccessful() else 1)
+SystemExit: 0

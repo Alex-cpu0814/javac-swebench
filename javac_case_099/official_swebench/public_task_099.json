@@ -1,0 +1,12 @@
+{
+  "instance_id": "ninia__jep-17-cache",
+  "repo": "ninia/jep",
+  "base_commit": "b1ab138dd6d492c7547e24d0b117aeafb112613d",
+  "problem_statement": "JEP must not reuse Java method metadata between Jep instances that use different ClassLoaders. Keep the method cache scoped to each interpreter so classes with the same name but different definitions remain independent.",
+  "hints_text": "",
+  "created_at": "2015-07-30",
+  "version": "3.4.0",
+  "issue_id": 17,
+  "issue_url": "https://github.com/ninia/jep/issues/17",
+  "project_version": "3.4.0"
+}

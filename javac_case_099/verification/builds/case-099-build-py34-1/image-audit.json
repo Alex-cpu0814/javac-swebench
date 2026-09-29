@@ -1,0 +1,12 @@
+{
+  "schema_version": "3.0",
+  "instance_id": "ninia__jep-17-cache",
+  "base_commit": "b1ab138dd6d492c7547e24d0b117aeafb112613d",
+  "working_tree_clean": true,
+  "fix_commit_present": false,
+  "model_patch_present": false,
+  "test_patch_present": false,
+  "gold_patch_present": false,
+  "evaluation_assets_injected_at_runtime": true,
+  "network_disabled_during_audit": true
+}

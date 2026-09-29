@@ -1,6 +1,6 @@
 # Java-C SWE-bench-compatible cases
 
-This repository contains four `ninia/jep` cross-language bug cases converted
+This repository contains five `ninia/jep` cross-language bug cases converted
 to a SWE-bench-compatible record format.
 
 | Case | Instance ID | Issue | FAIL_TO_PASS | PASS_TO_PASS | Evaluator generation |
@@ -9,6 +9,12 @@ to a SWE-bench-compatible record format.
 | 093 | `ninia__jep-79` | 79 | 1 | 130 | v3 single-image, runtime injection (CentOS 7) |
 | 094 | `ninia__jep-40` | 40 | 1 | 95 | v3 single-image, runtime injection (Ubuntu) |
 | 096 | `ninia__jep-22` | 22 | 1 | 78 | v3 single-image, runtime injection (local image audited; gold target passed) |
+| 099 | `ninia__jep-17-cache` | 17 | 1 | 78 | v3 single-image, runtime injection (ClassLoader cache isolation) |
+
+Case 099 verifies the upstream fix that moves JEP's Java-method cache from
+process-global state into each Jep interpreter. Its protected child-JVM test
+loads two same-named classes with different methods through separate
+ClassLoaders; Base fails and the fix passes all 79 expected tests.
 
 ## Case 092
 

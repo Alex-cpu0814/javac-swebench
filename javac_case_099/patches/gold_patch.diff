@@ -1,0 +1,99 @@
+diff --git a/src/jep/pyembed.c b/src/jep/pyembed.c
+index fd7cdfe..2b84efd 100644
+--- a/src/jep/pyembed.c
++++ b/src/jep/pyembed.c
+@@ -278,12 +278,13 @@ intptr_t pyembed_thread_init(JNIEnv *env, jobject cl, jobject caller) {
+     Py_INCREF(globals);
+ 
+     // init static module
+-    jepThread->modjep      = initjep();
+-    jepThread->globals     = globals;
+-    jepThread->env         = env;
+-    jepThread->classloader = (*env)->NewGlobalRef(env, cl);
+-    jepThread->caller      = (*env)->NewGlobalRef(env, caller);
+-    jepThread->printStack  = 0;
++    jepThread->modjep          = initjep();
++    jepThread->globals         = globals;
++    jepThread->env             = env;
++    jepThread->classloader     = (*env)->NewGlobalRef(env, cl);
++    jepThread->caller          = (*env)->NewGlobalRef(env, caller);
++    jepThread->printStack      = 0;
++    jepThread->fqnToPyJmethods = NULL;
+ 
+     if((tdict = PyThreadState_GetDict()) != NULL) {
+         PyObject *key, *t;
+@@ -333,6 +334,10 @@ void pyembed_thread_close(intptr_t _jepThread) {
+     if(jepThread->globals) {
+         Py_DECREF(jepThread->globals);
+     }
++    if(jepThread->fqnToPyJmethods) {
++       PyDict_Clear(jepThread->fqnToPyJmethods);
++       Py_DECREF(jepThread->fqnToPyJmethods); 
++    }
+     if(jepThread->modjep) {
+         PyObject *moddict = PyModule_GetDict(jepThread->modjep);
+         /*
+diff --git a/src/jep/pyembed.h b/src/jep/pyembed.h
+index e559f8a..f70d53a 100644
+--- a/src/jep/pyembed.h
++++ b/src/jep/pyembed.h
+@@ -57,6 +57,8 @@ struct __JepThread {
+     jobject        classloader;
+     jobject        caller;      /* Jep instance that called us. */
+     int            printStack;
++    PyObject      *fqnToPyJmethods; /* a dictionary of fully qualified Java 
++                                       classnames to PyJmethods on the class */
+ };
+ typedef struct __JepThread JepThread;
+ 
+diff --git a/src/jep/pyjobject.c b/src/jep/pyjobject.c
+index e4f3f9f..1496fb7 100755
+--- a/src/jep/pyjobject.c
++++ b/src/jep/pyjobject.c
+@@ -80,8 +80,6 @@ static jmethodID objectHashCode  = 0;
+ static jmethodID classGetMethods = 0;
+ static jmethodID classGetFields  = 0;
+ static jmethodID classGetName    = 0;
+-static PyObject *classnamePyJMethodsDict = NULL;
+-
+ 
+ /*
+  * MSVC requires tp_base to be set at runtime instead of in
+@@ -251,6 +249,7 @@ static int pyjobject_init(JNIEnv *env, PyJobject_Object *pyjob) {
+     PyObject         *pyClassName = NULL;
+     PyObject         *pyAttrName  = NULL;
+ 
++    JepThread   *jepThread;
+     PyObject    *cachedMethodList = NULL;
+ 
+     (*env)->PushLocalFrame(env, 20);
+@@ -325,11 +324,17 @@ static int pyjobject_init(JNIEnv *env, PyJobject_Object *pyjob) {
+      * synchronized and multiple threads will not alter the dictionary at the
+      * same time.
+      */
+-    if(classnamePyJMethodsDict == NULL) {
+-        classnamePyJMethodsDict = PyDict_New();
++    jepThread = pyembed_get_jepthread();
++    if(jepThread == NULL) {
++        goto EXIT_ERROR;
++    }
++    if(jepThread->fqnToPyJmethods == NULL) {
++        PyObject *methodCache = PyDict_New();
++        Py_INCREF(methodCache);
++        jepThread->fqnToPyJmethods = methodCache;
+     }
+ 
+-    cachedMethodList = PyDict_GetItem(classnamePyJMethodsDict, pyClassName);
++    cachedMethodList = PyDict_GetItem(jepThread->fqnToPyJmethods, pyClassName);
+     if(cachedMethodList == NULL) {
+         PyObject *pyjMethodList = NULL;
+         pyjMethodList = PyList_New(0);
+@@ -375,7 +380,7 @@ static int pyjobject_init(JNIEnv *env, PyJobject_Object *pyjob) {
+             Py_DECREF(pymethod);
+             (*env)->DeleteLocalRef(env, rmethod);
+         } // end of looping over available methods
+-        PyDict_SetItem(classnamePyJMethodsDict, pyClassName, pyjMethodList);
++        PyDict_SetItem(jepThread->fqnToPyJmethods, pyClassName, pyjMethodList);
+         cachedMethodList = pyjMethodList;
+         (*env)->DeleteLocalRef(env, methodArray);
+     } // end of setting up cache for this Java Class

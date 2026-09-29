@@ -1,0 +1,59 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 3.12kB 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:d57e5d0e3e5dd4cabb74feccfdb36249a58c76a3354a33ee8737813df93b7e0d
+#2 ...
+
+#3 [auth] library/eclipse-temurin:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:d57e5d0e3e5dd4cabb74feccfdb36249a58c76a3354a33ee8737813df93b7e0d
+#2 DONE 26.7s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 54B done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:d57e5d0e3e5dd4cabb74feccfdb36249a58c76a3354a33ee8737813df93b7e0d
+#5 resolve docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:d57e5d0e3e5dd4cabb74feccfdb36249a58c76a3354a33ee8737813df93b7e0d
+#5 ...
+
+#6 [auth] library/eclipse-temurin:pull token for registry-1.docker.io
+#6 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:d57e5d0e3e5dd4cabb74feccfdb36249a58c76a3354a33ee8737813df93b7e0d
+#5 resolve docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:d57e5d0e3e5dd4cabb74feccfdb36249a58c76a3354a33ee8737813df93b7e0d 21.6s done
+#5 DONE 21.6s
+
+#7 [2/6] RUN apt-get update     && apt-get install -y --no-install-recommends         ca-certificates         curl         file         g++         gcc         git         make         patch         tar         xz-utils         zlib1g-dev         libbz2-dev         libffi-dev         liblzma-dev         libncurses5-dev         libreadline-dev         libsqlite3-dev         libssl-dev         tk-dev         uuid-dev     && apt-get clean     && rm -rf /var/lib/apt/lists/*
+#7 CACHED
+
+#8 [3/6] RUN curl -fsSL "https://www.python.org/ftp/python/3.4.10/Python-3.4.10.tgz"         -o "/tmp/Python-3.4.10.tgz"     && echo "217757699249ab432571b381386d441e12b433100ab5f908051fcb7cced2539d  /tmp/Python-3.4.10.tgz" | sha256sum -c -     && mkdir -p /tmp/python-src     && tar -xzf "/tmp/Python-3.4.10.tgz" -C /tmp/python-src --strip-components=1     && cd /tmp/python-src     && ./configure --prefix="/opt/python-3.4.10" --enable-shared     && make -j"$(nproc)"     && make install     && echo "/opt/python-3.4.10/lib" > "/etc/ld.so.conf.d/python-3.4.10.conf"     && ldconfig     && ln -sf "/opt/python-3.4.10/bin/python3.4" /usr/local/bin/python     && ln -sf "/opt/python-3.4.10/bin/python3.4" /usr/local/bin/python3     && rm -rf "/tmp/Python-3.4.10.tgz" /tmp/python-src
+#8 CACHED
+
+#9 [4/6] RUN if [[ -n "" ]]; then         apt-get update         && apt-get install -y --no-install-recommends          && apt-get clean         && rm -rf /var/lib/apt/lists/*;     fi
+#9 CACHED
+
+#10 [5/6] RUN git clone --no-checkout "https://github.com/ninia/jep.git" /testbed     && cd /testbed     && git checkout --detach "b1ab138dd6d492c7547e24d0b117aeafb112613d"     && git remote remove origin     && git config core.autocrlf false     && git for-each-ref --format='delete %(refname)' refs/heads refs/remotes refs/tags         | git update-ref --stdin     && git reflog expire --expire=now --all     && git gc --prune=now     && test "$(git rev-parse HEAD)" = "b1ab138dd6d492c7547e24d0b117aeafb112613d"     && test -z "$(git status --porcelain)"     && mkdir -p /benchmark /inputs /results
+#10 0.354 Cloning into '/testbed'...
+#10 2.490 HEAD is now at b1ab138 fix spelling mistake
+#10 DONE 2.6s
+
+#11 [6/6] WORKDIR /testbed
+#11 DONE 0.0s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.3s done
+#12 exporting manifest sha256:ccd6cf4e77d99d51b8229d791cddcba82be3887bd7055648013ba807fdca50b9 0.0s done
+#12 exporting config sha256:7249ca2d83f4c471ac84b97df564ce538f5c04397130fc74644389058ec82c1e done
+#12 exporting attestation manifest sha256:499b1054cd05054f0ede87f40d07a42633ad58480f214253271ca92a8a294f8b 0.0s done
+#12 exporting manifest list sha256:502cb2beb42e3c90413016c2d2ab33dc53fec30912f04ef8eadd47caeae629ee done
+#12 naming to docker.io/library/javac-case-099-jep:benchmark-v1 done
+#12 unpacking to docker.io/library/javac-case-099-jep:benchmark-v1 0.1s done
+#12 DONE 0.5s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/eunexbmdwu5en684y1vdt0s37

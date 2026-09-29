@@ -1,0 +1,184 @@
+diff --git a/src/jep/test/TestClassLoaderMethodCache.java b/src/jep/test/TestClassLoaderMethodCache.java
+new file mode 100644
+index 0000000..0000000
+--- /dev/null
++++ b/src/jep/test/TestClassLoaderMethodCache.java
+@@ -0,0 +1,99 @@
++package jep.test;
++
++import java.io.File;
++import java.io.FileWriter;
++import java.net.URL;
++import java.net.URLClassLoader;
++
++import javax.tools.JavaCompiler;
++import javax.tools.ToolProvider;
++
++import jep.Jep;
++
++/** Regression test for per-ClassLoader Java method caches. */
++public class TestClassLoaderMethodCache {
++
++    public static void main(String[] args) throws Exception {
++        File root = makeTempDirectory();
++        try {
++            File first = compileVariant(root, "first");
++            File second = compileVariant(root, "second");
++            URLClassLoader firstLoader = new URLClassLoader(
++                    new URL[] { first.toURI().toURL() },
++                    TestClassLoaderMethodCache.class.getClassLoader());
++            URLClassLoader secondLoader = new URLClassLoader(
++                    new URL[] { second.toURI().toURL() },
++                    TestClassLoaderMethodCache.class.getClassLoader());
++            try {
++                runVariant(firstLoader, "first", "first");
++                runVariant(secondLoader, "second", "second");
++            } finally {
++                firstLoader.close();
++                secondLoader.close();
++            }
++            System.out.println("CLASSLOADER_CACHE_OK");
++        } finally {
++            deleteRecursively(root);
++        }
++    }
++
++    private static void runVariant(ClassLoader loader, String method,
++            String expected) throws Exception {
++        Jep jep = new Jep(false, ".", loader);
++        try {
++            jep.eval("from jep import forName");
++            jep.eval("Sample = forName('cacheprobe.Sample')");
++            jep.eval("result = Sample()." + method + "()");
++            Object value = jep.getValue("result");
++            if (!expected.equals(value)) {
++                throw new AssertionError("unexpected result: " + value);
++            }
++        } finally {
++            jep.close();
++        }
++    }
++
++    private static File compileVariant(File root, String method)
++            throws Exception {
++        File sourceRoot = new File(root, method + "/src/cacheprobe");
++        File outputRoot = new File(root, method + "/classes");
++        if (!sourceRoot.mkdirs() || !outputRoot.mkdirs()) {
++            throw new IllegalStateException("could not create test directories");
++        }
++        File source = new File(sourceRoot, "Sample.java");
++        FileWriter writer = new FileWriter(source);
++        try {
++            writer.write("package cacheprobe; public class Sample { "
++                    + "public String " + method + "() { return \"" + method
++                    + "\"; } }");
++        } finally {
++            writer.close();
++        }
++        JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
++        if (compiler == null || compiler.run(null, null, null, "-d",
++                outputRoot.getAbsolutePath(), source.getAbsolutePath()) != 0) {
++            throw new AssertionError("could not compile cache probe");
++        }
++        return outputRoot;
++    }
++
++    private static File makeTempDirectory() throws Exception {
++        File file = File.createTempFile("jep-cache", "dir");
++        if (!file.delete() || !file.mkdirs()) {
++            throw new IllegalStateException("could not create temp directory");
++        }
++        return file;
++    }
++
++    private static void deleteRecursively(File file) {
++        if (file.isDirectory()) {
++            File[] children = file.listFiles();
++            if (children != null) {
++                for (File child : children) {
++                    deleteRecursively(child);
++                }
++            }
++        }
++        file.delete();
++    }
++}
+diff --git a/tests/__init__.py b/tests/__init__.py
+index eea0c94..0000000 100644
+--- a/tests/__init__.py
++++ b/tests/__init__.py
+@@ -11,3 +11,4 @@ from .test_compare import *
+ from .test_dir import *
+ from .test_numpy import *
+ 
++from .test_classloader_method_cache import *
+diff --git a/tests/jep_pipe.py b/tests/jep_pipe.py
+new file mode 100644
+index 0000000..0000000
+--- /dev/null
++++ b/tests/jep_pipe.py
+@@ -0,0 +1,31 @@
++from __future__ import print_function
++
++import subprocess
++from subprocess import PIPE
++
++
++def jep_pipe(argv):
++    process = subprocess.Popen(argv, stdout=PIPE, stderr=PIPE)
++    stdout, stderr = process.communicate()
++    if process.returncode != 0:
++        raise AssertionError(
++            "child process failed with exit code {0}\nstdout:\n{1}\nstderr:\n{2}".format(
++                process.returncode,
++                stdout.decode("utf-8", "replace"),
++                stderr.decode("utf-8", "replace")
++            )
++        )
++    return stdout
++
++
++def build_java_process_cmd(java_test_name):
++    from java.lang import System
++
++    classpath = System.getProperty("java.class.path")
++    library_path = "-Djava.library.path=" + System.getProperty(
++        "java.library.path"
++    )
++
++    return [
++        "java", "-ea", "-cp", classpath, library_path, java_test_name
++    ]
+diff --git a/tests/test_classloader_method_cache.py b/tests/test_classloader_method_cache.py
+new file mode 100644
+index 0000000..0000000
+--- /dev/null
++++ b/tests/test_classloader_method_cache.py
+@@ -0,0 +1,27 @@
++from __future__ import print_function
++
++import subprocess
++import unittest
++
++from tests.jep_pipe import build_java_process_cmd
++
++
++class TestClassLoaderMethodCache(unittest.TestCase):
++
++    def test_classloader_method_cache(self):
++        process = subprocess.Popen(
++            build_java_process_cmd("jep.test.TestClassLoaderMethodCache"),
++            stdout=subprocess.PIPE,
++            stderr=subprocess.PIPE
++        )
++        stdout, stderr = process.communicate()
++        if process.returncode != 0:
++            raise AssertionError(
++                "child JVM failed with exit code {0}\nstdout:\n{1}\nstderr:\n{2}".format(
++                    process.returncode,
++                    stdout.decode("utf-8", "replace"),
++                    stderr.decode("utf-8", "replace")
++                )
++            )
++        if b"CLASSLOADER_CACHE_OK" not in stdout:
++            raise AssertionError("classloader cache marker missing")

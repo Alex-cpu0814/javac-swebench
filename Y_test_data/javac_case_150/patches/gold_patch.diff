@@ -1,0 +1,101 @@
+diff --git a/junixsocket-common/src/main/java/org/newsclub/net/unix/AFInetAddress.java b/junixsocket-common/src/main/java/org/newsclub/net/unix/AFInetAddress.java
+index 9eb15d68..c8078cfb 100644
+--- a/junixsocket-common/src/main/java/org/newsclub/net/unix/AFInetAddress.java
++++ b/junixsocket-common/src/main/java/org/newsclub/net/unix/AFInetAddress.java
+@@ -134,7 +134,7 @@ class AFInetAddress {
+ 
+     byte[] bytes = createUnresolvedHostname(socketAddress, af).getBytes(StandardCharsets.UTF_8);
+     if (bytes.length > 255) {
+-      throw new IllegalStateException("Address too long");
++      throw new IllegalStateException("junixsocket address is too long to wrap as InetAddress");
+     }
+     byte[] serializedData = new byte[SERIALIZED_INET_ADDRESS_START.length + 1 + bytes.length + 1];
+     System.arraycopy(SERIALIZED_INET_ADDRESS_START, 0, serializedData, 0,
+diff --git a/junixsocket-native/crossclang/bin/clang b/junixsocket-native/crossclang/bin/clang
+index e8c9628a..97aa0cfe 100755
+--- a/junixsocket-native/crossclang/bin/clang
++++ b/junixsocket-native/crossclang/bin/clang
+@@ -127,6 +127,8 @@ while [ $# -gt 0 ]; do
+       -Wshorten-64-to-32 ) skipGccArg=1 ;;
+       -Wobjc-literal-conversion ) skipGccArg=1 ;;
+       -Wnon-literal-null-conversion ) skipGccArg=1 ;;
++      -Wno-c++11-extensions ) skipGccArg=1 ;;
++      -Wno-declaration-after-statement ) skipGccArg=1 ;;
+       -Wbool-conversion ) skipGccArg=1 ;;
+       -Wconstant-conversion ) skipGccArg=1 ;;
+       -Wquoted-include-in-framework-header ) skipGccArg=1 ;;
+diff --git a/junixsocket-native/junixsocket-native.xcodeproj/project.pbxproj b/junixsocket-native/junixsocket-native.xcodeproj/project.pbxproj
+index 9636100f..d30d994c 100644
+--- a/junixsocket-native/junixsocket-native.xcodeproj/project.pbxproj
++++ b/junixsocket-native/junixsocket-native.xcodeproj/project.pbxproj
+@@ -4378,6 +4378,7 @@
+ 					"-Wint-conversion",
+ 					"-Wno-unused-command-line-argument",
+ 					"-Werror-implicit-function-declaration",
++					"-Wno-declaration-after-statement",
+ 				);
+ 			};
+ 			name = Debug;
+@@ -4456,6 +4457,7 @@
+ 					"-Wint-conversion",
+ 					"-Wno-unused-command-line-argument",
+ 					"-Werror-implicit-function-declaration",
++					"-Wno-declaration-after-statement",
+ 				);
+ 			};
+ 			name = Release;
+diff --git a/junixsocket-native/src/main/c/address.c b/junixsocket-native/src/main/c/address.c
+index 6a530bad..e8dfd19f 100644
+--- a/junixsocket-native/src/main/c/address.c
++++ b/junixsocket-native/src/main/c/address.c
+@@ -128,7 +128,7 @@ static jbyteArray sockAddrUnToBytes(JNIEnv *env, struct sockaddr_un *addr, sockl
+         return NULL;
+     }
+ #if defined(junixsocket_have_sun_len)
+-    len = MIN(len, sizeof(struct sockaddr_un)-2);
++    len = MIN(len, sizeof(struct sockaddr_un) - 2);
+     if(len < 256 && addr->sun_len < len) {
+         len = addr->sun_len;
+     }
+@@ -159,6 +159,12 @@ static jbyteArray sockAddrUnToBytes(JNIEnv *env, struct sockaddr_un *addr, sockl
+         return NULL;
+     }
+ 
++#if defined(__linux__)
++    if(firstZero && addr->sun_path[len-1] == 0) {
++        len -= 1;
++    }
++#endif
++
+     jbyteArray array = (*env)->NewByteArray(env, len);
+     (*env)->SetByteArrayRegion(env, array, 0, len, (jbyte*)addr->sun_path);
+ 
+@@ -353,8 +359,9 @@ JNIEXPORT jbyteArray JNICALL Java_org_newsclub_net_unix_NativeUnixSocket_sockAdd
+  */
+ JNIEXPORT jint JNICALL Java_org_newsclub_net_unix_NativeUnixSocket_bytesToSockAddr
+ (JNIEnv *env, jclass clazz CK_UNUSED, jint domain, jobject directByteBuf, jbyteArray addressBytes) {
+-    domain = domainToNative(domain);
+     size_t sockAddrLen;
++
++    domain = domainToNative(domain);
+     switch(domain) {
+         case AF_UNIX:
+             sockAddrLen = sizeof(struct sockaddr_un);
+@@ -395,9 +402,16 @@ JNIEXPORT jint JNICALL Java_org_newsclub_net_unix_NativeUnixSocket_bytesToSockAd
+         {
+             struct sockaddr_un *addrUn = (struct sockaddr_un *) addr;
+ #if defined(junixsocket_have_sun_len)
+-            addrUn->sun_len = ((socklen_t)len >= SUN_NAME_MAX_LEN) ? SUN_NAME_MAX_LEN : len + 1; // including zero byte
++            addrUn->sun_len = ((socklen_t)len >= SUN_NAME_MAX_LEN) ? SUN_NAME_MAX_LEN :
++                (socklen_t)len + 1; // including zero byte
+ #endif
+             (*env)->GetByteArrayRegion(env, addressBytes, 0, len, (signed char*)addrUn->sun_path);
++
++#if defined(__linux__)
++            if(addrUn->sun_path[0] == 0) {
++                sockAddrLen = MIN((size_t)(len + sizeof(sa_family_t)), sockAddrLen);
++            }
++#endif
+         }
+             break;
+ #if junixsocket_have_tipc

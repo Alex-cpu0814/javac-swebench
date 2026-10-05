@@ -1,0 +1,7 @@
+diff --git a/.benchmark-base-control b/.benchmark-base-control
+new file mode 100644
+index 0000000..580e36b
+--- /dev/null
++++ b/.benchmark-base-control
+@@ -0,0 +1 @@
++base control: intentionally does not modify production code

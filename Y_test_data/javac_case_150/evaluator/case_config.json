@@ -1,0 +1,17 @@
+{
+  "template_version": "1.0",
+  "case_number": "150",
+  "instance_id": "kohlschutter__junixsocket-116",
+  "instance_file": "official_swebench/instance_150.json",
+  "repo_url": "https://github.com/kohlschutter/junixsocket.git",
+  "base_commit": "7578a2470871e12dd72716925f60d857ad7eb409",
+  "fix_commit": "f8f280c8b27c47b17d627eb0efd2e33317d4b46d",
+  "image": "yutu0814/javac-case-150-junixsocket:benchmark-v1",
+  "python_version": "3.12",
+  "python_sha256": "system-package",
+  "extra_apt_packages": ["build-essential", "clang", "git", "python3"],
+  "runtime_assets": [
+    {"source": "evaluator/case_adapter.sh", "target": "/benchmark/case_adapter.sh"},
+    {"source": "evaluator/report_surefire.py", "target": "/benchmark/report_surefire.py"}
+  ]
+}

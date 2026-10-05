@@ -1,0 +1,22 @@
+{
+  "instance_id": "kohlschutter__junixsocket-116",
+  "source_project": "kohlschutter/junixsocket",
+  "source_case": "150",
+  "language_pair": "Java-C",
+  "repo": "kohlschutter/junixsocket",
+  "issue_id": 116,
+  "issue_url": "https://github.com/kohlschutter/junixsocket/issues/116",
+  "commit": "f8f280c8b27c47b17d627eb0efd2e33317d4b46d",
+  "base_commit": "7578a2470871e12dd72716925f60d857ad7eb409",
+  "base_commit_status": "verified",
+  "fix_commit": "f8f280c8b27c47b17d627eb0efd2e33317d4b46d",
+  "commit_url": "https://github.com/kohlschutter/junixsocket/commit/f8f280c8b27c47b17d627eb0efd2e33317d4b46d",
+  "problem_statement": "On Linux, a short AF_UNIX abstract-namespace address is passed to the kernel with the full sockaddr_un length. Returned addresses are padded with zero bytes and peers using the actual name length cannot connect. Preserve the real abstract address length while retaining meaningful embedded or trailing zero bytes.",
+  "test_source": "official_upstream_regression_test",
+  "verification_status": "resolved",
+  "source_workbook_sequence": 150,
+  "symptom": "short abstract socket names are treated as full-length names padded with zero bytes",
+  "root_cause": "the JNI layer always returns sizeof(sockaddr_un) instead of the Linux abstract-address payload length plus sa_family_t",
+  "fixing_strategy": "use the actual Linux abstract address length and trim only the kernel-added terminal zero when converting back",
+  "evidence_type": "official_issue_commit_and_regression_test"
+}

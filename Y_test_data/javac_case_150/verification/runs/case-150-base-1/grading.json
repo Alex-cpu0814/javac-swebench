@@ -1,0 +1,13 @@
+{
+  "schema_version": "3.0",
+  "run_id": "case-150-base-1",
+  "tests_observed": 0,
+  "FAIL_TO_PASS": {
+    "org.newsclub.net.unix.domain.AbstractNamespaceTest.testBind": "MISSING",
+    "org.newsclub.net.unix.domain.AbstractNamespaceTest.testBindTrailingZeroes": "MISSING"
+  },
+  "PASS_TO_PASS": {
+    "org.newsclub.net.unix.AFUNIXSocketAddressTest.testAbstractNamespace": "MISSING"
+  },
+  "unexpected_failures": []
+}

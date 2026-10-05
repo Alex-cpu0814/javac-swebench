@@ -1,0 +1,16 @@
+{
+  "schema_version": "3.0",
+  "run_id": "case-150-base-2",
+  "tests_observed": 3,
+  "FAIL_TO_PASS": {
+    "org.newsclub.net.unix.domain.AbstractNamespaceTest.testBind": "FAILED",
+    "org.newsclub.net.unix.domain.AbstractNamespaceTest.testBindTrailingZeroes": "ERROR"
+  },
+  "PASS_TO_PASS": {
+    "org.newsclub.net.unix.AFUNIXSocketAddressTest.testAbstractNamespace": "PASSED"
+  },
+  "unexpected_failures": [
+    "org.newsclub.net.unix.domain.AbstractNamespaceTest.testBind",
+    "org.newsclub.net.unix.domain.AbstractNamespaceTest.testBindTrailingZeroes"
+  ]
+}

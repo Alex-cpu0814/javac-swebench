@@ -1,0 +1,386 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] junixsocket-parent                                                 [pom]
+[INFO] junixsocket-native                                                 [nar]
+[INFO] junixsocket-native-cross                                           [pom]
+[INFO] junixsocket-native-common                                          [jar]
+[INFO] junixsocket-common                                                 [jar]
+[INFO] 
+[INFO] ----------< com.kohlschutter.junixsocket:junixsocket-parent >-----------
+[INFO] Building junixsocket-parent 2.5.2-SNAPSHOT                         [1/5]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.1.0:enforce (enforce-maven) @ junixsocket-parent ---
+[INFO] 
+[INFO] --- resources:3.2.0:copy-resources (copy-source-files-java8) @ junixsocket-parent ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /testbed/src/main/java
+[INFO] skip non existing resourceDirectory /testbed/src/main/java8
+[INFO] 
+[INFO] --- resources:3.2.0:copy-resources (copy-source-files-java9) @ junixsocket-parent ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /testbed/src/main/java
+[INFO] skip non existing resourceDirectory /testbed/src/main/java9
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (java8-compile) @ junixsocket-parent ---
+[WARNING]  Parameter 'compileSourceRoots' is read-only, must not be used in configuration
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (java9-compile) @ junixsocket-parent ---
+[WARNING]  Parameter 'compileSourceRoots' is read-only, must not be used in configuration
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.2.0:copy-resources (copy-default-compile-classes-to-multirelease) @ junixsocket-parent ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /testbed/target/classes
+[INFO] 
+[INFO] ----------< com.kohlschutter.junixsocket:junixsocket-native >-----------
+[INFO] Building junixsocket-native 2.5.2-SNAPSHOT                         [2/5]
+[INFO]   from junixsocket-native/pom.xml
+[INFO] --------------------------------[ nar ]---------------------------------
+[INFO] 
+[INFO] --- nar:3.10.1:nar-validate (default-nar-validate) @ junixsocket-native ---
+[INFO] Using AOL: amd64-Linux-clang
+[INFO] 
+[INFO] --- enforcer:3.1.0:enforce (enforce-maven) @ junixsocket-native ---
+[INFO] 
+[INFO] --- nar:3.10.1:nar-download (default-nar-download) @ junixsocket-native ---
+[INFO] Getting Nar dependencies
+[INFO] Getting Nar dependencies
+[INFO] 
+[INFO] --- nar:3.10.1:nar-unpack (default-nar-unpack) @ junixsocket-native ---
+[INFO] Getting Nar dependencies
+[INFO] Unpacking 0 dependencies to /testbed/junixsocket-native/target/nar
+[INFO] 
+[INFO] --- resources:3.2.0:copy-resources (copy-source-files-java8) @ junixsocket-native ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/main/java
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/main/java8
+[INFO] 
+[INFO] --- resources:3.2.0:copy-resources (copy-source-files-java9) @ junixsocket-native ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/main/java
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/main/java9
+[INFO] 
+[INFO] --- nar:3.10.1:nar-gnu-configure (default-nar-gnu-configure) @ junixsocket-native ---
+[INFO] 
+[INFO] --- nar:3.10.1:nar-system-generate (default-nar-system-generate) @ junixsocket-native ---
+[WARNING] NAR: no system package specified; unable to generate NarSystem class.
+[INFO] 
+[INFO] --- nar:3.10.1:nar-vcproj (default-nar-vcproj) @ junixsocket-native ---
+[INFO] 
+[INFO] --- dependency:3.3.0:unpack (unpack-coding-style) @ junixsocket-native ---
+[INFO] Configured Artifact: com.kohlschutter:coding-style:files:1.2.8:zip
+[INFO] coding-style-1.2.8-files.zip already unpacked.
+[INFO] 
+[INFO] --- resources:3.2.0:resources (default-resources) @ junixsocket-native ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/main/resources
+[INFO] 
+[INFO] --- nar:3.10.1:nar-resources (default-nar-resources) @ junixsocket-native ---
+[INFO] Copied 0 resources
+[INFO] 
+[INFO] --- nar:3.10.1:nar-gnu-resources (default-nar-gnu-resources) @ junixsocket-native ---
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (default-compile) @ junixsocket-native ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- nar:3.10.1:nar-gnu-make (default-nar-gnu-make) @ junixsocket-native ---
+[INFO] 
+[INFO] --- nar:3.10.1:nar-compile (default-nar-compile) @ junixsocket-native ---
+[INFO] Compiling 22 native files
+[INFO] Starting dependency analysis for 22 files.
+[INFO] 0 files are up to date.
+[INFO] 22 files to be recompiled from dependency analysis.
+[INFO] 22 total files to be compiled.
+[INFO] Found 20 processors available
+0 / 22 files compiled...[INFO] 
+Starting Core 0 with 2 source files...
+[INFO] 
+Starting Core 1 with 2 source files...
+[INFO] 
+Starting Core 2 with 1 source files...
+[INFO] 
+Starting Core 3 with 1 source files...
+[INFO] 
+Starting Core 4 with 1 source files...
+[INFO] 
+Starting Core 5 with 1 source files...
+[INFO] 
+Starting Core 6 with 1 source files...
+[INFO] 
+Starting Core 7 with 1 source files...
+[INFO] 
+Starting Core 8 with 1 source files...
+[INFO] 
+Starting Core 9 with 1 source files...
+[INFO] 
+Starting Core 10 with 1 source files...
+[INFO] 
+Starting Core 11 with 1 source files...
+[INFO] 
+Starting Core 12 with 1 source files...
+[INFO] 
+Starting Core 13 with 1 source files...
+[INFO] 
+Starting Core 14 with 1 source files...
+[INFO] 
+Starting Core 15 with 1 source files...
+[INFO] 
+Starting Core 16 with 1 source files...
+[INFO] 
+Starting Core 17 with 1 source files...
+[INFO] 
+Starting Core 18 with 1 source files...
+[INFO] 
+Starting Core 19 with 1 source files...
+                                                                    [INFO] 22 files were compiled.
+[INFO] Linking...
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (java8-compile) @ junixsocket-native ---
+[WARNING]  Parameter 'compileSourceRoots' is read-only, must not be used in configuration
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (java9-compile) @ junixsocket-native ---
+[WARNING]  Parameter 'compileSourceRoots' is read-only, must not be used in configuration
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.2.0:copy-resources (copy-default-compile-classes-to-multirelease) @ junixsocket-native ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- nar:3.10.1:nar-gnu-process (default-nar-gnu-process) @ junixsocket-native ---
+[INFO] 
+[INFO] --- nar:3.10.1:nar-process-libraries (default-nar-process-libraries) @ junixsocket-native ---
+[info] Running process libraries
+[info] Processing library Library: type: jni
+[INFO] 
+[INFO] --- nar:3.10.1:nar-test-unpack (default-nar-test-unpack) @ junixsocket-native ---
+[INFO] Getting Nar dependencies
+[INFO] Unpacking 0 dependencies to /testbed/junixsocket-native/target/test-nar
+[INFO] 
+[INFO] --- resources:3.2.0:testResources (default-testResources) @ junixsocket-native ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.10.1:testCompile (default-testCompile) @ junixsocket-native ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- nar:3.10.1:nar-testCompile (default-nar-testCompile) @ junixsocket-native ---
+[INFO] 
+[INFO] --- nar:3.10.1:nar-test (default-nar-test) @ junixsocket-native ---
+[INFO] 
+[INFO] -------< com.kohlschutter.junixsocket:junixsocket-native-cross >--------
+[INFO] Building junixsocket-native-cross 2.5.2-SNAPSHOT                   [3/5]
+[INFO]   from junixsocket-native-cross/pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.1.0:enforce (enforce-maven) @ junixsocket-native-cross ---
+[INFO] 
+[INFO] --- nar:3.10.1:nar-validate (init-nar-properties) @ junixsocket-native-cross ---
+[INFO] Using AOL: amd64-Linux-clang
+[INFO] 
+[INFO] --- resources:3.2.0:copy-resources (copy-source-files-java8) @ junixsocket-native-cross ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/src/main/java
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/src/main/java8
+[INFO] 
+[INFO] --- resources:3.2.0:copy-resources (copy-source-files-java9) @ junixsocket-native-cross ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/src/main/java
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/src/main/java9
+[INFO] 
+[INFO] --- dependency:3.3.0:unpack (unpack-coding-style) @ junixsocket-native-cross ---
+[INFO] Configured Artifact: com.kohlschutter:coding-style:files:1.2.8:zip
+[INFO] Unpacking /root/.m2/repository/com/kohlschutter/coding-style/1.2.8/coding-style-1.2.8-files.zip to /testbed/coding-style/1.2.8 with includes "" and excludes ""
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (java8-compile) @ junixsocket-native-cross ---
+[WARNING]  Parameter 'compileSourceRoots' is read-only, must not be used in configuration
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (java9-compile) @ junixsocket-native-cross ---
+[WARNING]  Parameter 'compileSourceRoots' is read-only, must not be used in configuration
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.2.0:copy-resources (copy-default-compile-classes-to-multirelease) @ junixsocket-native-cross ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/target/classes
+[INFO] 
+[INFO] -------< com.kohlschutter.junixsocket:junixsocket-native-common >-------
+[INFO] Building junixsocket-native-common 2.5.2-SNAPSHOT                  [4/5]
+[INFO]   from junixsocket-native-common/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.1.0:enforce (enforce-maven) @ junixsocket-native-common ---
+[INFO] 
+[INFO] --- resources:3.2.0:copy-resources (copy-source-files-java8) @ junixsocket-native-common ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 3 resources
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-common/src/main/java8
+[INFO] 
+[INFO] --- resources:3.2.0:copy-resources (copy-source-files-java9) @ junixsocket-native-common ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 3 resources
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-common/src/main/java9
+[INFO] 
+[INFO] --- dependency:3.3.0:unpack (unpack-coding-style) @ junixsocket-native-common ---
+[INFO] Configured Artifact: com.kohlschutter:coding-style:files:1.2.8:zip
+[INFO] Unpacking /root/.m2/repository/com/kohlschutter/coding-style/1.2.8/coding-style-1.2.8-files.zip to /testbed/coding-style/1.2.8 with includes "" and excludes ""
+[INFO] 
+[INFO] --- resources:3.2.0:resources (default-resources) @ junixsocket-native-common ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-common/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (default-compile) @ junixsocket-native-common ---
+[WARNING] Can't extract module name from pom.xml: '/testbed/junixsocket-native-cross/pom.xml' not allowed on the path, only outputDirectories and jars are accepted
+[INFO] Compiling 3 source files to /testbed/junixsocket-native-common/target/classes
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (java8-compile) @ junixsocket-native-common ---
+[WARNING]  Parameter 'compileSourceRoots' is read-only, must not be used in configuration
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] Compiling 2 source files to /testbed/junixsocket-native-common/target/classes/../classes-multirelease
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (java9-compile) @ junixsocket-native-common ---
+[WARNING]  Parameter 'compileSourceRoots' is read-only, must not be used in configuration
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[WARNING] Can't extract module name from pom.xml: '/testbed/junixsocket-native-cross/pom.xml' not allowed on the path, only outputDirectories and jars are accepted
+[INFO] Compiling 3 source files to /testbed/junixsocket-native-common/target/classes/../classes-multirelease/META-INF/versions/9
+[INFO] 
+[INFO] --- checkstyle:3.1.2:check (checkstyle-during-compile) @ junixsocket-native-common ---
+[INFO] 
+[INFO] --- resources:3.2.0:copy-resources (copy-default-compile-classes-to-multirelease) @ junixsocket-native-common ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- resources:3.2.0:testResources (default-testResources) @ junixsocket-native-common ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-common/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.10.1:testCompile (default-testCompile) @ junixsocket-native-common ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] ----------< com.kohlschutter.junixsocket:junixsocket-common >-----------
+[INFO] Building junixsocket-common 2.5.2-SNAPSHOT                         [5/5]
+[INFO]   from junixsocket-common/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:3.1.0:enforce (enforce-maven) @ junixsocket-common ---
+[INFO] 
+[INFO] --- jacoco:0.8.8:prepare-agent (default-prepare-agent) @ junixsocket-common ---
+[INFO] surefireJacocoArgLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/testbed/junixsocket-common/target/jacoco.exec,excludes=org/apache/maven/**:org/junit/**:org/apiguardian/**:sun/**
+[INFO] 
+[INFO] --- resources:3.2.0:copy-resources (copy-source-files-java8) @ junixsocket-common ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 71 resources
+[INFO] Copying 5 resources
+[INFO] 
+[INFO] --- resources:3.2.0:copy-resources (copy-source-files-java9) @ junixsocket-common ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 71 resources
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java9
+[INFO] 
+[INFO] --- dependency:3.3.0:unpack (unpack-coding-style) @ junixsocket-common ---
+[INFO] Configured Artifact: com.kohlschutter:coding-style:files:1.2.8:zip
+[INFO] Unpacking /root/.m2/repository/com/kohlschutter/coding-style/1.2.8/coding-style-1.2.8-files.zip to /testbed/coding-style/1.2.8 with includes "" and excludes ""
+[INFO] 
+[INFO] --- resources:3.2.0:resources (default-resources) @ junixsocket-common ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (default-compile) @ junixsocket-common ---
+[INFO] Compiling 71 source files to /testbed/junixsocket-common/target/classes
+[INFO] /testbed/junixsocket-common/src/main/java/org/newsclub/net/unix/AFDatagramSocketImpl.java: /testbed/junixsocket-common/src/main/java/org/newsclub/net/unix/AFDatagramSocketImpl.java uses or overrides a deprecated API.
+[INFO] /testbed/junixsocket-common/src/main/java/org/newsclub/net/unix/AFDatagramSocketImpl.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (java8-compile) @ junixsocket-common ---
+[WARNING]  Parameter 'compileSourceRoots' is read-only, must not be used in configuration
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] Compiling 70 source files to /testbed/junixsocket-common/target/classes/../classes-multirelease
+[INFO] /testbed/junixsocket-common/target/sources-java8/org/newsclub/net/unix/AFDatagramSocketImpl.java: /testbed/junixsocket-common/target/sources-java8/org/newsclub/net/unix/AFDatagramSocketImpl.java uses or overrides a deprecated API.
+[INFO] /testbed/junixsocket-common/target/sources-java8/org/newsclub/net/unix/AFDatagramSocketImpl.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (java9-compile) @ junixsocket-common ---
+[WARNING]  Parameter 'compileSourceRoots' is read-only, must not be used in configuration
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] Compiling 71 source files to /testbed/junixsocket-common/target/classes/../classes-multirelease/META-INF/versions/9
+[INFO] /testbed/junixsocket-common/target/sources-java9/org/newsclub/net/unix/AFDatagramSocketImpl.java: /testbed/junixsocket-common/target/sources-java9/org/newsclub/net/unix/AFDatagramSocketImpl.java uses or overrides a deprecated API.
+[INFO] /testbed/junixsocket-common/target/sources-java9/org/newsclub/net/unix/AFDatagramSocketImpl.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- checkstyle:3.1.2:check (checkstyle-during-compile) @ junixsocket-common ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- resources:3.2.0:copy-resources (copy-default-compile-classes-to-multirelease) @ junixsocket-common ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 120 resources
+[INFO] 
+[INFO] --- resources:3.2.0:testResources (default-testResources) @ junixsocket-common ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.10.1:testCompile (default-testCompile) @ junixsocket-common ---
+[INFO] Compiling 67 source files to /testbed/junixsocket-common/target/test-classes
+[INFO] 
+[INFO] --- surefire:3.0.0-M7:test (default-test) @ junixsocket-common ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.newsclub.net.unix.AFUNIXSocketAddressTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.09 s - in org.newsclub.net.unix.AFUNIXSocketAddressTest
+[INFO] Running org.newsclub.net.unix.domain.AbstractNamespaceTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.054 s - in org.newsclub.net.unix.domain.AbstractNamespaceTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for junixsocket-parent 2.5.2-SNAPSHOT:
+[INFO] 
+[INFO] junixsocket-parent ................................. SUCCESS [  0.580 s]
+[INFO] junixsocket-native ................................. SUCCESS [  6.425 s]
+[INFO] junixsocket-native-cross ........................... SUCCESS [  0.307 s]
+[INFO] junixsocket-native-common .......................... SUCCESS [  0.768 s]
+[INFO] junixsocket-common ................................. SUCCESS [  7.167 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16.061 s
+[INFO] Finished at: 2026-10-05T09:46:02Z
+[INFO] ------------------------------------------------------------------------
+testAbstractNamespace (org.newsclub.net.unix.AFUNIXSocketAddressTest) ... ok
+testBindTrailingZeroes (org.newsclub.net.unix.domain.AbstractNamespaceTest) ... ok
+testBind (org.newsclub.net.unix.domain.AbstractNamespaceTest) ... ok

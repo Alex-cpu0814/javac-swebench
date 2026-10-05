@@ -1,0 +1,9 @@
+{
+  "instance_id": "kohlschutter__junixsocket-116",
+  "repo": "kohlschutter/junixsocket",
+  "base_commit": "7578a2470871e12dd72716925f60d857ad7eb409",
+  "problem_statement": "On Linux, a short AF_UNIX abstract-namespace address is passed to the kernel with the full sockaddr_un length. Returned addresses are padded with zero bytes and peers using the actual name length cannot connect. Preserve the real abstract address length while retaining meaningful embedded or trailing zero bytes.",
+  "hints_text": null,
+  "created_at": "2022-08-28",
+  "issue_url": "https://github.com/kohlschutter/junixsocket/issues/116"
+}

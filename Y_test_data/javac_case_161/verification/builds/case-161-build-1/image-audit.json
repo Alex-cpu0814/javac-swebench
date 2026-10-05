@@ -1,0 +1,12 @@
+{
+  "schema_version": "3.0",
+  "instance_id": "kohlschutter__junixsocket-90-read-timeout",
+  "base_commit": "1df1513c64079a5100cdc2a372558e1f77849c0f",
+  "working_tree_clean": true,
+  "fix_commit_present": false,
+  "model_patch_present": false,
+  "test_patch_present": false,
+  "gold_patch_present": false,
+  "evaluation_assets_injected_at_runtime": true,
+  "network_disabled_during_audit": true
+}

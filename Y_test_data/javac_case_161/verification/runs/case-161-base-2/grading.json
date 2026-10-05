@@ -1,0 +1,14 @@
+{
+  "schema_version": "3.0",
+  "run_id": "case-161-base-2",
+  "tests_observed": 2,
+  "FAIL_TO_PASS": {
+    "org.newsclub.net.unix.SoTimeoutTest.testSocketTimeoutException": "FAILED"
+  },
+  "PASS_TO_PASS": {
+    "org.newsclub.net.unix.SoTimeoutTest.issue14Pass": "PASSED"
+  },
+  "unexpected_failures": [
+    "org.newsclub.net.unix.SoTimeoutTest.testSocketTimeoutException"
+  ]
+}

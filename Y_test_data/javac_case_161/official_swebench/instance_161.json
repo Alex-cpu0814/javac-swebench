@@ -1,0 +1,24 @@
+{
+  "version": "2.4.0-SNAPSHOT",
+  "test_patch": "diff --git a/junixsocket-common/src/test/java/org/newsclub/net/unix/SoTimeoutTest.java b/junixsocket-common/src/test/java/org/newsclub/net/unix/SoTimeoutTest.java\nindex 00be130..c173164 100644\n--- a/junixsocket-common/src/test/java/org/newsclub/net/unix/SoTimeoutTest.java\n+++ b/junixsocket-common/src/test/java/org/newsclub/net/unix/SoTimeoutTest.java\n@@ -18,12 +18,15 @@\n package org.newsclub.net.unix;\n \n import static org.junit.jupiter.api.Assertions.assertFalse;\n+import static org.junit.jupiter.api.Assertions.assertThrows;\n import static org.junit.jupiter.api.Assertions.assertTrue;\n \n+import java.io.File;\n import java.io.IOException;\n import java.io.InputStream;\n import java.net.Socket;\n import java.net.SocketException;\n+import java.net.SocketTimeoutException;\n import java.util.concurrent.Semaphore;\n import java.util.concurrent.TimeUnit;\n \n@@ -100,4 +103,24 @@ public class SoTimeoutTest extends SocketTestBase {\n       }\n     }\n   }\n+\n+  @Test\n+  public void testSocketTimeoutException() throws Exception {\n+    final File tempFile = newTempFile();\n+    final AFUNIXSocketAddress address = AFUNIXSocketAddress.of(tempFile);\n+    try (AFUNIXServerSocket server = AFUNIXServerSocket.bindOn(address);\n+        AFUNIXSocket client = AFUNIXSocket.connectTo(address)) {\n+\n+      final AFUNIXSocket socket = server.accept();\n+      socket.setSoTimeout(500);\n+      byte[] buf = new byte[socket.getReceiveBufferSize()];\n+      InputStream in = socket.getInputStream();\n+\n+      assertThrows(SocketTimeoutException.class, () -> {\n+        in.read(buf);\n+      });\n+    } finally {\n+      tempFile.delete();\n+    }\n+  }\n }\n",
+  "hints_text": null,
+  "problem_statement": "A blocking AF_UNIX socket read governed by SO_TIMEOUT returns end-of-stream when no data arrives instead of throwing SocketTimeoutException. Make blocking reads report an expired timeout correctly while preserving non-blocking behavior and native poll errors.",
+  "FAIL_TO_PASS": [
+    "org.newsclub.net.unix.SoTimeoutTest.testSocketTimeoutException"
+  ],
+  "patch": "diff --git a/junixsocket-native/src/main/c/receive.c b/junixsocket-native/src/main/c/receive.c\nindex 0077dc2..89378b0 100644\n--- a/junixsocket-native/src/main/c/receive.c\n+++ b/junixsocket-native/src/main/c/receive.c\n@@ -202,7 +202,19 @@ JNIEXPORT jint JNICALL Java_org_newsclub_net_unix_NativeUnixSocket_read(\n #if defined(junixsocket_use_poll_for_read)\n     int ret = pollWithTimeout(env, fd, handle, 0);\n     if(ret < 1) {\n-        return -1;\n+        if(ret == -1) {\n+            _throwErrnumException(env, errno, fd);\n+            return -1;\n+        }\n+        int flags = fcntl(handle, F_GETFL);\n+        if (flags != -1 && (flags & O_NONBLOCK)) {\n+            // non-blocking socket\n+            return 0;\n+        } else {\n+            // timeout on blocking socket\n+            _throwException(env, kExceptionSocketTimeoutException, \"timeout\");\n+            return -1;\n+        }\n     }\n #endif\n \n@@ -259,6 +271,10 @@ JNIEXPORT jint JNICALL Java_org_newsclub_net_unix_NativeUnixSocket_receive\n \n         int ret = pollWithTimeout(env, fd, handle, hardTimeoutMillis);\n         if(ret < 1) {\n+            if(ret == -1) {\n+                _throwErrnumException(env, errno, fd);\n+                return -1;\n+            }\n             int flags = fcntl(handle, F_GETFL);\n             if (flags != -1 && (flags & O_NONBLOCK)) {\n                 // non-blocking socket\n",
+  "base_commit": "1df1513c64079a5100cdc2a372558e1f77849c0f",
+  "instance_id": "kohlschutter__junixsocket-90-read-timeout",
+  "repo": "kohlschutter/junixsocket",
+  "created_at": "2021-06-21",
+  "issue_id": 90,
+  "issue_url": "https://github.com/kohlschutter/junixsocket/issues/90",
+  "PASS_TO_PASS": [
+    "org.newsclub.net.unix.SoTimeoutTest.issue14Pass"
+  ],
+  "fix_commit": "ba3d20f60e7fbf1a49ae1f4bac09111299d104ee",
+  "test_files": [
+    "junixsocket-common/src/test/java/org/newsclub/net/unix/SoTimeoutTest.java"
+  ],
+  "test_command": "build JNI artifacts, run issue14Pass control, then run the official read-timeout regression"
+}

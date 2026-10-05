@@ -1,0 +1,18 @@
+{
+  "template_version": "1.0",
+  "case_number": "161",
+  "instance_id": "kohlschutter__junixsocket-90-read-timeout",
+  "instance_file": "official_swebench/instance_161.json",
+  "repo_url": "https://github.com/kohlschutter/junixsocket.git",
+  "base_commit": "1df1513c64079a5100cdc2a372558e1f77849c0f",
+  "fix_commit": "ba3d20f60e7fbf1a49ae1f4bac09111299d104ee",
+  "image": "yutu0814/javac-case-161-junixsocket:benchmark-v1",
+  "python_version": "3.12",
+  "python_sha256": "system-package",
+  "extra_apt_packages": ["build-essential", "clang", "git", "python3"],
+  "native_feature_defines": ["junixsocket_use_poll_for_read"],
+  "runtime_assets": [
+    {"source": "evaluator/case_adapter.sh", "target": "/benchmark/case_adapter.sh"},
+    {"source": "evaluator/report_surefire.py", "target": "/benchmark/report_surefire.py"}
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": "3.0",
+  "kind": "image_build",
+  "build_id": "case-161-build-1",
+  "status": "success",
+  "reason": "image_built_and_audited",
+  "started_at": "2026-10-05T14:11:47.605Z",
+  "finished_at": "2026-10-05T14:16:57.016Z",
+  "duration_ms": 309406,
+  "source": {
+    "repo": "https://github.com/kohlschutter/junixsocket.git",
+    "base_commit": "1df1513c64079a5100cdc2a372558e1f77849c0f"
+  },
+  "image": {
+    "name": "yutu0814/javac-case-161-junixsocket:benchmark-v1",
+    "id": "sha256:969c2650967701f77c0d620466db2df05b0f5f8b6706167dbf117545f54a2ad3",
+    "repo_digests": [
+      "yutu0814/javac-case-161-junixsocket@sha256:969c2650967701f77c0d620466db2df05b0f5f8b6706167dbf117545f54a2ad3"
+    ]
+  },
+  "logs": {
+    "events": "events.jsonl",
+    "docker_build_stdout": "docker-build.stdout.raw.log",
+    "docker_build_stderr": "docker-build.stderr.raw.log",
+    "image_audit_stdout": "image-audit.stdout.raw.log",
+    "image_audit_stderr": "image-audit.stderr.raw.log",
+    "image_audit": "image-audit.json"
+  }
+}

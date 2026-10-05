@@ -1,0 +1,40 @@
+{
+  "instance_id": "kohlschutter__junixsocket-90-read-timeout",
+  "task_level": "integration",
+  "validation_type": "official_project_junit_jni_platform_branch",
+  "environment": "Ubuntu 20.04 Linux amd64 container with the upstream poll-read feature path enabled",
+  "java_version_target": "Eclipse Temurin 17",
+  "native_requirement": "Clang, Linux AF_UNIX sockets, and junixsocket_use_poll_for_read",
+  "build_system": "Maven 3.9.9 with maven-nar-plugin",
+  "test_execution": "Maven Surefire: issue14Pass control, then official read-timeout regression",
+  "runtime_verified": true,
+  "reproduction_status": "verified_base_fail_fix_pass_docker",
+  "base_commit": "1df1513c64079a5100cdc2a372558e1f77849c0f",
+  "fix_commit": "ba3d20f60e7fbf1a49ae1f4bac09111299d104ee",
+  "test_source": "official_upstream_regression_test",
+  "test_files": [
+    "junixsocket-common/src/test/java/org/newsclub/net/unix/SoTimeoutTest.java"
+  ],
+  "FAIL_TO_PASS": [
+    "org.newsclub.net.unix.SoTimeoutTest.testSocketTimeoutException"
+  ],
+  "PASS_TO_PASS": [
+    "org.newsclub.net.unix.SoTimeoutTest.issue14Pass"
+  ],
+  "notes": [
+    "The production defect is in the poll-based read path enabled upstream on Solaris and BSD-family platforms.",
+    "The Linux evaluator enables that same compile-time path without modifying repository source.",
+    "Default Linux does not enter the affected branch; diagnostic run case-161-base-1 records that expected platform distinction."
+  ],
+  "verification": {
+    "docker_verified": true,
+    "model_evaluator_verified": true,
+    "image_build_id": "case-161-build-1",
+    "image_id": "sha256:969c2650967701f77c0d620466db2df05b0f5f8b6706167dbf117545f54a2ad3",
+    "base_run_id": "case-161-base-2",
+    "gold_run_id": "case-161-gold-1",
+    "base_result": "1 FAIL_TO_PASS failed; 1 PASS_TO_PASS passed",
+    "gold_result": "1 FAIL_TO_PASS passed; 1 PASS_TO_PASS passed",
+    "diagnostic_default_linux_run_id": "case-161-base-1"
+  }
+}

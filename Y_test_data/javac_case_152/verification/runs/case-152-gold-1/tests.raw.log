@@ -1,0 +1,2 @@
+testForkedVMRedirectStdin (org.newsclub.net.unix.FileDescriptorCastRegressionTest) ... ok
+testStdoutFileDescriptorCast (org.newsclub.net.unix.FileDescriptorCastRegressionTest) ... ok

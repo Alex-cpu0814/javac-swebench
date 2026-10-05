@@ -1,0 +1,43 @@
+{
+  "instance_id": "kohlschutter__junixsocket-97",
+  "task_level": "integration",
+  "validation_type": "official_regression_logic_jni_forked_vm",
+  "environment": "Ubuntu 20.04 Linux amd64 container",
+  "java_version_target": "Eclipse Temurin 17",
+  "native_requirement": "Clang 10 and Linux AF_UNIX sockets",
+  "build_system": "Maven 3.9.9 with maven-nar-plugin plus isolated javac harness",
+  "test_execution": "FileDescriptorCastRegressionTest main harness",
+  "runtime_verified": true,
+  "reproduction_status": "verified_base_fail_fix_pass_docker",
+  "base_commit": "4f7667c4655712fc7371c0dbab0de5bf785e5d3d",
+  "fix_commit": "2f8f096b84fba1ae26058d41cc03df47719379df",
+  "test_source": "official_upstream_regression_logic_minimally_adapted",
+  "test_files": [
+    "benchmark-tests/src/test/java/org/newsclub/net/unix/FileDescriptorCastRegressionTest.java",
+    "benchmark-tests/src/test/java/org/newsclub/net/unix/StdinSocketApp.java"
+  ],
+  "FAIL_TO_PASS": [
+    "org.newsclub.net.unix.FileDescriptorCastRegressionTest.testForkedVMRedirectStdin"
+  ],
+  "PASS_TO_PASS": [
+    "org.newsclub.net.unix.FileDescriptorCastRegressionTest.testStdoutFileDescriptorCast"
+  ],
+  "notes": [
+    "Base control: the target throws ClassCastException for ProcessBuilder.Redirect.",
+    "Base control: the stdout descriptor control passes.",
+    "Gold control: both target and control pass.",
+    "The harness isolates the upstream regression logic from the commit's unrelated test-package refactor."
+  ],
+  "verification": {
+    "docker_verified": true,
+    "model_evaluator_verified": true,
+    "image_build_id": "case-152-build-1",
+    "image_id": "sha256:34489d29f08f54938761edd96b22ef7638687867c33e37101fec92a777fbc973",
+    "base_run_id": "case-152-base-1",
+    "gold_run_id": "case-152-gold-1",
+    "base_result": "1 FAIL_TO_PASS errored; 1 PASS_TO_PASS passed",
+    "gold_result": "1 FAIL_TO_PASS passed; 1 PASS_TO_PASS passed",
+    "probe_base_result": "target ERROR; control ok",
+    "probe_gold_result": "target ok; control ok"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "instance_id": "kohlschutter__junixsocket-97",
+  "repo": "kohlschutter/junixsocket",
+  "base_commit": "4f7667c4655712fc7371c0dbab0de5bf785e5d3d",
+  "problem_statement": "A bound AF_UNIX socket inherited as standard input cannot be converted to ProcessBuilder.Redirect, and native descriptor validation treats the valid descriptor value 0 as closed. Support redirecting an AF_UNIX socket into a forked JVM and preserve descriptor zero as valid for FastCGI-style inherited sockets.",
+  "hints_text": null,
+  "created_at": "2022-02-06",
+  "issue_url": "https://github.com/kohlschutter/junixsocket/issues/97"
+}

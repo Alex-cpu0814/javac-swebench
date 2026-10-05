@@ -1,0 +1,7 @@
+java.lang.ClassCastException: Cannot access file descriptor as class java.lang.ProcessBuilder$Redirect
+	at org.newsclub.net.unix.FileDescriptorCast.as(FileDescriptorCast.java:343)
+	at org.newsclub.net.unix.FileDescriptorCastRegressionTest.testForkedVMRedirectStdin(FileDescriptorCastRegressionTest.java:37)
+	at org.newsclub.net.unix.FileDescriptorCastRegressionTest.run(FileDescriptorCastRegressionTest.java:75)
+	at org.newsclub.net.unix.FileDescriptorCastRegressionTest.main(FileDescriptorCastRegressionTest.java:86)
+testForkedVMRedirectStdin (org.newsclub.net.unix.FileDescriptorCastRegressionTest) ... ERROR
+testStdoutFileDescriptorCast (org.newsclub.net.unix.FileDescriptorCastRegressionTest) ... ok

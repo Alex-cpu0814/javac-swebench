@@ -1,0 +1,14 @@
+{
+  "schema_version": "3.0",
+  "run_id": "case-152-base-1",
+  "tests_observed": 2,
+  "FAIL_TO_PASS": {
+    "org.newsclub.net.unix.FileDescriptorCastRegressionTest.testForkedVMRedirectStdin": "ERROR"
+  },
+  "PASS_TO_PASS": {
+    "org.newsclub.net.unix.FileDescriptorCastRegressionTest.testStdoutFileDescriptorCast": "PASSED"
+  },
+  "unexpected_failures": [
+    "org.newsclub.net.unix.FileDescriptorCastRegressionTest.testForkedVMRedirectStdin"
+  ]
+}

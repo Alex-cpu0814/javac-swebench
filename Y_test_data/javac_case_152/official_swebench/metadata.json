@@ -1,0 +1,84 @@
+{
+  "dataset_schema_version": "1.0",
+  "source_case": "152",
+  "duplicate_source_cases": [153, 154, 155, 156, 157, 158, 159],
+  "deduplication_key": "kohlschutter/junixsocket@2f8f096b84fba1ae26058d41cc03df47719379df",
+  "dataset_variant": "SWE-bench-compatible custom record",
+  "instance_id": "kohlschutter__junixsocket-97",
+  "repo": "kohlschutter/junixsocket",
+  "project_version": "2.4.1-SNAPSHOT",
+  "issue_id": 97,
+  "issue_url": "https://github.com/kohlschutter/junixsocket/issues/97",
+  "created_at": "2022-02-06",
+  "created_at_precision": "date",
+  "base_commit": "4f7667c4655712fc7371c0dbab0de5bf785e5d3d",
+  "fix_commit": "2f8f096b84fba1ae26058d41cc03df47719379df",
+  "model_evaluator_image": "yutu0814/javac-case-152-junixsocket:benchmark-v1",
+  "published_image": "yutu0814/javac-case-152-junixsocket:benchmark-v1",
+  "published_image_digest": "sha256:34489d29f08f54938761edd96b22ef7638687867c33e37101fec92a777fbc973",
+  "docker_hub_url": "https://hub.docker.com/r/yutu0814/javac-case-152-junixsocket",
+  "test_source": "official_upstream_regression_logic_minimally_adapted",
+  "test_files": [
+    "benchmark-tests/src/test/java/org/newsclub/net/unix/FileDescriptorCastRegressionTest.java",
+    "benchmark-tests/src/test/java/org/newsclub/net/unix/StdinSocketApp.java"
+  ],
+  "FAIL_TO_PASS": [
+    "org.newsclub.net.unix.FileDescriptorCastRegressionTest.testForkedVMRedirectStdin"
+  ],
+  "FAIL_TO_PASS_COUNT": 1,
+  "PASS_TO_PASS": [
+    "org.newsclub.net.unix.FileDescriptorCastRegressionTest.testStdoutFileDescriptorCast"
+  ],
+  "PASS_TO_PASS_COUNT": 1,
+  "test_command": "build JNI/common jars, javac the isolated harness, then run FileDescriptorCastRegressionTest",
+  "patch_provenance": {
+    "gold_patch_source": "official_upstream_fix_commit_non_test_changes",
+    "gold_patch_authorship": "kohlschutter/junixsocket_upstream",
+    "test_patch_source": "official_upstream_regression_logic_minimally_adapted",
+    "test_patch_authorship": "upstream logic with compatibility harness",
+    "upstream_regression_test_found": true,
+    "adaptation_reason": "the fix commit simultaneously reorganizes 109 test files and production APIs"
+  },
+  "standard_layout": {
+    "schema_version": "2.0",
+    "case_directory": "javac_case_152",
+    "analysis": "analysis/",
+    "patches": "patches/",
+    "official_swebench": "official_swebench/",
+    "evaluator": "evaluator/",
+    "verification": "verification/"
+  },
+  "verification": {
+    "docker_verified": true,
+    "model_evaluator_verified": true,
+    "fix_passes": true,
+    "base_fails": true,
+    "probe_environment": "Docker Desktop Linux amd64",
+    "probe_base_result": "target ERROR; control ok",
+    "probe_gold_result": "target ok; control ok",
+    "evaluation_assets_injected_at_runtime": true,
+    "image_contains_test_patch": false,
+    "image_contains_gold_patch": false,
+    "image_contains_fix_commit": false,
+    "template_version": "1.0",
+    "image_build_id": "case-152-build-1",
+    "image": "yutu0814/javac-case-152-junixsocket:benchmark-v1",
+    "image_id": "sha256:34489d29f08f54938761edd96b22ef7638687867c33e37101fec92a777fbc973",
+    "base_run_id": "case-152-base-1",
+    "gold_run_id": "case-152-gold-1",
+    "base_grading": {
+      "FAIL_TO_PASS": {"failed": 1, "expected": 1},
+      "PASS_TO_PASS": {"passed": 1, "expected": 1},
+      "unexpected_failures": 1
+    },
+    "gold_grading": {
+      "FAIL_TO_PASS": {"passed": 1, "expected": 1},
+      "PASS_TO_PASS": {"passed": 1, "expected": 1},
+      "unexpected_failures": 0
+    }
+  },
+  "notes": [
+    "Source spreadsheet sequences 152-159 are duplicate rows for the same repository and commit; only sequence 152 is materialized.",
+    "The regression requires Linux AF_UNIX sockets and reflective access to ProcessBuilder.Redirect internals supported by the upstream fix."
+  ]
+}

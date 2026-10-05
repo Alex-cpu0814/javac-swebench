@@ -1,0 +1,62 @@
+{
+  "schema_version": "3.0",
+  "kind": "patch_evaluation",
+  "run_id": "case-112-base-1",
+  "label": "base-control",
+  "instance_id": "uclouvain__openjpeg-571",
+  "status": "unresolved",
+  "reason": "expected_test_failed_skipped_or_missing",
+  "started_at": "2026-10-05T08:21:33.984Z",
+  "finished_at": "2026-10-05T08:21:43.050Z",
+  "duration_ms": 9062,
+  "application_order": [
+    "model_patch",
+    "test_patch",
+    "tests"
+  ],
+  "model_patch_sha256": "c738e3e29f2b3dfa53cdb664a32ca73077615715bc72007130c8296a034ec997",
+  "test_patch_sha256": "04a567f6d13d1f8821ab164cf7bc06ad3193278eb6500522430db2cb0d32e93b",
+  "image": {
+    "name": "javac-case-112-openjpeg:benchmark-v1",
+    "id": "sha256:33a22445240b5d6abba03d5c41a277d721fc8940f51aa3e7b7138daeb2f87305",
+    "repo_digests": [
+      "javac-case-112-openjpeg@sha256:33a22445240b5d6abba03d5c41a277d721fc8940f51aa3e7b7138daeb2f87305"
+    ]
+  },
+  "container_exit_code": 1,
+  "phase": {
+    "phase": "tests_complete",
+    "outcome": "completed",
+    "reason": "tests_completed",
+    "test_exit_code": 1,
+    "instance_id": "uclouvain__openjpeg-571"
+  },
+  "grading": {
+    "tests_observed": 3,
+    "FAIL_TO_PASS": {
+      "expected": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0,
+      "missing": 0
+    },
+    "PASS_TO_PASS": {
+      "expected": 2,
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "missing": 0
+    },
+    "unexpected_failures": 1
+  },
+  "logs": {
+    "events": "events.jsonl",
+    "docker_stdout": "docker-run.stdout.raw.log",
+    "docker_stderr": "docker-run.stderr.raw.log",
+    "model_patch": "model-patch.raw.log",
+    "test_patch": "test-patch.raw.log",
+    "project_build": "project-build.raw.log",
+    "tests": "tests.raw.log",
+    "grading": "grading.json"
+  }
+}

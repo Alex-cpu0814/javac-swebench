@@ -1,0 +1,54 @@
+test_read_file (test_array.TestArray) ... ok
+test_slice (test_array.TestArray) ... ok
+test_bool_array (test_call.TestTypes) ... ok
+test_double (test_call.TestTypes) ... ok
+test_enum (test_call.TestTypes) ... ok
+test_equals (test_call.TestTypes) ... ok
+test_float (test_call.TestTypes) ... ok
+test_float_array (test_call.TestTypes) ... ok
+test_getobj (test_call.TestTypes) ... ok
+test_getstring_array (test_call.TestTypes) ... ok
+test_int_array (test_call.TestTypes) ... ok
+test_intobj (test_call.TestTypes) ... ok
+test_long (test_call.TestTypes) ... ok
+test_object_array (test_call.TestTypes) ... ok
+test_short_array (test_call.TestTypes) ... ok
+test_string (test_call.TestTypes) ... ok
+test_string_string_array (test_call.TestTypes) ... ok
+test_close_terminated_thread (test_close_terminated_thread.TestCloseTerminatedThread) ... ok
+test_date_compare (test_compare.TestCompare) ... ok
+test_int_compare (test_compare.TestCompare) ... ok
+test_dir_list (test_dir.TestDir) ... ok
+test_arithmetic_error (test_exceptions.TestExceptions) ... ok
+test_import_error (test_exceptions.TestExceptions) ... ok
+test_index_error (test_exceptions.TestExceptions) ... ok
+test_io_error (test_exceptions.TestExceptions) ... ok
+test_io_exception (test_exceptions.TestExceptions) ... ok
+test_null_pointer_exception (test_exceptions.TestExceptions) ... ok
+test_number_format (test_exceptions.TestExceptions) ... ok
+test_type_error (test_exceptions.TestExceptions) ... ok
+test_value_err (test_exceptions.TestExceptions) ... ok
+test_class_import (test_import.TestImport) ... ok
+test_java_sql (test_import.TestImport) ... ok
+test_not_found (test_import.TestImport) ... ok
+test_restricted_classloader (test_import.TestImport) ... #
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x000075b8331cd63e, pid=410, tid=0x000075b7c27e8640
+#
+# JRE version: OpenJDK Runtime Environment (8.0_502-b07) (build 1.8.0_502-b07)
+# Java VM: OpenJDK 64-Bit Server VM (25.502-b07 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [libpython3.5m.so.1.0+0x10263e]  PyUnicode_AsUTF8AndSize+0xe
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# An error report file with more information is saved as:
+# /testbed/hs_err_pid410.log
+#
+# If you would like to submit a bug report, please visit:
+#   https://github.com/adoptium/adoptium-support/issues
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+/benchmark/case_adapter.sh: line 30:   410 Aborted                 (core dumped) java -classpath "${CASE_CLASSPATH}" -Djava.library.path="${CASE_NATIVE_DIR}" jep.Run /benchmark/run_tests_verbose.py

@@ -1,0 +1,37 @@
+{
+  "instance_id": "ninia__jep-22",
+  "source_project": "ninia/jep",
+  "source_case": "096",
+  "language_pair": "Java-C",
+  "repo": "ninia/jep",
+  "issue_id": 22,
+  "issue_url": "https://github.com/ninia/jep/issues/22",
+  "commit": "767509de81f3a11b1ca54e23619d3226944a141e",
+  "base_commit": "e4f13ea277ce4809688dde766cc9fd173ec6f63d",
+  "base_commit_status": "verified",
+  "fix_commit": "767509de81f3a11b1ca54e23619d3226944a141e",
+  "commit_url": "https://github.com/ninia/jep/commit/767509de81f3a11b1ca54e23619d3226944a141e",
+  "problem_statement": "JEP crashes the JVM when a Jep instance is created on one thread, that thread terminates, and another thread calls close(). Closing must use the current JNI environment instead of the terminated creator thread environment.",
+  "test_source": "synthetic_issue_regression_test",
+  "test_files": [
+    "src/jep/test/TestCloseTerminatedThread.java",
+    "tests/jep_pipe.py",
+    "tests/test_close_terminated_thread.py",
+    "tests/__init__.py"
+  ],
+  "verification_status": "resolved",
+  "FAIL_TO_PASS": [
+    "test_close_terminated_thread.TestCloseTerminatedThread.test_close_terminated_thread"
+  ],
+  "PASS_TO_PASS_COUNT": 78,
+  "case_number": "096",
+  "candidate_id": "ninia__jep-22",
+  "commit_message": "prevent crash reported on issue #22",
+  "source": "https://github.com/ninia/jep/commit/767509de81f3a11b1ca54e23619d3226944a141e",
+  "problem": "Cross-thread Jep.close() may dereference a stale JNIEnv from a terminated creator thread.",
+  "test_strategy": "Create Jep on a worker thread, terminate it, close from the main thread in a child JVM process.",
+  "fail_to_pass": [
+    "test_close_terminated_thread.TestCloseTerminatedThread.test_close_terminated_thread"
+  ],
+  "pass_to_pass_count": 78
+}

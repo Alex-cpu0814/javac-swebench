@@ -1,0 +1,12 @@
+{
+  "instance_id": "ninia__jep-17",
+  "repo": "ninia/jep",
+  "base_commit": "7af56bffed4e06a2bcdb8b70bf0aa5d59721d7e6",
+  "problem_statement": "When a Jep sub-interpreter has populated its per-interpreter Java method cache and is closed, cleanup must clear the cache pointer before releasing the cache. Otherwise repeated interpreter creation and Java imports can leak or destabilize the process. Issue #17 reports stale per-class method caching across OSGi bundle redeploys; the regression test exercises the cache cleanup path during repeated interpreter shutdown.",
+  "hints_text": null,
+  "created_at": "2015-08-10",
+  "version": "3.2.0",
+  "issue_id": 17,
+  "issue_url": "https://github.com/ninia/jep/issues/17",
+  "project_version": "3.2.0"
+}

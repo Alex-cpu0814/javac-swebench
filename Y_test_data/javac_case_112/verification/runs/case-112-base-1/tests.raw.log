@@ -1,0 +1,31 @@
+
+[INFO] tile number 1 / 1
+[INFO] Generated outfile /tmp/issue571.tif.j2k
+encode time: 26 ms 
+encode_issue571 (openjpeg.issue571) ... ok
+
+[INFO] Start to read j2k main header (0).
+[INFO] Main header has been correctly decoded.
+[INFO] No decoded area parameters, set the decoded area to the whole image
+[INFO] Header of tile 1 / 1 has been read.
+[INFO] Tile 1/1 has been decoded.
+[INFO] Image data has been updated with tile 1.
+
+[INFO] Generated Outfile /tmp/issue571.lossless.tif
+decode time: 22 ms
+decode_issue571 (openjpeg.issue571) ... ok
+******Parameters********* 
+ base_filename = /opt/openjpeg-data/input/nonregression/issue571.tif
+ test_filename = /tmp/issue571.lossless.tif
+ nb of Components = 1
+ Non regression test = 1
+ separator Base = 
+ separator Test = 
+ NbFilename to generate from base filename = 0
+ NbFilename to generate from test filename = 0
+************************* 
+Step 1 -> Header comparison
+Step 2 -> measurement comparison
+<DartMeasurement name="NumberOfPixelsWithDifferences_0" type="numeric/int"> 19 </DartMeasurement> 
+<DartMeasurement name="ComponentError_0" type="numeric/double"> 3.000000 </DartMeasurement> 
+lossless_roundtrip (openjpeg.issue571) ... FAIL

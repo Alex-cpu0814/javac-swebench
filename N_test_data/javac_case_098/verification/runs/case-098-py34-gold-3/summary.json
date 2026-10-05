@@ -1,0 +1,62 @@
+{
+  "schema_version": "3.0",
+  "kind": "patch_evaluation",
+  "run_id": "case-098-py34-gold-3",
+  "label": null,
+  "instance_id": "ninia__jep-17",
+  "status": "error",
+  "reason": "protected_test_patch_invalid",
+  "started_at": "2026-09-29T05:35:35.951Z",
+  "finished_at": "2026-09-29T05:35:37.022Z",
+  "duration_ms": 1063,
+  "application_order": [
+    "model_patch",
+    "test_patch",
+    "tests"
+  ],
+  "model_patch_sha256": "7d2a195314c05cdfbfb81f64b966b15ec23be7975b048b5e4b3a04b61d5387de",
+  "test_patch_sha256": "6b4fae1f73a7aee0d04b49c95f6cbc8c51c5aa1f5cd1bb932cdbc0dc722ab022",
+  "image": {
+    "name": "javac-case-098-jep:benchmark-v1",
+    "id": "sha256:3dde98459e09a8a24057ddd5f2c3127e366218aa9acdfd43cd85901e567accf4",
+    "repo_digests": [
+      "javac-case-098-jep@sha256:3dde98459e09a8a24057ddd5f2c3127e366218aa9acdfd43cd85901e567accf4"
+    ]
+  },
+  "container_exit_code": 2,
+  "phase": {
+    "phase": "preflight",
+    "outcome": "infrastructure_error",
+    "reason": "protected_test_patch_invalid",
+    "test_exit_code": null,
+    "instance_id": "ninia__jep-17"
+  },
+  "grading": {
+    "tests_observed": 0,
+    "FAIL_TO_PASS": {
+      "expected": 1,
+      "passed": 0,
+      "failed": 0,
+      "skipped": 0,
+      "missing": 1
+    },
+    "PASS_TO_PASS": {
+      "expected": 78,
+      "passed": 0,
+      "failed": 0,
+      "skipped": 0,
+      "missing": 78
+    },
+    "unexpected_failures": 0
+  },
+  "logs": {
+    "events": "events.jsonl",
+    "docker_stdout": "docker-run.stdout.raw.log",
+    "docker_stderr": "docker-run.stderr.raw.log",
+    "model_patch": null,
+    "test_patch": "test-patch.raw.log",
+    "project_build": null,
+    "tests": null,
+    "grading": "grading.json"
+  }
+}

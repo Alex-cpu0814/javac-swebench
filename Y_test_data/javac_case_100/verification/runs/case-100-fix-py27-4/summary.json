@@ -1,0 +1,60 @@
+{
+  "schema_version": "3.0",
+  "kind": "patch_evaluation",
+  "run_id": "case-100-fix-py27-4",
+  "label": "fix-py27",
+  "instance_id": "ninia__jep-9-exceptions",
+  "status": "error",
+  "reason": "image_unavailable",
+  "started_at": "2026-09-30T01:47:20.354Z",
+  "finished_at": "2026-09-30T01:47:20.695Z",
+  "duration_ms": 344,
+  "application_order": [
+    "model_patch",
+    "test_patch",
+    "tests"
+  ],
+  "model_patch_sha256": "4cf6dbeadf1230efc6053148cebf03d617d139e1cc47f74f122a0590eada353a",
+  "test_patch_sha256": "94503ff465f7e1c45d65bc7aaf9dae803c914b2ff758cd9cb2cbfee8073dc8a1",
+  "image": {
+    "name": "javac-case-100-jep:benchmark-v5",
+    "id": null,
+    "repo_digests": []
+  },
+  "container_exit_code": null,
+  "phase": {
+    "phase": "preflight",
+    "outcome": "infrastructure_error",
+    "reason": "image_unavailable",
+    "test_exit_code": null,
+    "instance_id": "ninia__jep-9-exceptions"
+  },
+  "grading": {
+    "tests_observed": 0,
+    "FAIL_TO_PASS": {
+      "expected": 5,
+      "passed": 0,
+      "failed": 0,
+      "skipped": 0,
+      "missing": 5
+    },
+    "PASS_TO_PASS": {
+      "expected": 69,
+      "passed": 0,
+      "failed": 0,
+      "skipped": 0,
+      "missing": 69
+    },
+    "unexpected_failures": 0
+  },
+  "logs": {
+    "events": "events.jsonl",
+    "docker_stdout": null,
+    "docker_stderr": null,
+    "model_patch": null,
+    "test_patch": null,
+    "project_build": null,
+    "tests": null,
+    "grading": null
+  }
+}

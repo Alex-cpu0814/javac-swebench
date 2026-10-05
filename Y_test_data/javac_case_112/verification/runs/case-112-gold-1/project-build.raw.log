@@ -1,0 +1,228 @@
+CMake Deprecation Warning at CMakeLists.txt:10 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- We will build Z lib from thirdparty
+CMake Deprecation Warning at thirdparty/libz/CMakeLists.txt:3 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- We will build PNG lib from thirdparty
+-- We will build TIFF lib from thirdparty
+CMake Deprecation Warning at thirdparty/libtiff/CMakeLists.txt:1 (CMAKE_MINIMUM_REQUIRED):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- We will build LCMS2 lib from thirdparty
+CMake Deprecation Warning at tests/nonregression/CMakeLists.txt:3 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /opt/openjpeg-build
+[  1%] Building C object thirdparty/libz/CMakeFiles/z.dir/adler32.c.o
+[  2%] Building C object thirdparty/libz/CMakeFiles/z.dir/compress.c.o
+[  2%] Building C object thirdparty/libz/CMakeFiles/z.dir/crc32.c.o
+[  4%] Building C object thirdparty/libz/CMakeFiles/z.dir/deflate.c.o
+ir/t1_generate_luts.c.o
+[  4%] Building C object thirdparty/libz/CMakeFiles/z.dir/gzclose.c.o
+[  5%] Building C object thirdparty/libz/CMakeFiles/z.dir/gzwrite.c.o
+[  6%] Building C object thirdparty/libz/CMakeFiles/z.dir/gzlib.c.o
+[  9%] Building C object tests/CMakeFiles/compare_dump_files.dir/compare_dump_files.c.o
+[  5%] Building C object thirdparty/libz/CMakeFiles/z.dir/gzread.c.o
+[  7%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/cio.c.o
+[  7%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/dwt.c.o
+[  8%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/bio.c.o
+[  8%] Building C object thirdparty/libz/CMakeFiles/z.dir/inflate.c.o
+[  8%] Building C object thirdparty/libpng/CMakeFiles/png.dir/png.c.o
+[  9%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_aux.c.o
+[ 10%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/event.c.o
+[ 11%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmscam02.c.o
+[ 12%] Building C object tests/CMakeFiles/ppm2rgb3.dir/ppm2rgb3.c.o
+[ 12%] Building C object tests/CMakeFiles/compare_raw_files.dir/compare_raw_files.c.o
+[ 12%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_close.c.o
+[ 13%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_codec.c.o
+[ 14%] Building C object thirdparty/libz/CMakeFiles/z.dir/infback.c.o
+[ 15%] Building C object tests/CMakeFiles/compare_dump_files.dir/__/src/bin/common/opj_getopt.c.o
+[ 15%] Building C object tests/CMakeFiles/compare_raw_files.dir/__/src/bin/common/opj_getopt.c.o
+[ 16%] Building C object thirdparty/libpng/CMakeFiles/png.dir/pngerror.c.o
+[ 17%] Linking C executable ../bin/ppm2rgb3
+[ 17%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmscgats.c.o
+[ 17%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/image.c.o
+[ 18%] Building C object thirdparty/libz/CMakeFiles/z.dir/inftrees.c.o
+[ 19%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/invert.c.o
+[ 19%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_color.c.o
+[ 19%] Linking C executable ../../../bin/t1_generate_luts
+[ 19%] Built target ppm2rgb3
+[ 19%] Building C object thirdparty/libpng/CMakeFiles/png.dir/pngget.c.o
+[ 19%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/j2k.c.o
+[ 19%] Linking C executable ../bin/compare_dump_files
+[ 20%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_compress.c.o
+[ 21%] Linking C executable ../bin/compare_raw_files
+[ 21%] Built target t1_generate_luts
+[ 21%] Building C object thirdparty/libz/CMakeFiles/z.dir/inffast.c.o
+[ 22%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/jp2.c.o
+[ 23%] Building C object thirdparty/libpng/CMakeFiles/png.dir/pngmem.c.o
+[ 24%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmscnvrt.c.o
+[ 24%] Built target compare_dump_files
+[ 24%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/mct.c.o
+[ 24%] Built target compare_raw_files
+[ 25%] Building C object thirdparty/libz/CMakeFiles/z.dir/trees.c.o
+[ 25%] Building C object thirdparty/libz/CMakeFiles/z.dir/uncompr.c.o
+[ 25%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_dir.c.o
+[ 25%] Building C object thirdparty/libpng/CMakeFiles/png.dir/pngpread.c.o
+[ 26%] Building C object thirdparty/libpng/CMakeFiles/png.dir/pngread.c.o
+[ 27%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/mqc.c.o
+[ 28%] Building C object thirdparty/libz/CMakeFiles/z.dir/zutil.c.o
+[ 28%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmserr.c.o
+[ 29%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmsgamma.c.o
+[ 30%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/openjpeg.c.o
+[ 31%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_dirinfo.c.o
+[ 32%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_dirread.c.o
+[ 33%] Building C object thirdparty/libpng/CMakeFiles/png.dir/pngrio.c.o
+[ 33%] Building C object thirdparty/libpng/CMakeFiles/png.dir/pngrtran.c.o
+[ 33%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_dirwrite.c.o
+[ 34%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmsgmt.c.o
+[ 35%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_dumpmode.c.o
+[ 35%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmshalf.c.o
+[ 36%] Building C object thirdparty/libpng/CMakeFiles/png.dir/pngrutil.c.o
+[ 37%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmsintrp.c.o
+[ 37%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_error.c.o
+[ 38%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_extension.c.o
+[ 38%] Building C object thirdparty/libpng/CMakeFiles/png.dir/pngset.c.o
+[ 38%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmsio0.c.o
+[ 39%] Building C object thirdparty/libpng/CMakeFiles/png.dir/pngtrans.c.o
+[ 39%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_fax3sm.c.o
+[ 40%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_fax3.c.o
+[ 41%] Building C object thirdparty/libpng/CMakeFiles/png.dir/pngwrite.c.o
+[ 42%] Linking C static library ../lib/libz.a
+[ 43%] Building C object thirdparty/libpng/CMakeFiles/png.dir/pngwtran.c.o
+[ 44%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_flush.c.o
+[ 44%] Built target z
+[ 44%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/opj_clock.c.o
+[ 45%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmsio1.c.o
+[ 45%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmslut.c.o
+[ 45%] Building C object thirdparty/libpng/CMakeFiles/png.dir/pngwutil.c.o
+[ 45%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/raw.c.o
+[ 46%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/pi.c.o
+[ 47%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/t1.c.o
+[ 48%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmsmd5.c.o
+[ 48%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_getimage.c.o
+[ 49%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_jbig.c.o
+[ 49%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/t2.c.o
+[ 49%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmsnamed.c.o
+[ 50%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmsmtrx.c.o
+[ 51%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmsopt.c.o
+[ 52%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/tcd.c.o
+[ 52%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_jpeg.c.o
+[ 53%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/tgt.c.o
+[ 53%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmspack.c.o
+[ 54%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_luv.c.o
+[ 55%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_lzw.c.o
+[ 55%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_next.c.o
+[ 55%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/function_list.c.o
+[ 56%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_ojpeg.c.o
+[ 56%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_open.c.o
+[ 57%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmspcs.c.o
+[ 58%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmsplugin.c.o
+[ 59%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_packbits.c.o
+[ 59%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmsps2.c.o
+[ 59%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_pixarlog.c.o
+[ 60%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_predict.c.o
+[ 61%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_print.c.o
+[ 62%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmssamp.c.o
+[ 62%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_read.c.o
+[ 63%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_strip.c.o
+[ 63%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmssm.c.o
+[ 63%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_swab.c.o
+[ 65%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_thunder.c.o
+[ 65%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_version.c.o
+[ 67%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_warning.c.o
+[ 66%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmstypes.c.o
+[ 67%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_write.c.o
+[ 67%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmsvirt.c.o
+[ 68%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmswtpnt.c.o
+[ 69%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_zip.c.o
+[ 70%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmsxform.c.o
+[ 70%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_jpeg_12.c.o
+[ 71%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_lzma.c.o
+[ 72%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_unix.c.o
+[ 73%] Linking C static library ../lib/libpng.a
+[ 73%] Built target png
+[ 73%] Linking C static library ../lib/libtiff.a
+[ 73%] Built target tiff
+[ 74%] Linking C static library ../../../bin/libopenjp2.a
+[ 74%] Built target openjp2
+[ 75%] Building C object tests/unit/CMakeFiles/testempty0.dir/testempty0.c.o
+[ 76%] Building C object tests/CMakeFiles/compare_images.dir/compare_images.c.o
+[ 77%] Building C object tests/CMakeFiles/j2k_random_tile_access.dir/j2k_random_tile_access.c.o
+[ 77%] Building C object tests/CMakeFiles/test_tile_encoder.dir/test_tile_encoder.c.o
+[ 78%] Building C object tests/CMakeFiles/test_tile_decoder.dir/test_tile_decoder.c.o
+[ 78%] Building C object tests/unit/CMakeFiles/testempty1.dir/testempty1.c.o
+[ 79%] Building C object tests/unit/CMakeFiles/testempty2.dir/testempty2.c.o
+[ 79%] Building C object tests/CMakeFiles/compare_images.dir/__/src/bin/common/opj_getopt.c.o
+[ 79%] Building C object tests/CMakeFiles/compare_images.dir/__/src/bin/jp2/convert.c.o
+[ 80%] Building C object tests/CMakeFiles/compare_images.dir/__/src/bin/jp2/converttif.c.o
+[ 81%] Linking C executable ../../bin/testempty0
+[ 82%] Linking C executable ../../bin/testempty1
+[ 83%] Linking C executable ../../bin/testempty2
+[ 83%] Built target testempty0
+[ 83%] Linking C executable ../bin/test_tile_encoder
+[ 83%] Built target testempty1
+[ 83%] Linking C executable ../bin/test_tile_decoder
+[ 83%] Built target testempty2
+[ 84%] Linking C executable ../bin/j2k_random_tile_access
+[ 84%] Built target test_tile_encoder
+[ 84%] Built target test_tile_decoder
+[ 84%] Built target j2k_random_tile_access
+[ 84%] Linking C executable ../bin/compare_images
+[ 84%] Built target compare_images
+[ 84%] Linking C static library ../lib/liblcms2.a
+[ 84%] Built target lcms2
+[ 85%] Building C object src/bin/jp2/CMakeFiles/opj_decompress.dir/convertbmp.c.o
+[ 85%] Building C object src/bin/jp2/CMakeFiles/opj_compress.dir/opj_compress.c.o
+[ 85%] Building C object src/bin/jp2/CMakeFiles/opj_dump.dir/convert.c.o
+[ 88%] Building C object src/bin/jp2/CMakeFiles/opj_compress.dir/__/common/color.c.o
+[ 88%] Building C object src/bin/jp2/CMakeFiles/opj_dump.dir/convertbmp.c.o
+[ 88%] Building C object src/bin/jp2/CMakeFiles/opj_compress.dir/convertbmp.c.o
+[ 88%] Building C object src/bin/jp2/CMakeFiles/opj_dump.dir/converttif.c.o
+[ 89%] Building C object src/bin/jp2/CMakeFiles/opj_decompress.dir/opj_decompress.c.o
+[ 90%] Building C object src/bin/jp2/CMakeFiles/opj_dump.dir/index.c.o
+[ 91%] Building C object src/bin/jp2/CMakeFiles/opj_compress.dir/convert.c.o
+[ 91%] Building C object src/bin/jp2/CMakeFiles/opj_decompress.dir/convert.c.o
+[ 92%] Building C object src/bin/jp2/CMakeFiles/opj_dump.dir/__/common/opj_getopt.c.o
+[ 93%] Building C object src/bin/jp2/CMakeFiles/opj_dump.dir/opj_dump.c.o
+[ 93%] Building C object src/bin/jp2/CMakeFiles/opj_decompress.dir/index.c.o
+[ 93%] Building C object src/bin/jp2/CMakeFiles/opj_compress.dir/__/common/opj_getopt.c.o
+[ 93%] Building C object src/bin/jp2/CMakeFiles/opj_dump.dir/__/common/color.c.o
+[ 93%] Building C object src/bin/jp2/CMakeFiles/opj_compress.dir/index.c.o
+[ 93%] Building C object src/bin/jp2/CMakeFiles/opj_compress.dir/convertpng.c.o
+[ 94%] Building C object src/bin/jp2/CMakeFiles/opj_compress.dir/converttif.c.o
+[ 95%] Building C object src/bin/jp2/CMakeFiles/opj_dump.dir/convertpng.c.o
+[ 96%] Building C object src/bin/jp2/CMakeFiles/opj_decompress.dir/__/common/color.c.o
+[ 97%] Building C object src/bin/jp2/CMakeFiles/opj_decompress.dir/__/common/opj_getopt.c.o
+[ 97%] Building C object src/bin/jp2/CMakeFiles/opj_decompress.dir/converttif.c.o
+[ 98%] Building C object src/bin/jp2/CMakeFiles/opj_decompress.dir/convertpng.c.o
+[ 99%] Linking C executable ../../../bin/opj_dump
+[100%] Linking C executable ../../../bin/opj_compress
+[100%] Built target opj_dump
+[100%] Built target opj_compress
+[100%] Linking C executable ../../../bin/opj_decompress
+[100%] Built target opj_decompress

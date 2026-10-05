@@ -1,0 +1,6 @@
+{
+  "phase": "preflight",
+  "outcome": "infrastructure_error",
+  "reason": "protected_test_patch_invalid",
+  "test_exit_code": null
+}

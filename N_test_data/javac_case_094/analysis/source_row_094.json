@@ -1,0 +1,27 @@
+{
+  "instance_id": "ninia__jep-40",
+  "source_project": "ninia/jep",
+  "source_case": "094",
+  "language_pair": "Java-C",
+  "repo": "ninia/jep",
+  "issue_id": 40,
+  "issue_url": "https://github.com/ninia/jep/issues/40",
+  "commit": "8144158fdaf3db44681e5eb4ef9a77907e4746b4",
+  "base_commit": "bc2edaf0242736c2a2940104eebc6aed5a3ad9e6",
+  "base_commit_status": "verified",
+  "fix_commit": "8144158fdaf3db44681e5eb4ef9a77907e4746b4",
+  "commit_url": "https://github.com/ninia/jep/commit/8144158fdaf3db44681e5eb4ef9a77907e4746b4",
+  "problem_statement": "JEP fails to convert a Python dictionary containing None keys or values into a Java Map. A None key or value should be represented as Java null without causing the entire conversion to fail.",
+  "test_source": "dataset_construction_test_derived_from_later_upstream_issue_test",
+  "test_files": [
+    "src/jep/test/TestNoneDictionary.java",
+    "runtests.py",
+    "tests/__init__.py",
+    "tests/test_none_dictionary.py"
+  ],
+  "verification_status": "resolved",
+  "FAIL_TO_PASS": [
+    "test_none_dictionary.TestNoneDictionaryRegression.test_none_dictionary"
+  ],
+  "PASS_TO_PASS_COUNT": 95
+}

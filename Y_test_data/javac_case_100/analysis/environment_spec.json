@@ -1,0 +1,38 @@
+{
+  "instance_id": "ninia__jep-9-exceptions",
+  "task_level": "integration",
+  "validation_type": "official_exception_mapping_regression",
+  "environment": "requires_python2_jvm_native_build",
+  "python_version_target": "2.7.18",
+  "java_requirement": "OpenJDK 8",
+  "native_requirement": "case-specific native build toolchain",
+  "build_system": "repository setup.py from Base commit",
+  "test_execution": "python setup.py build; java -classpath build/java/jep.jar jep.Run /benchmark/run_tests_verbose.py",
+  "runtime_verified": true,
+  "notes": [],
+  "reproduction_status": "resolved",
+  "base_commit": "bbf96b5cbb83fe9e4edef71d410d29460084d5fc",
+  "fix_commit": "d2ab3f0343a518948ee44f09279e7ccf6922b856",
+  "test_source": "official_upstream_regression_test",
+  "test_files": [
+    "tests/test_exceptions.py",
+    "tests/test_import.py"
+  ],
+  "FAIL_TO_PASS": [
+    "test_exceptions.TestExceptions.test_io_error",
+    "test_exceptions.TestExceptions.test_type_error",
+    "test_exceptions.TestExceptions.test_value_err",
+    "test_exceptions.TestExceptions.test_arithmetic_error",
+    "test_import.TestImport.test_not_found"
+  ],
+  "PASS_TO_PASS_COUNT": 69,
+  "verification": {
+    "base_fails": true,
+    "fix_passes": true,
+    "template_version": "1.0",
+    "evaluation_assets_injected_at_runtime": true,
+    "image_contains_test_patch": false,
+    "image_contains_gold_patch": false,
+    "image_contains_fix_commit": false
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "instance_id": "ninia__jep-17-cache",
+  "source_project": "ninia/jep",
+  "source_case": "099",
+  "language_pair": "Java-C",
+  "repo": "ninia/jep",
+  "issue_id": 17,
+  "issue_url": "https://github.com/ninia/jep/issues/17",
+  "commit": "778b516930bdc11ecbb7751d560d373964009639",
+  "base_commit": "b1ab138dd6d492c7547e24d0b117aeafb112613d",
+  "base_commit_status": "verified",
+  "fix_commit": "778b516930bdc11ecbb7751d560d373964009639",
+  "commit_url": "https://github.com/ninia/jep/commit/778b516930bdc11ecbb7751d560d373964009639",
+  "problem_statement": "JEP must keep Java method metadata scoped to each Jep interpreter. The Base version uses a process-global class-name cache, so two same-named classes loaded by different ClassLoaders can reuse stale methods. The fix ties the cache to each sub-interpreter.",
+  "test_source": "synthetic_classloader_regression_test",
+  "test_files": [
+    "src/jep/test/TestClassLoaderMethodCache.java",
+    "tests/jep_pipe.py",
+    "tests/test_classloader_method_cache.py",
+    "tests/__init__.py"
+  ],
+  "verification_status": "resolved",
+  "FAIL_TO_PASS": [
+    "test_classloader_method_cache.TestClassLoaderMethodCache.test_classloader_method_cache"
+  ],
+  "PASS_TO_PASS_COUNT": 78,
+  "case_number": 99,
+  "candidate_id": "ninia__jep-17-cache",
+  "commit_message": "fix issue #17 with smarter method caching",
+  "source": "https://github.com/ninia/jep/commit/778b516930bdc11ecbb7751d560d373964009639",
+  "problem": "A process-global Java class-name to method cache can reuse method metadata across Jep instances with different ClassLoaders.",
+  "test_strategy": "Load two same-named Java classes with different methods through separate URLClassLoaders and exercise them in sequential Jep instances.",
+  "fail_to_pass": [
+    "test_classloader_method_cache.TestClassLoaderMethodCache.test_classloader_method_cache"
+  ],
+  "pass_to_pass_count": 78
+}

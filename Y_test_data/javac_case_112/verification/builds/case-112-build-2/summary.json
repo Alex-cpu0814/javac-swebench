@@ -1,0 +1,29 @@
+{
+  "schema_version": "3.0",
+  "kind": "image_build",
+  "build_id": "case-112-build-2",
+  "status": "success",
+  "reason": "image_built_and_audited",
+  "started_at": "2026-10-05T08:19:22.464Z",
+  "finished_at": "2026-10-05T08:21:03.193Z",
+  "duration_ms": 100735,
+  "source": {
+    "repo": "https://github.com/uclouvain/openjpeg.git",
+    "base_commit": "4f5ec07c315872bdee0885be085ebf57cede2db9"
+  },
+  "image": {
+    "name": "javac-case-112-openjpeg:benchmark-v1",
+    "id": "sha256:33a22445240b5d6abba03d5c41a277d721fc8940f51aa3e7b7138daeb2f87305",
+    "repo_digests": [
+      "javac-case-112-openjpeg@sha256:33a22445240b5d6abba03d5c41a277d721fc8940f51aa3e7b7138daeb2f87305"
+    ]
+  },
+  "logs": {
+    "events": "events.jsonl",
+    "docker_build_stdout": "docker-build.stdout.raw.log",
+    "docker_build_stderr": "docker-build.stderr.raw.log",
+    "image_audit_stdout": "image-audit.stdout.raw.log",
+    "image_audit_stderr": "image-audit.stderr.raw.log",
+    "image_audit": "image-audit.json"
+  }
+}

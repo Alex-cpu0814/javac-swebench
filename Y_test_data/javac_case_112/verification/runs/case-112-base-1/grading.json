@@ -1,0 +1,15 @@
+{
+  "schema_version": "3.0",
+  "run_id": "case-112-base-1",
+  "tests_observed": 3,
+  "FAIL_TO_PASS": {
+    "openjpeg.issue571.lossless_roundtrip": "FAILED"
+  },
+  "PASS_TO_PASS": {
+    "openjpeg.issue571.encode_issue571": "PASSED",
+    "openjpeg.issue571.decode_issue571": "PASSED"
+  },
+  "unexpected_failures": [
+    "openjpeg.issue571.lossless_roundtrip"
+  ]
+}

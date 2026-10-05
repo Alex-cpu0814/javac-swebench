@@ -1,0 +1,13 @@
+{
+  "instance_id": "ninia__jep-9-exceptions",
+  "repo": "ninia/jep",
+  "base_commit": "bbf96b5cbb83fe9e4edef71d410d29460084d5fc",
+  "problem_statement": "JEP should map common Java exceptions to the corresponding Python built-in exceptions and preserve correct import-hook behavior.",
+  "hints_text": null,
+  "created_at": "2015-04-27",
+  "version": "3.4.0",
+  "issue_id": null,
+  "issue_url": "https://github.com/ninia/jep/pull/9",
+  "project_version": "3.4.0",
+  "pull_request_id": 9
+}

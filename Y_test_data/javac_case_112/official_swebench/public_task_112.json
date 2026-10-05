@@ -1,0 +1,13 @@
+{
+  "instance_id": "uclouvain__openjpeg-571",
+  "repo": "uclouvain/openjpeg",
+  "base_commit": "4f5ec07c315872bdee0885be085ebf57cede2db9",
+  "problem_statement": "OpenJPEG lossless compression is not bit-exact on 32-bit Linux/x86. Compressing issue571.tif with the default lossless settings and then decoding it produces a TIFF whose pixels differ from the input. The lossless round trip must preserve every image component exactly.",
+  "hints_text": null,
+  "created_at": "2015-09-01",
+  "version": "2.1.0",
+  "issue_id": 571,
+  "issue_url": "https://github.com/uclouvain/openjpeg/issues/571",
+  "project_version": "2.1.0",
+  "pull_request_id": 579
+}

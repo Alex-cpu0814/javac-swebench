@@ -1,0 +1,38 @@
+{
+  "instance_id": "ninia__jep-9-exceptions",
+  "source_project": "ninia/jep",
+  "source_case": "100",
+  "language_pair": "Java-C",
+  "repo": "ninia/jep",
+  "issue_id": null,
+  "issue_url": "https://github.com/ninia/jep/pull/9",
+  "commit": "d2ab3f0343a518948ee44f09279e7ccf6922b856",
+  "base_commit": "bbf96b5cbb83fe9e4edef71d410d29460084d5fc",
+  "base_commit_status": "verified",
+  "fix_commit": "d2ab3f0343a518948ee44f09279e7ccf6922b856",
+  "commit_url": "https://github.com/ninia/jep/commit/d2ab3f0343a518948ee44f09279e7ccf6922b856",
+  "problem_statement": "JEP should map common Java exceptions to the corresponding Python built-in exceptions and preserve correct import-hook behavior.",
+  "test_source": "official_upstream_regression_test",
+  "test_files": [
+    "tests/test_exceptions.py",
+    "tests/test_import.py"
+  ],
+  "verification_status": "resolved",
+  "FAIL_TO_PASS": [
+    "test_exceptions.TestExceptions.test_io_error",
+    "test_exceptions.TestExceptions.test_type_error",
+    "test_exceptions.TestExceptions.test_value_err",
+    "test_exceptions.TestExceptions.test_arithmetic_error",
+    "test_import.TestImport.test_not_found"
+  ],
+  "PASS_TO_PASS_COUNT": 69,
+  "case_number": 100,
+  "candidate_id": "ninia__jep-9-exceptions",
+  "pull_request_id": 9,
+  "commit_message": "improved import, improved exception handling",
+  "source": "https://github.com/ninia/jep/commit/d2ab3f0343a518948ee44f09279e7ccf6922b856",
+  "problem": "Common Java exceptions should map to corresponding Python built-in exceptions, and Java class imports should raise ImportError when a class is unavailable.",
+  "test_strategy": "Apply the official exception and import test changes to Base, then compare the five discriminating tests and the existing regression suite against the Fix.",
+  "fail_to_pass_count": 5,
+  "pass_to_pass_count": 69
+}

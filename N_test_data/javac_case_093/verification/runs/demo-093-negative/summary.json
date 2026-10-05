@@ -1,0 +1,62 @@
+{
+  "schema_version": "3.0",
+  "kind": "patch_evaluation",
+  "run_id": "demo-093-negative",
+  "label": "demo-negative",
+  "instance_id": "ninia__jep-79",
+  "status": "unresolved",
+  "reason": "expected_test_failed_skipped_or_missing",
+  "started_at": "2026-09-23T01:20:44.557Z",
+  "finished_at": "2026-09-23T01:20:57.614Z",
+  "duration_ms": 13061,
+  "application_order": [
+    "model_patch",
+    "test_patch",
+    "tests"
+  ],
+  "model_patch_sha256": "7190e4b63d901a344c5dc946bf91c4a68c3b578b89ae9f27f6f747368d950e8f",
+  "test_patch_sha256": "135ebdfa4f6b25128fb56517ca18dc9b8b44bfff3cb530c79725c92e96f78dca",
+  "image": {
+    "name": "yutu0814/javac-case-093-jep:benchmark-v3",
+    "id": "sha256:acc01f758d28a94ab99d3e35eeaee06bd65f9a119daf4b2522e469c6994e3942",
+    "repo_digests": [
+      "yutu0814/javac-case-093-jep@sha256:acc01f758d28a94ab99d3e35eeaee06bd65f9a119daf4b2522e469c6994e3942"
+    ]
+  },
+  "container_exit_code": 1,
+  "phase": {
+    "phase": "tests_complete",
+    "outcome": "completed",
+    "reason": "tests_completed",
+    "test_exit_code": 134,
+    "instance_id": "ninia__jep-79"
+  },
+  "grading": {
+    "tests_observed": 0,
+    "FAIL_TO_PASS": {
+      "expected": 1,
+      "passed": 0,
+      "failed": 0,
+      "skipped": 0,
+      "missing": 1
+    },
+    "PASS_TO_PASS": {
+      "expected": 130,
+      "passed": 0,
+      "failed": 0,
+      "skipped": 0,
+      "missing": 130
+    },
+    "unexpected_failures": 0
+  },
+  "logs": {
+    "events": "events.jsonl",
+    "docker_stdout": "docker-run.stdout.raw.log",
+    "docker_stderr": "docker-run.stderr.raw.log",
+    "model_patch": "model-patch.raw.log",
+    "test_patch": "test-patch.raw.log",
+    "project_build": "project-build.raw.log",
+    "tests": "tests.raw.log",
+    "grading": "grading.json"
+  }
+}

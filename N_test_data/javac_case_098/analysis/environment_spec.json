@@ -1,0 +1,44 @@
+{
+  "instance_id": "ninia__jep-17",
+  "task_level": "integration",
+  "validation_type": "official_memory_cleanup_regression_wrapper",
+  "environment": "requires_python3_jvm_native_build",
+  "python_version_target": "3.4.10",
+  "java_requirement": "OpenJDK 8",
+  "native_requirement": "case-specific native build toolchain",
+  "build_system": "repository setup.py from Base commit",
+  "test_execution": "python setup.py build; java -classpath build/java/jep-3.2.0.jar:build/java/jep.test-3.2.0.jar jep.Run /benchmark/run_tests_verbose.py",
+  "runtime_verified": false,
+  "notes": [
+    "Issue #17 concerns stale Java method caching across OSGi bundle redeploys.",
+    "The Base commit already contains the official TestMemoryLeaks Java stress class; the protected patch wraps it in the repository unittest runner.",
+    "The Fix changes Py_XDECREF to Py_CLEAR for the per-interpreter fqnToPyJmethods cache during close."
+  ],
+  "reproduction_status": "pending",
+  "base_commit": "7af56bffed4e06a2bcdb8b70bf0aa5d59721d7e6",
+  "fix_commit": "340788b3ae7a3e4ccfc610f73d43afeba508241c",
+  "test_source": "official_existing_memory_stress_test_wrapped_for_unittest_runner",
+  "test_files": [
+    "src/jep/test/TestMemoryLeaks.java",
+    "tests/__init__.py",
+    "tests/jep_pipe.py",
+    "tests/test_memory_leaks.py"
+  ],
+  "FAIL_TO_PASS": [
+    "test_memory_leaks.TestMemoryLeaks.test_memory_cycles"
+  ],
+  "PASS_TO_PASS_COUNT": 78,
+  "verification": {
+    "docker_verified": false,
+    "model_evaluator_verified": false,
+    "base_fails": null,
+    "fix_passes": null,
+    "status": "pending",
+    "model_evaluator_verification_type": "isolated_runtime_injection_with_positive_and_negative_controls",
+    "evaluation_assets_injected_at_runtime": true,
+    "image_contains_test_patch": false,
+    "image_contains_gold_patch": false,
+    "image_contains_fix_commit": false,
+    "template_version": "1.0"
+  }
+}

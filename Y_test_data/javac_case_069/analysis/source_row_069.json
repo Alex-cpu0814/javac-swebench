@@ -1,0 +1,32 @@
+{
+  "instance_id": "LWJGL__lwjgl3-409",
+  "source_project": "LWJGL/lwjgl3",
+  "source_case": "069",
+  "language_pair": "Java-C",
+  "repo": "LWJGL/lwjgl3",
+  "issue_id": 409,
+  "issue_url": "https://github.com/LWJGL/lwjgl3/issues/409",
+  "commit": "94f8bd69e176be3e48b4376281fed778e76ab8df",
+  "base_commit": "427e278dc2402aca025cacd58a80eb4eaa8c4832",
+  "base_commit_status": "verified",
+  "fix_commit": "94f8bd69e176be3e48b4376281fed778e76ab8df",
+  "commit_url": "https://github.com/LWJGL/lwjgl3/commit/94f8bd69e176be3e48b4376281fed778e76ab8df",
+  "problem_statement": "LWJGL text decoding can return incorrect strings when a direct ByteBuffer has a non-zero position. The decoding helpers must use the buffer base address together with the explicit offset.",
+  "test_source": "official_upstream_regression_test",
+  "test_files": [
+    "modules/lwjgl/core/src/test/java/org/lwjgl/system/MemoryUtilTest.java"
+  ],
+  "verification_status": "resolved",
+  "FAIL_TO_PASS": [
+    "org.lwjgl.system.MemoryUtilTest.testTextDecoding"
+  ],
+  "PASS_TO_PASS_COUNT": 1,
+  "case_number": 69,
+  "candidate_id": "JC-009",
+  "dataset": "Java-C",
+  "test_source_files": [
+    "modules/lwjgl/core/src/test/java/org/lwjgl/system/MemoryUtilTest.java"
+  ],
+  "selection_reason": "含测试源码候选; official MemoryUtilTest.testTextDecoding",
+  "source_workbook": "E:/CLB_Swe-bench/official_test_statistics/official_test_statistics_visual_no_android.xlsx"
+}

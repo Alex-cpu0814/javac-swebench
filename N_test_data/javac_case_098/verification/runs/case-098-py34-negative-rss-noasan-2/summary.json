@@ -1,0 +1,62 @@
+{
+  "schema_version": "3.0",
+  "kind": "patch_evaluation",
+  "run_id": "case-098-py34-negative-rss-noasan-2",
+  "label": null,
+  "instance_id": "ninia__jep-17",
+  "status": "unresolved",
+  "reason": "expected_test_failed_skipped_or_missing",
+  "started_at": "2026-09-29T07:28:20.481Z",
+  "finished_at": "2026-09-29T07:31:32.380Z",
+  "duration_ms": 191922,
+  "application_order": [
+    "model_patch",
+    "test_patch",
+    "tests"
+  ],
+  "model_patch_sha256": "7190e4b63d901a344c5dc946bf91c4a68c3b578b89ae9f27f6f747368d950e8f",
+  "test_patch_sha256": "ec668c9da7d4f0d54281f7e9829b101c184f4f87aa5a164aa071394d692addcf",
+  "image": {
+    "name": "javac-case-098-jep:benchmark-v1",
+    "id": "sha256:3dde98459e09a8a24057ddd5f2c3127e366218aa9acdfd43cd85901e567accf4",
+    "repo_digests": [
+      "javac-case-098-jep@sha256:3dde98459e09a8a24057ddd5f2c3127e366218aa9acdfd43cd85901e567accf4"
+    ]
+  },
+  "container_exit_code": 0,
+  "phase": {
+    "phase": "tests_complete",
+    "outcome": "completed",
+    "reason": "tests_completed",
+    "test_exit_code": 0,
+    "instance_id": "ninia__jep-17"
+  },
+  "grading": {
+    "tests_observed": 78,
+    "FAIL_TO_PASS": {
+      "expected": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "missing": 0
+    },
+    "PASS_TO_PASS": {
+      "expected": 78,
+      "passed": 77,
+      "failed": 0,
+      "skipped": 0,
+      "missing": 1
+    },
+    "unexpected_failures": 0
+  },
+  "logs": {
+    "events": "events.jsonl",
+    "docker_stdout": "docker-run.stdout.raw.log",
+    "docker_stderr": "docker-run.stderr.raw.log",
+    "model_patch": "model-patch.raw.log",
+    "test_patch": "test-patch.raw.log",
+    "project_build": "project-build.raw.log",
+    "tests": "tests.raw.log",
+    "grading": "grading.json"
+  }
+}

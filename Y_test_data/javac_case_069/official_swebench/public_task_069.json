@@ -1,0 +1,12 @@
+{
+  "instance_id": "LWJGL__lwjgl3-409",
+  "repo": "LWJGL/lwjgl3",
+  "base_commit": "427e278dc2402aca025cacd58a80eb4eaa8c4832",
+  "problem_statement": "LWJGL text decoding can return incorrect strings when a direct ByteBuffer has a non-zero position. The decoding helpers must use the buffer base address together with the explicit offset.",
+  "hints_text": null,
+  "created_at": "2018-08-29",
+  "version": "3.2.1",
+  "issue_id": 409,
+  "issue_url": "https://github.com/LWJGL/lwjgl3/issues/409",
+  "project_version": "3.2.1"
+}

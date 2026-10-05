@@ -1,0 +1,48 @@
+{
+  "instance_id": "ninia__jep-40",
+  "task_level": "integration",
+  "validation_type": "base_fix_regression",
+  "environment": "eclipse-temurin:8-jdk-jammy",
+  "python_version_target": "CPython 3.5.3",
+  "java_requirement": "OpenJDK 8",
+  "native_requirement": "case-specific native build toolchain",
+  "build_system": "repository build system at Base commit",
+  "test_execution": "python setup.py test",
+  "runtime_verified": true,
+  "notes": [],
+  "reproduction_status": "resolved",
+  "base_commit": "bc2edaf0242736c2a2940104eebc6aed5a3ad9e6",
+  "fix_commit": "8144158fdaf3db44681e5eb4ef9a77907e4746b4",
+  "test_source": "dataset_construction_test_derived_from_later_upstream_issue_test",
+  "test_files": [
+    "src/jep/test/TestNoneDictionary.java",
+    "runtests.py",
+    "tests/__init__.py",
+    "tests/test_none_dictionary.py"
+  ],
+  "FAIL_TO_PASS": [
+    "test_none_dictionary.TestNoneDictionaryRegression.test_none_dictionary"
+  ],
+  "PASS_TO_PASS_COUNT": 95,
+  "verification": {
+    "docker_verified": true,
+    "model_evaluator_verified": true,
+    "fix_passes": true,
+    "base_fails": true,
+    "model_evaluator_verification_type": "isolated_runtime_injection_with_positive_and_negative_controls",
+    "evaluation_assets_injected_at_runtime": true,
+    "image_contains_test_patch": false,
+    "image_contains_gold_patch": false,
+    "image_contains_fix_commit": false,
+    "template_version": "1.0"
+  },
+  "repo": "ninia/jep",
+  "base_image": "eclipse-temurin:8-jdk-jammy",
+  "glibc": "2.17",
+  "python": "CPython 3.5.3",
+  "java": "OpenJDK 8",
+  "compiler": "GCC",
+  "test_command": "python setup.py test",
+  "base_failure": "None dictionary conversion regression",
+  "fix_result": "96 tests, OK"
+}

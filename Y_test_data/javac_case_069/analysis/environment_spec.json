@@ -1,0 +1,80 @@
+{
+  "instance_id": "LWJGL__lwjgl3-409",
+  "task_level": "integration",
+  "validation_type": "base_fix_regression",
+  "environment": "javac-case-069-lwjgl3:benchmark-v1",
+  "python_version_target": "3.10",
+  "java_requirement": "OpenJDK 8",
+  "native_requirement": "case-specific native build toolchain",
+  "build_system": "Ant 1.9.3+",
+  "test_execution": "ant -Dbuild.offline=true -Dbinding.*=false compile-templates compile; javac -cp bin/classes/lwjgl/core:bin/libs/java/jsr305.jar:bin/libs/java/testng.jar -d bin/classes/test modules/lwjgl/core/src/test/java/org/lwjgl/system/MemoryUtilTest.java; java -ea -Djava.library.path=bin/libs:bin/libs/linux/x64 -cp bin/classes/lwjgl/core:bin/classes/test:bin/libs/java/testng.jar:bin/libs/java/jcommander.jar org.testng.TestNG -verbose 2 -testclass org.lwjgl.system.MemoryUtilTest",
+  "runtime_verified": true,
+  "notes": [],
+  "reproduction_status": "resolved",
+  "base_commit": "427e278dc2402aca025cacd58a80eb4eaa8c4832",
+  "fix_commit": "94f8bd69e176be3e48b4376281fed778e76ab8df",
+  "test_source": "official_upstream_regression_test",
+  "test_files": [
+    "modules/lwjgl/core/src/test/java/org/lwjgl/system/MemoryUtilTest.java"
+  ],
+  "FAIL_TO_PASS": [
+    "org.lwjgl.system.MemoryUtilTest.testTextDecoding"
+  ],
+  "PASS_TO_PASS_COUNT": 1,
+  "verification": {
+    "docker_verified": true,
+    "model_evaluator_verified": true,
+    "fix_passes": true,
+    "base_fails": true,
+    "model_evaluator_verification_type": "isolated_runtime_injection_with_core_only_headless_TestNG",
+    "evaluation_assets_injected_at_runtime": true,
+    "image_contains_test_patch": false,
+    "image_contains_gold_patch": false,
+    "image_contains_fix_commit": false,
+    "template_version": "1.0",
+    "image_build_id": "case-069-build-8",
+    "image": "javac-case-069-lwjgl3:benchmark-v6",
+    "gold_run_id": "case-069-gold-7",
+    "base_run_id": "case-069-base-3",
+    "gold_grading": {
+      "FAIL_TO_PASS": {
+        "passed": 1,
+        "expected": 1
+      },
+      "PASS_TO_PASS": {
+        "passed": 1,
+        "expected": 1
+      },
+      "unexpected_failures": 0
+    },
+    "base_grading": {
+      "FAIL_TO_PASS": {
+        "failed": 1,
+        "expected": 1
+      },
+      "PASS_TO_PASS": {
+        "passed": 1,
+        "expected": 1
+      },
+      "unexpected_failures": 1
+    }
+  },
+  "case_number": "069",
+  "repo": "LWJGL/lwjgl3",
+  "project_version": "3.2.1",
+  "test_runner": "TestNG 6.13.1",
+  "headless": true,
+  "display_required": false,
+  "build_targets": [
+    "compile-templates",
+    "compile",
+    "compile-native (image build only)"
+  ],
+  "test_class": "org.lwjgl.system.MemoryUtilTest",
+  "fail_to_pass": "testTextDecoding",
+  "pass_to_pass": "testUTF8",
+  "image": "javac-case-069-lwjgl3:benchmark-v6",
+  "image_build_id": "case-069-build-8",
+  "gold_run_id": "case-069-gold-7",
+  "base_run_id": "case-069-base-3"
+}

@@ -1,0 +1,34 @@
+{
+  "instance_id": "uclouvain__openjpeg-571",
+  "source_project": "uclouvain/openjpeg",
+  "source_case": "112",
+  "language_pair": "Java-C",
+  "repo": "uclouvain/openjpeg",
+  "issue_id": 571,
+  "issue_url": "https://github.com/uclouvain/openjpeg/issues/571",
+  "commit": "5d953558de8dc4d939b8147fe9547533a8804297",
+  "base_commit": "4f5ec07c315872bdee0885be085ebf57cede2db9",
+  "base_commit_status": "verified",
+  "fix_commit": "5d953558de8dc4d939b8147fe9547533a8804297",
+  "commit_url": "https://github.com/uclouvain/openjpeg/commit/5d953558de8dc4d939b8147fe9547533a8804297",
+  "problem_statement": "OpenJPEG lossless compression is not bit-exact on 32-bit Linux/x86. Compressing issue571.tif with the default lossless settings and then decoding it produces a TIFF whose pixels differ from the input. The lossless round trip must preserve every image component exactly.",
+  "test_source": "official_upstream_regression_test",
+  "test_files": [
+    "tests/compare_images.c",
+    "tests/nonregression/CMakeLists.txt",
+    "tests/nonregression/test_suite.ctest.in"
+  ],
+  "verification_status": "resolved",
+  "FAIL_TO_PASS": [
+    "openjpeg.issue571.lossless_roundtrip"
+  ],
+  "PASS_TO_PASS_COUNT": 2,
+  "source_workbook_sequence": 112,
+  "source_workbook_original_row": 113,
+  "pull_request_id": 579,
+  "pull_request_url": "https://github.com/uclouvain/openjpeg/pull/579",
+  "symptom": "lossless encoding produces a non-identical decoded image on 32-bit x86",
+  "root_cause": "floating-point comparison logic error",
+  "fixing_strategy": "compare the rate-distortion threshold using a DBL_EPSILON margin",
+  "evidence_type": "official_issue_pull_request_and_regression_test"
+}

@@ -1,0 +1,16 @@
+{
+  "template_version": "1.0",
+  "case_number": "112",
+  "instance_id": "uclouvain__openjpeg-571",
+  "instance_file": "official_swebench/instance_112.json",
+  "repo_url": "https://github.com/uclouvain/openjpeg.git",
+  "base_commit": "4f5ec07c315872bdee0885be085ebf57cede2db9",
+  "fix_commit": "5d953558de8dc4d939b8147fe9547533a8804297",
+  "image": "javac-case-112-openjpeg:benchmark-v1",
+  "python_version": "3.11",
+  "python_sha256": "unused",
+  "extra_apt_packages": ["cmake", "curl", "default-jdk-headless", "gcc-multilib", "g++-multilib", "git", "make"],
+  "runtime_assets": [
+    {"source": "evaluator/case_adapter.sh", "target": "/benchmark/case_adapter.sh"}
+  ]
+}

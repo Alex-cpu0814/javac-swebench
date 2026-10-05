@@ -1,0 +1,13 @@
+diff --git a/src/lib/openjp2/tcd.c b/src/lib/openjp2/tcd.c
+index 8f1c9410..2fccff1c 100644
+--- a/src/lib/openjp2/tcd.c
++++ b/src/lib/openjp2/tcd.c
+@@ -268,7 +268,7 @@ void opj_tcd_makelayer( opj_tcd_t *tcd,
+                                                                         n = passno + 1;
+                                                                 continue;
+                                                         }
+-                                                        if (dd / dr >= thresh)
++                                                        if (thresh - (dd / dr) < DBL_EPSILON) /* do not rely on float equality, check with DBL_EPSILON margin */
+                                                                 n = passno + 1;
+                                                 }
+ 

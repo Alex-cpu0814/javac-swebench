@@ -1,0 +1,102 @@
+{
+  "dataset_schema_version": "1.0",
+  "source_case": "112",
+  "dataset_variant": "SWE-bench-compatible custom record",
+  "test_source": "official_upstream_regression_test",
+  "created_at_source": "GitHub API for OpenJPEG issue #571, pull request #579, and upstream merge commit 5d953558de8dc4d939b8147fe9547533a8804297",
+  "PASS_TO_PASS_COUNT": 2,
+  "created_at": "2015-09-01",
+  "FAIL_TO_PASS": [
+    "openjpeg.issue571.lossless_roundtrip"
+  ],
+  "version": "2.1.0",
+  "issue_url": "https://github.com/uclouvain/openjpeg/issues/571",
+  "PASS_TO_PASS": [
+    "openjpeg.issue571.encode_issue571",
+    "openjpeg.issue571.decode_issue571"
+  ],
+  "standard_layout": {
+    "schema_version": "2.0",
+    "case_directory": "javac_case_112",
+    "analysis": "analysis/",
+    "patches": "patches/",
+    "official_swebench": "official_swebench/",
+    "evaluator": "evaluator/",
+    "verification": "verification/"
+  },
+  "verification": {
+    "docker_verified": true,
+    "model_evaluator_verified": true,
+    "fix_passes": true,
+    "base_fails": true,
+    "model_evaluator_verification_type": "isolated_runtime_injection_32bit_x86_lossless_roundtrip",
+    "evaluation_assets_injected_at_runtime": true,
+    "image_contains_test_patch": false,
+    "image_contains_gold_patch": false,
+    "image_contains_fix_commit": false,
+    "template_version": "1.0",
+    "image_build_id": "case-112-build-2",
+    "image": "javac-case-112-openjpeg:benchmark-v1",
+    "image_id": "sha256:33a22445240b5d6abba03d5c41a277d721fc8940f51aa3e7b7138daeb2f87305",
+    "gold_run_id": "case-112-gold-1",
+    "base_run_id": "case-112-base-1",
+    "gold_grading": {
+      "FAIL_TO_PASS": {
+        "passed": 1,
+        "expected": 1
+      },
+      "PASS_TO_PASS": {
+        "passed": 2,
+        "expected": 2
+      },
+      "unexpected_failures": 0
+    },
+    "base_grading": {
+      "FAIL_TO_PASS": {
+        "failed": 1,
+        "expected": 1
+      },
+      "PASS_TO_PASS": {
+        "passed": 2,
+        "expected": 2
+      },
+      "unexpected_failures": 1,
+      "different_pixels": 19,
+      "maximum_component_error": 3
+    }
+  },
+  "test_command": "cmake -S . -B /opt/openjpeg-build -DBUILD_TESTING=ON -DBUILD_THIRDPARTY=ON -DOPJ_DATA_ROOT=/opt/openjpeg-data; cmake --build /opt/openjpeg-build; opj_compress issue571.tif; opj_decompress issue571.tif.j2k; compare_images issue571.tif issue571.lossless.tif",
+  "base_commit": "4f5ec07c315872bdee0885be085ebf57cede2db9",
+  "repo": "uclouvain/openjpeg",
+  "patch_provenance": {
+    "gold_patch_authorship": "uclouvain/openjpeg_upstream",
+    "gold_patch_source": "official_upstream_fix_commit",
+    "test_patch_source": "official_upstream_regression_test",
+    "test_patch_authorship": "uclouvain/openjpeg_upstream",
+    "upstream_regression_test_found": true,
+    "model_patch_example_source": "copy_of_gold_patch_for_evaluator_smoke_test",
+    "model_patch_example_is_model_generated": false,
+    "test_data_source": "uclouvain/openjpeg-data@68b30b7f390b852106fb5ee2cf1dbc8628a2feaf",
+    "test_data_sha256": "1c9dcd1801aac971759da985661bf074beb4c3a19c6ac4dbd8a0775f7f018e44"
+  },
+  "fix_commit": "5d953558de8dc4d939b8147fe9547533a8804297",
+  "instance_id": "uclouvain__openjpeg-571",
+  "issue_id": 571,
+  "test_files": [
+    "tests/compare_images.c",
+    "tests/nonregression/CMakeLists.txt",
+    "tests/nonregression/test_suite.ctest.in"
+  ],
+  "project_version": "2.1.0",
+  "model_evaluator_image": "javac-case-112-openjpeg:benchmark-v1",
+  "pull_request_id": 579,
+  "published_image": "yutu0814/javac-case-112-openjpeg:benchmark-v1",
+  "published_image_digest": "sha256:33a22445240b5d6abba03d5c41a277d721fc8940f51aa3e7b7138daeb2f87305",
+  "docker_hub_url": "https://hub.docker.com/r/yutu0814/javac-case-112-openjpeg",
+  "FAIL_TO_PASS_COUNT": 1,
+  "notes": [
+    "Source spreadsheet row: deduplicated Java-C sequence 112 (original row 113).",
+    "The regression is architecture-sensitive and is evaluated with GCC -m32 on Linux/x86.",
+    "The official issue571.tif input is pinned by repository commit and SHA-256."
+  ]
+}

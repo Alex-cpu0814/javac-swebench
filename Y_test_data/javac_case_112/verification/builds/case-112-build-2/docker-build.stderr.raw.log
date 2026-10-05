@@ -1,0 +1,968 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 2.21kB 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for mcr.microsoft.com/devcontainers/base:bookworm@sha256:3aacff4130e6cf04709f9cab1d7a6d3e1cc4bff6202bc61611831a18d3755673
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 54B done
+#3 DONE 0.0s
+
+#4 [1/6] FROM mcr.microsoft.com/devcontainers/base:bookworm@sha256:3aacff4130e6cf04709f9cab1d7a6d3e1cc4bff6202bc61611831a18d3755673
+#4 resolve mcr.microsoft.com/devcontainers/base:bookworm@sha256:3aacff4130e6cf04709f9cab1d7a6d3e1cc4bff6202bc61611831a18d3755673 0.0s done
+#4 DONE 0.1s
+
+#5 [2/6] RUN apt-get update     && apt-get install -y --no-install-recommends        ca-certificates cmake curl default-jdk-headless g++-multilib gcc-multilib        git make python3 python-is-python3     && apt-get clean     && rm -rf /var/lib/apt/lists/*
+#5 0.521 Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+#5 0.783 Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+#5 1.039 Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [34.8 kB]
+#5 1.679 Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8790 kB]
+#5 2.294 Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [6924 B]
+#5 2.635 Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [349 kB]
+#5 2.836 Fetched 9387 kB in 3s (3530 kB/s)
+#5 2.836 Reading package lists...
+#5 3.245 Reading package lists...
+#5 3.638 Building dependency tree...
+#5 3.739 Reading state information...
+#5 3.838 ca-certificates is already the newest version (20250419~deb12u1).
+#5 3.838 curl is already the newest version (7.88.1-10+deb12u15).
+#5 3.838 git is already the newest version (1:2.39.5-0+deb12u3).
+#5 3.838 make is already the newest version (4.3-4.1).
+#5 3.838 make set to manually installed.
+#5 3.838 The following additional packages will be installed:
+#5 3.838   ca-certificates-java cmake-data default-jre-headless fontconfig-config
+#5 3.838   fonts-dejavu-core g++-12-multilib gcc-12-multilib java-common lib32asan8
+#5 3.838   lib32atomic1 lib32gcc-12-dev lib32gcc-s1 lib32gomp1 lib32itm1 lib32quadmath0
+#5 3.838   lib32stdc++-12-dev lib32stdc++6 lib32ubsan1 libarchive13 libasound2
+#5 3.838   libasound2-data libavahi-client3 libavahi-common-data libavahi-common3
+#5 3.838   libc6-dev-i386 libc6-dev-x32 libc6-i386 libc6-x32 libcups2 libdbus-1-3
+#5 3.838   libfontconfig1 libfreetype6 libglib2.0-0 libgraphite2-3 libharfbuzz0b
+#5 3.838   libjpeg62-turbo libjsoncpp25 liblcms2-2 libnspr4 libnss3 libpcsclite1
+#5 3.838   libpng16-16 libpython3-stdlib libpython3.11-minimal libpython3.11-stdlib
+#5 3.838   librhash0 libuv1 libx32asan8 libx32atomic1 libx32gcc-12-dev libx32gcc-s1
+#5 3.838   libx32gomp1 libx32itm1 libx32quadmath0 libx32stdc++-12-dev libx32stdc++6
+#5 3.838   libx32ubsan1 media-types openjdk-17-jdk-headless openjdk-17-jre-headless
+#5 3.838   python3-minimal python3.11 python3.11-minimal
+#5 3.840 Suggested packages:
+#5 3.840   cmake-doc cmake-format elpa-cmake-mode ninja-build default-jre
+#5 3.840   lib32stdc++6-12-dbg libx32stdc++6-12-dbg lrzip libasound2-plugins alsa-utils
+#5 3.840   cups-common low-memory-monitor liblcms2-utils pcscd openjdk-17-demo
+#5 3.840   openjdk-17-source libnss-mdns fonts-dejavu-extra fonts-ipafont-gothic
+#5 3.840   fonts-ipafont-mincho fonts-wqy-microhei | fonts-wqy-zenhei fonts-indic
+#5 3.840   python3-doc python3-tk python3-venv python3.11-venv python3.11-doc
+#5 3.840   binfmt-support
+#5 3.840 Recommended packages:
+#5 3.840   alsa-ucm-conf alsa-topology-conf dbus libglib2.0-data shared-mime-info
+#5 3.840   xdg-user-dirs
+#5 4.014 The following NEW packages will be installed:
+#5 4.014   ca-certificates-java cmake cmake-data default-jdk-headless
+#5 4.014   default-jre-headless fontconfig-config fonts-dejavu-core g++-12-multilib
+#5 4.014   g++-multilib gcc-12-multilib gcc-multilib java-common lib32asan8
+#5 4.014   lib32atomic1 lib32gcc-12-dev lib32gcc-s1 lib32gomp1 lib32itm1 lib32quadmath0
+#5 4.014   lib32stdc++-12-dev lib32stdc++6 lib32ubsan1 libarchive13 libasound2
+#5 4.014   libasound2-data libavahi-client3 libavahi-common-data libavahi-common3
+#5 4.014   libc6-dev-i386 libc6-dev-x32 libc6-i386 libc6-x32 libcups2 libdbus-1-3
+#5 4.014   libfontconfig1 libfreetype6 libglib2.0-0 libgraphite2-3 libharfbuzz0b
+#5 4.014   libjpeg62-turbo libjsoncpp25 liblcms2-2 libnspr4 libnss3 libpcsclite1
+#5 4.014   libpng16-16 libpython3-stdlib libpython3.11-minimal libpython3.11-stdlib
+#5 4.015   librhash0 libuv1 libx32asan8 libx32atomic1 libx32gcc-12-dev libx32gcc-s1
+#5 4.015   libx32gomp1 libx32itm1 libx32quadmath0 libx32stdc++-12-dev libx32stdc++6
+#5 4.015   libx32ubsan1 media-types openjdk-17-jdk-headless openjdk-17-jre-headless
+#5 4.015   python-is-python3 python3 python3-minimal python3.11 python3.11-minimal
+#5 4.415 0 upgraded, 69 newly installed, 0 to remove and 14 not upgraded.
+#5 4.415 Need to get 163 MB of archives.
+#5 4.415 After this operation, 461 MB of additional disk space will be used.
+#5 4.415 Get:1 http://deb.debian.org/debian bookworm/main amd64 libpython3.11-minimal amd64 3.11.2-6+deb12u8 [818 kB]
+#5 4.870 Get:2 http://deb.debian.org/debian bookworm/main amd64 python3.11-minimal amd64 3.11.2-6+deb12u8 [2065 kB]
+#5 5.180 Get:3 http://deb.debian.org/debian bookworm/main amd64 python3-minimal amd64 3.11.2-1+b1 [26.3 kB]
+#5 5.373 Get:4 http://deb.debian.org/debian bookworm/main amd64 media-types all 10.0.0 [26.1 kB]
+#5 5.776 Get:5 http://deb.debian.org/debian bookworm/main amd64 libpython3.11-stdlib amd64 3.11.2-6+deb12u8 [1799 kB]
+#5 6.176 Get:6 http://deb.debian.org/debian bookworm/main amd64 python3.11 amd64 3.11.2-6+deb12u8 [574 kB]
+#5 6.387 Get:7 http://deb.debian.org/debian bookworm/main amd64 libpython3-stdlib amd64 3.11.2-1+b1 [9312 B]
+#5 6.568 Get:8 http://deb.debian.org/debian bookworm/main amd64 python3 amd64 3.11.2-1+b1 [26.3 kB]
+#5 6.744 Get:9 http://deb.debian.org/debian bookworm/main amd64 ca-certificates-java all 20230710~deb12u1 [11.9 kB]
+#5 7.110 Get:10 http://deb.debian.org/debian-security bookworm-security/main amd64 libarchive13 amd64 3.6.2-1+deb12u5 [345 kB]
+#5 7.357 Get:11 http://deb.debian.org/debian bookworm/main amd64 libjsoncpp25 amd64 1.9.5-4 [78.6 kB]
+#5 7.648 Get:12 http://deb.debian.org/debian bookworm/main amd64 librhash0 amd64 1.4.3-3 [134 kB]
+#5 7.906 Get:13 http://deb.debian.org/debian bookworm/main amd64 libuv1 amd64 1.44.2-1+deb12u1 [136 kB]
+#5 8.358 Get:14 http://deb.debian.org/debian bookworm/main amd64 cmake-data all 3.25.1-1 [2026 kB]
+#5 9.180 Get:15 http://deb.debian.org/debian bookworm/main amd64 cmake amd64 3.25.1-1 [8692 kB]
+#5 9.725 Get:16 http://deb.debian.org/debian bookworm/main amd64 java-common all 0.74 [6388 B]
+#5 9.957 Get:17 http://deb.debian.org/debian bookworm/main amd64 libavahi-common-data amd64 0.8-10+deb12u1 [107 kB]
+#5 10.19 Get:18 http://deb.debian.org/debian bookworm/main amd64 libavahi-common3 amd64 0.8-10+deb12u1 [42.1 kB]
+#5 10.48 Get:19 http://deb.debian.org/debian bookworm/main amd64 libdbus-1-3 amd64 1.14.10-1~deb12u1 [201 kB]
+#5 10.72 Get:20 http://deb.debian.org/debian bookworm/main amd64 libavahi-client3 amd64 0.8-10+deb12u1 [45.8 kB]
+#5 11.03 Get:21 http://deb.debian.org/debian bookworm/main amd64 libcups2 amd64 2.4.2-3+deb12u9 [245 kB]
+#5 11.35 Get:22 http://deb.debian.org/debian bookworm/main amd64 libpng16-16 amd64 1.6.39-2+deb12u5 [277 kB]
+#5 11.78 Get:23 http://deb.debian.org/debian bookworm/main amd64 libfreetype6 amd64 2.12.1+dfsg-5+deb12u4 [398 kB]
+#5 12.22 Get:24 http://deb.debian.org/debian bookworm/main amd64 fonts-dejavu-core all 2.37-6 [1068 kB]
+#5 12.62 Get:25 http://deb.debian.org/debian bookworm/main amd64 fontconfig-config amd64 2.14.1-4 [315 kB]
+#5 12.95 Get:26 http://deb.debian.org/debian bookworm/main amd64 libfontconfig1 amd64 2.14.1-4 [386 kB]
+#5 13.27 Get:27 http://deb.debian.org/debian bookworm/main amd64 liblcms2-2 amd64 2.14-2+deb12u1 [154 kB]
+#5 13.54 Get:28 http://deb.debian.org/debian bookworm/main amd64 libjpeg62-turbo amd64 1:2.1.5-2 [166 kB]
+#5 13.84 Get:29 http://deb.debian.org/debian bookworm/main amd64 libnspr4 amd64 2:4.35-1 [113 kB]
+#5 14.28 Get:30 http://deb.debian.org/debian-security bookworm-security/main amd64 libnss3 amd64 2:3.87.1-1+deb12u4 [1331 kB]
+#5 14.51 Get:31 http://deb.debian.org/debian bookworm/main amd64 libasound2-data all 1.2.8-1 [20.5 kB]
+#5 14.86 Get:32 http://deb.debian.org/debian bookworm/main amd64 libasound2 amd64 1.2.8-1+b1 [362 kB]
+#5 15.33 Get:33 http://deb.debian.org/debian bookworm/main amd64 libglib2.0-0 amd64 2.74.6-2+deb12u9 [1403 kB]
+#5 15.66 Get:34 http://deb.debian.org/debian bookworm/main amd64 libgraphite2-3 amd64 1.3.14-1+deb12u1 [74.6 kB]
+#5 16.09 Get:35 http://deb.debian.org/debian bookworm/main amd64 libharfbuzz0b amd64 6.0.0+dfsg-3 [1945 kB]
+#5 16.41 Get:36 http://deb.debian.org/debian bookworm/main amd64 libpcsclite1 amd64 1.9.9-2 [49.7 kB]
+#5 18.17 Get:37 http://deb.debian.org/debian-security bookworm-security/main amd64 openjdk-17-jre-headless amd64 17.0.20.1+1-1~deb12u1 [43.9 MB]
+#5 20.54 Get:38 http://deb.debian.org/debian bookworm/main amd64 default-jre-headless amd64 2:1.17-74 [2936 B]
+#5 23.21 Get:39 http://deb.debian.org/debian-security bookworm-security/main amd64 openjdk-17-jdk-headless amd64 17.0.20.1+1-1~deb12u1 [71.7 MB]
+#5 26.52 Get:40 http://deb.debian.org/debian bookworm/main amd64 default-jdk-headless amd64 2:1.17-74 [1108 B]
+#5 27.04 Get:41 http://deb.debian.org/debian bookworm/main amd64 libc6-i386 amd64 2.36-9+deb12u14 [2458 kB]
+#5 27.57 Get:42 http://deb.debian.org/debian bookworm/main amd64 libc6-dev-i386 amd64 2.36-9+deb12u14 [1355 kB]
+#5 28.08 Get:43 http://deb.debian.org/debian bookworm/main amd64 libc6-x32 amd64 2.36-9+deb12u14 [2588 kB]
+#5 28.63 Get:44 http://deb.debian.org/debian bookworm/main amd64 libc6-dev-x32 amd64 2.36-9+deb12u14 [1521 kB]
+#5 28.92 Get:45 http://deb.debian.org/debian bookworm/main amd64 lib32gcc-s1 amd64 12.2.0-14+deb12u1 [59.7 kB]
+#5 29.15 Get:46 http://deb.debian.org/debian bookworm/main amd64 libx32gcc-s1 amd64 12.2.0-14+deb12u1 [50.1 kB]
+#5 29.41 Get:47 http://deb.debian.org/debian bookworm/main amd64 lib32gomp1 amd64 12.2.0-14+deb12u1 [121 kB]
+#5 29.67 Get:48 http://deb.debian.org/debian bookworm/main amd64 libx32gomp1 amd64 12.2.0-14+deb12u1 [116 kB]
+#5 29.87 Get:49 http://deb.debian.org/debian bookworm/main amd64 lib32itm1 amd64 12.2.0-14+deb12u1 [27.7 kB]
+#5 30.07 Get:50 http://deb.debian.org/debian bookworm/main amd64 libx32itm1 amd64 12.2.0-14+deb12u1 [26.4 kB]
+#5 30.22 Get:51 http://deb.debian.org/debian bookworm/main amd64 lib32atomic1 amd64 12.2.0-14+deb12u1 [7732 B]
+#5 30.39 Get:52 http://deb.debian.org/debian bookworm/main amd64 libx32atomic1 amd64 12.2.0-14+deb12u1 [9288 B]
+#5 30.87 Get:53 http://deb.debian.org/debian bookworm/main amd64 lib32asan8 amd64 12.2.0-14+deb12u1 [2081 kB]
+#5 31.67 Get:54 http://deb.debian.org/debian bookworm/main amd64 libx32asan8 amd64 12.2.0-14+deb12u1 [2063 kB]
+#5 32.21 Get:55 http://deb.debian.org/debian bookworm/main amd64 lib32stdc++6 amd64 12.2.0-14+deb12u1 [643 kB]
+#5 32.63 Get:56 http://deb.debian.org/debian bookworm/main amd64 lib32ubsan1 amd64 12.2.0-14+deb12u1 [870 kB]
+#5 33.08 Get:57 http://deb.debian.org/debian bookworm/main amd64 libx32stdc++6 amd64 12.2.0-14+deb12u1 [599 kB]
+#5 33.51 Get:58 http://deb.debian.org/debian bookworm/main amd64 libx32ubsan1 amd64 12.2.0-14+deb12u1 [874 kB]
+#5 33.87 Get:59 http://deb.debian.org/debian bookworm/main amd64 lib32quadmath0 amd64 12.2.0-14+deb12u1 [227 kB]
+#5 34.16 Get:60 http://deb.debian.org/debian bookworm/main amd64 libx32quadmath0 amd64 12.2.0-14+deb12u1 [147 kB]
+#5 34.68 Get:61 http://deb.debian.org/debian bookworm/main amd64 lib32gcc-12-dev amd64 12.2.0-14+deb12u1 [2269 kB]
+#5 35.18 Get:62 http://deb.debian.org/debian bookworm/main amd64 libx32gcc-12-dev amd64 12.2.0-14+deb12u1 [2042 kB]
+#5 35.40 Get:63 http://deb.debian.org/debian bookworm/main amd64 gcc-12-multilib amd64 12.2.0-14+deb12u1 [1032 B]
+#5 35.83 Get:64 http://deb.debian.org/debian bookworm/main amd64 lib32stdc++-12-dev amd64 12.2.0-14+deb12u1 [881 kB]
+#5 36.22 Get:65 http://deb.debian.org/debian bookworm/main amd64 libx32stdc++-12-dev amd64 12.2.0-14+deb12u1 [820 kB]
+#5 36.39 Get:66 http://deb.debian.org/debian bookworm/main amd64 g++-12-multilib amd64 12.2.0-14+deb12u1 [1044 B]
+#5 36.55 Get:67 http://deb.debian.org/debian bookworm/main amd64 gcc-multilib amd64 4:12.2.0-3 [1520 B]
+#5 36.69 Get:68 http://deb.debian.org/debian bookworm/main amd64 g++-multilib amd64 4:12.2.0-3 [996 B]
+#5 36.83 Get:69 http://deb.debian.org/debian bookworm/main amd64 python-is-python3 all 3.11.2-1+deb12u1 [3216 B]
+#5 38.43 Preconfiguring packages ...
+#5 38.48 Fetched 163 MB in 33s (4968 kB/s)
+#5 38.50 Selecting previously unselected package libpython3.11-minimal:amd64.
+#5 38.50 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 22634 files and directories currently installed.)
+#5 38.51 Preparing to unpack .../libpython3.11-minimal_3.11.2-6+deb12u8_amd64.deb ...
+#5 38.51 Unpacking libpython3.11-minimal:amd64 (3.11.2-6+deb12u8) ...
+#5 38.60 Selecting previously unselected package python3.11-minimal.
+#5 38.60 Preparing to unpack .../python3.11-minimal_3.11.2-6+deb12u8_amd64.deb ...
+#5 38.61 Unpacking python3.11-minimal (3.11.2-6+deb12u8) ...
+#5 38.79 Setting up libpython3.11-minimal:amd64 (3.11.2-6+deb12u8) ...
+#5 38.81 Setting up python3.11-minimal (3.11.2-6+deb12u8) ...
+#5 39.40 Selecting previously unselected package python3-minimal.
+#5 39.40 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 22941 files and directories currently installed.)
+#5 39.41 Preparing to unpack .../python3-minimal_3.11.2-1+b1_amd64.deb ...
+#5 39.41 Unpacking python3-minimal (3.11.2-1+b1) ...
+#5 39.44 Selecting previously unselected package media-types.
+#5 39.44 Preparing to unpack .../media-types_10.0.0_all.deb ...
+#5 39.44 Unpacking media-types (10.0.0) ...
+#5 39.47 Selecting previously unselected package libpython3.11-stdlib:amd64.
+#5 39.47 Preparing to unpack .../libpython3.11-stdlib_3.11.2-6+deb12u8_amd64.deb ...
+#5 39.47 Unpacking libpython3.11-stdlib:amd64 (3.11.2-6+deb12u8) ...
+#5 39.63 Selecting previously unselected package python3.11.
+#5 39.63 Preparing to unpack .../python3.11_3.11.2-6+deb12u8_amd64.deb ...
+#5 39.63 Unpacking python3.11 (3.11.2-6+deb12u8) ...
+#5 39.67 Selecting previously unselected package libpython3-stdlib:amd64.
+#5 39.67 Preparing to unpack .../libpython3-stdlib_3.11.2-1+b1_amd64.deb ...
+#5 39.67 Unpacking libpython3-stdlib:amd64 (3.11.2-1+b1) ...
+#5 39.70 Setting up python3-minimal (3.11.2-1+b1) ...
+#5 39.85 Selecting previously unselected package python3.
+#5 39.85 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 23350 files and directories currently installed.)
+#5 39.86 Preparing to unpack .../00-python3_3.11.2-1+b1_amd64.deb ...
+#5 39.86 Unpacking python3 (3.11.2-1+b1) ...
+#5 39.90 Selecting previously unselected package ca-certificates-java.
+#5 39.90 Preparing to unpack .../01-ca-certificates-java_20230710~deb12u1_all.deb ...
+#5 39.90 Unpacking ca-certificates-java (20230710~deb12u1) ...
+#5 39.94 Selecting previously unselected package libarchive13:amd64.
+#5 39.94 Preparing to unpack .../02-libarchive13_3.6.2-1+deb12u5_amd64.deb ...
+#5 39.95 Unpacking libarchive13:amd64 (3.6.2-1+deb12u5) ...
+#5 40.00 Selecting previously unselected package libjsoncpp25:amd64.
+#5 40.00 Preparing to unpack .../03-libjsoncpp25_1.9.5-4_amd64.deb ...
+#5 40.00 Unpacking libjsoncpp25:amd64 (1.9.5-4) ...
+#5 40.04 Selecting previously unselected package librhash0:amd64.
+#5 40.04 Preparing to unpack .../04-librhash0_1.4.3-3_amd64.deb ...
+#5 40.04 Unpacking librhash0:amd64 (1.4.3-3) ...
+#5 40.08 Selecting previously unselected package libuv1:amd64.
+#5 40.08 Preparing to unpack .../05-libuv1_1.44.2-1+deb12u1_amd64.deb ...
+#5 40.09 Unpacking libuv1:amd64 (1.44.2-1+deb12u1) ...
+#5 40.13 Selecting previously unselected package cmake-data.
+#5 40.13 Preparing to unpack .../06-cmake-data_3.25.1-1_all.deb ...
+#5 40.14 Unpacking cmake-data (3.25.1-1) ...
+#5 40.41 Selecting previously unselected package cmake.
+#5 40.42 Preparing to unpack .../07-cmake_3.25.1-1_amd64.deb ...
+#5 40.42 Unpacking cmake (3.25.1-1) ...
+#5 41.03 Selecting previously unselected package java-common.
+#5 41.03 Preparing to unpack .../08-java-common_0.74_all.deb ...
+#5 41.04 Unpacking java-common (0.74) ...
+#5 41.07 Selecting previously unselected package libavahi-common-data:amd64.
+#5 41.07 Preparing to unpack .../09-libavahi-common-data_0.8-10+deb12u1_amd64.deb ...
+#5 41.07 Unpacking libavahi-common-data:amd64 (0.8-10+deb12u1) ...
+#5 41.13 Selecting previously unselected package libavahi-common3:amd64.
+#5 41.13 Preparing to unpack .../10-libavahi-common3_0.8-10+deb12u1_amd64.deb ...
+#5 41.14 Unpacking libavahi-common3:amd64 (0.8-10+deb12u1) ...
+#5 41.17 Selecting previously unselected package libdbus-1-3:amd64.
+#5 41.17 Preparing to unpack .../11-libdbus-1-3_1.14.10-1~deb12u1_amd64.deb ...
+#5 41.18 Unpacking libdbus-1-3:amd64 (1.14.10-1~deb12u1) ...
+#5 41.23 Selecting previously unselected package libavahi-client3:amd64.
+#5 41.23 Preparing to unpack .../12-libavahi-client3_0.8-10+deb12u1_amd64.deb ...
+#5 41.24 Unpacking libavahi-client3:amd64 (0.8-10+deb12u1) ...
+#5 41.27 Selecting previously unselected package libcups2:amd64.
+#5 41.28 Preparing to unpack .../13-libcups2_2.4.2-3+deb12u9_amd64.deb ...
+#5 41.28 Unpacking libcups2:amd64 (2.4.2-3+deb12u9) ...
+#5 41.34 Selecting previously unselected package libpng16-16:amd64.
+#5 41.34 Preparing to unpack .../14-libpng16-16_1.6.39-2+deb12u5_amd64.deb ...
+#5 41.34 Unpacking libpng16-16:amd64 (1.6.39-2+deb12u5) ...
+#5 41.40 Selecting previously unselected package libfreetype6:amd64.
+#5 41.40 Preparing to unpack .../15-libfreetype6_2.12.1+dfsg-5+deb12u4_amd64.deb ...
+#5 41.41 Unpacking libfreetype6:amd64 (2.12.1+dfsg-5+deb12u4) ...
+#5 41.47 Selecting previously unselected package fonts-dejavu-core.
+#5 41.47 Preparing to unpack .../16-fonts-dejavu-core_2.37-6_all.deb ...
+#5 41.47 Unpacking fonts-dejavu-core (2.37-6) ...
+#5 41.61 Selecting previously unselected package fontconfig-config.
+#5 41.61 Preparing to unpack .../17-fontconfig-config_2.14.1-4_amd64.deb ...
+#5 41.74 Unpacking fontconfig-config (2.14.1-4) ...
+#5 41.79 Selecting previously unselected package libfontconfig1:amd64.
+#5 41.79 Preparing to unpack .../18-libfontconfig1_2.14.1-4_amd64.deb ...
+#5 41.79 Unpacking libfontconfig1:amd64 (2.14.1-4) ...
+#5 41.84 Selecting previously unselected package liblcms2-2:amd64.
+#5 41.84 Preparing to unpack .../19-liblcms2-2_2.14-2+deb12u1_amd64.deb ...
+#5 41.84 Unpacking liblcms2-2:amd64 (2.14-2+deb12u1) ...
+#5 41.90 Selecting previously unselected package libjpeg62-turbo:amd64.
+#5 41.90 Preparing to unpack .../20-libjpeg62-turbo_1%3a2.1.5-2_amd64.deb ...
+#5 41.90 Unpacking libjpeg62-turbo:amd64 (1:2.1.5-2) ...
+#5 41.95 Selecting previously unselected package libnspr4:amd64.
+#5 41.95 Preparing to unpack .../21-libnspr4_2%3a4.35-1_amd64.deb ...
+#5 41.96 Unpacking libnspr4:amd64 (2:4.35-1) ...
+#5 42.00 Selecting previously unselected package libnss3:amd64.
+#5 42.01 Preparing to unpack .../22-libnss3_2%3a3.87.1-1+deb12u4_amd64.deb ...
+#5 42.01 Unpacking libnss3:amd64 (2:3.87.1-1+deb12u4) ...
+#5 42.17 Selecting previously unselected package libasound2-data.
+#5 42.17 Preparing to unpack .../23-libasound2-data_1.2.8-1_all.deb ...
+#5 42.17 Unpacking libasound2-data (1.2.8-1) ...
+#5 42.22 Selecting previously unselected package libasound2:amd64.
+#5 42.22 Preparing to unpack .../24-libasound2_1.2.8-1+b1_amd64.deb ...
+#5 42.23 Unpacking libasound2:amd64 (1.2.8-1+b1) ...
+#5 42.31 Selecting previously unselected package libglib2.0-0:amd64.
+#5 42.31 Preparing to unpack .../25-libglib2.0-0_2.74.6-2+deb12u9_amd64.deb ...
+#5 42.31 Unpacking libglib2.0-0:amd64 (2.74.6-2+deb12u9) ...
+#5 42.47 Selecting previously unselected package libgraphite2-3:amd64.
+#5 42.47 Preparing to unpack .../26-libgraphite2-3_1.3.14-1+deb12u1_amd64.deb ...
+#5 42.48 Unpacking libgraphite2-3:amd64 (1.3.14-1+deb12u1) ...
+#5 42.52 Selecting previously unselected package libharfbuzz0b:amd64.
+#5 42.52 Preparing to unpack .../27-libharfbuzz0b_6.0.0+dfsg-3_amd64.deb ...
+#5 42.53 Unpacking libharfbuzz0b:amd64 (6.0.0+dfsg-3) ...
+#5 42.61 Selecting previously unselected package libpcsclite1:amd64.
+#5 42.61 Preparing to unpack .../28-libpcsclite1_1.9.9-2_amd64.deb ...
+#5 42.62 Unpacking libpcsclite1:amd64 (1.9.9-2) ...
+#5 42.65 Selecting previously unselected package openjdk-17-jre-headless:amd64.
+#5 42.65 Preparing to unpack .../29-openjdk-17-jre-headless_17.0.20.1+1-1~deb12u1_amd64.deb ...
+#5 42.66 Unpacking openjdk-17-jre-headless:amd64 (17.0.20.1+1-1~deb12u1) ...
+#5 44.21 Selecting previously unselected package default-jre-headless.
+#5 44.21 Preparing to unpack .../30-default-jre-headless_2%3a1.17-74_amd64.deb ...
+#5 44.22 Unpacking default-jre-headless (2:1.17-74) ...
+#5 44.24 Selecting previously unselected package openjdk-17-jdk-headless:amd64.
+#5 44.25 Preparing to unpack .../31-openjdk-17-jdk-headless_17.0.20.1+1-1~deb12u1_amd64.deb ...
+#5 44.25 Unpacking openjdk-17-jdk-headless:amd64 (17.0.20.1+1-1~deb12u1) ...
+#5 46.22 Selecting previously unselected package default-jdk-headless.
+#5 46.22 Preparing to unpack .../32-default-jdk-headless_2%3a1.17-74_amd64.deb ...
+#5 46.22 Unpacking default-jdk-headless (2:1.17-74) ...
+#5 46.25 Selecting previously unselected package libc6-i386.
+#5 46.26 Preparing to unpack .../33-libc6-i386_2.36-9+deb12u14_amd64.deb ...
+#5 46.26 Unpacking libc6-i386 (2.36-9+deb12u14) ...
+#5 46.49 Selecting previously unselected package libc6-dev-i386.
+#5 46.49 Preparing to unpack .../34-libc6-dev-i386_2.36-9+deb12u14_amd64.deb ...
+#5 46.50 Unpacking libc6-dev-i386 (2.36-9+deb12u14) ...
+#5 46.64 Selecting previously unselected package libc6-x32.
+#5 46.64 Preparing to unpack .../35-libc6-x32_2.36-9+deb12u14_amd64.deb ...
+#5 46.64 Unpacking libc6-x32 (2.36-9+deb12u14) ...
+#5 46.87 Selecting previously unselected package libc6-dev-x32.
+#5 46.87 Preparing to unpack .../36-libc6-dev-x32_2.36-9+deb12u14_amd64.deb ...
+#5 46.87 Unpacking libc6-dev-x32 (2.36-9+deb12u14) ...
+#5 47.01 Selecting previously unselected package lib32gcc-s1.
+#5 47.01 Preparing to unpack .../37-lib32gcc-s1_12.2.0-14+deb12u1_amd64.deb ...
+#5 47.01 Unpacking lib32gcc-s1 (12.2.0-14+deb12u1) ...
+#5 47.04 Selecting previously unselected package libx32gcc-s1.
+#5 47.05 Preparing to unpack .../38-libx32gcc-s1_12.2.0-14+deb12u1_amd64.deb ...
+#5 47.05 Unpacking libx32gcc-s1 (12.2.0-14+deb12u1) ...
+#5 47.08 Selecting previously unselected package lib32gomp1.
+#5 47.08 Preparing to unpack .../39-lib32gomp1_12.2.0-14+deb12u1_amd64.deb ...
+#5 47.08 Unpacking lib32gomp1 (12.2.0-14+deb12u1) ...
+#5 47.12 Selecting previously unselected package libx32gomp1.
+#5 47.12 Preparing to unpack .../40-libx32gomp1_12.2.0-14+deb12u1_amd64.deb ...
+#5 47.12 Unpacking libx32gomp1 (12.2.0-14+deb12u1) ...
+#5 47.16 Selecting previously unselected package lib32itm1.
+#5 47.16 Preparing to unpack .../41-lib32itm1_12.2.0-14+deb12u1_amd64.deb ...
+#5 47.16 Unpacking lib32itm1 (12.2.0-14+deb12u1) ...
+#5 47.19 Selecting previously unselected package libx32itm1.
+#5 47.19 Preparing to unpack .../42-libx32itm1_12.2.0-14+deb12u1_amd64.deb ...
+#5 47.19 Unpacking libx32itm1 (12.2.0-14+deb12u1) ...
+#5 47.22 Selecting previously unselected package lib32atomic1.
+#5 47.22 Preparing to unpack .../43-lib32atomic1_12.2.0-14+deb12u1_amd64.deb ...
+#5 47.23 Unpacking lib32atomic1 (12.2.0-14+deb12u1) ...
+#5 47.26 Selecting previously unselected package libx32atomic1.
+#5 47.26 Preparing to unpack .../44-libx32atomic1_12.2.0-14+deb12u1_amd64.deb ...
+#5 47.26 Unpacking libx32atomic1 (12.2.0-14+deb12u1) ...
+#5 47.29 Selecting previously unselected package lib32asan8.
+#5 47.29 Preparing to unpack .../45-lib32asan8_12.2.0-14+deb12u1_amd64.deb ...
+#5 47.30 Unpacking lib32asan8 (12.2.0-14+deb12u1) ...
+#5 47.48 Selecting previously unselected package libx32asan8.
+#5 47.48 Preparing to unpack .../46-libx32asan8_12.2.0-14+deb12u1_amd64.deb ...
+#5 47.48 Unpacking libx32asan8 (12.2.0-14+deb12u1) ...
+#5 47.66 Selecting previously unselected package lib32stdc++6.
+#5 47.66 Preparing to unpack .../47-lib32stdc++6_12.2.0-14+deb12u1_amd64.deb ...
+#5 47.67 Unpacking lib32stdc++6 (12.2.0-14+deb12u1) ...
+#5 47.74 Selecting previously unselected package lib32ubsan1.
+#5 47.74 Preparing to unpack .../48-lib32ubsan1_12.2.0-14+deb12u1_amd64.deb ...
+#5 47.74 Unpacking lib32ubsan1 (12.2.0-14+deb12u1) ...
+#5 47.83 Selecting previously unselected package libx32stdc++6.
+#5 47.84 Preparing to unpack .../49-libx32stdc++6_12.2.0-14+deb12u1_amd64.deb ...
+#5 47.84 Unpacking libx32stdc++6 (12.2.0-14+deb12u1) ...
+#5 47.91 Selecting previously unselected package libx32ubsan1.
+#5 47.91 Preparing to unpack .../50-libx32ubsan1_12.2.0-14+deb12u1_amd64.deb ...
+#5 47.91 Unpacking libx32ubsan1 (12.2.0-14+deb12u1) ...
+#5 48.00 Selecting previously unselected package lib32quadmath0.
+#5 48.00 Preparing to unpack .../51-lib32quadmath0_12.2.0-14+deb12u1_amd64.deb ...
+#5 48.00 Unpacking lib32quadmath0 (12.2.0-14+deb12u1) ...
+#5 48.04 Selecting previously unselected package libx32quadmath0.
+#5 48.05 Preparing to unpack .../52-libx32quadmath0_12.2.0-14+deb12u1_amd64.deb ...
+#5 48.05 Unpacking libx32quadmath0 (12.2.0-14+deb12u1) ...
+#5 48.08 Selecting previously unselected package lib32gcc-12-dev.
+#5 48.08 Preparing to unpack .../53-lib32gcc-12-dev_12.2.0-14+deb12u1_amd64.deb ...
+#5 48.09 Unpacking lib32gcc-12-dev (12.2.0-14+deb12u1) ...
+#5 48.24 Selecting previously unselected package libx32gcc-12-dev.
+#5 48.24 Preparing to unpack .../54-libx32gcc-12-dev_12.2.0-14+deb12u1_amd64.deb ...
+#5 48.25 Unpacking libx32gcc-12-dev (12.2.0-14+deb12u1) ...
+#5 48.39 Selecting previously unselected package gcc-12-multilib.
+#5 48.39 Preparing to unpack .../55-gcc-12-multilib_12.2.0-14+deb12u1_amd64.deb ...
+#5 48.39 Unpacking gcc-12-multilib (12.2.0-14+deb12u1) ...
+#5 48.42 Selecting previously unselected package lib32stdc++-12-dev.
+#5 48.42 Preparing to unpack .../56-lib32stdc++-12-dev_12.2.0-14+deb12u1_amd64.deb ...
+#5 48.42 Unpacking lib32stdc++-12-dev (12.2.0-14+deb12u1) ...
+#5 48.53 Selecting previously unselected package libx32stdc++-12-dev.
+#5 48.53 Preparing to unpack .../57-libx32stdc++-12-dev_12.2.0-14+deb12u1_amd64.deb ...
+#5 48.53 Unpacking libx32stdc++-12-dev (12.2.0-14+deb12u1) ...
+#5 48.64 Selecting previously unselected package g++-12-multilib.
+#5 48.64 Preparing to unpack .../58-g++-12-multilib_12.2.0-14+deb12u1_amd64.deb ...
+#5 48.64 Unpacking g++-12-multilib (12.2.0-14+deb12u1) ...
+#5 48.66 Selecting previously unselected package gcc-multilib.
+#5 48.66 Preparing to unpack .../59-gcc-multilib_4%3a12.2.0-3_amd64.deb ...
+#5 48.67 Unpacking gcc-multilib (4:12.2.0-3) ...
+#5 48.69 Selecting previously unselected package g++-multilib.
+#5 48.69 Preparing to unpack .../60-g++-multilib_4%3a12.2.0-3_amd64.deb ...
+#5 48.69 Unpacking g++-multilib (4:12.2.0-3) ...
+#5 48.71 Selecting previously unselected package python-is-python3.
+#5 48.72 Preparing to unpack .../61-python-is-python3_3.11.2-1+deb12u1_all.deb ...
+#5 48.72 Unpacking python-is-python3 (3.11.2-1+deb12u1) ...
+#5 48.75 Setting up media-types (10.0.0) ...
+#5 48.76 Setting up libgraphite2-3:amd64 (1.3.14-1+deb12u1) ...
+#5 48.77 Setting up liblcms2-2:amd64 (2.14-2+deb12u1) ...
+#5 48.78 Setting up java-common (0.74) ...
+#5 48.79 Setting up libarchive13:amd64 (3.6.2-1+deb12u5) ...
+#5 48.80 Setting up libglib2.0-0:amd64 (2.74.6-2+deb12u9) ...
+#5 48.81 No schema files found: doing nothing.
+#5 48.81 Setting up libpython3.11-stdlib:amd64 (3.11.2-6+deb12u8) ...
+#5 48.82 Setting up libc6-x32 (2.36-9+deb12u14) ...
+#5 48.83 Setting up libasound2-data (1.2.8-1) ...
+#5 48.84 Setting up libuv1:amd64 (1.44.2-1+deb12u1) ...
+#5 48.85 Setting up libjpeg62-turbo:amd64 (1:2.1.5-2) ...
+#5 48.85 Setting up libnspr4:amd64 (2:4.35-1) ...
+#5 48.86 Setting up libavahi-common-data:amd64 (0.8-10+deb12u1) ...
+#5 48.87 Setting up libdbus-1-3:amd64 (1.14.10-1~deb12u1) ...
+#5 48.88 Setting up libpng16-16:amd64 (1.6.39-2+deb12u5) ...
+#5 48.89 Setting up libjsoncpp25:amd64 (1.9.5-4) ...
+#5 48.90 Setting up fonts-dejavu-core (2.37-6) ...
+#5 48.94 Setting up libpcsclite1:amd64 (1.9.9-2) ...
+#5 48.95 Setting up libx32gomp1 (12.2.0-14+deb12u1) ...
+#5 48.95 Setting up librhash0:amd64 (1.4.3-3) ...
+#5 48.96 Setting up libasound2:amd64 (1.2.8-1+b1) ...
+#5 48.97 Setting up libc6-i386 (2.36-9+deb12u14) ...
+#5 48.98 Setting up libx32quadmath0 (12.2.0-14+deb12u1) ...
+#5 48.99 Setting up cmake-data (3.25.1-1) ...
+#5 49.00 Setting up ca-certificates-java (20230710~deb12u1) ...
+#5 49.02 No JRE found. Skipping Java certificates setup.
+#5 49.02 Setting up lib32atomic1 (12.2.0-14+deb12u1) ...
+#5 49.03 Setting up libpython3-stdlib:amd64 (3.11.2-1+b1) ...
+#5 49.04 Setting up libx32atomic1 (12.2.0-14+deb12u1) ...
+#5 49.05 Setting up python3.11 (3.11.2-6+deb12u8) ...
+#5 49.65 Setting up libc6-dev-i386 (2.36-9+deb12u14) ...
+#5 49.66 Setting up lib32itm1 (12.2.0-14+deb12u1) ...
+#5 49.67 Setting up fontconfig-config (2.14.1-4) ...
+#5 49.85 Setting up libx32gcc-s1 (12.2.0-14+deb12u1) ...
+#5 49.86 Setting up libavahi-common3:amd64 (0.8-10+deb12u1) ...
+#5 49.87 Setting up libx32itm1 (12.2.0-14+deb12u1) ...
+#5 49.88 Setting up python3 (3.11.2-1+b1) ...
+#5 49.96 Setting up libnss3:amd64 (2:3.87.1-1+deb12u4) ...
+#5 49.97 Setting up libx32asan8 (12.2.0-14+deb12u1) ...
+#5 49.99 Setting up libc6-dev-x32 (2.36-9+deb12u14) ...
+#5 50.00 Setting up lib32gomp1 (12.2.0-14+deb12u1) ...
+#5 50.00 Setting up libfreetype6:amd64 (2.12.1+dfsg-5+deb12u4) ...
+#5 50.01 Setting up lib32gcc-s1 (12.2.0-14+deb12u1) ...
+#5 50.02 Setting up lib32stdc++6 (12.2.0-14+deb12u1) ...
+#5 50.03 Setting up lib32asan8 (12.2.0-14+deb12u1) ...
+#5 50.04 Setting up lib32quadmath0 (12.2.0-14+deb12u1) ...
+#5 50.05 Setting up cmake (3.25.1-1) ...
+#5 50.05 Setting up libharfbuzz0b:amd64 (6.0.0+dfsg-3) ...
+#5 50.06 Setting up libfontconfig1:amd64 (2.14.1-4) ...
+#5 50.07 Setting up python-is-python3 (3.11.2-1+deb12u1) ...
+#5 50.08 Setting up libavahi-client3:amd64 (0.8-10+deb12u1) ...
+#5 50.08 Setting up libx32stdc++6 (12.2.0-14+deb12u1) ...
+#5 50.09 Setting up libx32ubsan1 (12.2.0-14+deb12u1) ...
+#5 50.10 Setting up lib32ubsan1 (12.2.0-14+deb12u1) ...
+#5 50.11 Setting up libcups2:amd64 (2.4.2-3+deb12u9) ...
+#5 50.12 Setting up lib32gcc-12-dev (12.2.0-14+deb12u1) ...
+#5 50.13 Setting up libx32gcc-12-dev (12.2.0-14+deb12u1) ...
+#5 50.13 Setting up lib32stdc++-12-dev (12.2.0-14+deb12u1) ...
+#5 50.14 Setting up gcc-12-multilib (12.2.0-14+deb12u1) ...
+#5 50.15 Setting up openjdk-17-jre-headless:amd64 (17.0.20.1+1-1~deb12u1) ...
+#5 50.23 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/java to provide /usr/bin/java (java) in auto mode
+#5 50.23 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jpackage to provide /usr/bin/jpackage (jpackage) in auto mode
+#5 50.24 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/keytool to provide /usr/bin/keytool (keytool) in auto mode
+#5 50.24 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/rmiregistry to provide /usr/bin/rmiregistry (rmiregistry) in auto mode
+#5 50.24 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/lib/jexec to provide /usr/bin/jexec (jexec) in auto mode
+#5 50.26 Setting up libx32stdc++-12-dev (12.2.0-14+deb12u1) ...
+#5 50.27 Setting up gcc-multilib (4:12.2.0-3) ...
+#5 50.27 Setting up g++-12-multilib (12.2.0-14+deb12u1) ...
+#5 50.28 Setting up g++-multilib (4:12.2.0-3) ...
+#5 50.29 Processing triggers for libc-bin (2.36-9+deb12u14) ...
+#5 50.32 Processing triggers for man-db (2.11.2-2) ...
+#5 50.95 Processing triggers for ca-certificates-java (20230710~deb12u1) ...
+#5 51.14 Adding debian:ACCVRAIZ1.pem
+#5 51.14 Adding debian:AC_RAIZ_FNMT-RCM.pem
+#5 51.16 Adding debian:AC_RAIZ_FNMT-RCM_SERVIDORES_SEGUROS.pem
+#5 51.16 Adding debian:ANF_Secure_Server_Root_CA.pem
+#5 51.16 Adding debian:Actalis_Authentication_Root_CA.pem
+#5 51.16 Adding debian:AffirmTrust_Commercial.pem
+#5 51.16 Adding debian:AffirmTrust_Networking.pem
+#5 51.17 Adding debian:AffirmTrust_Premium.pem
+#5 51.17 Adding debian:AffirmTrust_Premium_ECC.pem
+#5 51.17 Adding debian:Amazon_Root_CA_1.pem
+#5 51.17 Adding debian:Amazon_Root_CA_2.pem
+#5 51.17 Adding debian:Amazon_Root_CA_3.pem
+#5 51.17 Adding debian:Amazon_Root_CA_4.pem
+#5 51.17 Adding debian:Atos_TrustedRoot_2011.pem
+#5 51.17 Adding debian:Atos_TrustedRoot_Root_CA_ECC_TLS_2021.pem
+#5 51.18 Adding debian:Atos_TrustedRoot_Root_CA_RSA_TLS_2021.pem
+#5 51.18 Adding debian:Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.pem
+#5 51.18 Adding debian:BJCA_Global_Root_CA1.pem
+#5 51.18 Adding debian:BJCA_Global_Root_CA2.pem
+#5 51.19 Adding debian:Baltimore_CyberTrust_Root.pem
+#5 51.19 Adding debian:Buypass_Class_2_Root_CA.pem
+#5 51.19 Adding debian:Buypass_Class_3_Root_CA.pem
+#5 51.19 Adding debian:CA_Disig_Root_R2.pem
+#5 51.19 Adding debian:CFCA_EV_ROOT.pem
+#5 51.19 Adding debian:COMODO_Certification_Authority.pem
+#5 51.19 Adding debian:COMODO_ECC_Certification_Authority.pem
+#5 51.20 Adding debian:COMODO_RSA_Certification_Authority.pem
+#5 51.20 Adding debian:Certainly_Root_E1.pem
+#5 51.20 Adding debian:Certainly_Root_R1.pem
+#5 51.20 Adding debian:Certigna.pem
+#5 51.20 Adding debian:Certigna_Root_CA.pem
+#5 51.20 Adding debian:Certum_EC-384_CA.pem
+#5 51.20 Adding debian:Certum_Trusted_Network_CA.pem
+#5 51.20 Adding debian:Certum_Trusted_Network_CA_2.pem
+#5 51.21 Adding debian:Certum_Trusted_Root_CA.pem
+#5 51.21 Adding debian:CommScope_Public_Trust_ECC_Root-01.pem
+#5 51.21 Adding debian:CommScope_Public_Trust_ECC_Root-02.pem
+#5 51.21 Adding debian:CommScope_Public_Trust_RSA_Root-01.pem
+#5 51.21 Adding debian:CommScope_Public_Trust_RSA_Root-02.pem
+#5 51.21 Adding debian:Comodo_AAA_Services_root.pem
+#5 51.21 Adding debian:D-TRUST_BR_Root_CA_1_2020.pem
+#5 51.21 Adding debian:D-TRUST_BR_Root_CA_2_2023.pem
+#5 51.22 Adding debian:D-TRUST_EV_Root_CA_1_2020.pem
+#5 51.22 Adding debian:D-TRUST_EV_Root_CA_2_2023.pem
+#5 51.22 Adding debian:D-TRUST_Root_Class_3_CA_2_2009.pem
+#5 51.22 Adding debian:D-TRUST_Root_Class_3_CA_2_EV_2009.pem
+#5 51.22 Adding debian:DigiCert_Assured_ID_Root_CA.pem
+#5 51.22 Adding debian:DigiCert_Assured_ID_Root_G2.pem
+#5 51.22 Adding debian:DigiCert_Assured_ID_Root_G3.pem
+#5 51.22 Adding debian:DigiCert_Global_Root_CA.pem
+#5 51.22 Adding debian:DigiCert_Global_Root_G2.pem
+#5 51.22 Adding debian:DigiCert_Global_Root_G3.pem
+#5 51.23 Adding debian:DigiCert_High_Assurance_EV_Root_CA.pem
+#5 51.23 Adding debian:DigiCert_TLS_ECC_P384_Root_G5.pem
+#5 51.23 Adding debian:DigiCert_TLS_RSA4096_Root_G5.pem
+#5 51.23 Adding debian:DigiCert_Trusted_Root_G4.pem
+#5 51.23 Adding debian:Entrust.net_Premium_2048_Secure_Server_CA.pem
+#5 51.23 Adding debian:Entrust_Root_Certification_Authority.pem
+#5 51.23 Adding debian:Entrust_Root_Certification_Authority_-_EC1.pem
+#5 51.23 Adding debian:Entrust_Root_Certification_Authority_-_G2.pem
+#5 51.23 Adding debian:FIRMAPROFESIONAL_CA_ROOT-A_WEB.pem
+#5 51.23 Adding debian:GDCA_TrustAUTH_R5_ROOT.pem
+#5 51.24 Adding debian:GLOBALTRUST_2020.pem
+#5 51.24 Adding debian:GTS_Root_R1.pem
+#5 51.24 Adding debian:GTS_Root_R2.pem
+#5 51.24 Adding debian:GTS_Root_R3.pem
+#5 51.24 Adding debian:GTS_Root_R4.pem
+#5 51.24 Adding debian:GlobalSign_ECC_Root_CA_-_R4.pem
+#5 51.24 Adding debian:GlobalSign_ECC_Root_CA_-_R5.pem
+#5 51.24 Adding debian:GlobalSign_Root_CA.pem
+#5 51.24 Adding debian:GlobalSign_Root_CA_-_R3.pem
+#5 51.25 Adding debian:GlobalSign_Root_CA_-_R6.pem
+#5 51.25 Adding debian:GlobalSign_Root_E46.pem
+#5 51.25 Adding debian:GlobalSign_Root_R46.pem
+#5 51.25 Adding debian:Go_Daddy_Class_2_CA.pem
+#5 51.25 Adding debian:Go_Daddy_Root_Certificate_Authority_-_G2.pem
+#5 51.25 Adding debian:HARICA_TLS_ECC_Root_CA_2021.pem
+#5 51.25 Adding debian:HARICA_TLS_RSA_Root_CA_2021.pem
+#5 51.25 Adding debian:Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015.pem
+#5 51.25 Adding debian:Hellenic_Academic_and_Research_Institutions_RootCA_2015.pem
+#5 51.25 Adding debian:HiPKI_Root_CA_-_G1.pem
+#5 51.25 Adding debian:Hongkong_Post_Root_CA_3.pem
+#5 51.26 Adding debian:ISRG_Root_X1.pem
+#5 51.26 Adding debian:ISRG_Root_X2.pem
+#5 51.26 Adding debian:IdenTrust_Commercial_Root_CA_1.pem
+#5 51.26 Adding debian:IdenTrust_Public_Sector_Root_CA_1.pem
+#5 51.26 Adding debian:Izenpe.com.pem
+#5 51.26 Adding debian:Microsec_e-Szigno_Root_CA_2009.pem
+#5 51.26 Adding debian:Microsoft_ECC_Root_Certificate_Authority_2017.pem
+#5 51.26 Adding debian:Microsoft_RSA_Root_Certificate_Authority_2017.pem
+#5 51.26 Adding debian:NAVER_Global_Root_Certification_Authority.pem
+#5 51.27 Adding debian:NetLock_Arany_=Class_Gold=_Főtanúsítvány.pem
+#5 51.27 Adding debian:OISTE_WISeKey_Global_Root_GB_CA.pem
+#5 51.27 Adding debian:OISTE_WISeKey_Global_Root_GC_CA.pem
+#5 51.27 Adding debian:QuoVadis_Root_CA_1_G3.pem
+#5 51.27 Adding debian:QuoVadis_Root_CA_2.pem
+#5 51.27 Adding debian:QuoVadis_Root_CA_2_G3.pem
+#5 51.27 Adding debian:QuoVadis_Root_CA_3.pem
+#5 51.27 Adding debian:QuoVadis_Root_CA_3_G3.pem
+#5 51.28 Adding debian:SSL.com_EV_Root_Certification_Authority_ECC.pem
+#5 51.28 Adding debian:SSL.com_EV_Root_Certification_Authority_RSA_R2.pem
+#5 51.28 Adding debian:SSL.com_Root_Certification_Authority_ECC.pem
+#5 51.28 Adding debian:SSL.com_Root_Certification_Authority_RSA.pem
+#5 51.28 Adding debian:SSL.com_TLS_ECC_Root_CA_2022.pem
+#5 51.28 Adding debian:SSL.com_TLS_RSA_Root_CA_2022.pem
+#5 51.28 Adding debian:SZAFIR_ROOT_CA2.pem
+#5 51.28 Adding debian:Sectigo_Public_Server_Authentication_Root_E46.pem
+#5 51.28 Adding debian:Sectigo_Public_Server_Authentication_Root_R46.pem
+#5 51.29 Adding debian:SecureSign_Root_CA12.pem
+#5 51.29 Adding debian:SecureSign_Root_CA14.pem
+#5 51.29 Adding debian:SecureSign_Root_CA15.pem
+#5 51.29 Adding debian:SecureTrust_CA.pem
+#5 51.29 Adding debian:Secure_Global_CA.pem
+#5 51.29 Adding debian:Security_Communication_ECC_RootCA1.pem
+#5 51.29 Adding debian:Security_Communication_RootCA2.pem
+#5 51.29 Adding debian:Starfield_Class_2_CA.pem
+#5 51.29 Adding debian:Starfield_Root_Certificate_Authority_-_G2.pem
+#5 51.29 Adding debian:Starfield_Services_Root_Certificate_Authority_-_G2.pem
+#5 51.29 Adding debian:SwissSign_Gold_CA_-_G2.pem
+#5 51.30 Adding debian:T-TeleSec_GlobalRoot_Class_2.pem
+#5 51.30 Adding debian:T-TeleSec_GlobalRoot_Class_3.pem
+#5 51.30 Adding debian:TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1.pem
+#5 51.30 Adding debian:TWCA_CYBER_Root_CA.pem
+#5 51.30 Adding debian:TWCA_Global_Root_CA.pem
+#5 51.30 Adding debian:TWCA_Root_Certification_Authority.pem
+#5 51.30 Adding debian:Telekom_Security_TLS_ECC_Root_2020.pem
+#5 51.30 Adding debian:Telekom_Security_TLS_RSA_Root_2023.pem
+#5 51.30 Adding debian:TeliaSonera_Root_CA_v1.pem
+#5 51.31 Adding debian:Telia_Root_CA_v2.pem
+#5 51.31 Adding debian:TrustAsia_Global_Root_CA_G3.pem
+#5 51.31 Adding debian:TrustAsia_Global_Root_CA_G4.pem
+#5 51.31 Adding debian:Trustwave_Global_Certification_Authority.pem
+#5 51.31 Adding debian:Trustwave_Global_ECC_P256_Certification_Authority.pem
+#5 51.31 Adding debian:Trustwave_Global_ECC_P384_Certification_Authority.pem
+#5 51.31 Adding debian:TunTrust_Root_CA.pem
+#5 51.31 Adding debian:UCA_Extended_Validation_Root.pem
+#5 51.31 Adding debian:UCA_Global_G2_Root.pem
+#5 51.31 Adding debian:USERTrust_ECC_Certification_Authority.pem
+#5 51.32 Adding debian:USERTrust_RSA_Certification_Authority.pem
+#5 51.32 Adding debian:XRamp_Global_CA_Root.pem
+#5 51.32 Adding debian:certSIGN_ROOT_CA.pem
+#5 51.32 Adding debian:certSIGN_Root_CA_G2.pem
+#5 51.32 Adding debian:e-Szigno_Root_CA_2017.pem
+#5 51.32 Adding debian:ePKI_Root_Certification_Authority.pem
+#5 51.32 Adding debian:emSign_ECC_Root_CA_-_C3.pem
+#5 51.32 Adding debian:emSign_ECC_Root_CA_-_G3.pem
+#5 51.32 Adding debian:emSign_Root_CA_-_C1.pem
+#5 51.32 Adding debian:emSign_Root_CA_-_G1.pem
+#5 51.32 Adding debian:vTrus_ECC_Root_CA.pem
+#5 51.33 Adding debian:vTrus_Root_CA.pem
+#5 51.36 done.
+#5 51.36 Setting up openjdk-17-jdk-headless:amd64 (17.0.20.1+1-1~deb12u1) ...
+#5 51.37 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jar to provide /usr/bin/jar (jar) in auto mode
+#5 51.37 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jarsigner to provide /usr/bin/jarsigner (jarsigner) in auto mode
+#5 51.38 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/javac to provide /usr/bin/javac (javac) in auto mode
+#5 51.38 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/javadoc to provide /usr/bin/javadoc (javadoc) in auto mode
+#5 51.38 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/javap to provide /usr/bin/javap (javap) in auto mode
+#5 51.39 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jcmd to provide /usr/bin/jcmd (jcmd) in auto mode
+#5 51.39 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jdb to provide /usr/bin/jdb (jdb) in auto mode
+#5 51.39 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jdeprscan to provide /usr/bin/jdeprscan (jdeprscan) in auto mode
+#5 51.40 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jdeps to provide /usr/bin/jdeps (jdeps) in auto mode
+#5 51.40 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jfr to provide /usr/bin/jfr (jfr) in auto mode
+#5 51.40 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jimage to provide /usr/bin/jimage (jimage) in auto mode
+#5 51.41 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jinfo to provide /usr/bin/jinfo (jinfo) in auto mode
+#5 51.41 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jlink to provide /usr/bin/jlink (jlink) in auto mode
+#5 51.42 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jmap to provide /usr/bin/jmap (jmap) in auto mode
+#5 51.42 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jmod to provide /usr/bin/jmod (jmod) in auto mode
+#5 51.43 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jps to provide /usr/bin/jps (jps) in auto mode
+#5 51.43 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jrunscript to provide /usr/bin/jrunscript (jrunscript) in auto mode
+#5 51.43 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jshell to provide /usr/bin/jshell (jshell) in auto mode
+#5 51.44 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jstack to provide /usr/bin/jstack (jstack) in auto mode
+#5 51.44 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jstat to provide /usr/bin/jstat (jstat) in auto mode
+#5 51.45 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jstatd to provide /usr/bin/jstatd (jstatd) in auto mode
+#5 51.45 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/serialver to provide /usr/bin/serialver (serialver) in auto mode
+#5 51.45 update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jhsdb to provide /usr/bin/jhsdb (jhsdb) in auto mode
+#5 51.46 Setting up default-jre-headless (2:1.17-74) ...
+#5 51.47 Setting up default-jdk-headless (2:1.17-74) ...
+#5 DONE 51.7s
+
+#6 [3/6] RUN git clone --no-checkout "https://github.com/uclouvain/openjpeg.git" /testbed     && cd /testbed     && git checkout --detach "4f5ec07c315872bdee0885be085ebf57cede2db9"     && git remote remove origin     && git config core.autocrlf false     && git for-each-ref --format='delete %(refname)' refs/heads refs/remotes refs/tags | git update-ref --stdin     && git reflog expire --expire=now --all     && git gc --prune=now     && test "$(git rev-parse HEAD)" = "4f5ec07c315872bdee0885be085ebf57cede2db9"     && test -z "$(git status --porcelain)"
+#6 0.226 Cloning into '/testbed'...
+#6 12.28 HEAD is now at 4f5ec07c Remove C++ comment
+#6 DONE 12.6s
+
+#7 [4/6] RUN mkdir -p /opt/openjpeg-data/input/nonregression     && touch /opt/openjpeg-data/README-OPJ-Data     && curl --fail --location --retry 3        https://raw.githubusercontent.com/uclouvain/openjpeg-data/68b30b7f390b852106fb5ee2cf1dbc8628a2feaf/input/nonregression/issue571.tif        --output /opt/openjpeg-data/input/nonregression/issue571.tif     && echo '1c9dcd1801aac971759da985661bf074beb4c3a19c6ac4dbd8a0775f7f018e44  /opt/openjpeg-data/input/nonregression/issue571.tif' | sha256sum -c -
+#7 0.315   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+#7 0.315                                  Dload  Upload   Total   Spent    Left  Speed
+#7 0.315   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0  260k    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0100  260k  100  260k    0     0   141k      0  0:00:01  0:00:01 --:--:--  141k
+#7 2.155 /opt/openjpeg-data/input/nonregression/issue571.tif: OK
+#7 DONE 2.2s
+
+#8 [5/6] RUN cmake -S /testbed -B /opt/openjpeg-build         -DCMAKE_BUILD_TYPE=Release         -DCMAKE_C_FLAGS=-m32         -DCMAKE_EXE_LINKER_FLAGS=-m32         -DCMAKE_SHARED_LINKER_FLAGS=-m32         -DCMAKE_POLICY_VERSION_MINIMUM=3.5         -DBUILD_SHARED_LIBS=OFF         -DBUILD_CODEC=ON         -DBUILD_THIRDPARTY=ON         -DBUILD_TESTING=OFF     && cmake --build /opt/openjpeg-build --parallel "$(nproc)"     && mkdir -p /benchmark /inputs /results
+#8 0.255 CMake Deprecation Warning at CMakeLists.txt:10 (cmake_minimum_required):
+#8 0.255   Compatibility with CMake < 2.8.12 will be removed from a future version of
+#8 0.255   CMake.
+#8 0.255 
+#8 0.255   Update the VERSION argument <min> value or use a ...<max> suffix to tell
+#8 0.255   CMake that the project does not need compatibility with older versions.
+#8 0.255 
+#8 0.255 
+#8 0.300 -- The C compiler identification is GNU 12.2.0
+#8 0.310 -- Detecting C compiler ABI info
+#8 0.367 -- Detecting C compiler ABI info - done
+#8 0.374 -- Check for working C compiler: /usr/bin/cc - skipped
+#8 0.375 -- Detecting C compile features
+#8 0.375 -- Detecting C compile features - done
+#8 0.377 -- Looking for string.h
+#8 0.439 -- Looking for string.h - found
+#8 0.439 -- Looking for memory.h
+#8 0.499 -- Looking for memory.h - found
+#8 0.499 -- Looking for stdlib.h
+#8 0.561 -- Looking for stdlib.h - found
+#8 0.561 -- Looking for stdio.h
+#8 0.622 -- Looking for stdio.h - found
+#8 0.622 -- Looking for math.h
+#8 0.687 -- Looking for math.h - found
+#8 0.688 -- Looking for float.h
+#8 0.748 -- Looking for float.h - found
+#8 0.748 -- Looking for time.h
+#8 0.812 -- Looking for time.h - found
+#8 0.812 -- Looking for stdarg.h
+#8 0.873 -- Looking for stdarg.h - found
+#8 0.873 -- Looking for ctype.h
+#8 0.936 -- Looking for ctype.h - found
+#8 0.936 -- Looking for assert.h
+#8 0.997 -- Looking for assert.h - found
+#8 0.997 -- Looking for stdint.h
+#8 1.059 -- Looking for stdint.h - found
+#8 1.059 -- Looking for inttypes.h
+#8 1.121 -- Looking for inttypes.h - found
+#8 1.121 -- Looking for strings.h
+#8 1.182 -- Looking for strings.h - found
+#8 1.182 -- Looking for sys/stat.h
+#8 1.244 -- Looking for sys/stat.h - found
+#8 1.244 -- Looking for sys/types.h
+#8 1.304 -- Looking for sys/types.h - found
+#8 1.305 -- Looking for unistd.h
+#8 1.368 -- Looking for unistd.h - found
+#8 1.368 -- Checking for 64-bit off_t
+#8 1.458 -- Checking for 64-bit off_t - present with _FILE_OFFSET_BITS=64
+#8 1.458 -- Checking for fseeko/ftello
+#8 1.523 -- Checking for fseeko/ftello - present
+#8 1.523 -- Large File support - found
+#8 1.526 -- We will build Z lib from thirdparty
+#8 1.526 CMake Deprecation Warning at thirdparty/libz/CMakeLists.txt:3 (cmake_minimum_required):
+#8 1.526   Compatibility with CMake < 2.8.12 will be removed from a future version of
+#8 1.526   CMake.
+#8 1.526 
+#8 1.526   Update the VERSION argument <min> value or use a ...<max> suffix to tell
+#8 1.526   CMake that the project does not need compatibility with older versions.
+#8 1.526 
+#8 1.526 
+#8 1.527 -- Looking for stdint.h
+#8 1.588 -- Looking for stdint.h - found
+#8 1.588 -- Looking for stddef.h
+#8 1.650 -- Looking for stddef.h - found
+#8 1.650 -- Check size of off64_t
+#8 1.714 -- Check size of off64_t - done
+#8 1.714 -- Looking for fseeko
+#8 1.774 -- Looking for fseeko - found
+#8 1.774 -- Looking for unistd.h
+#8 1.838 -- Looking for unistd.h - found
+#8 1.839 -- We will build PNG lib from thirdparty
+#8 1.840 -- We will build TIFF lib from thirdparty
+#8 1.840 CMake Deprecation Warning at thirdparty/libtiff/CMakeLists.txt:1 (CMAKE_MINIMUM_REQUIRED):
+#8 1.840   Compatibility with CMake < 2.8.12 will be removed from a future version of
+#8 1.840   CMake.
+#8 1.840 
+#8 1.840   Update the VERSION argument <min> value or use a ...<max> suffix to tell
+#8 1.840   CMake that the project does not need compatibility with older versions.
+#8 1.840 
+#8 1.840 
+#8 1.841 -- Looking for include file zlib.h
+#8 1.906 -- Looking for include file zlib.h - found
+#8 1.906 -- Looking for include file jpeglib.h
+#8 1.931 -- Looking for include file jpeglib.h - not found
+#8 1.931 -- Looking for include file dlfcn.h
+#8 1.991 -- Looking for include file dlfcn.h - found
+#8 1.992 -- Looking for include file fcntl.h
+#8 2.054 -- Looking for include file fcntl.h - found
+#8 2.054 -- Looking for include file inttypes.h
+#8 2.116 -- Looking for include file inttypes.h - found
+#8 2.116 -- Looking for include file io.h
+#8 2.142 -- Looking for include file io.h - not found
+#8 2.143 -- Looking for include file limits.h
+#8 2.208 -- Looking for include file limits.h - found
+#8 2.208 -- Looking for include file malloc.h
+#8 2.274 -- Looking for include file malloc.h - found
+#8 2.274 -- Looking for include file search.h
+#8 2.335 -- Looking for include file search.h - found
+#8 2.336 -- Looking for include file sys/time.h
+#8 2.399 -- Looking for include file sys/time.h - found
+#8 2.399 -- Looking for include file windows.h
+#8 2.425 -- Looking for include file windows.h - not found
+#8 2.425 -- Looking for include file ieeefp.h
+#8 2.450 -- Looking for include file ieeefp.h - not found
+#8 2.450 -- Looking for getopt
+#8 2.515 -- Looking for getopt - found
+#8 2.515 -- Looking for isascii
+#8 2.576 -- Looking for isascii - found
+#8 2.577 -- Looking for memmove
+#8 2.638 -- Looking for memmove - found
+#8 2.639 -- Looking for memset
+#8 2.705 -- Looking for memset - found
+#8 2.705 -- Looking for mmap
+#8 2.771 -- Looking for mmap - found
+#8 2.771 -- Looking for strcasecmp
+#8 2.833 -- Looking for strcasecmp - found
+#8 2.833 -- Looking for strchr
+#8 2.896 -- Looking for strchr - found
+#8 2.896 -- Looking for strrchr
+#8 2.958 -- Looking for strrchr - found
+#8 2.958 -- Looking for strstr
+#8 3.021 -- Looking for strstr - found
+#8 3.021 -- Looking for strtol
+#8 3.083 -- Looking for strtol - found
+#8 3.083 -- Looking for strtoul
+#8 3.146 -- Looking for strtoul - found
+#8 3.146 -- Looking for strtoull
+#8 3.207 -- Looking for strtoull - found
+#8 3.208 -- Check size of signed int
+#8 3.273 -- Check size of signed int - done
+#8 3.273 -- Check size of signed long
+#8 3.338 -- Check size of signed long - done
+#8 3.339 -- Check size of signed long long
+#8 3.404 -- Check size of signed long long - done
+#8 3.404 -- Check size of signed short
+#8 3.470 -- Check size of signed short - done
+#8 3.470 -- Check size of unsigned int
+#8 3.536 -- Check size of unsigned int - done
+#8 3.537 -- Check size of unsigned long
+#8 3.601 -- Check size of unsigned long - done
+#8 3.602 -- Check size of unsigned long long
+#8 3.667 -- Check size of unsigned long long - done
+#8 3.668 -- Check size of unsigned short
+#8 3.733 -- Check size of unsigned short - done
+#8 3.733 -- Check size of unsigned char*
+#8 3.798 -- Check size of unsigned char* - done
+#8 3.798 -- Check size of ssize_t
+#8 3.863 -- Check size of ssize_t - done
+#8 3.863 -- Looking for floor
+#8 3.934 -- Looking for floor - found
+#8 3.935 -- Looking for sqrt
+#8 4.010 -- Looking for sqrt - found
+#8 4.010 -- Looking for pow
+#8 4.085 -- Looking for pow - found
+#8 4.085 -- Looking for lfind
+#8 4.148 -- Looking for lfind - found
+#8 4.148 -- Looking for setmod
+#8 4.174 -- Looking for setmod - not found
+#8 4.236 -- We will build LCMS2 lib from thirdparty
+#8 4.249 -- Configuring done
+#8 4.280 -- Generating done
+#8 4.282 CMake Warning:
+#8 4.282   Manually-specified variables were not used by the project:
+#8 4.282 
+#8 4.282     CMAKE_POLICY_VERSION_MINIMUM
+#8 4.282 
+#8 4.282 
+#8 4.282 -- Build files have been written to: /opt/openjpeg-build
+#8 4.332 [  1%] Building C object src/lib/openjp2/CMakeFiles/t1_generate_luts.dir/t1_generate_luts.c.o
+#8 4.332 [  2%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/image.c.o
+#8 4.332 [  2%] Building C object thirdparty/libz/CMakeFiles/z.dir/adler32.c.o
+#8 4.334 [  2%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmscam02.c.o
+#8 4.334 [  3%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/event.c.o
+#8 4.334 [  4%] Building C object thirdparty/libz/CMakeFiles/z.dir/gzlib.c.o
+#8 4.334 [  5%] Building C object thirdparty/libz/CMakeFiles/z.dir/compress.c.o
+#8 4.334 [  6%] Building C object thirdparty/libz/CMakeFiles/z.dir/gzclose.c.o
+#8 4.334 [  7%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_aux.c.o
+#8 4.334 [  8%] Building C object thirdparty/libz/CMakeFiles/z.dir/gzread.c.o
+#8 4.336 [  8%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/cio.c.o
+#8 4.336 [  9%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/bio.c.o
+#8 4.337 [ 11%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmscgats.c.o
+#8 4.337 [ 11%] Building C object thirdparty/libz/CMakeFiles/z.dir/crc32.c.o
+#8 4.337 [ 12%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/jp2.c.o
+#8 4.337 [ 12%] Building C object thirdparty/libz/CMakeFiles/z.dir/deflate.c.o
+#8 4.339 [ 12%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/dwt.c.o
+#8 4.339 [ 13%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/j2k.c.o
+#8 4.340 [ 13%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/invert.c.o
+#8 4.343 [ 14%] Building C object thirdparty/libpng/CMakeFiles/png.dir/png.c.o
+#8 4.401 [ 15%] Building C object thirdparty/libpng/CMakeFiles/png.dir/pngerror.c.o
+#8 4.406 [ 16%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_close.c.o
+#8 4.438 [ 16%] Building C object thirdparty/libpng/CMakeFiles/png.dir/pngget.c.o
+#8 4.494 [ 17%] Building C object thirdparty/libz/CMakeFiles/z.dir/gzwrite.c.o
+#8 4.513 [ 18%] Building C object thirdparty/libz/CMakeFiles/z.dir/inflate.c.o
+#8 4.542 [ 19%] Building C object thirdparty/libpng/CMakeFiles/png.dir/pngmem.c.o
+#8 4.543 [ 19%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/mct.c.o
+#8 4.546 [ 19%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_codec.c.o
+#8 4.554 [ 19%] Linking C executable ../../../bin/t1_generate_luts
+#8 4.573 [ 20%] Building C object thirdparty/libpng/CMakeFiles/png.dir/pngpread.c.o
+#8 4.586 [ 21%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmscnvrt.c.o
+#8 4.629 [ 22%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/mqc.c.o
+#8 4.642 [ 22%] Building C object thirdparty/libpng/CMakeFiles/png.dir/pngread.c.o
+#8 4.663 [ 23%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_color.c.o
+#8 4.704 [ 24%] Building C object thirdparty/libpng/CMakeFiles/png.dir/pngrio.c.o
+#8 4.709 [ 24%] Built target t1_generate_luts
+#8 4.743 [ 25%] Building C object thirdparty/libpng/CMakeFiles/png.dir/pngrtran.c.o
+#8 4.820 [ 25%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmserr.c.o
+#8 4.886 [ 26%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_compress.c.o
+#8 4.932 [ 26%] Building C object thirdparty/libz/CMakeFiles/z.dir/infback.c.o
+#8 4.989 [ 27%] Building C object thirdparty/libz/CMakeFiles/z.dir/inftrees.c.o
+#8 5.047 [ 28%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmsgamma.c.o
+#8 5.057 [ 28%] Building C object thirdparty/libpng/CMakeFiles/png.dir/pngrutil.c.o
+#8 5.136 [ 28%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_dir.c.o
+#8 5.261 [ 29%] Building C object thirdparty/libz/CMakeFiles/z.dir/inffast.c.o
+#8 5.293 [ 30%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmsgmt.c.o
+#8 5.382 [ 31%] Building C object thirdparty/libpng/CMakeFiles/png.dir/pngset.c.o
+#8 5.398 [ 32%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/openjpeg.c.o
+#8 5.546 [ 33%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_dirinfo.c.o
+#8 5.593 [ 34%] Building C object thirdparty/libpng/CMakeFiles/png.dir/pngtrans.c.o
+#8 5.601 [ 34%] Building C object thirdparty/libz/CMakeFiles/z.dir/trees.c.o
+#8 5.709 [ 34%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmshalf.c.o
+#8 5.728 [ 34%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/opj_clock.c.o
+#8 5.872 [ 35%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_dirread.c.o
+#8 5.899 [ 35%] Building C object thirdparty/libpng/CMakeFiles/png.dir/pngwio.c.o
+#8 5.902 [ 36%] Building C object thirdparty/libz/CMakeFiles/z.dir/uncompr.c.o
+#8 5.932 [ 37%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_dirwrite.c.o
+#8 6.006 [ 38%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmsintrp.c.o
+#8 6.090 [ 38%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_dumpmode.c.o
+#8 6.113 [ 39%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_error.c.o
+#8 6.136 [ 40%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/pi.c.o
+#8 6.252 [ 41%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmsio0.c.o
+#8 6.309 [ 42%] Building C object thirdparty/libz/CMakeFiles/z.dir/zutil.c.o
+#8 6.331 [ 42%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmsio1.c.o
+#8 6.343 [ 43%] Building C object thirdparty/libpng/CMakeFiles/png.dir/pngwrite.c.o
+#8 6.377 [ 44%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_extension.c.o
+#8 6.575 [ 45%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmslut.c.o
+#8 6.603 [ 46%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/raw.c.o
+#8 6.609 [ 47%] Building C object thirdparty/libpng/CMakeFiles/png.dir/pngwtran.c.o
+#8 6.623 [ 47%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_fax3.c.o
+#8 6.683 [ 47%] Building C object thirdparty/libpng/CMakeFiles/png.dir/pngwutil.c.o
+#8 6.684 [ 47%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/t1.c.o
+#8 6.903 [ 48%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/t2.c.o
+#8 7.046 [ 49%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmsmd5.c.o
+#8 7.190 [ 50%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_fax3sm.c.o
+#8 7.299 [ 51%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_flush.c.o
+#8 7.322 [ 52%] Linking C static library ../lib/libz.a
+#8 7.457 [ 52%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmsmtrx.c.o
+#8 7.477 [ 53%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/tcd.c.o
+#8 7.526 [ 53%] Built target z
+#8 7.575 [ 53%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_getimage.c.o
+#8 7.583 [ 54%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmsnamed.c.o
+#8 7.618 [ 54%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/tgt.c.o
+#8 7.713 [ 55%] Building C object src/lib/openjp2/CMakeFiles/openjp2.dir/function_list.c.o
+#8 7.793 [ 56%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_jbig.c.o
+#8 7.816 [ 57%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmsopt.c.o
+#8 7.848 [ 57%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmspack.c.o
+#8 7.892 [ 58%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmspcs.c.o
+#8 7.940 [ 59%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmsplugin.c.o
+#8 7.961 [ 60%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_jpeg.c.o
+#8 8.055 [ 60%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmsps2.c.o
+#8 8.108 [ 60%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_luv.c.o
+#8 8.116 [ 61%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmssamp.c.o
+#8 8.184 [ 62%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmssm.c.o
+#8 8.369 [ 63%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_lzw.c.o
+#8 8.417 [ 64%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_next.c.o
+#8 8.534 [ 64%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmstypes.c.o
+#8 8.749 [ 65%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmsvirt.c.o
+#8 8.774 [ 66%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmswtpnt.c.o
+#8 8.778 [ 66%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_ojpeg.c.o
+#8 8.941 [ 67%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_open.c.o
+#8 8.981 [ 68%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_packbits.c.o
+#8 9.065 [ 69%] Linking C static library ../lib/libpng.a
+#8 9.113 [ 69%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_pixarlog.c.o
+#8 9.126 [ 70%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_predict.c.o
+#8 9.209 [ 70%] Built target png
+#8 9.213 [ 71%] Building C object thirdparty/liblcms2/CMakeFiles/lcms2.dir/src/cmsxform.c.o
+#8 9.260 [ 72%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_print.c.o
+#8 9.285 [ 72%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_read.c.o
+#8 9.306 [ 73%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_strip.c.o
+#8 9.432 [ 74%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_swab.c.o
+#8 9.469 [ 74%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_thunder.c.o
+#8 9.471 [ 75%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_tile.c.o
+#8 9.634 [ 76%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_version.c.o
+#8 9.753 [ 77%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_warning.c.o
+#8 9.764 [ 77%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_write.c.o
+#8 9.770 [ 78%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_zip.c.o
+#8 9.838 [ 79%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_jpeg_12.c.o
+#8 9.892 [ 79%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_lzma.c.o
+#8 9.915 [ 80%] Building C object thirdparty/libtiff/CMakeFiles/tiff.dir/tif_unix.c.o
+#8 10.49 [ 81%] Linking C static library ../../../bin/libopenjp2.a
+#8 10.56 [ 81%] Built target openjp2
+#8 10.96 [ 82%] Linking C static library ../lib/libtiff.a
+#8 11.02 [ 82%] Built target tiff
+#8 11.71 [ 82%] Linking C static library ../lib/liblcms2.a
+#8 11.75 [ 82%] Built target lcms2
+#8 11.77 [ 82%] Building C object src/bin/jp2/CMakeFiles/opj_compress.dir/opj_compress.c.o
+#8 11.77 [ 82%] Building C object src/bin/jp2/CMakeFiles/opj_decompress.dir/convert.c.o
+#8 11.77 [ 83%] Building C object src/bin/jp2/CMakeFiles/opj_dump.dir/opj_dump.c.o
+#8 11.77 [ 85%] Building C object src/bin/jp2/CMakeFiles/opj_decompress.dir/convertbmp.c.o
+#8 11.77 [ 85%] Building C object src/bin/jp2/CMakeFiles/opj_decompress.dir/index.c.o
+#8 11.77 [ 86%] Building C object src/bin/jp2/CMakeFiles/opj_dump.dir/__/common/opj_getopt.c.o
+#8 11.77 [ 87%] Building C object src/bin/jp2/CMakeFiles/opj_compress.dir/convert.c.o
+#8 11.77 [ 87%] Building C object src/bin/jp2/CMakeFiles/opj_dump.dir/convert.c.o
+#8 11.78 [ 88%] Building C object src/bin/jp2/CMakeFiles/opj_dump.dir/convertbmp.c.o
+#8 11.78 [ 89%] Building C object src/bin/jp2/CMakeFiles/opj_compress.dir/convertbmp.c.o
+#8 11.78 [ 90%] Building C object src/bin/jp2/CMakeFiles/opj_decompress.dir/opj_decompress.c.o
+#8 11.78 [ 90%] Building C object src/bin/jp2/CMakeFiles/opj_decompress.dir/__/common/color.c.o
+#8 11.78 [ 91%] Building C object src/bin/jp2/CMakeFiles/opj_compress.dir/index.c.o
+#8 11.78 [ 92%] Building C object src/bin/jp2/CMakeFiles/opj_dump.dir/index.c.o
+#8 11.78 [ 92%] Building C object src/bin/jp2/CMakeFiles/opj_dump.dir/__/common/color.c.o
+#8 11.78 [ 93%] Building C object src/bin/jp2/CMakeFiles/opj_dump.dir/converttif.c.o
+#8 11.78 [ 94%] Building C object src/bin/jp2/CMakeFiles/opj_compress.dir/__/common/opj_getopt.c.o
+#8 11.78 [ 94%] Building C object src/bin/jp2/CMakeFiles/opj_compress.dir/__/common/color.c.o
+#8 11.79 [ 95%] Building C object src/bin/jp2/CMakeFiles/opj_decompress.dir/__/common/opj_getopt.c.o
+#8 11.80 [ 95%] Building C object src/bin/jp2/CMakeFiles/opj_dump.dir/convertpng.c.o
+#8 11.96 [ 95%] Building C object src/bin/jp2/CMakeFiles/opj_decompress.dir/convertpng.c.o
+#8 11.98 [ 96%] Building C object src/bin/jp2/CMakeFiles/opj_decompress.dir/converttif.c.o
+#8 12.01 [ 97%] Building C object src/bin/jp2/CMakeFiles/opj_compress.dir/converttif.c.o
+#8 12.03 [ 97%] Building C object src/bin/jp2/CMakeFiles/opj_compress.dir/convertpng.c.o
+#8 13.11 [ 98%] Linking C executable ../../../bin/opj_dump
+#8 13.17 [ 99%] Linking C executable ../../../bin/opj_decompress
+#8 13.20 [ 99%] Built target opj_dump
+#8 13.25 [100%] Linking C executable ../../../bin/opj_compress
+#8 13.25 [100%] Built target opj_decompress
+#8 13.33 [100%] Built target opj_compress
+#8 DONE 13.4s
+
+#9 [6/6] WORKDIR /testbed
+#9 DONE 0.0s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 15.0s done
+#10 exporting manifest sha256:223adde8b34cede3dd1bd0d5e2ca03cebc15e207adec73f85d609f670a26f646 done
+#10 exporting config sha256:d5959d3ed61c90acb36798ff5f7b9c9da4ee4b7d4fcfb067277a993db923420e 0.0s done
+#10 exporting attestation manifest sha256:d30a452477b41a6e95a13991bf110d9dc05db4ea462cd7031652bfc7e5c9076f 0.0s done
+#10 exporting manifest list sha256:33a22445240b5d6abba03d5c41a277d721fc8940f51aa3e7b7138daeb2f87305 done
+#10 naming to docker.io/library/javac-case-112-openjpeg:benchmark-v1 done
+#10 unpacking to docker.io/library/javac-case-112-openjpeg:benchmark-v1
+#10 unpacking to docker.io/library/javac-case-112-openjpeg:benchmark-v1 3.6s done
+#10 DONE 18.7s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/3g2e5l7nyt4hpl965rm7r28p4

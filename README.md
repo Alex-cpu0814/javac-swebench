@@ -1,20 +1,36 @@
 # Java-C SWE-bench-compatible cases
 
-This repository contains five `ninia/jep` cross-language bug cases converted
-to a SWE-bench-compatible record format.
+This repository contains nine Java-C cross-language bug cases converted to a
+SWE-bench-compatible record format. Cases are separated by test provenance:
+`Y_test_data/` contains Fix commits with extractable official regression tests;
+`N_test_data/` contains cases whose protected tests were constructed, adapted,
+or wrapped during dataset production.
 
-| Case | Instance ID | Issue | FAIL_TO_PASS | PASS_TO_PASS | Evaluator generation |
-|---|---|---:|---:|---:|---|
-| 092 | `ninia__jep-77` | 77 | 1 | 121 | v3 single-image, runtime injection |
-| 093 | `ninia__jep-79` | 79 | 1 | 130 | v3 single-image, runtime injection (CentOS 7) |
-| 094 | `ninia__jep-40` | 40 | 1 | 95 | v3 single-image, runtime injection (Ubuntu) |
-| 096 | `ninia__jep-22` | 22 | 1 | 78 | v3 single-image, runtime injection (local image audited; gold target passed) |
-| 099 | `ninia__jep-17-cache` | 17 | 1 | 78 | v3 single-image, runtime injection (ClassLoader cache isolation) |
+| Set | Case | Instance ID | Issue/PR | FAIL_TO_PASS | PASS_TO_PASS |
+|---|---:|---|---:|---:|---:|
+| Y | 069 | `LWJGL__lwjgl3-409` | 409 | 1 | 1 |
+| Y | 092 | `ninia__jep-77` | 77 | 1 | 121 |
+| Y | 100 | `ninia__jep-9-exceptions` | PR 9 | 5 | 69 |
+| Y | 112 | `uclouvain__openjpeg-571` | 571 / PR 579 | 1 | 2 |
+| N | 093 | `ninia__jep-79` | 79 | 1 | 130 |
+| N | 094 | `ninia__jep-40` | 40 | 1 | 95 |
+| N | 096 | `ninia__jep-22` | 22 | 1 | 78 |
+| N | 098 | `ninia__jep-17` | 17 | 1 | 78 |
+| N | 099 | `ninia__jep-17-cache` | 17 | 1 | 78 |
 
 Case 099 verifies the upstream fix that moves JEP's Java-method cache from
 process-global state into each Jep interpreter. Its protected child-JVM test
 loads two same-named classes with different methods through separate
 ClassLoaders; Base fails and the fix passes all 79 expected tests.
+
+Case 112 reproduces OpenJPEG Issue #571 with a 32-bit x86 GCC build. Its Base
+round trip changes 19 pixels, while the upstream fix passes the official
+lossless comparison. Published evaluator image:
+
+```text
+yutu0814/javac-case-112-openjpeg:benchmark-v1
+sha256:33a22445240b5d6abba03d5c41a277d721fc8940f51aa3e7b7138daeb2f87305
+```
 
 ## Case 092
 
@@ -47,7 +63,7 @@ Requirements: Git, Docker with Linux containers, and Python 3.5 or newer.
 
 ```powershell
 git clone https://github.com/Alex-cpu0814/javac-swebench-092-094.git
-Set-Location .\javac-swebench-092-094\javac_case_092
+Set-Location .\javac-swebench-092-094\Y_test_data\javac_case_092
 
 docker pull yutu0814/javac-case-092-jep:benchmark-v3
 
@@ -74,7 +90,7 @@ a model-generated answer. Do not use it when measuring model repair ability.
 The normal model-evaluation workflow is:
 
 1. Give the model the public task record. For example, case 093 uses
-   `javac_case_093/official_swebench/public_task_093.json`. This record contains
+   `N_test_data/javac_case_093/official_swebench/public_task_093.json`. This record contains
    the repository, Base commit, issue description, and project version. It does
    not contain the gold patch or the protected test patch.
 2. Ask the model to return a Git unified diff based on the recorded Base commit.
@@ -103,13 +119,13 @@ The normal model-evaluation workflow is:
 5. Run the evaluator from the selected case directory:
 
    ```powershell
-   Set-Location .\javac_case_093
+   Set-Location .\N_test_data\javac_case_093
    python .\evaluator\evaluate_model_patch.py `
      --patch C:\temp\case093-model.patch `
      --label model-1
    ```
 
-   Use `javac_case_094` and `case094-model.patch` for case 094. The evaluator
+   Use `N_test_data/javac_case_094` and `case094-model.patch` for case 094. The evaluator
    mounts the candidate patch into a clean Docker container, applies it first,
    applies the protected tests second, builds the project, and grades the test
    results. Do not manually copy the patch into the Docker image.
@@ -136,7 +152,7 @@ The normal model-evaluation workflow is:
 ### Build the image locally (maintainers)
 
 ```powershell
-Set-Location .\javac_case_092
+Set-Location .\Y_test_data\javac_case_092
 .\evaluator\build_model_evaluator.ps1
 ```
 
@@ -166,7 +182,7 @@ sha256:afb82e4d2a5d2d58231b723073e32e41abfcdb48272923fbe8bb207908efd859
 Evaluate a candidate patch from either case directory:
 
 ```powershell
-Set-Location .\javac_case_093
+Set-Location .\N_test_data\javac_case_093
 python .\evaluator\evaluate_model_patch.py `
   --patch C:\path\to\my_model_patch.diff
 
@@ -181,13 +197,17 @@ F2P/P2P `1/130` for 093 and `1/95` for 094.
 
 ## Records and provenance
 
-Each case includes SWE-bench-compatible records under `official_swebench/`:
+Each case under `Y_test_data/javac_case_NNN/` or
+`N_test_data/javac_case_NNN/` includes SWE-bench-compatible records under
+`official_swebench/`:
 
 ```text
 instance_NNN.json
 instance_NNN.jsonl
 public_task_NNN.json
 metadata.json
+README.md
+SHA256SUMS.txt
 ```
 
 `public_task_*.json` is the model-facing task. The complete instance and the

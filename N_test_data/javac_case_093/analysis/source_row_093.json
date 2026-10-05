@@ -1,0 +1,25 @@
+{
+  "instance_id": "ninia__jep-79",
+  "source_project": "ninia/jep",
+  "source_case": "093",
+  "language_pair": "Java-C",
+  "repo": "ninia/jep",
+  "issue_id": 79,
+  "issue_url": "https://github.com/ninia/jep/issues/79",
+  "commit": "d14567567ac1281e978790b9170c981113de282f",
+  "base_commit": "9eeb14c4c8b2d0e49feece90a6e330826b49c7dd",
+  "base_commit_status": "verified",
+  "fix_commit": "d14567567ac1281e978790b9170c981113de282f",
+  "commit_url": "https://github.com/ninia/jep/commit/d14567567ac1281e978790b9170c981113de282f",
+  "problem_statement": "JEP may crash during startup on some Python 3.5 installations because pyembed_version_unsafe copies the Python version string into a buffer allocated without space for the terminating null byte.",
+  "test_source": "synthetic_regression_test_plus_official_project_suite",
+  "test_files": [
+    "src/jep/test/TestVersionUnsafe.java",
+    "tests/test_version_unsafe.py"
+  ],
+  "verification_status": "resolved",
+  "FAIL_TO_PASS": [
+    "test_version_unsafe.TestVersionUnsafe.test_version_unsafe"
+  ],
+  "PASS_TO_PASS_COUNT": 130
+}

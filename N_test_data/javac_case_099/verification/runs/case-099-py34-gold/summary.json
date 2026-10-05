@@ -1,0 +1,59 @@
+{
+  "schema_version": "3.0",
+  "kind": "patch_evaluation",
+  "run_id": "case-099-py34-gold",
+  "label": null,
+  "instance_id": "ninia__jep-17-cache",
+  "status": "error",
+  "reason": "required_asset_missing",
+  "started_at": "2026-09-29T08:46:58.138Z",
+  "finished_at": "2026-09-29T08:46:58.141Z",
+  "duration_ms": 0,
+  "application_order": [
+    "model_patch",
+    "test_patch",
+    "tests"
+  ],
+  "model_patch_sha256": "b54f1215ddced8389be90d5f4cbd0368e54e835a5ee54e45a05e34f87fb3a63f",
+  "test_patch_sha256": "0f588569d47a516198297e73c7a132727177bab7b5fdcff8dd1b0e9aba375afa",
+  "image": {
+    "name": "javac-case-099-jep:benchmark-v1",
+    "id": null,
+    "repo_digests": []
+  },
+  "container_exit_code": null,
+  "phase": {
+    "phase": "preflight",
+    "outcome": "infrastructure_error",
+    "reason": "required_asset_missing",
+    "test_exit_code": null
+  },
+  "grading": {
+    "tests_observed": 0,
+    "FAIL_TO_PASS": {
+      "expected": 0,
+      "passed": 0,
+      "failed": 0,
+      "skipped": 0,
+      "missing": 0
+    },
+    "PASS_TO_PASS": {
+      "expected": 0,
+      "passed": 0,
+      "failed": 0,
+      "skipped": 0,
+      "missing": 0
+    },
+    "unexpected_failures": 0
+  },
+  "logs": {
+    "events": "events.jsonl",
+    "docker_stdout": null,
+    "docker_stderr": null,
+    "model_patch": null,
+    "test_patch": null,
+    "project_build": null,
+    "tests": null,
+    "grading": null
+  }
+}

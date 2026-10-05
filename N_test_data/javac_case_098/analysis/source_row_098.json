@@ -1,0 +1,37 @@
+{
+  "instance_id": "ninia__jep-17",
+  "source_project": "ninia/jep",
+  "source_case": "098",
+  "language_pair": "Java-C",
+  "repo": "ninia/jep",
+  "issue_id": 17,
+  "issue_url": "https://github.com/ninia/jep/issues/17",
+  "commit": "340788b3ae7a3e4ccfc610f73d43afeba508241c",
+  "base_commit": "7af56bffed4e06a2bcdb8b70bf0aa5d59721d7e6",
+  "base_commit_status": "recorded",
+  "fix_commit": "340788b3ae7a3e4ccfc610f73d43afeba508241c",
+  "commit_url": "https://github.com/ninia/jep/commit/340788b3ae7a3e4ccfc610f73d43afeba508241c",
+  "problem_statement": "When a Jep sub-interpreter has populated its per-interpreter Java method cache and is closed, cleanup must clear the cache pointer before releasing the cache. Otherwise repeated interpreter creation and Java imports can leak or destabilize the process. Issue #17 reports stale per-class method caching across OSGi bundle redeploys; the regression test exercises the cache cleanup path during repeated interpreter shutdown.",
+  "test_source": "official_existing_memory_stress_test_wrapped_for_unittest_runner",
+  "test_files": [
+    "src/jep/test/TestMemoryLeaks.java",
+    "tests/__init__.py",
+    "tests/jep_pipe.py",
+    "tests/test_memory_leaks.py"
+  ],
+  "verification_status": "pending",
+  "FAIL_TO_PASS": [
+    "test_memory_leaks.TestMemoryLeaks.test_memory_cycles"
+  ],
+  "PASS_TO_PASS_COUNT": 78,
+  "case_number": "098",
+  "candidate_id": "ninia__jep-17",
+  "commit_message": "Attempt to fix #17 without leaking memory",
+  "source": "https://github.com/ninia/jep/commit/340788b3ae7a3e4ccfc610f73d43afeba508241c",
+  "problem": "Closing a Jep sub-interpreter must clear the per-interpreter Java method cache safely so repeated Java imports and interpreter shutdown do not leak or destabilize the process.",
+  "test_strategy": "Run the existing official TestMemoryLeaks Java stress class from the repository unittest harness in a child JVM with a bounded heap.",
+  "fail_to_pass": [
+    "test_memory_leaks.TestMemoryLeaks.test_memory_cycles"
+  ],
+  "pass_to_pass_count": 78
+}

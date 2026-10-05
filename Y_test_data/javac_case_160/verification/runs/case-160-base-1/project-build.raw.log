@@ -1,0 +1,710 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] junixsocket-parent                                                 [pom]
+[INFO] junixsocket-native                                                 [nar]
+[INFO] junixsocket-native-cross                                           [pom]
+[INFO] junixsocket-native-common                                          [jar]
+[INFO] junixsocket-native-custom                                          [jar]
+[INFO] 
+[INFO] ----------< com.kohlschutter.junixsocket:junixsocket-parent >-----------
+[INFO] Building junixsocket-parent 2.4.0-SNAPSHOT                         [1/5]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.1.0:clean (default-clean) @ junixsocket-parent ---
+[INFO] 
+[INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven) @ junixsocket-parent ---
+[INFO] 
+[INFO] --- resources:3.2.0:copy-resources (copy-source-files-java8) @ junixsocket-parent ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /testbed/src/main/java
+[INFO] skip non existing resourceDirectory /testbed/src/main/java8
+[INFO] 
+[INFO] --- resources:3.2.0:copy-resources (copy-source-files-java9) @ junixsocket-parent ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /testbed/src/main/java
+[INFO] skip non existing resourceDirectory /testbed/src/main/java9
+[INFO] 
+[INFO] --- dependency:3.1.2:unpack (unpack-coding-style) @ junixsocket-parent ---
+[INFO] Configured Artifact: com.kohlschutter:coding-style:files:1.2.4:zip
+[INFO] Unpacking /root/.m2/repository/com/kohlschutter/coding-style/1.2.4/coding-style-1.2.4-files.zip to /testbed/coding-style/1.2.4 with includes "" and excludes ""
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (java8-compile) @ junixsocket-parent ---
+[WARNING]  Parameter 'compileSourceRoots' is read-only, must not be used in configuration
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (java9-compile) @ junixsocket-parent ---
+[WARNING]  Parameter 'compileSourceRoots' is read-only, must not be used in configuration
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.2.0:copy-resources (copy-default-compile-classes-to-multirelease) @ junixsocket-parent ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /testbed/target/classes
+[INFO] 
+[INFO] --- source:3.2.1:jar-no-fork (attach-sources) @ junixsocket-parent ---
+[INFO] 
+[INFO] --- jar:3.2.0:jar (multirelease-jar) @ junixsocket-parent ---
+[WARNING] JAR will be empty - no content was marked for inclusion!
+[INFO] Building jar: /testbed/target/junixsocket-parent-2.4.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- install:3.0.0-M1:install (default-install) @ junixsocket-parent ---
+[INFO] Installing /testbed/pom.xml to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-parent/2.4.0-SNAPSHOT/junixsocket-parent-2.4.0-SNAPSHOT.pom
+[INFO] 
+[INFO] ----------< com.kohlschutter.junixsocket:junixsocket-native >-----------
+[INFO] Building junixsocket-native 2.4.0-SNAPSHOT                         [2/5]
+[INFO]   from junixsocket-native/pom.xml
+[INFO] --------------------------------[ nar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.1.0:clean (default-clean) @ junixsocket-native ---
+[INFO] 
+[INFO] --- resources:3.2.0:resources (prepare-aol) @ junixsocket-native ---
+[WARNING]  Parameter 'resources' is read-only, must not be used in configuration
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- nar:3.10.1:nar-validate (default-nar-validate) @ junixsocket-native ---
+[INFO] Using AOL: amd64-Linux-clang
+[INFO] 
+[INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven) @ junixsocket-native ---
+[INFO] 
+[INFO] --- nar:3.10.1:nar-download (default-nar-download) @ junixsocket-native ---
+[INFO] Getting Nar dependencies
+[INFO] Getting Nar dependencies
+[INFO] 
+[INFO] --- nar:3.10.1:nar-unpack (default-nar-unpack) @ junixsocket-native ---
+[INFO] Getting Nar dependencies
+[INFO] Unpacking 0 dependencies to /testbed/junixsocket-native/target/nar
+[INFO] 
+[INFO] --- resources:3.2.0:copy-resources (copy-source-files-java8) @ junixsocket-native ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/main/java
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/main/java8
+[INFO] 
+[INFO] --- resources:3.2.0:copy-resources (copy-source-files-java9) @ junixsocket-native ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/main/java
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/main/java9
+[INFO] 
+[INFO] --- nar:3.10.1:nar-gnu-configure (default-nar-gnu-configure) @ junixsocket-native ---
+[INFO] 
+[INFO] --- nar:3.10.1:nar-system-generate (default-nar-system-generate) @ junixsocket-native ---
+[WARNING] NAR: no system package specified; unable to generate NarSystem class.
+[INFO] 
+[INFO] --- nar:3.10.1:nar-vcproj (default-nar-vcproj) @ junixsocket-native ---
+[INFO] 
+[INFO] --- dependency:3.1.2:unpack (unpack-coding-style) @ junixsocket-native ---
+[INFO] Configured Artifact: com.kohlschutter:coding-style:files:1.2.4:zip
+[INFO] Unpacking /root/.m2/repository/com/kohlschutter/coding-style/1.2.4/coding-style-1.2.4-files.zip to /testbed/coding-style/1.2.4 with includes "" and excludes ""
+[INFO] 
+[INFO] --- resources:3.2.0:resources (default-resources) @ junixsocket-native ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/main/resources
+[INFO] 
+[INFO] --- nar:3.10.1:nar-resources (default-nar-resources) @ junixsocket-native ---
+[INFO] Copied 0 resources
+[INFO] 
+[INFO] --- nar:3.10.1:nar-gnu-resources (default-nar-gnu-resources) @ junixsocket-native ---
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ junixsocket-native ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- nar:3.10.1:nar-gnu-make (default-nar-gnu-make) @ junixsocket-native ---
+[INFO] 
+[INFO] --- nar:3.10.1:nar-compile (default-nar-compile) @ junixsocket-native ---
+[INFO] Compiling 21 native files
+[INFO] 21 total files to be compiled.
+[INFO] Found 20 processors available0 / 21 files compiled...
+[INFO] 
+Starting Core 0 with 2 source files...
+[INFO] 
+Starting Core 1 with 1 source files...
+[INFO] 
+Starting Core 2 with 1 source files...
+[INFO] 
+Starting Core 3 with 1 source files...
+[INFO] 
+Starting Core 4 with 1 source files...
+[INFO] 
+Starting Core 5 with 1 source files...
+[INFO] 
+Starting Core 6 with 1 source files...
+[INFO] 
+Starting Core 7 with 1 source files...
+[INFO] 
+Starting Core 8 with 1 source files...
+[INFO] 
+Starting Core 9 with 1 source files...
+[INFO] 
+Starting Core 10 with 1 source files...
+[INFO] 
+Starting Core 11 with 1 source files...
+[INFO] 
+Starting Core 12 with 1 source files...
+[INFO] 
+Starting Core 13 with 1 source files...
+[INFO] 
+Starting Core 14 with 1 source files...
+[INFO] 
+Starting Core 15 with 1 source files...
+[INFO] 
+Starting Core 16 with 1 source files...
+[INFO] 
+Starting Core 17 with 1 source files...
+[INFO] 
+Starting Core 18 with 1 source files...
+[INFO] 
+Starting Core 19 with 1 source files...
+[INFO] OUTPUT>Warning: crossclang not configured for target "x86_64-pc-linux-gnu" -- you need to run prepare-target-sdk first. Trying native clang now.
+[INFO] OUTPUT>Warning: crossclang not configured for target "x86_64-pc-linux-gnu" -- you need to run prepare-target-sdk first. Trying native clang now.
+[INFO] OUTPUT>Warning: crossclang not configured for target "x86_64-pc-linux-gnu" -- you need to run prepare-target-sdk first. Trying native clang now.
+[INFO] OUTPUT>Warning: crossclang not configured for target "x86_64-pc-linux-gnu" -- you need to run prepare-target-sdk first. Trying native clang now.
+[INFO] OUTPUT>Warning: crossclang not configured for target "x86_64-pc-linux-gnu" -- you need to run prepare-target-sdk first. Trying native clang now.
+[INFO] OUTPUT>Warning: crossclang not configured for target "x86_64-pc-linux-gnu" -- you need to run prepare-target-sdk first. Trying native clang now.
+[INFO] OUTPUT>Warning: crossclang not configured for target "x86_64-pc-linux-gnu" -- you need to run prepare-target-sdk first. Trying native clang now.
+[INFO] OUTPUT>Warning: crossclang not configured for target "x86_64-pc-linux-gnu" -- you need to run prepare-target-sdk first. Trying native clang now.
+[INFO] OUTPUT>Warning: crossclang not configured for target "x86_64-pc-linux-gnu" -- you need to run prepare-target-sdk first. Trying native clang now.
+[INFO] OUTPUT>Warning: crossclang not configured for target "x86_64-pc-linux-gnu" -- you need to run prepare-target-sdk first. Trying native clang now.
+[INFO] OUTPUT>Warning: crossclang not configured for target "x86_64-pc-linux-gnu" -- you need to run prepare-target-sdk first. Trying native clang now.
+[INFO] OUTPUT>Warning: crossclang not configured for target "x86_64-pc-linux-gnu" -- you need to run prepare-target-sdk first. Trying native clang now.
+[INFO] OUTPUT>Warning: crossclang not configured for target "x86_64-pc-linux-gnu" -- you need to run prepare-target-sdk first. Trying native clang now.
+[INFO] OUTPUT>Warning: crossclang not configured for target "x86_64-pc-linux-gnu" -- you need to run prepare-target-sdk first. Trying native clang now.
+[INFO] OUTPUT>Warning: crossclang not configured for target "x86_64-pc-linux-gnu" -- you need to run prepare-target-sdk first. Trying native clang now.
+[INFO] OUTPUT>Warning: crossclang not configured for target "x86_64-pc-linux-gnu" -- you need to run prepare-target-sdk first. Trying native clang now.
+[INFO] OUTPUT>Warning: crossclang not configured for target "x86_64-pc-linux-gnu" -- you need to run prepare-target-sdk first. Trying native clang now.
+[INFO] OUTPUT>Warning: crossclang not configured for target "x86_64-pc-linux-gnu" -- you need to run prepare-target-sdk first. Trying native clang now.
+[INFO] OUTPUT>Warning: crossclang not configured for target "x86_64-pc-linux-gnu" -- you need to run prepare-target-sdk first. Trying native clang now.
+[INFO] OUTPUT>Warning: crossclang not configured for target "x86_64-pc-linux-gnu" -- you need to run prepare-target-sdk first. Trying native clang now.
+[INFO] OUTPUT>Warning: crossclang not configured for target "x86_64-pc-linux-gnu" -- you need to run prepare-target-sdk first. Trying native clang now.
+                                                                    [INFO] 21 files were compiled.
+[INFO] Linking...
+[INFO] OUTPUT>Warning: crossclang not configured for target "x86_64-pc-linux-gnu" -- you need to run prepare-target-sdk first. Trying native clang now.
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (java8-compile) @ junixsocket-native ---
+[WARNING]  Parameter 'compileSourceRoots' is read-only, must not be used in configuration
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (java9-compile) @ junixsocket-native ---
+[WARNING]  Parameter 'compileSourceRoots' is read-only, must not be used in configuration
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.2.0:copy-resources (copy-default-compile-classes-to-multirelease) @ junixsocket-native ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- nar:3.10.1:nar-gnu-process (default-nar-gnu-process) @ junixsocket-native ---
+[INFO] 
+[INFO] --- nar:3.10.1:nar-process-libraries (default-nar-process-libraries) @ junixsocket-native ---
+[info] Running process libraries
+[info] Processing library Library: type: jni
+[INFO] 
+[INFO] --- nar:3.10.1:nar-test-unpack (default-nar-test-unpack) @ junixsocket-native ---
+[INFO] Getting Nar dependencies
+[INFO] Unpacking 0 dependencies to /testbed/junixsocket-native/target/test-nar
+[INFO] 
+[INFO] --- resources:3.2.0:testResources (default-testResources) @ junixsocket-native ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ junixsocket-native ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- nar:3.10.1:nar-testCompile (default-nar-testCompile) @ junixsocket-native ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- nar:3.10.1:nar-test (default-nar-test) @ junixsocket-native ---
+[INFO] Tests are skipped
+[INFO] 
+[INFO] --- nar:3.10.1:nar-prepare-package (default-nar-prepare-package) @ junixsocket-native ---
+[INFO] 
+[INFO] --- antrun:3.0.0:run (fix-jnilib) @ junixsocket-native ---
+[INFO] Executing tasks
+[INFO]      [move] Moving 1 file to /testbed/junixsocket-native/target/nar
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- nar:3.10.1:nar-package (default-nar-package) @ junixsocket-native ---
+[INFO] Building zip: /testbed/junixsocket-native/target/junixsocket-native-2.4.0-SNAPSHOT-amd64-Linux-clang-jni.nar
+[INFO] 
+[INFO] --- source:3.2.1:jar-no-fork (attach-sources) @ junixsocket-native ---
+[INFO] No sources in project. Archive not created.
+[INFO] 
+[INFO] --- jar:3.2.0:jar (multirelease-jar) @ junixsocket-native ---
+[INFO] Building jar: /testbed/junixsocket-native/target/junixsocket-native-2.4.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- nar:3.10.1:nar-integration-test (default-nar-integration-test) @ junixsocket-native ---
+[INFO] Tests are skipped
+[INFO] 
+[INFO] --- install:3.0.0-M1:install (default-install) @ junixsocket-native ---
+[INFO] Installing /testbed/junixsocket-native/target/junixsocket-native-2.4.0-SNAPSHOT.jar to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-native/2.4.0-SNAPSHOT/junixsocket-native-2.4.0-SNAPSHOT.nar
+[INFO] Installing /testbed/junixsocket-native/pom.xml to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-native/2.4.0-SNAPSHOT/junixsocket-native-2.4.0-SNAPSHOT.pom
+[INFO] Installing /testbed/junixsocket-native/target/junixsocket-native-2.4.0-SNAPSHOT-amd64-Linux-clang-jni.nar to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-native/2.4.0-SNAPSHOT/junixsocket-native-2.4.0-SNAPSHOT-amd64-Linux-clang-jni.nar
+[INFO] 
+[INFO] -------< com.kohlschutter.junixsocket:junixsocket-native-cross >--------
+[INFO] Building junixsocket-native-cross 2.4.0-SNAPSHOT                   [3/5]
+[INFO]   from junixsocket-native-cross/pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.1.0:clean (default-clean) @ junixsocket-native-cross ---
+[INFO] 
+[INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven) @ junixsocket-native-cross ---
+[INFO] 
+[INFO] --- nar:3.10.1:nar-validate (init-nar-properties) @ junixsocket-native-cross ---
+[INFO] Using AOL: amd64-Linux-clang
+[INFO] 
+[INFO] --- resources:3.2.0:copy-resources (copy-source-files-java8) @ junixsocket-native-cross ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/src/main/java
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/src/main/java8
+[INFO] 
+[INFO] --- resources:3.2.0:copy-resources (copy-source-files-java9) @ junixsocket-native-cross ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/src/main/java
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/src/main/java9
+[INFO] 
+[INFO] --- dependency:3.1.2:unpack (unpack-coding-style) @ junixsocket-native-cross ---
+[INFO] Configured Artifact: com.kohlschutter:coding-style:files:1.2.4:zip
+[INFO] Unpacking /root/.m2/repository/com/kohlschutter/coding-style/1.2.4/coding-style-1.2.4-files.zip to /testbed/coding-style/1.2.4 with includes "" and excludes ""
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (java8-compile) @ junixsocket-native-cross ---
+[WARNING]  Parameter 'compileSourceRoots' is read-only, must not be used in configuration
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (java9-compile) @ junixsocket-native-cross ---
+[WARNING]  Parameter 'compileSourceRoots' is read-only, must not be used in configuration
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.2.0:copy-resources (copy-default-compile-classes-to-multirelease) @ junixsocket-native-cross ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/target/classes
+[INFO] 
+[INFO] --- jar:3.2.0:jar (multirelease-jar) @ junixsocket-native-cross ---
+[WARNING] JAR will be empty - no content was marked for inclusion!
+[INFO] Building jar: /testbed/junixsocket-native-cross/target/junixsocket-native-cross-2.4.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- invoker:3.2.2:run (crosscompile-default-clang) @ junixsocket-native-cross ---
+[WARNING] Filtering of parent/child POMs is not supported without cloning the projects
+[INFO] Building: junixsocket-native-custom/pom.xml
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------< com.kohlschutter.junixsocket:junixsocket-native-custom >-------
+[INFO] Building junixsocket-native-custom 2.4.0-SNAPSHOT
+[INFO]   from interpolated-pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.1.0:clean (default-clean) @ junixsocket-native-custom ---
+[INFO] 
+[INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven) @ junixsocket-native-custom ---
+[INFO] 
+[INFO] --- resources:3.2.0:copy-resources (copy-source-files-java8) @ junixsocket-native-custom ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 3 resources
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java8
+[INFO] 
+[INFO] --- resources:3.2.0:copy-resources (copy-source-files-java9) @ junixsocket-native-custom ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 3 resources
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java9
+[INFO] 
+[INFO] --- dependency:3.1.2:unpack (unpack-coding-style) @ junixsocket-native-custom ---
+[INFO] Configured Artifact: com.kohlschutter:coding-style:files:1.2.4:zip
+[INFO] Unpacking /root/.m2/repository/com/kohlschutter/coding-style/1.2.4/coding-style-1.2.4-files.zip to /testbed/coding-style/1.2.4 with includes "" and excludes ""
+[INFO] 
+[INFO] --- resources:3.2.0:resources (default-resources) @ junixsocket-native-custom ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ junixsocket-native-custom ---
+[INFO] Compiling 3 source files to /testbed/junixsocket-native-custom/target/classes
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (java8-compile) @ junixsocket-native-custom ---
+[WARNING]  Parameter 'compileSourceRoots' is read-only, must not be used in configuration
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] Compiling 2 source files to /testbed/junixsocket-native-custom/target/classes/../classes-multirelease
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (java9-compile) @ junixsocket-native-custom ---
+[WARNING]  Parameter 'compileSourceRoots' is read-only, must not be used in configuration
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] Compiling 3 source files to /testbed/junixsocket-native-custom/target/classes/../classes-multirelease/META-INF/versions/9
+[INFO] 
+[INFO] --- resources:3.2.0:copy-resources (copy-default-compile-classes-to-multirelease) @ junixsocket-native-custom ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- resources:3.2.0:testResources (default-testResources) @ junixsocket-native-custom ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ junixsocket-native-custom ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- jar:3.2.0:jar (multirelease-jar) @ junixsocket-native-custom ---
+[INFO] Building jar: /testbed/junixsocket-native-custom/target/junixsocket-native-custom-2.4.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- shade:3.2.4:shade (default) @ junixsocket-native-custom ---
+[INFO] Including com.kohlschutter.junixsocket:junixsocket-native:nar:amd64-Linux-clang-jni:2.4.0-SNAPSHOT in the shaded jar.
+[INFO] Attaching shaded artifact.
+[INFO] 
+[INFO] --- install:3.0.0-M1:install (default-install) @ junixsocket-native-custom ---
+[INFO] Installing /testbed/junixsocket-native-custom/target/junixsocket-native-custom-2.4.0-SNAPSHOT.jar to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-native-custom/2.4.0-SNAPSHOT/junixsocket-native-custom-2.4.0-SNAPSHOT.jar
+[INFO] Installing /testbed/junixsocket-native-custom/interpolated-pom.xml to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-native-custom/2.4.0-SNAPSHOT/junixsocket-native-custom-2.4.0-SNAPSHOT.pom
+[INFO] Installing /testbed/junixsocket-native-custom/target/junixsocket-native-custom-2.4.0-SNAPSHOT-default.jar to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-native-custom/2.4.0-SNAPSHOT/junixsocket-native-custom-2.4.0-SNAPSHOT-default.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.777 s
+[INFO] Finished at: 2026-10-05T13:50:55Z
+[INFO] ------------------------------------------------------------------------
+[INFO]           junixsocket-native-custom/pom.xml ................ SUCCESS (3.8 s)
+[INFO] -------------------------------------------------
+[INFO] Build Summary:
+[INFO]   Passed: 1, Failed: 0, Errors: 0, Skipped: 0
+[INFO] -------------------------------------------------
+[INFO] 
+[INFO] --- invoker:3.2.2:run (crosscompile-default-clang-empty) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- invoker:3.2.2:run (crosscompile-amd64-Windows10-clang) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- invoker:3.2.2:run (crosscompile-x86_64-MacOSX-clang) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- invoker:3.2.2:run (crosscompile-aarch64-MacOSX-clang) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- invoker:3.2.2:run (crosscompile-amd64-Linux-clang) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- invoker:3.2.2:run (crosscompile-arm-Linux-clang) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- invoker:3.2.2:run (crosscompile-aarch64-Linux-clang) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- invoker:3.2.2:run (crosscompile-amd64-SunOS-clang) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- invoker:3.2.2:run (crosscompile-amd64-FreeBSD-clang) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- invoker:3.2.2:run (crosscompile-amd64-DragonFlyBSD-clang) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- invoker:3.2.2:run (crosscompile-ppc64le-Linux-clang) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- invoker:3.2.2:run (crosscompile-s390x-Linux-clang) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- invoker:3.2.2:run (crosscompile-riscv64-Linux-clang) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- invoker:3.2.2:run (crosscompile-amd64-NetBSD-clang) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- invoker:3.2.2:run (crosscompile-amd64-OpenBSD-clang) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- install:3.0.0-M1:install (default-install) @ junixsocket-native-cross ---
+[INFO] Installing /testbed/junixsocket-native-cross/pom.xml to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-native-cross/2.4.0-SNAPSHOT/junixsocket-native-cross-2.4.0-SNAPSHOT.pom
+[INFO] 
+[INFO] -------< com.kohlschutter.junixsocket:junixsocket-native-common >-------
+[INFO] Building junixsocket-native-common 2.4.0-SNAPSHOT                  [4/5]
+[INFO]   from junixsocket-native-common/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.1.0:clean (default-clean) @ junixsocket-native-common ---
+[INFO] 
+[INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven) @ junixsocket-native-common ---
+[INFO] 
+[INFO] --- resources:3.2.0:copy-resources (copy-source-files-java8) @ junixsocket-native-common ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 3 resources
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-common/src/main/java8
+[INFO] 
+[INFO] --- resources:3.2.0:copy-resources (copy-source-files-java9) @ junixsocket-native-common ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 3 resources
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-common/src/main/java9
+[INFO] 
+[INFO] --- dependency:3.1.2:unpack (unpack-coding-style) @ junixsocket-native-common ---
+[INFO] Configured Artifact: com.kohlschutter:coding-style:files:1.2.4:zip
+[INFO] Unpacking /root/.m2/repository/com/kohlschutter/coding-style/1.2.4/coding-style-1.2.4-files.zip to /testbed/coding-style/1.2.4 with includes "" and excludes ""
+[INFO] 
+[INFO] --- resources:3.2.0:resources (default-resources) @ junixsocket-native-common ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-common/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ junixsocket-native-common ---
+[WARNING] Can't extract module name from junixsocket-native-cross-2.4.0-SNAPSHOT.jar: junixsocket.native.cross: Invalid module name: 'native' is not a Java identifier
+[INFO] Compiling 3 source files to /testbed/junixsocket-native-common/target/classes
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (java8-compile) @ junixsocket-native-common ---
+[WARNING]  Parameter 'compileSourceRoots' is read-only, must not be used in configuration
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] Compiling 2 source files to /testbed/junixsocket-native-common/target/classes/../classes-multirelease
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (java9-compile) @ junixsocket-native-common ---
+[WARNING]  Parameter 'compileSourceRoots' is read-only, must not be used in configuration
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[WARNING] Can't extract module name from junixsocket-native-cross-2.4.0-SNAPSHOT.jar: junixsocket.native.cross: Invalid module name: 'native' is not a Java identifier
+[INFO] Compiling 3 source files to /testbed/junixsocket-native-common/target/classes/../classes-multirelease/META-INF/versions/9
+[INFO] 
+[INFO] --- checkstyle:3.1.2:check (checkstyle-during-compile) @ junixsocket-native-common ---
+[INFO] 
+[INFO] --- resources:3.2.0:copy-resources (copy-default-compile-classes-to-multirelease) @ junixsocket-native-common ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- resources:3.2.0:testResources (default-testResources) @ junixsocket-native-common ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ junixsocket-native-common ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- javadoc:3.2.0:jar (attach-javadocs) @ junixsocket-native-common ---
+[INFO] No previous run data found, generating javadoc.
+[WARNING] Javadoc Warnings
+[WARNING] /testbed/junixsocket-native-common/src/main/java/org/newsclub/lib/junixsocket/common/NarMetadata.java:22: warning: no comment
+[WARNING] public final class NarMetadata {
+[WARNING] ^
+[WARNING] /testbed/junixsocket-native-common/src/main/java/module-info.java:1: warning: no comment
+[WARNING] module com.kohlschutter.junixsocket.nativecommon {
+[WARNING] ^
+[WARNING] 2 warnings
+[INFO] Building jar: /testbed/junixsocket-native-common/target/junixsocket-native-common-2.4.0-SNAPSHOT-javadoc.jar
+[INFO] 
+[INFO] --- source:3.2.1:jar-no-fork (attach-sources) @ junixsocket-native-common ---
+[INFO] Building jar: /testbed/junixsocket-native-common/target/junixsocket-native-common-2.4.0-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- jar:3.2.0:jar (multirelease-jar) @ junixsocket-native-common ---
+[INFO] Building jar: /testbed/junixsocket-native-common/target/junixsocket-native-common-2.4.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- shade:3.2.4:shade (default) @ junixsocket-native-common ---
+[INFO] No artifact matching filter com.kohlschutter.junixsocket:junixsocket-native
+[INFO] Replacing original artifact with shaded artifact.
+[INFO] Replacing /testbed/junixsocket-native-common/target/junixsocket-native-common-2.4.0-SNAPSHOT.jar with /testbed/junixsocket-native-common/target/junixsocket-native-common-2.4.0-SNAPSHOT-shaded.jar
+[INFO] 
+[INFO] --- forbiddenapis:3.1:check (default) @ junixsocket-native-common ---
+[INFO] Skipping forbidden-apis checks.
+[INFO] 
+[INFO] --- forbiddenapis:3.1:testCheck (default) @ junixsocket-native-common ---
+[INFO] Skipping forbidden-apis checks.
+[INFO] 
+[INFO] >>> pmd:3.14.0:check (default-check) > :pmd @ junixsocket-native-common >>>
+[INFO] 
+[INFO] --- pmd:3.14.0:pmd (pmd) @ junixsocket-native-common ---
+[INFO] 
+[INFO] <<< pmd:3.14.0:check (default-check) < :pmd @ junixsocket-native-common <<<
+[INFO] 
+[INFO] 
+[INFO] --- pmd:3.14.0:check (default-check) @ junixsocket-native-common ---
+[INFO] 
+[INFO] >>> pmd:3.14.0:cpd-check (default-cpd-check) > :cpd @ junixsocket-native-common >>>
+[INFO] 
+[INFO] --- pmd:3.14.0:cpd (cpd) @ junixsocket-native-common ---
+[INFO] 
+[INFO] <<< pmd:3.14.0:cpd-check (default-cpd-check) < :cpd @ junixsocket-native-common <<<
+[INFO] 
+[INFO] 
+[INFO] --- pmd:3.14.0:cpd-check (default-cpd-check) @ junixsocket-native-common ---
+[INFO] PMD version: 6.33.0
+[INFO] 
+[INFO] 
+[INFO] --- license:4.0:check (default) @ junixsocket-native-common ---
+[WARNING]  Parameter 'legacyConfigExcludes' (user property 'license.excludes') is deprecated: use {@link LicenseSet#excludes}
+[WARNING]  Parameter 'legacyConfigIncludes' (user property 'license.includes') is deprecated: use {@link LicenseSet#includes}
+[INFO] Checking licenses...
+[INFO] 
+[INFO] --- install:3.0.0-M1:install (default-install) @ junixsocket-native-common ---
+[INFO] Installing /testbed/junixsocket-native-common/target/junixsocket-native-common-2.4.0-SNAPSHOT.jar to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-native-common/2.4.0-SNAPSHOT/junixsocket-native-common-2.4.0-SNAPSHOT.jar
+[INFO] Installing /testbed/junixsocket-native-common/pom.xml to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-native-common/2.4.0-SNAPSHOT/junixsocket-native-common-2.4.0-SNAPSHOT.pom
+[INFO] Installing /testbed/junixsocket-native-common/target/junixsocket-native-common-2.4.0-SNAPSHOT-javadoc.jar to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-native-common/2.4.0-SNAPSHOT/junixsocket-native-common-2.4.0-SNAPSHOT-javadoc.jar
+[INFO] Installing /testbed/junixsocket-native-common/target/junixsocket-native-common-2.4.0-SNAPSHOT-sources.jar to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-native-common/2.4.0-SNAPSHOT/junixsocket-native-common-2.4.0-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] >>> spotbugs:4.2.2:check (spotbugs-during-install) > :spotbugs @ junixsocket-native-common >>>
+[INFO] 
+[INFO] --- spotbugs:4.2.2:spotbugs (spotbugs) @ junixsocket-native-common ---
+[INFO] Fork Value is true
+     [java] WARNING: A terminally deprecated method in java.lang.System has been called
+     [java] WARNING: System::setSecurityManager has been called by edu.umd.cs.findbugs.ba.jsr305.TypeQualifierValue (file:/root/.m2/repository/com/github/spotbugs/spotbugs/4.2.2/spotbugs-4.2.2.jar)
+     [java] WARNING: Please consider reporting this to the maintainers of edu.umd.cs.findbugs.ba.jsr305.TypeQualifierValue
+     [java] WARNING: System::setSecurityManager will be removed in a future release
+[INFO] Done SpotBugs Analysis....
+[INFO] 
+[INFO] <<< spotbugs:4.2.2:check (spotbugs-during-install) < :spotbugs @ junixsocket-native-common <<<
+[INFO] 
+[INFO] 
+[INFO] --- spotbugs:4.2.2:check (spotbugs-during-install) @ junixsocket-native-common ---
+[INFO] 
+[INFO] -------< com.kohlschutter.junixsocket:junixsocket-native-custom >-------
+[INFO] Building junixsocket-native-custom 2.4.0-SNAPSHOT                  [5/5]
+[INFO]   from junixsocket-native-custom/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.1.0:clean (default-clean) @ junixsocket-native-custom ---
+[INFO] Deleting /testbed/junixsocket-native-custom/target
+[INFO] 
+[INFO] --- enforcer:3.0.0-M3:enforce (enforce-maven) @ junixsocket-native-custom ---
+[INFO] 
+[INFO] --- resources:3.2.0:copy-resources (copy-source-files-java8) @ junixsocket-native-custom ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 3 resources
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java8
+[INFO] 
+[INFO] --- resources:3.2.0:copy-resources (copy-source-files-java9) @ junixsocket-native-custom ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 3 resources
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java9
+[INFO] 
+[INFO] --- dependency:3.1.2:unpack (unpack-coding-style) @ junixsocket-native-custom ---
+[INFO] Configured Artifact: com.kohlschutter:coding-style:files:1.2.4:zip
+[INFO] Unpacking /root/.m2/repository/com/kohlschutter/coding-style/1.2.4/coding-style-1.2.4-files.zip to /testbed/coding-style/1.2.4 with includes "" and excludes ""
+[INFO] 
+[INFO] --- resources:3.2.0:resources (default-resources) @ junixsocket-native-custom ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (default-compile) @ junixsocket-native-custom ---
+[INFO] Compiling 3 source files to /testbed/junixsocket-native-custom/target/classes
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (java8-compile) @ junixsocket-native-custom ---
+[WARNING]  Parameter 'compileSourceRoots' is read-only, must not be used in configuration
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] Compiling 2 source files to /testbed/junixsocket-native-custom/target/classes/../classes-multirelease
+[INFO] 
+[INFO] --- compiler:3.8.1:compile (java9-compile) @ junixsocket-native-custom ---
+[WARNING]  Parameter 'compileSourceRoots' is read-only, must not be used in configuration
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] Compiling 3 source files to /testbed/junixsocket-native-custom/target/classes/../classes-multirelease/META-INF/versions/9
+[INFO] 
+[INFO] --- checkstyle:3.1.2:check (checkstyle-during-compile) @ junixsocket-native-custom ---
+[INFO] 
+[INFO] --- resources:3.2.0:copy-resources (copy-default-compile-classes-to-multirelease) @ junixsocket-native-custom ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- resources:3.2.0:testResources (default-testResources) @ junixsocket-native-custom ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ junixsocket-native-custom ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- javadoc:3.2.0:jar (attach-javadocs) @ junixsocket-native-custom ---
+[INFO] No previous run data found, generating javadoc.
+[WARNING] Javadoc Warnings
+[WARNING] /testbed/junixsocket-native-custom/src/main/java/org/newsclub/lib/junixsocket/custom/NarMetadata.java:22: warning: no comment
+[WARNING] public final class NarMetadata {
+[WARNING] ^
+[WARNING] /testbed/junixsocket-native-custom/src/main/java/module-info.java:1: warning: no comment
+[WARNING] module com.kohlschutter.junixsocket.nativecustom {
+[WARNING] ^
+[WARNING] 2 warnings
+[INFO] Building jar: /testbed/junixsocket-native-custom/target/junixsocket-native-custom-2.4.0-SNAPSHOT-javadoc.jar
+[INFO] 
+[INFO] --- source:3.2.1:jar-no-fork (attach-sources) @ junixsocket-native-custom ---
+[INFO] Building jar: /testbed/junixsocket-native-custom/target/junixsocket-native-custom-2.4.0-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- jar:3.2.0:jar (multirelease-jar) @ junixsocket-native-custom ---
+[INFO] Building jar: /testbed/junixsocket-native-custom/target/junixsocket-native-custom-2.4.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- shade:3.2.4:shade (default) @ junixsocket-native-custom ---
+[INFO] Including com.kohlschutter.junixsocket:junixsocket-native:nar:amd64-Linux-clang-jni:2.4.0-SNAPSHOT in the shaded jar.
+[INFO] Attaching shaded artifact.
+[INFO] 
+[INFO] --- forbiddenapis:3.1:check (default) @ junixsocket-native-custom ---
+[INFO] Skipping forbidden-apis checks.
+[INFO] 
+[INFO] --- forbiddenapis:3.1:testCheck (default) @ junixsocket-native-custom ---
+[INFO] Skipping forbidden-apis checks.
+[INFO] 
+[INFO] >>> pmd:3.14.0:check (default-check) > :pmd @ junixsocket-native-custom >>>
+[INFO] 
+[INFO] --- pmd:3.14.0:pmd (pmd) @ junixsocket-native-custom ---
+[INFO] 
+[INFO] <<< pmd:3.14.0:check (default-check) < :pmd @ junixsocket-native-custom <<<
+[INFO] 
+[INFO] 
+[INFO] --- pmd:3.14.0:check (default-check) @ junixsocket-native-custom ---
+[INFO] 
+[INFO] >>> pmd:3.14.0:cpd-check (default-cpd-check) > :cpd @ junixsocket-native-custom >>>
+[INFO] 
+[INFO] --- pmd:3.14.0:cpd (cpd) @ junixsocket-native-custom ---
+[INFO] 
+[INFO] <<< pmd:3.14.0:cpd-check (default-cpd-check) < :cpd @ junixsocket-native-custom <<<
+[INFO] 
+[INFO] 
+[INFO] --- pmd:3.14.0:cpd-check (default-cpd-check) @ junixsocket-native-custom ---
+[INFO] PMD version: 6.33.0
+[INFO] 
+[INFO] 
+[INFO] --- license:4.0:check (default) @ junixsocket-native-custom ---
+[WARNING]  Parameter 'legacyConfigExcludes' (user property 'license.excludes') is deprecated: use {@link LicenseSet#excludes}
+[WARNING]  Parameter 'legacyConfigIncludes' (user property 'license.includes') is deprecated: use {@link LicenseSet#includes}
+[INFO] Checking licenses...
+[INFO] 
+[INFO] --- install:3.0.0-M1:install (default-install) @ junixsocket-native-custom ---
+[INFO] Installing /testbed/junixsocket-native-custom/target/junixsocket-native-custom-2.4.0-SNAPSHOT.jar to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-native-custom/2.4.0-SNAPSHOT/junixsocket-native-custom-2.4.0-SNAPSHOT.jar
+[INFO] Installing /testbed/junixsocket-native-custom/pom.xml to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-native-custom/2.4.0-SNAPSHOT/junixsocket-native-custom-2.4.0-SNAPSHOT.pom
+[INFO] Installing /testbed/junixsocket-native-custom/target/junixsocket-native-custom-2.4.0-SNAPSHOT-javadoc.jar to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-native-custom/2.4.0-SNAPSHOT/junixsocket-native-custom-2.4.0-SNAPSHOT-javadoc.jar
+[INFO] Installing /testbed/junixsocket-native-custom/target/junixsocket-native-custom-2.4.0-SNAPSHOT-sources.jar to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-native-custom/2.4.0-SNAPSHOT/junixsocket-native-custom-2.4.0-SNAPSHOT-sources.jar
+[INFO] Installing /testbed/junixsocket-native-custom/target/junixsocket-native-custom-2.4.0-SNAPSHOT-default.jar to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-native-custom/2.4.0-SNAPSHOT/junixsocket-native-custom-2.4.0-SNAPSHOT-default.jar
+[INFO] 
+[INFO] >>> spotbugs:4.2.2:check (spotbugs-during-install) > :spotbugs @ junixsocket-native-custom >>>
+[INFO] 
+[INFO] --- spotbugs:4.2.2:spotbugs (spotbugs) @ junixsocket-native-custom ---
+[INFO] Fork Value is true
+     [java] WARNING: A terminally deprecated method in java.lang.System has been called
+     [java] WARNING: System::setSecurityManager has been called by edu.umd.cs.findbugs.ba.jsr305.TypeQualifierValue (file:/root/.m2/repository/com/github/spotbugs/spotbugs/4.2.2/spotbugs-4.2.2.jar)
+     [java] WARNING: Please consider reporting this to the maintainers of edu.umd.cs.findbugs.ba.jsr305.TypeQualifierValue
+     [java] WARNING: System::setSecurityManager will be removed in a future release
+[INFO] Done SpotBugs Analysis....
+[INFO] 
+[INFO] <<< spotbugs:4.2.2:check (spotbugs-during-install) < :spotbugs @ junixsocket-native-custom <<<
+[INFO] 
+[INFO] 
+[INFO] --- spotbugs:4.2.2:check (spotbugs-during-install) @ junixsocket-native-custom ---
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for junixsocket-parent 2.4.0-SNAPSHOT:
+[INFO] 
+[INFO] junixsocket-parent ................................. SUCCESS [  1.270 s]
+[INFO] junixsocket-native ................................. SUCCESS [  6.613 s]
+[INFO] junixsocket-native-cross ........................... SUCCESS [  4.440 s]
+[INFO] junixsocket-native-common .......................... SUCCESS [  8.411 s]
+[INFO] junixsocket-native-custom .......................... SUCCESS [  4.853 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  26.452 s
+[INFO] Finished at: 2026-10-05T13:51:08Z
+[INFO] ------------------------------------------------------------------------

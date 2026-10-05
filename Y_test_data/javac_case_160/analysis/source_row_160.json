@@ -1,0 +1,23 @@
+{
+  "instance_id": "kohlschutter__junixsocket-90-write-timeout",
+  "source_project": "kohlschutter/junixsocket",
+  "source_case": "160",
+  "source_workbook_sequence": 161,
+  "language_pair": "Java-C",
+  "repo": "kohlschutter/junixsocket",
+  "issue_id": 90,
+  "issue_url": "https://github.com/kohlschutter/junixsocket/issues/90",
+  "commit": "34af0c1be2539ea4a1390af711ff933463b834f9",
+  "base_commit": "ba3d20f60e7fbf1a49ae1f4bac09111299d104ee",
+  "base_commit_status": "verified",
+  "fix_commit": "34af0c1be2539ea4a1390af711ff933463b834f9",
+  "commit_url": "https://github.com/kohlschutter/junixsocket/commit/34af0c1be2539ea4a1390af711ff933463b834f9",
+  "problem_statement": "A blocking AF_UNIX socket write can remain stuck after SO_TIMEOUT expires instead of throwing SocketTimeoutException. Make the native write path honor the configured timeout while preserving the existing read-timeout behavior.",
+  "test_source": "official_upstream_regression_test",
+  "verification_status": "resolved",
+  "symptom": "a second send-buffer-sized write blocks indefinitely when the peer does not read",
+  "root_cause": "the native write path returns directly for EAGAIN/EWOULDBLOCK instead of polling through checkNonBlocking",
+  "fixing_strategy": "route write-side would-block errors through checkNonBlocking so an expired poll raises SocketTimeoutException",
+  "evidence_type": "official_issue_commit_and_regression_test",
+  "deduplication_key": "kohlschutter/junixsocket@34af0c1be2539ea4a1390af711ff933463b834f9"
+}

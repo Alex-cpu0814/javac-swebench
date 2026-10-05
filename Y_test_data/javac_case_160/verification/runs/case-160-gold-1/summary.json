@@ -1,0 +1,62 @@
+{
+  "schema_version": "3.0",
+  "kind": "patch_evaluation",
+  "run_id": "case-160-gold-1",
+  "label": "gold-control",
+  "instance_id": "kohlschutter__junixsocket-90-write-timeout",
+  "status": "resolved",
+  "reason": "all_expected_tests_passed",
+  "started_at": "2026-10-05T13:51:58.736Z",
+  "finished_at": "2026-10-05T13:52:44.655Z",
+  "duration_ms": 45922,
+  "application_order": [
+    "model_patch",
+    "test_patch",
+    "tests"
+  ],
+  "model_patch_sha256": "67460bc5b0bda4fa72b593743e0980f52c7b0bfd686db423f9a77b6666244248",
+  "test_patch_sha256": "ae53a68ebd9078aa90768465669eb6b50bc4032a74a974e79ff1314550ff0a5e",
+  "image": {
+    "name": "javac-case-160-junixsocket:benchmark-v1",
+    "id": "sha256:15fcd1b85e32e2b60df81e65888a891648cf05421aece7b8fbaa0e829be75e24",
+    "repo_digests": [
+      "javac-case-160-junixsocket@sha256:15fcd1b85e32e2b60df81e65888a891648cf05421aece7b8fbaa0e829be75e24"
+    ]
+  },
+  "container_exit_code": 0,
+  "phase": {
+    "phase": "tests_complete",
+    "outcome": "completed",
+    "reason": "tests_completed",
+    "test_exit_code": 0,
+    "instance_id": "kohlschutter__junixsocket-90-write-timeout"
+  },
+  "grading": {
+    "tests_observed": 2,
+    "FAIL_TO_PASS": {
+      "expected": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "missing": 0
+    },
+    "PASS_TO_PASS": {
+      "expected": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "missing": 0
+    },
+    "unexpected_failures": 0
+  },
+  "logs": {
+    "events": "events.jsonl",
+    "docker_stdout": "docker-run.stdout.raw.log",
+    "docker_stderr": "docker-run.stderr.raw.log",
+    "model_patch": "model-patch.raw.log",
+    "test_patch": "test-patch.raw.log",
+    "project_build": "project-build.raw.log",
+    "tests": "tests.raw.log",
+    "grading": "grading.json"
+  }
+}

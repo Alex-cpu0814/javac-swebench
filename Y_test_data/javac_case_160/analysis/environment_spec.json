@@ -1,0 +1,41 @@
+{
+  "instance_id": "kohlschutter__junixsocket-90-write-timeout",
+  "task_level": "integration",
+  "validation_type": "official_project_junit_jni_with_process_timeout",
+  "environment": "Ubuntu 20.04 Linux amd64 container",
+  "java_version_target": "Eclipse Temurin 17",
+  "native_requirement": "Clang and Linux AF_UNIX sockets",
+  "build_system": "Maven 3.9.9 with maven-nar-plugin",
+  "test_execution": "Maven Surefire: read-timeout control, then write-timeout regression",
+  "runtime_verified": true,
+  "reproduction_status": "verified_base_fail_fix_pass_docker",
+  "base_commit": "ba3d20f60e7fbf1a49ae1f4bac09111299d104ee",
+  "fix_commit": "34af0c1be2539ea4a1390af711ff933463b834f9",
+  "test_source": "official_upstream_regression_test",
+  "test_files": [
+    "junixsocket-common/src/test/java/org/newsclub/net/unix/SoTimeoutTest.java"
+  ],
+  "FAIL_TO_PASS": [
+    "org.newsclub.net.unix.SoTimeoutTest.testSocketTimeoutExceptionWrite"
+  ],
+  "PASS_TO_PASS": [
+    "org.newsclub.net.unix.SoTimeoutTest.testSocketTimeoutExceptionRead"
+  ],
+  "notes": [
+    "Base probe: the read-timeout behavior passes, but the write regression blocks indefinitely.",
+    "The evaluator bounds the write method with GNU timeout and reports a stable ERROR on timeout.",
+    "Gold probe: all four tests in SoTimeoutTest pass."
+  ],
+  "verification": {
+    "docker_verified": true,
+    "model_evaluator_verified": true,
+    "image_build_id": "case-160-build-2",
+    "image_id": "sha256:15fcd1b85e32e2b60df81e65888a891648cf05421aece7b8fbaa0e829be75e24",
+    "base_run_id": "case-160-base-1",
+    "gold_run_id": "case-160-gold-1",
+    "base_result": "1 FAIL_TO_PASS errored; 1 PASS_TO_PASS passed",
+    "gold_result": "1 FAIL_TO_PASS passed; 1 PASS_TO_PASS passed",
+    "probe_base_result": "write regression blocked until the probe container was stopped",
+    "probe_gold_result": "4 tests passed; 0 failures; 0 errors"
+  }
+}

@@ -1,0 +1,174 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 2.03kB 0.0s done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/maven:3.9.9-eclipse-temurin-17-focal@sha256:45ddc84a2e7f75ab7faf290085a0292dd8adc5e7674a89231f6a879b60f4358d
+#2 ...
+
+#3 [auth] library/maven:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/maven:3.9.9-eclipse-temurin-17-focal@sha256:45ddc84a2e7f75ab7faf290085a0292dd8adc5e7674a89231f6a879b60f4358d
+#2 DONE 23.5s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 54B done
+#4 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/maven:3.9.9-eclipse-temurin-17-focal@sha256:45ddc84a2e7f75ab7faf290085a0292dd8adc5e7674a89231f6a879b60f4358d
+#5 resolve docker.io/library/maven:3.9.9-eclipse-temurin-17-focal@sha256:45ddc84a2e7f75ab7faf290085a0292dd8adc5e7674a89231f6a879b60f4358d
+#5 ...
+
+#6 [auth] library/maven:pull token for registry-1.docker.io
+#6 DONE 0.0s
+
+#5 [1/5] FROM docker.io/library/maven:3.9.9-eclipse-temurin-17-focal@sha256:45ddc84a2e7f75ab7faf290085a0292dd8adc5e7674a89231f6a879b60f4358d
+#5 resolve docker.io/library/maven:3.9.9-eclipse-temurin-17-focal@sha256:45ddc84a2e7f75ab7faf290085a0292dd8adc5e7674a89231f6a879b60f4358d 21.8s done
+#5 CACHED
+
+#7 [2/5] RUN apt-get update     && apt-get install -y --no-install-recommends        build-essential clang git python3 python-is-python3     && apt-get clean     && rm -rf /var/lib/apt/lists/*
+#7 1.272 Get:1 http://security.ubuntu.com/ubuntu focal-security InRelease [128 kB]
+#7 1.917 Get:2 http://archive.ubuntu.com/ubuntu focal InRelease [265 kB]
+#7 2.021 Get:3 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [32.5 kB]
+#7 3.285 Get:4 http://archive.ubuntu.com/ubuntu focal-updates InRelease [128 kB]
+#7 3.787 Get:5 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [4368 kB]
+#7 4.672 Get:6 http://archive.ubuntu.com/ubuntu focal-backports InRelease [128 kB]
+#7 5.785 Get:7 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [4710 kB]
+#7 7.711 Get:8 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages [11.3 MB]
+#7 7.756 Get:9 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [1300 kB]
+#7 10.59 Get:10 http://archive.ubuntu.com/ubuntu focal/main amd64 Packages [1275 kB]
+#7 12.13 Get:11 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [177 kB]
+#7 13.07 Get:12 http://archive.ubuntu.com/ubuntu focal/restricted amd64 Packages [33.4 kB]
+#7 15.70 Get:13 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [4904 kB]
+#7 18.19 Get:14 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1588 kB]
+#7 21.11 Get:15 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [4850 kB]
+#7 22.37 Get:16 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [36.2 kB]
+#7 23.45 Get:17 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages [54.7 kB]
+#7 24.39 Get:18 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [28.4 kB]
+#7 24.40 Fetched 35.3 MB in 24s (1460 kB/s)
+#7 24.40 Reading package lists...
+#7 25.27 Reading package lists...
+#7 26.09 Building dependency tree...
+#7 26.25 Reading state information...
+#7 26.41 git is already the newest version (1:2.25.1-1ubuntu3.14).
+#7 26.41 The following additional packages will be installed:
+#7 26.41   clang-10 cpp cpp-9 dpkg-dev g++ g++-9 gcc gcc-9 gcc-9-base lib32gcc-s1
+#7 26.41   lib32stdc++6 libasan5 libatomic1 libc-dev-bin libc6 libc6-dev libc6-i386
+#7 26.41   libcc1-0 libclang-common-10-dev libclang-cpp10 libclang1-10 libcrypt-dev
+#7 26.41   libdpkg-perl libgc1c2 libgcc-9-dev libgomp1 libisl22 libitm1 libllvm10
+#7 26.41   liblsan0 libmpc3 libmpdec2 libmpfr6 libobjc-9-dev libobjc4 libpython3-stdlib
+#7 26.41   libpython3.8-minimal libpython3.8-stdlib libquadmath0 libstdc++-9-dev
+#7 26.41   libtsan0 libubsan1 linux-libc-dev make mime-support patch python3-minimal
+#7 26.41   python3.8 python3.8-minimal xz-utils
+#7 26.41 Suggested packages:
+#7 26.41   clang-10-doc cpp-doc gcc-9-locales debian-keyring g++-multilib
+#7 26.41   g++-9-multilib gcc-9-doc gcc-multilib manpages-dev autoconf automake libtool
+#7 26.41   flex bison gdb gcc-doc gcc-9-multilib glibc-doc bzr libstdc++-9-doc make-doc
+#7 26.41   ed diffutils-doc python3-doc python3-tk python3-venv python3.8-venv
+#7 26.41   python3.8-doc binfmt-support
+#7 26.41 Recommended packages:
+#7 26.41   llvm-10-dev libomp-10-dev fakeroot libalgorithm-merge-perl manpages
+#7 26.41   manpages-dev libfile-fcntllock-perl liblocale-gettext-perl file
+#7 26.50 The following NEW packages will be installed:
+#7 26.50   build-essential clang clang-10 cpp cpp-9 dpkg-dev g++ g++-9 gcc gcc-9
+#7 26.50   gcc-9-base lib32gcc-s1 lib32stdc++6 libasan5 libatomic1 libc-dev-bin
+#7 26.50   libc6-dev libc6-i386 libcc1-0 libclang-common-10-dev libclang-cpp10
+#7 26.50   libclang1-10 libcrypt-dev libdpkg-perl libgc1c2 libgcc-9-dev libgomp1
+#7 26.50   libisl22 libitm1 libllvm10 liblsan0 libmpc3 libmpdec2 libmpfr6 libobjc-9-dev
+#7 26.50   libobjc4 libpython3-stdlib libpython3.8-minimal libpython3.8-stdlib
+#7 26.50   libquadmath0 libstdc++-9-dev libtsan0 libubsan1 linux-libc-dev make
+#7 26.50   mime-support patch python-is-python3 python3 python3-minimal python3.8
+#7 26.50   python3.8-minimal xz-utils
+#7 26.50 The following packages will be upgraded:
+#7 26.50   libc6
+#7 29.16 1 upgraded, 53 newly installed, 0 to remove and 21 not upgraded.
+#7 29.16 Need to get 90.2 MB of archives.
+#7 29.16 After this operation, 437 MB of additional disk space will be used.
+#7 29.16 Get:1 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libc6 amd64 2.31-0ubuntu9.18 [2720 kB]
+#7 31.28 Get:2 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8-minimal amd64 3.8.10-0ubuntu1~20.04.18 [721 kB]
+#7 33.62 Get:3 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3.8-minimal amd64 3.8.10-0ubuntu1~20.04.18 [1900 kB]
+#7 34.57 Get:4 http://archive.ubuntu.com/ubuntu focal/main amd64 python3-minimal amd64 3.8.2-0ubuntu2 [23.6 kB]
+#7 35.46 Get:5 http://archive.ubuntu.com/ubuntu focal/main amd64 mime-support all 3.64ubuntu1 [30.6 kB]
+#7 36.67 Get:6 http://archive.ubuntu.com/ubuntu focal/main amd64 libmpdec2 amd64 2.4.2-3 [81.1 kB]
+#7 38.95 Get:7 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8-stdlib amd64 3.8.10-0ubuntu1~20.04.18 [1676 kB]
+#7 40.78 Get:8 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3.8 amd64 3.8.10-0ubuntu1~20.04.18 [387 kB]
+#7 41.40 Get:9 http://archive.ubuntu.com/ubuntu focal/main amd64 libpython3-stdlib amd64 3.8.2-0ubuntu2 [7068 B]
+#7 42.43 Get:10 http://archive.ubuntu.com/ubuntu focal/main amd64 python3 amd64 3.8.2-0ubuntu2 [47.6 kB]
+#7 43.65 Get:11 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 xz-utils amd64 5.2.4-1ubuntu1.1 [82.6 kB]
+#7 44.81 Get:12 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libc-dev-bin amd64 2.31-0ubuntu9.18 [71.7 kB]
+#7 46.91 Get:13 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 linux-libc-dev amd64 5.4.0-216.236 [1111 kB]
+#7 48.28 Get:14 http://archive.ubuntu.com/ubuntu focal/main amd64 libcrypt-dev amd64 1:4.4.10-10ubuntu4 [104 kB]
+#7 50.72 Get:15 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libc6-dev amd64 2.31-0ubuntu9.18 [2520 kB]
+#7 51.79 Get:16 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 gcc-9-base amd64 9.4.0-1ubuntu1~20.04.2 [18.9 kB]
+#7 53.77 Get:17 http://archive.ubuntu.com/ubuntu focal/main amd64 libisl22 amd64 0.22.1-1 [592 kB]
+#7 55.40 Get:18 http://archive.ubuntu.com/ubuntu focal/main amd64 libmpfr6 amd64 4.0.2-1 [240 kB]
+#7 56.37 Get:19 http://archive.ubuntu.com/ubuntu focal/main amd64 libmpc3 amd64 1.1.0-1 [40.8 kB]
+#7 59.24 Get:20 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 cpp-9 amd64 9.4.0-1ubuntu1~20.04.2 [7502 kB]
+#7 60.55 Get:21 http://archive.ubuntu.com/ubuntu focal/main amd64 cpp amd64 4:9.3.0-1ubuntu2 [27.6 kB]
+#7 61.80 Get:22 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libcc1-0 amd64 10.5.0-1ubuntu1~20.04 [48.8 kB]
+#7 63.69 Get:23 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libgomp1 amd64 10.5.0-1ubuntu1~20.04 [102 kB]
+#7 65.01 Get:24 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libitm1 amd64 10.5.0-1ubuntu1~20.04 [26.2 kB]
+#7 65.84 Get:25 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libatomic1 amd64 10.5.0-1ubuntu1~20.04 [9284 B]
+#7 70.35 Get:26 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libasan5 amd64 9.4.0-1ubuntu1~20.04.2 [2752 kB]
+#7 114.3 Get:27 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 liblsan0 amd64 10.5.0-1ubuntu1~20.04 [835 kB]
+#7 142.6 Get:28 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libtsan0 amd64 10.5.0-1ubuntu1~20.04 [2016 kB]
+#7 146.4 Get:29 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libubsan1 amd64 10.5.0-1ubuntu1~20.04 [785 kB]
+#7 153.9 Get:30 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libquadmath0 amd64 10.5.0-1ubuntu1~20.04 [146 kB]
+#7 188.5 Get:31 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libgcc-9-dev amd64 9.4.0-1ubuntu1~20.04.2 [2359 kB]
+#7 248.7 Ign:32 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 gcc-9 amd64 9.4.0-1ubuntu1~20.04.2
+#7 249.8 Get:33 http://archive.ubuntu.com/ubuntu focal/main amd64 gcc amd64 4:9.3.0-1ubuntu2 [5208 B]
+#7 252.9 Get:34 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libstdc++-9-dev amd64 9.4.0-1ubuntu1~20.04.2 [1722 kB]
+#7 263.2 Get:35 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 g++-9 amd64 9.4.0-1ubuntu1~20.04.2 [8421 kB]
+#7 264.8 Get:36 http://archive.ubuntu.com/ubuntu focal/main amd64 g++ amd64 4:9.3.0-1ubuntu2 [1604 B]
+#7 266.5 Get:37 http://archive.ubuntu.com/ubuntu focal/main amd64 make amd64 4.2.1-1.2 [162 kB]
+#7 268.1 Get:38 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libdpkg-perl all 1.19.7ubuntu3.2 [231 kB]
+#7 269.6 Get:39 http://archive.ubuntu.com/ubuntu focal/main amd64 patch amd64 2.7.6-6 [105 kB]
+#7 271.7 Get:40 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 dpkg-dev all 1.19.7ubuntu3.2 [679 kB]
+#7 273.4 Get:41 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 build-essential amd64 12.8ubuntu1.1 [4664 B]
+#7 308.8 Err:32 http://security.ubuntu.com/ubuntu focal-updates/main amd64 gcc-9 amd64 9.4.0-1ubuntu1~20.04.2
+#7 308.8   Connection failed [IP: 91.189.92.23 80]
+#7 313.0 Get:42 http://archive.ubuntu.com/ubuntu focal/main amd64 libllvm10 amd64 1:10.0.0-4ubuntu1 [15.3 MB]
+#7 351.4 Get:43 http://archive.ubuntu.com/ubuntu focal/universe amd64 libclang-cpp10 amd64 1:10.0.0-4ubuntu1 [9944 kB]
+#7 354.1 Get:44 http://archive.ubuntu.com/ubuntu focal/main amd64 libgc1c2 amd64 1:7.6.4-0.4ubuntu1 [83.9 kB]
+#7 356.9 Get:45 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 libobjc4 amd64 10.5.0-1ubuntu1~20.04 [42.8 kB]
+#7 359.5 Get:46 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 libobjc-9-dev amd64 9.4.0-1ubuntu1~20.04.2 [225 kB]
+#7 362.2 Get:47 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libc6-i386 amd64 2.31-0ubuntu9.18 [2729 kB]
+#7 363.6 Get:48 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 lib32gcc-s1 amd64 10.5.0-1ubuntu1~20.04 [49.1 kB]
+#7 365.5 Get:49 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 lib32stdc++6 amd64 10.5.0-1ubuntu1~20.04 [522 kB]
+#7 368.2 Get:50 http://archive.ubuntu.com/ubuntu focal/universe amd64 libclang-common-10-dev amd64 1:10.0.0-4ubuntu1 [5012 kB]
+#7 371.5 Get:51 http://archive.ubuntu.com/ubuntu focal/universe amd64 libclang1-10 amd64 1:10.0.0-4ubuntu1 [7571 kB]
+#7 373.2 Get:52 http://archive.ubuntu.com/ubuntu focal/universe amd64 clang-10 amd64 1:10.0.0-4ubuntu1 [66.9 kB]
+#7 373.8 Get:53 http://archive.ubuntu.com/ubuntu focal/universe amd64 clang amd64 1:10.0-50~exp1 [3276 B]
+#7 374.5 Get:54 http://archive.ubuntu.com/ubuntu focal/main amd64 python-is-python3 all 3.8.2-4 [2364 B]
+#7 374.5 Fetched 81.9 MB in 5min 48s (235 kB/s)
+#7 374.5 E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/g/gcc-9/gcc-9_9.4.0-1ubuntu1~20.04.2_amd64.deb  Connection failed [IP: 91.189.92.23 80]
+#7 374.5 E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+#7 ERROR: process "/bin/sh -c apt-get update     && apt-get install -y --no-install-recommends        build-essential clang git python3 python-is-python3     && apt-get clean     && rm -rf /var/lib/apt/lists/*" did not complete successfully: exit code: 100
+------
+ > [2/5] RUN apt-get update     && apt-get install -y --no-install-recommends        build-essential clang git python3 python-is-python3     && apt-get clean     && rm -rf /var/lib/apt/lists/*:
+363.6 Get:48 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 lib32gcc-s1 amd64 10.5.0-1ubuntu1~20.04 [49.1 kB]
+365.5 Get:49 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 lib32stdc++6 amd64 10.5.0-1ubuntu1~20.04 [522 kB]
+368.2 Get:50 http://archive.ubuntu.com/ubuntu focal/universe amd64 libclang-common-10-dev amd64 1:10.0.0-4ubuntu1 [5012 kB]
+371.5 Get:51 http://archive.ubuntu.com/ubuntu focal/universe amd64 libclang1-10 amd64 1:10.0.0-4ubuntu1 [7571 kB]
+373.2 Get:52 http://archive.ubuntu.com/ubuntu focal/universe amd64 clang-10 amd64 1:10.0.0-4ubuntu1 [66.9 kB]
+373.8 Get:53 http://archive.ubuntu.com/ubuntu focal/universe amd64 clang amd64 1:10.0-50~exp1 [3276 B]
+374.5 Get:54 http://archive.ubuntu.com/ubuntu focal/main amd64 python-is-python3 all 3.8.2-4 [2364 B]
+374.5 Fetched 81.9 MB in 5min 48s (235 kB/s)
+374.5 E: Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/g/gcc-9/gcc-9_9.4.0-1ubuntu1~20.04.2_amd64.deb  Connection failed [IP: 91.189.92.23 80]
+374.5 E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+------
+Dockerfile:8
+--------------------
+   7 |     
+   8 | >>> RUN apt-get update \
+   9 | >>>     && apt-get install -y --no-install-recommends \
+  10 | >>>        build-essential clang git python3 python-is-python3 \
+  11 | >>>     && apt-get clean \
+  12 | >>>     && rm -rf /var/lib/apt/lists/*
+  13 |     
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c apt-get update     && apt-get install -y --no-install-recommends        build-essential clang git python3 python-is-python3     && apt-get clean     && rm -rf /var/lib/apt/lists/*" did not complete successfully: exit code: 100
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/xpzh9ydif3cutbetcacefitmz

@@ -1,0 +1,1344 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] junixsocket                                                        [pom]
+[INFO] junixsocket-native                                                 [nar]
+[INFO] junixsocket-native-cross                                           [pom]
+[INFO] junixsocket-native-common                                          [jar]
+[INFO] junixsocket-native-custom                                          [jar]
+[INFO] junixsocket-common                                                 [jar]
+[INFO] junixsocket-core                                                   [pom]
+[INFO] junixsocket-jetty                                                  [jar]
+[INFO] 
+[INFO] --------------< com.kohlschutter.junixsocket:junixsocket >--------------
+[INFO] Building junixsocket 2.7.0-SNAPSHOT                                [1/8]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.1:clean (default-clean) @ junixsocket ---
+[INFO] 
+[INFO] --- antrun:3.1.0:run (mkdir-target-annotations) @ junixsocket ---
+[INFO] Executing tasks
+[INFO]     [mkdir] Created dir: /testbed/src/main/java
+[INFO]     [mkdir] Created dir: /testbed/src/main/resources
+[INFO]     [mkdir] Created dir: /testbed/src/test/java
+[INFO]     [mkdir] Created dir: /testbed/src/test/resources
+[INFO]     [mkdir] Created dir: /testbed/target/generated-test-sources/test-annotations
+[INFO]     [mkdir] Created dir: /testbed/target/generated-sources/annotations
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- enforcer:3.3.0:enforce (enforce-maven) @ junixsocket ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- git-commit-id:6.0.0:revision (get-the-git-infos) @ junixsocket ---
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-source-files-java8) @ junixsocket ---
+[INFO] Copying 0 resource from src/main/java to target/sources-java8
+[INFO] skip non existing resourceDirectory /testbed/src/main/java20
+[INFO] skip non existing resourceDirectory /testbed/src/main/java19
+[INFO] skip non existing resourceDirectory /testbed/src/main/java18
+[INFO] skip non existing resourceDirectory /testbed/src/main/java17
+[INFO] skip non existing resourceDirectory /testbed/src/main/java16
+[INFO] skip non existing resourceDirectory /testbed/src/main/java15
+[INFO] skip non existing resourceDirectory /testbed/src/main/java14
+[INFO] skip non existing resourceDirectory /testbed/src/main/java13
+[INFO] skip non existing resourceDirectory /testbed/src/main/java12
+[INFO] skip non existing resourceDirectory /testbed/src/main/java11
+[INFO] skip non existing resourceDirectory /testbed/src/main/java10
+[INFO] skip non existing resourceDirectory /testbed/src/main/java9
+[INFO] skip non existing resourceDirectory /testbed/src/main/java8
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-source-files-java9) @ junixsocket ---
+[INFO] Copying 0 resource from src/main/java to target/sources-java9
+[INFO] skip non existing resourceDirectory /testbed/src/main/java20
+[INFO] skip non existing resourceDirectory /testbed/src/main/java19
+[INFO] skip non existing resourceDirectory /testbed/src/main/java18
+[INFO] skip non existing resourceDirectory /testbed/src/main/java17
+[INFO] skip non existing resourceDirectory /testbed/src/main/java16
+[INFO] skip non existing resourceDirectory /testbed/src/main/java15
+[INFO] skip non existing resourceDirectory /testbed/src/main/java14
+[INFO] skip non existing resourceDirectory /testbed/src/main/java13
+[INFO] skip non existing resourceDirectory /testbed/src/main/java12
+[INFO] skip non existing resourceDirectory /testbed/src/main/java11
+[INFO] skip non existing resourceDirectory /testbed/src/main/java10
+[INFO] skip non existing resourceDirectory /testbed/src/main/java9
+[INFO] 
+[INFO] --- dependency:3.6.0:unpack (unpack-coding-style) @ junixsocket ---
+[INFO] Configured Artifact: com.kohlschutter:coding-style:files:1.2.11:zip
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (java8-compile) @ junixsocket ---
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (java9-compile) @ junixsocket ---
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-default-compile-classes-to-multirelease) @ junixsocket ---
+[INFO] skip non existing resourceDirectory /testbed/target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-default-resources-to-common-multirelease) @ junixsocket ---
+[INFO] skip non existing resourceDirectory /testbed/target/classes
+[INFO] 
+[INFO] --- source:3.3.0:jar-no-fork (attach-sources) @ junixsocket ---
+[INFO] 
+[INFO] --- jar:3.3.0:jar (multirelease-jar) @ junixsocket ---
+[WARNING] JAR will be empty - no content was marked for inclusion!
+[INFO] Building jar: /testbed/target/junixsocket-2.7.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ junixsocket ---
+[INFO] Installing /testbed/pom.xml to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket/2.7.0-SNAPSHOT/junixsocket-2.7.0-SNAPSHOT.pom
+[INFO] 
+[INFO] ----------< com.kohlschutter.junixsocket:junixsocket-native >-----------
+[INFO] Building junixsocket-native 2.7.0-SNAPSHOT                         [2/8]
+[INFO]   from junixsocket-native/pom.xml
+[INFO] --------------------------------[ nar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.1:clean (default-clean) @ junixsocket-native ---
+[INFO] 
+[INFO] --- antrun:3.1.0:run (mkdir-target-annotations) @ junixsocket-native ---
+[INFO] Executing tasks
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-native/src/main/java
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-native/src/main/resources
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-native/src/test/java
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-native/src/test/resources
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-native/target/generated-test-sources/test-annotations
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-native/target/generated-sources/annotations
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- resources:3.3.1:resources (prepare-aol) @ junixsocket-native ---
+[WARNING]  Parameter 'resources' is read-only, must not be used in configuration
+[INFO] Copying 1 resource from src/main/nar to target/classes
+[INFO] 
+[INFO] --- nar:3.10.1:nar-validate (default-nar-validate) @ junixsocket-native ---
+[INFO] Using AOL: amd64-Linux-clang
+[INFO] 
+[INFO] --- enforcer:3.3.0:enforce (enforce-maven) @ junixsocket-native ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- nar:3.10.1:nar-download (default-nar-download) @ junixsocket-native ---
+[INFO] Getting Nar dependencies
+[INFO] Getting Nar dependencies
+[INFO] 
+[INFO] --- git-commit-id:6.0.0:revision (get-the-git-infos) @ junixsocket-native ---
+[INFO] 
+[INFO] --- nar:3.10.1:nar-unpack (default-nar-unpack) @ junixsocket-native ---
+[INFO] Getting Nar dependencies
+[INFO] Unpacking 0 dependencies to /testbed/junixsocket-native/target/nar
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-source-files-java8) @ junixsocket-native ---
+[INFO] Copying 0 resource from src/main/java to target/sources-java8
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/main/java20
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/main/java19
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/main/java18
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/main/java17
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/main/java16
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/main/java15
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/main/java14
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/main/java13
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/main/java12
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/main/java11
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/main/java10
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/main/java9
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/main/java8
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-source-files-java9) @ junixsocket-native ---
+[INFO] Copying 0 resource from src/main/java to target/sources-java9
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/main/java20
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/main/java19
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/main/java18
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/main/java17
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/main/java16
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/main/java15
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/main/java14
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/main/java13
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/main/java12
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/main/java11
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/main/java10
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native/src/main/java9
+[INFO] 
+[INFO] --- nar:3.10.1:nar-gnu-configure (default-nar-gnu-configure) @ junixsocket-native ---
+[INFO] 
+[INFO] --- nar:3.10.1:nar-system-generate (default-nar-system-generate) @ junixsocket-native ---
+[WARNING] NAR: no system package specified; unable to generate NarSystem class.
+[INFO] 
+[INFO] --- nar:3.10.1:nar-vcproj (default-nar-vcproj) @ junixsocket-native ---
+[INFO] 
+[INFO] --- dependency:3.6.0:unpack (unpack-coding-style) @ junixsocket-native ---
+[INFO] Configured Artifact: com.kohlschutter:coding-style:files:1.2.11:zip
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ junixsocket-native ---
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- nar:3.10.1:nar-resources (default-nar-resources) @ junixsocket-native ---
+[INFO] Copied 0 resources
+[INFO] 
+[INFO] --- nar:3.10.1:nar-gnu-resources (default-nar-gnu-resources) @ junixsocket-native ---
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ junixsocket-native ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- nar:3.10.1:nar-gnu-make (default-nar-gnu-make) @ junixsocket-native ---
+[INFO] 
+[INFO] --- nar:3.10.1:nar-compile (default-nar-compile) @ junixsocket-native ---
+[INFO] Compiling 24 native files
+[INFO] 24 total files to be compiled.
+[INFO] Found 20 processors available
+0 / 24 files compiled...[INFO] 
+Starting Core 0 with 2 source files...
+[INFO] 
+Starting Core 1 with 2 source files...
+[INFO] 
+Starting Core 2 with 2 source files...
+[INFO] 
+Starting Core 3 with 2 source files...
+[INFO] 
+Starting Core 4 with 1 source files...
+[INFO] 
+Starting Core 5 with 1 source files...
+[INFO] 
+Starting Core 6 with 1 source files...
+[INFO] 
+Starting Core 7 with 1 source files...
+[INFO] 
+Starting Core 8 with 1 source files...
+[INFO] 
+Starting Core 9 with 1 source files...
+[INFO] 
+Starting Core 10 with 1 source files...
+[INFO] 
+Starting Core 11 with 1 source files...
+[INFO] 
+Starting Core 12 with 1 source files...
+[INFO] 
+Starting Core 13 with 1 source files...
+[INFO] 
+Starting Core 14 with 1 source files...
+[INFO] 
+Starting Core 15 with 1 source files...
+[INFO] 
+Starting Core 16 with 1 source files...
+[INFO] 
+Starting Core 17 with 1 source files...
+[INFO] 
+Starting Core 18 with 1 source files...
+[INFO] 
+Starting Core 19 with 1 source files...
+                                                                    [INFO] 24 files were compiled.
+[INFO] Linking...
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (java8-compile) @ junixsocket-native ---
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (java9-compile) @ junixsocket-native ---
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-default-compile-classes-to-multirelease) @ junixsocket-native ---
+[INFO] Copying 0 resource from target/classes to target/classes-multirelease/META-INF/versions/9
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-default-resources-to-common-multirelease) @ junixsocket-native ---
+[INFO] Copying 3 resources from target/classes to target/classes-multirelease
+[INFO] 
+[INFO] --- nar:3.10.1:nar-gnu-process (default-nar-gnu-process) @ junixsocket-native ---
+[INFO] 
+[INFO] --- nar:3.10.1:nar-process-libraries (default-nar-process-libraries) @ junixsocket-native ---
+[info] Running process libraries
+[info] Processing library Library: type: jni
+[INFO] 
+[INFO] --- nar:3.10.1:nar-test-unpack (default-nar-test-unpack) @ junixsocket-native ---
+[INFO] Getting Nar dependencies
+[INFO] Unpacking 0 dependencies to /testbed/junixsocket-native/target/test-nar
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ junixsocket-native ---
+[INFO] Copying 0 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ junixsocket-native ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- nar:3.10.1:nar-testCompile (default-nar-testCompile) @ junixsocket-native ---
+[INFO] 
+[INFO] --- nar:3.10.1:nar-test (default-nar-test) @ junixsocket-native ---
+[INFO] 
+[INFO] --- nar:3.10.1:nar-prepare-package (default-nar-prepare-package) @ junixsocket-native ---
+[INFO] 
+[INFO] --- antrun:3.1.0:run (fix-jnilib) @ junixsocket-native ---
+[INFO] Executing tasks
+[INFO]      [move] Moving 1 file to /testbed/junixsocket-native/target/nar
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-native/target/nar/junixsocket-native-2.7.0-SNAPSHOT-amd64-Linux-clang-jni/META-INF/native-image/com.kohlschutter.junixsocket/junixsocket-native-amd64-Linux-clang-jni
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- nar:3.10.1:nar-package (default-nar-package) @ junixsocket-native ---
+[INFO] Building zip: /testbed/junixsocket-native/target/junixsocket-native-2.7.0-SNAPSHOT-amd64-Linux-clang-jni.nar
+[INFO] 
+[INFO] --- source:3.3.0:jar-no-fork (attach-sources) @ junixsocket-native ---
+[INFO] Building jar: /testbed/junixsocket-native/target/junixsocket-native-2.7.0-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- jar:3.3.0:jar (multirelease-jar) @ junixsocket-native ---
+[INFO] Building jar: /testbed/junixsocket-native/target/junixsocket-native-2.7.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- nar:3.10.1:nar-integration-test (default-nar-integration-test) @ junixsocket-native ---
+[INFO] Surefire report directory: /testbed/junixsocket-native/target/surefire-reports
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ junixsocket-native ---
+[INFO] Installing /testbed/junixsocket-native/pom.xml to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-native/2.7.0-SNAPSHOT/junixsocket-native-2.7.0-SNAPSHOT.pom
+[INFO] Installing /testbed/junixsocket-native/target/junixsocket-native-2.7.0-SNAPSHOT.jar to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-native/2.7.0-SNAPSHOT/junixsocket-native-2.7.0-SNAPSHOT.nar
+[INFO] Installing /testbed/junixsocket-native/target/junixsocket-native-2.7.0-SNAPSHOT-amd64-Linux-clang-jni.nar to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-native/2.7.0-SNAPSHOT/junixsocket-native-2.7.0-SNAPSHOT-amd64-Linux-clang-jni.nar
+[INFO] Installing /testbed/junixsocket-native/target/junixsocket-native-2.7.0-SNAPSHOT-sources.jar to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-native/2.7.0-SNAPSHOT/junixsocket-native-2.7.0-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] -------< com.kohlschutter.junixsocket:junixsocket-native-cross >--------
+[INFO] Building junixsocket-native-cross 2.7.0-SNAPSHOT                   [3/8]
+[INFO]   from junixsocket-native-cross/pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.1:clean (default-clean) @ junixsocket-native-cross ---
+[INFO] 
+[INFO] --- antrun:3.1.0:run (mkdir-target-annotations) @ junixsocket-native-cross ---
+[INFO] Executing tasks
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-native-cross/src/main/java
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-native-cross/src/main/resources
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-native-cross/src/test/java
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-native-cross/src/test/resources
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-native-cross/target/generated-test-sources/test-annotations
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-native-cross/target/generated-sources/annotations
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- enforcer:3.3.0:enforce (enforce-maven) @ junixsocket-native-cross ---
+[INFO] 
+[INFO] --- nar:3.10.1:nar-validate (init-nar-properties) @ junixsocket-native-cross ---
+[INFO] Using AOL: amd64-Linux-clang
+[INFO] 
+[INFO] --- git-commit-id:6.0.0:revision (get-the-git-infos) @ junixsocket-native-cross ---
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-source-files-java8) @ junixsocket-native-cross ---
+[INFO] Copying 0 resource from src/main/java to target/sources-java8
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/src/main/java20
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/src/main/java19
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/src/main/java18
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/src/main/java17
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/src/main/java16
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/src/main/java15
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/src/main/java14
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/src/main/java13
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/src/main/java12
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/src/main/java11
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/src/main/java10
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/src/main/java9
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/src/main/java8
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-source-files-java9) @ junixsocket-native-cross ---
+[INFO] Copying 0 resource from src/main/java to target/sources-java9
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/src/main/java20
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/src/main/java19
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/src/main/java18
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/src/main/java17
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/src/main/java16
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/src/main/java15
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/src/main/java14
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/src/main/java13
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/src/main/java12
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/src/main/java11
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/src/main/java10
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/src/main/java9
+[INFO] 
+[INFO] --- dependency:3.6.0:unpack (unpack-coding-style) @ junixsocket-native-cross ---
+[INFO] Configured Artifact: com.kohlschutter:coding-style:files:1.2.11:zip
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (java8-compile) @ junixsocket-native-cross ---
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (java9-compile) @ junixsocket-native-cross ---
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-default-compile-classes-to-multirelease) @ junixsocket-native-cross ---
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-default-resources-to-common-multirelease) @ junixsocket-native-cross ---
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-cross/target/classes
+[INFO] 
+[INFO] --- jar:3.3.0:jar (multirelease-jar) @ junixsocket-native-cross ---
+[WARNING] JAR will be empty - no content was marked for inclusion!
+[INFO] Building jar: /testbed/junixsocket-native-cross/target/junixsocket-native-cross-2.7.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- invoker:3.6.0:run (crosscompile-default-clang) @ junixsocket-native-cross ---
+[WARNING] Filtering of parent/child POMs is not supported without cloning the projects
+[INFO] Building: junixsocket-native-custom/pom.xml
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------< com.kohlschutter.junixsocket:junixsocket-native-custom >-------
+[INFO] Building junixsocket-native-custom 2.7.0-SNAPSHOT
+[INFO]   from interpolated-pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.1:clean (default-clean) @ junixsocket-native-custom ---
+[INFO] 
+[INFO] --- antrun:3.1.0:run (mkdir-target-annotations) @ junixsocket-native-custom ---
+[INFO] Executing tasks
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-native-custom/src/test/java
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-native-custom/src/test/resources
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-native-custom/target/generated-test-sources/test-annotations
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-native-custom/target/generated-sources/annotations
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- enforcer:3.3.0:enforce (enforce-maven) @ junixsocket-native-custom ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] 
+[INFO] --- git-commit-id:6.0.0:revision (get-the-git-infos) @ junixsocket-native-custom ---
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-source-files-java8) @ junixsocket-native-custom ---
+[INFO] Copying 3 resources from src/main/java to target/sources-java8
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java20
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java19
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java18
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java17
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java16
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java15
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java14
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java13
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java12
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java11
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java10
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java9
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java8
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-source-files-java9) @ junixsocket-native-custom ---
+[INFO] Copying 3 resources from src/main/java to target/sources-java9
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java20
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java19
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java18
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java17
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java16
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java15
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java14
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java13
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java12
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java11
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java10
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java9
+[INFO] 
+[INFO] --- dependency:3.6.0:unpack (unpack-coding-style) @ junixsocket-native-custom ---
+[INFO] Configured Artifact: com.kohlschutter:coding-style:files:1.2.11:zip
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ junixsocket-native-custom ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ junixsocket-native-custom ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 3 source files with javac [debug release 9 module-path] to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (java8-compile) @ junixsocket-native-custom ---
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 2 source files with javac [debug release 8] to target/classes-multirelease
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (java9-compile) @ junixsocket-native-custom ---
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 3 source files with javac [debug release 9 module-path] to target/classes-multirelease/META-INF/versions/9
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-default-compile-classes-to-multirelease) @ junixsocket-native-custom ---
+[INFO] Copying 3 resources from target/classes to target/classes-multirelease/META-INF/versions/9
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-default-resources-to-common-multirelease) @ junixsocket-native-custom ---
+[INFO] Copying 3 resources from target/classes to target/classes-multirelease
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ junixsocket-native-custom ---
+[INFO] Copying 0 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ junixsocket-native-custom ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] 
+[INFO] --- jar:3.3.0:jar (multirelease-jar) @ junixsocket-native-custom ---
+[INFO] Building jar: /testbed/junixsocket-native-custom/target/junixsocket-native-custom-2.7.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- shade:3.5.0:shade (default) @ junixsocket-native-custom ---
+[INFO] Including com.kohlschutter.junixsocket:junixsocket-native:nar:amd64-Linux-clang-jni:2.7.0-SNAPSHOT in the shaded jar.
+[INFO] Dependency-reduced POM written at: /testbed/junixsocket-native-custom/dependency-reduced-pom.xml
+[INFO] Attaching shaded artifact.
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ junixsocket-native-custom ---
+[INFO] Installing /testbed/junixsocket-native-custom/dependency-reduced-pom.xml to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-native-custom/2.7.0-SNAPSHOT/junixsocket-native-custom-2.7.0-SNAPSHOT.pom
+[INFO] Installing /testbed/junixsocket-native-custom/target/junixsocket-native-custom-2.7.0-SNAPSHOT.jar to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-native-custom/2.7.0-SNAPSHOT/junixsocket-native-custom-2.7.0-SNAPSHOT.jar
+[INFO] Installing /testbed/junixsocket-native-custom/target/junixsocket-native-custom-2.7.0-SNAPSHOT-default.jar to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-native-custom/2.7.0-SNAPSHOT/junixsocket-native-custom-2.7.0-SNAPSHOT-default.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.748 s
+[INFO] Finished at: 2026-10-05T14:57:34Z
+[INFO] ------------------------------------------------------------------------
+[INFO]           junixsocket-native-custom/pom.xml ................ SUCCESS (3.689 s)
+[INFO] -------------------------------------------------
+[INFO] Build Summary:
+[INFO]   Passed: 1, Failed: 0, Errors: 0, Skipped: 0
+[INFO] -------------------------------------------------
+[INFO] 
+[INFO] --- invoker:3.6.0:run (crosscompile-default-clang-empty) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- invoker:3.6.0:run (crosscompile-amd64-Windows10-clang) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- invoker:3.6.0:run (crosscompile-aarch64-Windows10-clang) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- invoker:3.6.0:run (crosscompile-x86_64-MacOSX-clang) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- invoker:3.6.0:run (crosscompile-aarch64-MacOSX-clang) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- invoker:3.6.0:run (crosscompile-amd64-Linux-clang) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- invoker:3.6.0:run (crosscompile-arm-Linux-clang) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- invoker:3.6.0:run (crosscompile-aarch64-Linux-clang) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- invoker:3.6.0:run (crosscompile-aarch64-Android-clang) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- invoker:3.6.0:run (crosscompile-x86_64-Android-clang) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- invoker:3.6.0:run (crosscompile-i686-Android-clang) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- invoker:3.6.0:run (crosscompile-arm-Android-clang) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- invoker:3.6.0:run (crosscompile-amd64-SunOS-clang) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- invoker:3.6.0:run (crosscompile-amd64-FreeBSD-clang) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- invoker:3.6.0:run (crosscompile-amd64-DragonFlyBSD-clang) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- invoker:3.6.0:run (crosscompile-ppc64le-Linux-clang) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- invoker:3.6.0:run (crosscompile-ppc64-AIX-clang) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- invoker:3.6.0:run (crosscompile-ppc64-OS400-clang) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- invoker:3.6.0:run (crosscompile-s390x-Linux-clang) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- invoker:3.6.0:run (crosscompile-riscv64-Linux-clang) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- invoker:3.6.0:run (crosscompile-amd64-NetBSD-clang) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- invoker:3.6.0:run (crosscompile-amd64-OpenBSD-clang) @ junixsocket-native-cross ---
+[INFO] Skipping invocation per configuration. If this is incorrect, ensure the skipInvocation parameter is not set to true.
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ junixsocket-native-cross ---
+[INFO] Installing /testbed/junixsocket-native-cross/pom.xml to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-native-cross/2.7.0-SNAPSHOT/junixsocket-native-cross-2.7.0-SNAPSHOT.pom
+[INFO] 
+[INFO] -------< com.kohlschutter.junixsocket:junixsocket-native-common >-------
+[INFO] Building junixsocket-native-common 2.7.0-SNAPSHOT                  [4/8]
+[INFO]   from junixsocket-native-common/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.1:clean (default-clean) @ junixsocket-native-common ---
+[INFO] 
+[INFO] --- antrun:3.1.0:run (mkdir-target-annotations) @ junixsocket-native-common ---
+[INFO] Executing tasks
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-native-common/src/test/java
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-native-common/src/test/resources
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-native-common/target/generated-test-sources/test-annotations
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-native-common/target/generated-sources/annotations
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- enforcer:3.3.0:enforce (enforce-maven) @ junixsocket-native-common ---
+[INFO] 
+[INFO] --- git-commit-id:6.0.0:revision (get-the-git-infos) @ junixsocket-native-common ---
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-source-files-java8) @ junixsocket-native-common ---
+[INFO] Copying 3 resources from src/main/java to target/sources-java8
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-common/src/main/java20
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-common/src/main/java19
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-common/src/main/java18
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-common/src/main/java17
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-common/src/main/java16
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-common/src/main/java15
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-common/src/main/java14
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-common/src/main/java13
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-common/src/main/java12
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-common/src/main/java11
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-common/src/main/java10
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-common/src/main/java9
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-common/src/main/java8
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-source-files-java9) @ junixsocket-native-common ---
+[INFO] Copying 3 resources from src/main/java to target/sources-java9
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-common/src/main/java20
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-common/src/main/java19
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-common/src/main/java18
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-common/src/main/java17
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-common/src/main/java16
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-common/src/main/java15
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-common/src/main/java14
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-common/src/main/java13
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-common/src/main/java12
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-common/src/main/java11
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-common/src/main/java10
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-common/src/main/java9
+[INFO] 
+[INFO] --- dependency:3.6.0:unpack (unpack-coding-style) @ junixsocket-native-common ---
+[INFO] Configured Artifact: com.kohlschutter:coding-style:files:1.2.11:zip
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ junixsocket-native-common ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ junixsocket-native-common ---
+[WARNING] Can't extract module name from junixsocket-native-cross-2.7.0-SNAPSHOT.jar: junixsocket.native.cross: Invalid module name: 'native' is not a Java identifier
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 3 source files with javac [debug release 9 module-path] to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (java8-compile) @ junixsocket-native-common ---
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 2 source files with javac [debug release 8] to target/classes-multirelease
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (java9-compile) @ junixsocket-native-common ---
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[WARNING] Can't extract module name from junixsocket-native-cross-2.7.0-SNAPSHOT.jar: junixsocket.native.cross: Invalid module name: 'native' is not a Java identifier
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 3 source files with javac [debug release 9 module-path] to target/classes-multirelease/META-INF/versions/9
+[INFO] 
+[INFO] --- checkstyle:3.3.0:check (checkstyle-during-compile) @ junixsocket-native-common ---
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-default-compile-classes-to-multirelease) @ junixsocket-native-common ---
+[INFO] Copying 3 resources from target/classes to target/classes-multirelease/META-INF/versions/9
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-default-resources-to-common-multirelease) @ junixsocket-native-common ---
+[INFO] Copying 3 resources from target/classes to target/classes-multirelease
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ junixsocket-native-common ---
+[INFO] Copying 0 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ junixsocket-native-common ---
+[WARNING] Can't extract module name from junixsocket-native-2.7.0-SNAPSHOT-amd64-Linux-clang-jni.nar: '/testbed/junixsocket-native/target/junixsocket-native-2.7.0-SNAPSHOT-amd64-Linux-clang-jni.nar' not allowed on the path, only outputDirectories and jars are accepted
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] 
+[INFO] --- javadoc:3.5.0:jar (attach-javadocs) @ junixsocket-native-common ---
+[INFO] No previous run data found, generating javadoc.
+[INFO] Building jar: /testbed/junixsocket-native-common/target/junixsocket-native-common-2.7.0-SNAPSHOT-javadoc.jar
+[INFO] 
+[INFO] --- source:3.3.0:jar-no-fork (attach-sources) @ junixsocket-native-common ---
+[INFO] Building jar: /testbed/junixsocket-native-common/target/junixsocket-native-common-2.7.0-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- jar:3.3.0:jar (multirelease-jar) @ junixsocket-native-common ---
+[INFO] Building jar: /testbed/junixsocket-native-common/target/junixsocket-native-common-2.7.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- shade:3.5.0:shade (default) @ junixsocket-native-common ---
+[INFO] Including com.kohlschutter.junixsocket:junixsocket-native:nar:amd64-Linux-clang-jni:2.7.0-SNAPSHOT in the shaded jar.
+[INFO] Dependency-reduced POM written at: /testbed/junixsocket-native-common/dependency-reduced-pom.xml
+[INFO] Replacing original artifact with shaded artifact.
+[INFO] Replacing /testbed/junixsocket-native-common/target/junixsocket-native-common-2.7.0-SNAPSHOT.jar with /testbed/junixsocket-native-common/target/junixsocket-native-common-2.7.0-SNAPSHOT-shaded.jar
+[INFO] 
+[INFO] --- forbiddenapis:3.5.1:check (default) @ junixsocket-native-common ---
+[INFO] Skipping forbidden-apis checks.
+[INFO] 
+[INFO] --- forbiddenapis:3.5.1:testCheck (default) @ junixsocket-native-common ---
+[INFO] Skipping forbidden-apis checks.
+[INFO] 
+[INFO] >>> pmd:3.21.0:check (default-check) > :pmd @ junixsocket-native-common >>>
+[INFO] 
+[INFO] --- pmd:3.21.0:pmd (pmd) @ junixsocket-native-common ---
+[INFO] Skipping PMD execution
+[INFO] 
+[INFO] <<< pmd:3.21.0:check (default-check) < :pmd @ junixsocket-native-common <<<
+[INFO] 
+[INFO] 
+[INFO] --- pmd:3.21.0:check (default-check) @ junixsocket-native-common ---
+[INFO] Skipping PMD execution
+[INFO] 
+[INFO] >>> pmd:3.21.0:cpd-check (default-cpd-check) > :cpd @ junixsocket-native-common >>>
+[INFO] 
+[INFO] --- pmd:3.21.0:cpd (cpd) @ junixsocket-native-common ---
+[INFO] PMD version: 6.55.0
+[INFO] Rendering content with org.apache.maven.skins:maven-default-skin:jar:1.3 skin.
+[INFO] 
+[INFO] <<< pmd:3.21.0:cpd-check (default-cpd-check) < :cpd @ junixsocket-native-common <<<
+[INFO] 
+[INFO] 
+[INFO] --- pmd:3.21.0:cpd-check (default-cpd-check) @ junixsocket-native-common ---
+[INFO] PMD version: 6.55.0
+[INFO] 
+[INFO] 
+[INFO] --- license:4.2:check (check-license-headers) @ junixsocket-native-common ---
+[INFO] Checking licenses...
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ junixsocket-native-common ---
+[INFO] Installing /testbed/junixsocket-native-common/dependency-reduced-pom.xml to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-native-common/2.7.0-SNAPSHOT/junixsocket-native-common-2.7.0-SNAPSHOT.pom
+[INFO] Installing /testbed/junixsocket-native-common/target/junixsocket-native-common-2.7.0-SNAPSHOT.jar to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-native-common/2.7.0-SNAPSHOT/junixsocket-native-common-2.7.0-SNAPSHOT.jar
+[INFO] Installing /testbed/junixsocket-native-common/target/junixsocket-native-common-2.7.0-SNAPSHOT-javadoc.jar to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-native-common/2.7.0-SNAPSHOT/junixsocket-native-common-2.7.0-SNAPSHOT-javadoc.jar
+[INFO] Installing /testbed/junixsocket-native-common/target/junixsocket-native-common-2.7.0-SNAPSHOT-sources.jar to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-native-common/2.7.0-SNAPSHOT/junixsocket-native-common-2.7.0-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] >>> spotbugs:4.7.3.5:check (spotbugs-during-install) > :spotbugs @ junixsocket-native-common >>>
+[INFO] 
+[INFO] --- spotbugs:4.7.3.5:spotbugs (spotbugs) @ junixsocket-native-common ---
+[INFO] Fork Value is true
+[INFO] Done SpotBugs Analysis....
+[INFO] 
+[INFO] <<< spotbugs:4.7.3.5:check (spotbugs-during-install) < :spotbugs @ junixsocket-native-common <<<
+[INFO] 
+[INFO] 
+[INFO] --- spotbugs:4.7.3.5:check (spotbugs-during-install) @ junixsocket-native-common ---
+[INFO] 
+[INFO] -------< com.kohlschutter.junixsocket:junixsocket-native-custom >-------
+[INFO] Building junixsocket-native-custom 2.7.0-SNAPSHOT                  [5/8]
+[INFO]   from junixsocket-native-custom/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.1:clean (default-clean) @ junixsocket-native-custom ---
+[INFO] Deleting /testbed/junixsocket-native-custom/target
+[INFO] 
+[INFO] --- antrun:3.1.0:run (mkdir-target-annotations) @ junixsocket-native-custom ---
+[INFO] Executing tasks
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-native-custom/target/generated-test-sources/test-annotations
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-native-custom/target/generated-sources/annotations
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- enforcer:3.3.0:enforce (enforce-maven) @ junixsocket-native-custom ---
+[INFO] 
+[INFO] --- git-commit-id:6.0.0:revision (get-the-git-infos) @ junixsocket-native-custom ---
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-source-files-java8) @ junixsocket-native-custom ---
+[INFO] Copying 3 resources from src/main/java to target/sources-java8
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java20
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java19
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java18
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java17
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java16
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java15
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java14
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java13
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java12
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java11
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java10
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java9
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java8
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-source-files-java9) @ junixsocket-native-custom ---
+[INFO] Copying 3 resources from src/main/java to target/sources-java9
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java20
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java19
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java18
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java17
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java16
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java15
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java14
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java13
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java12
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java11
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java10
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-native-custom/src/main/java9
+[INFO] 
+[INFO] --- dependency:3.6.0:unpack (unpack-coding-style) @ junixsocket-native-custom ---
+[INFO] Configured Artifact: com.kohlschutter:coding-style:files:1.2.11:zip
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ junixsocket-native-custom ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ junixsocket-native-custom ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 3 source files with javac [debug release 9 module-path] to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (java8-compile) @ junixsocket-native-custom ---
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 2 source files with javac [debug release 8] to target/classes-multirelease
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (java9-compile) @ junixsocket-native-custom ---
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 3 source files with javac [debug release 9 module-path] to target/classes-multirelease/META-INF/versions/9
+[INFO] 
+[INFO] --- checkstyle:3.3.0:check (checkstyle-during-compile) @ junixsocket-native-custom ---
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-default-compile-classes-to-multirelease) @ junixsocket-native-custom ---
+[INFO] Copying 3 resources from target/classes to target/classes-multirelease/META-INF/versions/9
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-default-resources-to-common-multirelease) @ junixsocket-native-custom ---
+[INFO] Copying 3 resources from target/classes to target/classes-multirelease
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ junixsocket-native-custom ---
+[INFO] Copying 0 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ junixsocket-native-custom ---
+[WARNING] Can't extract module name from junixsocket-native-2.7.0-SNAPSHOT-amd64-Linux-clang-jni.nar: '/testbed/junixsocket-native/target/junixsocket-native-2.7.0-SNAPSHOT-amd64-Linux-clang-jni.nar' not allowed on the path, only outputDirectories and jars are accepted
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] 
+[INFO] --- javadoc:3.5.0:jar (attach-javadocs) @ junixsocket-native-custom ---
+[INFO] No previous run data found, generating javadoc.
+[INFO] Building jar: /testbed/junixsocket-native-custom/target/junixsocket-native-custom-2.7.0-SNAPSHOT-javadoc.jar
+[INFO] 
+[INFO] --- source:3.3.0:jar-no-fork (attach-sources) @ junixsocket-native-custom ---
+[INFO] Building jar: /testbed/junixsocket-native-custom/target/junixsocket-native-custom-2.7.0-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- jar:3.3.0:jar (multirelease-jar) @ junixsocket-native-custom ---
+[INFO] Building jar: /testbed/junixsocket-native-custom/target/junixsocket-native-custom-2.7.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- shade:3.5.0:shade (default) @ junixsocket-native-custom ---
+[INFO] Including com.kohlschutter.junixsocket:junixsocket-native:nar:amd64-Linux-clang-jni:2.7.0-SNAPSHOT in the shaded jar.
+[INFO] Dependency-reduced POM written at: /testbed/junixsocket-native-custom/dependency-reduced-pom.xml
+[INFO] Attaching shaded artifact.
+[INFO] 
+[INFO] --- forbiddenapis:3.5.1:check (default) @ junixsocket-native-custom ---
+[INFO] Skipping forbidden-apis checks.
+[INFO] 
+[INFO] --- forbiddenapis:3.5.1:testCheck (default) @ junixsocket-native-custom ---
+[INFO] Skipping forbidden-apis checks.
+[INFO] 
+[INFO] >>> pmd:3.21.0:check (default-check) > :pmd @ junixsocket-native-custom >>>
+[INFO] 
+[INFO] --- pmd:3.21.0:pmd (pmd) @ junixsocket-native-custom ---
+[INFO] Skipping PMD execution
+[INFO] 
+[INFO] <<< pmd:3.21.0:check (default-check) < :pmd @ junixsocket-native-custom <<<
+[INFO] 
+[INFO] 
+[INFO] --- pmd:3.21.0:check (default-check) @ junixsocket-native-custom ---
+[INFO] Skipping PMD execution
+[INFO] 
+[INFO] >>> pmd:3.21.0:cpd-check (default-cpd-check) > :cpd @ junixsocket-native-custom >>>
+[INFO] 
+[INFO] --- pmd:3.21.0:cpd (cpd) @ junixsocket-native-custom ---
+[INFO] PMD version: 6.55.0
+[INFO] Rendering content with org.apache.maven.skins:maven-default-skin:jar:1.3 skin.
+[INFO] 
+[INFO] <<< pmd:3.21.0:cpd-check (default-cpd-check) < :cpd @ junixsocket-native-custom <<<
+[INFO] 
+[INFO] 
+[INFO] --- pmd:3.21.0:cpd-check (default-cpd-check) @ junixsocket-native-custom ---
+[INFO] PMD version: 6.55.0
+[INFO] 
+[INFO] 
+[INFO] --- license:4.2:check (check-license-headers) @ junixsocket-native-custom ---
+[INFO] Checking licenses...
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ junixsocket-native-custom ---
+[INFO] Installing /testbed/junixsocket-native-custom/dependency-reduced-pom.xml to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-native-custom/2.7.0-SNAPSHOT/junixsocket-native-custom-2.7.0-SNAPSHOT.pom
+[INFO] Installing /testbed/junixsocket-native-custom/target/junixsocket-native-custom-2.7.0-SNAPSHOT.jar to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-native-custom/2.7.0-SNAPSHOT/junixsocket-native-custom-2.7.0-SNAPSHOT.jar
+[INFO] Installing /testbed/junixsocket-native-custom/target/junixsocket-native-custom-2.7.0-SNAPSHOT-javadoc.jar to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-native-custom/2.7.0-SNAPSHOT/junixsocket-native-custom-2.7.0-SNAPSHOT-javadoc.jar
+[INFO] Installing /testbed/junixsocket-native-custom/target/junixsocket-native-custom-2.7.0-SNAPSHOT-sources.jar to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-native-custom/2.7.0-SNAPSHOT/junixsocket-native-custom-2.7.0-SNAPSHOT-sources.jar
+[INFO] Installing /testbed/junixsocket-native-custom/target/junixsocket-native-custom-2.7.0-SNAPSHOT-default.jar to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-native-custom/2.7.0-SNAPSHOT/junixsocket-native-custom-2.7.0-SNAPSHOT-default.jar
+[INFO] 
+[INFO] >>> spotbugs:4.7.3.5:check (spotbugs-during-install) > :spotbugs @ junixsocket-native-custom >>>
+[INFO] 
+[INFO] --- spotbugs:4.7.3.5:spotbugs (spotbugs) @ junixsocket-native-custom ---
+[INFO] Fork Value is true
+[INFO] Done SpotBugs Analysis....
+[INFO] 
+[INFO] <<< spotbugs:4.7.3.5:check (spotbugs-during-install) < :spotbugs @ junixsocket-native-custom <<<
+[INFO] 
+[INFO] 
+[INFO] --- spotbugs:4.7.3.5:check (spotbugs-during-install) @ junixsocket-native-custom ---
+[INFO] 
+[INFO] ----------< com.kohlschutter.junixsocket:junixsocket-common >-----------
+[INFO] Building junixsocket-common 2.7.0-SNAPSHOT                         [6/8]
+[INFO]   from junixsocket-common/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.1:clean (default-clean) @ junixsocket-common ---
+[INFO] 
+[INFO] --- antrun:3.1.0:run (mkdir-target-annotations) @ junixsocket-common ---
+[INFO] Executing tasks
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-common/src/test/resources
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-common/target/generated-test-sources/test-annotations
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-common/target/generated-sources/annotations
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- enforcer:3.3.0:enforce (enforce-maven) @ junixsocket-common ---
+[INFO] 
+[INFO] --- git-commit-id:6.0.0:revision (get-the-git-infos) @ junixsocket-common ---
+[INFO] 
+[INFO] --- jacoco:0.8.10:prepare-agent (default-prepare-agent) @ junixsocket-common ---
+[INFO] surefireJacocoArgLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.10/org.jacoco.agent-0.8.10-runtime.jar=destfile=/testbed/junixsocket-common/target/jacoco.exec,excludes=org/apache/maven/**:org/junit/**:org/apiguardian/**:sun/**
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-source-files-java8) @ junixsocket-common ---
+[INFO] Copying 82 resources from src/main/java to target/sources-java8
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java20
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java19
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java18
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java17
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java16
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java15
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java14
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java13
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java12
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java11
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java10
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java9
+[INFO] Copying 6 resources from src/main/java8 to target/sources-java8
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-source-files-java9) @ junixsocket-common ---
+[INFO] Copying 82 resources from src/main/java to target/sources-java9
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java20
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java19
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java18
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java17
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java16
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java15
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java14
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java13
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java12
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java11
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java10
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java9
+[INFO] 
+[INFO] --- dependency:3.6.0:unpack (unpack-coding-style) @ junixsocket-common ---
+[INFO] Configured Artifact: com.kohlschutter:coding-style:files:1.2.11:zip
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ junixsocket-common ---
+[INFO] Copying 4 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ junixsocket-common ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 82 source files with javac [debug release 9 module-path] to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (java8-compile) @ junixsocket-common ---
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 81 source files with javac [debug release 8] to target/classes-multirelease
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (java9-compile) @ junixsocket-common ---
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 82 source files with javac [debug release 9 module-path] to target/classes-multirelease/META-INF/versions/9
+[INFO] 
+[INFO] --- checkstyle:3.3.0:check (checkstyle-during-compile) @ junixsocket-common ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-default-compile-classes-to-multirelease) @ junixsocket-common ---
+[INFO] Copying 134 resources from target/classes to target/classes-multirelease/META-INF/versions/9
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-default-resources-to-common-multirelease) @ junixsocket-common ---
+[INFO] Copying 5 resources from target/classes to target/classes-multirelease
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ junixsocket-common ---
+[INFO] Copying 0 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ junixsocket-common ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 68 source files with javac [debug release 9] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ junixsocket-common ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- javadoc:3.5.0:jar (attach-javadocs) @ junixsocket-common ---
+[INFO] No previous run data found, generating javadoc.
+[INFO] Building jar: /testbed/junixsocket-common/target/junixsocket-common-2.7.0-SNAPSHOT-javadoc.jar
+[INFO] 
+[INFO] --- source:3.3.0:jar-no-fork (attach-sources) @ junixsocket-common ---
+[INFO] Building jar: /testbed/junixsocket-common/target/junixsocket-common-2.7.0-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] >>> source:3.3.0:test-jar (default) > generate-sources @ junixsocket-common >>>
+[INFO] 
+[INFO] --- enforcer:3.3.0:enforce (enforce-maven) @ junixsocket-common ---
+[INFO] 
+[INFO] --- git-commit-id:6.0.0:revision (get-the-git-infos) @ junixsocket-common ---
+[INFO] 
+[INFO] --- jacoco:0.8.10:prepare-agent (default-prepare-agent) @ junixsocket-common ---
+[INFO] surefireJacocoArgLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.10/org.jacoco.agent-0.8.10-runtime.jar=destfile=/testbed/junixsocket-common/target/jacoco.exec,excludes=org/apache/maven/**:org/junit/**:org/apiguardian/**:sun/**
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-source-files-java8) @ junixsocket-common ---
+[INFO] Copying 82 resources from src/main/java to target/sources-java8
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java20
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java19
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java18
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java17
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java16
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java15
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java14
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java13
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java12
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java11
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java10
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java9
+[INFO] Copying 6 resources from src/main/java8 to target/sources-java8
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-source-files-java9) @ junixsocket-common ---
+[INFO] Copying 82 resources from src/main/java to target/sources-java9
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java20
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java19
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java18
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java17
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java16
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java15
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java14
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java13
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java12
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java11
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java10
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-common/src/main/java9
+[INFO] 
+[INFO] <<< source:3.3.0:test-jar (default) < generate-sources @ junixsocket-common <<<
+[INFO] 
+[INFO] 
+[INFO] --- source:3.3.0:test-jar (default) @ junixsocket-common ---
+[INFO] Building jar: /testbed/junixsocket-common/target/junixsocket-common-2.7.0-SNAPSHOT-test-sources.jar
+[INFO] 
+[INFO] --- jar:3.3.0:jar (multirelease-jar) @ junixsocket-common ---
+[INFO] Building jar: /testbed/junixsocket-common/target/junixsocket-common-2.7.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- jar:3.3.0:test-jar (default) @ junixsocket-common ---
+[INFO] Building jar: /testbed/junixsocket-common/target/junixsocket-common-2.7.0-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- jacoco:0.8.10:check (default-check) @ junixsocket-common ---
+[INFO] Skipping JaCoCo execution due to missing execution data file:/testbed/junixsocket-common/target/jacoco.exec
+[INFO] 
+[INFO] --- forbiddenapis:3.5.1:check (default) @ junixsocket-common ---
+[INFO] Scanning for classes to check...
+[INFO] Reading bundled API signatures: jdk-unsafe-9
+[INFO] Reading bundled API signatures: jdk-deprecated-9
+[INFO] Reading bundled API signatures: jdk-non-portable
+[INFO] Loading classes to check...
+[INFO] Scanning classes for violations...
+[INFO] Scanned 133 class file(s) for forbidden API invocations (in 0.19s), 0 error(s).
+[INFO] 
+[INFO] --- forbiddenapis:3.5.1:testCheck (default) @ junixsocket-common ---
+[INFO] Scanning for classes to check...
+[INFO] Reading bundled API signatures: jdk-unsafe-9
+[INFO] Reading bundled API signatures: jdk-deprecated-9
+[INFO] Reading bundled API signatures: jdk-non-portable
+[INFO] Loading classes to check...
+[INFO] Scanning classes for violations...
+[INFO] Scanned 107 class file(s) for forbidden API invocations (in 0.11s), 0 error(s).
+[INFO] 
+[INFO] >>> pmd:3.21.0:check (default-check) > :pmd @ junixsocket-common >>>
+[INFO] 
+[INFO] --- pmd:3.21.0:pmd (pmd) @ junixsocket-common ---
+[INFO] PMD version: 6.55.0
+[WARNING] There are 1 PMD processing errors:
+[WARNING] /testbed/junixsocket-common/src/main/java/module-info.java: PMDException: Error while parsing /testbed/junixsocket-common/src/main/java/module-info.java
+[INFO] Rendering content with org.apache.maven.skins:maven-default-skin:jar:1.3 skin.
+[INFO] 
+[INFO] <<< pmd:3.21.0:check (default-check) < :pmd @ junixsocket-common <<<
+[INFO] 
+[INFO] 
+[INFO] --- pmd:3.21.0:check (default-check) @ junixsocket-common ---
+[INFO] PMD version: 6.55.0
+[INFO] 
+[INFO] 
+[INFO] >>> pmd:3.21.0:cpd-check (default-cpd-check) > :cpd @ junixsocket-common >>>
+[INFO] 
+[INFO] --- pmd:3.21.0:cpd (cpd) @ junixsocket-common ---
+[INFO] PMD version: 6.55.0
+[INFO] Rendering content with org.apache.maven.skins:maven-default-skin:jar:1.3 skin.
+[INFO] 
+[INFO] <<< pmd:3.21.0:cpd-check (default-cpd-check) < :cpd @ junixsocket-common <<<
+[INFO] 
+[INFO] 
+[INFO] --- pmd:3.21.0:cpd-check (default-cpd-check) @ junixsocket-common ---
+[INFO] PMD version: 6.55.0
+[INFO] 
+[INFO] 
+[INFO] --- license:4.2:check (check-license-headers) @ junixsocket-common ---
+[INFO] Checking licenses...
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ junixsocket-common ---
+[INFO] Installing /testbed/junixsocket-common/pom.xml to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-common/2.7.0-SNAPSHOT/junixsocket-common-2.7.0-SNAPSHOT.pom
+[INFO] Installing /testbed/junixsocket-common/target/junixsocket-common-2.7.0-SNAPSHOT.jar to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-common/2.7.0-SNAPSHOT/junixsocket-common-2.7.0-SNAPSHOT.jar
+[INFO] Installing /testbed/junixsocket-common/target/junixsocket-common-2.7.0-SNAPSHOT-javadoc.jar to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-common/2.7.0-SNAPSHOT/junixsocket-common-2.7.0-SNAPSHOT-javadoc.jar
+[INFO] Installing /testbed/junixsocket-common/target/junixsocket-common-2.7.0-SNAPSHOT-sources.jar to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-common/2.7.0-SNAPSHOT/junixsocket-common-2.7.0-SNAPSHOT-sources.jar
+[INFO] Installing /testbed/junixsocket-common/target/junixsocket-common-2.7.0-SNAPSHOT-test-sources.jar to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-common/2.7.0-SNAPSHOT/junixsocket-common-2.7.0-SNAPSHOT-test-sources.jar
+[INFO] Installing /testbed/junixsocket-common/target/junixsocket-common-2.7.0-SNAPSHOT-tests.jar to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-common/2.7.0-SNAPSHOT/junixsocket-common-2.7.0-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] >>> spotbugs:4.7.3.5:check (spotbugs-during-install) > :spotbugs @ junixsocket-common >>>
+[INFO] 
+[INFO] --- spotbugs:4.7.3.5:spotbugs (spotbugs) @ junixsocket-common ---
+[INFO] Fork Value is true
+[INFO] Done SpotBugs Analysis....
+[INFO] 
+[INFO] <<< spotbugs:4.7.3.5:check (spotbugs-during-install) < :spotbugs @ junixsocket-common <<<
+[INFO] 
+[INFO] 
+[INFO] --- spotbugs:4.7.3.5:check (spotbugs-during-install) @ junixsocket-common ---
+[INFO] BugInstance size is 0
+[INFO] Error size is 0
+[INFO] No errors/warnings found
+[INFO] 
+[INFO] -----------< com.kohlschutter.junixsocket:junixsocket-core >------------
+[INFO] Building junixsocket-core 2.7.0-SNAPSHOT                           [7/8]
+[INFO]   from junixsocket-core/pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.1:clean (default-clean) @ junixsocket-core ---
+[INFO] 
+[INFO] --- antrun:3.1.0:run (mkdir-target-annotations) @ junixsocket-core ---
+[INFO] Executing tasks
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-core/src/main/java
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-core/src/main/resources
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-core/src/test/java
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-core/src/test/resources
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-core/target/generated-test-sources/test-annotations
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-core/target/generated-sources/annotations
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- enforcer:3.3.0:enforce (enforce-maven) @ junixsocket-core ---
+[INFO] 
+[INFO] --- git-commit-id:6.0.0:revision (get-the-git-infos) @ junixsocket-core ---
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-source-files-java8) @ junixsocket-core ---
+[INFO] Copying 0 resource from src/main/java to target/sources-java8
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-core/src/main/java20
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-core/src/main/java19
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-core/src/main/java18
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-core/src/main/java17
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-core/src/main/java16
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-core/src/main/java15
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-core/src/main/java14
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-core/src/main/java13
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-core/src/main/java12
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-core/src/main/java11
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-core/src/main/java10
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-core/src/main/java9
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-core/src/main/java8
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-source-files-java9) @ junixsocket-core ---
+[INFO] Copying 0 resource from src/main/java to target/sources-java9
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-core/src/main/java20
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-core/src/main/java19
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-core/src/main/java18
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-core/src/main/java17
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-core/src/main/java16
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-core/src/main/java15
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-core/src/main/java14
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-core/src/main/java13
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-core/src/main/java12
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-core/src/main/java11
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-core/src/main/java10
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-core/src/main/java9
+[INFO] 
+[INFO] --- dependency:3.6.0:unpack (unpack-coding-style) @ junixsocket-core ---
+[INFO] Configured Artifact: com.kohlschutter:coding-style:files:1.2.11:zip
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (java8-compile) @ junixsocket-core ---
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (java9-compile) @ junixsocket-core ---
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-default-compile-classes-to-multirelease) @ junixsocket-core ---
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-core/target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-default-resources-to-common-multirelease) @ junixsocket-core ---
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-core/target/classes
+[INFO] 
+[INFO] --- source:3.3.0:jar-no-fork (attach-sources) @ junixsocket-core ---
+[INFO] 
+[INFO] --- jar:3.3.0:jar (multirelease-jar) @ junixsocket-core ---
+[WARNING] JAR will be empty - no content was marked for inclusion!
+[INFO] Building jar: /testbed/junixsocket-core/target/junixsocket-core-2.7.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ junixsocket-core ---
+[INFO] Installing /testbed/junixsocket-core/pom.xml to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-core/2.7.0-SNAPSHOT/junixsocket-core-2.7.0-SNAPSHOT.pom
+[INFO] 
+[INFO] -----------< com.kohlschutter.junixsocket:junixsocket-jetty >-----------
+[INFO] Building junixsocket-jetty 2.7.0-SNAPSHOT                          [8/8]
+[INFO]   from junixsocket-jetty/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.1:clean (default-clean) @ junixsocket-jetty ---
+[INFO] 
+[INFO] --- antrun:3.1.0:run (mkdir-target-annotations) @ junixsocket-jetty ---
+[INFO] Executing tasks
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-jetty/src/main/resources
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-jetty/src/test/resources
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-jetty/target/generated-test-sources/test-annotations
+[INFO]     [mkdir] Created dir: /testbed/junixsocket-jetty/target/generated-sources/annotations
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- enforcer:3.3.0:enforce (enforce-maven) @ junixsocket-jetty ---
+[INFO] 
+[INFO] --- git-commit-id:6.0.0:revision (get-the-git-infos) @ junixsocket-jetty ---
+[INFO] 
+[INFO] --- jacoco:0.8.10:prepare-agent (default-prepare-agent) @ junixsocket-jetty ---
+[INFO] surefireJacocoArgLine set to -javaagent:/root/.m2/repository/org/jacoco/org.jacoco.agent/0.8.10/org.jacoco.agent-0.8.10-runtime.jar=destfile=/testbed/junixsocket-jetty/target/jacoco.exec,excludes=org/apache/maven/**:org/junit/**:org/apiguardian/**:sun/**
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-source-files-java8) @ junixsocket-jetty ---
+[INFO] Copying 3 resources from src/main/java to target/sources-java8
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-jetty/src/main/java20
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-jetty/src/main/java19
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-jetty/src/main/java18
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-jetty/src/main/java17
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-jetty/src/main/java16
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-jetty/src/main/java15
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-jetty/src/main/java14
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-jetty/src/main/java13
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-jetty/src/main/java12
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-jetty/src/main/java11
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-jetty/src/main/java10
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-jetty/src/main/java9
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-jetty/src/main/java8
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-source-files-java9) @ junixsocket-jetty ---
+[INFO] Copying 3 resources from src/main/java to target/sources-java9
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-jetty/src/main/java20
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-jetty/src/main/java19
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-jetty/src/main/java18
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-jetty/src/main/java17
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-jetty/src/main/java16
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-jetty/src/main/java15
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-jetty/src/main/java14
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-jetty/src/main/java13
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-jetty/src/main/java12
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-jetty/src/main/java11
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-jetty/src/main/java10
+[INFO] skip non existing resourceDirectory /testbed/junixsocket-jetty/src/main/java9
+[INFO] 
+[INFO] --- dependency:3.6.0:unpack (unpack-coding-style) @ junixsocket-jetty ---
+[INFO] Configured Artifact: com.kohlschutter:coding-style:files:1.2.11:zip
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ junixsocket-jetty ---
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ junixsocket-jetty ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 3 source files with javac [debug release 9] to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (java8-compile) @ junixsocket-jetty ---
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 3 source files with javac [debug release 8] to target/classes-multirelease
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (java9-compile) @ junixsocket-jetty ---
+[WARNING]  Parameter 'outputDirectory' is read-only, must not be used in configuration
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 3 source files with javac [debug release 9] to target/classes-multirelease/META-INF/versions/9
+[INFO] 
+[INFO] --- checkstyle:3.3.0:check (checkstyle-during-compile) @ junixsocket-jetty ---
+[INFO] Starting audit...
+Audit done.
+[INFO] You have 0 Checkstyle violations.
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-default-compile-classes-to-multirelease) @ junixsocket-jetty ---
+[INFO] Copying 6 resources from target/classes to target/classes-multirelease/META-INF/versions/9
+[INFO] 
+[INFO] --- resources:3.3.1:copy-resources (copy-default-resources-to-common-multirelease) @ junixsocket-jetty ---
+[INFO] Copying 1 resource from target/classes to target/classes-multirelease
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ junixsocket-jetty ---
+[INFO] Copying 0 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ junixsocket-jetty ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 2 source files with javac [debug release 9] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ junixsocket-jetty ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- javadoc:3.5.0:jar (attach-javadocs) @ junixsocket-jetty ---
+[INFO] No previous run data found, generating javadoc.
+[INFO] Building jar: /testbed/junixsocket-jetty/target/junixsocket-jetty-2.7.0-SNAPSHOT-javadoc.jar
+[INFO] 
+[INFO] --- source:3.3.0:jar-no-fork (attach-sources) @ junixsocket-jetty ---
+[INFO] Building jar: /testbed/junixsocket-jetty/target/junixsocket-jetty-2.7.0-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] --- jar:3.3.0:jar (multirelease-jar) @ junixsocket-jetty ---
+[INFO] Building jar: /testbed/junixsocket-jetty/target/junixsocket-jetty-2.7.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- jacoco:0.8.10:check (default-check) @ junixsocket-jetty ---
+[INFO] Skipping JaCoCo execution due to missing execution data file:/testbed/junixsocket-jetty/target/jacoco.exec
+[INFO] 
+[INFO] --- forbiddenapis:3.5.1:check (default) @ junixsocket-jetty ---
+[INFO] Scanning for classes to check...
+[INFO] Reading bundled API signatures: jdk-unsafe-9
+[INFO] Reading bundled API signatures: jdk-deprecated-9
+[INFO] Reading bundled API signatures: jdk-non-portable
+[INFO] Loading classes to check...
+[INFO] Scanning classes for violations...
+[INFO] Scanned 6 class file(s) for forbidden API invocations (in 0.06s), 0 error(s).
+[INFO] 
+[INFO] --- forbiddenapis:3.5.1:testCheck (default) @ junixsocket-jetty ---
+[INFO] Scanning for classes to check...
+[INFO] Reading bundled API signatures: jdk-unsafe-9
+[INFO] Reading bundled API signatures: jdk-deprecated-9
+[INFO] Reading bundled API signatures: jdk-non-portable
+[INFO] Loading classes to check...
+[INFO] Scanning classes for violations...
+[INFO] Scanned 6 class file(s) for forbidden API invocations (in 0.07s), 0 error(s).
+[INFO] 
+[INFO] >>> pmd:3.21.0:check (default-check) > :pmd @ junixsocket-jetty >>>
+[INFO] 
+[INFO] --- pmd:3.21.0:pmd (pmd) @ junixsocket-jetty ---
+[INFO] PMD version: 6.55.0
+[INFO] Rendering content with org.apache.maven.skins:maven-default-skin:jar:1.3 skin.
+[INFO] 
+[INFO] <<< pmd:3.21.0:check (default-check) < :pmd @ junixsocket-jetty <<<
+[INFO] 
+[INFO] 
+[INFO] --- pmd:3.21.0:check (default-check) @ junixsocket-jetty ---
+[INFO] PMD version: 6.55.0
+[INFO] 
+[INFO] 
+[INFO] >>> pmd:3.21.0:cpd-check (default-cpd-check) > :cpd @ junixsocket-jetty >>>
+[INFO] 
+[INFO] --- pmd:3.21.0:cpd (cpd) @ junixsocket-jetty ---
+[INFO] PMD version: 6.55.0
+[INFO] Rendering content with org.apache.maven.skins:maven-default-skin:jar:1.3 skin.
+[INFO] 
+[INFO] <<< pmd:3.21.0:cpd-check (default-cpd-check) < :cpd @ junixsocket-jetty <<<
+[INFO] 
+[INFO] 
+[INFO] --- pmd:3.21.0:cpd-check (default-cpd-check) @ junixsocket-jetty ---
+[INFO] PMD version: 6.55.0
+[INFO] 
+[INFO] 
+[INFO] --- license:4.2:check (check-license-headers) @ junixsocket-jetty ---
+[INFO] Checking licenses...
+[INFO] 
+[INFO] --- install:3.1.1:install (default-install) @ junixsocket-jetty ---
+[INFO] Installing /testbed/junixsocket-jetty/pom.xml to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-jetty/2.7.0-SNAPSHOT/junixsocket-jetty-2.7.0-SNAPSHOT.pom
+[INFO] Installing /testbed/junixsocket-jetty/target/junixsocket-jetty-2.7.0-SNAPSHOT.jar to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-jetty/2.7.0-SNAPSHOT/junixsocket-jetty-2.7.0-SNAPSHOT.jar
+[INFO] Installing /testbed/junixsocket-jetty/target/junixsocket-jetty-2.7.0-SNAPSHOT-javadoc.jar to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-jetty/2.7.0-SNAPSHOT/junixsocket-jetty-2.7.0-SNAPSHOT-javadoc.jar
+[INFO] Installing /testbed/junixsocket-jetty/target/junixsocket-jetty-2.7.0-SNAPSHOT-sources.jar to /root/.m2/repository/com/kohlschutter/junixsocket/junixsocket-jetty/2.7.0-SNAPSHOT/junixsocket-jetty-2.7.0-SNAPSHOT-sources.jar
+[INFO] 
+[INFO] >>> spotbugs:4.7.3.5:check (spotbugs-during-install) > :spotbugs @ junixsocket-jetty >>>
+[INFO] 
+[INFO] --- spotbugs:4.7.3.5:spotbugs (spotbugs) @ junixsocket-jetty ---
+[INFO] Fork Value is true
+[INFO] Done SpotBugs Analysis....
+[INFO] 
+[INFO] <<< spotbugs:4.7.3.5:check (spotbugs-during-install) < :spotbugs @ junixsocket-jetty <<<
+[INFO] 
+[INFO] 
+[INFO] --- spotbugs:4.7.3.5:check (spotbugs-during-install) @ junixsocket-jetty ---
+[INFO] BugInstance size is 0
+[INFO] Error size is 0
+[INFO] No errors/warnings found
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for junixsocket 2.7.0-SNAPSHOT:
+[INFO] 
+[INFO] junixsocket ........................................ SUCCESS [  1.527 s]
+[INFO] junixsocket-native ................................. SUCCESS [  7.202 s]
+[INFO] junixsocket-native-cross ........................... SUCCESS [  4.394 s]
+[INFO] junixsocket-native-common .......................... SUCCESS [  5.608 s]
+[INFO] junixsocket-native-custom .......................... SUCCESS [  4.487 s]
+[INFO] junixsocket-common ................................. SUCCESS [ 28.298 s]
+[INFO] junixsocket-core ................................... SUCCESS [  0.597 s]
+[INFO] junixsocket-jetty .................................. SUCCESS [  8.591 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:01 min
+[INFO] Finished at: 2026-10-05T14:58:22Z
+[INFO] ------------------------------------------------------------------------

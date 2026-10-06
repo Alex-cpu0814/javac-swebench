@@ -1,0 +1,49 @@
+diff --git a/junixsocket-common/src/main/java/org/newsclub/net/unix/AFCore.java b/junixsocket-common/src/main/java/org/newsclub/net/unix/AFCore.java
+index 7df1083..dcbb00b 100644
+--- a/junixsocket-common/src/main/java/org/newsclub/net/unix/AFCore.java
++++ b/junixsocket-common/src/main/java/org/newsclub/net/unix/AFCore.java
+@@ -138,7 +138,9 @@ class AFCore extends CleanableState {
+     }
+     if (buf != dst) { // NOPMD
+       buf.limit(count);
+-      dst.put(buf);
++      while (buf.hasRemaining()) {
++        dst.put(buf);
++      }
+     } else {
+       if (count < 0) {
+         throw new IllegalStateException();
+@@ -189,13 +191,7 @@ class AFCore extends CleanableState {
+ 
+       bufPos = buf.position();
+ 
+-      // Java 16: buf.put(bufPos, src, src.position(), Math.min(buf.limit(), src.limit()));
+-      int limit = src.limit();
+-      if (limit > buf.limit()) {
+-        src.limit(buf.limit());
+-        buf.put(src);
+-        src.limit(limit);
+-      } else {
++      while (src.hasRemaining() && buf.hasRemaining()) {
+         buf.put(src);
+       }
+ 
+diff --git a/junixsocket-jetty/pom.xml b/junixsocket-jetty/pom.xml
+index 1223106..5a17878 100644
+--- a/junixsocket-jetty/pom.xml
++++ b/junixsocket-jetty/pom.xml
+@@ -56,6 +56,14 @@
+             <version>${jetty.version}</version>
+             <scope>test</scope>
+         </dependency>
++        <!--
++        <dependency>
++            <groupId>org.eclipse.jetty</groupId>
++            <artifactId>jetty-unixdomain-server</artifactId>
++            <version>${jetty.version}</version>
++            <scope>test</scope>
++        </dependency>
++        -->
+         <dependency>
+             <groupId>org.hamcrest</groupId>
+             <artifactId>hamcrest</artifactId>

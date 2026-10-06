@@ -1,0 +1,27 @@
+{
+  "schema_version": "3.0",
+  "kind": "image_build",
+  "build_id": "case-175-build-1",
+  "status": "error",
+  "reason": "docker_build_failed",
+  "started_at": "2026-10-05T14:45:03.193Z",
+  "finished_at": "2026-10-05T14:50:09.441Z",
+  "duration_ms": 306250,
+  "source": {
+    "repo": "https://github.com/kohlschutter/junixsocket.git",
+    "base_commit": "2a159927761424440f7dbd7674992e4b5273a459"
+  },
+  "image": {
+    "name": "yutu0814/javac-case-175-junixsocket:benchmark-v1",
+    "id": null,
+    "repo_digests": []
+  },
+  "logs": {
+    "events": "events.jsonl",
+    "docker_build_stdout": "docker-build.stdout.raw.log",
+    "docker_build_stderr": "docker-build.stderr.raw.log",
+    "image_audit_stdout": null,
+    "image_audit_stderr": null,
+    "image_audit": null
+  }
+}

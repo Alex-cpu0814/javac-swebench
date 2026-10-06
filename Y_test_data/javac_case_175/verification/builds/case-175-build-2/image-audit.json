@@ -1,0 +1,12 @@
+{
+  "schema_version": "3.0",
+  "instance_id": "kohlschutter__junixsocket-135",
+  "base_commit": "2a159927761424440f7dbd7674992e4b5273a459",
+  "working_tree_clean": true,
+  "fix_commit_present": false,
+  "model_patch_present": false,
+  "test_patch_present": false,
+  "gold_patch_present": false,
+  "evaluation_assets_injected_at_runtime": true,
+  "network_disabled_during_audit": true
+}

@@ -1,0 +1,40 @@
+{
+  "instance_id": "kohlschutter__junixsocket-135",
+  "task_level": "integration",
+  "validation_type": "official_project_junit_jetty_jni_large_payload",
+  "environment": "Ubuntu 20.04 Linux amd64 container",
+  "java_version_target": "Eclipse Temurin 17",
+  "native_requirement": "Clang and Linux AF_UNIX sockets",
+  "build_system": "Maven 3.9.9 with maven-nar-plugin and Jetty 11",
+  "test_execution": "Maven Surefire: small HTTP-over-AF_UNIX control, then official 512 KiB response regression",
+  "runtime_verified": true,
+  "reproduction_status": "verified_base_fail_fix_pass_docker",
+  "base_commit": "2a159927761424440f7dbd7674992e4b5273a459",
+  "fix_commit": "3994501308902ffb5d2eb7bce44971e3438b2a91",
+  "test_source": "official_upstream_regression_test",
+  "test_files": [
+    "junixsocket-jetty/src/test/java/org/eclipse/jetty/unixdomain/server/UnixDomainTest.java"
+  ],
+  "FAIL_TO_PASS": [
+    "org.eclipse.jetty.unixdomain.server.UnixDomainTest.testLargeBody"
+  ],
+  "PASS_TO_PASS": [
+    "org.eclipse.jetty.unixdomain.server.UnixDomainTest.testHTTPOverUnixDomain"
+  ],
+  "notes": [
+    "Base reproduces byte-array divergence at offset 32768, matching Issue #135.",
+    "The existing small-response Jetty control passes on Base and Gold.",
+    "The exact official 512 KiB regression test passes after the Gold patch."
+  ],
+  "verification": {
+    "docker_verified": true,
+    "model_evaluator_verified": true,
+    "image_build_id": "case-175-build-2",
+    "image_id": "sha256:d5eaaed040c90536d22f0ef5548ad00d2ec61b59e698d725014695479df8a20d",
+    "base_run_id": "case-175-base-1",
+    "gold_run_id": "case-175-gold-1",
+    "base_result": "1 FAIL_TO_PASS failed; 1 PASS_TO_PASS passed",
+    "gold_result": "1 FAIL_TO_PASS passed; 1 PASS_TO_PASS passed",
+    "initial_build_diagnostic": "case-175-build-1 omitted reactor-produced core POM and common test-jar"
+  }
+}

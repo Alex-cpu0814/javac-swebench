@@ -1,0 +1,9 @@
+{
+  "instance_id": "kohlschutter__junixsocket-135",
+  "repo": "kohlschutter/junixsocket",
+  "base_commit": "2a159927761424440f7dbd7674992e4b5273a459",
+  "problem_statement": "AFSocketServerConnector corrupts large responses backed by non-direct ByteBuffers: once a response exceeds the cached direct-buffer size, earlier bytes are repeated instead of sending the remaining payload. Correct the chunked buffer-copy logic while preserving direct-buffer and read behavior.",
+  "hints_text": null,
+  "created_at": "2023-07-12",
+  "issue_url": "https://github.com/kohlschutter/junixsocket/issues/135"
+}

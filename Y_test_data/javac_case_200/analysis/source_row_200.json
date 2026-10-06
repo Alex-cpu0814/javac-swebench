@@ -1,0 +1,28 @@
+{
+  "instance_id": "MDSplus__mdsplus-2375",
+  "source_project": "MDSplus/mdsplus",
+  "source_case": "200",
+  "source_workbook_sequence": 201,
+  "duplicate_source_cases": [],
+  "duplicate_workbook_sequences": [],
+  "language_pair": "Java-C",
+  "repo": "MDSplus/mdsplus",
+  "issue_id": 2375,
+  "issue_url": "https://github.com/MDSplus/mdsplus/issues/2375",
+  "pull_request_id": 2379,
+  "pull_request_url": "https://github.com/MDSplus/mdsplus/pull/2379",
+  "commit": "707f1656dc68c3c863f4d46d4b5a8ce663f0cdad",
+  "base_commit": "f6c82e695f5b6964daeec2c4e0bc449a89be892a",
+  "base_commit_status": "verified",
+  "fix_commit": "707f1656dc68c3c863f4d46d4b5a8ce663f0cdad",
+  "commit_url": "https://github.com/MDSplus/mdsplus/commit/707f1656dc68c3c863f4d46d4b5a8ce663f0cdad",
+  "problem_statement": "MDSplus packs a Unix GID and UID into the 32-bit NCI owner identifier using 16 bits for each value. UIDs with high bits set cannot be represented correctly. Preserve compatibility when reading legacy packed entries while storing and returning complete 32-bit UIDs for new records.",
+  "test_source": "official_upstream_regression_expected_output",
+  "verification_status": "resolved",
+  "symptom": "NCI owner_id exposes a packed GID/UID value and cannot safely represent UIDs larger than 16 bits",
+  "root_cause": "the owner identifier always stores (gid << 16) | uid and therefore reserves only 16 bits for the UID",
+  "fixing_strategy": "mark full-UID records with a new NCI flag, preserve legacy decoding, and store a complete UID whenever its high word is nonzero",
+  "evidence_type": "official_issue_pull_request_commit_and_expected_output",
+  "deduplication_key": "MDSplus/mdsplus@707f1656dc68c3c863f4d46d4b5a8ce663f0cdad"
+}
+

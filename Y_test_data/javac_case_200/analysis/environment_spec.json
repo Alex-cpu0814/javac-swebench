@@ -1,0 +1,36 @@
+{
+  "instance_id": "MDSplus__mdsplus-2375",
+  "task_level": "integration",
+  "validation_type": "official_project_tdi_owner_id_regression",
+  "environment": "Ubuntu 20.04 Linux amd64 container; benchmark UID/GID 64",
+  "java_version_target": "OpenJDK 11 available for evaluator contract; MDSplus Java build disabled",
+  "native_requirement": "GCC/GFortran, Flex, Bison, Gperf, Autotools, Motif/X11, readline, XML2, and LZMA",
+  "build_system": "Autoconf/Automake out-of-tree native build",
+  "test_execution": "Automake test harness: existing TDI control followed by official TreeShr owner-ID regression",
+  "runtime_verified": true,
+  "reproduction_status": "verified_base_fail_fix_pass_docker",
+  "base_commit": "f6c82e695f5b6964daeec2c4e0bc449a89be892a",
+  "fix_commit": "707f1656dc68c3c863f4d46d4b5a8ce663f0cdad",
+  "test_source": "official_upstream_regression_expected_output",
+  "test_files": ["tditest/testing/test-treeshr.tdi", "tditest/testing/test-treeshr.ans"],
+  "FAIL_TO_PASS": ["MDSplus.tditest.test-treeshr-owner-id"],
+  "PASS_TO_PASS": ["MDSplus.tditest.test-tdishr"],
+  "notes": [
+    "The official test script already exercised getnci(..., owner_id); upstream changed its expected output.",
+    "Base reports 4194368 for UID/GID 64, while Gold returns the UID 64.",
+    "Case 195 was skipped because its test edits only add Windows assumptions and create no Base-fail/Fix-pass assertion."
+  ],
+  "verification": {
+    "docker_verified": true,
+    "model_evaluator_verified": true,
+    "image_build_id": "case-200-build-2",
+    "image_id": "sha256:77c71ce09d01e830e0b98f3607636f0ffb03abc24ad51498190f6e7e0fb961dd",
+    "base_run_id": "case-200-base-1",
+    "gold_run_id": "case-200-gold-1",
+    "base_result": "1 FAIL_TO_PASS failed; 1 PASS_TO_PASS passed",
+    "gold_result": "1 FAIL_TO_PASS passed; 1 PASS_TO_PASS passed",
+    "probe_base_result": "control passed; owner-ID target failed with 4194368LU != 64LU",
+    "probe_gold_result": "control and owner-ID target passed"
+  }
+}
+

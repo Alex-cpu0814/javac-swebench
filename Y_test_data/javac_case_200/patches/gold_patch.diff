@@ -1,0 +1,166 @@
+diff --git a/tcl/tcl_directory.c b/tcl/tcl_directory.c
+index deb9e7a0d13a2b20e6aba3acd93fb1374a3d251b..edf245b6824dc3db76985fcff3529ecfc37928a9 100644
+--- a/tcl/tcl_directory.c
++++ b/tcl/tcl_directory.c
+@@ -62,23 +62,12 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  ************************************************************************/
+ 
+ static int doFull(char **output, int nid, unsigned char nodeUsage, int version);
+-static char *mds_owner(                   /* Return: ptr to "user" string         */
+-                       unsigned int owner /* <r> owner id */
+-)
++/// @param uid - user id
++/// @return ptr to "user" string
++static char *mds_owner(unsigned int uid)
+ {
+   static char ownerString[512];
+-  int gid = owner >> 16;
+-  int uid = owner & 0xFFFF;
+-  char *groupname = 0;
+   char *username = 0;
+-#ifdef HAVE_GETGRGID
+-  struct group *g = getgrgid(gid);
+-  if (g)
+-  {
+-    groupname = alloca(strlen(g->gr_name) + 3);
+-    sprintf(groupname, "(%s)", g->gr_name);
+-  }
+-#endif
+ #ifdef HAVE_GETPWUID
+   struct passwd *p = getpwuid(uid);
+   if (p)
+@@ -87,11 +76,9 @@ static char *mds_owner(                   /* Return: ptr to "user" string
+     sprintf(username, "(%s)", p->pw_name);
+   }
+ #endif
+-  if (groupname == 0)
+-    groupname = "";
+   if (username == 0)
+     username = "";
+-  sprintf(ownerString, "gid=%d%s,uid=%d%s", gid, groupname, uid, username);
++  sprintf(ownerString, "uid=%d%s", uid, username);
+   return (ownerString);
+ }
+ 
+diff --git a/treeshr/TreeGetNci.c b/treeshr/TreeGetNci.c
+index 02782e37b83d45f168ec07c9dfc30bfd518fddcb..bb83f3cd1467c08300eab36cf2c1da91d64da06f 100644
+--- a/treeshr/TreeGetNci.c
++++ b/treeshr/TreeGetNci.c
+@@ -276,7 +276,12 @@ int TreeGetNci(int nid_in, struct nci_itm *nci_itm)
+       break_on_no_node;
+       read_nci;
+       set_retlen(sizeof(nci.owner_identifier));
+-      *(unsigned int *)itm->pointer = nci.owner_identifier;
++      unsigned int owner = nci.owner_identifier;
++      if (!(nci.flags2 & NciM_32BIT_UID_NCI))
++      {
++        owner &= 0xFFFF;
++      }
++      *(unsigned int *)itm->pointer = owner;
+       break;
+     case NciCLASS:
+       break_on_no_node;
+diff --git a/treeshr/TreePutRecord.c b/treeshr/TreePutRecord.c
+index 44cb67fb26c1ef1ea0ab500cfee4ee5bcdf30d9b..20082fa11598fb31581c58b4033b1fddc417d433 100644
+--- a/treeshr/TreePutRecord.c
++++ b/treeshr/TreePutRecord.c
+@@ -120,6 +120,7 @@ int _TreePutRecord(void *dbid, int nid, struct descriptor *descriptor_ptr,
+   int nidx;
+   unsigned int old_record_length = 0;
+   static int saved_uic = 0;
++  static int saved_uic32 = 0;
+   int shot_open;
+   EXTENDED_ATTRIBUTES attributes;
+   int extended = 0;
+@@ -127,8 +128,15 @@ int _TreePutRecord(void *dbid, int nid, struct descriptor *descriptor_ptr,
+   int compress_utility = utility_update == 2;
+ #ifndef _WIN32
+   if (!saved_uic)
+-    saved_uic = (getgid() << 16) | getuid();
+-#endif
++  {
++    saved_uic = getuid();
++    saved_uic32 = (saved_uic & 0xFFFF0000) != 0;
++    if (!saved_uic32)
++    {
++      saved_uic = (getgid() << 16) | (saved_uic);
++    }
++  }
++ #endif
+   if (!(IS_OPEN(dblist)))
+     return TreeNOT_OPEN;
+   if (dblist->open_readonly)
+@@ -181,13 +189,14 @@ int _TreePutRecord(void *dbid, int nid, struct descriptor *descriptor_ptr,
+         TREETHREADSTATIC_INIT;
+         local_nci.flags = TREE_TEMPNCI.flags;
+         bitassign(0, local_nci.flags, NciM_VERSIONS);
++        bitassign((TREE_TEMPNCI.flags2 & NciM_32BIT_UID_NCI), local_nci.flags2, NciM_32BIT_UID_NCI);
+         local_nci.owner_identifier = TREE_TEMPNCI.owner_identifier;
+         local_nci.time_inserted = TREE_TEMPNCI.time_inserted;
+       }
+       else
+       {
+-        bitassign(dblist->setup_info, local_nci.flags,
+-                  NciM_SETUP_INFORMATION);
++        bitassign(dblist->setup_info, local_nci.flags, NciM_SETUP_INFORMATION);
++        bitassign(saved_uic32, local_nci.flags2, NciM_32BIT_UID_NCI);
+         local_nci.owner_identifier = saved_uic;
+         /* VMS time = unixtime * 10,000,000 + 0x7c95674beb4000q */
+         local_nci.time_inserted = TreeTimeInserted();
+diff --git a/treeshr/TreeSegments.c b/treeshr/TreeSegments.c
+index 712a704a1394b992ed530d36a8202125e3a09145..022fc58be1996c20091385d56abe5eb2014ac979 100644
+--- a/treeshr/TreeSegments.c
++++ b/treeshr/TreeSegments.c
+@@ -985,12 +985,24 @@ inline static int begin_finish(vars_t *vars)
+ 
+ #ifndef _WIN32
+ static int saved_uic = 0;
+-static void init_saved_uic() { saved_uic = (getgid() << 16) | getuid(); }
++static int saved_uic32 = 0;
++static void init_saved_uic() {
++  if (!saved_uic)
++  {
++    saved_uic = getuid();
++    saved_uic32 = (saved_uic & 0xFFFF0000) != 0;
++    if (!saved_uic32)
++    {
++      saved_uic = (getgid() << 16) | (saved_uic);
++    }
++  }
++}
+ #endif
+ inline static void begin_local_nci(vars_t *vars,
+                                    const mdsdsc_a_t *initialValue)
+ {
+-  vars->local_nci.flags2 &= ~NciM_DATA_IN_ATT_BLOCK;
++  // reset flag2 bits
++  vars->local_nci.flags2 &= ~(NciM_DATA_IN_ATT_BLOCK | NciM_32BIT_UID_NCI);
+   vars->local_nci.dtype = initialValue->dtype;
+   vars->local_nci.class = CLASS_R;
+   vars->local_nci.time_inserted = TreeTimeInserted();
+@@ -998,7 +1010,12 @@ inline static void begin_local_nci(vars_t *vars,
+   RUN_FUNCTION_ONCE(init_saved_uic);
+ #else
+   const int saved_uic = 0;
++  const int saved_uic32 = 0;
+ #endif
++  if (saved_uic32)
++  {
++    vars->local_nci.flags2 |= NciM_32BIT_UID_NCI;
++  }
+   vars->local_nci.owner_identifier = saved_uic;
+ }
+ 
+diff --git a/treeshr/treeshrp.h b/treeshr/treeshrp.h
+index 49f80de128cf813c99307fbc7e639b420cf360ff..a6ac0682bacaeb030334873793df2d4831555a63 100644
+--- a/treeshr/treeshrp.h
++++ b/treeshr/treeshrp.h
+@@ -40,6 +40,8 @@
+ #define NciV_NON_VMS 3
+ #define NciM_EXTENDED_NCI 0x10
+ #define NciV_EXTENDED_NCI 4
++#define NciM_32BIT_UID_NCI 0x20
++#define NciV_32BIT_UID_NCI 5
+ 
+ typedef struct nci
+ {

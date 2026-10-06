@@ -1,0 +1,13 @@
+diff --git a/tditest/testing/test-treeshr.ans b/tditest/testing/test-treeshr.ans
+index df6b7e82c0ebe73d5e2a608d23e0fdea9e3d4bfa..f443686d66c54261f4dde23488ceda667330c55c 100644
+--- a/tditest/testing/test-treeshr.ans
++++ b/tditest/testing/test-treeshr.ans
+@@ -140,7 +140,7 @@ getnci(.subtree:a12,"parent_relationship")
+ getnci(.subtree:a12,"get_flags")
+ 128LU
+ getnci(.subtree:a12,"owner_id")
+-4194368LU
++64LU
+ getnci(.subtree:a12,"status")
+ 0LU
+ getnci(.subtree:a12,"brother")

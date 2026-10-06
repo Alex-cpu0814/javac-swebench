@@ -1,0 +1,22 @@
+{
+  "template_version": "1.0",
+  "case_number": "200",
+  "instance_id": "MDSplus__mdsplus-2375",
+  "instance_file": "official_swebench/instance_200.json",
+  "repo_url": "https://github.com/MDSplus/mdsplus.git",
+  "base_commit": "f6c82e695f5b6964daeec2c4e0bc449a89be892a",
+  "fix_commit": "707f1656dc68c3c863f4d46d4b5a8ce663f0cdad",
+  "image": "yutu0814/javac-case-200-mdsplus:benchmark-v1",
+  "python_version": "3.8",
+  "python_sha256": "system-package",
+  "extra_apt_packages": [
+    "autoconf", "automake", "bison", "build-essential", "flex", "gfortran", "git", "gperf",
+    "liblzma-dev", "libmotif-dev", "libreadline-dev", "libtool", "libxml2-dev",
+    "libx11-dev", "libxext-dev", "libxinerama-dev", "libxmu-dev", "libxpm-dev", "libxt-dev",
+    "openjdk-11-jdk-headless", "pkg-config", "python3", "python-is-python3"
+  ],
+  "runtime_assets": [
+    {"source": "evaluator/case_adapter.sh", "target": "/benchmark/case_adapter.sh"}
+  ]
+}
+

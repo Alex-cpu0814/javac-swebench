@@ -1,0 +1,10 @@
+{
+  "instance_id": "MDSplus__mdsplus-2375",
+  "repo": "MDSplus/mdsplus",
+  "base_commit": "f6c82e695f5b6964daeec2c4e0bc449a89be892a",
+  "problem_statement": "MDSplus packs a Unix GID and UID into the 32-bit NCI owner identifier using 16 bits for each value. UIDs with high bits set cannot be represented correctly. Preserve compatibility when reading legacy packed entries while storing and returning complete 32-bit UIDs for new records.",
+  "hints_text": null,
+  "created_at": "2021-08-25",
+  "issue_url": "https://github.com/MDSplus/mdsplus/issues/2375"
+}
+

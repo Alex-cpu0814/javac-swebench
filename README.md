@@ -1,6 +1,6 @@
 # Java-C SWE-bench-compatible cases
 
-This repository contains nine Java-C cross-language bug cases converted to a
+This repository contains sixteen Java-C cross-language bug cases converted to a
 SWE-bench-compatible record format. Cases are separated by test provenance:
 `Y_test_data/` contains Fix commits with extractable official regression tests;
 `N_test_data/` contains cases whose protected tests were constructed, adapted,
@@ -12,6 +12,13 @@ or wrapped during dataset production.
 | Y | 092 | `ninia__jep-77` | 77 | 1 | 121 |
 | Y | 100 | `ninia__jep-9-exceptions` | PR 9 | 5 | 69 |
 | Y | 112 | `uclouvain__openjpeg-571` | 571 / PR 579 | 1 | 2 |
+| Y | 150 | `kohlschutter__junixsocket-116` | 116 | 2 | 1 |
+| Y | 152 | `kohlschutter__junixsocket-97` | 97 | 1 | 1 |
+| Y | 160 | `kohlschutter__junixsocket-90-write-timeout` | 90 | 1 | 1 |
+| Y | 161 | `kohlschutter__junixsocket-90-read-timeout` | 90 | 1 | 1 |
+| Y | 175 | `kohlschutter__junixsocket-135` | 135 | 1 | 1 |
+| Y | 194 | `MDSplus__mdsplus-1423` | 1423 | 1 | 1 |
+| Y | 200 | `MDSplus__mdsplus-2375` | 2375 | 1 | 1 |
 | N | 093 | `ninia__jep-79` | 79 | 1 | 130 |
 | N | 094 | `ninia__jep-40` | 40 | 1 | 95 |
 | N | 096 | `ninia__jep-22` | 22 | 1 | 78 |
@@ -62,8 +69,8 @@ sha256:da9c9293093a89f2cfd0e2d584077080c640f0c002cef0589c64e28ac6b550d4
 Requirements: Git, Docker with Linux containers, and Python 3.5 or newer.
 
 ```powershell
-git clone https://github.com/Alex-cpu0814/javac-swebench-092-094.git
-Set-Location .\javac-swebench-092-094\Y_test_data\javac_case_092
+git clone https://github.com/Alex-cpu0814/javac-swebench.git
+Set-Location .\javac-swebench\Y_test_data\javac_case_092
 
 docker pull yutu0814/javac-case-092-jep:benchmark-v3
 
@@ -217,8 +224,9 @@ details are recorded in each case's `metadata.json`.
 
 ## Links
 
-- GitHub: [Alex-cpu0814/javac-swebench-092-094](https://github.com/Alex-cpu0814/javac-swebench-092-094)
+- GitHub: [Alex-cpu0814/javac-swebench](https://github.com/Alex-cpu0814/javac-swebench)
 - Docker Hub: [yutu0814](https://hub.docker.com/u/yutu0814)
 
-The original source and patches remain subject to the upstream `ninia/jep`
-license.
+The original source and patches remain subject to the licenses of their
+respective upstream projects. Each case records its repository and provenance
+under `official_swebench/` and `analysis/`.

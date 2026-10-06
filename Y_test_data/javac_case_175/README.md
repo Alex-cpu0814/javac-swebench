@@ -22,13 +22,15 @@ byte-for-byte.
 
 ## Evaluator image
 
-Local image: `yutu0814/javac-case-175-junixsocket:benchmark-v1`
+Published image: `yutu0814/javac-case-175-junixsocket:benchmark-v1`
+
+Published digest: `sha256:d5eaaed040c90536d22f0ef5548ad00d2ec61b59e698d725014695479df8a20d`
 
 Image ID: `sha256:d5eaaed040c90536d22f0ef5548ad00d2ec61b59e698d725014695479df8a20d`
 
 The image contains only the Base checkout plus cached public build
 dependencies. The final isolated controls are `case-175-base-1` and
-`case-175-gold-1`. Upload is intentionally deferred to the publishing step.
+`case-175-gold-1`. The verified image is published on Docker Hub.
 
 ## Directory contract
 

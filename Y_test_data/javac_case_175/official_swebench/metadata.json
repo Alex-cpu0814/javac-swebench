@@ -15,9 +15,9 @@
   "base_commit": "2a159927761424440f7dbd7674992e4b5273a459",
   "fix_commit": "3994501308902ffb5d2eb7bce44971e3438b2a91",
   "model_evaluator_image": "yutu0814/javac-case-175-junixsocket:benchmark-v1",
-  "published_image": null,
-  "published_image_digest": null,
-  "docker_hub_url": null,
+  "published_image": "yutu0814/javac-case-175-junixsocket:benchmark-v1",
+  "published_image_digest": "sha256:d5eaaed040c90536d22f0ef5548ad00d2ec61b59e698d725014695479df8a20d",
+  "docker_hub_url": "https://hub.docker.com/r/yutu0814/javac-case-175-junixsocket",
   "test_source": "official_upstream_regression_test",
   "test_files": [
     "junixsocket-jetty/src/test/java/org/eclipse/jetty/unixdomain/server/UnixDomainTest.java"

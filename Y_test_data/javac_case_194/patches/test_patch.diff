@@ -1,0 +1,29 @@
+diff --git a/tditest/testing/test-treeshr.ans b/tditest/testing/test-treeshr.ans
+index dd8bccbc1..60452431a 100644
+--- a/tditest/testing/test-treeshr.ans
++++ b/tditest/testing/test-treeshr.ans
+@@ -18,6 +18,12 @@ getnci('?ember','fullpath')
+ "\\MAIN::TOP:MEMBER"
+ getnci('%ember','fullpath')
+ ["\\MAIN::TOP:MEMBER"]
++getnci('\n','fullpath')
++%TREE-W-NNF, Node Not Found
++%TDI Error in GETNCI("\n", "fullpath")
++%TDI Error in EVALUATE(GETNCI("\n", "fullpath"))
++%TDI Error in EXECUTE("getnci('\\n','fullpath')")
++
+ _tim=getnci(member,'time_inserted')
+ 49776423271761650QU
+ date_time(_tim)
+diff --git a/tditest/testing/test-treeshr.tdi b/tditest/testing/test-treeshr.tdi
+index 4712199cf..9d6510c2d 100644
+--- a/tditest/testing/test-treeshr.tdi
++++ b/tditest/testing/test-treeshr.tdi
+@@ -9,6 +9,7 @@ getnci(member,'length')
+ getnci(member,'on')
+ getnci('?ember','fullpath')
+ getnci('%ember','fullpath')
++getnci('\n','fullpath')
+ _tim=getnci(member,'time_inserted')
+ date_time(_tim)
+ .subtree:a12:name

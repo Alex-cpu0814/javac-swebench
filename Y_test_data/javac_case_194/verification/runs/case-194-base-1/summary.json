@@ -1,0 +1,62 @@
+{
+  "schema_version": "3.0",
+  "kind": "patch_evaluation",
+  "run_id": "case-194-base-1",
+  "label": "Base control",
+  "instance_id": "MDSplus__mdsplus-1423",
+  "status": "unresolved",
+  "reason": "expected_test_failed_skipped_or_missing",
+  "started_at": "2026-10-06T07:04:54.293Z",
+  "finished_at": "2026-10-06T07:05:33.915Z",
+  "duration_ms": 39610,
+  "application_order": [
+    "model_patch",
+    "test_patch",
+    "tests"
+  ],
+  "model_patch_sha256": "c738e3e29f2b3dfa53cdb664a32ca73077615715bc72007130c8296a034ec997",
+  "test_patch_sha256": "4368bd9e46ca6c82d50305c6829ed850772b03722774a5654c756c957c59128f",
+  "image": {
+    "name": "yutu0814/javac-case-194-mdsplus:benchmark-v1",
+    "id": "sha256:d12be7067ce51c31c085739c3a3fc4c69d273b8751059234700870a2ce9e5606",
+    "repo_digests": [
+      "yutu0814/javac-case-194-mdsplus@sha256:d12be7067ce51c31c085739c3a3fc4c69d273b8751059234700870a2ce9e5606"
+    ]
+  },
+  "container_exit_code": 1,
+  "phase": {
+    "phase": "tests_complete",
+    "outcome": "completed",
+    "reason": "tests_completed",
+    "test_exit_code": 1,
+    "instance_id": "MDSplus__mdsplus-1423"
+  },
+  "grading": {
+    "tests_observed": 2,
+    "FAIL_TO_PASS": {
+      "expected": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0,
+      "missing": 0
+    },
+    "PASS_TO_PASS": {
+      "expected": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "missing": 0
+    },
+    "unexpected_failures": 1
+  },
+  "logs": {
+    "events": "events.jsonl",
+    "docker_stdout": "docker-run.stdout.raw.log",
+    "docker_stderr": "docker-run.stderr.raw.log",
+    "model_patch": "model-patch.raw.log",
+    "test_patch": "test-patch.raw.log",
+    "project_build": "project-build.raw.log",
+    "tests": "tests.raw.log",
+    "grading": "grading.json"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "instance_id": "MDSplus__mdsplus-1423",
+  "task_level": "integration",
+  "validation_type": "official_project_tdi_tree_regression",
+  "environment": "Ubuntu 20.04 Linux amd64 container",
+  "java_version_target": "OpenJDK 11 available for evaluator contract; MDSplus Java build disabled",
+  "native_requirement": "GCC/GFortran, Flex, Bison, Autotools, readline, XML2, and LZMA",
+  "build_system": "Autoconf/Automake out-of-tree native build",
+  "test_execution": "Automake test harness: existing TDI control followed by official TreeShr regression",
+  "runtime_verified": true,
+  "reproduction_status": "verified_base_fail_fix_pass_docker",
+  "base_commit": "a73d6e87149698e49026e3bf8055efc6bbe71d90",
+  "fix_commit": "687b2621aa4dcebc3cc5ee9cd780f38fefd8af87",
+  "test_source": "official_upstream_regression_test",
+  "test_files": ["tditest/testing/test-treeshr.tdi", "tditest/testing/test-treeshr.ans"],
+  "FAIL_TO_PASS": ["MDSplus.tditest.test-treeshr"],
+  "PASS_TO_PASS": ["MDSplus.tditest.test-tdishr"],
+  "notes": [
+    "Base passes the existing TDI control but stops during the malformed TreeShr lookup.",
+    "The protected patch is the exact official TDI script and expected-output update.",
+    "Gold returns TreeNNF and completes the official regression test."
+  ],
+  "verification": {
+    "docker_verified": true,
+    "model_evaluator_verified": true,
+    "image_build_id": "case-194-build-1",
+    "image_id": "sha256:d12be7067ce51c31c085739c3a3fc4c69d273b8751059234700870a2ce9e5606",
+    "base_run_id": "case-194-base-1",
+    "gold_run_id": "case-194-gold-1",
+    "base_result": "1 FAIL_TO_PASS failed; 1 PASS_TO_PASS passed",
+    "gold_result": "1 FAIL_TO_PASS passed; 1 PASS_TO_PASS passed"
+  }
+}

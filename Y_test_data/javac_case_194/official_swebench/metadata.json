@@ -1,0 +1,78 @@
+{
+  "dataset_schema_version": "1.0",
+  "source_case": "194",
+  "source_workbook_sequence": 195,
+  "duplicate_source_cases": [],
+  "duplicate_workbook_sequences": [],
+  "dataset_variant": "SWE-bench-compatible custom record",
+  "instance_id": "MDSplus__mdsplus-1423",
+  "repo": "MDSplus/mdsplus",
+  "project_version": "alpha_release-7-54-3",
+  "issue_id": 1423,
+  "issue_url": "https://github.com/MDSplus/mdsplus/issues/1423",
+  "created_at": "2018-10-12",
+  "created_at_precision": "date",
+  "base_commit": "a73d6e87149698e49026e3bf8055efc6bbe71d90",
+  "fix_commit": "687b2621aa4dcebc3cc5ee9cd780f38fefd8af87",
+  "model_evaluator_image": "yutu0814/javac-case-194-mdsplus:benchmark-v1",
+  "published_image": "yutu0814/javac-case-194-mdsplus:benchmark-v1",
+  "published_image_digest": "sha256:d12be7067ce51c31c085739c3a3fc4c69d273b8751059234700870a2ce9e5606",
+  "docker_hub_url": "https://hub.docker.com/r/yutu0814/javac-case-194-mdsplus",
+  "test_source": "official_upstream_regression_test",
+  "test_files": ["tditest/testing/test-treeshr.tdi", "tditest/testing/test-treeshr.ans"],
+  "FAIL_TO_PASS": ["MDSplus.tditest.test-treeshr"],
+  "FAIL_TO_PASS_COUNT": 1,
+  "PASS_TO_PASS": ["MDSplus.tditest.test-tdishr"],
+  "PASS_TO_PASS_COUNT": 1,
+  "test_command": "rebuild and install MDSplus, run the existing TDI control, then run the official TreeShr malformed-node regression",
+  "patch_provenance": {
+    "gold_patch_source": "official_upstream_fix_commit_non_test_changes",
+    "gold_patch_authorship": "MDSplus/mdsplus_upstream",
+    "test_patch_source": "official_upstream_regression_test_and_expected_output",
+    "test_patch_authorship": "MDSplus/mdsplus_upstream",
+    "upstream_regression_test_found": true
+  },
+  "standard_layout": {
+    "schema_version": "2.0",
+    "case_directory": "javac_case_194",
+    "analysis": "analysis/",
+    "patches": "patches/",
+    "official_swebench": "official_swebench/",
+    "evaluator": "evaluator/",
+    "verification": "verification/"
+  },
+  "verification": {
+    "docker_verified": true,
+    "model_evaluator_verified": true,
+    "fix_passes": true,
+    "base_fails": true,
+    "probe_environment": "Docker Desktop Linux amd64",
+    "probe_base_result": "TDI control passed; TreeShr regression terminated after the malformed getnci call",
+    "probe_gold_result": "TDI control and TreeShr malformed-node regression passed",
+    "evaluation_assets_injected_at_runtime": true,
+    "image_contains_test_patch": false,
+    "image_contains_gold_patch": false,
+    "image_contains_fix_commit": false,
+    "template_version": "1.0",
+    "image_build_id": "case-194-build-1",
+    "image": "yutu0814/javac-case-194-mdsplus:benchmark-v1",
+    "image_id": "sha256:d12be7067ce51c31c085739c3a3fc4c69d273b8751059234700870a2ce9e5606",
+    "base_run_id": "case-194-base-1",
+    "gold_run_id": "case-194-gold-1",
+    "base_grading": {
+      "FAIL_TO_PASS": {"failed": 1, "expected": 1},
+      "PASS_TO_PASS": {"passed": 1, "expected": 1},
+      "unexpected_failures": 1
+    },
+    "gold_grading": {
+      "FAIL_TO_PASS": {"passed": 1, "expected": 1},
+      "PASS_TO_PASS": {"passed": 1, "expected": 1},
+      "unexpected_failures": 0
+    }
+  },
+  "notes": [
+    "Source spreadsheet case 194 corresponds to workbook sequence 195.",
+    "No duplicate repository-and-commit row was found among previously materialized cases.",
+    "The exact official TDI script, expected output, and complete non-test commit diff are preserved."
+  ]
+}

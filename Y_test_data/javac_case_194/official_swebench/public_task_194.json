@@ -1,0 +1,9 @@
+{
+  "instance_id": "MDSplus__mdsplus-1423",
+  "repo": "MDSplus/mdsplus",
+  "base_commit": "a73d6e87149698e49026e3bf8055efc6bbe71d90",
+  "problem_statement": "TreeFindNode and TreeFindNodeWild can dereference invalid parser/search state for malformed node names such as \\null, crashing TDI callers instead of returning TreeNNF. Reject or safely handle invalid or empty search terms while preserving valid node lookup behavior.",
+  "hints_text": null,
+  "created_at": "2018-10-12",
+  "issue_url": "https://github.com/MDSplus/mdsplus/issues/1423"
+}

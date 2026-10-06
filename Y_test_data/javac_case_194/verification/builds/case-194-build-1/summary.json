@@ -1,0 +1,29 @@
+{
+  "schema_version": "3.0",
+  "kind": "image_build",
+  "build_id": "case-194-build-1",
+  "status": "success",
+  "reason": "image_built_and_audited",
+  "started_at": "2026-10-06T06:52:03.872Z",
+  "finished_at": "2026-10-06T06:55:24.739Z",
+  "duration_ms": 200827,
+  "source": {
+    "repo": "https://github.com/MDSplus/mdsplus.git",
+    "base_commit": "a73d6e87149698e49026e3bf8055efc6bbe71d90"
+  },
+  "image": {
+    "name": "yutu0814/javac-case-194-mdsplus:benchmark-v1",
+    "id": "sha256:d12be7067ce51c31c085739c3a3fc4c69d273b8751059234700870a2ce9e5606",
+    "repo_digests": [
+      "yutu0814/javac-case-194-mdsplus@sha256:d12be7067ce51c31c085739c3a3fc4c69d273b8751059234700870a2ce9e5606"
+    ]
+  },
+  "logs": {
+    "events": "events.jsonl",
+    "docker_build_stdout": "docker-build.stdout.raw.log",
+    "docker_build_stderr": "docker-build.stderr.raw.log",
+    "image_audit_stdout": "image-audit.stdout.raw.log",
+    "image_audit_stderr": "image-audit.stderr.raw.log",
+    "image_audit": "image-audit.json"
+  }
+}

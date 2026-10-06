@@ -1,0 +1,1977 @@
+make: Entering directory '/build'
+make -C mdsshr -j -l 18 -O
+make[1]: Entering directory '/build/mdsshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/usr/include/libxml2 -I/testbed/include -I/build/include  -m64 -c -o MdsGetSetShotId.o /testbed/mdsshr/MdsGetSetShotId.c
+make[1]: Leaving directory '/build/mdsshr'
+make[1]: Entering directory '/build/mdsshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/usr/include/libxml2 -I/testbed/include -I/build/include  -m64 -c -o MdsGet1DxS.o /testbed/mdsshr/MdsGet1DxS.c
+make[1]: Leaving directory '/build/mdsshr'
+make[1]: Entering directory '/build/mdsshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/usr/include/libxml2 -I/testbed/include -I/build/include  -m64 -c -o MDSprintf.o /testbed/mdsshr/MDSprintf.c
+make[1]: Leaving directory '/build/mdsshr'
+make[1]: Entering directory '/build/mdsshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/usr/include/libxml2 -I/testbed/include -I/build/include  -m64 -c -o MdsShrThreadSafe.o /testbed/mdsshr/MdsShrThreadSafe.c
+make[1]: Leaving directory '/build/mdsshr'
+make[1]: Entering directory '/build/mdsshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/usr/include/libxml2 -I/testbed/include -I/build/include  -m64 -c -o MdsGet1DxA.o /testbed/mdsshr/MdsGet1DxA.c
+make[1]: Leaving directory '/build/mdsshr'
+make[1]: Entering directory '/build/mdsshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/usr/include/libxml2 -I/testbed/include -I/build/include  -m64 -c -o MdsPk.o /testbed/mdsshr/MdsPk.c
+make[1]: Leaving directory '/build/mdsshr'
+make[1]: Entering directory '/build/mdsshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/usr/include/libxml2 -I/testbed/include -I/build/include  -m64 -c -o mds_dsc_string.o /testbed/mdsshr/mds_dsc_string.c
+make[1]: Leaving directory '/build/mdsshr'
+make[1]: Entering directory '/build/mdsshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/usr/include/libxml2 -I/testbed/include -I/build/include  -m64 -c -o MdsCompareXd.o /testbed/mdsshr/MdsCompareXd.c
+make[1]: Leaving directory '/build/mdsshr'
+make[1]: Entering directory '/build/mdsshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/usr/include/libxml2 -I/testbed/include -I/build/include  -m64 -c -o mdsmsg.o /testbed/mdsshr/mdsmsg.c
+make[1]: Leaving directory '/build/mdsshr'
+make[1]: Entering directory '/build/mdsshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/usr/include/libxml2 -I/testbed/include -I/build/include  -m64 -c -o MdsCompress.o /testbed/mdsshr/MdsCompress.c
+make[1]: Leaving directory '/build/mdsshr'
+make[1]: Entering directory '/build/mdsshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/usr/include/libxml2 -I/testbed/include -I/build/include  -m64 -c -o UdpEvents.o /testbed/mdsshr/UdpEvents.c
+make[1]: Leaving directory '/build/mdsshr'
+make[1]: Entering directory '/build/mdsshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/usr/include/libxml2 -I/testbed/include -I/build/include  -m64 -c -o UdpEventSettings.o /testbed/mdsshr/UdpEventSettings.c
+make[1]: Leaving directory '/build/mdsshr'
+make[1]: Entering directory '/build/mdsshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/usr/include/libxml2 -I/testbed/include -I/build/include  -m64 -c -o MdsXdRoutines.o /testbed/mdsshr/MdsXdRoutines.c
+make[1]: Leaving directory '/build/mdsshr'
+make[1]: Entering directory '/build/mdsshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/usr/include/libxml2 -I/testbed/include -I/build/include  -m64 -c -o MdsCmprs.o /testbed/mdsshr/MdsCmprs.c
+make[1]: Leaving directory '/build/mdsshr'
+make[1]: Entering directory '/build/mdsshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/usr/include/libxml2 -I/testbed/include -I/build/include  -m64 -c -o MdsGetStdMsg.o /testbed/mdsshr/MdsGetStdMsg.c
+make[1]: Leaving directory '/build/mdsshr'
+make[1]: Entering directory '/build/mdsshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/usr/include/libxml2 -I/testbed/include -I/build/include  -m64 -c -o MdsEvents.o /testbed/mdsshr/MdsEvents.c
+make[1]: Leaving directory '/build/mdsshr'
+make[1]: Entering directory '/build/mdsshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/usr/include/libxml2 -I/testbed/include -I/build/include  -m64 -c -o MdsSerialize.o /testbed/mdsshr/MdsSerialize.c
+make[1]: Leaving directory '/build/mdsshr'
+make[1]: Entering directory '/build/mdsshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/usr/include/libxml2 -I/testbed/include -I/build/include  -m64 -c -o librtl.o /testbed/mdsshr/librtl.c
+make[1]: Leaving directory '/build/mdsshr'
+make[1]: Entering directory '/build/mdsshr'
+ar -cr /build/lib64/libMdsShr.a librtl.o mdsmsg.o MDSprintf.o MdsCmprs.o MdsCompareXd.o MdsCompress.o MdsEvents.o MdsGet1DxA.o MdsGet1DxS.o MdsGetSetShotId.o MdsGetStdMsg.o MdsPk.o MdsSerialize.o MdsShrThreadSafe.o MdsXdRoutines.o mds_dsc_string.o UdpEvents.o UdpEventSettings.o 
+make[1]: Leaving directory '/build/mdsshr'
+make[1]: Entering directory '/build/mdsshr'
+ranlib /build/lib64/libMdsShr.a
+make[1]: Leaving directory '/build/mdsshr'
+make[1]: Entering directory '/build/mdsshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/usr/include/libxml2 -I/testbed/include -I/build/include   -pthread -m64 -o /build/lib64/libMdsShr.so -shared  librtl.o mdsmsg.o MDSprintf.o MdsCmprs.o MdsCompareXd.o MdsCompress.o MdsEvents.o MdsGet1DxA.o MdsGet1DxS.o MdsGetSetShotId.o MdsGetStdMsg.o MdsPk.o MdsSerialize.o MdsShrThreadSafe.o MdsXdRoutines.o mds_dsc_string.o UdpEvents.o UdpEventSettings.o -ldl -lxml2   
+make[1]: Leaving directory '/build/mdsshr'
+make -C treeshr -j -l 18 -O
+make[1]: Entering directory '/build/treeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread -I/testbed/include -I/build/include  -m64 -c -o dummies.o /testbed/treeshr/dummies.c
+make[1]: Leaving directory '/build/treeshr'
+make[1]: Entering directory '/build/treeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread -I/testbed/include -I/build/include  -m64 -c -o TreePerf.o /testbed/treeshr/TreePerf.c
+make[1]: Leaving directory '/build/treeshr'
+make[1]: Entering directory '/build/treeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread -I/testbed/include -I/build/include  -m64 -c -o TreeCallHook.o /testbed/treeshr/TreeCallHook.c
+make[1]: Leaving directory '/build/treeshr'
+make[1]: Entering directory '/build/treeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread -I/testbed/include -I/build/include  -m64 -c -o TreeFindTagWild.o /testbed/treeshr/TreeFindTagWild.c
+make[1]: Leaving directory '/build/treeshr'
+make[1]: Entering directory '/build/treeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread -I/testbed/include -I/build/include  -m64 -c -o TreeSetDbi.o /testbed/treeshr/TreeSetDbi.c
+make[1]: Leaving directory '/build/treeshr'
+make[1]: Entering directory '/build/treeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread -I/testbed/include -I/build/include  -m64 -c -o TreeDoMethod.o /testbed/treeshr/TreeDoMethod.c
+make[1]: Leaving directory '/build/treeshr'
+make[1]: Entering directory '/build/treeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread -I/testbed/include -I/build/include  -m64 -c -o TreeGetSetShotId.o /testbed/treeshr/TreeGetSetShotId.c
+make[1]: Leaving directory '/build/treeshr'
+make[1]: Entering directory '/build/treeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread -I/testbed/include -I/build/include  -m64 -c -o TreeFindTag.o /testbed/treeshr/TreeFindTag.c
+make[1]: Leaving directory '/build/treeshr'
+make[1]: Entering directory '/build/treeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread -I/testbed/include -I/build/include  -m64 -c -o TreeSerializeNci.o /testbed/treeshr/TreeSerializeNci.c
+make[1]: Leaving directory '/build/treeshr'
+make[1]: Entering directory '/build/treeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread -I/testbed/include -I/build/include  -m64 -c -o TreeSetDefault.o /testbed/treeshr/TreeSetDefault.c
+make[1]: Leaving directory '/build/treeshr'
+make[1]: Entering directory '/build/treeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread -I/testbed/include -I/build/include  -m64 -c -o TreeAddTag.o /testbed/treeshr/TreeAddTag.c
+make[1]: Leaving directory '/build/treeshr'
+make[1]: Entering directory '/build/treeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread -I/testbed/include -I/build/include  -m64 -c -o TreeCleanDatafile.o /testbed/treeshr/TreeCleanDatafile.c
+make[1]: Leaving directory '/build/treeshr'
+make[1]: Entering directory '/build/treeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread -I/testbed/include -I/build/include  -m64 -c -o TreeThreadSafe.o /testbed/treeshr/TreeThreadSafe.c
+make[1]: Leaving directory '/build/treeshr'
+make[1]: Entering directory '/build/treeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread -I/testbed/include -I/build/include  -m64 -c -o TreeDeletePulseFile.o /testbed/treeshr/TreeDeletePulseFile.c
+make[1]: Leaving directory '/build/treeshr'
+make[1]: Entering directory '/build/treeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread -I/testbed/include -I/build/include  -m64 -c -o TreeRemoveNodesTags.o /testbed/treeshr/TreeRemoveNodesTags.c
+make[1]: Leaving directory '/build/treeshr'
+make[1]: Entering directory '/build/treeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread -I/testbed/include -I/build/include  -m64 -c -o TreeGetDbi.o /testbed/treeshr/TreeGetDbi.c
+make[1]: Leaving directory '/build/treeshr'
+make[1]: Entering directory '/build/treeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread -I/testbed/include -I/build/include  -m64 -c -o TreeCreatePulseFile.o /testbed/treeshr/TreeCreatePulseFile.c
+make[1]: Leaving directory '/build/treeshr'
+make[1]: Entering directory '/build/treeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread -I/testbed/include -I/build/include  -m64 -c -o TreeGetRecord.o /testbed/treeshr/TreeGetRecord.c
+make[1]: Leaving directory '/build/treeshr'
+make[1]: Entering directory '/build/treeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread -I/testbed/include -I/build/include  -m64 -c -o TreeDeleteNode.o /testbed/treeshr/TreeDeleteNode.c
+make[1]: Leaving directory '/build/treeshr'
+make[1]: Entering directory '/build/treeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread -I/testbed/include -I/build/include  -m64 -c -o TreeVerify.o /testbed/treeshr/TreeVerify.c
+make[1]: Leaving directory '/build/treeshr'
+make[1]: Entering directory '/build/treeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread -I/testbed/include -I/build/include  -m64 -c -o TreeRenameNode.o /testbed/treeshr/TreeRenameNode.c
+make[1]: Leaving directory '/build/treeshr'
+make[1]: Entering directory '/build/treeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread -I/testbed/include -I/build/include  -m64 -c -o TreePutRecord.o /testbed/treeshr/TreePutRecord.c
+make[1]: Leaving directory '/build/treeshr'
+make[1]: Entering directory '/build/treeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread -I/testbed/include -I/build/include  -m64 -c -o TreeSetNci.o /testbed/treeshr/TreeSetNci.c
+make[1]: Leaving directory '/build/treeshr'
+make[1]: Entering directory '/build/treeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread -I/testbed/include -I/build/include  -m64 -c -o TreeAddNode.o /testbed/treeshr/TreeAddNode.c
+make[1]: Leaving directory '/build/treeshr'
+make[1]: Entering directory '/build/treeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread -I/testbed/include -I/build/include  -m64 -c -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread -Wno-sign-compare -Wno-unused-parameter -c /testbed/treeshr/lex.yytreepath.c
+make[1]: Leaving directory '/build/treeshr'
+make[1]: Entering directory '/build/treeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread -I/testbed/include -I/build/include  -m64 -c -o TreeOpen.o /testbed/treeshr/TreeOpen.c
+make[1]: Leaving directory '/build/treeshr'
+make[1]: Entering directory '/build/treeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread -I/testbed/include -I/build/include  -m64 -c -o TreeFindNode.o /testbed/treeshr/TreeFindNode.c
+make[1]: Leaving directory '/build/treeshr'
+make[1]: Entering directory '/build/treeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread -I/testbed/include -I/build/include  -m64 -c -o RemoteAccess.o /testbed/treeshr/RemoteAccess.c
+make[1]: Leaving directory '/build/treeshr'
+make[1]: Entering directory '/build/treeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread -I/testbed/include -I/build/include  -m64 -c -o TreeGetNci.o /testbed/treeshr/TreeGetNci.c
+make[1]: Leaving directory '/build/treeshr'
+make[1]: Entering directory '/build/treeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread -I/testbed/include -I/build/include  -m64 -c -o TreeSegments.o /testbed/treeshr/TreeSegments.c
+make[1]: Leaving directory '/build/treeshr'
+make[1]: Entering directory '/build/treeshr'
+ar -cr /build/lib64/libTreeShr.a dummies.o TreeAddNode.o TreeAddTag.o TreeCallHook.o TreeCleanDatafile.o TreeCreatePulseFile.o TreeDeleteNode.o TreeDeletePulseFile.o TreeDoMethod.o TreeFindNode.o TreeFindTag.o TreeFindTagWild.o TreeGetDbi.o TreeGetNci.o TreeGetRecord.o TreeGetSetShotId.o TreeOpen.o TreePerf.o TreePutRecord.o TreeRenameNode.o TreeRemoveNodesTags.o TreeSegments.o TreeSerializeNci.o TreeSetDbi.o TreeSetDefault.o TreeSetNci.o TreeThreadSafe.o TreeVerify.o RemoteAccess.o lex.yytreepath.o
+make[1]: Leaving directory '/build/treeshr'
+make[1]: Entering directory '/build/treeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread -I/testbed/include -I/build/include   -m64 -o /build/lib64/libTreeShr.so -shared  dummies.o TreeAddNode.o TreeAddTag.o TreeCallHook.o TreeCleanDatafile.o TreeCreatePulseFile.o TreeDeleteNode.o TreeDeletePulseFile.o TreeDoMethod.o TreeFindNode.o TreeFindTag.o TreeFindTagWild.o TreeGetDbi.o TreeGetNci.o TreeGetRecord.o TreeGetSetShotId.o TreeOpen.o TreePerf.o TreePutRecord.o TreeRenameNode.o TreeRemoveNodesTags.o TreeSegments.o TreeSerializeNci.o TreeSetDbi.o TreeSetDefault.o TreeSetNci.o TreeThreadSafe.o TreeVerify.o RemoteAccess.o lex.yytreepath.o  -L/build/lib64/  -lMdsShr   -pthread 
+make[1]: Leaving directory '/build/treeshr'
+make[1]: Entering directory '/build/treeshr'
+ranlib /build/lib64/libTreeShr.a
+make[1]: Leaving directory '/build/treeshr'
+make -C tdishr -j -l 18 -O
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o DummyRoutines.o /testbed/tdishr/DummyRoutines.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o IsRoprand.o /testbed/tdishr/IsRoprand.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiBinary.o /testbed/tdishr/TdiBinary.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiCompileDependency.o /testbed/tdishr/TdiCompileDependency.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiCvtDxDx.o /testbed/tdishr/TdiCvtDxDx.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiDefCat.o /testbed/tdishr/TdiDefCat.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiDecompileDependency.o /testbed/tdishr/TdiDecompileDependency.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiConstant.o /testbed/tdishr/TdiConstant.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiApd.o /testbed/tdishr/TdiApd.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiCompile.o /testbed/tdishr/TdiCompile.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiCvtArgs.o /testbed/tdishr/TdiCvtArgs.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiFaultHandler.o /testbed/tdishr/TdiFaultHandler.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiDecompress.o /testbed/tdishr/TdiDecompress.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiBuild.o /testbed/tdishr/TdiBuild.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiEvaluate.o /testbed/tdishr/TdiEvaluate.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiShowVm.o /testbed/tdishr/TdiShowVm.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiExpt.o /testbed/tdishr/TdiExpt.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiOpcDef.o /testbed/tdishr/TdiOpcDef.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiCall.o /testbed/tdishr/TdiCall.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiGetShape.o /testbed/tdishr/TdiGetShape.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiUnary.o /testbed/tdishr/TdiUnary.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiSquare.o /testbed/tdishr/TdiSquare.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiSame.o /testbed/tdishr/TdiSame.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiMasterData.o /testbed/tdishr/TdiMasterData.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiGetSlope.o /testbed/tdishr/TdiGetSlope.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiDoTask.o /testbed/tdishr/TdiDoTask.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiMinMax.o /testbed/tdishr/TdiMinMax.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiGetDbi.o /testbed/tdishr/TdiGetDbi.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiThreadSafe.o /testbed/tdishr/TdiThreadSafe.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiMakeFunctionTable.o /testbed/tdishr/TdiMakeFunctionTable.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiHash.o /testbed/tdishr/TdiHash.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiYaccSubs.o /testbed/tdishr/TdiYaccSubs.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiSql.o /testbed/tdishr/TdiSql.c 
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiUndef.o /testbed/tdishr/TdiUndef.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiExtFunction.o /testbed/tdishr/TdiExtFunction.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiVector.o /testbed/tdishr/TdiVector.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiPower.o /testbed/tdishr/TdiPower.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiArray.o /testbed/tdishr/TdiArray.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiGetArgs.o /testbed/tdishr/TdiGetArgs.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiPack.o /testbed/tdishr/TdiPack.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiTrim.o /testbed/tdishr/TdiTrim.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiMatrix.o /testbed/tdishr/TdiMatrix.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o CvtConvertFloat.o /testbed/tdishr/CvtConvertFloat.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiCull.o /testbed/tdishr/TdiCull.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiSetRange.o /testbed/tdishr/TdiSetRange.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiExtPython.o /testbed/tdishr/TdiExtPython.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiDtypeRange.o /testbed/tdishr/TdiDtypeRange.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiScalar.o /testbed/tdishr/TdiScalar.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiChar.o /testbed/tdishr/TdiChar.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiIo.o /testbed/tdishr/TdiIo.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiGetNci.o /testbed/tdishr/TdiGetNci.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiBound.o /testbed/tdishr/TdiBound.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiXxx.o /testbed/tdishr/TdiXxx.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiSubscript.o /testbed/tdishr/TdiSubscript.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiGetData.o /testbed/tdishr/TdiGetData.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiStatement.o /testbed/tdishr/TdiStatement.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiItoX.o /testbed/tdishr/TdiItoX.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiDecompile.o /testbed/tdishr/TdiDecompile.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiDecompileR.o /testbed/tdishr/TdiDecompileR.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiYacc.o /testbed/tdishr/TdiYacc.c -Wno-array-bounds
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiIntrinsic.o /testbed/tdishr/TdiIntrinsic.c
+/testbed/tdishr/TdiIntrinsic.c: In function ‘TdiIntrinsic’:
+/testbed/tdishr/TdiIntrinsic.c:250:16: warning: variable ‘stat1’ might be clobbered by ‘longjmp’ or ‘vfork’ [-Wclobbered]
+  250 |   INIT_STATUS, stat1 = MDSplusSUCCESS;
+      |                ^~~~~
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiXxxOf.o /testbed/tdishr/TdiXxxOf.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiTrans.o /testbed/tdishr/TdiTrans.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiExponent.o /testbed/tdishr/TdiExponent.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiVar.o /testbed/tdishr/TdiVar.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiSort.o /testbed/tdishr/TdiSort.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiAbs.o /testbed/tdishr/TdiAbs.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiLex.o /testbed/tdishr/TdiLex.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiMath2.o /testbed/tdishr/TdiMath2.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiAnd.o /testbed/tdishr/TdiAnd.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiDivide.o /testbed/tdishr/TdiDivide.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiMath1.o /testbed/tdishr/TdiMath1.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiDim.o /testbed/tdishr/TdiDim.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiAdd.o /testbed/tdishr/TdiAdd.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiEq.o /testbed/tdishr/TdiEq.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiMaxVal.o /testbed/tdishr/TdiMaxVal.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiDefFunction.o /testbed/tdishr/TdiDefFunction.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiIand.o /testbed/tdishr/TdiIand.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiConvert.o /testbed/tdishr/TdiConvert.c
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+ar -cr /build/lib64/libTdiShr.a CvtConvertFloat.o DummyRoutines.o IsRoprand.o TdiAbs.o TdiAdd.o TdiAnd.o TdiApd.o TdiArray.o TdiBinary.o TdiBound.o TdiBuild.o TdiCall.o TdiChar.o TdiCompileDependency.o TdiCompile.o TdiConstant.o TdiConvert.o TdiCull.o TdiCvtArgs.o TdiCvtDxDx.o TdiDecompileDependency.o TdiDecompileR.o TdiDecompile.o TdiDecompress.o TdiDefCat.o TdiDefFunction.o TdiDim.o TdiDivide.o TdiDoTask.o TdiDtypeRange.o TdiEq.o TdiEvaluate.o TdiExponent.o TdiExpt.o TdiExtFunction.o TdiExtPython.o TdiFaultHandler.o TdiGetArgs.o TdiGetData.o TdiGetDbi.o TdiGetNci.o TdiGetShape.o TdiGetSlope.o TdiHash.o TdiIand.o TdiIntrinsic.o TdiIo.o TdiItoX.o TdiLex.o TdiMakeFunctionTable.o TdiMasterData.o TdiMath1.o TdiMath2.o TdiMatrix.o TdiMaxVal.o TdiMinMax.o TdiOpcDef.o TdiPack.o TdiPower.o TdiSame.o TdiScalar.o TdiSetRange.o TdiShowVm.o TdiSort.o TdiSql.o TdiSquare.o TdiStatement.o TdiSubscript.o TdiThreadSafe.o TdiTrans.o TdiTrim.o TdiUnary.o TdiUndef.o TdiVar.o TdiVector.o TdiXxxOf.o TdiXxx.o TdiYaccSubs.o TdiYacc.o
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include   -m64 -o /build/lib64/libTdiShr.so -shared  CvtConvertFloat.o DummyRoutines.o IsRoprand.o TdiAbs.o TdiAdd.o TdiAnd.o TdiApd.o TdiArray.o TdiBinary.o TdiBound.o TdiBuild.o TdiCall.o TdiChar.o TdiCompileDependency.o TdiCompile.o TdiConstant.o TdiConvert.o TdiCull.o TdiCvtArgs.o TdiCvtDxDx.o TdiDecompileDependency.o TdiDecompileR.o TdiDecompile.o TdiDecompress.o TdiDefCat.o TdiDefFunction.o TdiDim.o TdiDivide.o TdiDoTask.o TdiDtypeRange.o TdiEq.o TdiEvaluate.o TdiExponent.o TdiExpt.o TdiExtFunction.o TdiExtPython.o TdiFaultHandler.o TdiGetArgs.o TdiGetData.o TdiGetDbi.o TdiGetNci.o TdiGetShape.o TdiGetSlope.o TdiHash.o TdiIand.o TdiIntrinsic.o TdiIo.o TdiItoX.o TdiLex.o TdiMakeFunctionTable.o TdiMasterData.o TdiMath1.o TdiMath2.o TdiMatrix.o TdiMaxVal.o TdiMinMax.o TdiOpcDef.o TdiPack.o TdiPower.o TdiSame.o TdiScalar.o TdiSetRange.o TdiShowVm.o TdiSort.o TdiSql.o TdiSquare.o TdiStatement.o TdiSubscript.o TdiThreadSafe.o TdiTrans.o TdiTrim.o TdiUnary.o TdiUndef.o TdiVar.o TdiVector.o TdiXxxOf.o TdiXxx.o TdiYaccSubs.o TdiYacc.o  -L/build/lib64/  -lTreeShr -lMdsShr -lm -pthread -ldl  
+make[1]: Leaving directory '/build/tdishr'
+make[1]: Entering directory '/build/tdishr'
+ranlib /build/lib64/libTdiShr.a
+make[1]: Leaving directory '/build/tdishr'
+make -C tditest -j -l 18 -O
+make[1]: Entering directory '/build/tditest'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include   -m64 -o /build/bin64/tditest /testbed/tditest/tditest.c -L/build/lib64/ -lTdiShr -lTreeShr -lMdsShr   -lreadline
+make[1]: Leaving directory '/build/tditest'
+make -C xtreeshr -j -l 18 -O
+make[1]: Entering directory '/build/xtreeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include   -m64 -c -o XTreeConvertToLongTime.o /testbed/xtreeshr/XTreeConvertToLongTime.c
+make[1]: Leaving directory '/build/xtreeshr'
+make[1]: Entering directory '/build/xtreeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include   -m64 -c -o XTreeGetSegmentList.o /testbed/xtreeshr/XTreeGetSegmentList.c
+make[1]: Leaving directory '/build/xtreeshr'
+make[1]: Entering directory '/build/xtreeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include   -m64 -c -o XTreeGetTimedRecord.o /testbed/xtreeshr/XTreeGetTimedRecord.c
+make[1]: Leaving directory '/build/xtreeshr'
+make[1]: Entering directory '/build/xtreeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include   -m64 -c -o XTreeDefaultSquish.o /testbed/xtreeshr/XTreeDefaultSquish.c
+make[1]: Leaving directory '/build/xtreeshr'
+make[1]: Entering directory '/build/xtreeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include   -m64 -c -o XTreeDefaultResample.o /testbed/xtreeshr/XTreeDefaultResample.c
+make[1]: Leaving directory '/build/xtreeshr'
+make[1]: Entering directory '/build/xtreeshr'
+ar -cr /build/lib64/libXTreeShr.a XTreeConvertToLongTime.o XTreeDefaultSquish.o XTreeDefaultResample.o XTreeGetTimedRecord.o XTreeGetSegmentList.o
+make[1]: Leaving directory '/build/xtreeshr'
+make[1]: Entering directory '/build/xtreeshr'
+ranlib /build/lib64/libXTreeShr.a
+make[1]: Leaving directory '/build/xtreeshr'
+make[1]: Entering directory '/build/xtreeshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include    -m64 -o /build/lib64/libXTreeShr.so -shared  XTreeConvertToLongTime.o XTreeDefaultSquish.o XTreeDefaultResample.o XTreeGetTimedRecord.o XTreeGetSegmentList.o  -L/build/lib64/ -lTdiShr -lTreeShr -lMdsShr  
+make[1]: Leaving directory '/build/xtreeshr'
+make -C mdstcpip -j -l 18 -O
+make[1]: Entering directory '/build/mdstcpip'
+cp /testbed/mdstcpip/mdsipd /build/bin64/mdsipd
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+cp /testbed/mdstcpip/mdsip_server /build/bin64/mdsip_server
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+cp /testbed/mdstcpip/mdsip-client-ssh /build/bin64/mdsip-client-ssh
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+cp /testbed/mdstcpip/mdsip-client-http /build/bin64/mdsip-client-http
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+cp /testbed/mdstcpip/mdsip-client-local /build/bin64/mdsip-client-local
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+cp /testbed/mdstcpip/mdsip-server-ssh /build/bin64/mdsip-server-ssh
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+cp /testbed/mdstcpip/mdsip-server-http /build/bin64/mdsip-server-http
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o MdsClose.o /testbed/mdstcpip/MdsClose.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o mdsip.o /testbed/mdstcpip/mdsip.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o MdsEventAst.o /testbed/mdstcpip/MdsEventAst.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o MdsEventCan.o /testbed/mdstcpip/MdsEventCan.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o MdsOpen.o /testbed/mdstcpip/MdsOpen.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o RemoveConnection.o /testbed/mdstcpip/RemoveConnection.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o MdsDispatchEvent.o /testbed/mdstcpip/MdsDispatchEvent.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o MdsPut.o /testbed/mdstcpip/MdsPut.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o MdsSetDefault.o /testbed/mdstcpip/MdsSetDefault.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o MdsValue.o /testbed/mdstcpip/MdsValue.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o MdsSetCompression.o /testbed/mdstcpip/MdsSetCompression.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o FreeMessage.o /testbed/mdstcpip/FreeMessage.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o IdlApi.o /testbed/mdstcpip/IdlApi.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o SendMdsMsg.o /testbed/mdstcpip/SendMdsMsg.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o FlipData.o /testbed/mdstcpip/FlipData.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o FlipHeader.o /testbed/mdstcpip/FlipHeader.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o GetAnswerInfo.o /testbed/mdstcpip/GetAnswerInfo.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o ClientType.o /testbed/mdstcpip/ClientType.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o MakeDescrip.o /testbed/mdstcpip/MakeDescrip.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o GetMdsMsg.o /testbed/mdstcpip/GetMdsMsg.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o LoadIo.o /testbed/mdstcpip/LoadIo.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o ArgLen.o /testbed/mdstcpip/ArgLen.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o GetSetSettings.o /testbed/mdstcpip/GetSetSettings.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o DoMessage.o /testbed/mdstcpip/DoMessage.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o LockAsts.o /testbed/mdstcpip/LockAsts.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o MdsIpFree.o /testbed/mdstcpip/MdsIpFree.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o SendArg.o /testbed/mdstcpip/SendArg.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o ConnectToMds.o /testbed/mdstcpip/ConnectToMds.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o DisconnectFromMds.o /testbed/mdstcpip/DisconnectFromMds.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o CloseConnection.o /testbed/mdstcpip/CloseConnection.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o ParseCommand.o /testbed/mdstcpip/ParseCommand.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+/usr/bin/mkdir -p ./udt4/src
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+/usr/bin/mkdir -p ./udt4/src
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+/usr/bin/mkdir -p ./udt4/udtc
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+/usr/bin/mkdir -p ./udt4/udtc
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o CheckClient.o /testbed/mdstcpip/CheckClient.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o zlib/uncompr.o /testbed/mdstcpip/zlib/uncompr.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o zlib/compress.o /testbed/mdstcpip/zlib/compress.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o zlib/zutil.o /testbed/mdstcpip/zlib/zutil.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o zlib/infutil.o /testbed/mdstcpip/zlib/infutil.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o zlib/adler32.o /testbed/mdstcpip/zlib/adler32.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o zlib/inffast.o /testbed/mdstcpip/zlib/inffast.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o IoRoutinesTunnel.o /testbed/mdstcpip/IoRoutinesTunnel.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o zlib/infcodes.o /testbed/mdstcpip/zlib/infcodes.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o zlib/inflate.o /testbed/mdstcpip/zlib/inflate.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o Connections.o /testbed/mdstcpip/Connections.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o zlib/infblock.o /testbed/mdstcpip/zlib/infblock.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o zlib/inftrees.o /testbed/mdstcpip/zlib/inftrees.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o zlib/deflate.o /testbed/mdstcpip/zlib/deflate.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o zlib/trees.o /testbed/mdstcpip/zlib/trees.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include   -pthread -m64 -o /build/lib64/libMdsIpShr.so MdsValue.o MdsPut.o MdsOpen.o MdsClose.o MdsSetDefault.o MdsEventAst.o MdsEventCan.o MdsDispatchEvent.o MdsSetCompression.o FreeMessage.o IdlApi.o SendMdsMsg.o GetMdsMsg.o FlipData.o FlipHeader.o GetAnswerInfo.o ClientType.o MakeDescrip.o LoadIo.o ArgLen.o GetSetSettings.o DoMessage.o LockAsts.o Connections.o MdsIpFree.o SendArg.o ConnectToMds.o DisconnectFromMds.o CloseConnection.o CheckClient.o ParseCommand.o IoRoutinesTunnel.o zlib/adler32.o zlib/compress.o zlib/deflate.o zlib/infblock.o zlib/infcodes.o zlib/inffast.o zlib/inflate.o zlib/inftrees.o zlib/infutil.o zlib/trees.o zlib/uncompr.o zlib/zutil.o -shared  -L/build/lib64/ -lMdsShr -lTreeShr -lMdsShr -lresolv  
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include   -pthread -m64 /testbed/mdstcpip/testing/mdsiptest.c -o /build/bin64/mdsiptest -L/build/lib64/ -lMdsIpShr -lMdsShr -lTreeShr -lresolv 
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o ProcessMessage.o /testbed/mdstcpip/ProcessMessage.c
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include   -pthread -m64 -o /build/lib64/libMdsIpSrvShr.so -shared  ProcessMessage.o RemoveConnection.o -L/build/lib64/ -lMdsIpShr -lMdsShr -lTreeShr -lTdiShr -lresolv  
+make[1]: Leaving directory '/build/mdstcpip'
+make[1]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include   -pthread -m64 -o /build/bin64/mdsip mdsip.o -L/build/lib64/ -lMdsIpSrvShr -lMdsIpShr -lMdsShr -lTreeShr -lTdiShr -lresolv 
+make[1]: Leaving directory '/build/mdstcpip'
+make secundary -j -l 18  -O
+make[2]: Entering directory '/build/mdstcpip'
+/usr/bin/mkdir -p ./udt4/src
+make[2]: Leaving directory '/build/mdstcpip'
+make[2]: Entering directory '/build/mdstcpip'
+/usr/bin/mkdir -p ./udt4/src
+make[2]: Leaving directory '/build/mdstcpip'
+make[2]: Entering directory '/build/mdstcpip'
+/usr/bin/mkdir -p ./udt4/udtc
+make[2]: Leaving directory '/build/mdstcpip'
+make[2]: Entering directory '/build/mdstcpip'
+/usr/bin/mkdir -p ./udt4/udtc
+make[2]: Leaving directory '/build/mdstcpip'
+make[2]: Entering directory '/build/mdstcpip'
+cp /testbed/mdstcpip/mdsip.hosts /build/etc/mdsip.hosts
+make[2]: Leaving directory '/build/mdstcpip'
+make[2]: Entering directory '/build/mdstcpip'
+ar -cr /build/lib64/libMdsIpShr.a MdsValue.o MdsPut.o MdsOpen.o MdsClose.o MdsSetDefault.o MdsEventAst.o MdsEventCan.o MdsDispatchEvent.o MdsSetCompression.o FreeMessage.o IdlApi.o SendMdsMsg.o GetMdsMsg.o FlipData.o FlipHeader.o GetAnswerInfo.o ClientType.o MakeDescrip.o LoadIo.o ArgLen.o GetSetSettings.o DoMessage.o LockAsts.o Connections.o MdsIpFree.o SendArg.o ConnectToMds.o DisconnectFromMds.o CloseConnection.o CheckClient.o ParseCommand.o IoRoutinesTunnel.o zlib/adler32.o zlib/compress.o zlib/deflate.o zlib/infblock.o zlib/infcodes.o zlib/inffast.o zlib/inflate.o zlib/inftrees.o zlib/infutil.o zlib/trees.o zlib/uncompr.o zlib/zutil.o
+make[2]: Leaving directory '/build/mdstcpip'
+make[2]: Entering directory '/build/mdstcpip'
+ranlib /build/lib64/libMdsIpShr.a
+make[2]: Leaving directory '/build/mdstcpip'
+make[2]: Entering directory '/build/mdstcpip'
+g++ -Wno-deprecated -fPIC -finline-functions -fno-strict-aliasing -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -g -O3 -I/testbed/include -I/build/include  -m64 -c -o udt4/src/md5.o /testbed/mdstcpip/udt4/src/md5.cpp
+make[2]: Leaving directory '/build/mdstcpip'
+make[2]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o IoRoutinesUdt.o /testbed/mdstcpip/IoRoutinesUdt.c
+make[2]: Leaving directory '/build/mdstcpip'
+make[2]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o IoRoutinesUdtV6.o /testbed/mdstcpip/IoRoutinesUdtV6.c
+make[2]: Leaving directory '/build/mdstcpip'
+make[2]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o IoRoutinesTcp.o /testbed/mdstcpip/IoRoutinesTcp.c
+make[2]: Leaving directory '/build/mdstcpip'
+make[2]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include  -m64 -c -o IoRoutinesTcpV6.o /testbed/mdstcpip/IoRoutinesTcpV6.c
+make[2]: Leaving directory '/build/mdstcpip'
+make[2]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include   -pthread -m64 -o /build/lib64/libMdsIpTCP.so -shared  IoRoutinesTcp.o -L/build/lib64/ -lMdsIpShr -lMdsShr -lresolv 
+make[2]: Leaving directory '/build/mdstcpip'
+make[2]: Entering directory '/build/mdstcpip'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -I/testbed/include -I/build/include   -pthread -m64 -o /build/lib64/libMdsIpTCPV6.so -shared  IoRoutinesTcpV6.o -L/build/lib64/ -lMdsIpShr -lMdsShr -lresolv 
+make[2]: Leaving directory '/build/mdstcpip'
+make[2]: Entering directory '/build/mdstcpip'
+g++ -Wno-deprecated -fPIC -finline-functions -fno-strict-aliasing -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -g -O3 -I/testbed/include -I/build/include  -m64 -c -o udt4/src/packet.o /testbed/mdstcpip/udt4/src/packet.cpp
+make[2]: Leaving directory '/build/mdstcpip'
+make[2]: Entering directory '/build/mdstcpip'
+g++ -Wno-deprecated -fPIC -finline-functions -fno-strict-aliasing -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -g -O3 -I/testbed/include -I/build/include  -m64 -c -o udt4/udtc/udtc.o /testbed/mdstcpip/udt4/udtc/udtc.cpp
+make[2]: Leaving directory '/build/mdstcpip'
+make[2]: Entering directory '/build/mdstcpip'
+g++ -Wno-deprecated -fPIC -finline-functions -fno-strict-aliasing -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -g -O3 -I/testbed/include -I/build/include  -m64 -c -o udt4/src/channel.o /testbed/mdstcpip/udt4/src/channel.cpp
+make[2]: Leaving directory '/build/mdstcpip'
+make[2]: Entering directory '/build/mdstcpip'
+g++ -Wno-deprecated -fPIC -finline-functions -fno-strict-aliasing -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -g -O3 -I/testbed/include -I/build/include  -m64 -c -o udt4/src/cache.o /testbed/mdstcpip/udt4/src/cache.cpp
+make[2]: Leaving directory '/build/mdstcpip'
+make[2]: Entering directory '/build/mdstcpip'
+g++ -Wno-deprecated -fPIC -finline-functions -fno-strict-aliasing -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -g -O3 -I/testbed/include -I/build/include  -m64 -c -o udt4/src/common.o /testbed/mdstcpip/udt4/src/common.cpp
+make[2]: Leaving directory '/build/mdstcpip'
+make[2]: Entering directory '/build/mdstcpip'
+g++ -Wno-deprecated -fPIC -finline-functions -fno-strict-aliasing -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -g -O3 -I/testbed/include -I/build/include  -m64 -c -o udt4/src/list.o /testbed/mdstcpip/udt4/src/list.cpp
+make[2]: Leaving directory '/build/mdstcpip'
+make[2]: Entering directory '/build/mdstcpip'
+g++ -Wno-deprecated -fPIC -finline-functions -fno-strict-aliasing -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -g -O3 -I/testbed/include -I/build/include  -m64 -c -o udt4/src/window.o /testbed/mdstcpip/udt4/src/window.cpp
+make[2]: Leaving directory '/build/mdstcpip'
+make[2]: Entering directory '/build/mdstcpip'
+g++ -Wno-deprecated -fPIC -finline-functions -fno-strict-aliasing -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -g -O3 -I/testbed/include -I/build/include  -m64 -c -o udt4/src/ccc.o /testbed/mdstcpip/udt4/src/ccc.cpp
+make[2]: Leaving directory '/build/mdstcpip'
+make[2]: Entering directory '/build/mdstcpip'
+g++ -Wno-deprecated -fPIC -finline-functions -fno-strict-aliasing -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -g -O3 -I/testbed/include -I/build/include  -m64 -c -o udt4/src/buffer.o /testbed/mdstcpip/udt4/src/buffer.cpp
+make[2]: Leaving directory '/build/mdstcpip'
+make[2]: Entering directory '/build/mdstcpip'
+g++ -Wno-deprecated -fPIC -finline-functions -fno-strict-aliasing -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -g -O3 -I/testbed/include -I/build/include  -m64 -c -o udt4/src/epoll.o /testbed/mdstcpip/udt4/src/epoll.cpp
+make[2]: Leaving directory '/build/mdstcpip'
+make[2]: Entering directory '/build/mdstcpip'
+g++ -Wno-deprecated -fPIC -finline-functions -fno-strict-aliasing -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -g -O3 -I/testbed/include -I/build/include  -m64 -c -o udt4/src/queue.o /testbed/mdstcpip/udt4/src/queue.cpp
+make[2]: Leaving directory '/build/mdstcpip'
+make[2]: Entering directory '/build/mdstcpip'
+g++ -Wno-deprecated -fPIC -finline-functions -fno-strict-aliasing -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -g -O3 -I/testbed/include -I/build/include  -m64 -c -o udt4/src/core.o /testbed/mdstcpip/udt4/src/core.cpp
+/testbed/mdstcpip/udt4/src/core.cpp: In member function ‘void CUDT::connect(const sockaddr*)’:
+/testbed/mdstcpip/udt4/src/core.cpp:672:35: warning: implicitly-declared ‘CUDTException& CUDTException::operator=(const CUDTException&)’ is deprecated [-Wdeprecated-copy]
+  672 |          e = CUDTException(1, 1, 0);
+      |                                   ^
+In file included from /testbed/mdstcpip/udt4/src/channel.h:45,
+                 from /testbed/mdstcpip/udt4/src/queue.h:45,
+                 from /testbed/mdstcpip/udt4/src/core.cpp:57:
+/testbed/mdstcpip/udt4/src/udt.h:205:4: note: because ‘CUDTException’ has user-provided ‘CUDTException::CUDTException(const CUDTException&)’
+  205 |    CUDTException(const CUDTException& e);
+      |    ^~~~~~~~~~~~~
+/testbed/mdstcpip/udt4/src/core.cpp:683:29: warning: implicitly-declared ‘CUDTException& CUDTException::operator=(const CUDTException&)’ is deprecated [-Wdeprecated-copy]
+  683 |          e = CUDTException(1);
+      |                             ^
+In file included from /testbed/mdstcpip/udt4/src/channel.h:45,
+                 from /testbed/mdstcpip/udt4/src/queue.h:45,
+                 from /testbed/mdstcpip/udt4/src/core.cpp:57:
+/testbed/mdstcpip/udt4/src/udt.h:205:4: note: because ‘CUDTException’ has user-provided ‘CUDTException::CUDTException(const CUDTException&)’
+  205 |    CUDTException(const CUDTException& e);
+      |    ^~~~~~~~~~~~~
+/testbed/mdstcpip/udt4/src/core.cpp:685:35: warning: implicitly-declared ‘CUDTException& CUDTException::operator=(const CUDTException&)’ is deprecated [-Wdeprecated-copy]
+  685 |          e = CUDTException(1, 2, 0);
+      |                                   ^
+In file included from /testbed/mdstcpip/udt4/src/channel.h:45,
+                 from /testbed/mdstcpip/udt4/src/queue.h:45,
+                 from /testbed/mdstcpip/udt4/src/core.cpp:57:
+/testbed/mdstcpip/udt4/src/udt.h:205:4: note: because ‘CUDTException’ has user-provided ‘CUDTException::CUDTException(const CUDTException&)’
+  205 |    CUDTException(const CUDTException& e);
+      |    ^~~~~~~~~~~~~
+/testbed/mdstcpip/udt4/src/core.cpp:687:35: warning: implicitly-declared ‘CUDTException& CUDTException::operator=(const CUDTException&)’ is deprecated [-Wdeprecated-copy]
+  687 |          e = CUDTException(1, 4, 0);
+      |                                   ^
+In file included from /testbed/mdstcpip/udt4/src/channel.h:45,
+                 from /testbed/mdstcpip/udt4/src/queue.h:45,
+                 from /testbed/mdstcpip/udt4/src/core.cpp:57:
+/testbed/mdstcpip/udt4/src/udt.h:205:4: note: because ‘CUDTException’ has user-provided ‘CUDTException::CUDTException(const CUDTException&)’
+  205 |    CUDTException(const CUDTException& e);
+      |    ^~~~~~~~~~~~~
+make[2]: Leaving directory '/build/mdstcpip'
+make[2]: Entering directory '/build/mdstcpip'
+g++ -Wno-deprecated -fPIC -finline-functions -fno-strict-aliasing -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -g -O3 -I/testbed/include -I/build/include  -m64 -c -o udt4/src/api.o /testbed/mdstcpip/udt4/src/api.cpp
+make[2]: Leaving directory '/build/mdstcpip'
+make[2]: Entering directory '/build/mdstcpip'
+g++ -m64 -o /build/lib64/libMdsIpUDTV6.so -shared   -pthread IoRoutinesUdtV6.o udt4/src/api.o udt4/src/buffer.o udt4/src/cache.o udt4/src/ccc.o udt4/src/channel.o udt4/src/common.o udt4/src/core.o udt4/src/epoll.o udt4/src/list.o udt4/src/md5.o udt4/src/packet.o udt4/src/queue.o udt4/src/window.o udt4/udtc/udtc.o -Wno-deprecated -fPIC -finline-functions -fno-strict-aliasing -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -g -O3 -L/build/lib64/ -lMdsIpShr -lMdsShr -lresolv 
+make[2]: Leaving directory '/build/mdstcpip'
+make[2]: Entering directory '/build/mdstcpip'
+g++ -m64 -o /build/lib64/libMdsIpUDT.so -shared   -pthread IoRoutinesUdt.o  udt4/src/api.o udt4/src/buffer.o udt4/src/cache.o udt4/src/ccc.o udt4/src/channel.o udt4/src/common.o udt4/src/core.o udt4/src/epoll.o udt4/src/list.o udt4/src/md5.o udt4/src/packet.o udt4/src/queue.o udt4/src/window.o udt4/udtc/udtc.o -Wno-deprecated -fPIC -finline-functions -fno-strict-aliasing -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/mdstcpip/udt4/src -I/testbed/mdstcpip/udt4/udtc -g -O3 -L/build/lib64/ -lMdsIpShr -lMdsShr -lresolv 
+make[2]: Leaving directory '/build/mdstcpip'
+make -C mdslibidl -j -l 18 -O
+make[1]: Entering directory '/build/mdslibidl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o MdsLibIdl.o /testbed/mdslibidl/MdsLibIdl.c
+make[1]: Leaving directory '/build/mdslibidl'
+make[1]: Entering directory '/build/mdslibidl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include   -m64 -o /build/lib64/libMdsLibIdl.so -shared  MdsLibIdl.o -lm -L/build/lib64/ -lTdiShr -lTreeShr -lMdsShr 
+make[1]: Leaving directory '/build/mdslibidl'
+make -C mdsdcl -j -l 18 -O
+make[1]: Entering directory '/build/mdsdcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -c -I/usr/include/libxml2 /testbed/mdsdcl/mdsdclThreadSafe.c
+make[1]: Leaving directory '/build/mdsdcl'
+make[1]: Entering directory '/build/mdsdcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -c -I/usr/include/libxml2 /testbed/mdsdcl/cmdHelp.c
+make[1]: Leaving directory '/build/mdsdcl'
+make[1]: Entering directory '/build/mdsdcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o cmdParse.tab.o /testbed/mdsdcl/cmdParse.tab.c
+make[1]: Leaving directory '/build/mdsdcl'
+make[1]: Entering directory '/build/mdsdcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o mdsdcl_commands.o /testbed/mdsdcl/mdsdcl_commands.c
+make[1]: Leaving directory '/build/mdsdcl'
+make[1]: Entering directory '/build/mdsdcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o mdsdclDeltatimeToSeconds.o /testbed/mdsdcl/mdsdclDeltatimeToSeconds.c
+make[1]: Leaving directory '/build/mdsdcl'
+make[1]: Entering directory '/build/mdsdcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -Wno-sign-compare -Wno-unused-parameter -c /testbed/mdsdcl/cmdParseLex.c
+make[1]: Leaving directory '/build/mdsdcl'
+make[1]: Entering directory '/build/mdsdcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -c -I/usr/include/libxml2 /testbed/mdsdcl/cmdExecute.c
+make[1]: Leaving directory '/build/mdsdcl'
+make[1]: Entering directory '/build/mdsdcl'
+ar -cr /build/lib64/libMdsdcl.a mdsdclThreadSafe.o cmdExecute.o cmdHelp.o cmdParseLex.o cmdParse.tab.o mdsdclDeltatimeToSeconds.o mdsdcl_commands.o mdsdcl_show_version.o
+make[1]: Leaving directory '/build/mdsdcl'
+make[1]: Entering directory '/build/mdsdcl'
+ranlib /build/lib64/libMdsdcl.a
+make[1]: Leaving directory '/build/mdsdcl'
+make[1]: Entering directory '/build/mdsdcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include   -m64 -o /build/lib64/libMdsdcl.so -shared  mdsdclThreadSafe.o cmdExecute.o cmdHelp.o cmdParseLex.o cmdParse.tab.o mdsdclDeltatimeToSeconds.o mdsdcl_commands.o mdsdcl_show_version.o -L/build/lib64/ -lMdsShr   -pthread -lxml2 -ldl -lreadline
+make[1]: Leaving directory '/build/mdsdcl'
+make[1]: Entering directory '/build/mdsdcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include   -m64 -o /build/bin64/mdsdcl /testbed/mdsdcl/mdsdcl.c  -L/build/lib64/ -lMdsdcl -lMdsShr  -lreadline
+make[1]: Leaving directory '/build/mdsdcl'
+make -C camshr -j -l 18 -O
+make[1]: Entering directory '/build/camshr'
+cp /testbed/camshr/cts /build/bin64/mdscts
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+chmod +x /build/bin64/mdscts
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o global.o /testbed/camshr/global.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o commit_entry.o /testbed/camshr/commit_entry.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o check_sema4.o /testbed/camshr/check_sema4.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o check_for_file.o /testbed/camshr/check_for_file.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o issort.o /testbed/camshr/issort.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o copy.o /testbed/camshr/copy.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o add_entry.o /testbed/camshr/add_entry.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o bisearch.o /testbed/camshr/bisearch.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o get_crate_status.o /testbed/camshr/get_crate_status.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o compare_str.o /testbed/camshr/compare_str.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o create_sema4.o /testbed/camshr/create_sema4.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o debug.o /testbed/camshr/debug.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o create_tmp_file.o /testbed/camshr/create_tmp_file.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o expand_db.o /testbed/camshr/expand_db.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o get_db_file_size.o /testbed/camshr/get_db_file_size.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o get_file_count.o /testbed/camshr/get_file_count.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o get_file_name.o /testbed/camshr/get_file_name.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o get_scsi_device_number.o /testbed/camshr/get_scsi_device_number.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o lock_file.o /testbed/camshr/lock_file.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o lookup_entry.o /testbed/camshr/lookup_entry.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o map_data_file.o /testbed/camshr/map_data_file.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o map_scsi_device.o /testbed/camshr/map_scsi_device.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o msg.o /testbed/camshr/msg.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o parse_crate_db.o /testbed/camshr/parse_crate_db.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o parse_cts_db.o /testbed/camshr/parse_cts_db.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o QueryHighwayType.o /testbed/camshr/QueryHighwayType.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o remove_entry.o /testbed/camshr/remove_entry.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o scsi_io.o /testbed/camshr/scsi_io.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o ScsiSystemStatus.o /testbed/camshr/ScsiSystemStatus.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o turn_crate_on_off_line.o /testbed/camshr/turn_crate_on_off_line.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o unlock_file.o /testbed/camshr/unlock_file.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o xlate_logicalname.o /testbed/camshr/xlate_logicalname.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o RemCamMulti.o /testbed/camshr/RemCamMulti.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o RemCamSingle.o /testbed/camshr/RemCamSingle.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o RemCamIosb.o /testbed/camshr/RemCamIosb.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o verbs.o /testbed/camshr/verbs.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o cam_functions.o /testbed/camshr/cam_functions.c
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include   -m64 -shared  -nostartfiles -Wl,-soname=libCamShr.so -o /build/lib64/libCamShr.so.1.8 add_entry.o bisearch.o cam_functions.o check_for_file.o check_sema4.o commit_entry.o compare_str.o copy.o create_sema4.o create_tmp_file.o debug.o expand_db.o get_crate_status.o get_db_file_size.o get_file_count.o get_file_name.o get_scsi_device_number.o global.o issort.o lock_file.o lookup_entry.o map_data_file.o map_scsi_device.o msg.o parse_crate_db.o parse_cts_db.o QueryHighwayType.o remove_entry.o scsi_io.o ScsiSystemStatus.o turn_crate_on_off_line.o unlock_file.o xlate_logicalname.o RemCamMulti.o RemCamSingle.o RemCamIosb.o -L/build/lib64/ -lMdsShr -lMdsIpShr 
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+ln -sf libCamShr.so.1.8 /build/lib64/libCamShr.so.1
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+ln -sf libCamShr.so.1 /build/lib64/libCamShr.so
+make[1]: Leaving directory '/build/camshr'
+make[1]: Entering directory '/build/camshr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include   -m64 -o /build/lib64/libcts_commands.so -shared  verbs.o -L/build/lib64/ -lCamShr -lMdsdcl -L/build/lib64/  -lMdsShr
+make[1]: Leaving directory '/build/camshr'
+make -C remcam -j -l 18 -O
+make[1]: Entering directory '/build/remcam'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o CamIosb.o /testbed/remcam/CamIosb.c
+make[1]: Leaving directory '/build/remcam'
+make[1]: Entering directory '/build/remcam'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o CamSingle.o /testbed/remcam/CamSingle.c
+make[1]: Leaving directory '/build/remcam'
+make[1]: Entering directory '/build/remcam'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o CamMulti.o /testbed/remcam/CamMulti.c
+make[1]: Leaving directory '/build/remcam'
+make[1]: Entering directory '/build/remcam'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include   -m64 -o /build/lib64/libRemCamShr.so -shared  CamIosb.o CamMulti.o CamSingle.o -L/build/lib64/ -lMdsIpShr 
+make[1]: Leaving directory '/build/remcam'
+make -C ccl -j -l 18 -O
+make[1]: Entering directory '/build/ccl'
+cp /testbed/ccl/mdsccl /build/bin64/mdsccl
+make[1]: Leaving directory '/build/ccl'
+make[1]: Entering directory '/build/ccl'
+chmod +x /build/bin64/mdsccl
+make[1]: Leaving directory '/build/ccl'
+make[1]: Entering directory '/build/ccl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o ccl_verbs.o /testbed/ccl/ccl_verbs.c
+make[1]: Leaving directory '/build/ccl'
+make[1]: Entering directory '/build/ccl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include   -m64 -o /build/lib64/libccl_commands.so -shared  ccl_verbs.o  -L/build/lib64/ -lMdsdcl -lMdsShr -lCamShr
+make[1]: Leaving directory '/build/ccl'
+make -C servershr -j -l 18 -O
+make[1]: Entering directory '/build/servershr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o ServerSetDetailProc.o /testbed/servershr/ServerSetDetailProc.c
+make[1]: Leaving directory '/build/servershr'
+make[1]: Entering directory '/build/servershr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o ServerAbortServer.o /testbed/servershr/ServerAbortServer.c
+make[1]: Leaving directory '/build/servershr'
+make[1]: Entering directory '/build/servershr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o ServerStartServer.o /testbed/servershr/ServerStartServer.c
+make[1]: Leaving directory '/build/servershr'
+make[1]: Entering directory '/build/servershr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o ServerGetInfo.o /testbed/servershr/ServerGetInfo.c
+make[1]: Leaving directory '/build/servershr'
+make[1]: Entering directory '/build/servershr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o ServerDispatchCommand.o /testbed/servershr/ServerDispatchCommand.c
+make[1]: Leaving directory '/build/servershr'
+make[1]: Entering directory '/build/servershr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o ServerSetLogging.o /testbed/servershr/ServerSetLogging.c
+make[1]: Leaving directory '/build/servershr'
+make[1]: Entering directory '/build/servershr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o ServerDispatchAction.o /testbed/servershr/ServerDispatchAction.c
+make[1]: Leaving directory '/build/servershr'
+make[1]: Entering directory '/build/servershr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o ServerDispatchClose.o /testbed/servershr/ServerDispatchClose.c
+make[1]: Leaving directory '/build/servershr'
+make[1]: Entering directory '/build/servershr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o ServerFreeDispatchTable.o /testbed/servershr/ServerFreeDispatchTable.c
+make[1]: Leaving directory '/build/servershr'
+make[1]: Entering directory '/build/servershr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o ServerCloseTrees.o /testbed/servershr/ServerCloseTrees.c
+make[1]: Leaving directory '/build/servershr'
+make[1]: Entering directory '/build/servershr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o ServerStopServer.o /testbed/servershr/ServerStopServer.c
+make[1]: Leaving directory '/build/servershr'
+make[1]: Entering directory '/build/servershr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o ServerMonitorCheckin.o /testbed/servershr/ServerMonitorCheckin.c
+make[1]: Leaving directory '/build/servershr'
+make[1]: Entering directory '/build/servershr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o ServerCreatePulse.o /testbed/servershr/ServerCreatePulse.c
+make[1]: Leaving directory '/build/servershr'
+make[1]: Entering directory '/build/servershr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o ServerFindServers.o /testbed/servershr/ServerFindServers.c
+make[1]: Leaving directory '/build/servershr'
+make[1]: Entering directory '/build/servershr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o ServerSendMonitor.o /testbed/servershr/ServerSendMonitor.c
+make[1]: Leaving directory '/build/servershr'
+make[1]: Entering directory '/build/servershr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o ServerBuildDispatchTable.o /testbed/servershr/ServerBuildDispatchTable.c
+make[1]: Leaving directory '/build/servershr'
+make[1]: Entering directory '/build/servershr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o ServerQAction.o /testbed/servershr/ServerQAction.c
+make[1]: Leaving directory '/build/servershr'
+make[1]: Entering directory '/build/servershr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o ServerDispatchPhase.o /testbed/servershr/ServerDispatchPhase.c
+make[1]: Leaving directory '/build/servershr'
+make[1]: Entering directory '/build/servershr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o ServerSendMessage.o /testbed/servershr/ServerSendMessage.c
+make[1]: Leaving directory '/build/servershr'
+make[1]: Entering directory '/build/servershr'
+ar -cr /build/lib64/libMdsServerShr.a ServerDispatchAction.o ServerFreeDispatchTable.o ServerSetDetailProc.o ServerAbortServer.o ServerDispatchClose.o ServerGetInfo.o ServerSetLogging.o ServerBuildDispatchTable.o ServerDispatchCommand.o ServerMonitorCheckin.o ServerStartServer.o ServerCloseTrees.o ServerDispatchPhase.o ServerStopServer.o ServerCreatePulse.o ServerFindServers.o ServerSendMessage.o ServerSendMonitor.o ServerQAction.o
+make[1]: Leaving directory '/build/servershr'
+make[1]: Entering directory '/build/servershr'
+ranlib /build/lib64/libMdsServerShr.a
+make[1]: Leaving directory '/build/servershr'
+make[1]: Entering directory '/build/servershr'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include   -m64 -o /build/lib64/libMdsServerShr.so -shared  ServerDispatchAction.o ServerFreeDispatchTable.o ServerSetDetailProc.o ServerAbortServer.o ServerDispatchClose.o ServerGetInfo.o ServerSetLogging.o ServerBuildDispatchTable.o ServerDispatchCommand.o ServerMonitorCheckin.o ServerStartServer.o ServerCloseTrees.o ServerDispatchPhase.o ServerStopServer.o ServerCreatePulse.o ServerFindServers.o ServerSendMessage.o ServerSendMonitor.o ServerQAction.o -L/build/lib64/ -lMdsdcl -lTdiShr -lTreeShr -lMdsShr -lMdsIpShr   -pthread 
+make[1]: Leaving directory '/build/servershr'
+make -C tcl -j -l 18 -O
+make[1]: Entering directory '/build/tcl'
+/usr/bin/install -c -m 755 /testbed/tcl/mdstcl /build/bin64/mdstcl
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include  -m64 -c -o tcl_add_tag.o /testbed/tcl/tcl_add_tag.c
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include  -m64 -c -o tcl_clean_datafile.o /testbed/tcl/tcl_clean_datafile.c
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include  -m64 -c -o tcl_close.o /testbed/tcl/tcl_close.c
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include  -m64 -c -o tcl_add_node.o /testbed/tcl/tcl_add_node.c
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include  -m64 -c -o tcl_compress_datafile.o /testbed/tcl/tcl_compress_datafile.c
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include  -m64 -c -o tcl_delete_pulse.o /testbed/tcl/tcl_delete_pulse.c
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include  -m64 -c -o tcl_edit.o /testbed/tcl/tcl_edit.c
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include  -m64 -c -o tcl_decompile.o /testbed/tcl/tcl_decompile.c
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include  -m64 -c -o tcl_do_node.o /testbed/tcl/tcl_do_node.c
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include  -m64 -c -o tcl_remove_tag.o /testbed/tcl/tcl_remove_tag.c
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include  -m64 -c -o tcl_delete_node.o /testbed/tcl/tcl_delete_node.c
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include  -m64 -c -o tcl_do_method.o /testbed/tcl/tcl_do_method.c
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include  -m64 -c -o tcl_set_current.o /testbed/tcl/tcl_set_current.c
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include  -m64 -c -o tcl_directory_tag.o /testbed/tcl/tcl_directory_tag.c
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include  -m64 -c -o tcl_rename.o /testbed/tcl/tcl_rename.c
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include  -m64 -c -o tcl_create_pulse.o /testbed/tcl/tcl_create_pulse.c
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include  -m64 -c -o tcl_put_expression.o /testbed/tcl/tcl_put_expression.c
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include  -m64 -c -o tcl_set_callbacks.o /testbed/tcl/tcl_set_callbacks.c
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include  -m64 -c -o tcl_set_default.o /testbed/tcl/tcl_set_default.c
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include  -m64 -c -o tcl_help_device.o /testbed/tcl/tcl_help_device.c
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include  -m64 -c -o tcl_set_tree.o /testbed/tcl/tcl_set_tree.c
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include  -m64 -c -o tcl_set_view.o /testbed/tcl/tcl_set_view.c
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include  -m64 -c -o tcl_setevent.o /testbed/tcl/tcl_setevent.c
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include  -m64 -c -o tcl_set_readonly.o /testbed/tcl/tcl_set_readonly.c
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include  -m64 -c -o tcl_show_current.o /testbed/tcl/tcl_show_current.c
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include  -m64 -c -o tcl_set_node.o /testbed/tcl/tcl_set_node.c
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include  -m64 -c -o tcl_setshow_versions.o /testbed/tcl/tcl_setshow_versions.c
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include  -m64 -c -o tcl_setshow_attribute.o /testbed/tcl/tcl_setshow_attribute.c
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include  -m64 -c -o tcl_wfevent.o /testbed/tcl/tcl_wfevent.c
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include  -m64 -c -o tcl_write.o /testbed/tcl/tcl_write.c
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include  -m64 -c -o tcl_verify_tree.o /testbed/tcl/tcl_verify_tree.c
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include  -m64 -c -o tcl_show_db.o /testbed/tcl/tcl_show_db.c
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include  -m64 -c -o tcl_dispatch.o /testbed/tcl/tcl_dispatch.c
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include  -m64 -c -o tcl_show_data.o /testbed/tcl/tcl_show_data.c
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include  -m64 -c -o tcl_directory.o /testbed/tcl/tcl_directory.c
+make[1]: Leaving directory '/build/tcl'
+make[1]: Entering directory '/build/tcl'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -pthread  -I/testbed/include -I/build/include   -pthread -m64 -o /build/lib64/libtcl_commands.so -shared  tcl_add_node.o tcl_add_tag.o tcl_clean_datafile.o tcl_close.o tcl_compress_datafile.o tcl_create_pulse.o tcl_decompile.o tcl_delete_node.o tcl_delete_pulse.o tcl_directory.o tcl_directory_tag.o tcl_dispatch.o tcl_do_method.o tcl_do_node.o tcl_edit.o tcl_help_device.o tcl_put_expression.o tcl_remove_tag.o tcl_rename.o tcl_set_callbacks.o tcl_set_current.o tcl_set_default.o tcl_set_node.o tcl_set_tree.o tcl_set_view.o tcl_setevent.o tcl_set_readonly.o tcl_setshow_attribute.o tcl_setshow_versions.o tcl_show_current.o tcl_show_data.o tcl_show_db.o tcl_verify_tree.o tcl_wfevent.o tcl_write.o -L/build/lib64/ -lMdsdcl -lMdsServerShr -lMdsShr -lTreeShr -lTdiShr -lMdsIpShr  -lreadline
+make[1]: Leaving directory '/build/tcl'
+make -C tdic -j -l 18 -O
+make[1]: Entering directory '/build/tdic'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o TdiShrExt.o /testbed/tdic/TdiShrExt.c
+make[1]: Leaving directory '/build/tdic'
+make[1]: Entering directory '/build/tdic'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include   -m64 -o /build/bin64/tdic /testbed/tdic/tdic.c -L/build/lib64/ -lMdsIpShr -lTdiShr -lMdsShr -lTreeShr -ldl -lreadline
+make[1]: Leaving directory '/build/tdic'
+make[1]: Entering directory '/build/tdic'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include   -m64 -o /build/lib64/libTdiShrExt.so -shared  TdiShrExt.o -L/build/lib64/ -lMdsIpShr -lTdiShr -lMdsShr -lTreeShr
+make[1]: Leaving directory '/build/tdic'
+make[1]: Entering directory '/build/tdic'
+ar -cr /build/lib64/libTdiShrExt.a TdiShrExt.o
+make[1]: Leaving directory '/build/tdic'
+make[1]: Entering directory '/build/tdic'
+ranlib /build/lib64/libTdiShrExt.a
+make[1]: Leaving directory '/build/tdic'
+make -C mdslib -j -l 18 -O
+make[1]: Entering directory '/build/mdslib'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c /testbed/mdslib/MdsLib.c -o MdsLib_client.o -DFILENAME=MdsLib.c -D_CLIENT_ONLY
+make[1]: Leaving directory '/build/mdslib'
+make[1]: Entering directory '/build/mdslib'
+ar -cr /build/lib64/libMdsLib_client.a MdsLib_client.o
+make[1]: Leaving directory '/build/mdslib'
+make[1]: Entering directory '/build/mdslib'
+ranlib /build/lib64/libMdsLib_client.a
+make[1]: Leaving directory '/build/mdslib'
+make[1]: Entering directory '/build/mdslib'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include   -m64 -o /build/lib64/libMdsLib_client.so -shared  MdsLib_client.o -L/build/lib64/ -lMdsIpShr  -lresolv -lm  
+make[1]: Leaving directory '/build/mdslib'
+make[1]: Entering directory '/build/mdslib'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c /testbed/mdslib/MdsLib.c -o MdsLib.o -DFILENAME=MdsLib.c
+make[1]: Leaving directory '/build/mdslib'
+make[1]: Entering directory '/build/mdslib'
+ar -cr /build/lib64/libMdsLib.a MdsLib.o
+make[1]: Leaving directory '/build/mdslib'
+make[1]: Entering directory '/build/mdslib'
+ranlib /build/lib64/libMdsLib.a
+make[1]: Leaving directory '/build/mdslib'
+make[1]: Entering directory '/build/mdslib'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include   -m64 -o /build/lib64/libMdsLib.so -shared  MdsLib.o -L/build/lib64/ -lMdsIpShr -L/build/lib64/ -lTdiShr -lTreeShr -lMdsShr  -lresolv -lm  
+make[1]: Leaving directory '/build/mdslib'
+make[1]: Entering directory '/build/mdslib'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include   -m64 -o /build/bin64/dtype_test /testbed/mdslib/dtype_test.c -L/build/lib64/ -lMdsLib -lMdsIpShr -lTdiShr -lTreeShr -lMdsShr  -lresolv -lm 
+make[1]: Leaving directory '/build/mdslib'
+make[1]: Entering directory '/build/mdslib'
+gfortran  -I/testbed/include -I/build/include   -m64 -o /build/bin64/mdslib_fremotetest /testbed/mdslib/mdslib_fremotetest.f -L/build/lib64/ -lMdsLib -lMdsIpShr -lTdiShr -lTreeShr -lMdsShr  -lresolv -lm 
+make[1]: Leaving directory '/build/mdslib'
+make[1]: Entering directory '/build/mdslib'
+gfortran  -I/testbed/include -I/build/include   -m64 -o /build/bin64/mdslib_ftest /testbed/mdslib/mdslib_ftest.f -L/build/lib64/ -lMdsLib -lMdsIpShr -lTdiShr -lTreeShr -lMdsShr  -lresolv -lm 
+make[1]: Leaving directory '/build/mdslib'
+make[1]: Entering directory '/build/mdslib'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include   -m64 -o /build/bin64/mdslib_ctest /testbed/mdslib/mdslib_ctest.c -L/build/lib64/ -lMdsLib -lMdsIpShr -lTdiShr -lTreeShr -lMdsShr  -lresolv -lm -lm 
+make[1]: Leaving directory '/build/mdslib'
+make -C math -j -l 18 -O
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized -m64 -c -o gn.o /testbed/math/gn.f
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized -m64 -c -o csval.o /testbed/math/csval.f
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized -m64 -c -o dcsval.o /testbed/math/dcsval.f
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized -m64 -c -o dsrch.o /testbed/math/dsrch.f
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized -m64 -c -o msceez.o /testbed/math/msceez.f
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized -m64 -c -o isrch.o /testbed/math/isrch.f
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized -m64 -c -o mstrms.o /testbed/math/mstrms.f
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized -m64 -c -o mskrv2.o /testbed/math/mskrv2.f
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized -m64 -c -o srch.o /testbed/math/srch.f
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized -m64 -c -o dmul.o /testbed/math/dmul.f
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized -m64 -c /testbed/math/umach.f -o umach.o -Wno-conversion
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized -m64 -c -o msshch.o /testbed/math/msshch.f
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized -m64 -c -o dpermu.o /testbed/math/dpermu.f
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized -m64 -c -o mskrv1.o /testbed/math/mskrv1.f
+/testbed/math/mskrv1.f:103:72:
+
+  103 |      *         (Y(I)-Y(IM1))**2)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 1 at (1)
+/testbed/math/mskrv1.f:187:72:
+
+  187 |     8   SDIAG1 = SDIAG2
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 8 at (1)
+/testbed/math/mskrv1.f:197:72:
+
+  197 |    10   YP(IBAK) = YP(IBAK)-TEMP(IBAK)*YP(IBAK+1)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 10 at (1)
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized -m64 -c -o ssrch.o /testbed/math/ssrch.f
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized -m64 -c -o cmul.o /testbed/math/cmul.f
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized -m64 -c -o permu.o /testbed/math/permu.f
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/include -I/build/include  -m64 -c -o boxsmooth.o /testbed/math/boxsmooth.c
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized -m64 -c -o zmul.o /testbed/math/zmul.f
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized -m64 -c -o dsvrgn.o /testbed/math/dsvrgn.f
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized -m64 -c -o smul.o /testbed/math/smul.f
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized -m64 -c -o dppval.o /testbed/math/dppval.f
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized -m64 -c -o ppval.o /testbed/math/ppval.f
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized -m64 -c -o svrgn.o /testbed/math/svrgn.f
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized -m64 -c -o dcsint.o /testbed/math/dcsint.f
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized -m64 -c -o svign.o /testbed/math/svign.f
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized -m64 -c -o daxpy.o /testbed/math/daxpy.f
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized -m64 -c -o csint.o /testbed/math/csint.f
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized -m64 -c -o toms510.o /testbed/math/toms510.f
+/testbed/math/toms510.f:155:72:
+
+  155 |       if (test) 80, 90, 100
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+/testbed/math/toms510.f:169:72:
+
+  169 |       if (test) 110, 120, 140
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+/testbed/math/toms510.f:173:72:
+
+  173 |       if (test) 120, 130, 60
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+/testbed/math/toms510.f:214:72:
+
+  214 |         if (test) 180, 190, 200
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized -m64 -c -o saxpy.o /testbed/math/saxpy.f
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized -m64 -c -o zaxpy.o /testbed/math/zaxpy.f
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized -m64 -c -o caxpy.o /testbed/math/caxpy.f
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized -m64 -c -o dgeco.o /testbed/math/dgeco.f
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized -m64 -c -o sgeco.o /testbed/math/sgeco.f
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized -m64 -c -o zgeco.o /testbed/math/zgeco.f
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized -m64 -c -o cgeco.o /testbed/math/cgeco.f
+make[1]: Leaving directory '/build/math'
+make[1]: Entering directory '/build/math'
+gfortran -Wall -Wextra -g -O3 -fno-range-check -fpic -fno-backslash -Wno-compare-reals -Wno-uninitialized  -m64 -o /build/lib64/libMdsMath.so -shared  caxpy.o cgeco.o cmul.o csint.o csval.o daxpy.o dcsint.o dcsval.o dgeco.o dmul.o dpermu.o dppval.o dsrch.o dsvrgn.o gn.o isrch.o msceez.o mskrv2.o mstrms.o mskrv1.o msshch.o permu.o ppval.o saxpy.o sgeco.o smul.o srch.o ssrch.o svign.o svrgn.o toms510.o umach.o zaxpy.o zgeco.o zmul.o boxsmooth.o -L/build/lib64/ -lMdsShr  -lm
+make[1]: Leaving directory '/build/math'
+make -C wfevent -j -l 18 -O
+cd .. && make  am--refresh
+make[2]: Nothing to be done for 'am--refresh'.
+ cd .. && /bin/bash ./config.status wfevent/Makefile depfiles
+config.status: creating wfevent/Makefile
+config.status: executing depfiles commands
+cd .. && make  am--refresh
+make[2]: Nothing to be done for 'am--refresh'.
+make[1]: Entering directory '/build/wfevent'
+depbase=`echo wfevent.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I/testbed/wfevent -I../include/mdsplus   -I/testbed/include -I../include  -m64 -Wall -Wextra -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -MT wfevent.o -MD -MP -MF $depbase.Tpo -c -o wfevent.o /testbed/wfevent/wfevent.c &&\
+mv -f $depbase.Tpo $depbase.Po
+make[1]: Leaving directory '/build/wfevent'
+make[1]: Entering directory '/build/wfevent'
+gcc -m64 -Wall -Wextra -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -Wl,-rpath-link=../lib64/  -o wfevent wfevent.o -L../lib64/ -lTdiShr -lMdsShr 
+make[1]: Leaving directory '/build/wfevent'
+make -C setevent -j -l 18 -O
+cd .. && make  am--refresh
+make[2]: Nothing to be done for 'am--refresh'.
+ cd .. && /bin/bash ./config.status setevent/Makefile depfiles
+config.status: creating setevent/Makefile
+config.status: executing depfiles commands
+cd .. && make  am--refresh
+make[2]: Nothing to be done for 'am--refresh'.
+make[1]: Entering directory '/build/setevent'
+depbase=`echo setevent.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I/testbed/setevent -I../include/mdsplus   -I/testbed/include -I../include  -m64 -Wall -Wextra -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -MT setevent.o -MD -MP -MF $depbase.Tpo -c -o setevent.o /testbed/setevent/setevent.c &&\
+mv -f $depbase.Tpo $depbase.Po
+make[1]: Leaving directory '/build/setevent'
+make[1]: Entering directory '/build/setevent'
+gcc -m64 -Wall -Wextra -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -Wl,-rpath-link=../lib64/  -o setevent setevent.o -L../lib64/ -lMdsShr 
+make[1]: Leaving directory '/build/setevent'
+make -C mdsmisc -j -l 18 -O
+make[1]: Entering directory '/build/mdsmisc'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing   -I/testbed/include -I/build/include  -m64 -c -o boxsmooth.o /testbed/mdsmisc/boxsmooth.c
+make[1]: Leaving directory '/build/mdsmisc'
+make[1]: Entering directory '/build/mdsmisc'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing   -I/testbed/include -I/build/include  -m64 -c -o fformat.o /testbed/mdsmisc/fformat.c
+make[1]: Leaving directory '/build/mdsmisc'
+make[1]: Entering directory '/build/mdsmisc'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing   -I/testbed/include -I/build/include  -m64 -c -o getnidarray.o /testbed/mdsmisc/getnidarray.c
+make[1]: Leaving directory '/build/mdsmisc'
+make[1]: Entering directory '/build/mdsmisc'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing   -I/testbed/include -I/build/include  -m64 -c -o step_resample.o /testbed/mdsmisc/step_resample.c
+make[1]: Leaving directory '/build/mdsmisc'
+make[1]: Entering directory '/build/mdsmisc'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing   -I/testbed/include -I/build/include  -m64 -c -o whoami.o /testbed/mdsmisc/whoami.c
+make[1]: Leaving directory '/build/mdsmisc'
+make[1]: Entering directory '/build/mdsmisc'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing   -I/testbed/include -I/build/include  -m64 -c -o resample.o /testbed/mdsmisc/resample.c
+make[1]: Leaving directory '/build/mdsmisc'
+make[1]: Entering directory '/build/mdsmisc'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing   -I/testbed/include -I/build/include  -m64 -c -o complex.o /testbed/mdsmisc/complex.c
+make[1]: Leaving directory '/build/mdsmisc'
+make[1]: Entering directory '/build/mdsmisc'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing   -I/testbed/include -I/build/include  -m64 -c -o MdsFilter.o /testbed/mdsmisc/MdsFilter.c
+make[1]: Leaving directory '/build/mdsmisc'
+make[1]: Entering directory '/build/mdsmisc'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing   -I/testbed/include -I/build/include  -m64 -c -o getreferences.o /testbed/mdsmisc/getreferences.c
+make[1]: Leaving directory '/build/mdsmisc'
+make[1]: Entering directory '/build/mdsmisc'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing   -I/testbed/include -I/build/include  -m64 -c -o bwfilter.o /testbed/mdsmisc/bwfilter.c
+make[1]: Leaving directory '/build/mdsmisc'
+make[1]: Entering directory '/build/mdsmisc'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing   -I/testbed/include -I/build/include  -m64 -c -o butterworth.o /testbed/mdsmisc/butterworth.c
+make[1]: Leaving directory '/build/mdsmisc'
+make[1]: Entering directory '/build/mdsmisc'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing   -I/testbed/include -I/build/include  -m64 -c -o fir.o /testbed/mdsmisc/fir.c
+make[1]: Leaving directory '/build/mdsmisc'
+make[1]: Entering directory '/build/mdsmisc'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing   -I/testbed/include -I/build/include  -m64 -c -o iir.o /testbed/mdsmisc/iir.c
+make[1]: Leaving directory '/build/mdsmisc'
+make[1]: Entering directory '/build/mdsmisc'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing   -I/testbed/include -I/build/include  -m64 -c -o filter.o /testbed/mdsmisc/filter.c
+make[1]: Leaving directory '/build/mdsmisc'
+make[1]: Entering directory '/build/mdsmisc'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing   -I/testbed/include -I/build/include  -m64 -c -o bessel.o /testbed/mdsmisc/bessel.c
+make[1]: Leaving directory '/build/mdsmisc'
+make[1]: Entering directory '/build/mdsmisc'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing   -I/testbed/include -I/build/include  -m64 -c -o ScopeUtilities.o /testbed/mdsmisc/ScopeUtilities.c
+make[1]: Leaving directory '/build/mdsmisc'
+make[1]: Entering directory '/build/mdsmisc'
+ar -cr /build/lib64/libMdsMisc.a boxsmooth.o bwfilter.o getnidarray.o getreferences.o resample.o step_resample.o fformat.o filter.o complex.o butterworth.o bessel.o fir.o iir.o MdsFilter.o whoami.o ScopeUtilities.o
+make[1]: Leaving directory '/build/mdsmisc'
+make[1]: Entering directory '/build/mdsmisc'
+ranlib /build/lib64/libMdsMisc.a
+make[1]: Leaving directory '/build/mdsmisc'
+make[1]: Entering directory '/build/mdsmisc'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing   -I/testbed/include -I/build/include   -m64 -o /build/lib64/libMdsMisc.so -shared  boxsmooth.o bwfilter.o getnidarray.o getreferences.o resample.o step_resample.o fformat.o filter.o complex.o butterworth.o bessel.o fir.o iir.o MdsFilter.o whoami.o ScopeUtilities.o  -lm -ldl  -L/build/lib64/ -lTdiShr -lTreeShr -lMdsShr -lXTreeShr
+make[1]: Leaving directory '/build/mdsmisc'
+make -C scripts -j -l 18 -O
+cd .. && make  am--refresh
+make[2]: Nothing to be done for 'am--refresh'.
+ cd .. && /bin/bash ./config.status scripts/Makefile 
+config.status: creating scripts/Makefile
+cd .. && make  am--refresh
+make[2]: Nothing to be done for 'am--refresh'.
+make[1]: Nothing to be done for 'all'.
+make -C rpm -j -l 18 -O
+cd .. && make  am--refresh
+make[2]: Nothing to be done for 'am--refresh'.
+ cd .. && /bin/bash ./config.status rpm/Makefile 
+config.status: creating rpm/Makefile
+cd .. && make  am--refresh
+make[2]: Nothing to be done for 'am--refresh'.
+make[1]: Entering directory '/build/rpm'
+cd .. && /bin/bash ./config.status rpm/post_install_script
+config.status: creating rpm/post_install_script
+make[1]: Leaving directory '/build/rpm'
+make[1]: Entering directory '/build/rpm'
+cd .. && /bin/bash ./config.status rpm/envsyms
+config.status: creating rpm/envsyms
+make[1]: Leaving directory '/build/rpm'
+make -C mdsobjects/cpp -j -l 18 -O
+make[1]: Entering directory '/build/mdsobjects/cpp'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing   -I/testbed/include -I/build/include  -I/testbed/tdishr -m64 -c -o mdstree.o /testbed/mdsobjects/cpp/mdstree.c
+make[1]: Leaving directory '/build/mdsobjects/cpp'
+make[1]: Entering directory '/build/mdsobjects/cpp'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing   -I/testbed/include -I/build/include  -I/testbed/tdishr -m64 -c -o mdsdata.o /testbed/mdsobjects/cpp/mdsdata.c
+make[1]: Leaving directory '/build/mdsobjects/cpp'
+make[1]: Entering directory '/build/mdsobjects/cpp'
+g++ -Wno-deprecated -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing   -g -O3 -I/testbed/include -I/build/include  -I/testbed/tdishr -m64 -c -o mdseventobjects.o /testbed/mdsobjects/cpp/mdseventobjects.cpp
+make[1]: Leaving directory '/build/mdsobjects/cpp'
+make[1]: Entering directory '/build/mdsobjects/cpp'
+g++ -Wno-deprecated -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing   -g -O3 -I/testbed/include -I/build/include  -I/testbed/tdishr -m64 -c -o datastreams.o /testbed/mdsobjects/cpp/datastreams.cpp
+make[1]: Leaving directory '/build/mdsobjects/cpp'
+make[1]: Entering directory '/build/mdsobjects/cpp'
+g++ -Wno-deprecated -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing   -g -O3 -I/testbed/include -I/build/include  -I/testbed/tdishr -m64 -c -o mdsipobjects.o /testbed/mdsobjects/cpp/mdsipobjects.cpp
+make[1]: Leaving directory '/build/mdsobjects/cpp'
+make[1]: Entering directory '/build/mdsobjects/cpp'
+g++ -Wno-deprecated -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing   -g -O3 -I/testbed/include -I/build/include  -I/testbed/tdishr -m64 -c -o mdstreeobjects.o /testbed/mdsobjects/cpp/mdstreeobjects.cpp
+make[1]: Leaving directory '/build/mdsobjects/cpp'
+make[1]: Entering directory '/build/mdsobjects/cpp'
+g++ -Wno-deprecated -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing   -g -O3 -I/testbed/include -I/build/include  -I/testbed/tdishr -m64 -c -o mdsdataobjects.o /testbed/mdsobjects/cpp/mdsdataobjects.cpp
+make[1]: Leaving directory '/build/mdsobjects/cpp'
+make[1]: Entering directory '/build/mdsobjects/cpp'
+ar -cr /build/lib64/libMdsObjectsCppShr.a mdsdataobjects.o mdstreeobjects.o mdsipobjects.o mdseventobjects.o datastreams.o  mdsdata.o mdstree.o
+make[1]: Leaving directory '/build/mdsobjects/cpp'
+make[1]: Entering directory '/build/mdsobjects/cpp'
+ranlib /build/lib64/libMdsObjectsCppShr.a
+make[1]: Leaving directory '/build/mdsobjects/cpp'
+make[1]: Entering directory '/build/mdsobjects/cpp'
+g++ -m64 -o /build/lib64/libMdsObjectsCppShr.so  -shared  mdsdataobjects.o mdstreeobjects.o mdsipobjects.o mdseventobjects.o datastreams.o  mdsdata.o mdstree.o -L/build/lib64/  -lMdsShr -lTreeShr -lTdiShr -lMdsIpShr  -lTdiShr -lTreeShr -lMdsShr  -Wno-deprecated -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing   -g -O3
+make[1]: Leaving directory '/build/mdsobjects/cpp'
+make -C manpages -j -l 18 -O
+cd .. && make  am--refresh
+make[2]: Nothing to be done for 'am--refresh'.
+ cd .. && /bin/bash ./config.status manpages/Makefile 
+config.status: creating manpages/Makefile
+cd .. && make  am--refresh
+make[2]: Nothing to be done for 'am--refresh'.
+make[1]: Nothing to be done for 'all'.
+make -C actions -j -l 18 -O
+cd .. && make  am--refresh
+make[2]: Nothing to be done for 'am--refresh'.
+ cd .. && /bin/bash ./config.status actions/Makefile depfiles
+config.status: creating actions/Makefile
+config.status: executing depfiles commands
+cd .. && make  am--refresh
+make[2]: Nothing to be done for 'am--refresh'.
+make[1]: Entering directory '/build/actions'
+depbase=`echo actlog.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I. -I/testbed/actions -I../include/mdsplus  -m64 -Wall -Wextra  -I/testbed/include -I../include   -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -MT actlog.o -MD -MP -MF $depbase.Tpo -c -o actlog.o /testbed/actions/actlog.c &&\
+mv -f $depbase.Tpo $depbase.Po
+make[1]: Leaving directory '/build/actions'
+make[1]: Entering directory '/build/actions'
+gcc  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -Wl,-rpath-link=../lib64/ -m64  -o actlog actlog.o -L../lib64/ -lTreeShr -lTdiShr -lMdsShr -lMdsIpShr -lMdsServerShr 
+make[1]: Leaving directory '/build/actions'
+make -C mdsobjects/labview -j -l 18 -O
+make[1]: Entering directory '/build/mdsobjects/labview'
+gcc -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/3rd-party-apis/labview/cintools -fPIC -m64 -I/testbed/include -I/build/include  -m64 -c -o lv.o /testbed/mdsobjects/labview/lv.c
+make[1]: Leaving directory '/build/mdsobjects/labview'
+make[1]: Entering directory '/build/mdsobjects/labview'
+ar -cr /build/lib64/libLV.a lv.o
+make[1]: Leaving directory '/build/mdsobjects/labview'
+make[1]: Entering directory '/build/mdsobjects/labview'
+ranlib /build/lib64/libLV.a
+make[1]: Leaving directory '/build/mdsobjects/labview'
+make[1]: Entering directory '/build/mdsobjects/labview'
+g++ -o /build/lib64/libLV.so -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/3rd-party-apis/labview/cintools -fPIC -m64 -shared  lv.o -L/build/lib64/  -lMdsShr  -Wno-deprecated -fPIC -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/3rd-party-apis/labview/cintools -m64 -g -O3
+make[1]: Leaving directory '/build/mdsobjects/labview'
+make secundary -j -l 18  -O
+make[2]: Entering directory '/build/mdsobjects/labview'
+g++ -Wno-deprecated -fPIC -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/3rd-party-apis/labview/cintools -m64 -g -O3 -I/testbed/include -I/build/include  -m64 -c -o mdsipobjectswrp.o /testbed/mdsobjects/labview/mdsipobjectswrp.cpp
+make[2]: Leaving directory '/build/mdsobjects/labview'
+make[2]: Entering directory '/build/mdsobjects/labview'
+g++ -Wno-deprecated -fPIC -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/3rd-party-apis/labview/cintools -m64 -g -O3 -I/testbed/include -I/build/include  -m64 -c -o mdseventobjectswrp.o /testbed/mdsobjects/labview/mdseventobjectswrp.cpp
+make[2]: Leaving directory '/build/mdsobjects/labview'
+make[2]: Entering directory '/build/mdsobjects/labview'
+g++ -Wno-deprecated -fPIC -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/3rd-party-apis/labview/cintools -m64 -g -O3 -I/testbed/include -I/build/include  -m64 -c -o mdstreeobjectswrp.o /testbed/mdsobjects/labview/mdstreeobjectswrp.cpp
+make[2]: Leaving directory '/build/mdsobjects/labview'
+make[2]: Entering directory '/build/mdsobjects/labview'
+g++ -Wno-deprecated -fPIC -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/3rd-party-apis/labview/cintools -m64 -g -O3 -I/testbed/include -I/build/include  -m64 -c -o mdsdataobjectswrp.o /testbed/mdsobjects/labview/mdsdataobjectswrp.cpp
+make[2]: Leaving directory '/build/mdsobjects/labview'
+make[2]: Entering directory '/build/mdsobjects/labview'
+ar -cr /build/lib64/libMDSobjectsLVShr.a mdsdataobjectswrp.o mdseventobjectswrp.o mdsipobjectswrp.o mdstreeobjectswrp.o
+make[2]: Leaving directory '/build/mdsobjects/labview'
+make[2]: Entering directory '/build/mdsobjects/labview'
+ranlib /build/lib64/libMDSobjectsLVShr.a
+make[2]: Leaving directory '/build/mdsobjects/labview'
+make[2]: Entering directory '/build/mdsobjects/labview'
+g++ -o /build/lib64/libMDSobjectsLVShr.so -Wno-deprecated -fPIC -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -I/testbed/3rd-party-apis/labview/cintools -m64 -g -O3 -shared  mdsdataobjectswrp.o mdseventobjectswrp.o mdsipobjectswrp.o mdstreeobjectswrp.o -L/build/lib64/  -lMdsShr -lTreeShr -lTdiShr -lMdsIpShr -lMdsObjectsCppShr -lLV  
+make[2]: Leaving directory '/build/mdsobjects/labview'
+make -C LabView -j -l 18 -O
+cd .. && make  am--refresh
+make[2]: Nothing to be done for 'am--refresh'.
+ cd .. && /bin/bash ./config.status LabView/Makefile 
+config.status: creating LabView/Makefile
+cd .. && make  am--refresh
+make[2]: Nothing to be done for 'am--refresh'.
+make[1]: Nothing to be done for 'all'.
+make -C testing -j -l 18 -O
+cd /build && make  am--refresh
+make[2]: Nothing to be done for 'am--refresh'.
+ cd /build && /bin/bash ./config.status testing/Makefile depfiles
+config.status: creating testing/Makefile
+config.status: executing depfiles commands
+cd /build && make  am--refresh
+make[2]: Nothing to be done for 'am--refresh'.
+Making all in backends/check
+cd /build && make  am--refresh
+make[3]: Nothing to be done for 'am--refresh'.
+ cd /build && /bin/bash ./config.status testing/backends/check/Makefile depfiles
+config.status: creating testing/backends/check/Makefile
+config.status: executing depfiles commands
+cd /build && make  am--refresh
+make[3]: Nothing to be done for 'am--refresh'.
+make[2]: Entering directory '/build/testing/backends/check'
+gcc -DHAVE_CONFIG_H -I. -I/testbed/testing/backends/check -I/build/include/mdsplus   -I/testbed/include -I/build/include  -m64 -Wall -Wextra -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -MT build_test-build_test.o -MD -MP -MF .deps/build_test-build_test.Tpo -c -o build_test-build_test.o `test -f 'build_test.c' || echo '/testbed/testing/backends/check/'`build_test.c
+make[2]: Leaving directory '/build/testing/backends/check'
+make[2]: Entering directory '/build/testing/backends/check'
+mv -f .deps/build_test-build_test.Tpo .deps/build_test-build_test.Po
+make[2]: Leaving directory '/build/testing/backends/check'
+make[2]: Entering directory '/build/testing/backends/check'
+gcc -DHAVE_CONFIG_H -I. -I/testbed/testing/backends/check -I/build/include/mdsplus   -I/testbed/include -I/build/include  -m64 -Wall -Wextra -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -MT libCheck_a-check_error.o -MD -MP -MF .deps/libCheck_a-check_error.Tpo -c -o libCheck_a-check_error.o `test -f 'check_error.c' || echo '/testbed/testing/backends/check/'`check_error.c
+make[2]: Leaving directory '/build/testing/backends/check'
+make[2]: Entering directory '/build/testing/backends/check'
+mv -f .deps/libCheck_a-check_error.Tpo .deps/libCheck_a-check_error.Po
+make[2]: Leaving directory '/build/testing/backends/check'
+make[2]: Entering directory '/build/testing/backends/check'
+gcc -DHAVE_CONFIG_H -I. -I/testbed/testing/backends/check -I/build/include/mdsplus   -I/testbed/include -I/build/include  -m64 -Wall -Wextra -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -MT libCheck_a-check_str.o -MD -MP -MF .deps/libCheck_a-check_str.Tpo -c -o libCheck_a-check_str.o `test -f 'check_str.c' || echo '/testbed/testing/backends/check/'`check_str.c
+make[2]: Leaving directory '/build/testing/backends/check'
+make[2]: Entering directory '/build/testing/backends/check'
+gcc -DHAVE_CONFIG_H -I. -I/testbed/testing/backends/check -I/build/include/mdsplus   -I/testbed/include -I/build/include  -m64 -Wall -Wextra -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -MT libCheck_a-check_list.o -MD -MP -MF .deps/libCheck_a-check_list.Tpo -c -o libCheck_a-check_list.o `test -f 'check_list.c' || echo '/testbed/testing/backends/check/'`check_list.c
+make[2]: Leaving directory '/build/testing/backends/check'
+make[2]: Entering directory '/build/testing/backends/check'
+mv -f .deps/libCheck_a-check_str.Tpo .deps/libCheck_a-check_str.Po
+make[2]: Leaving directory '/build/testing/backends/check'
+make[2]: Entering directory '/build/testing/backends/check'
+mv -f .deps/libCheck_a-check_list.Tpo .deps/libCheck_a-check_list.Po
+make[2]: Leaving directory '/build/testing/backends/check'
+make[2]: Entering directory '/build/testing/backends/check'
+gcc -DHAVE_CONFIG_H -I. -I/testbed/testing/backends/check -I/build/include/mdsplus   -I/testbed/include -I/build/include  -m64 -Wall -Wextra -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -MT libCheck_a-check_msg.o -MD -MP -MF .deps/libCheck_a-check_msg.Tpo -c -o libCheck_a-check_msg.o `test -f 'check_msg.c' || echo '/testbed/testing/backends/check/'`check_msg.c
+make[2]: Leaving directory '/build/testing/backends/check'
+make[2]: Entering directory '/build/testing/backends/check'
+mv -f .deps/libCheck_a-check_msg.Tpo .deps/libCheck_a-check_msg.Po
+make[2]: Leaving directory '/build/testing/backends/check'
+make[2]: Entering directory '/build/testing/backends/check'
+gcc -DHAVE_CONFIG_H -I. -I/testbed/testing/backends/check -I/build/include/mdsplus   -I/testbed/include -I/build/include  -m64 -Wall -Wextra -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -MT libCheck_a-check_print.o -MD -MP -MF .deps/libCheck_a-check_print.Tpo -c -o libCheck_a-check_print.o `test -f 'check_print.c' || echo '/testbed/testing/backends/check/'`check_print.c
+make[2]: Leaving directory '/build/testing/backends/check'
+make[2]: Entering directory '/build/testing/backends/check'
+mv -f .deps/libCheck_a-check_print.Tpo .deps/libCheck_a-check_print.Po
+make[2]: Leaving directory '/build/testing/backends/check'
+make[2]: Entering directory '/build/testing/backends/check'
+gcc -DHAVE_CONFIG_H -I. -I/testbed/testing/backends/check -I/build/include/mdsplus   -I/testbed/include -I/build/include  -m64 -Wall -Wextra -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -MT libCheck_a-check.o -MD -MP -MF .deps/libCheck_a-check.Tpo -c -o libCheck_a-check.o `test -f 'check.c' || echo '/testbed/testing/backends/check/'`check.c
+make[2]: Leaving directory '/build/testing/backends/check'
+make[2]: Entering directory '/build/testing/backends/check'
+mv -f .deps/libCheck_a-check.Tpo .deps/libCheck_a-check.Po
+make[2]: Leaving directory '/build/testing/backends/check'
+make[2]: Entering directory '/build/testing/backends/check'
+gcc -DHAVE_CONFIG_H -I. -I/testbed/testing/backends/check -I/build/include/mdsplus   -I/testbed/include -I/build/include  -m64 -Wall -Wextra -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -MT libCheck_a-check_pack.o -MD -MP -MF .deps/libCheck_a-check_pack.Tpo -c -o libCheck_a-check_pack.o `test -f 'check_pack.c' || echo '/testbed/testing/backends/check/'`check_pack.c
+make[2]: Leaving directory '/build/testing/backends/check'
+make[2]: Entering directory '/build/testing/backends/check'
+mv -f .deps/libCheck_a-check_pack.Tpo .deps/libCheck_a-check_pack.Po
+make[2]: Leaving directory '/build/testing/backends/check'
+make[2]: Entering directory '/build/testing/backends/check'
+gcc -DHAVE_CONFIG_H -I. -I/testbed/testing/backends/check -I/build/include/mdsplus   -I/testbed/include -I/build/include  -m64 -Wall -Wextra -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -MT libCheck_a-check_log.o -MD -MP -MF .deps/libCheck_a-check_log.Tpo -c -o libCheck_a-check_log.o `test -f 'check_log.c' || echo '/testbed/testing/backends/check/'`check_log.c
+make[2]: Leaving directory '/build/testing/backends/check'
+make[2]: Entering directory '/build/testing/backends/check'
+mv -f .deps/libCheck_a-check_log.Tpo .deps/libCheck_a-check_log.Po
+make[2]: Leaving directory '/build/testing/backends/check'
+make[2]: Entering directory '/build/testing/backends/check'
+gcc -DHAVE_CONFIG_H -I. -I/testbed/testing/backends/check -I/build/include/mdsplus   -I/testbed/include -I/build/include  -m64 -Wall -Wextra -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -MT libCheck_a-check_run.o -MD -MP -MF .deps/libCheck_a-check_run.Tpo -c -o libCheck_a-check_run.o `test -f 'check_run.c' || echo '/testbed/testing/backends/check/'`check_run.c
+make[2]: Leaving directory '/build/testing/backends/check'
+make[2]: Entering directory '/build/testing/backends/check'
+mv -f .deps/libCheck_a-check_run.Tpo .deps/libCheck_a-check_run.Po
+make[2]: Leaving directory '/build/testing/backends/check'
+make[2]: Entering directory '/build/testing/backends/check'
+rm -f libCheck.a
+make[2]: Leaving directory '/build/testing/backends/check'
+make[2]: Entering directory '/build/testing/backends/check'
+ar cru libCheck.a libCheck_a-check_error.o libCheck_a-check_list.o libCheck_a-check_log.o libCheck_a-check_msg.o libCheck_a-check_pack.o libCheck_a-check_print.o libCheck_a-check_run.o libCheck_a-check_str.o libCheck_a-check.o 
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/build/testing/backends/check'
+make[2]: Entering directory '/build/testing/backends/check'
+ranlib libCheck.a
+make[2]: Leaving directory '/build/testing/backends/check'
+make[2]: Entering directory '/build/testing/backends/check'
+gcc -m64 -Wall -Wextra -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing    -o build_test build_test-build_test.o libCheck.a -lm -lpthread 
+make[2]: Leaving directory '/build/testing/backends/check'
+Making all in .
+cd /build && make  am--refresh
+make[3]: Nothing to be done for 'am--refresh'.
+make[2]: Entering directory '/build/testing'
+gcc -DHAVE_CONFIG_H -I. -I/testbed/testing -I/build/include/mdsplus   -I/testbed/include -I/build/include  -D_TESTING -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -MT libMdsTest_a-base_backend.o -MD -MP -MF .deps/libMdsTest_a-base_backend.Tpo -c -o libMdsTest_a-base_backend.o `test -f 'base_backend.c' || echo '/testbed/testing/'`base_backend.c
+make[2]: Leaving directory '/build/testing'
+make[2]: Entering directory '/build/testing'
+mv -f .deps/libMdsTest_a-base_backend.Tpo .deps/libMdsTest_a-base_backend.Po
+make[2]: Leaving directory '/build/testing'
+make[2]: Entering directory '/build/testing'
+rm -f libMdsTest.a
+make[2]: Leaving directory '/build/testing'
+make[2]: Entering directory '/build/testing'
+ar cru libMdsTest.a libMdsTest_a-base_backend.o 
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/build/testing'
+make[2]: Entering directory '/build/testing'
+ranlib libMdsTest.a
+make[2]: Leaving directory '/build/testing'
+make[2]: Entering directory '/build/testing'
+gcc -DHAVE_CONFIG_H -I. -I/testbed/testing -I/build/include/mdsplus   -I/testbed/include -I/build/include  -D_TESTING -I/testbed/testing/backends/check -I/testbed/include -m64 -Wall -Wextra -Wall -Wextra  -g -O3 -fvisibility=hidden  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -fpic -shared-libgcc -fsigned-char -fno-strict-aliasing  -MT libMdsTestBackend_a-check_backend.o -MD -MP -MF .deps/libMdsTestBackend_a-check_backend.Tpo -c -o libMdsTestBackend_a-check_backend.o `test -f 'check_backend.c' || echo '/testbed/testing/'`check_backend.c
+make[2]: Leaving directory '/build/testing'
+make[2]: Entering directory '/build/testing'
+mv -f .deps/libMdsTestBackend_a-check_backend.Tpo .deps/libMdsTestBackend_a-check_backend.Po
+make[2]: Leaving directory '/build/testing'
+make[2]: Entering directory '/build/testing'
+rm -f libMdsTestBackend.a
+make[2]: Leaving directory '/build/testing'
+make[2]: Entering directory '/build/testing'
+ar cru libMdsTestBackend.a libMdsTestBackend_a-check_backend.o 
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/build/testing'
+make[2]: Entering directory '/build/testing'
+ranlib libMdsTestBackend.a
+make[2]: Leaving directory '/build/testing'
+make[2]: Entering directory '/build/testing'
+g++ -m64 -g -O3 -o /build/lib64/libMdsTestShr.so -shared  -Wl,-whole-archive backends/check/libCheck.a libMdsTestBackend.a -Wl,-no-whole-archive   
+make[2]: Leaving directory '/build/testing'
+make: Leaving directory '/build'
+make: Entering directory '/build'
+make -C mdsshr install
+make[1]: Entering directory '/build/mdsshr'
+/usr/bin/install -c -m 755 /build/lib64/libMdsShr.a /build/lib64/libMdsShr.so  /usr/local/mdsplus/lib
+make[1]: Leaving directory '/build/mdsshr'
+make -C treeshr install
+make[1]: Entering directory '/build/treeshr'
+/usr/bin/install -c -m 755  /build/lib64/libTreeShr.so  /usr/local/mdsplus/lib
+if test .so != .a ; then \
+	/usr/bin/install -c -m 644  /build/lib64/libTreeShr.a /usr/local/mdsplus/lib; \
+fi;
+make[1]: Leaving directory '/build/treeshr'
+make -C tdishr install
+make[1]: Entering directory '/build/tdishr'
+/usr/bin/install -c -m 755  /build/lib64/libTdiShr.so  /usr/local/mdsplus/lib
+if test ".so" != ".a" ; then \
+	/usr/bin/install -c -m 644  /build/lib64/libTdiShr.a /usr/local/mdsplus/lib; \
+fi;
+make[1]: Leaving directory '/build/tdishr'
+make -C tditest install
+make[1]: Entering directory '/build/tditest'
+/usr/bin/install -c -m 755  /build/bin64/tditest /usr/local/mdsplus/bin
+make[1]: Leaving directory '/build/tditest'
+make -C xtreeshr install
+make[1]: Entering directory '/build/xtreeshr'
+/usr/bin/install -c -m 755  /build/lib64/libXTreeShr.so  /usr/local/mdsplus/lib
+if test .so != .a ; then \
+	/usr/bin/install -c -m 644 /build/lib64/libXTreeShr.a /usr/local/mdsplus/lib; \
+fi;
+make[1]: Leaving directory '/build/xtreeshr'
+make -C mdstcpip install
+make[1]: Entering directory '/build/mdstcpip'
+/usr/bin/install -c -m 755  /build/bin64/mdsipd /build/bin64/mdsip_server /build/bin64/mdsip-client-ssh /build/bin64/mdsip-client-http /build/bin64/mdsip-client-local /build/bin64/mdsip-server-ssh /build/bin64/mdsip-server-http  /build/bin64/mdsip /build/bin64/mdsiptest  /usr/local/mdsplus/bin
+/usr/bin/install -c -m 755 /build/lib64/libMdsIpShr.so  /usr/local/mdsplus/lib
+if test ".so" != ".a" ; then \
+	/usr/bin/install -c -m 644  /build/lib64/libMdsIpShr.a /usr/local/mdsplus/lib; \
+fi;
+/usr/bin/install -c -m 755  /build/etc/mdsip.hosts /usr/local/mdsplus/etc
+/usr/bin/install -c -m 755 /build/lib64/libMdsIpSrvShr.so  /usr/local/mdsplus/lib
+/usr/bin/install -c -m 755 /build/lib64/libMdsIpTCP.so /usr/local/mdsplus/lib
+/usr/bin/install -c -m 755 /build/lib64/libMdsIpTCPV6.so /usr/local/mdsplus/lib
+/usr/bin/install -c -m 755 /build/lib64/libMdsIpTCPV6.so /build/lib64/libMdsIpUDT.so /build/lib64/libMdsIpUDTV6.so /usr/local/mdsplus/lib
+make[1]: Leaving directory '/build/mdstcpip'
+make -C mdslibidl install
+make[1]: Entering directory '/build/mdslibidl'
+/usr/bin/install -c -m 755  /build/lib64/libMdsLibIdl.so /usr/local/mdsplus/lib
+make[1]: Leaving directory '/build/mdslibidl'
+make -C mdsdcl install
+make[1]: Entering directory '/build/mdsdcl'
+/usr/bin/install -c -m 755 /build/bin64/mdsdcl /usr/local/mdsplus/bin
+/usr/bin/install -c -m 755 /build/lib64/libMdsdcl.so  /usr/local/mdsplus/lib
+make[1]: Leaving directory '/build/mdsdcl'
+make -C camshr install
+make[1]: Entering directory '/build/camshr'
+/usr/bin/install -c -m 755 /build/bin64/mdscts /usr/local/mdsplus/bin
+/usr/bin/install -c -m 755 /build/lib64/libcts_commands.so /usr/local/mdsplus/lib
+/usr/bin/install -c -m 755 /build/lib64/libCamShr.so.1.8 /usr/local/mdsplus/lib
+ln -sf libCamShr.so.1.8 /usr/local/mdsplus/lib/libCamShr.so.1
+ln -sf libCamShr.so.1 /usr/local/mdsplus/lib/libCamShr.so
+make[1]: Leaving directory '/build/camshr'
+make -C remcam install
+make[1]: Entering directory '/build/remcam'
+/usr/bin/install -c -m 755  /build/lib64/libRemCamShr.so /usr/local/mdsplus/lib
+make[1]: Leaving directory '/build/remcam'
+make -C ccl install
+make[1]: Entering directory '/build/ccl'
+/usr/bin/install -c -m 755  /build/lib64/libccl_commands.so /usr/local/mdsplus/lib
+/usr/bin/install -c -m 755  /build/bin64/mdsccl /usr/local/mdsplus/bin
+make[1]: Leaving directory '/build/ccl'
+make -C servershr install
+make[1]: Entering directory '/build/servershr'
+/usr/bin/install -c -m 755  /build/lib64/libMdsServerShr.so  /usr/local/mdsplus/lib
+if test ".so" != ".a" ; then \
+	/usr/bin/install -c -m 644  /build/lib64/libMdsServerShr.a /usr/local/mdsplus/lib; \
+fi;
+make[1]: Leaving directory '/build/servershr'
+make -C tcl install
+make[1]: Entering directory '/build/tcl'
+/usr/bin/install -c -m 755 /build/lib64/libtcl_commands.so /usr/local/mdsplus/lib
+/usr/bin/install -c -m 755 /build/bin64/mdstcl /usr/local/mdsplus/bin
+make[1]: Leaving directory '/build/tcl'
+make -C tdic install
+make[1]: Entering directory '/build/tdic'
+/usr/bin/install -c -m 755  /build/lib64/libTdiShrExt.so /usr/local/mdsplus/lib
+if (test .so != .a) then \
+	/usr/bin/install -c -m 644  /build/lib64/libTdiShrExt.a /usr/local/mdsplus/lib; \
+fi;
+/usr/bin/install -c -m 755  /build/bin64/tdic /usr/local/mdsplus/bin
+make[1]: Leaving directory '/build/tdic'
+make -C mdslib install
+make[1]: Entering directory '/build/mdslib'
+/usr/bin/mkdir -p /usr/local/mdsplus/lib
+/usr/bin/install -c -m 644  /build/lib64/libMdsLib.a /build/lib64/libMdsLib_client.a /usr/local/mdsplus/lib
+/usr/bin/install -c -m 755  /build/lib64/libMdsLib.so /build/lib64/libMdsLib_client.so   /usr/local/mdsplus/lib
+make[1]: Leaving directory '/build/mdslib'
+make -C math install
+make[1]: Entering directory '/build/math'
+/usr/bin/install -c -m 755 /build/lib64/libMdsMath.so /usr/local/mdsplus/lib
+make[1]: Leaving directory '/build/math'
+make -C wfevent install
+make[1]: Entering directory '/build/wfevent'
+cd .. && make  am--refresh
+make[2]: Entering directory '/build'
+make[2]: Nothing to be done for 'am--refresh'.
+make[2]: Leaving directory '/build'
+make[2]: Entering directory '/build/wfevent'
+cd .. && make  am--refresh
+make[3]: Entering directory '/build'
+make[3]: Nothing to be done for 'am--refresh'.
+make[3]: Leaving directory '/build'
+ /usr/bin/mkdir -p '/usr/local/mdsplus/bin'
+  /usr/bin/install -c wfevent '/usr/local/mdsplus/bin'
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/build/wfevent'
+make[1]: Leaving directory '/build/wfevent'
+make -C setevent install
+make[1]: Entering directory '/build/setevent'
+cd .. && make  am--refresh
+make[2]: Entering directory '/build'
+make[2]: Nothing to be done for 'am--refresh'.
+make[2]: Leaving directory '/build'
+make[2]: Entering directory '/build/setevent'
+cd .. && make  am--refresh
+make[3]: Entering directory '/build'
+make[3]: Nothing to be done for 'am--refresh'.
+make[3]: Leaving directory '/build'
+ /usr/bin/mkdir -p '/usr/local/mdsplus/bin'
+  /usr/bin/install -c setevent '/usr/local/mdsplus/bin'
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/build/setevent'
+make[1]: Leaving directory '/build/setevent'
+make -C mdsmisc install
+make[1]: Entering directory '/build/mdsmisc'
+/usr/bin/install -c -m 755  /build/lib64/libMdsMisc.so /usr/local/mdsplus/lib
+if (test .so != .a) then \
+	/usr/bin/install -c -m 644  /build/lib64/libMdsMisc.a /usr/local/mdsplus/lib; \
+fi;
+make[1]: Leaving directory '/build/mdsmisc'
+make -C scripts install
+make[1]: Entering directory '/build/scripts'
+cd .. && make  am--refresh
+make[2]: Entering directory '/build'
+make[2]: Nothing to be done for 'am--refresh'.
+make[2]: Leaving directory '/build'
+make[2]: Entering directory '/build/scripts'
+cd .. && make  am--refresh
+make[3]: Entering directory '/build'
+make[3]: Nothing to be done for 'am--refresh'.
+make[3]: Leaving directory '/build'
+ /usr/bin/mkdir -p '/usr/local/mdsplus/bin'
+ /usr/bin/install -c /testbed/scripts/job_finish /testbed/scripts/job_functions /testbed/scripts/job_output /testbed/scripts/job_que /testbed/scripts/job_start /testbed/scripts/job_wait /testbed/scripts/MonitorCpciData.py /testbed/scripts/remote_submit /testbed/scripts/SetMdsplusFileProtection /testbed/scripts/synchronize_unix /testbed/scripts/unix_submit '/usr/local/mdsplus/bin'
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/build/scripts'
+make[1]: Leaving directory '/build/scripts'
+make -C rpm install
+make[1]: Entering directory '/build/rpm'
+cd .. && make  am--refresh
+make[2]: Entering directory '/build'
+make[2]: Nothing to be done for 'am--refresh'.
+make[2]: Leaving directory '/build'
+make[2]: Entering directory '/build/rpm'
+cd .. && make  am--refresh
+make[3]: Entering directory '/build'
+make[3]: Nothing to be done for 'am--refresh'.
+make[3]: Leaving directory '/build'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/local/mdsplus/etc'
+ /usr/bin/install -c -m 644 /testbed/rpm/mdsplus.conf.template '/usr/local/mdsplus/etc'
+ /usr/bin/mkdir -p '/usr/local/mdsplus/rpm'
+ /usr/bin/install -c -m 644 /testbed/rpm/mdsipd.xinetd /testbed/rpm/mdsipsd.xinetd '/usr/local/mdsplus/rpm'
+ /usr/bin/mkdir -p '/usr/local/mdsplus/rpm'
+ /usr/bin/install -c post_install_script /testbed/rpm/removePythonModule.sh '/usr/local/mdsplus/rpm'
+ /usr/bin/mkdir -p '/usr/local/mdsplus/etc'
+ /usr/bin/install -c -m 644 envsyms '/usr/local/mdsplus/etc'
+ /usr/bin/mkdir -p '/usr/local/mdsplus/rpm'
+ /usr/bin/install -c /testbed/rpm/post_uninstall_script '/usr/local/mdsplus/rpm'
+make[2]: Leaving directory '/build/rpm'
+make[1]: Leaving directory '/build/rpm'
+make -C mdsobjects/cpp install
+make[1]: Entering directory '/build/mdsobjects/cpp'
+/usr/bin/install -c -m 755  /build/lib64/libMdsObjectsCppShr.so  /usr/local/mdsplus/lib
+# /usr/bin/install -c -m 755 /build/lib64/MdsObjectsCppShr-VS.dll /build/lib64/*.lib /usr/local/mdsplus/lib
+if test .so != .a ; then \
+	/usr/bin/install -c -m 644  /build/lib64/libMdsObjectsCppShr.a /usr/local/mdsplus/lib; \
+fi;
+make[1]: Leaving directory '/build/mdsobjects/cpp'
+make -C manpages install
+make[1]: Entering directory '/build/manpages'
+cd .. && make  am--refresh
+make[2]: Entering directory '/build'
+make[2]: Nothing to be done for 'am--refresh'.
+make[2]: Leaving directory '/build'
+make[2]: Entering directory '/build/manpages'
+cd .. && make  am--refresh
+make[3]: Entering directory '/build'
+make[3]: Nothing to be done for 'am--refresh'.
+make[3]: Leaving directory '/build'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/local/mdsplus/share/man/man1'
+ /usr/bin/install -c -m 644 '/testbed/manpages/mdsplus.groff' '/usr/local/mdsplus/share/man/man1/mdsplus.1'
+ /usr/bin/install -c -m 644 '/testbed/manpages/traverser.groff' '/usr/local/mdsplus/share/man/man1/traverser.1'
+ /usr/bin/mkdir -p '/usr/local/mdsplus/share/man/man5'
+ /usr/bin/install -c -m 644 '/testbed/manpages/mdsip.hosts.groff' '/usr/local/mdsplus/share/man/man5/mdsip.hosts.5'
+ /usr/bin/install -c -m 644 '/testbed/manpages/mdsplus.conf.groff' '/usr/local/mdsplus/share/man/man5/mdsplus.conf.5'
+make[2]: Leaving directory '/build/manpages'
+make[1]: Leaving directory '/build/manpages'
+make -C actions install
+make[1]: Entering directory '/build/actions'
+cd .. && make  am--refresh
+make[2]: Entering directory '/build'
+make[2]: Nothing to be done for 'am--refresh'.
+make[2]: Leaving directory '/build'
+make[2]: Entering directory '/build/actions'
+cd .. && make  am--refresh
+make[3]: Entering directory '/build'
+make[3]: Nothing to be done for 'am--refresh'.
+make[3]: Leaving directory '/build'
+ /usr/bin/mkdir -p '/usr/local/mdsplus/bin'
+  /usr/bin/install -c actlog '/usr/local/mdsplus/bin'
+make[2]: Leaving directory '/build/actions'
+make[1]: Leaving directory '/build/actions'
+make -C mdsobjects/labview install
+make[1]: Entering directory '/build/mdsobjects/labview'
+/usr/bin/mkdir -p /usr/local/mdsplus/LabView
+tar -C /testbed/mdsobjects/labview -cf - MDSplus | tar -C /usr/local/mdsplus/LabView -xf -
+tar -C /testbed/mdsobjects/labview -cf - MDSplus_LV2012 | tar -C /usr/local/mdsplus/LabView -xf -
+tar -C /testbed/mdsobjects/labview -cf - MDSplus_LV2015 | tar -C /usr/local/mdsplus/LabView -xf -
+/usr/bin/install -c -m 755  /build/lib64/libMDSobjectsLVShr.so /usr/local/mdsplus/lib
+/usr/bin/install -c -m 755  /build/lib64/libMDSobjectsLVShr /usr/local/mdsplus/lib
+/usr/bin/install -c -m 755  /build/lib64/MDSobjectsLVShr /usr/local/mdsplus/lib
+/usr/bin/install -c -m 755  /build/lib64/libLV.so /usr/local/mdsplus/lib
+make[1]: Leaving directory '/build/mdsobjects/labview'
+make -C LabView install
+make[1]: Entering directory '/build/LabView'
+cd .. && make  am--refresh
+make[2]: Entering directory '/build'
+make[2]: Nothing to be done for 'am--refresh'.
+make[2]: Leaving directory '/build'
+make[2]: Entering directory '/build/LabView'
+cd .. && make  am--refresh
+make[3]: Entering directory '/build'
+make[3]: Nothing to be done for 'am--refresh'.
+make[3]: Leaving directory '/build'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /usr/bin/mkdir -p '/usr/local/mdsplus/LabView'
+ /usr/bin/install -c -m 644 /testbed/LabView/MdsClose.vi /testbed/LabView/MdsConnect.vi /testbed/LabView/MdsDescrInt1D.vi /testbed/LabView/MdsDescrInt2D.vi /testbed/LabView/MdsDescrInt.vi /testbed/LabView/MdsDescrSingle1D.vi /testbed/LabView/MdsDescrSingle.vi /testbed/LabView/MdsDescrStr.vi /testbed/LabView/MdsDisconnect.vi /testbed/LabView/MdsGetInt1D.vi /testbed/LabView/MdsGetInt.vi /testbed/LabView/MdsGetSingle1D.vi /testbed/LabView/MdsGetSingle.vi /testbed/LabView/MdsGetStr.vi /testbed/LabView/MdsOpen.vi /testbed/LabView/MdsPut.vi /testbed/LabView/MdsSetEvent.vi /testbed/LabView/MdsWaitForEvent.vi /testbed/LabView/Sample1-GetInt.vi /testbed/LabView/Sample2-PutInt.vi /testbed/LabView/Sample3-PutArray.vi /testbed/LabView/Sample4-PutSignal.vi /testbed/LabView/Sample5-GetSngArray.vi /testbed/LabView/Sample6-GetPutWithEvents.vi /testbed/LabView/Sample7-Put2DArray.vi '/usr/local/mdsplus/LabView'
+make[2]: Leaving directory '/build/LabView'
+make[1]: Leaving directory '/build/LabView'
+make -C testing install
+make[1]: Entering directory '/build/testing'
+cd /build && make  am--refresh
+make[2]: Entering directory '/build'
+make[2]: Nothing to be done for 'am--refresh'.
+make[2]: Leaving directory '/build'
+Making install in backends/check
+make[2]: Entering directory '/build/testing/backends/check'
+cd /build && make  am--refresh
+make[3]: Entering directory '/build'
+make[3]: Nothing to be done for 'am--refresh'.
+make[3]: Leaving directory '/build'
+make[3]: Entering directory '/build/testing/backends/check'
+cd /build && make  am--refresh
+make[4]: Entering directory '/build'
+make[4]: Nothing to be done for 'am--refresh'.
+make[4]: Leaving directory '/build'
+ /usr/bin/mkdir -p '/usr/local/mdsplus/bin'
+  /usr/bin/install -c build_test '/usr/local/mdsplus/bin'
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/build/testing/backends/check'
+make[2]: Leaving directory '/build/testing/backends/check'
+Making install in .
+make[2]: Entering directory '/build/testing'
+cd /build && make  am--refresh
+make[3]: Entering directory '/build'
+make[3]: Nothing to be done for 'am--refresh'.
+make[3]: Leaving directory '/build'
+make[3]: Entering directory '/build/testing'
+cd /build && make  am--refresh
+make[4]: Entering directory '/build'
+make[4]: Nothing to be done for 'am--refresh'.
+make[4]: Leaving directory '/build'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/build/testing'
+make[2]: Leaving directory '/build/testing'
+make[1]: Leaving directory '/build/testing'
+/usr/bin/mkdir -p /usr/local/mdsplus/local/tdi
+/usr/bin/mkdir -p /usr/local/mdsplus/java
+find /usr/local/mdsplus/java -name '*.class' -delete #### No need to include class files
+tar -C /testbed \
+	--exclude='.gitignore' \
+	--exclude='*.pyc' \
+	--exclude=__pycache__ \
+	--exclude=python/build \
+                --exclude=tdi/*Devices/build \
+	--exclude='*egg-info' \
+	--exclude='*\.in' \
+	--exclude='Makefile\.*' \
+	-cf  - tdi pydevices idl trees setup.sh setup.csh ChangeLog mdsplus.ico include mdsobjects/python desktop pixmaps matlab php epics xml nodejs | (cd /usr/local/mdsplus; tar -xf -)
+find . -name '_version\.py' -not -path ".//usr/local/mdsplus/*" -exec cp {} /usr/local/mdsplus/{} \;
+tar -C /build -cf - include/mdsplus/mdsconfig.h | (cd /usr/local/mdsplus; tar -xf -) ## TODO: remove this and config.h from headers ...
+if [ ! -z "$MDSPLUS_VERSION" ]; then echo "mdsplus_version='$MDSPLUS_VERSION'" > /usr/local/mdsplus/mdsobjects/python/mdsplus_version.py; fi
+/usr/bin/install -c /testbed/MDSplus-License.txt /testbed/MDSplus-License.rtf /usr/local/mdsplus
+(cd /usr/local/mdsplus; chmod -R 755 tdi pydevices idl trees setup.sh setup.csh ChangeLog mdsplus.ico include mdsobjects/python desktop pixmaps matlab php epics xml nodejs)
+make: Leaving directory '/build'

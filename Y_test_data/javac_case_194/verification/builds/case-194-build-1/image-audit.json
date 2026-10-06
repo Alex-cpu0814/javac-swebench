@@ -1,0 +1,12 @@
+{
+  "schema_version": "3.0",
+  "instance_id": "MDSplus__mdsplus-1423",
+  "base_commit": "a73d6e87149698e49026e3bf8055efc6bbe71d90",
+  "working_tree_clean": true,
+  "fix_commit_present": false,
+  "model_patch_present": false,
+  "test_patch_present": false,
+  "gold_patch_present": false,
+  "evaluation_assets_injected_at_runtime": true,
+  "network_disabled_during_audit": true
+}

@@ -1,0 +1,86 @@
+make: Entering directory '/build/tditest/testing'
+cd /build && make V=0 am--refresh
+make[1]: Entering directory '/build'
+make[1]: Nothing to be done for 'am--refresh'.
+make[1]: Leaving directory '/build'
+ cd /build && /bin/bash ./config.status tditest/testing/Makefile 
+config.status: creating tditest/testing/Makefile
+cd /build && make V=0 am--refresh
+make[1]: Entering directory '/build'
+make[1]: Nothing to be done for 'am--refresh'.
+make[1]: Leaving directory '/build'
+make V=0  test-tdishr.tdi
+make[1]: Entering directory '/build/tditest/testing'
+cd /build && make V=0 am--refresh
+make[2]: Entering directory '/build'
+make[2]: Nothing to be done for 'am--refresh'.
+make[2]: Leaving directory '/build'
+make[1]: Nothing to be done for '/testbed/tditest/testing/test-tdishr.tdi'.
+make[1]: Leaving directory '/build/tditest/testing'
+make V=0 check-TESTS
+make[1]: Entering directory '/build/tditest/testing'
+cd /build && make V=0 am--refresh
+make[2]: Entering directory '/build'
+make[2]: Nothing to be done for 'am--refresh'.
+make[2]: Leaving directory '/build'
+make[2]: Entering directory '/build/tditest/testing'
+cd /build && make V=0 am--refresh
+make[3]: Entering directory '/build'
+make[3]: Nothing to be done for 'am--refresh'.
+make[3]: Leaving directory '/build'
+PASS: test-tdishr.tdi
+============================================================================
+Testsuite summary for MDSplus 7a
+============================================================================
+# TOTAL: 1
+# PASS:  1
+# SKIP:  0
+# XFAIL: 0
+# FAIL:  0
+# XPASS: 0
+# ERROR: 0
+============================================================================
+make[2]: Leaving directory '/build/tditest/testing'
+make[1]: Leaving directory '/build/tditest/testing'
+make: Leaving directory '/build/tditest/testing'
+test-tdishr (MDSplus.tditest) ... ok
+make: Entering directory '/build/tditest/testing'
+cd /build && make V=0 am--refresh
+make[1]: Entering directory '/build'
+make[1]: Nothing to be done for 'am--refresh'.
+make[1]: Leaving directory '/build'
+make V=0  test-treeshr.tdi
+make[1]: Entering directory '/build/tditest/testing'
+cd /build && make V=0 am--refresh
+make[2]: Entering directory '/build'
+make[2]: Nothing to be done for 'am--refresh'.
+make[2]: Leaving directory '/build'
+make[1]: Nothing to be done for '/testbed/tditest/testing/test-treeshr.tdi'.
+make[1]: Leaving directory '/build/tditest/testing'
+make V=0 check-TESTS
+make[1]: Entering directory '/build/tditest/testing'
+cd /build && make V=0 am--refresh
+make[2]: Entering directory '/build'
+make[2]: Nothing to be done for 'am--refresh'.
+make[2]: Leaving directory '/build'
+make[2]: Entering directory '/build/tditest/testing'
+cd /build && make V=0 am--refresh
+make[3]: Entering directory '/build'
+make[3]: Nothing to be done for 'am--refresh'.
+make[3]: Leaving directory '/build'
+PASS: test-treeshr.tdi
+============================================================================
+Testsuite summary for MDSplus 7a
+============================================================================
+# TOTAL: 1
+# PASS:  1
+# SKIP:  0
+# XFAIL: 0
+# FAIL:  0
+# XPASS: 0
+# ERROR: 0
+============================================================================
+make[2]: Leaving directory '/build/tditest/testing'
+make[1]: Leaving directory '/build/tditest/testing'
+make: Leaving directory '/build/tditest/testing'
+test-treeshr (MDSplus.tditest) ... ok

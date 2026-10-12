@@ -1,0 +1,8 @@
+{
+  "base_commit": "f73b7a58deb6a608af5b419645e17af9dd07b04a",
+  "fix_commit": "6ff21eaf542ab397ce58f069ed2cb8656f927f29",
+  "official_blob_hashes_verified": true,
+  "complete_upstream_reference_sha256": "55ddbaa94e3ed89b5330e1e698e6a4d5014f64e8064f212b20ec7a184f6ee061",
+  "candidate_test_only": true,
+  "fix_source_visibility": "executor_only"
+}

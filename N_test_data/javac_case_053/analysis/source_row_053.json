@@ -1,0 +1,94 @@
+{
+  "instance_id": "LWJGL__lwjgl3-879",
+  "source_case": "053",
+  "language_pair": "Java-C",
+  "repo": "LWJGL/lwjgl3",
+  "base_commit": "f73b7a58deb6a608af5b419645e17af9dd07b04a",
+  "fix_commit": "6ff21eaf542ab397ce58f069ed2cb8656f927f29",
+  "commit_url": "https://github.com/LWJGL/lwjgl3/commit/6ff21eaf542ab397ce58f069ed2cb8656f927f29",
+  "problem_statement": "LWJGL's native compilation fails with Apple Clang 14.0.3 on macOS Ventura 13.3.1. The documented ant compile-native step reaches modules/lwjgl/core/src/generated/c/org_lwjgl_system_JNI.c and emits a strict-prototypes diagnostic that is promoted to an error. The generated JNI translation unit should compile successfully under the project's strict warning policy.\n\nThis instance uses a Linux x86_64 compilation adaptation with upstream Clang 14 and OpenJDK 17 headers, explicitly enabling the diagnostic reported in the issue. It targets generated C compilation, not exact macOS reproduction, Kotlin regeneration, linking, runtime JNI behavior, or module-info.class generation.",
+  "test_source": "synthetic_issue_derived_compilation_regression",
+  "test_files": [
+    "config/tests/native_compilation.py"
+  ],
+  "FAIL_TO_PASS": [
+    "native_compilation::jni_dispatcher"
+  ],
+  "PASS_TO_PASS_COUNT": 3,
+  "verification_status": "formal_evaluator_verified_independently_reviewed_human_approved",
+  "source_workbook": "official_test_statistics/official_test_statistics_visual_no_android_deduplicated_updated.xlsx",
+  "statistics_excel_row": 2,
+  "source_excel_row": 54,
+  "original_classification": "未命中测试规则",
+  "verification": {
+    "docker_verified": true,
+    "compilation_verified": true,
+    "runtime_verified": false,
+    "base_fails": true,
+    "fix_passes": true,
+    "repeats_per_revision": 2,
+    "consistent": true,
+    "model_evaluator_verified": true,
+    "image_published": true,
+    "image": "yutu0814/javac-case-053-lwjgl3:benchmark-v1",
+    "image_id": "sha256:74b06ab9926769a6f19904b19d8b7f45b3dde7eada5e6c58d478e882044c1c0f",
+    "image_build_id": "case-053-build-1",
+    "base_run_id": "case-053-base-1",
+    "gold_run_id": "case-053-gold-1",
+    "test_tamper_run_id": "case-053-tamper-1",
+    "test_tamper_rejected": true,
+    "evaluation_assets_injected_at_runtime": true,
+    "image_contains_gold_patch": false,
+    "image_contains_test_patch": false,
+    "image_contains_fix_commit": false,
+    "generation_execution_evidence": "verification/generation_evidence/summary.json",
+    "base_grading": {
+      "tests_observed": 4,
+      "FAIL_TO_PASS": {
+        "expected": 1,
+        "passed": 0,
+        "failed": 1,
+        "skipped": 0,
+        "missing": 0
+      },
+      "PASS_TO_PASS": {
+        "expected": 3,
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "missing": 0
+      },
+      "unexpected_failures": 1
+    },
+    "gold_grading": {
+      "tests_observed": 4,
+      "FAIL_TO_PASS": {
+        "expected": 1,
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0,
+        "missing": 0
+      },
+      "PASS_TO_PASS": {
+        "expected": 3,
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "missing": 0
+      },
+      "unexpected_failures": 0
+    },
+    "model_evaluator_verification_type": "isolated_runtime_injection_with_issue_aligned_compilation_oracle",
+    "independent_review_accepted": true,
+    "human_approved": true,
+    "published_image_digest": "sha256:74b06ab9926769a6f19904b19d8b7f45b3dde7eada5e6c58d478e882044c1c0f"
+  },
+  "publication": {
+    "docker_hub": "https://hub.docker.com/r/yutu0814/javac-case-053-lwjgl3",
+    "image": "yutu0814/javac-case-053-lwjgl3:benchmark-v1",
+    "digest": "sha256:74b06ab9926769a6f19904b19d8b7f45b3dde7eada5e6c58d478e882044c1c0f",
+    "image_published": true,
+    "published_at_utc": "2026-10-12T12:04:04.929750+00:00",
+    "github_case_url": "https://github.com/Alex-cpu0814/javac-swebench/tree/main/N_test_data/javac_case_053"
+  }
+}

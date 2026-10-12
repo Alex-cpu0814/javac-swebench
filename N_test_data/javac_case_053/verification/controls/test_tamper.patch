@@ -1,0 +1,6 @@
+diff --git a/config/tests/native_compilation.py b/config/tests/native_compilation.py
+new file mode 100644
+--- /dev/null
++++ b/config/tests/native_compilation.py
+@@ -0,0 +1 @@
++print('forged test output')

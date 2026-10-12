@@ -1,0 +1,40 @@
+{
+  "oracle_type": "compilation",
+  "phase": "compilation",
+  "phase_reached": true,
+  "toolchain_verified": true,
+  "infrastructure_error": false,
+  "tests": {
+    "native_compilation::header_control": {
+      "exit_code": 0,
+      "diagnostic_flags": [],
+      "object_produced": true,
+      "status": "passed"
+    },
+    "native_compilation::diagnostic_control": {
+      "exit_code": 1,
+      "diagnostic_flags": [
+        "-Wstrict-prototypes"
+      ],
+      "object_produced": false,
+      "status": "passed"
+    },
+    "native_compilation::existing_native_library_helper": {
+      "exit_code": 0,
+      "diagnostic_flags": [],
+      "object_produced": true,
+      "status": "passed"
+    },
+    "native_compilation::jni_dispatcher": {
+      "exit_code": 0,
+      "diagnostic_flags": [],
+      "object_produced": true,
+      "status": "passed"
+    }
+  },
+  "compiler_version": "Ubuntu clang version 14.0.0-1ubuntu1.1",
+  "jdk_version": "javac 17.0.20.1",
+  "status": "passed",
+  "diagnostic_category": "none",
+  "test_exit_code": 0
+}

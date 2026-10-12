@@ -1,0 +1,120 @@
+diff --git a/config/tests/native_compilation.py b/config/tests/native_compilation.py
+new file mode 100644
+--- /dev/null
++++ b/config/tests/native_compilation.py
+@@ -0,0 +1,115 @@
++#!/usr/bin/env python3
++"""Compile the actual JNI dispatcher with the issue's strict-prototype diagnostic.
++
++Linux adaptation of the Clang native-compile operation in config/*/build.xml.
++No production source inspection, downloads, JVM execution, or native stubs.
++"""
++import argparse
++import json
++import os
++from pathlib import Path
++import platform
++import re
++import shutil
++import subprocess
++import tempfile
++
++
++def main():
++    parser = argparse.ArgumentParser()
++    parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[2])
++    args = parser.parse_args()
++    root = args.root.resolve()
++    cc = shutil.which(os.environ.get("CC", "clang-14"))
++    java_home = Path(os.environ.get("JAVA_HOME", "/usr/lib/jvm/java-17-openjdk-amd64"))
++    result = {"oracle_type": "compilation", "phase": "compilation",
++              "phase_reached": False, "toolchain_verified": False,
++              "infrastructure_error": False, "tests": {}}
++    if not cc or not (java_home / "include/jni.h").is_file():
++        result.update(status="error", infrastructure_error=True, diagnostic_category="missing_toolchain_or_jni_headers")
++        print(json.dumps(result))
++        return 2
++    version = subprocess.run([cc, "--version"], capture_output=True, text=True)
++    javac = subprocess.run([str(java_home / "bin/javac"), "-version"], capture_output=True, text=True)
++    banner = version.stdout.splitlines()[0] if version.stdout else ""
++    java_banner = (javac.stdout + javac.stderr).strip()
++    result["compiler_version"] = banner
++    result["jdk_version"] = java_banner
++    if (version.returncode or javac.returncode or not re.search(r"clang version 14\.", banner)
++            or not re.search(r"javac 17\.", java_banner)
++            or platform.system() != "Linux" or platform.machine() != "x86_64"):
++        result.update(status="error", infrastructure_error=True, diagnostic_category="unexpected_toolchain_or_platform")
++        print(json.dumps(result))
++        return 2
++    result["toolchain_verified"] = True
++    native = root / "modules/lwjgl/core/src/main/c"
++    target = root / "modules/lwjgl/core/src/generated/c/org_lwjgl_system_JNI.c"
++    regression = native / "org_lwjgl_system_SharedLibraryUtil.c"
++    required = [native / "common_tools.h", native / "linux/LinuxConfig.h", target, regression]
++    if not all(p.is_file() for p in required):
++        result.update(status="error", infrastructure_error=True, diagnostic_category="missing_project_compilation_inputs")
++        print(json.dumps(result))
++        return 2
++    # The ordinary C compilation options come from the Base Linux Ant macro.
++    # Explicitly enable the diagnostic reported by Apple Clang, since upstream
++    # Clang 14 has different default warning groups. This is an adaptation.
++    flags = ["-c", "-std=gnu11", "-O3", "-fPIC", "-Werror", "-Wfatal-errors",
++             "-Wall", "-Wextra", "-pedantic", "-Wstrict-prototypes", "-pthread",
++             "-DNDEBUG", "-DLWJGL_LINUX", "-DLWJGL_x64", "-U_FORTIFY_SOURCE",
++             "-D_FORTIFY_SOURCE=0", "-D_GNU_SOURCE", "-D_FILE_OFFSET_BITS=64",
++             "-I" + str(java_home / "include"), "-I" + str(java_home / "include/linux"),
++             "-I" + str(native), "-I" + str(native / "linux")]
++    with tempfile.TemporaryDirectory(prefix="lwjgl-native-test-") as temp:
++        temp = Path(temp)
++
++        def compile_source(path, name):
++            process = subprocess.run([cc] + flags + [str(path), "-o", str(temp / (name + ".o"))],
++                                     capture_output=True, text=True)
++            # Preserve only diagnostic categories. Compiler stderr may quote
++            # source lines, which must not reach a blind reviewer on Fix runs.
++            categories = sorted(set(re.findall(r"-W[a-z][a-z0-9-]*", process.stderr)))
++            return {"exit_code": process.returncode, "diagnostic_flags": categories,
++                    "object_produced": (temp / (name + ".o")).is_file()}
++
++        control = temp / "header_control.c"
++        control.write_text('#include "common_tools.h"\nJNIEXPORT jint JNICALL Java_NativeCompileControl_value(JNIEnv *env, jclass clazz) {\n    UNUSED_PARAMS(env, clazz)\n    return 7;\n}\n', encoding="utf-8")
++        header = compile_source(control, "header_control")
++        header["status"] = "passed" if header["exit_code"] == 0 and header["object_produced"] else "failed"
++        result["tests"]["native_compilation::header_control"] = header
++
++        negative = temp / "diagnostic_control.c"
++        negative.write_text("extern int diagnostic_control();\n", encoding="utf-8")
++        diagnostic = compile_source(negative, "diagnostic_control")
++        diagnostic["status"] = "passed" if diagnostic["exit_code"] != 0 and "-Wstrict-prototypes" in diagnostic["diagnostic_flags"] else "failed"
++        result["tests"]["native_compilation::diagnostic_control"] = diagnostic
++        if header["status"] != "passed" or diagnostic["status"] != "passed":
++            result.update(status="error", infrastructure_error=True, diagnostic_category="compilation_control_failed")
++            print(json.dumps(result))
++            return 2
++
++        result["phase_reached"] = True
++        existing = compile_source(regression, "existing_native_library_helper")
++        existing["status"] = "passed" if existing["exit_code"] == 0 and existing["object_produced"] else "failed"
++        result["tests"]["native_compilation::existing_native_library_helper"] = existing
++        if existing["status"] != "passed":
++            result.update(status="error", infrastructure_error=True, diagnostic_category="selected_native_regression_failed")
++            print(json.dumps(result))
++            return 2
++        compiled = compile_source(target, "jni_dispatcher")
++        compiled["status"] = "passed" if compiled["exit_code"] == 0 and compiled["object_produced"] else "failed"
++        result["tests"]["native_compilation::jni_dispatcher"] = compiled
++        if compiled["status"] == "passed":
++            result.update(status="passed", diagnostic_category="none")
++            code = 0
++        elif "-Wstrict-prototypes" in compiled["diagnostic_flags"]:
++            result.update(status="failed", diagnostic_category="strict_prototypes")
++            code = 1
++        else:
++            result.update(status="error", infrastructure_error=True, diagnostic_category="unrelated_compilation_failure")
++            code = 2
++    print(json.dumps(result))
++    return code
++
++
++if __name__ == "__main__":
++    raise SystemExit(main())

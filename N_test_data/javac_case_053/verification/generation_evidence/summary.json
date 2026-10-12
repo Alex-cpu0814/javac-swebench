@@ -1,0 +1,29 @@
+{
+  "instance_id": "LWJGL__lwjgl3-879",
+  "candidate_id": "candidate_01",
+  "execution_validated": true,
+  "status": "execution_validated_pending_review",
+  "oracle_type": "compilation",
+  "FAIL_TO_PASS": [
+    "native_compilation::jni_dispatcher"
+  ],
+  "PASS_TO_PASS": [
+    "native_compilation::header_control",
+    "native_compilation::diagnostic_control",
+    "native_compilation::existing_native_library_helper"
+  ],
+  "repeats_per_revision": 2,
+  "consistent": true,
+  "candidate_patch_sha256": "b3667c6b6dc02d58b3cb8be4a6df370f896d0ae6dc022ef5b9fa86be0e5c2823",
+  "base_commit": "f73b7a58deb6a608af5b419645e17af9dd07b04a",
+  "fix_commit": "6ff21eaf542ab397ce58f069ed2cb8656f927f29",
+  "reference_file_count": 2,
+  "complete_upstream_reference_applied": true,
+  "fixed_files_match_official_blobs": true,
+  "image_id": "sha256:0110f64da5125e56d08088802f0dbfcfe58f652db8ba83105cb2df135fd3d495",
+  "golden_source_disclosed": false,
+  "platform_scope": "Linux x86_64 adaptation with upstream Clang 14 and explicit -Wstrict-prototypes; original macOS/Apple Clang environment not executed.",
+  "independent_review_completed": false,
+  "human_approval_received": false,
+  "formal_dataset_written": false
+}

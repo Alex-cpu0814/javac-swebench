@@ -1,6 +1,6 @@
 # Java-C SWE-bench-compatible cases
 
-This repository contains sixteen Java-C cross-language bug cases converted to a
+This repository contains seventeen Java-C cross-language bug cases converted to a
 SWE-bench-compatible record format. Cases are separated by test provenance:
 `Y_test_data/` contains Fix commits with extractable official regression tests;
 `N_test_data/` contains cases whose protected tests were constructed, adapted,
@@ -19,6 +19,7 @@ or wrapped during dataset production.
 | Y | 175 | `kohlschutter__junixsocket-135` | 135 | 1 | 1 |
 | Y | 194 | `MDSplus__mdsplus-1423` | 1423 | 1 | 1 |
 | Y | 200 | `MDSplus__mdsplus-2375` | 2375 | 1 | 1 |
+| N | 053 | `LWJGL__lwjgl3-879` | 879 | 1 | 3 |
 | N | 093 | `ninia__jep-79` | 79 | 1 | 130 |
 | N | 094 | `ninia__jep-40` | 40 | 1 | 95 |
 | N | 096 | `ninia__jep-22` | 22 | 1 | 78 |
@@ -38,6 +39,28 @@ lossless comparison. Published evaluator image:
 yutu0814/javac-case-112-openjpeg:benchmark-v1
 sha256:33a22445240b5d6abba03d5c41a277d721fc8940f51aa3e7b7138daeb2f87305
 ```
+
+## Case 053
+
+Case 053 uses a synthetic, issue-derived compilation test for the
+`strict-prototypes` failure in LWJGL's generated JNI dispatcher. Its accepted
+scope is Linux x86_64 with upstream Clang 14 and OpenJDK 17, explicitly enabling
+the diagnostic reported by Apple Clang. It does not claim exact macOS
+reproduction, full Ant builds, linking, runtime JNI behavior, or module-info
+generation. The three P2P nodes comprise two compilation controls and one
+existing native-helper compilation.
+
+The candidate passed repeated Base/Fix execution, independent review and
+explicit human acceptance. Its clean evaluator image is published as
+`yutu0814/javac-case-053-lwjgl3:benchmark-v1` (digest `sha256:74b06ab9926769a6f19904b19d8b7f45b3dde7eada5e6c58d478e882044c1c0f`):
+
+```powershell
+Set-Location .\N_test_data\javac_case_053
+docker pull yutu0814/javac-case-053-lwjgl3:benchmark-v1
+python evaluator/evaluate_model_patch.py --patch C:\path\candidate.diff
+```
+
+See `N_test_data/javac_case_053/README.md` for the accepted scope and evidence.
 
 ## Case 092
 

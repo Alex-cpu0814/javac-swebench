@@ -1,0 +1,14 @@
+{
+  "schema_version": "3.0",
+  "run_id": "case-053-tamper-1",
+  "tests_observed": 0,
+  "FAIL_TO_PASS": {
+    "native_compilation::jni_dispatcher": "MISSING"
+  },
+  "PASS_TO_PASS": {
+    "native_compilation::header_control": "MISSING",
+    "native_compilation::diagnostic_control": "MISSING",
+    "native_compilation::existing_native_library_helper": "MISSING"
+  },
+  "unexpected_failures": []
+}

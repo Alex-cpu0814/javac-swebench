@@ -1,0 +1,32 @@
+{
+  "instance_id": "LWJGL__lwjgl3-879",
+  "status": "completed",
+  "oracle_type": "compilation",
+  "FAIL_TO_PASS_count": 1,
+  "PASS_TO_PASS_count": 3,
+  "independent_review": "accept",
+  "human_approved": true,
+  "model_evaluator_verified": true,
+  "build_id": "case-053-build-1",
+  "base_run_id": "case-053-base-1",
+  "gold_run_id": "case-053-gold-1",
+  "tamper_run_id": "case-053-tamper-1",
+  "image": {
+    "name": "yutu0814/javac-case-053-lwjgl3:benchmark-v1",
+    "id": "sha256:74b06ab9926769a6f19904b19d8b7f45b3dde7eada5e6c58d478e882044c1c0f",
+    "repo_digests": [
+      "yutu0814/javac-case-053-lwjgl3@sha256:74b06ab9926769a6f19904b19d8b7f45b3dde7eada5e6c58d478e882044c1c0f"
+    ]
+  },
+  "image_published": true,
+  "layout_validated": true,
+  "scope": "Linux/Clang compilation adaptation; no original macOS/full-build/runtime claim.",
+  "publication": {
+    "docker_hub": "https://hub.docker.com/r/yutu0814/javac-case-053-lwjgl3",
+    "image": "yutu0814/javac-case-053-lwjgl3:benchmark-v1",
+    "digest": "sha256:74b06ab9926769a6f19904b19d8b7f45b3dde7eada5e6c58d478e882044c1c0f",
+    "image_published": true,
+    "published_at_utc": "2026-10-12T12:04:04.929750+00:00",
+    "github_case_url": "https://github.com/Alex-cpu0814/javac-swebench/tree/main/N_test_data/javac_case_053"
+  }
+}

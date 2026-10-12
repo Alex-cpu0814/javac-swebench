@@ -1,0 +1,8 @@
+{
+  "docker_hub": "https://hub.docker.com/r/yutu0814/javac-case-053-lwjgl3",
+  "image": "yutu0814/javac-case-053-lwjgl3:benchmark-v1",
+  "digest": "sha256:74b06ab9926769a6f19904b19d8b7f45b3dde7eada5e6c58d478e882044c1c0f",
+  "image_published": true,
+  "published_at_utc": "2026-10-12T12:04:04.929750+00:00",
+  "github_case_url": "https://github.com/Alex-cpu0814/javac-swebench/tree/main/N_test_data/javac_case_053"
+}

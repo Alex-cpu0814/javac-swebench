@@ -1,0 +1,34 @@
+{
+  "case_053_errors": [],
+  "case_053_passed": true,
+  "repository_case_count": 17,
+  "existing_unrelated_case_errors": {
+    "Y_test_data/javac_case_150": [
+      "source row missing keys: ['FAIL_TO_PASS', 'test_files']",
+      "source row lacks PASS_TO_PASS count/list",
+      "environment spec missing keys: ['PASS_TO_PASS_COUNT', 'java_requirement', 'python_version_target']"
+    ],
+    "Y_test_data/javac_case_152": [
+      "missing evaluator\\image\\.dockerignore"
+    ],
+    "Y_test_data/javac_case_160": [
+      "missing evaluator\\image\\.dockerignore"
+    ],
+    "Y_test_data/javac_case_161": [
+      "missing evaluator\\image\\.dockerignore"
+    ],
+    "Y_test_data/javac_case_175": [
+      "missing official_swebench\\SHA256SUMS.txt",
+      "missing evaluator\\image\\.dockerignore"
+    ],
+    "Y_test_data/javac_case_194": [
+      "missing official_swebench\\SHA256SUMS.txt",
+      "missing evaluator\\image\\.dockerignore"
+    ],
+    "Y_test_data/javac_case_200": [
+      "missing official_swebench\\SHA256SUMS.txt",
+      "missing evaluator\\image\\.dockerignore"
+    ]
+  },
+  "existing_cases_modified": false
+}

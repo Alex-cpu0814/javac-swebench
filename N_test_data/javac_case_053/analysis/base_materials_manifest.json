@@ -1,0 +1,74 @@
+{
+  "base_commit": "f73b7a58deb6a608af5b419645e17af9dd07b04a",
+  "files": [
+    {
+      "path": "modules/lwjgl/core/src/generated/c/org_lwjgl_system_JNI.c",
+      "url": "https://api.github.com/repos/LWJGL/lwjgl3/contents/modules/lwjgl/core/src/generated/c/org_lwjgl_system_JNI.c?ref=f73b7a58deb6a608af5b419645e17af9dd07b04a",
+      "sha256": "ae57ef315d6cbd83b4d9a6cf4461b74a4ffa94d8033603ac4fc962852cfb80b0",
+      "bytes": 780720
+    },
+    {
+      "path": "modules/lwjgl/core/src/test/java/org/lwjgl/system/libc/StdioTest.java",
+      "url": "https://api.github.com/repos/LWJGL/lwjgl3/contents/modules/lwjgl/core/src/test/java/org/lwjgl/system/libc/StdioTest.java?ref=f73b7a58deb6a608af5b419645e17af9dd07b04a",
+      "sha256": "dad3263d2536cfa7fb88459b29605b958c14de818976076c35256e9f2a526b0e",
+      "bytes": 5377
+    },
+    {
+      "path": "config/linux/build.xml",
+      "url": "https://api.github.com/repos/LWJGL/lwjgl3/contents/config/linux/build.xml?ref=f73b7a58deb6a608af5b419645e17af9dd07b04a",
+      "sha256": "ac39af5925eb34e15d17acc0a70534c860643aa3c08c84f069966932e9071ad9",
+      "bytes": 21202
+    },
+    {
+      "path": "config/tests.xml",
+      "url": "https://api.github.com/repos/LWJGL/lwjgl3/contents/config/tests.xml?ref=f73b7a58deb6a608af5b419645e17af9dd07b04a",
+      "sha256": "4722685d5067b36c9e1d94a259c37449520a55fbd83032e6c2696670fb4a6076",
+      "bytes": 1958
+    },
+    {
+      "path": "build.xml",
+      "url": "https://api.github.com/repos/LWJGL/lwjgl3/contents/build.xml?ref=f73b7a58deb6a608af5b419645e17af9dd07b04a",
+      "sha256": "4a89638129a5a07d3721dffcd41f3ead85854cfe72d33c59d5f1b80b369aeafd",
+      "bytes": 84446
+    },
+    {
+      "path": "config/macos/build.xml",
+      "url": "https://api.github.com/repos/LWJGL/lwjgl3/contents/config/macos/build.xml?ref=f73b7a58deb6a608af5b419645e17af9dd07b04a",
+      "sha256": "e69d508af1c9d6c94dd8ee646ab948695a873e491fa6ca94eda238a80817581a",
+      "bytes": 17105
+    },
+    {
+      "path": "config/build-definitions.xml",
+      "url": "https://api.github.com/repos/LWJGL/lwjgl3/contents/config/build-definitions.xml?ref=f73b7a58deb6a608af5b419645e17af9dd07b04a",
+      "sha256": "e84e187cad309225c4dd0d122716ca3996f180f098ca9815480d95ea1e56338a",
+      "bytes": 16431
+    },
+    {
+      "path": "modules/lwjgl/core/src/main/c/common_tools.h",
+      "url": "https://api.github.com/repos/LWJGL/lwjgl3/contents/modules/lwjgl/core/src/main/c/common_tools.h?ref=f73b7a58deb6a608af5b419645e17af9dd07b04a",
+      "sha256": "9d2b1e29ccda33b7243afddc8b806af608e7aee9f3544f10aa33da0457f0d5dc",
+      "bytes": 4022
+    },
+    {
+      "path": "modules/lwjgl/core/src/main/c/linux/LinuxConfig.h",
+      "url": "https://api.github.com/repos/LWJGL/lwjgl3/contents/modules/lwjgl/core/src/main/c/linux/LinuxConfig.h?ref=f73b7a58deb6a608af5b419645e17af9dd07b04a",
+      "sha256": "95c33b00d8e4e484fa97092334cd6bffe208b346d4de865f0fa1bd1c3e0e1482",
+      "bytes": 506
+    },
+    {
+      "path": "modules/lwjgl/core/src/main/c/org_lwjgl_system_SharedLibraryUtil.c",
+      "url": "https://api.github.com/repos/LWJGL/lwjgl3/contents/modules/lwjgl/core/src/main/c/org_lwjgl_system_SharedLibraryUtil.c?ref=f73b7a58deb6a608af5b419645e17af9dd07b04a",
+      "sha256": "89e4fd8775ae372b1a995ae6d4edcb37ecd26b4f186b53978a8c1ade5a4f8e28",
+      "bytes": 11304
+    },
+    {
+      "path": "gradle.properties",
+      "url": "https://api.github.com/repos/LWJGL/lwjgl3/contents/gradle.properties?ref=f73b7a58deb6a608af5b419645e17af9dd07b04a",
+      "sha256": "af99898249a69dbe505053a67b310c2922b2c6108c79e5fe047a043a2700c521"
+    }
+  ],
+  "golden_patch_fetched": false,
+  "fix_source_fetched": false,
+  "issue_comments_fetched": true,
+  "issue_comment_policy": "Only original reporter comments retained; maintainer implementation discussions excluded."
+}

@@ -1,0 +1,67 @@
+{
+  "candidate_id": "candidate_01",
+  "patch_application": {
+    "base": "success",
+    "fix": "success"
+  },
+  "target_oracle": {
+    "type": "compilation",
+    "expected_phase": "compilation",
+    "phase_reached": true,
+    "toolchain_verified": true
+  },
+  "collection": {
+    "base": {
+      "collected": true,
+      "new_test_nodes": [
+        "native_compilation::jni_dispatcher",
+        "native_compilation::header_control",
+        "native_compilation::diagnostic_control",
+        "native_compilation::existing_native_library_helper"
+      ]
+    },
+    "fix": {
+      "collected": true,
+      "new_test_nodes": [
+        "native_compilation::jni_dispatcher",
+        "native_compilation::header_control",
+        "native_compilation::diagnostic_control",
+        "native_compilation::existing_native_library_helper"
+      ]
+    }
+  },
+  "base_execution": {
+    "status": "failed",
+    "phase": "compilation",
+    "exit_code": 1,
+    "failed_nodes": [
+      "native_compilation::jni_dispatcher"
+    ],
+    "failure_type": "CompilerDiagnostic",
+    "diagnostic_category": "strict_prototypes",
+    "sanitized_excerpt": "Compiler reaches the actual generated JNI translation unit; the strict-prototypes diagnostic is an error. No source or fix hunks disclosed.",
+    "infrastructure_error": false,
+    "skipped": false,
+    "xfail": false
+  },
+  "fix_execution": {
+    "status": "passed",
+    "exit_code": 0,
+    "sanitized_excerpt": "Generated JNI compilation and all three controls pass.",
+    "infrastructure_error": false,
+    "skipped": false,
+    "xfail": false
+  },
+  "regression_execution": {
+    "status": "passed",
+    "passed": 3,
+    "failed": 0,
+    "skipped": 0,
+    "scope": "Two compilation controls and one existing native-helper translation unit; no full runtime TestNG suite."
+  },
+  "stability": {
+    "repeats": 2,
+    "consistent": true
+  },
+  "golden_source_disclosed": false
+}

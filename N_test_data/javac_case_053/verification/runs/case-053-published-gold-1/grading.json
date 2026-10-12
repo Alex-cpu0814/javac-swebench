@@ -1,0 +1,14 @@
+{
+  "schema_version": "3.0",
+  "run_id": "case-053-published-gold-1",
+  "tests_observed": 4,
+  "FAIL_TO_PASS": {
+    "native_compilation::jni_dispatcher": "PASSED"
+  },
+  "PASS_TO_PASS": {
+    "native_compilation::header_control": "PASSED",
+    "native_compilation::diagnostic_control": "PASSED",
+    "native_compilation::existing_native_library_helper": "PASSED"
+  },
+  "unexpected_failures": []
+}

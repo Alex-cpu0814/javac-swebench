@@ -1,0 +1,88 @@
+{
+  "schema_version": "test_patch_generation_1.0",
+  "instance_id": "LWJGL__lwjgl3-879",
+  "repository": "LWJGL/lwjgl3",
+  "language_stack": "java-c",
+  "base_commit": "f73b7a58deb6a608af5b419645e17af9dd07b04a",
+  "issue": {
+    "title": "No module-info.class file was generated",
+    "description": "The original reporter's native build fails on macOS Ventura 13.3.1 with Apple Clang 14.0.3. Compilation reaches the generated JNI dispatcher and stops with the strict-prototypes diagnostic promoted to an error. The missing module-info.class question is separate from the compilation regression targeted here.",
+    "observed_behavior": "ant compile-native reaches generated JNI C compilation and fails with -Wstrict-prototypes.",
+    "expected_behavior": "The generated JNI dispatcher compiles without the reported strict-prototype error.",
+    "source_url": "https://github.com/LWJGL/lwjgl3/issues/879",
+    "diagnostic_source_url": "https://github.com/LWJGL/lwjgl3/issues/879#issuecomment-1519246446"
+  },
+  "target_oracle": {
+    "type": "compilation",
+    "expected_phase": "compilation",
+    "success_contract": "The relevant native compilation completes successfully using the issue-aligned, verified toolchain and project compiler options; missing dependencies and incidental failures are classified separately."
+  },
+  "repository_context": {
+    "relevant_source_files": [
+      {
+        "path": "modules/lwjgl/core/src/generated/c/org_lwjgl_system_JNI.c",
+        "line_start": 1,
+        "line_end": 24,
+        "content": "/*\n * Copyright LWJGL. All rights reserved.\n * License terms: https://www.lwjgl.org/license\n * MACHINE GENERATED FILE, DO NOT EDIT\n */\n#include \"common_tools.h\"\n\n#ifdef LWJGL_WINDOWS\n    #define APIENTRY __stdcall\n#else\n    #define APIENTRY\n#endif\n\nJNIEXPORT jbyte JNICALL Java_org_lwjgl_system_JNI_invokePB__JJ(JNIEnv *__env, jclass clazz, jlong param0, jlong __functionAddress) {\n    UNUSED_PARAMS(__env, clazz)\n    return ((jbyte (*) (uintptr_t))(uintptr_t)__functionAddress)((uintptr_t)param0);\n}\nJNIEXPORT jshort JNICALL Java_org_lwjgl_system_JNI_invokeC__J(JNIEnv *__env, jclass clazz, jlong __functionAddress) {\n    UNUSED_PARAMS(__env, clazz)\n    return (jshort)((uint16_t (*) ())(uintptr_t)__functionAddress)();\n}\nJNIEXPORT jshort JNICALL Java_org_lwjgl_system_JNI_invokeC__IJ(JNIEnv *__env, jclass clazz, jint param0, jlong __functionAddress) {\n    UNUSED_PARAMS(__env, clazz)\n    return (jshort)((uint16_t (*) (jint))(uintptr_t)__functionAddress)(param0);"
+      },
+      {
+        "path": "config/macos/build.xml",
+        "line_start": 20,
+        "line_end": 49,
+        "content": "        <attribute name=\"dest\" default=\"${dest}\"/>\n        <attribute name=\"lang\" default=\"c\"/>\n        <attribute name=\"flags\" default=\"\"/>\n        <attribute name=\"simple\" default=\"false\"/>\n        <attribute name=\"relative\" default=\"true\"/>\n        <element name=\"source\" implicit=\"true\" optional=\"true\"/>\n        <sequential>\n            <local name=\"cpp\"/>\n            <condition property=\"cpp\"><not><equals arg1=\"@{lang}\" arg2=\"c\"/></not></condition>\n            <local name=\"clang\"/>\n            <condition property=\"clang\" value=\"clang\" else=\"clang++\"><equals arg1=\"@{lang}\" arg2=\"c\"/></condition>\n\n            <mkdir dir=\"@{dest}\"/>\n            <apply dir=\"@{dest}\" executable=\"${clang}\" dest=\"@{dest}\" skipemptyfilesets=\"true\" failonerror=\"true\" parallel=\"true\" taskname=\"Compiler\">\n                <arg line=\"-c -ObjC\" unless:set=\"cpp\"/>\n                <arg line=\"-c -std=c++14\" if:set=\"cpp\"/>\n                <arg line=\"-O3 -flto -fPIC @{flags} -DNDEBUG -DLWJGL_MACOS -DLWJGL_${build.arch} -isysroot ${sdkroot} -mmacosx-version-min=${macosx-version-min}\"/>\n                <arg line=\"-target aarch64-apple-darwin -arch arm64\" if:set=\"build.arch.arm\"/>\n\n                <arg value=\"-I${jni.headers}\"/>\n                <arg value=\"-I${jni.headers}/darwin\"/>\n\n                <arg value=\"-I${module.lwjgl.rel}/core/src/main/c\"/>\n                <arg value=\"-I${module.lwjgl.rel}/core/src/main/c/${platform}\"/>\n\n                <arg value=\"-I${src.main.rel}\" if:true=\"@{simple}\"/>\n\n                <source/>\n                <fileset dir=\".\" includes=\"${src.generated}/*\" if:true=\"@{simple}\"/>\n"
+      },
+      {
+        "path": "config/macos/build.xml",
+        "line_start": 135,
+        "line_end": 145,
+        "content": "\n        <parallel threadsPerProcessor=\"2\">\n\n        <!-- CORE -->\n        <build module=\"core\" flags=\"-Werror -Wfatal-errors -Wall -Wextra -pedantic\">\n            <source>\n                <arg value=\"-I${src.main.rel}/libffi\"/>\n                <arg value=\"-I${src.main.rel}/libffi/aarch64\" if:set=\"build.arch.arm64\"/>\n                <arg value=\"-I${src.main.rel}/libffi/arm\" if:set=\"build.arch.arm32\"/>\n                <arg value=\"-I${src.main.rel}/libffi/x86\" unless:set=\"build.arch.arm\"/>\n                <!-- for libffi/x86/ffitarget.h -->"
+      },
+      {
+        "path": "modules/lwjgl/core/src/main/c/linux/LinuxConfig.h",
+        "line_start": 1,
+        "line_end": 24,
+        "content": "/*\n * Copyright LWJGL. All rights reserved.\n * License terms: https://www.lwjgl.org/license\n */\n\n#include <stddef.h>\n#include <stdint.h>\n\n#define DISABLE_WARNINGS() \\\n    _Pragma(\"GCC diagnostic push\") \\\n    _Pragma(\"GCC diagnostic ignored \\\"-Wpedantic\\\"\")\n\n#define ENABLE_WARNINGS() \\\n    _Pragma(\"GCC diagnostic pop\")\n\n// JNIEXPORT_CRITICAL & CRITICAL are used as a workaround for JDK-8167409 on applicable functions.\n#define JNIEXPORT_CRITICAL static\n#define CRITICAL(function) _JavaCritical_##function"
+      }
+    ],
+    "existing_test_examples": [
+      {
+        "path": "modules/lwjgl/core/src/test/java/org/lwjgl/system/libc/StdioTest.java",
+        "line_start": 1,
+        "line_end": 100,
+        "content": "/*\n * Copyright LWJGL. All rights reserved.\n * License terms: https://www.lwjgl.org/license\n */\npackage org.lwjgl.system.libc;\n\nimport org.lwjgl.*;\nimport org.lwjgl.system.*;\nimport org.lwjgl.system.libffi.*;\nimport org.testng.annotations.*;\n\nimport java.nio.*;\nimport java.util.*;\n\nimport static org.lwjgl.system.MemoryStack.*;\nimport static org.lwjgl.system.MemoryUtil.*;\nimport static org.lwjgl.system.libc.LibCLocale.*;\nimport static org.lwjgl.system.libffi.LibFFI.*;\nimport static org.testng.Assert.*;\n\n@Test\npublic class StdioTest {\n\n    private static String MESSAGE = \"The answer to life the universe and everything\";\n    private static int    ANSWER  = 42;\n\n    @BeforeClass\n    public void init() {\n        LibCLocale.setlocale(LC_ALL, \"en_US.UTF-8\");\n    }\n\n    public void testScanf() {\n        String INPUT  = String.format(Locale.US, \"%s = %d\", MESSAGE, ANSWER);\n        String FORMAT = \"%[A-Za-z ]%*[= ]%d\";\n\n        try (MemoryStack stack = stackPush()) {\n            // Prepare the call interface\n            FFICIF cif = FFICIF.malloc(stack);\n\n            int status = ffi_prep_cif_var(\n                cif, FFI_DEFAULT_ABI, 2, ffi_type_sint,\n                stack.callocPointer(4) // 4 arguments (2 fixed, 2 var)\n                    // fixed\n                    .put(0, ffi_type_pointer) // char const *\n                    .put(1, ffi_type_pointer) // char const *\n                    // var\n                    .put(2, ffi_type_pointer) // char *\n                    .put(3, ffi_type_pointer) // int *\n            );\n            if (status != FFI_OK) {\n                throw new IllegalStateException(\"ffi_prep_cif_var failed: \" + status);\n            }\n\n            ByteBuffer message = stack.malloc(64);\n            IntBuffer  answer  = stack.mallocInt(1);\n\n            ByteBuffer arguments = stack.malloc(4 * POINTER_SIZE);\n            PointerBuffer.put(arguments, 0 * POINTER_SIZE, memAddress(stack.UTF8(INPUT)));\n            PointerBuffer.put(arguments, 1 * POINTER_SIZE, memAddress(stack.ASCII(FORMAT)));\n            PointerBuffer.put(arguments, 2 * POINTER_SIZE, memAddress(message));\n            PointerBuffer.put(arguments, 3 * POINTER_SIZE, memAddress(answer));\n\n            ByteBuffer rvalue  = stack.calloc(POINTER_SIZE, POINTER_SIZE);\n            long       avalues = memAddress(arguments);\n\n            // call the function\n            ffi_call(\n                cif, LibCStdio.sscanf, rvalue,\n                // An array of pointers that point to the actual argument values.\n                stack.mallocPointer(4)\n                    .put(0, avalues + 0 * POINTER_SIZE)\n                    .put(1, avalues + 1 * POINTER_SIZE)\n                    .put(2, avalues + 2 * POINTER_SIZE)\n                    .put(3, avalues + 3 * POINTER_SIZE)\n            );\n\n            // validate\n            int args = rvalue.getInt(0);\n\n            assertEquals(args, 2);\n            assertEquals(memASCII(message, memLengthNT1(message)).trim(), MESSAGE);\n            assertEquals(answer.get(0), ANSWER);\n        }\n    }\n\n    public void testPrintf() {\n        String FORMAT = \"%s = %d\";\n\n        try (MemoryStack stack = stackPush()) {\n            // Prepare the call interface\n            FFICIF cif = FFICIF.malloc(stack);\n\n            int status = ffi_prep_cif_var(\n                cif, FFI_DEFAULT_ABI, 3, ffi_type_sint,\n                stack.mallocPointer(5) // 5 arguments (3 fixed, 2 var)\n                    // fixed\n                    .put(0, ffi_type_pointer) // char *\n                    .put(1, ffi_type_pointer) // size_t\n                    .put(2, ffi_type_pointer) // char const *\n                    // var"
+      }
+    ],
+    "build_and_test_config": "[{\"path\": \"config/linux/build.xml\", \"line_start\": 55, \"line_end\": 80, \"content\": \"\\n                <regexpmapper from=\\\"(\\\\w+)\\\\.(?:c|cc|cpp|S)$\\\" to=\\\"\\\\1.o\\\"/>\\n            </apply>\\n        </sequential>\\n    </macrodef>\\n\\n    <macrodef name=\\\"build\\\">\\n        <attribute name=\\\"module\\\"/>\\n        <attribute name=\\\"linker\\\" default=\\\"gcc\\\"/>\\n        <attribute name=\\\"lang\\\" default=\\\"c\\\"/>\\n        <attribute name=\\\"gcc.exec\\\" default=\\\"${gcc.prefix}gcc${gcc.suffix}\\\"/>\\n        <attribute name=\\\"gpp.exec\\\" default=\\\"${gcc.prefix}g++${gcc.suffix}\\\"/>\\n        <attribute name=\\\"flags\\\" default=\\\"-Werror -Wfatal-errors\\\"/>\\n        <attribute name=\\\"simple\\\" default=\\\"false\\\"/>\\n        <element name=\\\"beforeCompile\\\" optional=\\\"true\\\"/>\\n        <element name=\\\"source\\\" optional=\\\"true\\\"/>\\n        <element name=\\\"beforeLink\\\" optional=\\\"true\\\"/>\\n        <element name=\\\"link\\\" optional=\\\"true\\\"/>\\n        <sequential>\\n            <local name=\\\"src.main\\\"/>\\n            <local name=\\\"src.main.rel\\\"/>\\n            <local name=\\\"src.generated\\\"/>\\n            <property name=\\\"src.main\\\" location=\\\"${module.lwjgl}/@{module}/src/main/c\\\" relative=\\\"true\\\"/>\\n            <property name=\\\"src.main.rel\\\" value=\\\"${module.lwjgl.rel}/@{module}/src/main/c\\\"/>\\n            <property name=\\\"src.generated\\\" location=\\\"${module.lwjgl}/@{module}/src/generated/c\\\" relative=\\\"true\\\"/>\\n\"}, {\"path\": \"config/linux/build.xml\", \"line_start\": 155, \"line_end\": 180, \"content\": \"    <target name=\\\"compile-native-platform\\\">\\n        <local name=\\\"gcc.version.string\\\"/>\\n        <exec executable=\\\"bash\\\" outputproperty=\\\"gcc.version.string\\\" logError=\\\"true\\\" failonerror=\\\"true\\\">\\n            <arg line=\\\"-o pipefail -c\\\"/>\\n            <arg value=\\\"${gcc.prefix}gcc${gcc.suffix} --version | grep ^.*gcc\\\"/>\\n        </exec>\\n        <echo message='${gcc.prefix}gcc${gcc.suffix} --version: \\\"${gcc.version.string}\\\"' taskname=\\\"Compiler\\\"/>\\n\\n        <parallel threadsPerProcessor=\\\"2\\\">\\n\\n        <!-- CORE -->\\n        <build module=\\\"core\\\" flags=\\\"-Werror -Wfatal-errors -Wall -Wextra -pedantic\\\">\\n            <beforeCompile>\\n                <compile>\\n                    <arg value=\\\"-I${src.main.rel}/${platform}/liburing\\\"/>\\n                    <arg value=\\\"-I${src.main.rel}/${platform}/liburing/include\\\"/>\\n                    <arg value=\\\"-DCONFIG_HAVE_MEMFD_CREATE\\\"/>\\n                    <fileset dir=\\\".\\\" includes=\\\"${src.main}/${platform}/liburing/*.c\\\"/>\\n                </compile>\\n            </beforeCompile>\\n            <source>\\n                <arg value=\\\"-I${src.main.rel}/libffi\\\"/>\\n                <arg value=\\\"-I${src.main.rel}/libffi/aarch64\\\" if:set=\\\"build.arch.arm64\\\"/>\\n                <arg value=\\\"-I${src.main.rel}/libffi/arm\\\" if:set=\\\"build.arch.arm32\\\"/>\\n                <arg value=\\\"-I${src.main.rel}/libffi/x86\\\" unless:set=\\\"build.arch.arm\\\"/>\\n                <arg value=\\\"-DX86_64\\\" if:set=\\\"build.arch.x64\\\"/> <!-- for libffi/x86/ffitarget.h -->\"}, {\"path\": \"config/tests.xml\", \"line_start\": 1, \"line_end\": 22, \"content\": \"<?xml version=\\\"1.0\\\" encoding=\\\"UTF-8\\\"?>\\n<!--\\n  ~ Copyright LWJGL. All rights reserved.\\n  ~ License terms: https://www.lwjgl.org/license\\n  -->\\n<!DOCTYPE suite SYSTEM \\\"https://testng.org/testng-1.0.dtd\\\" >\\n<suite name=\\\"LWJGL cross-platform tests\\\">\\n    <test name=\\\"core\\\">\\n        <packages>\\n            <package name=\\\"org.lwjgl\\\"/>\\n            <package name=\\\"org.lwjgl.system\\\"/>\\n            <package name=\\\"org.lwjgl.system.libc\\\"/>\\n            <package name=\\\"org.lwjgl.system.libffi\\\"/>\\n        </packages>\\n    </test>\\n    <test name=\\\"libdivide\\\" parallel=\\\"methods\\\" thread-count=\\\"4\\\">\\n        <packages>\\n            <package name=\\\"org.lwjgl.util.libdivide\\\"/>\\n        </packages>\\n    </test>\\n    <test name=\\\"meshoptimizer\\\">\\n        <packages>\"}]",
+    "available_test_commands": [
+      "python3 config/tests/native_compilation.py"
+    ],
+    "reported_build_commands": [
+      "ant init",
+      "ant compile-templates",
+      "ant generate",
+      "ant compile",
+      "ant compile-native"
+    ],
+    "available_test_commands_note": "New isolated compilation test invokes the compiler stage directly with Base Ant Linux compile options plus the explicitly reported warning category; it does not run the whole Ant build or link/load native libraries."
+  },
+  "constraints": {
+    "golden_patch_visible": false,
+    "fix_source_visible": false,
+    "network_allowed": false,
+    "production_code_modification_allowed": false,
+    "maximum_candidates": 2
+  },
+  "environment": {
+    "reported": {
+      "os": "macOS Ventura 13.3.1",
+      "compiler": "Apple Clang 14.0.3",
+      "jdk": "not reported"
+    },
+    "adapted": {
+      "os": "Ubuntu 22.04 Linux x86_64",
+      "compiler": "upstream Clang 14",
+      "jdk": "OpenJDK 17",
+      "warning_adaptation": "Explicit -Wstrict-prototypes reproduces the reporter's diagnostic category despite differing Apple/upstream default warning groups."
+    }
+  }
+}

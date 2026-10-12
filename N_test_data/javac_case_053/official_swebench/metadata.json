@@ -1,0 +1,128 @@
+{
+  "dataset_schema_version": "1.0",
+  "source_case": "053",
+  "dataset_variant": "SWE-bench-compatible custom record",
+  "test_source": "synthetic_issue_derived_compilation_regression",
+  "PASS_TO_PASS_COUNT": 3,
+  "FAIL_TO_PASS_COUNT": 1,
+  "FAIL_TO_PASS": [
+    "native_compilation::jni_dispatcher"
+  ],
+  "PASS_TO_PASS": [
+    "native_compilation::header_control",
+    "native_compilation::diagnostic_control",
+    "native_compilation::existing_native_library_helper"
+  ],
+  "standard_layout": {
+    "schema_version": "2.0",
+    "case_directory": "javac_case_053",
+    "analysis": "analysis/",
+    "patches": "patches/",
+    "official_swebench": "official_swebench/",
+    "evaluator": "evaluator/",
+    "verification": "verification/"
+  },
+  "verification": {
+    "docker_verified": true,
+    "compilation_verified": true,
+    "runtime_verified": false,
+    "base_fails": true,
+    "fix_passes": true,
+    "repeats_per_revision": 2,
+    "consistent": true,
+    "model_evaluator_verified": true,
+    "image_published": true,
+    "image": "yutu0814/javac-case-053-lwjgl3:benchmark-v1",
+    "image_id": "sha256:74b06ab9926769a6f19904b19d8b7f45b3dde7eada5e6c58d478e882044c1c0f",
+    "image_build_id": "case-053-build-1",
+    "base_run_id": "case-053-base-1",
+    "gold_run_id": "case-053-gold-1",
+    "test_tamper_run_id": "case-053-tamper-1",
+    "test_tamper_rejected": true,
+    "evaluation_assets_injected_at_runtime": true,
+    "image_contains_gold_patch": false,
+    "image_contains_test_patch": false,
+    "image_contains_fix_commit": false,
+    "generation_execution_evidence": "verification/generation_evidence/summary.json",
+    "base_grading": {
+      "tests_observed": 4,
+      "FAIL_TO_PASS": {
+        "expected": 1,
+        "passed": 0,
+        "failed": 1,
+        "skipped": 0,
+        "missing": 0
+      },
+      "PASS_TO_PASS": {
+        "expected": 3,
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "missing": 0
+      },
+      "unexpected_failures": 1
+    },
+    "gold_grading": {
+      "tests_observed": 4,
+      "FAIL_TO_PASS": {
+        "expected": 1,
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0,
+        "missing": 0
+      },
+      "PASS_TO_PASS": {
+        "expected": 3,
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "missing": 0
+      },
+      "unexpected_failures": 0
+    },
+    "model_evaluator_verification_type": "isolated_runtime_injection_with_issue_aligned_compilation_oracle",
+    "independent_review_accepted": true,
+    "human_approved": true,
+    "published_image_digest": "sha256:74b06ab9926769a6f19904b19d8b7f45b3dde7eada5e6c58d478e882044c1c0f"
+  },
+  "base_commit": "f73b7a58deb6a608af5b419645e17af9dd07b04a",
+  "fix_commit": "6ff21eaf542ab397ce58f069ed2cb8656f927f29",
+  "repo": "LWJGL/lwjgl3",
+  "patch_provenance": {
+    "gold_patch_authorship": "LWJGL/lwjgl3 upstream maintainers",
+    "gold_patch_source": "complete official upstream fix commit",
+    "test_patch_source": "synthetic_issue_derived_compilation_regression",
+    "test_patch_authorship": "Codex Base-only generator",
+    "upstream_regression_test_found": false,
+    "prompt_version": "test_patch_generation_v1.1",
+    "golden_patch_visible_to_generator": false,
+    "fix_source_visible_to_generator": false,
+    "independent_review": "accepted candidate_01; no fatal issues",
+    "human_review": {
+      "status": "accepted_by_human",
+      "timestamp_utc": "2026-10-12T11:13:12.250923+00:00",
+      "user_confirmation": "接受此范围，继续整理正式案例",
+      "approved_scope": "Linux/Clang compilation adaptation; one F2P and three compilation controls; no exact macOS/full build/runtime claim."
+    }
+  },
+  "instance_id": "LWJGL__lwjgl3-879",
+  "test_files": [
+    "config/tests/native_compilation.py"
+  ],
+  "project_version": "3.3.3",
+  "oracle_type": "compilation",
+  "issue_id": 879,
+  "issue_url": "https://github.com/LWJGL/lwjgl3/issues/879",
+  "diagnostic_source_url": "https://github.com/LWJGL/lwjgl3/issues/879#issuecomment-1519246446",
+  "test_command": "python3 config/tests/native_compilation.py",
+  "scope": "Linux x86_64 adaptation with upstream Clang 14 and explicit -Wstrict-prototypes; original macOS/Apple Clang environment not executed.",
+  "regression_scope": "Two synthetic infrastructure controls and one existing native-helper compilation; no full runtime suite.",
+  "publication": {
+    "docker_hub": "https://hub.docker.com/r/yutu0814/javac-case-053-lwjgl3",
+    "image": "yutu0814/javac-case-053-lwjgl3:benchmark-v1",
+    "digest": "sha256:74b06ab9926769a6f19904b19d8b7f45b3dde7eada5e6c58d478e882044c1c0f",
+    "image_published": true,
+    "published_at_utc": "2026-10-12T12:04:04.929750+00:00",
+    "github_case_url": "https://github.com/Alex-cpu0814/javac-swebench/tree/main/N_test_data/javac_case_053"
+  }
+}

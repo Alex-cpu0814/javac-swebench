@@ -1,0 +1,205 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.39kB 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for public.ecr.aws/docker/library/ubuntu:22.04@sha256:5ec03bb3441e8b0bf3b4f9cd4629a1ae763010dc3035bb8da3ae6cf026486401
+#2 DONE 4.2s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 54B done
+#3 DONE 0.0s
+
+#4 [1/6] FROM public.ecr.aws/docker/library/ubuntu:22.04@sha256:5ec03bb3441e8b0bf3b4f9cd4629a1ae763010dc3035bb8da3ae6cf026486401
+#4 resolve public.ecr.aws/docker/library/ubuntu:22.04@sha256:5ec03bb3441e8b0bf3b4f9cd4629a1ae763010dc3035bb8da3ae6cf026486401 0.0s done
+#4 DONE 0.0s
+
+#5 [2/6] RUN apt-get update && apt-get install -y --no-install-recommends     clang-14 openjdk-17-jdk-headless python3 ca-certificates     && rm -rf /var/lib/apt/lists/*
+#5 CACHED
+
+#6 [3/6] WORKDIR /workspace
+#6 CACHED
+
+#7 [4/6] RUN apt-get update && apt-get install -y --no-install-recommends git && rm -rf /var/lib/apt/lists/*     && ln -s /usr/bin/python3 /usr/local/bin/python
+#7 1.967 Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+#7 2.533 Get:2 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
+#7 4.002 Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+#7 5.026 Get:4 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [7955 kB]
+#7 5.435 Get:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+#7 8.079 Get:6 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [4429 kB]
+#7 9.181 Get:7 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
+#7 10.57 Get:8 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1323 kB]
+#7 11.30 Get:9 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
+#7 12.02 Get:10 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [96.8 kB]
+#7 12.99 Get:11 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
+#7 15.39 Get:12 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]
+#7 16.92 Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [104 kB]
+#7 19.62 Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [4757 kB]
+#7 22.31 Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1624 kB]
+#7 25.32 Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [8243 kB]
+#7 26.63 Get:17 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [35.6 kB]
+#7 27.91 Get:18 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [82.9 kB]
+#7 27.94 Fetched 49.0 MB in 27s (1787 kB/s)
+#7 27.94 Reading package lists...
+#7 29.53 Reading package lists...
+#7 30.80 Building dependency tree...
+#7 31.07 Reading state information...
+#7 31.32 The following additional packages will be installed:
+#7 31.32   git-man libcurl3-gnutls liberror-perl libgdbm-compat4 libgdbm6 libldap-2.5-0
+#7 31.32   libnghttp2-14 libperl5.34 libpsl5 librtmp1 libsasl2-2 libsasl2-modules-db
+#7 31.32   libssh-4 perl perl-modules-5.34
+#7 31.32 Suggested packages:
+#7 31.32   gettext-base git-daemon-run | git-daemon-sysvinit git-doc git-email git-gui
+#7 31.32   gitk gitweb git-cvs git-mediawiki git-svn gdbm-l10n perl-doc
+#7 31.32   libterm-readline-gnu-perl | libterm-readline-perl-perl make
+#7 31.32   libtap-harness-archive-perl
+#7 31.32 Recommended packages:
+#7 31.32   patch less ssh-client libldap-common publicsuffix libsasl2-modules netbase
+#7 31.39 The following NEW packages will be installed:
+#7 31.39   git git-man libcurl3-gnutls liberror-perl libgdbm-compat4 libgdbm6
+#7 31.39   libldap-2.5-0 libnghttp2-14 libperl5.34 libpsl5 librtmp1 libsasl2-2
+#7 31.39   libsasl2-modules-db libssh-4 perl perl-modules-5.34
+#7 33.94 0 upgraded, 16 newly installed, 0 to remove and 1 not upgraded.
+#7 33.94 Need to get 13.1 MB of archives.
+#7 33.94 After this operation, 71.7 MB of additional disk space will be used.
+#7 33.94 Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 perl-modules-5.34 all 5.34.0-3ubuntu1.9 [2977 kB]
+#7 35.03 Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 libgdbm6 amd64 1.23-1 [33.9 kB]
+#7 35.66 Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 libgdbm-compat4 amd64 1.23-1 [6606 B]
+#7 38.35 Get:4 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libperl5.34 amd64 5.34.0-3ubuntu1.9 [4796 kB]
+#7 40.19 Get:5 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 perl amd64 5.34.0-3ubuntu1.9 [232 kB]
+#7 41.51 Get:6 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnghttp2-14 amd64 1.43.0-1ubuntu0.4 [76.9 kB]
+#7 42.70 Get:7 http://archive.ubuntu.com/ubuntu jammy/main amd64 libpsl5 amd64 0.21.0-1.2build2 [58.4 kB]
+#7 43.60 Get:8 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libsasl2-modules-db amd64 2.1.27+dfsg2-3ubuntu1.2 [20.5 kB]
+#7 44.73 Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libsasl2-2 amd64 2.1.27+dfsg2-3ubuntu1.2 [53.8 kB]
+#7 46.28 Get:10 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libldap-2.5-0 amd64 2.5.20+dfsg-0ubuntu0.22.04.1 [184 kB]
+#7 47.46 Get:11 http://archive.ubuntu.com/ubuntu jammy/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2build4 [58.2 kB]
+#7 49.03 Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libssh-4 amd64 0.9.6-2ubuntu0.22.04.8 [189 kB]
+#7 50.77 Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcurl3-gnutls amd64 7.81.0-1ubuntu1.29 [286 kB]
+#7 51.70 Get:14 http://archive.ubuntu.com/ubuntu jammy/main amd64 liberror-perl all 0.17029-1 [26.5 kB]
+#7 53.83 Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 git-man all 1:2.34.1-1ubuntu1.17 [954 kB]
+#7 56.40 Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 git amd64 1:2.34.1-1ubuntu1.17 [3174 kB]
+#7 56.70 debconf: delaying package configuration, since apt-utils is not installed
+#7 56.75 Fetched 13.1 MB in 25s (522 kB/s)
+#7 56.77 Selecting previously unselected package perl-modules-5.34.
+#7 56.77 (Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 10344 files and directories currently installed.)
+#7 56.83 Preparing to unpack .../00-perl-modules-5.34_5.34.0-3ubuntu1.9_all.deb ...
+#7 56.84 Unpacking perl-modules-5.34 (5.34.0-3ubuntu1.9) ...
+#7 57.27 Selecting previously unselected package libgdbm6:amd64.
+#7 57.27 Preparing to unpack .../01-libgdbm6_1.23-1_amd64.deb ...
+#7 57.28 Unpacking libgdbm6:amd64 (1.23-1) ...
+#7 57.30 Selecting previously unselected package libgdbm-compat4:amd64.
+#7 57.30 Preparing to unpack .../02-libgdbm-compat4_1.23-1_amd64.deb ...
+#7 57.31 Unpacking libgdbm-compat4:amd64 (1.23-1) ...
+#7 57.34 Selecting previously unselected package libperl5.34:amd64.
+#7 57.34 Preparing to unpack .../03-libperl5.34_5.34.0-3ubuntu1.9_amd64.deb ...
+#7 57.34 Unpacking libperl5.34:amd64 (5.34.0-3ubuntu1.9) ...
+#7 57.62 Selecting previously unselected package perl.
+#7 57.62 Preparing to unpack .../04-perl_5.34.0-3ubuntu1.9_amd64.deb ...
+#7 57.63 Unpacking perl (5.34.0-3ubuntu1.9) ...
+#7 57.67 Selecting previously unselected package libnghttp2-14:amd64.
+#7 57.67 Preparing to unpack .../05-libnghttp2-14_1.43.0-1ubuntu0.4_amd64.deb ...
+#7 57.68 Unpacking libnghttp2-14:amd64 (1.43.0-1ubuntu0.4) ...
+#7 57.72 Selecting previously unselected package libpsl5:amd64.
+#7 57.72 Preparing to unpack .../06-libpsl5_0.21.0-1.2build2_amd64.deb ...
+#7 57.73 Unpacking libpsl5:amd64 (0.21.0-1.2build2) ...
+#7 57.77 Selecting previously unselected package libsasl2-modules-db:amd64.
+#7 57.77 Preparing to unpack .../07-libsasl2-modules-db_2.1.27+dfsg2-3ubuntu1.2_amd64.deb ...
+#7 57.78 Unpacking libsasl2-modules-db:amd64 (2.1.27+dfsg2-3ubuntu1.2) ...
+#7 57.80 Selecting previously unselected package libsasl2-2:amd64.
+#7 57.80 Preparing to unpack .../08-libsasl2-2_2.1.27+dfsg2-3ubuntu1.2_amd64.deb ...
+#7 57.81 Unpacking libsasl2-2:amd64 (2.1.27+dfsg2-3ubuntu1.2) ...
+#7 57.84 Selecting previously unselected package libldap-2.5-0:amd64.
+#7 57.84 Preparing to unpack .../09-libldap-2.5-0_2.5.20+dfsg-0ubuntu0.22.04.1_amd64.deb ...
+#7 57.84 Unpacking libldap-2.5-0:amd64 (2.5.20+dfsg-0ubuntu0.22.04.1) ...
+#7 57.88 Selecting previously unselected package librtmp1:amd64.
+#7 57.88 Preparing to unpack .../10-librtmp1_2.4+20151223.gitfa8646d.1-2build4_amd64.deb ...
+#7 57.89 Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build4) ...
+#7 57.92 Selecting previously unselected package libssh-4:amd64.
+#7 57.92 Preparing to unpack .../11-libssh-4_0.9.6-2ubuntu0.22.04.8_amd64.deb ...
+#7 57.93 Unpacking libssh-4:amd64 (0.9.6-2ubuntu0.22.04.8) ...
+#7 57.97 Selecting previously unselected package libcurl3-gnutls:amd64.
+#7 57.97 Preparing to unpack .../12-libcurl3-gnutls_7.81.0-1ubuntu1.29_amd64.deb ...
+#7 57.97 Unpacking libcurl3-gnutls:amd64 (7.81.0-1ubuntu1.29) ...
+#7 58.03 Selecting previously unselected package liberror-perl.
+#7 58.03 Preparing to unpack .../13-liberror-perl_0.17029-1_all.deb ...
+#7 58.04 Unpacking liberror-perl (0.17029-1) ...
+#7 58.07 Selecting previously unselected package git-man.
+#7 58.08 Preparing to unpack .../14-git-man_1%3a2.34.1-1ubuntu1.17_all.deb ...
+#7 58.08 Unpacking git-man (1:2.34.1-1ubuntu1.17) ...
+#7 58.14 Selecting previously unselected package git.
+#7 58.14 Preparing to unpack .../15-git_1%3a2.34.1-1ubuntu1.17_amd64.deb ...
+#7 58.15 Unpacking git (1:2.34.1-1ubuntu1.17) ...
+#7 58.38 Setting up libpsl5:amd64 (0.21.0-1.2build2) ...
+#7 58.39 Setting up libnghttp2-14:amd64 (1.43.0-1ubuntu0.4) ...
+#7 58.40 Setting up perl-modules-5.34 (5.34.0-3ubuntu1.9) ...
+#7 58.41 Setting up libsasl2-modules-db:amd64 (2.1.27+dfsg2-3ubuntu1.2) ...
+#7 58.42 Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build4) ...
+#7 58.43 Setting up libsasl2-2:amd64 (2.1.27+dfsg2-3ubuntu1.2) ...
+#7 58.43 Setting up libssh-4:amd64 (0.9.6-2ubuntu0.22.04.8) ...
+#7 58.44 Setting up git-man (1:2.34.1-1ubuntu1.17) ...
+#7 58.45 Setting up libgdbm6:amd64 (1.23-1) ...
+#7 58.46 Setting up libldap-2.5-0:amd64 (2.5.20+dfsg-0ubuntu0.22.04.1) ...
+#7 58.47 Setting up libgdbm-compat4:amd64 (1.23-1) ...
+#7 58.48 Setting up libperl5.34:amd64 (5.34.0-3ubuntu1.9) ...
+#7 58.49 Setting up libcurl3-gnutls:amd64 (7.81.0-1ubuntu1.29) ...
+#7 58.49 Setting up perl (5.34.0-3ubuntu1.9) ...
+#7 58.52 Setting up liberror-perl (0.17029-1) ...
+#7 58.53 Setting up git (1:2.34.1-1ubuntu1.17) ...
+#7 58.55 Processing triggers for libc-bin (2.35-0ubuntu3.15) ...
+#7 DONE 58.9s
+
+#8 [5/6] RUN git init /testbed && cd /testbed     && git config core.autocrlf false     && git remote add origin "https://github.com/LWJGL/lwjgl3.git"     && git fetch --depth=1 origin "f73b7a58deb6a608af5b419645e17af9dd07b04a"     && git checkout --detach FETCH_HEAD     && git remote remove origin     && rm -f .git/FETCH_HEAD .git/ORIG_HEAD     && git for-each-ref --format='delete %(refname)' refs/heads refs/remotes refs/tags | git update-ref --stdin     && git reflog expire --expire=now --all && git gc --prune=now     && test "$(git rev-parse HEAD)" = "f73b7a58deb6a608af5b419645e17af9dd07b04a"     && test -z "$(git status --porcelain)"     && mkdir -p /benchmark /inputs /results
+#8 0.286 hint: Using 'master' as the name for the initial branch. This default branch name
+#8 0.286 hint: is subject to change. To configure the initial branch name to use in all
+#8 0.286 hint: of your new repositories, which will suppress this warning, call:
+#8 0.286 hint: 
+#8 0.286 hint: 	git config --global init.defaultBranch <name>
+#8 0.286 hint: 
+#8 0.286 hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+#8 0.286 hint: 'development'. The just-created branch can be renamed via this command:
+#8 0.286 hint: 
+#8 0.286 hint: 	git branch -m <name>
+#8 0.289 Initialized empty Git repository in /testbed/.git/
+#8 6.625 From https://github.com/LWJGL/lwjgl3
+#8 6.625  * branch            f73b7a58deb6a608af5b419645e17af9dd07b04a -> FETCH_HEAD
+#8 7.870 HEAD is now at f73b7a5 docs(openal) fix OpenAL Soft URL
+#8 DONE 8.5s
+
+#9 [6/6] WORKDIR /testbed
+#9 DONE 0.1s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 3.0s done
+#10 exporting manifest sha256:ae41788b024c3be85f0427e90d6b35565039ab895da3864321ebc0af162eef2e 0.0s done
+#10 exporting config sha256:f1a18a15d96d4f277b049d71b3ed296e5dde9ffb8511a827e98018546a9381df done
+#10 exporting attestation manifest sha256:851668d9b75501503e987a3b23e4d2f6595ad028cf5bdd5e4fae5adec4799943 0.0s done
+#10 exporting manifest list sha256:74b06ab9926769a6f19904b19d8b7f45b3dde7eada5e6c58d478e882044c1c0f 0.0s done
+#10 naming to docker.io/library/javac-case-053-lwjgl3:benchmark-v1 done
+#10 unpacking to docker.io/library/javac-case-053-lwjgl3:benchmark-v1
+#10 unpacking to docker.io/library/javac-case-053-lwjgl3:benchmark-v1 2.5s done
+#10 DONE 5.6s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/w08g8e273i14fyqyre2yn8zws

@@ -1,0 +1,22 @@
+[
+  {
+    "url": "https://github.com/LWJGL/lwjgl3/issues/879#issuecomment-1519246446",
+    "created_at": "2023-04-24T01:23:38Z",
+    "body": "Hello @Spasi, thank you very much for the information on when `module-info.class` was generated!\r\n\r\nAs for my building failure, more details are as follows:\r\n\r\n- OS: macOS Ventura Version 13.3.1\r\n\r\n- Native compiler: I am not quite sure what you want to know here. If you are asking about my gcc compiler, it is `Apple clang version 14.0.3 (clang-1403.0.22.14.1)`\r\n\r\n- Build output: \r\n```\r\ncompile-native:\r\n\r\ncompile-native-platform:\r\n [SDK Root] <path to SDKs>/MacOSX13.3.sdk\r\n [Compiler] <Path to the project>/lwjgl3/modules/lwjgl/core/src/generated/c/org_lwjgl_system_JNI.c:20:35: fatal error: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]\r\n [Compiler]     return (jshort)((uint16_t (*) ())(uintptr_t)__functionAddress)();\r\n [Compiler]                                   ^\r\n [Compiler]                                    void\r\n [Compiler] 1 error generated.\r\n\r\nBUILD FAILED\r\n<Path to the project>/lwjgl3/build.xml:574: The following error occurred while executing this line:\r\n<Path to the project>/lwjgl3/config/macos/build.xml:139: The following error occurred while executing this line:\r\n<Path to the project>/lwjgl3/config/macos/build.xml:82: The following error occurred while executing this line:\r\n<Path to the project>/lwjgl3/config/macos/build.xml:33: apply returned: 1\r\n```"
+  },
+  {
+    "url": "https://github.com/LWJGL/lwjgl3/issues/879#issuecomment-1520307256",
+    "created_at": "2023-04-24T14:44:05Z",
+    "body": "Hey @Spasi, thank you very much for your help. 😊"
+  },
+  {
+    "url": "https://github.com/LWJGL/lwjgl3/issues/879#issuecomment-1526984136",
+    "created_at": "2023-04-28T04:44:16Z",
+    "body": "Hi @Spasi, I apologize for reaching out again, but I was curious about the reason behind the generation of `module-info` classes during the `release` target instead of the `compile` target, alongside other .java files. There seems to be some kind of design advantage of compiling them separately, but I am not sure what exactly that may be.\r\n"
+  },
+  {
+    "url": "https://github.com/LWJGL/lwjgl3/issues/879#issuecomment-1534075033",
+    "created_at": "2023-05-04T04:15:07Z",
+    "body": "@Spasi Thank you very much for your answer; it has been really helpful! 😊"
+  }
+]

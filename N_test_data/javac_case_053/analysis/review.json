@@ -1,0 +1,38 @@
+{
+  "schema_version": "test_patch_review_1.0",
+  "instance_id": "LWJGL__lwjgl3-879",
+  "reviews": [
+    {
+      "candidate_id": "candidate_01",
+      "semantic_relevance": 5,
+      "oracle_quality": 4,
+      "determinism": 4,
+      "repository_conformance": 4,
+      "overfitting_resistance": 5,
+      "execution_validity": 5,
+      "oracle_phase_alignment": 5,
+      "fatal_issues": [],
+      "nonfatal_issues": [
+        "Linux/upstream Clang 14 显式开启 -Wstrict-prototypes 是诊断类别的移植验证；它不能证明原 macOS/Apple Clang 14.0.3 的默认诊断分组、Objective-C 编译模式和 SDK 条件已被精确复现。",
+        "测试直接编译生成的 JNI 翻译单元，合理缩小了本例的编译 oracle，但未执行 Ant 初始化、模板生成、完整 native 构建、链接或 Java/JNI 运行时测试；不能据此宣称这些阶段没有回归。",
+        "所提供 Base 构建片段证实了核心警告选项，但没有展示 Linux compile 宏的完整命令；人工应确认候选其余普通编译选项与标准编译阶段一致。",
+        "所谓三个通过的回归节点中，两个是测试自行构造的设施控制，只有一个是现有 native helper 翻译单元；回归证据的范围较窄。",
+        "Clang/JDK 版本检查及编译 subprocess 没有超时或针对可执行文件启动失败的结构化处理；例如 JNI 头存在但 JAVA_HOME/bin/javac 缺失时会异常退出，不能输出约定的 infrastructure_error JSON。此问题不影响已报告的有效工具链执行，但可改善设施错误分类。"
+      ],
+      "verdict": "accept",
+      "justification": "Issue 输入明确将缺失 module-info.class 的提问与目标回归分开：目标是 ant compile-native 到达实际生成的 JNI C dispatcher 后触发被提升为错误的 strict-prototypes 诊断。Base 提供的无参数函数指针类型使用空参数表，与该诊断存在直接语义联系。候选编译当前源码树的完整 org_lwjgl_system_JNI.c，使用真实项目及 JDK 头文件，以编译退出码和新临时目录中的对象文件作为成功条件，未检查修复语法、修改生产源码、使用系统动态库、skip 或 xfail。显式 -Wstrict-prototypes 对齐已报告的错误类别；作为已声明的 Linux/Clang 适配可接受，而非精确 macOS 重现。正向 JNI/header 控制、负向诊断控制及现有 native helper 编译先于目标执行，能排除主要头文件、工具链和诊断开关故障；目标的其他诊断失败另列设施/非目标错误。脱敏反馈证实补丁在 Base/Fix 均可应用且节点实际执行，Base 在编译阶段仅目标以 strict_prototypes 失败，Fix 和三个控制通过，两次执行一致。基于目标仅涉及生成 C 的编译错误，直接调用最小编译阶段可替代完整 Ant 流程；反馈支持这个有限的 oracle，不支持完整构建或运行时回归保证。"
+    }
+  ],
+  "selected_candidate_id": "candidate_01",
+  "selection_reason": "唯一候选与 Issue 明确指定的 native 编译诊断及失败阶段直接对应，使用实际 JNI 翻译单元和非空编译成功断言；控制与脱敏 Base/Fix 执行证据满足该有限 oracle 的接受条件，且无 fatal issue。接受范围为适配环境下的生成 JNI C 编译测试，仍需人工确认。",
+  "requires_human_review": true,
+  "human_review_checklist": [
+    "确认原报告及指定诊断评论支持将 strict-prototypes native 编译错误作为本例目标；module-info.class 缺失不在此次 oracle 的覆盖范围内。",
+    "确认接受 Ubuntu 22.04 x86_64、upstream Clang 14、OpenJDK 17 及显式 -Wstrict-prototypes 的移植契约；如需精确复现原报告，补充 Apple Clang 14.0.3/macOS 编译验证。",
+    "核对候选普通 Linux 编译选项、include 路径及 gnu11 模式与 Base 标准编译阶段的对应关系，并接受以单个真实生成翻译单元的对象编译替代完整 Ant 流程。",
+    "确认脱敏 Fix 执行对应本实例的官方参考 Fix；如没有可确认的参考 Fix，本候选只能作为 provisional_test_patch。",
+    "确认测试已纳入数据集声明的 python3 config/tests/native_compilation.py 执行入口；它不会自动加入现有 TestNG/Ant 测试套件。",
+    "接受回归范围仅为两项设施控制和一个既有 native helper 编译，未验证生成器、完整 native 构建、链接、动态加载或运行时行为。",
+    "最终人工批准候选及上述适配和覆盖边界；当前审查不代表人工批准已完成。"
+  ]
+}

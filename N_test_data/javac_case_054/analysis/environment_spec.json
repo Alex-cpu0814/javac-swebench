@@ -1,0 +1,123 @@
+{
+  "instance_id": "LWJGL__lwjgl3-755",
+  "task_level": "runtime Java/native dispatch regression",
+  "validation_type": "controlled_native_provider_public_api",
+  "environment": "Ubuntu 22.04 Linux x86_64; OpenJDK17; GCC11; TestNG7.4.0",
+  "original_environment": "Windows x64; Adoptium17; reported LWJGL3.3.1",
+  "python_version_target": "3.10",
+  "java_requirement": "OpenJDK17",
+  "build_system": "standard Ant compile-templates/compile-native with core/Vulkan; supported offline custom libffi PIC dependency",
+  "test_execution": "injected evaluator/test_runner.py; freshly compiled native fixture and TestNG public API tests",
+  "runtime_verified": true,
+  "reproduction_status": "Linux controlled-provider adaptation verified; original Windows driver crash not reproduced",
+  "base_commit": "2a8645c11533068802dd2dde734b600ec53a1cea",
+  "fix_commit": "e19a2f6bfed5f333f8a01009240f1fff5e0f488f",
+  "test_source": "synthetic_issue_derived_runtime_regression",
+  "test_files": [
+    "modules/lwjgl/vulkan/src/test/c/debug_utils_fixture.c",
+    "modules/lwjgl/vulkan/src/test/java/org/lwjgl/vulkan/DebugUtilsTest.java"
+  ],
+  "FAIL_TO_PASS": [
+    "org.lwjgl.vulkan.DebugUtilsTest::testNameInstance",
+    "org.lwjgl.vulkan.DebugUtilsTest::testNamePhysicalDevice"
+  ],
+  "PASS_TO_PASS_COUNT": 30,
+  "verification": {
+    "base_fails": true,
+    "fix_passes": true,
+    "generation_repeats_per_revision": 4,
+    "fresh_network_none_repeats_per_revision": 2,
+    "consistent": true,
+    "independent_review_accepted": true,
+    "human_approved": true,
+    "docker_verified": true,
+    "runtime_verified": true,
+    "model_evaluator_verified": true,
+    "image_published": true,
+    "github_published": true,
+    "image": "yutu0814/javac-case-054-lwjgl3:benchmark-v1",
+    "generation_execution_evidence": "verification/generation_evidence/sanitized_feedback.json",
+    "model_evaluator_verification_type": "standard_injected_runtime_native_provider_testng",
+    "image_id": "sha256:e3c1ac3197df69e047650a2806f0b923582058de8ca78b1c816657130f104bb4",
+    "image_build_id": "case-054-build-1",
+    "base_run_id": "case-054-base-1",
+    "gold_run_id": "case-054-gold-1",
+    "test_tamper_run_id": "case-054-tamper-1",
+    "test_tamper_rejected": true,
+    "base_grading": {
+      "tests_observed": 32,
+      "FAIL_TO_PASS": {
+        "expected": 2,
+        "passed": 0,
+        "failed": 2,
+        "skipped": 0,
+        "missing": 0
+      },
+      "PASS_TO_PASS": {
+        "expected": 30,
+        "passed": 30,
+        "failed": 0,
+        "skipped": 0,
+        "missing": 0
+      },
+      "unexpected_failures": 2
+    },
+    "gold_grading": {
+      "tests_observed": 32,
+      "FAIL_TO_PASS": {
+        "expected": 2,
+        "passed": 2,
+        "failed": 0,
+        "skipped": 0,
+        "missing": 0
+      },
+      "PASS_TO_PASS": {
+        "expected": 30,
+        "passed": 30,
+        "failed": 0,
+        "skipped": 0,
+        "missing": 0
+      },
+      "unexpected_failures": 0
+    },
+    "evaluation_assets_injected_at_runtime": true,
+    "image_contains_gold_patch": false,
+    "image_contains_test_patch": false,
+    "image_contains_fix_commit": false,
+    "formal_case_completed": true,
+    "published_image_digest": "sha256:e3c1ac3197df69e047650a2806f0b923582058de8ca78b1c816657130f104bb4",
+    "registry_pull_verified": true,
+    "published_default_tag_runtime_verified": true,
+    "published_gold_run_id": "case-054-published-gold-1"
+  },
+  "native_dependency": {
+    "requested_upstream_url": "https://build.lwjgl.org/release/3.3.1/linux/x64/core/libffi.a",
+    "source": {
+      "type": "ubuntu_pic_dependency",
+      "package": "libffi-dev",
+      "version": "3.4.2-4",
+      "archive": "/usr/lib/x86_64-linux-gnu/libffi_pic.a",
+      "upstream_download_unavailable": true
+    },
+    "path": "/testbed/bin/libs/native/linux/x64/org/lwjgl/libffi.a",
+    "size": 69916,
+    "sha256": "fe417849a4af3c711b6b94f45219fbeb788896aaab478dd1806ecc23a8cfb85e",
+    "reason": "Provide a declared custom static dependency through Ant's supported offline mode; project JNI remains built from current sources. Ubuntu PIC mode is a dependency adaptation and is not the official upstream archive."
+  },
+  "source_version": "3.3.2",
+  "reported_version": "3.3.1",
+  "publication": {
+    "image": "yutu0814/javac-case-054-lwjgl3:benchmark-v1",
+    "digest": "sha256:e3c1ac3197df69e047650a2806f0b923582058de8ca78b1c816657130f104bb4",
+    "image_id": "sha256:e3c1ac3197df69e047650a2806f0b923582058de8ca78b1c816657130f104bb4",
+    "docker_hub": "https://hub.docker.com/r/yutu0814/javac-case-054-lwjgl3",
+    "image_published": true,
+    "registry_pull_verified": true,
+    "published_at_utc": "2026-10-13T00:42:54.613444+00:00",
+    "github_case_url": "https://github.com/Alex-cpu0814/javac-swebench/tree/main/N_test_data/javac_case_054",
+    "github_published": true,
+    "published_default_tag_runtime_verified": true,
+    "published_gold_run_id": "case-054-published-gold-1",
+    "github_publication_method": "GitHub Git Data API; case054 + root README only"
+  }
+}

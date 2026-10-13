@@ -1,0 +1,217 @@
+diff --git a/modules/lwjgl/vulkan/src/test/c/debug_utils_fixture.c b/modules/lwjgl/vulkan/src/test/c/debug_utils_fixture.c
+new file mode 100644
+--- /dev/null
++++ b/modules/lwjgl/vulkan/src/test/c/debug_utils_fixture.c
+@@ -0,0 +1,115 @@
++/*
++ * Copyright LWJGL. All rights reserved.
++ * License terms: https://www.lwjgl.org/license
++ *
++ * Controlled Vulkan provider for DebugUtilsTest. The instance entry point can
++ * name instance and device objects. The device entry point is deliberately
++ * limited to device objects, as in the loader behavior reported in Issue 755.
++ * It returns an error instead of crashing when used with an instance object.
++ * Unimplemented functions abort if actually called; no real GPU is used.
++ */
++#include <vulkan/vulkan.h>
++#include <stdint.h>
++#include <stdlib.h>
++#include <string.h>
++
++static int instance_storage, physical_storage, device_storage;
++#define INSTANCE ((VkInstance)&instance_storage)
++#define PHYSICAL ((VkPhysicalDevice)&physical_storage)
++#define DEVICE ((VkDevice)&device_storage)
++static char instance_name[256], physical_name[256], device_name[256];
++
++static void unexpected_call(void) { abort(); }
++
++static VkResult VKAPI_CALL create_instance(const VkInstanceCreateInfo *ci, const VkAllocationCallbacks *allocator, VkInstance *out) {
++    (void)ci; (void)allocator;
++    *out = INSTANCE;
++    return VK_SUCCESS;
++}
++
++static VkResult VKAPI_CALL enumerate_physical(VkInstance instance, uint32_t *count, VkPhysicalDevice *out) {
++    if (instance != INSTANCE) return VK_ERROR_INITIALIZATION_FAILED;
++    if (out && *count) out[0] = PHYSICAL;
++    *count = 1;
++    return VK_SUCCESS;
++}
++
++static VkResult VKAPI_CALL enumerate_device_extensions(VkPhysicalDevice physical, const char *layer, uint32_t *count, VkExtensionProperties *out) {
++    (void)layer; (void)out;
++    if (physical != PHYSICAL) return VK_ERROR_INITIALIZATION_FAILED;
++    *count = 0;
++    return VK_SUCCESS;
++}
++
++static VkResult VKAPI_CALL create_device(VkPhysicalDevice physical, const VkDeviceCreateInfo *ci, const VkAllocationCallbacks *allocator, VkDevice *out) {
++    (void)ci; (void)allocator;
++    if (physical != PHYSICAL) return VK_ERROR_INITIALIZATION_FAILED;
++    *out = DEVICE;
++    return VK_SUCCESS;
++}
++
++static void VKAPI_CALL physical_properties(VkPhysicalDevice physical, VkPhysicalDeviceProperties *out) {
++    if (physical != PHYSICAL) abort();
++    memset(out, 0, sizeof(*out));
++    out->apiVersion = VK_API_VERSION_1_0;
++}
++
++static void VKAPI_CALL destroy_instance(VkInstance instance, const VkAllocationCallbacks *allocator) {
++    (void)allocator;
++    if (instance != INSTANCE) abort();
++}
++
++static void VKAPI_CALL destroy_device(VkDevice device, const VkAllocationCallbacks *allocator) {
++    (void)allocator;
++    if (device != DEVICE) abort();
++}
++
++static char *name_slot(VkObjectType type, uint64_t handle) {
++    if (type == VK_OBJECT_TYPE_INSTANCE && handle == (uint64_t)(uintptr_t)INSTANCE) return instance_name;
++    if (type == VK_OBJECT_TYPE_PHYSICAL_DEVICE && handle == (uint64_t)(uintptr_t)PHYSICAL) return physical_name;
++    if (type == VK_OBJECT_TYPE_DEVICE && handle == (uint64_t)(uintptr_t)DEVICE) return device_name;
++    return NULL;
++}
++
++static VkResult VKAPI_CALL name_from_instance(VkDevice device, const VkDebugUtilsObjectNameInfoEXT *info) {
++    char *slot = name_slot(info->objectType, info->objectHandle);
++    if (device != DEVICE || !slot || !info->pObjectName || strlen(info->pObjectName) >= 256) return VK_ERROR_VALIDATION_FAILED_EXT;
++    strcpy(slot, info->pObjectName);
++    return VK_SUCCESS;
++}
++
++static VkResult VKAPI_CALL name_from_device(VkDevice device, const VkDebugUtilsObjectNameInfoEXT *info) {
++    if (info->objectType != VK_OBJECT_TYPE_DEVICE) return VK_ERROR_VALIDATION_FAILED_EXT;
++    return name_from_instance(device, info);
++}
++
++VKAPI_ATTR PFN_vkVoidFunction VKAPI_CALL vkGetDeviceProcAddr(VkDevice device, const char *name) {
++    if (device != DEVICE) return NULL;
++    if (!strcmp(name, "vkSetDebugUtilsObjectNameEXT")) return (PFN_vkVoidFunction)name_from_device;
++    if (!strcmp(name, "vkDestroyDevice")) return (PFN_vkVoidFunction)destroy_device;
++    return (PFN_vkVoidFunction)unexpected_call;
++}
++
++VKAPI_ATTR PFN_vkVoidFunction VKAPI_CALL vkGetInstanceProcAddr(VkInstance instance, const char *name) {
++    (void)instance;
++    if (!strcmp(name, "vkGetInstanceProcAddr")) return (PFN_vkVoidFunction)vkGetInstanceProcAddr;
++    if (!strcmp(name, "vkGetDeviceProcAddr")) return (PFN_vkVoidFunction)vkGetDeviceProcAddr;
++    if (!strcmp(name, "vkCreateInstance")) return (PFN_vkVoidFunction)create_instance;
++    if (!strcmp(name, "vkEnumerateInstanceVersion")) return NULL;
++    if (!strcmp(name, "vkEnumeratePhysicalDevices")) return (PFN_vkVoidFunction)enumerate_physical;
++    if (!strcmp(name, "vkEnumerateDeviceExtensionProperties")) return (PFN_vkVoidFunction)enumerate_device_extensions;
++    if (!strcmp(name, "vkGetPhysicalDeviceProperties")) return (PFN_vkVoidFunction)physical_properties;
++    if (!strcmp(name, "vkCreateDevice")) return (PFN_vkVoidFunction)create_device;
++    if (!strcmp(name, "vkDestroyInstance")) return (PFN_vkVoidFunction)destroy_instance;
++    if (!strcmp(name, "vkDestroyDevice")) return (PFN_vkVoidFunction)destroy_device;
++    if (!strcmp(name, "vkSetDebugUtilsObjectNameEXT")) return (PFN_vkVoidFunction)name_from_instance;
++    return (PFN_vkVoidFunction)unexpected_call;
++}
++
++/* Fixture observation only: return the name actually stored for an object. */
++const char *debug_utils_fixture_name(void *object) {
++    if (object == (void *)INSTANCE) return instance_name;
++    if (object == (void *)PHYSICAL) return physical_name;
++    if (object == (void *)DEVICE) return device_name;
++    abort();
++}
+diff --git a/modules/lwjgl/vulkan/src/test/java/org/lwjgl/vulkan/DebugUtilsTest.java b/modules/lwjgl/vulkan/src/test/java/org/lwjgl/vulkan/DebugUtilsTest.java
+new file mode 100644
+--- /dev/null
++++ b/modules/lwjgl/vulkan/src/test/java/org/lwjgl/vulkan/DebugUtilsTest.java
+@@ -0,0 +1,92 @@
++/*
++ * Copyright LWJGL. All rights reserved.
++ * License terms: https://www.lwjgl.org/license
++ */
++package org.lwjgl.vulkan;
++
++import org.lwjgl.PointerBuffer;
++import org.lwjgl.system.*;
++import org.testng.annotations.*;
++
++import static org.lwjgl.system.JNI.*;
++import static org.lwjgl.system.MemoryStack.*;
++import static org.lwjgl.system.MemoryUtil.*;
++import static org.lwjgl.vulkan.EXTDebugUtils.*;
++import static org.lwjgl.vulkan.VK10.*;
++import static org.testng.Assert.*;
++
++/** Exercises the public Java API against a controlled native Vulkan provider. */
++public class DebugUtilsTest {
++    private SharedLibrary provider;
++    private VkInstance instance;
++    private VkPhysicalDevice physicalDevice;
++    private VkDevice device;
++    private long observedName;
++
++    @BeforeClass
++    public void createVulkanObjects() {
++        Configuration.VULKAN_EXPLICIT_INIT.set(true);
++        String fixturePath = System.getProperty("org.lwjgl.vulkan.debugUtilsFixture");
++        assertNotNull(fixturePath, "A freshly compiled native fixture is required");
++        provider = Library.loadNative(DebugUtilsTest.class, "org.lwjgl.vulkan", fixturePath);
++        observedName = provider.getFunctionAddress("debug_utils_fixture_name");
++        assertTrue(observedName != NULL);
++        VK.create(provider);
++
++        try (MemoryStack stack = stackPush()) {
++            VkApplicationInfo application = VkApplicationInfo.calloc(stack)
++                .sType$Default().apiVersion(VK_API_VERSION_1_0);
++            VkInstanceCreateInfo instanceInfo = VkInstanceCreateInfo.calloc(stack)
++                .sType$Default().pApplicationInfo(application)
++                .ppEnabledExtensionNames(stack.pointers(stack.UTF8(VK_EXT_DEBUG_UTILS_EXTENSION_NAME)));
++            PointerBuffer handle = stack.mallocPointer(1);
++            assertEquals(vkCreateInstance(instanceInfo, null, handle), VK_SUCCESS);
++            instance = new VkInstance(handle.get(0), instanceInfo);
++
++            java.nio.IntBuffer count = stack.ints(1);
++            assertEquals(vkEnumeratePhysicalDevices(instance, count, handle), VK_SUCCESS);
++            assertEquals(count.get(0), 1);
++            physicalDevice = new VkPhysicalDevice(handle.get(0), instance);
++
++            VkDeviceQueueCreateInfo.Buffer queues = VkDeviceQueueCreateInfo.calloc(1, stack);
++            queues.get(0).sType$Default().queueFamilyIndex(0).pQueuePriorities(stack.floats(1.0f));
++            VkDeviceCreateInfo deviceInfo = VkDeviceCreateInfo.calloc(stack)
++                .sType$Default().pQueueCreateInfos(queues);
++            assertEquals(vkCreateDevice(physicalDevice, deviceInfo, null, handle), VK_SUCCESS);
++            device = new VkDevice(handle.get(0), physicalDevice, deviceInfo);
++        }
++    }
++
++    @Test
++    public void testNameInstance() {
++        assertObjectName(VK_OBJECT_TYPE_INSTANCE, instance.address(), "named-instance");
++    }
++
++    @Test
++    public void testNamePhysicalDevice() {
++        assertObjectName(VK_OBJECT_TYPE_PHYSICAL_DEVICE, physicalDevice.address(), "named-physical-device");
++    }
++
++    @Test
++    public void testNameDevice() {
++        assertObjectName(VK_OBJECT_TYPE_DEVICE, device.address(), "named-device");
++    }
++
++    private void assertObjectName(int objectType, long handle, String name) {
++        try (MemoryStack stack = stackPush()) {
++            VkDebugUtilsObjectNameInfoEXT info = VkDebugUtilsObjectNameInfoEXT.calloc(stack)
++                .sType$Default().objectType(objectType).objectHandle(handle).pObjectName(stack.UTF8(name));
++            assertEquals(vkSetDebugUtilsObjectNameEXT(device, info), VK_SUCCESS,
++                "Debug naming must succeed for this object type");
++            assertEquals(memUTF8(callPP(handle, observedName)), name,
++                "The native provider must receive and store the requested name");
++        }
++    }
++
++    @AfterClass(alwaysRun = true)
++    public void destroyVulkanObjects() {
++        if (device != null) vkDestroyDevice(device, null);
++        if (instance != null) vkDestroyInstance(instance, null);
++        VK.destroy();
++    }
++}

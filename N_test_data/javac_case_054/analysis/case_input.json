@@ -1,0 +1,146 @@
+{
+  "schema_version": "test_patch_generation_1.0",
+  "instance_id": "LWJGL__lwjgl3-755",
+  "repository": "LWJGL/lwjgl3",
+  "language_stack": "java-c",
+  "base_commit": "2a8645c11533068802dd2dde734b600ec53a1cea",
+  "issue": {
+    "title": "vkSetDebugUtilsObjectNameEXT crashes with VkInstance and VkPhysicalDevice",
+    "description": "### Version\r\n\r\n3.3.1\r\n\r\n### Platform\r\n\r\nWindows x64\r\n\r\n### JDK\r\n\r\nAdoptium 17\r\n\r\n### Module\r\n\r\nVulkan\r\n\r\n### Bug description\r\n\r\n`vkSetDebugUtilsObjectNameEXT` crashes when naming a `VkInstance` or `VkPhysicalDevice`. This appears to be cause by using the function pointer for `vkSetDebugUtilsObjectNameEXT` from the `VkDevice` instead of the `VkInstance`. \r\nMore info can be found here:\r\n[https://forums.developer.nvidia.com/t/vksetdebugutilsobjectnameext-causes-a-crash-when-attempting-to-set-a-name-for-vkphysicaldevice/79517/6](https://forums.developer.nvidia.com/t/vksetdebugutilsobjectnameext-causes-a-crash-when-attempting-to-set-a-name-for-vkphysicaldevice/79517/6)\r\n\r\n> Yeah using vkGetInstanceProcAddr() it a bit counter-intuitive, but that’s currently the rule for instance extension functions, even ones with a VkDevice as their first parameter. The Vulkan spec might get updated in this regard and allow vkGetDeviceProcAddr() to be used for these functions. If that happens implementations will get updated to support it too.\r\n\r\nEDIT: Also take note: https://github.com/KhronosGroup/Vulkan-Loader/issues/116\r\n\r\n### Stacktrace or crash log output\r\n\r\n[https://gist.github.com/tlf30/ff2ed51abf4894add8960a11f4ee5057](https://gist.github.com/tlf30/ff2ed51abf4894add8960a11f4ee5057)\r\n\r\n\r\nPlease let me know if you need anything else.\r\nThank you,\r\n~Trevor",
+    "url": "https://github.com/LWJGL/lwjgl3/issues/755",
+    "reporter": "tlf30",
+    "created_at": "2022-03-28T20:09:07Z",
+    "expected_behavior": "Debug naming succeeds and supplies the requested name for instance and physical-device objects.",
+    "observed_behavior": "Naming those objects crashes on the reported loader."
+  },
+  "target_oracle": {
+    "type": "runtime_behavior",
+    "expected_phase": "call",
+    "success_contract": "Public Java debug-naming calls name VkInstance and VkPhysicalDevice successfully through a provider exhibiting the Issue's loader behavior."
+  },
+  "repository_context": {
+    "relevant_source_files": [
+      {
+        "path": "modules/lwjgl/vulkan/src/main/java/org/lwjgl/vulkan/VK.java",
+        "base_snapshot": "base_materials/modules/lwjgl/vulkan/src/main/java/org/lwjgl/vulkan/VK.java",
+        "sha256": "650ccecba02dfdfd87001ec386c2934edcd80e6c8050b02742ce2c50dd8fc043"
+      },
+      {
+        "path": "modules/lwjgl/vulkan/src/main/java/org/lwjgl/vulkan/VkInstance.java",
+        "base_snapshot": "base_materials/modules/lwjgl/vulkan/src/main/java/org/lwjgl/vulkan/VkInstance.java",
+        "sha256": "3dd2833f937764aa57c57783cd845e89bdaffc06a277501b0a0380d218ee338b"
+      },
+      {
+        "path": "modules/lwjgl/vulkan/src/main/java/org/lwjgl/vulkan/VkPhysicalDevice.java",
+        "base_snapshot": "base_materials/modules/lwjgl/vulkan/src/main/java/org/lwjgl/vulkan/VkPhysicalDevice.java",
+        "sha256": "661f39a8e4fbe80c98a6717d7e4def35f347351d240c4340f739d0d9890bfa96"
+      },
+      {
+        "path": "modules/lwjgl/vulkan/src/main/java/org/lwjgl/vulkan/VkDevice.java",
+        "base_snapshot": "base_materials/modules/lwjgl/vulkan/src/main/java/org/lwjgl/vulkan/VkDevice.java",
+        "sha256": "aae6849fe2ed0d9d388b6fa99595c3f5a10f46699673edf6cd4eee5128dbe0e6"
+      },
+      {
+        "path": "modules/lwjgl/vulkan/src/main/java/org/lwjgl/vulkan/DispatchableHandleDevice.java",
+        "base_snapshot": "base_materials/modules/lwjgl/vulkan/src/main/java/org/lwjgl/vulkan/DispatchableHandleDevice.java",
+        "sha256": "96d12fd5e7587bdd64cb9e96350da793086d24416b8e15042c5c4054f421b7e6"
+      },
+      {
+        "path": "modules/lwjgl/vulkan/src/main/java/org/lwjgl/vulkan/DispatchableHandleInstance.java",
+        "base_snapshot": "base_materials/modules/lwjgl/vulkan/src/main/java/org/lwjgl/vulkan/DispatchableHandleInstance.java",
+        "sha256": "d356f1e6d38165a6b2dd8d4ae4e01d6c100000abcaeaa3fe3d73f5107a5ee71f"
+      },
+      {
+        "path": "modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/EXTDebugUtils.java",
+        "base_snapshot": "base_materials/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/EXTDebugUtils.java",
+        "sha256": "56b8920301786059c5a0bb73cedd3acbfbfae328b91ac560b53671d02241760a"
+      },
+      {
+        "path": "modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VKCapabilitiesInstance.java",
+        "base_snapshot": "base_materials/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VKCapabilitiesInstance.java",
+        "sha256": "fdb949e700dcee1f8159d23e3c61cef330a8c83be375710c2c150b77fc87ad6c"
+      },
+      {
+        "path": "modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VKCapabilitiesDevice.java",
+        "base_snapshot": "base_materials/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VKCapabilitiesDevice.java",
+        "sha256": "c49dea38a124fd57225f236c98098500c6f8ef1018fdd7ea3f13011866c7d7da"
+      },
+      {
+        "path": "modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkDebugUtilsObjectNameInfoEXT.java",
+        "base_snapshot": "base_materials/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkDebugUtilsObjectNameInfoEXT.java",
+        "sha256": "09153125f59e5064cbd1948eef6c13c5c006a816f31de90934d80c0eb6473c2b"
+      },
+      {
+        "path": "modules/lwjgl/core/src/test/java/org/lwjgl/system/libffi/LibFFITest.java",
+        "base_snapshot": "base_materials/modules/lwjgl/core/src/test/java/org/lwjgl/system/libffi/LibFFITest.java",
+        "sha256": "0b686f8da6520f1bf5a04ba2fb1e9bb5d2bfe8b305a994af59da0ffc0bf61f65"
+      },
+      {
+        "path": "modules/lwjgl/core/src/test/java/org/lwjgl/system/MemoryUtilTest.java",
+        "base_snapshot": "base_materials/modules/lwjgl/core/src/test/java/org/lwjgl/system/MemoryUtilTest.java",
+        "sha256": "c7cfc68556ad6de29923eb220a3a1292df5dcc88d0df1457ce1c29281443696a"
+      },
+      {
+        "path": "modules/lwjgl/core/src/test/java/org/lwjgl/system/StackTest.java",
+        "base_snapshot": "base_materials/modules/lwjgl/core/src/test/java/org/lwjgl/system/StackTest.java",
+        "sha256": "c1393b39efa49c59958e5631d968b90aeceef80a3c4e4056a6b7a944bacbb4ec"
+      },
+      {
+        "path": "modules/lwjgl/core/src/test/java/org/lwjgl/system/BufferTest.java",
+        "base_snapshot": "base_materials/modules/lwjgl/core/src/test/java/org/lwjgl/system/BufferTest.java",
+        "sha256": "d37917ed0613a8127ba5a5a1fbef5d9ab2eecf436f70c6f8892df40c08b2a06a"
+      },
+      {
+        "path": "config/tests.xml",
+        "base_snapshot": "base_materials/config/tests.xml",
+        "sha256": "4722685d5067b36c9e1d94a259c37449520a55fbd83032e6c2696670fb4a6076"
+      },
+      {
+        "path": "config/linux/build.xml",
+        "base_snapshot": "base_materials/config/linux/build.xml",
+        "sha256": "eff58eda5242d14487c0a09986375f076185a679b12a6715bf6adfe3305fbfd0"
+      },
+      {
+        "path": "config/build-bindings.xml",
+        "base_snapshot": "base_materials/config/build-bindings.xml",
+        "sha256": "fdfa015d15efcfd546dbf4e79f1aee750993dce1bb66feea5e1383548b2542f2"
+      },
+      {
+        "path": "config/build-definitions.xml",
+        "base_snapshot": "base_materials/config/build-definitions.xml",
+        "sha256": "429e391f33f8df26e21656b28c5d3b391c6a575be747cb2083a374744586fd99"
+      },
+      {
+        "path": "build.xml",
+        "base_snapshot": "base_materials/build.xml",
+        "sha256": "b0fc3f9bbe4465f5e947530dca2326b65adc0058ed64d8172e17019e209eb5ec"
+      },
+      {
+        "path": "update-dependencies.xml",
+        "base_snapshot": "base_materials/update-dependencies.xml",
+        "sha256": "c8982fe8a3c7e03f01f54474a7fed99188c782171bfa7451c49823a845e08a9a"
+      },
+      {
+        "path": "gradle.properties",
+        "base_snapshot": "base_materials/gradle.properties",
+        "sha256": "234a98910404bb6c22aa99e01d0863487343575858f73e5d6416f732a8d3ef29"
+      }
+    ],
+    "existing_test_examples": [
+      "modules/lwjgl/core/src/test/java/org/lwjgl/system/libffi/LibFFITest.java"
+    ],
+    "build_and_test_config": "Pinned Ant build, core and Vulkan enabled, TestNG 7.4.0, JDK17. Test fixture uses pinned Vulkan C headers. Remaining binding flags disabled. The Ant native target unconditionally also compiles some unused small native bindings. Upstream libffi archive download has TLS failure; Ant supported offline mode uses Ubuntu libffi-dev 3.4.2-4 libffi_pic.a, explicitly recorded in native_dependency.json. JNI is compiled from current repository sources.",
+    "available_test_commands": [
+      "python evaluator/build_model_evaluator.py",
+      "python evaluator/evaluate_model_patch.py --patch candidate.diff"
+    ]
+  },
+  "constraints": {
+    "golden_patch_visible": false,
+    "fix_source_visible": false,
+    "network_allowed": false,
+    "production_code_modification_allowed": false,
+    "maximum_candidates": 2
+  },
+  "preparation_boundary_note": "Commit metadata was used to identify the Issue and parent before generation; its message contained dispatch guidance overlapping the Issue body. No official diff or Fix source was viewed. This record does not claim a fully metadata-blind upstream preparation."
+}

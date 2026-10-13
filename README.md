@@ -1,6 +1,6 @@
 # Java-C SWE-bench-compatible cases
 
-This repository contains seventeen Java-C cross-language bug cases converted to a
+This repository contains eighteen Java-C cross-language bug cases converted to a
 SWE-bench-compatible record format. Cases are separated by test provenance:
 `Y_test_data/` contains Fix commits with extractable official regression tests;
 `N_test_data/` contains cases whose protected tests were constructed, adapted,
@@ -20,6 +20,7 @@ or wrapped during dataset production.
 | Y | 194 | `MDSplus__mdsplus-1423` | 1423 | 1 | 1 |
 | Y | 200 | `MDSplus__mdsplus-2375` | 2375 | 1 | 1 |
 | N | 053 | `LWJGL__lwjgl3-879` | 879 | 1 | 3 |
+| N | 054 | `LWJGL__lwjgl3-755` | 755 | 2 | 30 |
 | N | 093 | `ninia__jep-79` | 79 | 1 | 130 |
 | N | 094 | `ninia__jep-40` | 40 | 1 | 95 |
 | N | 096 | `ninia__jep-22` | 22 | 1 | 78 |
@@ -61,6 +62,12 @@ python evaluator/evaluate_model_patch.py --patch C:\path\candidate.diff
 ```
 
 See `N_test_data/javac_case_053/README.md` for the accepted scope and evidence.
+
+## Case 054
+
+Case 054 verifies public Java/native Vulkan debug naming with a controlled test provider. Its human-approved scope is Linux x86_64/JDK17 and an explicit Ubuntu libffi PIC dependency adaptation. Two target tests fail on Base and pass on official Fix; 29 existing core tests and one device-naming control remain passing. It does not reproduce the original Windows driver crash or establish real-GPU compatibility. Base source version is 3.3.2; the report used 3.3.1.
+
+The published image `yutu0814/javac-case-054-lwjgl3:benchmark-v1` (digest `sha256:e3c1ac3197df69e047650a2806f0b923582058de8ca78b1c816657130f104bb4`) passed clean-Base audit and standard evaluator Base/Fix/protected-test-tamper controls. Pull it with `docker pull yutu0814/javac-case-054-lwjgl3:benchmark-v1`. See `N_test_data/javac_case_054/README.md`.
 
 ## Case 092
 

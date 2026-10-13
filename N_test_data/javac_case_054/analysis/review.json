@@ -1,0 +1,37 @@
+{
+  "schema_version": "test_patch_review_1.0",
+  "instance_id": "LWJGL__lwjgl3-755",
+  "reviews": [
+    {
+      "candidate_id": "candidate_01",
+      "semantic_relevance": 4,
+      "oracle_quality": 4,
+      "determinism": 5,
+      "repository_conformance": 4,
+      "overfitting_resistance": 4,
+      "execution_validity": 5,
+      "oracle_phase_alignment": 5,
+      "fatal_issues": [],
+      "nonfatal_issues": [
+        "受控 provider 将 Issue 中错误入口导致的 native 崩溃转化为确定的 VkResult 错误；这验证了相关公开 API 的命名行为和入口适配，但没有复现 Windows x64 原始驱动崩溃，也不能证明所有真实 loader 上均无崩溃。",
+        "provider 是最小测试替身，未实现函数统一返回会 abort 的占位入口，且不完整校验 Vulkan 创建信息与查询规则。此设计适合当前明确限定的调用集；不能据此声称完整 Vulkan 实现兼容性。",
+        "补丁只新增 Java/C 测试，fixture 编译和 JVM 属性由提供的外部 run_candidate.py 设置，未接入 Ant tests 的 fixture 构建步骤。接受范围依赖随案例保留该 runner 及其调用约定；直接运行常规 Ant tests 不具备同等准备过程。",
+        "Ubuntu libffi-dev 3.4.2-4 的 libffi_pic.a 是已记录的依赖适配，非项目原始下载归档。已有 LibFFITest::testDowncall 确认实际 ABI downcall 可用，但不能覆盖 libffi 全部 ABI 行为；准备脚本 prepare_native_dependency.py 未包含在本审查包中。",
+        "回归覆盖限于 29 个旧 core 节点和新增 device 命名对照，未覆盖其他 debug-utils 操作、多个 instance/device、渲染器或真实 GPU 工作负载；重复证据为 Base/Fix 各两轮。",
+        "case_input 明示上游准备阶段曾读取包含 dispatch 指导的提交消息，内容与 Issue 描述重叠。未发现候选利用 gold diff 或 Fix 源码，但不能把该案例标记为完全提交元数据盲的生成实验。"
+      ],
+      "verdict": "accept",
+      "justification": "仅审查了允许的提示词和 review_input 材料，未读取 gold diff、Fix 源码、git 历史或私有日志。Issue 明确描述 instance/physical-device 命名因 device 与 instance 查询入口差异而失败；fixture 正好令 instance 入口支持三类对象、device 入口只支持 device，并通过公开 vkCreateInstance、vkEnumeratePhysicalDevices、vkCreateDevice 和 vkSetDebugUtilsObjectNameEXT 调用真实项目 JNI。成功 oracle 同时要求 VK_SUCCESS 与 native 实际保存的对象名称，能拒绝仅伪造成功而不执行命名的实现。C 中的 handle 身份检查是 provider 对传入对象的正常识别，Java 的地址只是 Vulkan objectHandle 参数，未把固定地址、函数指针相等、源码文本或 capabilities 布局作为 oracle。Base 快照的公开命名方法确实从 device capabilities 取得入口，而 VkDevice 查询 vkGetDeviceProcAddr，这解释了 fixture 的两个目标调用错误；失败不是编译、JNI 加载或 native crash。执行反馈报告补丁在 Base/Fix 均应用成功，四轮各收集 32 个节点且配置方法通过；Base 两轮仅 testNameInstance 和 testNamePhysicalDevice 为 java.lang.AssertionError，device 命名和 29 个旧 core 节点通过；Fix 两轮全部通过，无 skip、xfail 或基础设施错误。旧节点名称及 16 个 MemoryUtil、5 个 Stack、7 个 Buffer、1 个 LibFFI 的数量与 Base 快照一致。build_base.py 使用标准 Ant compile-templates/compile-native，后者依赖当前 Java 编译；run_candidate.py 从当前 core/Vulkan classes 与明确指定的当前 liblwjgl.so 路径运行，fresh 编译 fixture，不依赖系统 Vulkan loader 或已安装 LWJGL。补丁只新增测试文件，candidate JSON 与独立 diff 内容规范化后一致，diff 摘要与冻结记录相符。reference_validation 的脱敏证明声明完整官方参考补丁及构建前后 blob 匹配，因此参考 Fix 通过证据成立，无须按无参考 Fix 情况降为 provisional。接受其限定的确定性运行时命名 oracle，并保留上述环境和覆盖边界。"
+    }
+  ],
+  "selected_candidate_id": "candidate_01",
+  "selection_reason": "唯一候选在目标调用阶段形成可解释、重复一致的 2 个 F2P 和 30 个 P2P；公开 API 结果与 native 名称存储构成实质行为断言，没有生产代码改动或实现匹配 oracle。无 fatal_issues，接受为 Linux 受控 provider 下的 Issue 755 回归 oracle。",
+  "requires_human_review": true,
+  "human_review_checklist": [
+    "确认数据集允许 Linux x86_64/JDK17 的受控 provider 测试替代 Windows x64/Adoptium17 原始驱动崩溃复现，并保留该范围说明。",
+    "确认随案例交付并注册 run_candidate.py、build_base.py、fixture 属性与依赖准备步骤，保证新环境能够真实收集执行三项测试；常规 Ant tests 的 fixture 集成是后续改善项。",
+    "确认 libffi PIC 归档版本、哈希及放置路径与 native_dependency.json 一致，依赖适配不会被误记为官方 upstream libffi 归档。",
+    "保留官方参考完整应用和 Base/Fix 各两轮的脱敏验证证明；本审查使用该证明而未查看官方实现。",
+    "保留上游准备阶段提交消息已可见的边界说明，以及回归覆盖为 29 个旧 core 节点加 1 个新 device 对照的精确表述。"
+  ]
+}

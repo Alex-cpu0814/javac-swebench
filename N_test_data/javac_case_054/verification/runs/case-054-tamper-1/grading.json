@@ -1,0 +1,42 @@
+{
+  "schema_version": "3.0",
+  "run_id": "case-054-tamper-1",
+  "tests_observed": 0,
+  "FAIL_TO_PASS": {
+    "org.lwjgl.vulkan.DebugUtilsTest::testNameInstance": "MISSING",
+    "org.lwjgl.vulkan.DebugUtilsTest::testNamePhysicalDevice": "MISSING"
+  },
+  "PASS_TO_PASS": {
+    "org.lwjgl.system.BufferTest::testCustomBufferIOOBE": "MISSING",
+    "org.lwjgl.system.BufferTest::testLargeBuffer": "MISSING",
+    "org.lwjgl.system.BufferTest::testLargeBufferNIO": "MISSING",
+    "org.lwjgl.system.BufferTest::testPointerBuffer": "MISSING",
+    "org.lwjgl.system.BufferTest::testStructBufferIterable": "MISSING",
+    "org.lwjgl.system.BufferTest::testStructBufferParallelStream": "MISSING",
+    "org.lwjgl.system.BufferTest::testStructBufferStream": "MISSING",
+    "org.lwjgl.system.MemoryUtilTest::testAddress": "MISSING",
+    "org.lwjgl.system.MemoryUtilTest::testDirectAccess": "MISSING",
+    "org.lwjgl.system.MemoryUtilTest::testDuplicateBuffer": "MISSING",
+    "org.lwjgl.system.MemoryUtilTest::testJNINewBuffer": "MISSING",
+    "org.lwjgl.system.MemoryUtilTest::testMemCopy": "MISSING",
+    "org.lwjgl.system.MemoryUtilTest::testMemCopyMisaligned": "MISSING",
+    "org.lwjgl.system.MemoryUtilTest::testMemSet": "MISSING",
+    "org.lwjgl.system.MemoryUtilTest::testMemSetMisaligned": "MISSING",
+    "org.lwjgl.system.MemoryUtilTest::testNewBuffer": "MISSING",
+    "org.lwjgl.system.MemoryUtilTest::testOOME": "MISSING",
+    "org.lwjgl.system.MemoryUtilTest::testSliceBuffer": "MISSING",
+    "org.lwjgl.system.MemoryUtilTest::testSliceBufferAbs": "MISSING",
+    "org.lwjgl.system.MemoryUtilTest::testTextDecoding": "MISSING",
+    "org.lwjgl.system.MemoryUtilTest::testUTF8": "MISSING",
+    "org.lwjgl.system.MemoryUtilTest::testViewBuffer": "MISSING",
+    "org.lwjgl.system.MemoryUtilTest::testZeroAllocation": "MISSING",
+    "org.lwjgl.system.StackTest::testAlignment": "MISSING",
+    "org.lwjgl.system.StackTest::testExternalMemory": "MISSING",
+    "org.lwjgl.system.StackTest::testOOME": "MISSING",
+    "org.lwjgl.system.StackTest::testPushPop": "MISSING",
+    "org.lwjgl.system.StackTest::testSOE": "MISSING",
+    "org.lwjgl.system.libffi.LibFFITest::testDowncall": "MISSING",
+    "org.lwjgl.vulkan.DebugUtilsTest::testNameDevice": "MISSING"
+  },
+  "unexpected_failures": []
+}

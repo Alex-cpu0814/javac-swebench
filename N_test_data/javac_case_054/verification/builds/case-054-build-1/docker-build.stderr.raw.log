@@ -1,0 +1,348 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 2.89kB 0.2s
+#1 transferring dockerfile: 2.89kB 0.2s done
+#1 DONE 0.3s
+
+#2 [internal] load metadata for docker.io/library/ubuntu:22.04@sha256:5ec03bb3441e8b0bf3b4f9cd4629a1ae763010dc3035bb8da3ae6cf026486401
+#2 DONE 1.1s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 54B 0.0s done
+#3 DONE 0.1s
+
+#4 [1/8] FROM docker.io/library/ubuntu:22.04@sha256:5ec03bb3441e8b0bf3b4f9cd4629a1ae763010dc3035bb8da3ae6cf026486401
+#4 resolve docker.io/library/ubuntu:22.04@sha256:5ec03bb3441e8b0bf3b4f9cd4629a1ae763010dc3035bb8da3ae6cf026486401 0.0s done
+#4 DONE 0.0s
+
+#5 [2/8] RUN apt-get update && apt-get install -y --no-install-recommends ant ca-certificates git openjdk-17-jdk-headless gcc g++ libx11-dev make unzip python3 && apt-get clean && rm -rf /var/lib/apt/lists/*
+#5 CACHED
+
+#6 [3/8] RUN apt-get update && apt-get install -y --no-install-recommends libffi-dev=3.4.2-4 && apt-get clean && rm -rf /var/lib/apt/lists/* && ln -s /usr/bin/python3 /usr/local/bin/python
+#6 1.621 Get:1 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
+#6 1.795 Get:2 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+#6 2.870 Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+#6 3.441 Get:4 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [96.8 kB]
+#6 4.008 Get:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+#6 5.403 Get:6 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
+#6 7.094 Get:7 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [4429 kB]
+#6 13.40 Get:8 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
+#6 13.75 Get:9 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [7955 kB]
+#6 18.35 Get:10 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1323 kB]
+#6 18.67 Get:11 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]
+#6 19.98 Get:12 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
+#6 21.83 Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1624 kB]
+#6 24.31 Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [4757 kB]
+#6 26.23 Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [104 kB]
+#6 29.29 Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [8243 kB]
+#6 30.86 Get:17 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [35.6 kB]
+#6 32.05 Get:18 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [82.9 kB]
+#6 32.09 Fetched 49.0 MB in 32s (1540 kB/s)
+#6 32.09 Reading package lists...
+#6 33.41 Reading package lists...
+#6 34.62 Building dependency tree...
+#6 34.86 Reading state information...
+#6 35.10 The following NEW packages will be installed:
+#6 35.10   libffi-dev
+#6 36.11 0 upgraded, 1 newly installed, 0 to remove and 1 not upgraded.
+#6 36.11 Need to get 63.7 kB of archives.
+#6 36.11 After this operation, 336 kB of additional disk space will be used.
+#6 36.11 Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 libffi-dev amd64 3.4.2-4 [63.7 kB]
+#6 36.32 debconf: delaying package configuration, since apt-utils is not installed
+#6 36.36 Fetched 63.7 kB in 1s (63.3 kB/s)
+#6 36.38 Selecting previously unselected package libffi-dev:amd64.
+#6 36.38 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 13661 files and directories currently installed.)
+#6 36.44 Preparing to unpack .../libffi-dev_3.4.2-4_amd64.deb ...
+#6 36.44 Unpacking libffi-dev:amd64 (3.4.2-4) ...
+#6 36.48 Setting up libffi-dev:amd64 (3.4.2-4) ...
+#6 DONE 36.5s
+
+#7 [4/8] WORKDIR /testbed
+#7 DONE 0.0s
+
+#8 [5/8] RUN git init && git -c http.proxy= fetch --depth=1 "https://github.com/LWJGL/lwjgl3.git" "2a8645c11533068802dd2dde734b600ec53a1cea" && git checkout --detach FETCH_HEAD && git config core.autocrlf false
+#8 0.288 hint: Using 'master' as the name for the initial branch. This default branch name
+#8 0.288 hint: is subject to change. To configure the initial branch name to use in all
+#8 0.288 hint: of your new repositories, which will suppress this warning, call:
+#8 0.288 hint: 
+#8 0.288 hint: 	git config --global init.defaultBranch <name>
+#8 0.288 hint: 
+#8 0.288 hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+#8 0.288 hint: 'development'. The just-created branch can be renamed via this command:
+#8 0.288 hint: 
+#8 0.288 hint: 	git branch -m <name>
+#8 0.290 Initialized empty Git repository in /testbed/.git/
+#8 8.312 From https://github.com/LWJGL/lwjgl3
+#8 8.312  * branch            2a8645c11533068802dd2dde734b600ec53a1cea -> FETCH_HEAD
+#8 9.064 HEAD is now at 2a8645c Update bug report issue template.
+#8 DONE 9.2s
+
+#9 [6/8] RUN python3 - <<'PY'
+#9 0.583 Buildfile: /testbed/build.xml
+#9 0.964 
+#9 0.964 init:
+#9 0.982     [mkdir] Created dir: /testbed/bin
+#9 0.985     [mkdir] Created dir: /testbed/bin/classes/ant
+#9 1.046 [javac: Custom Ant Tasks] Compiling 2 source files to /testbed/bin/classes/ant
+#9 1.139 [javac: Custom Ant Tasks] warning: [options] bootstrap class path not set in conjunction with -source 8
+#9 1.692 [javac: Custom Ant Tasks] 1 warning
+#9 1.749 
+#9 1.749 check-dependencies:
+#9 1.751   [kotlinc] /testbed/bin/libs/kotlinc/build.txt doesn't exist
+#9 1.786 
+#9 1.786 update-dependencies:
+#9 1.788     [mkdir] Created dir: /testbed/bin/libs
+#9 1.789     [mkdir] Created dir: /testbed/bin/libs/java
+#9 1.814 
+#9 1.814 -lib-download:
+#9 6.350 
+#9 6.350 -kotlinc-download:
+#9 6.351   [kotlinc] Getting: https://github.com/JetBrains/kotlin/releases/download/v1.6.20-M1/kotlin-compiler-1.6.20-M1.zip
+#9 6.351   [kotlinc] To: /testbed/bin/libs/kotlin-compiler-1.6.20-M1.zip
+#9 7.164   [kotlinc] https://github.com/JetBrains/kotlin/releases/download/v1.6.20-M1/kotlin-compiler-1.6.20-M1.zip moved to https://release-assets.githubusercontent.com/github-production-release-asset/3432266/6f7ec646-3556-4b74-ba01-21ca97e0306d?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-13T01%3A15%3A54Z&rscd=attachment%3B+filename%3Dkotlin-compiler-1.6.20-M1.zip&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-13T00%3A15%3A27Z&ske=2026-10-13T01%3A15%3A54Z&sks=b&skv=2018-11-09&sig=AimfGhGjEdlE%2FthezdQDZpza4MEb29ZSbNHDtSCaCwY%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MTg1Mjk1NywibmJmIjoxNzkxODUxMTU3LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.jRM37FrOAW8DWEe64Bh8Ul56z-AN9pLPyDRwcczJCNQ&response-content-disposition=attachment%3B%20filename%3Dkotlin-compiler-1.6.20-M1.zip&response-content-type=application%2Foctet-stream
+#9 10.93   [kotlinc] ....................................................
+#9 11.15   [kotlinc] ....................................................
+#9 11.40   [kotlinc] ....................................................
+#9 11.66   [kotlinc] ....................................................
+#9 11.93   [kotlinc] ....................................................
+#9 12.09   [kotlinc] ....................................................
+#9 12.26   [kotlinc] ....................................................
+#9 12.44   [kotlinc] ....................................................
+#9 12.72   [kotlinc] ....................................................
+#9 12.87   [kotlinc] ....................................................
+#9 13.15   [kotlinc] ....................................................
+#9 13.29   [kotlinc] ....................................................
+#9 13.35   [kotlinc] ....................................................
+#9 13.50   [kotlinc] ....................................................
+#9 13.65   [kotlinc] ....................................................
+#9 13.79   [kotlinc] ....................................................
+#9 13.95   [kotlinc] ....................................................
+#9 14.07   [kotlinc] ....................................................
+#9 14.33   [kotlinc] ....................................................
+#9 14.49   [kotlinc] ....................................................
+#9 14.79   [kotlinc] ....................................................
+#9 15.06   [kotlinc] ....................................................
+#9 15.09   [kotlinc] ....................................................
+#9 15.32   [kotlinc] ....................................................
+#9 15.48   [kotlinc] ....................................................
+#9 15.62   [kotlinc] ....................................................
+#9 15.78   [kotlinc] ....................................................
+#9 15.93   [kotlinc] ....................................................
+#9 16.11   [kotlinc] ....................................................
+#9 16.23   [kotlinc] ....................................................
+#9 16.39   [kotlinc] ....................................................
+#9 16.51   [kotlinc] ....................................................
+#9 16.68   [kotlinc] ....................................................
+#9 17.12   [kotlinc] ....................................................
+#9 17.41   [kotlinc] ....................................................
+#9 17.70   [kotlinc] ....................................................
+#9 18.00   [kotlinc] ....................................................
+#9 18.29   [kotlinc] ....................................................
+#9 18.45   [kotlinc] ....................................................
+#9 18.62   [kotlinc] ....................................................
+#9 19.04   [kotlinc] ....................................................
+#9 19.31   [kotlinc] ....................................................
+#9 19.49   [kotlinc] ....................................................
+#9 19.79   [kotlinc] ....................................................
+#9 19.83   [kotlinc] ....................................................
+#9 19.98   [kotlinc] ....................................................
+#9 20.13   [kotlinc] ....................................................
+#9 20.28   [kotlinc] ....................................................
+#9 20.44   [kotlinc] ....................................................
+#9 20.59   [kotlinc] ....................................................
+#9 20.88   [kotlinc] ....................................................
+#9 21.14   [kotlinc] ....................................................
+#9 21.29   [kotlinc] ....................................................
+#9 21.60   [kotlinc] ....................................................
+#9 21.90   [kotlinc] ....................................................
+#9 22.03   [kotlinc] ....................................................
+#9 22.23   [kotlinc] ....................................................
+#9 22.48   [kotlinc] ....................................................
+#9 22.67   [kotlinc] ....................................................
+#9 22.83   [kotlinc] ....................................................
+#9 23.01   [kotlinc] ....................................................
+#9 23.29   [kotlinc] ....................................................
+#9 23.44   [kotlinc] ....................................................
+#9 23.60   [kotlinc] ....................................................
+#9 23.76   [kotlinc] ....................................................
+#9 24.06   [kotlinc] ....................................................
+#9 24.23   [kotlinc] ....................................................
+#9 24.39   [kotlinc] ....................................................
+#9 24.51   [kotlinc] ....................................................
+#9 24.69   [kotlinc] ....................................................
+#9 24.96   [kotlinc] ....................................................
+#9 25.22   [kotlinc] ....................................................
+#9 25.56   [kotlinc] ....................................................
+#9 26.05   [kotlinc] ....................................................
+#9 26.37   [kotlinc] ....................................................
+#9 26.71   [kotlinc] ....................................................
+#9 27.15   [kotlinc] ....................................................
+#9 27.43   [kotlinc] ....................................................
+#9 27.70   [kotlinc] ....................................................
+#9 27.86   [kotlinc] ....................................................
+#9 27.98   [kotlinc] ....................................................
+#9 28.13   [kotlinc] ....................................................
+#9 28.31   [kotlinc] ....................................................
+#9 28.47   [kotlinc] ....................................................
+#9 28.50   [kotlinc] ....................................................
+#9 28.51   [kotlinc] ..........
+#9 28.51   [kotlinc] Expanding: /testbed/bin/libs/kotlin-compiler-1.6.20-M1.zip into /testbed/bin/libs
+#9 29.33   [kotlinc] Deleting: /testbed/bin/libs/kotlin-compiler-1.6.20-M1.zip
+#9 29.34   [kotlinc] The Kotlin compiler was updated to build: 1.6.20-M1
+#9 29.38 
+#9 29.38 -compile-generator:
+#9 29.38 [Generator] Compiling Kotlin generator...
+#9 29.38     [mkdir] Created dir: /testbed/bin/classes/generator
+#9 30.59   [kotlinc] Compiling [/testbed/modules/generator/src/main/kotlin] => [/testbed/bin/classes/generator]
+#9 30.95   [kotlinc] info: kotlinc-jvm 1.6.20-M1 (JRE 17.0.20.1+1-1-22.04-Ubuntu)
+#9 59.80   [kotlinc] info: PERF: generator-java-production, 20 files (10643 lines)
+#9 59.80   [kotlinc] info: PERF: INIT: Compiler initialized in 1002 ms
+#9 59.80   [kotlinc] info: PERF:         ANALYZE   19394 ms     548.778 loc/s
+#9 59.81   [kotlinc] info: PERF:        GENERATE    6843 ms    1555.312 loc/s
+#9 59.81   [kotlinc] info: PERF: GC time for G1 Young Generation is 198 ms, 18 collections
+#9 59.81   [kotlinc] info: PERF: GC time for G1 Old Generation is 0 ms, 0 collections
+#9 59.81   [kotlinc] info: PERF: JIT time is 129388 ms
+#9 59.81   [kotlinc] info: PERF: Find Java class performed 18 times, total time 13 ms
+#9 59.81   [kotlinc] info: PERF: Type info performed 32109 times, total time 13748 ms
+#9 59.81   [kotlinc] info: PERF: Call resolve performed 19032 times, total time 10764 ms
+#9 59.81   [kotlinc] info: PERF: Binary class from Kotlin file performed 366 times, total time 97 ms
+#9 59.81     [touch] Creating /testbed/bin/classes/generator/touch.txt
+#9 59.83 [javac: Generator Tools] Compiling 6 source files to /testbed/bin/classes/generator
+#9 59.83 [javac: Generator Tools] warning: [options] bootstrap class path not set in conjunction with -source 8
+#9 60.63 [javac: Generator Tools] 1 warning
+#9 60.63 
+#9 60.63 compile-templates:
+#9 60.63 [Templates] Compiling Kotlin templates. This will take 1-2 minutes...
+#9 60.63     [mkdir] Created dir: /testbed/bin/classes/templates
+#9 60.64   [kotlinc] Compiling [/testbed/modules/lwjgl/core/src/templates/kotlin/core/jni, /testbed/modules/lwjgl/core/src/templates/kotlin/core/libc, /testbed/modules/lwjgl/core/src/templates/kotlin/core/libffi, /testbed/modules/lwjgl/core/src/templates/kotlin/core/linux, /testbed/modules/lwjgl/core/src/templates/kotlin/core/macos, /testbed/modules/lwjgl/core/src/templates/kotlin/core/templates, /testbed/modules/lwjgl/core/src/templates/kotlin/core/windows, /testbed/modules/lwjgl/core/src/templates/kotlin, /testbed/modules/lwjgl/vulkan/src/templates/kotlin] => [/testbed/bin/classes/templates]
+#9 60.64   [kotlinc] info: kotlinc-jvm 1.6.20-M1 (JRE 17.0.20.1+1-1-22.04-Ubuntu)
+#9 91.31   [kotlinc] info: PERF: templates-java-production, 312 files (102085 lines)
+#9 91.31   [kotlinc] info: PERF: INIT: Compiler initialized in 486 ms
+#9 91.31   [kotlinc] info: PERF:         ANALYZE   24242 ms    4211.080 loc/s
+#9 91.31   [kotlinc] info: PERF:        GENERATE    4250 ms   24020.000 loc/s
+#9 91.31   [kotlinc] info: PERF: GC time for G1 Young Generation is 396 ms, 24 collections
+#9 91.31   [kotlinc] info: PERF: GC time for G1 Old Generation is 0 ms, 0 collections
+#9 91.31   [kotlinc] info: PERF: JIT time is 168327 ms
+#9 91.31   [kotlinc] info: PERF: Find Java class performed 18 times, total time 13 ms
+#9 91.31   [kotlinc] info: PERF: Type info performed 123314 times, total time 35741 ms
+#9 91.31   [kotlinc] info: PERF: Call resolve performed 53667 times, total time 30505 ms
+#9 91.31   [kotlinc] info: PERF: Binary class from Kotlin file performed 718 times, total time 176 ms
+#9 91.31   [kotlinc] info: PERF: Find Java class performed 6 times, total time 5 ms
+#9 91.31     [touch] Creating /testbed/bin/classes/templates/touch.txt
+#9 91.32 
+#9 91.32 BUILD SUCCESSFUL
+#9 91.32 Total time: 1 minute 30 seconds
+#9 91.69 Buildfile: /testbed/build.xml
+#9 92.08 
+#9 92.08 init:
+#9 92.20 
+#9 92.20 check-dependencies:
+#9 92.25 
+#9 92.25 generate:
+#9 96.21 [Generator] 	UPDATING: modules/lwjgl/core/src/generated/java/org/lwjgl/system/JNI.java
+#9 96.21 [Generator] 	UPDATING: modules/lwjgl/core/src/generated/c/org_lwjgl_system_JNI.c
+#9 100.2 
+#9 100.2 compile:
+#9 100.2     [mkdir] Created dir: /testbed/bin/classes/lwjgl/core
+#9 100.3 [javac: core] Compiling 171 source files to /testbed/bin/classes/lwjgl/core
+#9 100.3 [javac: core] warning: [options] bootstrap class path not set in conjunction with -source 8
+#9 103.0 [javac: core] /testbed/modules/lwjgl/core/src/main/java/org/lwjgl/system/APIUtil.java:292: warning: [deprecation] newInstance() in Class has been deprecated
+#9 103.0 [javac: core]                     @SuppressWarnings("unchecked") Predicate<String> predicate = (Predicate<String>)Class.forName(s).newInstance();
+#9 103.0 [javac: core]                                                                                                                     ^
+#9 103.0 [javac: core]   where T is a type-variable:
+#9 103.0 [javac: core]     T extends Object declared in class Class
+#9 103.4 [javac: core] /testbed/modules/lwjgl/core/src/main/java/org/lwjgl/system/SharedLibraryLoader.java:350: warning: [try] auto-closeable resource ignored is never referenced in body of corresponding try statement
+#9 103.4 [javac: core]                 try (FileChannel ignored = extract(file, resource)) {
+#9 103.4 [javac: core]                                  ^
+#9 105.6 [javac: core] 3 warnings
+#9 105.6     [mkdir] Created dir: /testbed/bin/classes/lwjgl/core/META-INF/versions/9
+#9 105.6     [mkdir] Created dir: /testbed/bin/classes/lwjgl/core/META-INF/versions/10
+#9 105.6 [javac: Core - Java 9] Compiling 3 source files to /testbed/bin/classes/lwjgl/core/META-INF/versions/9
+#9 106.0 [javac: Core - Java 10] Compiling 2 source files to /testbed/bin/classes/lwjgl/core/META-INF/versions/10
+#9 106.1     [mkdir] Created dir: /testbed/bin/classes/lwjgl/assimp
+#9 106.1     [mkdir] Created dir: /testbed/bin/classes/lwjgl/cuda
+#9 106.1     [mkdir] Created dir: /testbed/bin/classes/lwjgl/egl
+#9 106.1     [mkdir] Created dir: /testbed/bin/classes/lwjgl/bgfx
+#9 106.1     [mkdir] Created dir: /testbed/bin/classes/lwjgl/jemalloc
+#9 106.1     [mkdir] Created dir: /testbed/bin/classes/lwjgl/libdivide
+#9 106.1     [mkdir] Created dir: /testbed/bin/classes/lwjgl/llvm
+#9 106.1     [mkdir] Created dir: /testbed/bin/classes/lwjgl/jawt
+#9 106.1     [mkdir] Created dir: /testbed/bin/classes/lwjgl/meow
+#9 106.1     [mkdir] Created dir: /testbed/bin/classes/lwjgl/lz4
+#9 106.1     [mkdir] Created dir: /testbed/bin/classes/lwjgl/lmdb
+#9 106.1     [mkdir] Created dir: /testbed/bin/classes/lwjgl/meshoptimizer
+#9 106.1     [mkdir] Created dir: /testbed/bin/classes/lwjgl/odbc
+#9 106.1     [mkdir] Created dir: /testbed/bin/classes/lwjgl/nfd
+#9 106.1     [mkdir] Created dir: /testbed/bin/classes/lwjgl/openal
+#9 106.1     [mkdir] Created dir: /testbed/bin/classes/lwjgl/opencl
+#9 106.1     [mkdir] Created dir: /testbed/bin/classes/lwjgl/nanovg
+#9 106.1     [mkdir] Created dir: /testbed/bin/classes/lwjgl/nuklear
+#9 106.1     [mkdir] Created dir: /testbed/bin/classes/lwjgl/openvr
+#9 106.1     [mkdir] Created dir: /testbed/bin/classes/lwjgl/opengles
+#9 106.1     [mkdir] Created dir: /testbed/bin/classes/lwjgl/opus
+#9 106.1     [mkdir] Created dir: /testbed/bin/classes/lwjgl/par
+#9 106.1     [mkdir] Created dir: /testbed/bin/classes/lwjgl/remotery
+#9 106.1     [mkdir] Created dir: /testbed/bin/classes/lwjgl/sse
+#9 106.1     [mkdir] Created dir: /testbed/bin/classes/lwjgl/tinyexr
+#9 106.1     [mkdir] Created dir: /testbed/bin/classes/lwjgl/shaderc
+#9 106.1     [mkdir] Created dir: /testbed/bin/classes/lwjgl/spvc
+#9 106.1     [mkdir] Created dir: /testbed/bin/classes/lwjgl/rpmalloc
+#9 106.1     [mkdir] Created dir: /testbed/bin/classes/lwjgl/yoga
+#9 106.1     [mkdir] Created dir: /testbed/bin/classes/lwjgl/stb
+#9 106.1     [mkdir] Created dir: /testbed/bin/classes/lwjgl/zstd
+#9 106.1     [mkdir] Created dir: /testbed/bin/classes/lwjgl/tootle
+#9 106.1     [mkdir] Created dir: /testbed/bin/classes/lwjgl/tinyfd
+#9 106.1     [mkdir] Created dir: /testbed/bin/classes/lwjgl/xxhash
+#9 106.1     [mkdir] Created dir: /testbed/bin/classes/lwjgl/vulkan
+#9 106.2 [javac: vulkan] Compiling 1242 source files to /testbed/bin/classes/lwjgl/vulkan
+#9 106.3 [javac: vulkan] warning: [options] bootstrap class path not set in conjunction with -source 8
+#9 115.7 [javac: vulkan] 1 warning
+#9 115.7     [mkdir] Created dir: /testbed/bin/classes/lwjgl/opengl
+#9 115.7     [mkdir] Created dir: /testbed/bin/classes/lwjgl/vma
+#9 115.7     [mkdir] Created dir: /testbed/bin/classes/lwjgl/ovr
+#9 115.7     [mkdir] Created dir: /testbed/bin/classes/lwjgl/glfw
+#9 115.7     [mkdir] Created dir: /testbed/bin/classes/lwjgl/openxr
+#9 115.7 
+#9 115.7 compile-native:
+#9 115.7     [mkdir] Created dir: /testbed/bin/linux/x64
+#9 115.7 
+#9 115.7 compile-native-platform:
+#9 115.8  [Compiler] gcc --version: "gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0"
+#9 115.8     [mkdir] Created dir: /testbed/bin/linux/x64/core
+#9 115.8     [mkdir] Created dir: /testbed/bin/linux/x64/opengl
+#9 115.8     [mkdir] Created dir: /testbed/bin/linux/x64/par
+#9 115.8     [mkdir] Created dir: /testbed/bin/linux/x64/nuklear
+#9 116.3       [gcc] Linking lwjgl_par
+#9 116.3     [mkdir] Created dir: /testbed/bin/libs/native/linux/x64/${module.par.path}
+#9 116.8       [gcc] Linking lwjgl_nuklear
+#9 116.8     [mkdir] Created dir: /testbed/bin/libs/native/linux/x64/${module.nuklear.path}
+#9 116.9    [Linker] lto-wrapper: warning: using serial compilation of 5 LTRANS jobs
+#9 117.1       [gcc] Linking lwjgl
+#9 120.8       [gcc] Linking lwjgl_opengl
+#9 120.8     [mkdir] Created dir: /testbed/bin/libs/native/linux/x64/${module.opengl.path}
+#9 121.1    [Linker] lto-wrapper: warning: using serial compilation of 3 LTRANS jobs
+#9 123.6 
+#9 123.6 BUILD SUCCESSFUL
+#9 123.6 Total time: 31 seconds
+#9 DONE 123.8s
+
+#10 [7/8] RUN git restore --source="2a8645c11533068802dd2dde734b600ec53a1cea" --worktree -- .     && git for-each-ref --format='delete %(refname)' refs/heads refs/remotes refs/tags | git update-ref --stdin
+#10 DONE 1.1s
+
+#11 [8/8] RUN git reflog expire --expire=now --all && git gc --prune=now     && test "$(git rev-parse HEAD)" = "2a8645c11533068802dd2dde734b600ec53a1cea"     && test -z "$(git status --porcelain)"     && mkdir -p /benchmark /inputs /results
+#11 DONE 1.0s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 4.6s done
+#12 exporting manifest sha256:a441a533e615778323ac17a2fb63172432274f361b8cfef19fa22c788afd18ed 0.0s done
+#12 exporting config sha256:94ea0c8e54ad625345c2ad7f207f1425a339d1c4fc74ea3ed91c193da0ba813d 0.0s done
+#12 exporting attestation manifest sha256:891b66f34eb5ad09abbea5338fb3bf28cfc74f8f52e7250691d12ee5322e819f 0.0s done
+#12 exporting manifest list sha256:e3c1ac3197df69e047650a2806f0b923582058de8ca78b1c816657130f104bb4 0.0s done
+#12 naming to docker.io/library/javac-case-054-lwjgl3:benchmark-v1 done
+#12 unpacking to docker.io/library/javac-case-054-lwjgl3:benchmark-v1
+#12 unpacking to docker.io/library/javac-case-054-lwjgl3:benchmark-v1 2.9s done
+#12 DONE 7.7s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/u97eytd1cqnldtv3gpjjyy0vh

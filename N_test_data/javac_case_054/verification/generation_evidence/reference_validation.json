@@ -1,0 +1,34 @@
+{
+  "base_commit": "2a8645c11533068802dd2dde734b600ec53a1cea",
+  "reference_commit": "e19a2f6bfed5f333f8a01009240f1fff5e0f488f",
+  "reference_first_parent_verified": true,
+  "official_diff_complete": true,
+  "official_changed_files": 9,
+  "reference_blobs_match_before_build": true,
+  "reference_blobs_match_after_build": true,
+  "gold_patch_sha256": "a64f2f9d45344bed7027430b0fcc9ca1bfeb224a4e6b9293e509254b38274b8e",
+  "gold_source_disclosed": false,
+  "candidate_sha256": "9b1ef99659ceac0d8df5ec891172199c897a8d4768cec18249cffaa4c155c4a2",
+  "runs": [
+    {
+      "revision": "base",
+      "repeat": 1,
+      "exit_code": 1
+    },
+    {
+      "revision": "base",
+      "repeat": 2,
+      "exit_code": 1
+    },
+    {
+      "revision": "fix",
+      "repeat": 1,
+      "exit_code": 0
+    },
+    {
+      "revision": "fix",
+      "repeat": 2,
+      "exit_code": 0
+    }
+  ]
+}

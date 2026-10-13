@@ -1,0 +1,10 @@
+* text=auto eol=lf
+*.raw.log -text
+*.private.log -text
+runner.stdout.log -text
+runner.stderr.log -text
+*.sh text eol=lf
+*.py text eol=lf
+*.diff text eol=lf
+*.patch text eol=lf
+Dockerfile text eol=lf

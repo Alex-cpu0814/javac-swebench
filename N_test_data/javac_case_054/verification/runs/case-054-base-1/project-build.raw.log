@@ -1,0 +1,85 @@
+{"phase": "standard_ant_build", "enabled_modules": ["core", "vulkan"], "command": ["ant", "-Dbuild.type=release/3.3.1", "-Dbuild.offline=true", "-Dbinding.assimp=false", "-Dbinding.bgfx=false", "-Dbinding.cuda=false", "-Dbinding.egl=false", "-Dbinding.glfw=false", "-Dbinding.jawt=false", "-Dbinding.jemalloc=false", "-Dbinding.libdivide=false", "-Dbinding.llvm=false", "-Dbinding.lmdb=false", "-Dbinding.lz4=false", "-Dbinding.meow=false", "-Dbinding.meshoptimizer=false", "-Dbinding.nanovg=false", "-Dbinding.nfd=false", "-Dbinding.nuklear=false", "-Dbinding.odbc=false", "-Dbinding.openal=false", "-Dbinding.opencl=false", "-Dbinding.opengl=false", "-Dbinding.opengles=false", "-Dbinding.openvr=false", "-Dbinding.openxr=false", "-Dbinding.opus=false", "-Dbinding.ovr=false", "-Dbinding.par=false", "-Dbinding.remotery=false", "-Dbinding.rpmalloc=false", "-Dbinding.shaderc=false", "-Dbinding.spvc=false", "-Dbinding.sse=false", "-Dbinding.stb=false", "-Dbinding.tinyexr=false", "-Dbinding.tinyfd=false", "-Dbinding.tootle=false", "-Dbinding.vma=false", "-Dbinding.vulkan=true", "-Dbinding.xxhash=false", "-Dbinding.yoga=false", "-Dbinding.zstd=false", "compile-templates", "compile-native"]}
+Buildfile: /testbed/build.xml
+
+init:
+[javac: Custom Ant Tasks] Compiling 2 source files to /testbed/bin/classes/ant
+[javac: Custom Ant Tasks] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: Custom Ant Tasks] 1 warning
+
+check-dependencies:
+
+-compile-generator:
+[Generator] Compiling Kotlin generator...
+  [kotlinc] Compiling [/testbed/modules/generator/src/main/kotlin] => [/testbed/bin/classes/generator]
+  [kotlinc] info: kotlinc-jvm 1.6.20-M1 (JRE 17.0.20.1+1-1-22.04-Ubuntu)
+  [kotlinc] info: PERF: generator-java-production, 20 files (10643 lines)
+  [kotlinc] info: PERF: INIT: Compiler initialized in 1284 ms
+  [kotlinc] info: PERF:         ANALYZE   18724 ms     568.415 loc/s
+  [kotlinc] info: PERF:        GENERATE    6529 ms    1630.112 loc/s
+  [kotlinc] info: PERF: GC time for G1 Young Generation is 191 ms, 23 collections
+  [kotlinc] info: PERF: GC time for G1 Old Generation is 0 ms, 0 collections
+  [kotlinc] info: PERF: JIT time is 123646 ms
+  [kotlinc] info: PERF: Find Java class performed 18 times, total time 11 ms
+  [kotlinc] info: PERF: Type info performed 32109 times, total time 13640 ms
+  [kotlinc] info: PERF: Call resolve performed 19032 times, total time 10604 ms
+  [kotlinc] info: PERF: Binary class from Kotlin file performed 366 times, total time 83 ms
+[javac: Generator Tools] Compiling 6 source files to /testbed/bin/classes/generator
+[javac: Generator Tools] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: Generator Tools] 1 warning
+
+compile-templates:
+[Templates] Compiling Kotlin templates. This will take 1-2 minutes...
+  [kotlinc] Compiling [/testbed/modules/lwjgl/core/src/templates/kotlin/core/jni, /testbed/modules/lwjgl/core/src/templates/kotlin/core/libc, /testbed/modules/lwjgl/core/src/templates/kotlin/core/libffi, /testbed/modules/lwjgl/core/src/templates/kotlin/core/linux, /testbed/modules/lwjgl/core/src/templates/kotlin/core/macos, /testbed/modules/lwjgl/core/src/templates/kotlin/core/templates, /testbed/modules/lwjgl/core/src/templates/kotlin/core/windows, /testbed/modules/lwjgl/core/src/templates/kotlin, /testbed/modules/lwjgl/vulkan/src/templates/kotlin] => [/testbed/bin/classes/templates]
+  [kotlinc] info: kotlinc-jvm 1.6.20-M1 (JRE 17.0.20.1+1-1-22.04-Ubuntu)
+  [kotlinc] info: PERF: templates-java-production, 312 files (102085 lines)
+  [kotlinc] info: PERF: INIT: Compiler initialized in 339 ms
+  [kotlinc] info: PERF:         ANALYZE   25116 ms    4064.541 loc/s
+  [kotlinc] info: PERF:        GENERATE    4447 ms   22955.925 loc/s
+  [kotlinc] info: PERF: GC time for G1 Young Generation is 390 ms, 27 collections
+  [kotlinc] info: PERF: GC time for G1 Old Generation is 0 ms, 0 collections
+  [kotlinc] info: PERF: JIT time is 168461 ms
+  [kotlinc] info: PERF: Find Java class performed 18 times, total time 11 ms
+  [kotlinc] info: PERF: Type info performed 123314 times, total time 36885 ms
+  [kotlinc] info: PERF: Call resolve performed 53667 times, total time 31611 ms
+  [kotlinc] info: PERF: Binary class from Kotlin file performed 718 times, total time 140 ms
+  [kotlinc] info: PERF: Find Java class performed 6 times, total time 2 ms
+
+init:
+
+check-dependencies:
+
+generate:
+[Generator] 	UPDATING: modules/lwjgl/core/src/generated/java/org/lwjgl/system/JNI.java
+[Generator] 	UPDATING: modules/lwjgl/core/src/generated/c/org_lwjgl_system_JNI.c
+
+compile:
+[javac: core] Compiling 171 source files to /testbed/bin/classes/lwjgl/core
+[javac: core] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: core] /testbed/modules/lwjgl/core/src/main/java/org/lwjgl/system/APIUtil.java:292: warning: [deprecation] newInstance() in Class has been deprecated
+[javac: core]                     @SuppressWarnings("unchecked") Predicate<String> predicate = (Predicate<String>)Class.forName(s).newInstance();
+[javac: core]                                                                                                                     ^
+[javac: core]   where T is a type-variable:
+[javac: core]     T extends Object declared in class Class
+[javac: core] /testbed/modules/lwjgl/core/src/main/java/org/lwjgl/system/SharedLibraryLoader.java:350: warning: [try] auto-closeable resource ignored is never referenced in body of corresponding try statement
+[javac: core]                 try (FileChannel ignored = extract(file, resource)) {
+[javac: core]                                  ^
+[javac: core] 3 warnings
+[javac: Core - Java 9] Compiling 3 source files to /testbed/bin/classes/lwjgl/core/META-INF/versions/9
+[javac: Core - Java 10] Compiling 2 source files to /testbed/bin/classes/lwjgl/core/META-INF/versions/10
+[javac: vulkan] Compiling 1242 source files to /testbed/bin/classes/lwjgl/vulkan
+[javac: vulkan] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: vulkan] 1 warning
+
+compile-native:
+
+compile-native-platform:
+ [Compiler] gcc --version: "gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0"
+      [gcc] Linking lwjgl_par
+      [gcc] Linking lwjgl_nuklear
+      [gcc] Linking lwjgl
+   [Linker] lto-wrapper: warning: using serial compilation of 5 LTRANS jobs
+      [gcc] Linking lwjgl_opengl
+   [Linker] lto-wrapper: warning: using serial compilation of 3 LTRANS jobs
+
+BUILD SUCCESSFUL
+Total time: 1 minute 35 seconds

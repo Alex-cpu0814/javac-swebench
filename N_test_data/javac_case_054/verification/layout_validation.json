@@ -1,0 +1,6 @@
+{
+  "case": "N_test_data/javac_case_054",
+  "errors": [],
+  "passed": true,
+  "scope": "Target case only; preexisting unrelated case deficiencies left unchanged."
+}

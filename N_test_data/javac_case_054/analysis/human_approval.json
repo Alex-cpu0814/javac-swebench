@@ -1,0 +1,18 @@
+{
+  "approved": true,
+  "recorded_at_utc": "2026-10-13T00:22:12.059463+00:00",
+  "source": "User reply to explicit scope-confirmation question in this chat",
+  "user_reply": "接受此范围，继续整理正式案例",
+  "accepted_scope": [
+    "Linux x86_64/JDK17 adaptation of Windows x64/Adoptium17",
+    "Controlled test-only Vulkan provider, no real Vulkan driver or original crash reproduction",
+    "Explicit libffi-dev 3.4.2-4 PIC static dependency adaptation; current JNI built by standard Ant",
+    "Complete official reference diff applied by hidden executor; all 9 changed source blobs match the pinned official Fix before and after standard build",
+    "No production modification in candidate; no source/Git/pointer-address matching oracle"
+  ],
+  "candidate_patch_sha256": "9b1ef99659ceac0d8df5ec891172199c897a8d4768cec18249cffaa4c155c4a2",
+  "publishing_authorized_for_this_case": true,
+  "cleanup_authorized_for_this_case": true,
+  "publication_authorization_user_reply": "上传github和docker hub 并且上传后清理无关文件和镜像",
+  "publication_authorization_recorded_at_utc": "2026-10-13T00:42:54.674048+00:00"
+}

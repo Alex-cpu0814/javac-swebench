@@ -1,0 +1,239 @@
+<html>
+<head>
+<title>TestNG:  Command line test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Command line test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>32/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Oct 13 00:44:36 GMT 2026</td>
+</tr>
+<tr><td>Total time:</td><td>0 seconds (218 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.lwjgl.system.MemoryUtilTest.testMemSet()'><b>testMemSet</b><br>Test class: org.lwjgl.system.MemoryUtilTest</td>
+<td></td>
+<td>0</td>
+<td>org.lwjgl.system.MemoryUtilTest@4bbfb90a</td></tr>
+<tr>
+<td title='org.lwjgl.system.MemoryUtilTest.testSliceBuffer()'><b>testSliceBuffer</b><br>Test class: org.lwjgl.system.MemoryUtilTest</td>
+<td></td>
+<td>0</td>
+<td>org.lwjgl.system.MemoryUtilTest@4bbfb90a</td></tr>
+<tr>
+<td title='org.lwjgl.system.BufferTest.testStructBufferParallelStream()'><b>testStructBufferParallelStream</b><br>Test class: org.lwjgl.system.BufferTest</td>
+<td></td>
+<td>0</td>
+<td>org.lwjgl.system.BufferTest@9660f4e</td></tr>
+<tr>
+<td title='org.lwjgl.system.MemoryUtilTest.testDirectAccess()'><b>testDirectAccess</b><br>Test class: org.lwjgl.system.MemoryUtilTest</td>
+<td></td>
+<td>0</td>
+<td>org.lwjgl.system.MemoryUtilTest@4bbfb90a</td></tr>
+<tr>
+<td title='org.lwjgl.system.MemoryUtilTest.testSliceBufferAbs()'><b>testSliceBufferAbs</b><br>Test class: org.lwjgl.system.MemoryUtilTest</td>
+<td></td>
+<td>0</td>
+<td>org.lwjgl.system.MemoryUtilTest@4bbfb90a</td></tr>
+<tr>
+<td title='org.lwjgl.system.StackTest.testOOME()'><b>testOOME</b><br>Test class: org.lwjgl.system.StackTest</td>
+<td></td>
+<td>0</td>
+<td>org.lwjgl.system.StackTest@7c29daf3</td></tr>
+<tr>
+<td title='org.lwjgl.vulkan.DebugUtilsTest.testNameDevice()'><b>testNameDevice</b><br>Test class: org.lwjgl.vulkan.DebugUtilsTest</td>
+<td></td>
+<td>0</td>
+<td>org.lwjgl.vulkan.DebugUtilsTest@79be0360</td></tr>
+<tr>
+<td title='org.lwjgl.system.MemoryUtilTest.testTextDecoding()'><b>testTextDecoding</b><br>Test class: org.lwjgl.system.MemoryUtilTest</td>
+<td></td>
+<td>0</td>
+<td>org.lwjgl.system.MemoryUtilTest@4bbfb90a</td></tr>
+<tr>
+<td title='org.lwjgl.system.MemoryUtilTest.testJNINewBuffer()'><b>testJNINewBuffer</b><br>Test class: org.lwjgl.system.MemoryUtilTest</td>
+<td></td>
+<td>0</td>
+<td>org.lwjgl.system.MemoryUtilTest@4bbfb90a</td></tr>
+<tr>
+<td title='org.lwjgl.system.MemoryUtilTest.testZeroAllocation()'><b>testZeroAllocation</b><br>Test class: org.lwjgl.system.MemoryUtilTest</td>
+<td></td>
+<td>0</td>
+<td>org.lwjgl.system.MemoryUtilTest@4bbfb90a</td></tr>
+<tr>
+<td title='org.lwjgl.system.BufferTest.testCustomBufferIOOBE()'><b>testCustomBufferIOOBE</b><br>Test class: org.lwjgl.system.BufferTest</td>
+<td></td>
+<td>0</td>
+<td>org.lwjgl.system.BufferTest@9660f4e</td></tr>
+<tr>
+<td title='org.lwjgl.vulkan.DebugUtilsTest.testNamePhysicalDevice()'><b>testNamePhysicalDevice</b><br>Test class: org.lwjgl.vulkan.DebugUtilsTest</td>
+<td></td>
+<td>0</td>
+<td>org.lwjgl.vulkan.DebugUtilsTest@79be0360</td></tr>
+<tr>
+<td title='org.lwjgl.system.MemoryUtilTest.testOOME()'><b>testOOME</b><br>Test class: org.lwjgl.system.MemoryUtilTest</td>
+<td></td>
+<td>0</td>
+<td>org.lwjgl.system.MemoryUtilTest@4bbfb90a</td></tr>
+<tr>
+<td title='org.lwjgl.system.StackTest.testSOE()'><b>testSOE</b><br>Test class: org.lwjgl.system.StackTest</td>
+<td></td>
+<td>0</td>
+<td>org.lwjgl.system.StackTest@7c29daf3</td></tr>
+<tr>
+<td title='org.lwjgl.system.BufferTest.testPointerBuffer()'><b>testPointerBuffer</b><br>Test class: org.lwjgl.system.BufferTest</td>
+<td></td>
+<td>0</td>
+<td>org.lwjgl.system.BufferTest@9660f4e</td></tr>
+<tr>
+<td title='org.lwjgl.system.MemoryUtilTest.testNewBuffer()'><b>testNewBuffer</b><br>Test class: org.lwjgl.system.MemoryUtilTest</td>
+<td></td>
+<td>0</td>
+<td>org.lwjgl.system.MemoryUtilTest@4bbfb90a</td></tr>
+<tr>
+<td title='org.lwjgl.system.MemoryUtilTest.testMemCopy()'><b>testMemCopy</b><br>Test class: org.lwjgl.system.MemoryUtilTest</td>
+<td></td>
+<td>0</td>
+<td>org.lwjgl.system.MemoryUtilTest@4bbfb90a</td></tr>
+<tr>
+<td title='org.lwjgl.vulkan.DebugUtilsTest.testNameInstance()'><b>testNameInstance</b><br>Test class: org.lwjgl.vulkan.DebugUtilsTest</td>
+<td></td>
+<td>0</td>
+<td>org.lwjgl.vulkan.DebugUtilsTest@79be0360</td></tr>
+<tr>
+<td title='org.lwjgl.system.MemoryUtilTest.testUTF8()'><b>testUTF8</b><br>Test class: org.lwjgl.system.MemoryUtilTest</td>
+<td></td>
+<td>0</td>
+<td>org.lwjgl.system.MemoryUtilTest@4bbfb90a</td></tr>
+<tr>
+<td title='org.lwjgl.system.libffi.LibFFITest.testDowncall()'><b>testDowncall</b><br>Test class: org.lwjgl.system.libffi.LibFFITest</td>
+<td></td>
+<td>0</td>
+<td>org.lwjgl.system.libffi.LibFFITest@5a8806ef</td></tr>
+<tr>
+<td title='org.lwjgl.system.MemoryUtilTest.testDuplicateBuffer()'><b>testDuplicateBuffer</b><br>Test class: org.lwjgl.system.MemoryUtilTest</td>
+<td></td>
+<td>0</td>
+<td>org.lwjgl.system.MemoryUtilTest@4bbfb90a</td></tr>
+<tr>
+<td title='org.lwjgl.system.StackTest.testAlignment()'><b>testAlignment</b><br>Test class: org.lwjgl.system.StackTest</td>
+<td></td>
+<td>0</td>
+<td>org.lwjgl.system.StackTest@7c29daf3</td></tr>
+<tr>
+<td title='org.lwjgl.system.StackTest.testExternalMemory()'><b>testExternalMemory</b><br>Test class: org.lwjgl.system.StackTest</td>
+<td></td>
+<td>0</td>
+<td>org.lwjgl.system.StackTest@7c29daf3</td></tr>
+<tr>
+<td title='org.lwjgl.system.StackTest.testPushPop()'><b>testPushPop</b><br>Test class: org.lwjgl.system.StackTest</td>
+<td></td>
+<td>0</td>
+<td>org.lwjgl.system.StackTest@7c29daf3</td></tr>
+<tr>
+<td title='org.lwjgl.system.BufferTest.testStructBufferIterable()'><b>testStructBufferIterable</b><br>Test class: org.lwjgl.system.BufferTest</td>
+<td></td>
+<td>0</td>
+<td>org.lwjgl.system.BufferTest@9660f4e</td></tr>
+<tr>
+<td title='org.lwjgl.system.BufferTest.testStructBufferStream()'><b>testStructBufferStream</b><br>Test class: org.lwjgl.system.BufferTest</td>
+<td></td>
+<td>0</td>
+<td>org.lwjgl.system.BufferTest@9660f4e</td></tr>
+<tr>
+<td title='org.lwjgl.system.MemoryUtilTest.testAddress()'><b>testAddress</b><br>Test class: org.lwjgl.system.MemoryUtilTest</td>
+<td></td>
+<td>0</td>
+<td>org.lwjgl.system.MemoryUtilTest@4bbfb90a</td></tr>
+<tr>
+<td title='org.lwjgl.system.MemoryUtilTest.testMemSetMisaligned()'><b>testMemSetMisaligned</b><br>Test class: org.lwjgl.system.MemoryUtilTest</td>
+<td></td>
+<td>0</td>
+<td>org.lwjgl.system.MemoryUtilTest@4bbfb90a</td></tr>
+<tr>
+<td title='org.lwjgl.system.BufferTest.testLargeBuffer()'><b>testLargeBuffer</b><br>Test class: org.lwjgl.system.BufferTest</td>
+<td></td>
+<td>0</td>
+<td>org.lwjgl.system.BufferTest@9660f4e</td></tr>
+<tr>
+<td title='org.lwjgl.system.MemoryUtilTest.testMemCopyMisaligned()'><b>testMemCopyMisaligned</b><br>Test class: org.lwjgl.system.MemoryUtilTest</td>
+<td></td>
+<td>0</td>
+<td>org.lwjgl.system.MemoryUtilTest@4bbfb90a</td></tr>
+<tr>
+<td title='org.lwjgl.system.MemoryUtilTest.testViewBuffer()'><b>testViewBuffer</b><br>Test class: org.lwjgl.system.MemoryUtilTest</td>
+<td></td>
+<td>0</td>
+<td>org.lwjgl.system.MemoryUtilTest@4bbfb90a</td></tr>
+<tr>
+<td title='org.lwjgl.system.BufferTest.testLargeBufferNIO()'><b>testLargeBufferNIO</b><br>Test class: org.lwjgl.system.BufferTest</td>
+<td></td>
+<td>0</td>
+<td>org.lwjgl.system.BufferTest@9660f4e</td></tr>
+</table><p>
+</body>
+</html>

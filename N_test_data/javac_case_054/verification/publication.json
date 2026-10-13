@@ -1,0 +1,14 @@
+{
+  "image": "yutu0814/javac-case-054-lwjgl3:benchmark-v1",
+  "digest": "sha256:e3c1ac3197df69e047650a2806f0b923582058de8ca78b1c816657130f104bb4",
+  "image_id": "sha256:e3c1ac3197df69e047650a2806f0b923582058de8ca78b1c816657130f104bb4",
+  "docker_hub": "https://hub.docker.com/r/yutu0814/javac-case-054-lwjgl3",
+  "image_published": true,
+  "registry_pull_verified": true,
+  "published_at_utc": "2026-10-13T00:42:54.613444+00:00",
+  "github_case_url": "https://github.com/Alex-cpu0814/javac-swebench/tree/main/N_test_data/javac_case_054",
+  "github_published": true,
+  "published_default_tag_runtime_verified": true,
+  "published_gold_run_id": "case-054-published-gold-1",
+  "github_publication_method": "GitHub Git Data API; case054 + root README only"
+}

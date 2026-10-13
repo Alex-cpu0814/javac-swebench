@@ -1,0 +1,1310 @@
+{
+  "candidate_id": "candidate_01",
+  "patch_application": {
+    "base": "success",
+    "fix": "success"
+  },
+  "target_oracle": {
+    "type": "runtime_behavior",
+    "expected_phase": "call",
+    "phase_reached": true,
+    "toolchain_verified": true
+  },
+  "collection": {
+    "base": {
+      "collected": true,
+      "new_test_nodes": [
+        "org.lwjgl.vulkan.DebugUtilsTest::testNameDevice",
+        "org.lwjgl.vulkan.DebugUtilsTest::testNameInstance",
+        "org.lwjgl.vulkan.DebugUtilsTest::testNamePhysicalDevice"
+      ]
+    },
+    "fix": {
+      "collected": true,
+      "new_test_nodes": [
+        "org.lwjgl.vulkan.DebugUtilsTest::testNameDevice",
+        "org.lwjgl.vulkan.DebugUtilsTest::testNameInstance",
+        "org.lwjgl.vulkan.DebugUtilsTest::testNamePhysicalDevice"
+      ]
+    }
+  },
+  "base_execution": {
+    "status": "failed",
+    "phase": "call",
+    "exit_code": 1,
+    "failed_nodes": [
+      "org.lwjgl.vulkan.DebugUtilsTest::testNameInstance",
+      "org.lwjgl.vulkan.DebugUtilsTest::testNamePhysicalDevice"
+    ],
+    "failure_type": "java.lang.AssertionError",
+    "diagnostic_category": "debug_naming_non_success_for_instance_objects",
+    "sanitized_excerpt": "Two public Java naming calls returned non-success from the controlled native provider; device naming succeeded.",
+    "infrastructure_error": false,
+    "skipped": false,
+    "xfail": false
+  },
+  "fix_execution": {
+    "status": "passed",
+    "exit_code": 0,
+    "sanitized_excerpt": "All naming calls returned success and native fixture stored each requested name.",
+    "infrastructure_error": false,
+    "skipped": false,
+    "xfail": false
+  },
+  "regression_execution": {
+    "status": "passed",
+    "passed": 30,
+    "failed": 0,
+    "skipped": 0,
+    "existing_core_nodes": 29,
+    "new_control_nodes": 1,
+    "pass_to_pass": [
+      "org.lwjgl.system.BufferTest::testCustomBufferIOOBE",
+      "org.lwjgl.system.BufferTest::testLargeBuffer",
+      "org.lwjgl.system.BufferTest::testLargeBufferNIO",
+      "org.lwjgl.system.BufferTest::testPointerBuffer",
+      "org.lwjgl.system.BufferTest::testStructBufferIterable",
+      "org.lwjgl.system.BufferTest::testStructBufferParallelStream",
+      "org.lwjgl.system.BufferTest::testStructBufferStream",
+      "org.lwjgl.system.MemoryUtilTest::testAddress",
+      "org.lwjgl.system.MemoryUtilTest::testDirectAccess",
+      "org.lwjgl.system.MemoryUtilTest::testDuplicateBuffer",
+      "org.lwjgl.system.MemoryUtilTest::testJNINewBuffer",
+      "org.lwjgl.system.MemoryUtilTest::testMemCopy",
+      "org.lwjgl.system.MemoryUtilTest::testMemCopyMisaligned",
+      "org.lwjgl.system.MemoryUtilTest::testMemSet",
+      "org.lwjgl.system.MemoryUtilTest::testMemSetMisaligned",
+      "org.lwjgl.system.MemoryUtilTest::testNewBuffer",
+      "org.lwjgl.system.MemoryUtilTest::testOOME",
+      "org.lwjgl.system.MemoryUtilTest::testSliceBuffer",
+      "org.lwjgl.system.MemoryUtilTest::testSliceBufferAbs",
+      "org.lwjgl.system.MemoryUtilTest::testTextDecoding",
+      "org.lwjgl.system.MemoryUtilTest::testUTF8",
+      "org.lwjgl.system.MemoryUtilTest::testViewBuffer",
+      "org.lwjgl.system.MemoryUtilTest::testZeroAllocation",
+      "org.lwjgl.system.StackTest::testAlignment",
+      "org.lwjgl.system.StackTest::testExternalMemory",
+      "org.lwjgl.system.StackTest::testOOME",
+      "org.lwjgl.system.StackTest::testPushPop",
+      "org.lwjgl.system.StackTest::testSOE",
+      "org.lwjgl.system.libffi.LibFFITest::testDowncall",
+      "org.lwjgl.vulkan.DebugUtilsTest::testNameDevice"
+    ]
+  },
+  "stability": {
+    "repeats": 4,
+    "consistent": true,
+    "initial_repeats_per_revision": 2,
+    "fresh_network_none_repeats_per_revision": 2
+  },
+  "golden_source_disclosed": false,
+  "raw_sanitized_runs": {
+    "base-1": {
+      "phase": "call",
+      "exit_code": 1,
+      "infrastructure_error": false,
+      "collected": true,
+      "nodes": {
+        "org.lwjgl.system.libffi.LibFFITest::testDowncall": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testAddress": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testDirectAccess": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testDuplicateBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testJNINewBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testMemCopy": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testMemCopyMisaligned": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testMemSet": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testMemSetMisaligned": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testNewBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testOOME": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testSliceBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testSliceBufferAbs": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testTextDecoding": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testViewBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testUTF8": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testZeroAllocation": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.vulkan.DebugUtilsTest::testNameDevice": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.vulkan.DebugUtilsTest::testNamePhysicalDevice": {
+          "status": "FAIL",
+          "exception_type": "java.lang.AssertionError"
+        },
+        "org.lwjgl.vulkan.DebugUtilsTest::testNameInstance": {
+          "status": "FAIL",
+          "exception_type": "java.lang.AssertionError"
+        },
+        "org.lwjgl.system.StackTest::testExternalMemory": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testAlignment": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testOOME": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testPushPop": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testSOE": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testCustomBufferIOOBE": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testLargeBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testPointerBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testLargeBufferNIO": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testStructBufferIterable": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testStructBufferParallelStream": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testStructBufferStream": {
+          "status": "PASS",
+          "exception_type": null
+        }
+      },
+      "configuration_outcomes": [
+        {
+          "status": "PASS",
+          "exception_type": null
+        },
+        {
+          "status": "PASS",
+          "exception_type": null
+        }
+      ],
+      "native_library": "/testbed/bin/libs/native/linux/x64/org/lwjgl/liblwjgl.so",
+      "fixture": "/testbed/bin/test-fixtures/libdebug_utils_fixture.so",
+      "skipped": false,
+      "xfail": false
+    },
+    "base-2": {
+      "phase": "call",
+      "exit_code": 1,
+      "infrastructure_error": false,
+      "collected": true,
+      "nodes": {
+        "org.lwjgl.system.libffi.LibFFITest::testDowncall": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testAddress": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testDirectAccess": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testDuplicateBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testJNINewBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testMemCopy": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testMemCopyMisaligned": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testMemSet": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testMemSetMisaligned": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testNewBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testOOME": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testSliceBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testSliceBufferAbs": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testTextDecoding": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testUTF8": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testViewBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testZeroAllocation": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.vulkan.DebugUtilsTest::testNameDevice": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.vulkan.DebugUtilsTest::testNameInstance": {
+          "status": "FAIL",
+          "exception_type": "java.lang.AssertionError"
+        },
+        "org.lwjgl.vulkan.DebugUtilsTest::testNamePhysicalDevice": {
+          "status": "FAIL",
+          "exception_type": "java.lang.AssertionError"
+        },
+        "org.lwjgl.system.StackTest::testAlignment": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testOOME": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testExternalMemory": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testSOE": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testPushPop": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testCustomBufferIOOBE": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testLargeBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testLargeBufferNIO": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testStructBufferIterable": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testPointerBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testStructBufferParallelStream": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testStructBufferStream": {
+          "status": "PASS",
+          "exception_type": null
+        }
+      },
+      "configuration_outcomes": [
+        {
+          "status": "PASS",
+          "exception_type": null
+        },
+        {
+          "status": "PASS",
+          "exception_type": null
+        }
+      ],
+      "native_library": "/testbed/bin/libs/native/linux/x64/org/lwjgl/liblwjgl.so",
+      "fixture": "/testbed/bin/test-fixtures/libdebug_utils_fixture.so",
+      "skipped": false,
+      "xfail": false
+    },
+    "fix-1": {
+      "phase": "call",
+      "exit_code": 0,
+      "infrastructure_error": false,
+      "collected": true,
+      "nodes": {
+        "org.lwjgl.system.libffi.LibFFITest::testDowncall": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testAddress": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testDirectAccess": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testDuplicateBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testJNINewBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testMemCopy": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testMemCopyMisaligned": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testMemSet": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testMemSetMisaligned": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testNewBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testOOME": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testSliceBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testSliceBufferAbs": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testTextDecoding": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testUTF8": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testViewBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testZeroAllocation": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.vulkan.DebugUtilsTest::testNameDevice": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.vulkan.DebugUtilsTest::testNameInstance": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.vulkan.DebugUtilsTest::testNamePhysicalDevice": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testAlignment": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testExternalMemory": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testOOME": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testPushPop": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testSOE": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testCustomBufferIOOBE": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testLargeBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testLargeBufferNIO": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testPointerBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testStructBufferIterable": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testStructBufferParallelStream": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testStructBufferStream": {
+          "status": "PASS",
+          "exception_type": null
+        }
+      },
+      "configuration_outcomes": [
+        {
+          "status": "PASS",
+          "exception_type": null
+        },
+        {
+          "status": "PASS",
+          "exception_type": null
+        }
+      ],
+      "native_library": "/testbed/bin/libs/native/linux/x64/org/lwjgl/liblwjgl.so",
+      "fixture": "/testbed/bin/test-fixtures/libdebug_utils_fixture.so",
+      "skipped": false,
+      "xfail": false
+    },
+    "fix-2": {
+      "phase": "call",
+      "exit_code": 0,
+      "infrastructure_error": false,
+      "collected": true,
+      "nodes": {
+        "org.lwjgl.system.libffi.LibFFITest::testDowncall": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testDirectAccess": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testAddress": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testDuplicateBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testJNINewBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testMemCopy": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testMemCopyMisaligned": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testMemSet": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testMemSetMisaligned": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testNewBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testOOME": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testSliceBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testSliceBufferAbs": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testTextDecoding": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testUTF8": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testViewBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testZeroAllocation": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.vulkan.DebugUtilsTest::testNameDevice": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.vulkan.DebugUtilsTest::testNamePhysicalDevice": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.vulkan.DebugUtilsTest::testNameInstance": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testAlignment": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testExternalMemory": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testOOME": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testSOE": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testPushPop": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testCustomBufferIOOBE": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testLargeBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testLargeBufferNIO": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testPointerBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testStructBufferIterable": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testStructBufferParallelStream": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testStructBufferStream": {
+          "status": "PASS",
+          "exception_type": null
+        }
+      },
+      "configuration_outcomes": [
+        {
+          "status": "PASS",
+          "exception_type": null
+        },
+        {
+          "status": "PASS",
+          "exception_type": null
+        }
+      ],
+      "native_library": "/testbed/bin/libs/native/linux/x64/org/lwjgl/liblwjgl.so",
+      "fixture": "/testbed/bin/test-fixtures/libdebug_utils_fixture.so",
+      "skipped": false,
+      "xfail": false
+    },
+    "offline-base-1": {
+      "phase": "call",
+      "exit_code": 1,
+      "infrastructure_error": false,
+      "collected": true,
+      "nodes": {
+        "org.lwjgl.system.libffi.LibFFITest::testDowncall": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testDirectAccess": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testAddress": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testDuplicateBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testJNINewBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testMemCopy": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testMemCopyMisaligned": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testMemSet": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testMemSetMisaligned": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testOOME": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testNewBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testSliceBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testSliceBufferAbs": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testTextDecoding": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testUTF8": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testViewBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testZeroAllocation": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.vulkan.DebugUtilsTest::testNameDevice": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.vulkan.DebugUtilsTest::testNameInstance": {
+          "status": "FAIL",
+          "exception_type": "java.lang.AssertionError"
+        },
+        "org.lwjgl.vulkan.DebugUtilsTest::testNamePhysicalDevice": {
+          "status": "FAIL",
+          "exception_type": "java.lang.AssertionError"
+        },
+        "org.lwjgl.system.StackTest::testAlignment": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testOOME": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testExternalMemory": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testSOE": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testPushPop": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testCustomBufferIOOBE": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testLargeBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testLargeBufferNIO": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testStructBufferIterable": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testPointerBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testStructBufferParallelStream": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testStructBufferStream": {
+          "status": "PASS",
+          "exception_type": null
+        }
+      },
+      "configuration_outcomes": [
+        {
+          "status": "PASS",
+          "exception_type": null
+        },
+        {
+          "status": "PASS",
+          "exception_type": null
+        }
+      ],
+      "native_library": "/testbed/bin/libs/native/linux/x64/org/lwjgl/liblwjgl.so",
+      "fixture": "/testbed/bin/test-fixtures/libdebug_utils_fixture.so",
+      "skipped": false,
+      "xfail": false
+    },
+    "offline-base-2": {
+      "phase": "call",
+      "exit_code": 1,
+      "infrastructure_error": false,
+      "collected": true,
+      "nodes": {
+        "org.lwjgl.system.libffi.LibFFITest::testDowncall": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testAddress": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testDuplicateBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testDirectAccess": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testJNINewBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testMemCopy": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testMemCopyMisaligned": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testMemSet": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testNewBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testMemSetMisaligned": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testOOME": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testSliceBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testSliceBufferAbs": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testTextDecoding": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testUTF8": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testViewBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testZeroAllocation": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.vulkan.DebugUtilsTest::testNameDevice": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.vulkan.DebugUtilsTest::testNameInstance": {
+          "status": "FAIL",
+          "exception_type": "java.lang.AssertionError"
+        },
+        "org.lwjgl.vulkan.DebugUtilsTest::testNamePhysicalDevice": {
+          "status": "FAIL",
+          "exception_type": "java.lang.AssertionError"
+        },
+        "org.lwjgl.system.StackTest::testExternalMemory": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testAlignment": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testOOME": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testPushPop": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testSOE": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testCustomBufferIOOBE": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testLargeBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testStructBufferIterable": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testPointerBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testLargeBufferNIO": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testStructBufferParallelStream": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testStructBufferStream": {
+          "status": "PASS",
+          "exception_type": null
+        }
+      },
+      "configuration_outcomes": [
+        {
+          "status": "PASS",
+          "exception_type": null
+        },
+        {
+          "status": "PASS",
+          "exception_type": null
+        }
+      ],
+      "native_library": "/testbed/bin/libs/native/linux/x64/org/lwjgl/liblwjgl.so",
+      "fixture": "/testbed/bin/test-fixtures/libdebug_utils_fixture.so",
+      "skipped": false,
+      "xfail": false
+    },
+    "offline-fix-1": {
+      "phase": "call",
+      "exit_code": 0,
+      "infrastructure_error": false,
+      "collected": true,
+      "nodes": {
+        "org.lwjgl.system.libffi.LibFFITest::testDowncall": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testAddress": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testDirectAccess": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testDuplicateBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testJNINewBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testMemCopy": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testMemCopyMisaligned": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testMemSet": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testMemSetMisaligned": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testNewBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testOOME": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testSliceBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testSliceBufferAbs": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testTextDecoding": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testUTF8": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testViewBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testZeroAllocation": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.vulkan.DebugUtilsTest::testNameDevice": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.vulkan.DebugUtilsTest::testNameInstance": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.vulkan.DebugUtilsTest::testNamePhysicalDevice": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testAlignment": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testOOME": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testExternalMemory": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testPushPop": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testSOE": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testCustomBufferIOOBE": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testLargeBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testLargeBufferNIO": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testPointerBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testStructBufferIterable": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testStructBufferParallelStream": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testStructBufferStream": {
+          "status": "PASS",
+          "exception_type": null
+        }
+      },
+      "configuration_outcomes": [
+        {
+          "status": "PASS",
+          "exception_type": null
+        },
+        {
+          "status": "PASS",
+          "exception_type": null
+        }
+      ],
+      "native_library": "/testbed/bin/libs/native/linux/x64/org/lwjgl/liblwjgl.so",
+      "fixture": "/testbed/bin/test-fixtures/libdebug_utils_fixture.so",
+      "skipped": false,
+      "xfail": false
+    },
+    "offline-fix-2": {
+      "phase": "call",
+      "exit_code": 0,
+      "infrastructure_error": false,
+      "collected": true,
+      "nodes": {
+        "org.lwjgl.system.libffi.LibFFITest::testDowncall": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testAddress": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testDirectAccess": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testDuplicateBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testJNINewBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testMemCopy": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testMemCopyMisaligned": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testMemSet": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testMemSetMisaligned": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testNewBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testOOME": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testSliceBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testSliceBufferAbs": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testTextDecoding": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testUTF8": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testViewBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.MemoryUtilTest::testZeroAllocation": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.vulkan.DebugUtilsTest::testNameDevice": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.vulkan.DebugUtilsTest::testNameInstance": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.vulkan.DebugUtilsTest::testNamePhysicalDevice": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testAlignment": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testExternalMemory": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testOOME": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testPushPop": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.StackTest::testSOE": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testCustomBufferIOOBE": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testLargeBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testLargeBufferNIO": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testPointerBuffer": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testStructBufferIterable": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testStructBufferParallelStream": {
+          "status": "PASS",
+          "exception_type": null
+        },
+        "org.lwjgl.system.BufferTest::testStructBufferStream": {
+          "status": "PASS",
+          "exception_type": null
+        }
+      },
+      "configuration_outcomes": [
+        {
+          "status": "PASS",
+          "exception_type": null
+        },
+        {
+          "status": "PASS",
+          "exception_type": null
+        }
+      ],
+      "native_library": "/testbed/bin/libs/native/linux/x64/org/lwjgl/liblwjgl.so",
+      "fixture": "/testbed/bin/test-fixtures/libdebug_utils_fixture.so",
+      "skipped": false,
+      "xfail": false
+    }
+  },
+  "scope": [
+    "Linux x86_64/JDK17 adaptation of Windows x64/Adoptium17",
+    "Controlled test-only Vulkan provider, no real Vulkan driver or original crash reproduction",
+    "Explicit libffi-dev 3.4.2-4 PIC static dependency adaptation; current JNI built by standard Ant",
+    "Complete official reference diff applied by hidden executor; all 9 changed source blobs match the pinned official Fix before and after standard build",
+    "No production modification in candidate; no source/Git/pointer-address matching oracle"
+  ]
+}

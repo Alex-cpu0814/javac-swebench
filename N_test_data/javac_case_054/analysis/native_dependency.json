@@ -1,0 +1,14 @@
+{
+  "requested_upstream_url": "https://build.lwjgl.org/release/3.3.1/linux/x64/core/libffi.a",
+  "source": {
+    "type": "ubuntu_pic_dependency",
+    "package": "libffi-dev",
+    "version": "3.4.2-4",
+    "archive": "/usr/lib/x86_64-linux-gnu/libffi_pic.a",
+    "upstream_download_unavailable": true
+  },
+  "path": "/testbed/bin/libs/native/linux/x64/org/lwjgl/libffi.a",
+  "size": 69916,
+  "sha256": "fe417849a4af3c711b6b94f45219fbeb788896aaab478dd1806ecc23a8cfb85e",
+  "reason": "Provide a declared custom static dependency through Ant's supported offline mode; project JNI remains built from current sources. Ubuntu PIC mode is a dependency adaptation and is not the official upstream archive."
+}

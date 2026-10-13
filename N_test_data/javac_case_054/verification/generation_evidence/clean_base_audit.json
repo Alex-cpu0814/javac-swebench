@@ -1,0 +1,14 @@
+{
+  "image": "javac-case-054-env:clean-base",
+  "image_id": "sha256:ae2ca6cc3b0990d3488655e4e9b4efa158e467c8eb7e1b68919b9376564ec08a",
+  "base_commit": "2a8645c11533068802dd2dde734b600ec53a1cea",
+  "head_verified": true,
+  "tracked_and_untracked_worktree_clean": true,
+  "official_fix_commit_absent": true,
+  "candidate_test_absent": true,
+  "gold_patch_absent": true,
+  "current_base_native_build_cached": true,
+  "dependency_adaptation": "Ubuntu libffi-dev 3.4.2-4 libffi_pic.a; Ant offline mode",
+  "published": false,
+  "scope": "Local preparation artifact, not yet the formal evaluator image"
+}

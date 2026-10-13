@@ -1,0 +1,102 @@
+{
+  "instance_id": "LWJGL__lwjgl3-755",
+  "status": "published_completed",
+  "finalized_at_utc": "2026-10-13T00:33:46.995301+00:00",
+  "FAIL_TO_PASS_COUNT": 2,
+  "PASS_TO_PASS_COUNT": 30,
+  "existing_core_regression_count": 29,
+  "new_control_count": 1,
+  "generation_repeats_per_revision": 4,
+  "fresh_network_none_repeats_per_revision": 2,
+  "independent_review_accepted": true,
+  "human_approved": true,
+  "layout_validated": true,
+  "candidate_test_patch_sha256": "9b1ef99659ceac0d8df5ec891172199c897a8d4768cec18249cffaa4c155c4a2",
+  "image": {
+    "name": "yutu0814/javac-case-054-lwjgl3:benchmark-v1",
+    "id": "sha256:e3c1ac3197df69e047650a2806f0b923582058de8ca78b1c816657130f104bb4",
+    "repo_digests": [
+      "javac-case-054-lwjgl3@sha256:e3c1ac3197df69e047650a2806f0b923582058de8ca78b1c816657130f104bb4",
+      "yutu0814/javac-case-054-lwjgl3@sha256:e3c1ac3197df69e047650a2806f0b923582058de8ca78b1c816657130f104bb4"
+    ]
+  },
+  "verification": {
+    "model_evaluator_verified": true,
+    "model_evaluator_verification_type": "standard_injected_runtime_native_provider_testng",
+    "image_id": "sha256:e3c1ac3197df69e047650a2806f0b923582058de8ca78b1c816657130f104bb4",
+    "image_build_id": "case-054-build-1",
+    "base_run_id": "case-054-base-1",
+    "gold_run_id": "case-054-gold-1",
+    "test_tamper_run_id": "case-054-tamper-1",
+    "test_tamper_rejected": true,
+    "base_grading": {
+      "tests_observed": 32,
+      "FAIL_TO_PASS": {
+        "expected": 2,
+        "passed": 0,
+        "failed": 2,
+        "skipped": 0,
+        "missing": 0
+      },
+      "PASS_TO_PASS": {
+        "expected": 30,
+        "passed": 30,
+        "failed": 0,
+        "skipped": 0,
+        "missing": 0
+      },
+      "unexpected_failures": 2
+    },
+    "gold_grading": {
+      "tests_observed": 32,
+      "FAIL_TO_PASS": {
+        "expected": 2,
+        "passed": 2,
+        "failed": 0,
+        "skipped": 0,
+        "missing": 0
+      },
+      "PASS_TO_PASS": {
+        "expected": 30,
+        "passed": 30,
+        "failed": 0,
+        "skipped": 0,
+        "missing": 0
+      },
+      "unexpected_failures": 0
+    },
+    "evaluation_assets_injected_at_runtime": true,
+    "image_contains_gold_patch": false,
+    "image_contains_test_patch": false,
+    "image_contains_fix_commit": false,
+    "image_published": true,
+    "github_published": true,
+    "formal_case_completed": true,
+    "published_image_digest": "sha256:e3c1ac3197df69e047650a2806f0b923582058de8ca78b1c816657130f104bb4",
+    "registry_pull_verified": true,
+    "published_default_tag_runtime_verified": true,
+    "published_gold_run_id": "case-054-published-gold-1"
+  },
+  "scope": [
+    "Linux x86_64/JDK17 adaptation of Windows x64/Adoptium17",
+    "Controlled test-only Vulkan provider, no real Vulkan driver or original crash reproduction",
+    "Explicit libffi-dev 3.4.2-4 PIC static dependency adaptation; current JNI built by standard Ant",
+    "Complete official reference diff applied by hidden executor; all 9 changed source blobs match the pinned official Fix before and after standard build",
+    "No production modification in candidate; no source/Git/pointer-address matching oracle"
+  ],
+  "published": true,
+  "publication": {
+    "image": "yutu0814/javac-case-054-lwjgl3:benchmark-v1",
+    "digest": "sha256:e3c1ac3197df69e047650a2806f0b923582058de8ca78b1c816657130f104bb4",
+    "image_id": "sha256:e3c1ac3197df69e047650a2806f0b923582058de8ca78b1c816657130f104bb4",
+    "docker_hub": "https://hub.docker.com/r/yutu0814/javac-case-054-lwjgl3",
+    "image_published": true,
+    "registry_pull_verified": true,
+    "published_at_utc": "2026-10-13T00:42:54.613444+00:00",
+    "github_case_url": "https://github.com/Alex-cpu0814/javac-swebench/tree/main/N_test_data/javac_case_054",
+    "github_published": true,
+    "published_default_tag_runtime_verified": true,
+    "published_gold_run_id": "case-054-published-gold-1",
+    "github_publication_method": "GitHub Git Data API; case054 + root README only"
+  }
+}

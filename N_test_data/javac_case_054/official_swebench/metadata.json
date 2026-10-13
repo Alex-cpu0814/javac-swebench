@@ -1,0 +1,153 @@
+{
+  "dataset_schema_version": "1.0",
+  "source_case": "javac_case_054",
+  "dataset_variant": "N_test_data",
+  "test_source": "synthetic_issue_derived_runtime_regression",
+  "PASS_TO_PASS_COUNT": 30,
+  "FAIL_TO_PASS": [
+    "org.lwjgl.vulkan.DebugUtilsTest::testNameInstance",
+    "org.lwjgl.vulkan.DebugUtilsTest::testNamePhysicalDevice"
+  ],
+  "PASS_TO_PASS": [
+    "org.lwjgl.system.BufferTest::testCustomBufferIOOBE",
+    "org.lwjgl.system.BufferTest::testLargeBuffer",
+    "org.lwjgl.system.BufferTest::testLargeBufferNIO",
+    "org.lwjgl.system.BufferTest::testPointerBuffer",
+    "org.lwjgl.system.BufferTest::testStructBufferIterable",
+    "org.lwjgl.system.BufferTest::testStructBufferParallelStream",
+    "org.lwjgl.system.BufferTest::testStructBufferStream",
+    "org.lwjgl.system.MemoryUtilTest::testAddress",
+    "org.lwjgl.system.MemoryUtilTest::testDirectAccess",
+    "org.lwjgl.system.MemoryUtilTest::testDuplicateBuffer",
+    "org.lwjgl.system.MemoryUtilTest::testJNINewBuffer",
+    "org.lwjgl.system.MemoryUtilTest::testMemCopy",
+    "org.lwjgl.system.MemoryUtilTest::testMemCopyMisaligned",
+    "org.lwjgl.system.MemoryUtilTest::testMemSet",
+    "org.lwjgl.system.MemoryUtilTest::testMemSetMisaligned",
+    "org.lwjgl.system.MemoryUtilTest::testNewBuffer",
+    "org.lwjgl.system.MemoryUtilTest::testOOME",
+    "org.lwjgl.system.MemoryUtilTest::testSliceBuffer",
+    "org.lwjgl.system.MemoryUtilTest::testSliceBufferAbs",
+    "org.lwjgl.system.MemoryUtilTest::testTextDecoding",
+    "org.lwjgl.system.MemoryUtilTest::testUTF8",
+    "org.lwjgl.system.MemoryUtilTest::testViewBuffer",
+    "org.lwjgl.system.MemoryUtilTest::testZeroAllocation",
+    "org.lwjgl.system.StackTest::testAlignment",
+    "org.lwjgl.system.StackTest::testExternalMemory",
+    "org.lwjgl.system.StackTest::testOOME",
+    "org.lwjgl.system.StackTest::testPushPop",
+    "org.lwjgl.system.StackTest::testSOE",
+    "org.lwjgl.system.libffi.LibFFITest::testDowncall",
+    "org.lwjgl.vulkan.DebugUtilsTest::testNameDevice"
+  ],
+  "standard_layout": true,
+  "verification": {
+    "base_fails": true,
+    "fix_passes": true,
+    "generation_repeats_per_revision": 4,
+    "fresh_network_none_repeats_per_revision": 2,
+    "consistent": true,
+    "independent_review_accepted": true,
+    "human_approved": true,
+    "docker_verified": true,
+    "runtime_verified": true,
+    "model_evaluator_verified": true,
+    "image_published": true,
+    "github_published": true,
+    "image": "yutu0814/javac-case-054-lwjgl3:benchmark-v1",
+    "generation_execution_evidence": "verification/generation_evidence/sanitized_feedback.json",
+    "model_evaluator_verification_type": "standard_injected_runtime_native_provider_testng",
+    "image_id": "sha256:e3c1ac3197df69e047650a2806f0b923582058de8ca78b1c816657130f104bb4",
+    "image_build_id": "case-054-build-1",
+    "base_run_id": "case-054-base-1",
+    "gold_run_id": "case-054-gold-1",
+    "test_tamper_run_id": "case-054-tamper-1",
+    "test_tamper_rejected": true,
+    "base_grading": {
+      "tests_observed": 32,
+      "FAIL_TO_PASS": {
+        "expected": 2,
+        "passed": 0,
+        "failed": 2,
+        "skipped": 0,
+        "missing": 0
+      },
+      "PASS_TO_PASS": {
+        "expected": 30,
+        "passed": 30,
+        "failed": 0,
+        "skipped": 0,
+        "missing": 0
+      },
+      "unexpected_failures": 2
+    },
+    "gold_grading": {
+      "tests_observed": 32,
+      "FAIL_TO_PASS": {
+        "expected": 2,
+        "passed": 2,
+        "failed": 0,
+        "skipped": 0,
+        "missing": 0
+      },
+      "PASS_TO_PASS": {
+        "expected": 30,
+        "passed": 30,
+        "failed": 0,
+        "skipped": 0,
+        "missing": 0
+      },
+      "unexpected_failures": 0
+    },
+    "evaluation_assets_injected_at_runtime": true,
+    "image_contains_gold_patch": false,
+    "image_contains_test_patch": false,
+    "image_contains_fix_commit": false,
+    "formal_case_completed": true,
+    "published_image_digest": "sha256:e3c1ac3197df69e047650a2806f0b923582058de8ca78b1c816657130f104bb4",
+    "registry_pull_verified": true,
+    "published_default_tag_runtime_verified": true,
+    "published_gold_run_id": "case-054-published-gold-1"
+  },
+  "base_commit": "2a8645c11533068802dd2dde734b600ec53a1cea",
+  "fix_commit": "e19a2f6bfed5f333f8a01009240f1fff5e0f488f",
+  "repo": "LWJGL/lwjgl3",
+  "patch_provenance": {
+    "reference_commit": "e19a2f6bfed5f333f8a01009240f1fff5e0f488f",
+    "first_parent": "2a8645c11533068802dd2dde734b600ec53a1cea",
+    "official_diff_complete": true,
+    "source": "Hidden executor git diff of pinned Base/Fix; all 9 changed blobs matched official Fix before and after standard build.",
+    "gold_sha256": "a64f2f9d45344bed7027430b0fcc9ca1bfeb224a4e6b9293e509254b38274b8e",
+    "test_source": "synthetic_issue_derived_runtime_regression",
+    "test_patch_sha256": "9b1ef99659ceac0d8df5ec891172199c897a8d4768cec18249cffaa4c155c4a2",
+    "information_boundary": "No official diff or Fix source for this case disclosed to Generator/Repairer/Reviewer. Preparation commit message was visible and is recorded; not a fully commit-metadata-blind experiment."
+  },
+  "instance_id": "LWJGL__lwjgl3-755",
+  "test_files": [
+    "modules/lwjgl/vulkan/src/test/c/debug_utils_fixture.c",
+    "modules/lwjgl/vulkan/src/test/java/org/lwjgl/vulkan/DebugUtilsTest.java"
+  ],
+  "project_version": "3.3.2",
+  "reported_version": "3.3.1",
+  "scope": [
+    "Linux x86_64/JDK17 adaptation of Windows x64/Adoptium17",
+    "Controlled test-only Vulkan provider, no real Vulkan driver or original crash reproduction",
+    "Explicit libffi-dev 3.4.2-4 PIC static dependency adaptation; current JNI built by standard Ant",
+    "Complete official reference diff applied by hidden executor; all 9 changed source blobs match the pinned official Fix before and after standard build",
+    "No production modification in candidate; no source/Git/pointer-address matching oracle"
+  ],
+  "publication": {
+    "image": "yutu0814/javac-case-054-lwjgl3:benchmark-v1",
+    "digest": "sha256:e3c1ac3197df69e047650a2806f0b923582058de8ca78b1c816657130f104bb4",
+    "image_id": "sha256:e3c1ac3197df69e047650a2806f0b923582058de8ca78b1c816657130f104bb4",
+    "docker_hub": "https://hub.docker.com/r/yutu0814/javac-case-054-lwjgl3",
+    "image_published": true,
+    "registry_pull_verified": true,
+    "published_at_utc": "2026-10-13T00:42:54.613444+00:00",
+    "github_case_url": "https://github.com/Alex-cpu0814/javac-swebench/tree/main/N_test_data/javac_case_054",
+    "github_published": true,
+    "published_default_tag_runtime_verified": true,
+    "published_gold_run_id": "case-054-published-gold-1",
+    "github_publication_method": "GitHub Git Data API; case054 + root README only"
+  }
+}

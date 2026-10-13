@@ -1,0 +1,42 @@
+{
+  "schema_version": "3.0",
+  "run_id": "case-054-published-gold-1",
+  "tests_observed": 32,
+  "FAIL_TO_PASS": {
+    "org.lwjgl.vulkan.DebugUtilsTest::testNameInstance": "PASSED",
+    "org.lwjgl.vulkan.DebugUtilsTest::testNamePhysicalDevice": "PASSED"
+  },
+  "PASS_TO_PASS": {
+    "org.lwjgl.system.BufferTest::testCustomBufferIOOBE": "PASSED",
+    "org.lwjgl.system.BufferTest::testLargeBuffer": "PASSED",
+    "org.lwjgl.system.BufferTest::testLargeBufferNIO": "PASSED",
+    "org.lwjgl.system.BufferTest::testPointerBuffer": "PASSED",
+    "org.lwjgl.system.BufferTest::testStructBufferIterable": "PASSED",
+    "org.lwjgl.system.BufferTest::testStructBufferParallelStream": "PASSED",
+    "org.lwjgl.system.BufferTest::testStructBufferStream": "PASSED",
+    "org.lwjgl.system.MemoryUtilTest::testAddress": "PASSED",
+    "org.lwjgl.system.MemoryUtilTest::testDirectAccess": "PASSED",
+    "org.lwjgl.system.MemoryUtilTest::testDuplicateBuffer": "PASSED",
+    "org.lwjgl.system.MemoryUtilTest::testJNINewBuffer": "PASSED",
+    "org.lwjgl.system.MemoryUtilTest::testMemCopy": "PASSED",
+    "org.lwjgl.system.MemoryUtilTest::testMemCopyMisaligned": "PASSED",
+    "org.lwjgl.system.MemoryUtilTest::testMemSet": "PASSED",
+    "org.lwjgl.system.MemoryUtilTest::testMemSetMisaligned": "PASSED",
+    "org.lwjgl.system.MemoryUtilTest::testNewBuffer": "PASSED",
+    "org.lwjgl.system.MemoryUtilTest::testOOME": "PASSED",
+    "org.lwjgl.system.MemoryUtilTest::testSliceBuffer": "PASSED",
+    "org.lwjgl.system.MemoryUtilTest::testSliceBufferAbs": "PASSED",
+    "org.lwjgl.system.MemoryUtilTest::testTextDecoding": "PASSED",
+    "org.lwjgl.system.MemoryUtilTest::testUTF8": "PASSED",
+    "org.lwjgl.system.MemoryUtilTest::testViewBuffer": "PASSED",
+    "org.lwjgl.system.MemoryUtilTest::testZeroAllocation": "PASSED",
+    "org.lwjgl.system.StackTest::testAlignment": "PASSED",
+    "org.lwjgl.system.StackTest::testExternalMemory": "PASSED",
+    "org.lwjgl.system.StackTest::testOOME": "PASSED",
+    "org.lwjgl.system.StackTest::testPushPop": "PASSED",
+    "org.lwjgl.system.StackTest::testSOE": "PASSED",
+    "org.lwjgl.system.libffi.LibFFITest::testDowncall": "PASSED",
+    "org.lwjgl.vulkan.DebugUtilsTest::testNameDevice": "PASSED"
+  },
+  "unexpected_failures": []
+}

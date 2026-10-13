@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="32" passed="32" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-10-13T00:44:36 GMT" name="Command line suite" finished-at="2026-10-13T00:44:36 GMT" duration-ms="218">
+    <groups>
+    </groups>
+    <test started-at="2026-10-13T00:44:36 GMT" name="Command line test" finished-at="2026-10-13T00:44:36 GMT" duration-ms="218">
+      <class name="org.lwjgl.system.libffi.LibFFITest">
+        <test-method signature="testDowncall()[pri:0, instance:org.lwjgl.system.libffi.LibFFITest@5a8806ef]" started-at="2026-10-13T00:44:36 GMT" name="testDowncall" finished-at="2026-10-13T00:44:36 GMT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDowncall -->
+      </class> <!-- org.lwjgl.system.libffi.LibFFITest -->
+      <class name="org.lwjgl.system.MemoryUtilTest">
+        <test-method signature="testAddress()[pri:0, instance:org.lwjgl.system.MemoryUtilTest@4bbfb90a]" started-at="2026-10-13T00:44:36 GMT" name="testAddress" finished-at="2026-10-13T00:44:36 GMT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddress -->
+        <test-method signature="testDirectAccess()[pri:0, instance:org.lwjgl.system.MemoryUtilTest@4bbfb90a]" started-at="2026-10-13T00:44:36 GMT" name="testDirectAccess" finished-at="2026-10-13T00:44:36 GMT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDirectAccess -->
+        <test-method signature="testDuplicateBuffer()[pri:0, instance:org.lwjgl.system.MemoryUtilTest@4bbfb90a]" started-at="2026-10-13T00:44:36 GMT" name="testDuplicateBuffer" finished-at="2026-10-13T00:44:36 GMT" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDuplicateBuffer -->
+        <test-method signature="testJNINewBuffer()[pri:0, instance:org.lwjgl.system.MemoryUtilTest@4bbfb90a]" started-at="2026-10-13T00:44:36 GMT" name="testJNINewBuffer" finished-at="2026-10-13T00:44:36 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testJNINewBuffer -->
+        <test-method signature="testMemCopy()[pri:0, instance:org.lwjgl.system.MemoryUtilTest@4bbfb90a]" started-at="2026-10-13T00:44:36 GMT" name="testMemCopy" finished-at="2026-10-13T00:44:36 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMemCopy -->
+        <test-method signature="testMemCopyMisaligned()[pri:0, instance:org.lwjgl.system.MemoryUtilTest@4bbfb90a]" started-at="2026-10-13T00:44:36 GMT" name="testMemCopyMisaligned" finished-at="2026-10-13T00:44:36 GMT" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMemCopyMisaligned -->
+        <test-method signature="testMemSet()[pri:0, instance:org.lwjgl.system.MemoryUtilTest@4bbfb90a]" started-at="2026-10-13T00:44:36 GMT" name="testMemSet" finished-at="2026-10-13T00:44:36 GMT" duration-ms="22" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMemSet -->
+        <test-method signature="testMemSetMisaligned()[pri:0, instance:org.lwjgl.system.MemoryUtilTest@4bbfb90a]" started-at="2026-10-13T00:44:36 GMT" name="testMemSetMisaligned" finished-at="2026-10-13T00:44:36 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMemSetMisaligned -->
+        <test-method signature="testNewBuffer()[pri:0, instance:org.lwjgl.system.MemoryUtilTest@4bbfb90a]" started-at="2026-10-13T00:44:36 GMT" name="testNewBuffer" finished-at="2026-10-13T00:44:36 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNewBuffer -->
+        <test-method signature="testOOME()[pri:0, instance:org.lwjgl.system.MemoryUtilTest@4bbfb90a]" started-at="2026-10-13T00:44:36 GMT" name="testOOME" finished-at="2026-10-13T00:44:36 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOOME -->
+        <test-method signature="testSliceBuffer()[pri:0, instance:org.lwjgl.system.MemoryUtilTest@4bbfb90a]" started-at="2026-10-13T00:44:36 GMT" name="testSliceBuffer" finished-at="2026-10-13T00:44:36 GMT" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSliceBuffer -->
+        <test-method signature="testSliceBufferAbs()[pri:0, instance:org.lwjgl.system.MemoryUtilTest@4bbfb90a]" started-at="2026-10-13T00:44:36 GMT" name="testSliceBufferAbs" finished-at="2026-10-13T00:44:36 GMT" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSliceBufferAbs -->
+        <test-method signature="testTextDecoding()[pri:0, instance:org.lwjgl.system.MemoryUtilTest@4bbfb90a]" started-at="2026-10-13T00:44:36 GMT" name="testTextDecoding" finished-at="2026-10-13T00:44:36 GMT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTextDecoding -->
+        <test-method signature="testUTF8()[pri:0, instance:org.lwjgl.system.MemoryUtilTest@4bbfb90a]" started-at="2026-10-13T00:44:36 GMT" name="testUTF8" finished-at="2026-10-13T00:44:36 GMT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUTF8 -->
+        <test-method signature="testViewBuffer()[pri:0, instance:org.lwjgl.system.MemoryUtilTest@4bbfb90a]" started-at="2026-10-13T00:44:36 GMT" name="testViewBuffer" finished-at="2026-10-13T00:44:36 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testViewBuffer -->
+        <test-method signature="testZeroAllocation()[pri:0, instance:org.lwjgl.system.MemoryUtilTest@4bbfb90a]" started-at="2026-10-13T00:44:36 GMT" name="testZeroAllocation" finished-at="2026-10-13T00:44:36 GMT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testZeroAllocation -->
+      </class> <!-- org.lwjgl.system.MemoryUtilTest -->
+      <class name="org.lwjgl.vulkan.DebugUtilsTest">
+        <test-method is-config="true" signature="createVulkanObjects()[pri:0, instance:org.lwjgl.vulkan.DebugUtilsTest@79be0360]" started-at="2026-10-13T00:44:36 GMT" name="createVulkanObjects" finished-at="2026-10-13T00:44:36 GMT" duration-ms="83" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createVulkanObjects -->
+        <test-method signature="testNameDevice()[pri:0, instance:org.lwjgl.vulkan.DebugUtilsTest@79be0360]" started-at="2026-10-13T00:44:36 GMT" name="testNameDevice" finished-at="2026-10-13T00:44:36 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNameDevice -->
+        <test-method signature="testNameInstance()[pri:0, instance:org.lwjgl.vulkan.DebugUtilsTest@79be0360]" started-at="2026-10-13T00:44:36 GMT" name="testNameInstance" finished-at="2026-10-13T00:44:36 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNameInstance -->
+        <test-method is-config="true" signature="destroyVulkanObjects()[pri:0, instance:org.lwjgl.vulkan.DebugUtilsTest@79be0360]" started-at="2026-10-13T00:44:36 GMT" name="destroyVulkanObjects" finished-at="2026-10-13T00:44:36 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- destroyVulkanObjects -->
+        <test-method signature="testNamePhysicalDevice()[pri:0, instance:org.lwjgl.vulkan.DebugUtilsTest@79be0360]" started-at="2026-10-13T00:44:36 GMT" name="testNamePhysicalDevice" finished-at="2026-10-13T00:44:36 GMT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNamePhysicalDevice -->
+      </class> <!-- org.lwjgl.vulkan.DebugUtilsTest -->
+      <class name="org.lwjgl.system.StackTest">
+        <test-method signature="testAlignment()[pri:0, instance:org.lwjgl.system.StackTest@7c29daf3]" started-at="2026-10-13T00:44:36 GMT" name="testAlignment" finished-at="2026-10-13T00:44:36 GMT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAlignment -->
+        <test-method signature="testOOME()[pri:0, instance:org.lwjgl.system.StackTest@7c29daf3]" started-at="2026-10-13T00:44:36 GMT" name="testOOME" finished-at="2026-10-13T00:44:36 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOOME -->
+        <test-method signature="testExternalMemory()[pri:0, instance:org.lwjgl.system.StackTest@7c29daf3]" started-at="2026-10-13T00:44:36 GMT" name="testExternalMemory" finished-at="2026-10-13T00:44:36 GMT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testExternalMemory -->
+        <test-method signature="testPushPop()[pri:0, instance:org.lwjgl.system.StackTest@7c29daf3]" started-at="2026-10-13T00:44:36 GMT" name="testPushPop" finished-at="2026-10-13T00:44:36 GMT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPushPop -->
+        <test-method signature="testSOE()[pri:0, instance:org.lwjgl.system.StackTest@7c29daf3]" started-at="2026-10-13T00:44:36 GMT" name="testSOE" finished-at="2026-10-13T00:44:36 GMT" duration-ms="10" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSOE -->
+      </class> <!-- org.lwjgl.system.StackTest -->
+      <class name="org.lwjgl.system.BufferTest">
+        <test-method signature="testCustomBufferIOOBE()[pri:0, instance:org.lwjgl.system.BufferTest@9660f4e]" started-at="2026-10-13T00:44:36 GMT" name="testCustomBufferIOOBE" finished-at="2026-10-13T00:44:36 GMT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCustomBufferIOOBE -->
+        <test-method signature="testLargeBuffer()[pri:0, instance:org.lwjgl.system.BufferTest@9660f4e]" started-at="2026-10-13T00:44:36 GMT" name="testLargeBuffer" finished-at="2026-10-13T00:44:36 GMT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLargeBuffer -->
+        <test-method signature="testPointerBuffer()[pri:0, instance:org.lwjgl.system.BufferTest@9660f4e]" started-at="2026-10-13T00:44:36 GMT" name="testPointerBuffer" finished-at="2026-10-13T00:44:36 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPointerBuffer -->
+        <test-method signature="testLargeBufferNIO()[pri:0, instance:org.lwjgl.system.BufferTest@9660f4e]" started-at="2026-10-13T00:44:36 GMT" name="testLargeBufferNIO" finished-at="2026-10-13T00:44:36 GMT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLargeBufferNIO -->
+        <test-method signature="testStructBufferIterable()[pri:0, instance:org.lwjgl.system.BufferTest@9660f4e]" started-at="2026-10-13T00:44:36 GMT" name="testStructBufferIterable" finished-at="2026-10-13T00:44:36 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStructBufferIterable -->
+        <test-method signature="testStructBufferParallelStream()[pri:0, instance:org.lwjgl.system.BufferTest@9660f4e]" started-at="2026-10-13T00:44:36 GMT" name="testStructBufferParallelStream" finished-at="2026-10-13T00:44:36 GMT" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStructBufferParallelStream -->
+        <test-method signature="testStructBufferStream()[pri:0, instance:org.lwjgl.system.BufferTest@9660f4e]" started-at="2026-10-13T00:44:36 GMT" name="testStructBufferStream" finished-at="2026-10-13T00:44:36 GMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStructBufferStream -->
+      </class> <!-- org.lwjgl.system.BufferTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>

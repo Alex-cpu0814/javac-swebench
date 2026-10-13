@@ -1,0 +1,61 @@
+{
+  "image": "javac-case-054-env:clean-base",
+  "network": "none",
+  "fresh_container_per_revision": true,
+  "repeats_per_revision": 2,
+  "gold_source_disclosed": false,
+  "runs": {
+    "base": {
+      "revision": "base",
+      "network": "none",
+      "fresh_container": true,
+      "standard_build_success": true,
+      "runs": [
+        {
+          "repeat": 1,
+          "collected": true,
+          "total": 32,
+          "passed": 30,
+          "failed": 2,
+          "skipped": 0,
+          "exit_code": 1
+        },
+        {
+          "repeat": 2,
+          "collected": true,
+          "total": 32,
+          "passed": 30,
+          "failed": 2,
+          "skipped": 0,
+          "exit_code": 1
+        }
+      ]
+    },
+    "fix": {
+      "revision": "fix",
+      "network": "none",
+      "fresh_container": true,
+      "standard_build_success": true,
+      "runs": [
+        {
+          "repeat": 1,
+          "collected": true,
+          "total": 32,
+          "passed": 32,
+          "failed": 0,
+          "skipped": 0,
+          "exit_code": 0
+        },
+        {
+          "repeat": 2,
+          "collected": true,
+          "total": 32,
+          "passed": 32,
+          "failed": 0,
+          "skipped": 0,
+          "exit_code": 0
+        }
+      ]
+    }
+  }
+}

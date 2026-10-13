@@ -1,0 +1,9 @@
+{
+  "instance_id": "LWJGL__lwjgl3-755",
+  "repo": "LWJGL/lwjgl3",
+  "base_commit": "2a8645c11533068802dd2dde734b600ec53a1cea",
+  "problem_statement": "LWJGL Vulkan debug naming crashes when vkSetDebugUtilsObjectNameEXT names a VkInstance or VkPhysicalDevice. Debug naming should succeed for both object kinds and preserve the supplied object name, while ordinary VkDevice naming continues to work. The reporter describes loader-dependent differences between instance and device function entry points.\n\nOriginal report: Windows x64, Adoptium 17, LWJGL 3.3.1. The pinned Base source version is 3.3.2. This benchmark accepts Linux x86_64/JDK17 with a controlled Vulkan provider and a declared libffi PIC dependency adaptation. It verifies Java/native naming behavior, without claiming reproduction of the original Windows driver crash or real-GPU compatibility.",
+  "hints_text": null,
+  "created_at": "2022-03-28",
+  "version": "3.3.2"
+}

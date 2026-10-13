@@ -1,0 +1,6 @@
+diff --git a/modules/lwjgl/vulkan/src/test/java/org/lwjgl/vulkan/DebugUtilsTest.java b/modules/lwjgl/vulkan/src/test/java/org/lwjgl/vulkan/DebugUtilsTest.java
+new file mode 100644
+--- /dev/null
++++ b/modules/lwjgl/vulkan/src/test/java/org/lwjgl/vulkan/DebugUtilsTest.java
+@@ -0,0 +1 @@
++// Attempt to pre-create a protected test.

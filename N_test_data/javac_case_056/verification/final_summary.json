@@ -1,6 +1,6 @@
 {
   "instance_id": "LWJGL__lwjgl3-673",
-  "status": "image_published_github_pending",
+  "status": "published_completed",
   "organized_at_utc": "2026-10-19T03:08:57.127697+00:00",
   "FAIL_TO_PASS_COUNT": 2,
   "PASS_TO_PASS_COUNT": 1,
@@ -72,11 +72,12 @@
     "image_contains_test_patch": false,
     "independent_review_accepted": false,
     "image_published": true,
-    "github_published": false,
+    "github_published": true,
     "formal_case_completed": true,
     "published_image_digest": "sha256:866ae42ecde1bbcaa0581fabe2380bdea159ed944f565066b7abe1c2922a7669",
     "registry_pull_verified": true,
-    "published_image_audit_passed": true
+    "published_image_audit_passed": true,
+    "registry_public_access_verified": true
   },
   "scope": [
     "Standard Ant cold source build of Core and Vulkan: Kotlin generator/templates, regenerated bindings, all enabled Java sources and current JNI",
@@ -87,13 +88,13 @@
     "The validator test allows validate(long) to be absent; it does not alone establish every Vulkan API entry point is correct",
     "Fix source and reference changes were visible during test design; no blinded-generation or independent-review claim"
   ],
-  "published": false,
+  "published": true,
   "test_patch_sha256": "b0ad097a60eeee6b60c8207c3157c8385c4f569699e25815f74de4d56afad527",
   "layout_validated": true,
   "patch_application_validated": true,
   "checksum_validated": true,
   "publication": {
-    "status": "image_published_github_pending",
+    "status": "published_completed",
     "image": "yutu0814/javac-case-056-lwjgl3:benchmark-v1",
     "local_image_id": "sha256:866ae42ecde1bbcaa0581fabe2380bdea159ed944f565066b7abe1c2922a7669",
     "docker_hub": "https://hub.docker.com/r/yutu0814/javac-case-056-lwjgl3",
@@ -103,7 +104,7 @@
       "README.md"
     ],
     "image_published": true,
-    "github_published": false,
+    "github_published": true,
     "created_at_utc": "2026-10-19T03:29:38.242826+00:00",
     "image_payload": "Pinned public LWJGL Base source, toolchain, third-party dependencies; no Fix commit, gold/test patch or evaluation entrypoint",
     "github_payload": "This case's records, source snapshots, patches, evaluator scripts and verification logs, plus the dataset README entry",
@@ -112,6 +113,11 @@
     "digest": "sha256:866ae42ecde1bbcaa0581fabe2380bdea159ed944f565066b7abe1c2922a7669",
     "image_published_at_utc": "2026-10-19T03:34:04.675400+00:00",
     "authorization_confirmed": true,
-    "historical_auto_review_rejection": "Automatic review requires explicit confirmation of this image payload and destination; push was not executed"
+    "github_initial_commit": "8d83512f91008aded11b60b8d134d3c685c6c3f7",
+    "github_case_url": "https://github.com/Alex-cpu0814/javac-swebench/tree/main/N_test_data/javac_case_056",
+    "github_published_at_utc": "2026-10-19T03:42:54.579294+00:00",
+    "github_publication_method": "GitHub Git Data API; case056 and root README only",
+    "registry_public_access_verified": true,
+    "docker_hub_is_private": false
   }
 }

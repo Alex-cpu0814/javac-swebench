@@ -132,8 +132,8 @@
     },
     {
       "path": "N_test_data/javac_case_056/analysis/environment_spec.json",
-      "size": 6560,
-      "sha256": "643e11a1655f4f12e03cb3e845d10dea6c681eb216ee3f5e19a36bccb9e93891"
+      "size": 6846,
+      "sha256": "19e5bfe59b229f044dfeda6c94564a67d6d8089c1896b8b7774e2476bc200cbc"
     },
     {
       "path": "N_test_data/javac_case_056/analysis/fix_commit.raw.txt",
@@ -197,8 +197,8 @@
     },
     {
       "path": "N_test_data/javac_case_056/analysis/source_row_056.json",
-      "size": 9128,
-      "sha256": "5ae58bad73e2ea63e74aa6e0259e5509bda16e701e822be5e8b9142b7ac90b6d"
+      "size": 9414,
+      "sha256": "0f5537819f00906366bb4fd3f3e33e6c38c56e0599662f31aa77dbb209ec2d81"
     },
     {
       "path": "N_test_data/javac_case_056/analysis/test_sources/VkFramebufferCreateInfoTest.java",
@@ -287,8 +287,8 @@
     },
     {
       "path": "N_test_data/javac_case_056/official_swebench/metadata.json",
-      "size": 6044,
-      "sha256": "cab3b6ab4b48cfe84d502e35bf3eb9b1b6fb970c76c507539cb768b250b44d95"
+      "size": 6330,
+      "sha256": "75bfdf0afb74f656487cc0938266aeff031f83d022ac71b0db28914b4d9c6356"
     },
     {
       "path": "N_test_data/javac_case_056/official_swebench/public_task_056.json",
@@ -303,7 +303,7 @@
     {
       "path": "N_test_data/javac_case_056/official_swebench/SHA256SUMS.txt",
       "size": 646,
-      "sha256": "22e99c2eba5a753b211283af348e8073ce35f7f09e56a68fff3873e99c84e0dd"
+      "sha256": "927a177dea5e617b9c9c5979131002f49dc10f755aba6a9d423c0654b0696307"
     },
     {
       "path": "N_test_data/javac_case_056/patches/gold_patch.diff",
@@ -381,6 +381,11 @@
       "sha256": "b0ad097a60eeee6b60c8207c3157c8385c4f569699e25815f74de4d56afad527"
     },
     {
+      "path": "N_test_data/javac_case_056/verification/docker-hub-public-access.json",
+      "size": 249,
+      "sha256": "644135646dea70dfe3011f825f776b0e93319290ed02e0f5abe96941ff62551b"
+    },
+    {
       "path": "N_test_data/javac_case_056/verification/docker-pull.raw.log",
       "size": 490,
       "sha256": "18029270c304d6cffe6ec81c1e6c58f57b42c4f97f5d41ea6c5a571dc0f73cff"
@@ -397,8 +402,8 @@
     },
     {
       "path": "N_test_data/javac_case_056/verification/final_summary.json",
-      "size": 4740,
-      "sha256": "49782ae1d9a5098f3c2602a71fd89e6c65d5758e47021925e96d432f14890d43"
+      "size": 5025,
+      "sha256": "a60eaad0e7bbc0a05da7a57e76545e1f36acd7dfd6d897591e852475885d6332"
     },
     {
       "path": "N_test_data/javac_case_056/verification/generation_evidence/ant-compile-parent.raw.log",
@@ -448,12 +453,12 @@
     {
       "path": "N_test_data/javac_case_056/verification/layout_validation.json",
       "size": 594,
-      "sha256": "b1ec360ae12d874265097c2e09f7d0c38ced8eaea3500a34083e712e2a9c5155"
+      "sha256": "a14d81d5498d78c5c13b002992508309a855e08e975c56b38348337aaf3dfdc7"
     },
     {
       "path": "N_test_data/javac_case_056/verification/publication.json",
-      "size": 1247,
-      "sha256": "e927a370e6b88e945fc660d3c2bbe3dd2da9cbd42893f70b04d6da2a6e0c43b1"
+      "size": 1490,
+      "sha256": "90c8154246b0f3f3ba001ed9eb78a32c3f985aea0b6dede5772918610f339590"
     },
     {
       "path": "N_test_data/javac_case_056/verification/published-image-audit.raw.log",
@@ -671,6 +676,6 @@
       "sha256": "36b812ceb92a78bae0aed8bd16a0534de0beb260a8d1d8307847149c66e7a8e4"
     }
   ],
-  "count": 134,
-  "bytes": 4527495
+  "count": 135,
+  "bytes": 4529130
 }

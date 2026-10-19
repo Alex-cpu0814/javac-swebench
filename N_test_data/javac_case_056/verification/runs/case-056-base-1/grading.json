@@ -1,0 +1,16 @@
+{
+  "schema_version": "3.0",
+  "run_id": "case-056-base-1",
+  "tests_observed": 3,
+  "FAIL_TO_PASS": {
+    "org.lwjgl.vulkan.VkFramebufferCreateInfoTest::testNullAttachmentsPreserveAttachmentCount": "FAILED",
+    "org.lwjgl.vulkan.VkFramebufferCreateInfoTest::testNullAttachmentsPassGeneratedValidation": "FAILED"
+  },
+  "PASS_TO_PASS": {
+    "org.lwjgl.vulkan.VulkanTest::testParse": "PASSED"
+  },
+  "unexpected_failures": [
+    "org.lwjgl.vulkan.VkFramebufferCreateInfoTest::testNullAttachmentsPassGeneratedValidation",
+    "org.lwjgl.vulkan.VkFramebufferCreateInfoTest::testNullAttachmentsPreserveAttachmentCount"
+  ]
+}

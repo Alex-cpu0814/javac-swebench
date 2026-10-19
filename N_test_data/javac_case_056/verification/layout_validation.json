@@ -1,0 +1,20 @@
+{
+  "instance_id": "LWJGL__lwjgl3-673",
+  "validated_at_utc": "2026-10-19T03:34:06.199363+00:00",
+  "checks": {
+    "standard_layout": true,
+    "test_count": true,
+    "p2p_record_consistent": true,
+    "formal_runtime_evidence": true,
+    "raw_fix_parent_matches_base": true,
+    "complete_gold_patch": true,
+    "test_patch_matches_test_source": true,
+    "gold_applies_to_exact_fix_blobs": true,
+    "gold_and_test_patches_apply_together": true,
+    "base_log_has_both_failures": true,
+    "fix_log_has_both_passes": true
+  },
+  "errors": [],
+  "passed": true,
+  "docker_executed": false
+}

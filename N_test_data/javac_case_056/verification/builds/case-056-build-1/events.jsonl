@@ -1,0 +1,2 @@
+{"event": "build.started", "level": "INFO", "message": "Preparing depth-one Base source", "operation_id": "case-056-build-1", "phase": "preparation", "schema_version": "3.0", "timestamp": "2026-10-19T03:20:50.923Z"}
+{"event": "build.executing", "level": "INFO", "message": "Running standard Base Ant build in image", "operation_id": "case-056-build-1", "phase": "docker_build", "schema_version": "3.0", "timestamp": "2026-10-19T03:21:06.173Z"}

@@ -1,0 +1,17 @@
+tree 797c7442b66b625dd5a74a48c3ff5aedd882ca70
+parent 307ebed6ef6ba420b2165ddb2ec21dd9a37479df
+author Ioannis Tsakpinis <iotsakp@gmail.com> 1629653703 +0300
+committer Ioannis Tsakpinis <iotsakp@gmail.com> 1629654754 +0300
+gpgsig -----BEGIN PGP SIGNATURE-----
+ 
+ iQEzBAABCAAdFiEEcNrXB05QnPrCHQ/wTFhU/vqA3B4FAmEijuIACgkQTFhU/vqA
+ 3B6a0gf/fzVBoFbiPlg1/RByQKovlExdgHLvJX6rR39zYeKsYHbLHwsjRHdz8Wd4
+ ozcLvoGwG28U7WFhcYoY5mWUjiuuCHAVaKORTYeo+KMqX14UZ+zi7NgOPXGRkqZK
+ Mfk5vqOPBEXSSGaTcMHvkVr7RLfK3RFZ/IrtAH0fuo5IzXmSzEnEyCIRn1RGqWqd
+ EWya/QrcBxVxURed+IZSA6eg6c8pKKrBG4bIVNomZimUiuFqBreJY0Yt/AWM/JuG
+ 8UVJjsqVVzCfRJo5s64sF3TlHjVRMWHymSJGOSrqGZ16A+dY5iMsAwhB3cp2zV36
+ Z6aqc9FIj5aCZYgShCxEaT24boOKcA==
+ =f9YR
+ -----END PGP SIGNATURE-----
+
+fix(Vulkan): respect more noautovalidity attribs. Close #673

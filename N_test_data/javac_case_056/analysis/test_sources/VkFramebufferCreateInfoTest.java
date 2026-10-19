@@ -1,0 +1,68 @@
+/*
+ * Copyright LWJGL. All rights reserved.
+ * License terms: https://www.lwjgl.org/license
+ */
+package org.lwjgl.vulkan;
+
+import org.lwjgl.system.MemoryStack;
+import org.testng.annotations.Test;
+
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
+import static org.lwjgl.system.MemoryStack.stackPush;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertNull;
+
+public class VkFramebufferCreateInfoTest {
+
+    @Test
+    public void testNullAttachmentsPreserveAttachmentCount() {
+        try (MemoryStack stack = stackPush()) {
+            VkFramebufferCreateInfo info =
+                VkFramebufferCreateInfo.callocStack(stack);
+
+            info.flags(VK12.VK_FRAMEBUFFER_CREATE_IMAGELESS_BIT);
+
+            VkFramebufferCreateInfo.nattachmentCount(info.address(), 2);
+            info.pAttachments(null);
+
+            assertEquals(
+                info.attachmentCount(),
+                2,
+                "Setting pAttachments to NULL must not clear attachmentCount"
+            );
+            assertNull(
+                info.pAttachments(),
+                "pAttachments must remain NULL for an imageless framebuffer"
+            );
+        }
+    }
+
+    @Test
+    public void testNullAttachmentsPassGeneratedValidation() throws Throwable {
+        try (MemoryStack stack = stackPush()) {
+            VkFramebufferCreateInfo info =
+                VkFramebufferCreateInfo.callocStack(stack);
+
+            info.flags(VK12.VK_FRAMEBUFFER_CREATE_IMAGELESS_BIT);
+            info.pAttachments(null);
+
+            VkFramebufferCreateInfo.nattachmentCount(info.address(), 2);
+
+            try {
+                Method validate =
+                    VkFramebufferCreateInfo.class.getMethod(
+                        "validate",
+                        long.class
+                    );
+
+                validate.invoke(null, info.address());
+            } catch (NoSuchMethodException ignored) {
+                // A fixed generated binding may omit this validator.
+            } catch (InvocationTargetException e) {
+                throw e.getCause();
+            }
+        }
+    }
+}

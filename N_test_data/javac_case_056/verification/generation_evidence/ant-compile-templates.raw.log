@@ -1,0 +1,50 @@
+Buildfile: /work/lwjgl3-parent/build.xml
+
+init:
+ [override] Build type: release/3.3.0
+ [override] Build offline: true
+
+check-dependencies:
+
+-compile-generator:
+[Generator] Compiling Kotlin generator...
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/generator
+  [kotlinc] Compiling [/work/lwjgl3-parent/modules/generator/src/main/kotlin] => [/work/lwjgl3-parent/bin/classes/generator]
+  [kotlinc] info: kotlinc-jvm 1.5.21 (JRE 17.0.20.1+1-1-22.04-Ubuntu)
+  [kotlinc] info: PERF: generator-java-production, 20 files (10220 lines)
+  [kotlinc] info: PERF: INIT: Compiler initialized in 4663 ms
+  [kotlinc] info: PERF:         ANALYZE   15538 ms     657.742 loc/s
+  [kotlinc] info: PERF:        GENERATE   15927 ms     641.678 loc/s
+  [kotlinc] info: PERF: GC time for G1 Young Generation is 152 ms, 18 collections
+  [kotlinc] info: PERF: GC time for G1 Old Generation is 0 ms, 0 collections
+  [kotlinc] info: PERF: JIT time is 102637 ms
+  [kotlinc] info: PERF: Find Java class performed 18 times, total time 12 ms
+  [kotlinc] info: PERF: Type info performed 31346 times, total time 10807 ms
+  [kotlinc] info: PERF: Call resolve performed 18104 times, total time 8470 ms
+  [kotlinc] info: PERF: Binary class from Kotlin file performed 370 times, total time 470 ms
+    [touch] Creating /work/lwjgl3-parent/bin/classes/generator/touch.txt
+[javac: Generator Tools] Compiling 6 source files to /work/lwjgl3-parent/bin/classes/generator
+[javac: Generator Tools] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: Generator Tools] 1 warning
+
+compile-templates:
+[Templates] Compiling Kotlin templates. This will take 1-2 minutes...
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/templates
+  [kotlinc] Compiling [/work/lwjgl3-parent/modules/lwjgl/core/src/templates/kotlin/core/jni, /work/lwjgl3-parent/modules/lwjgl/core/src/templates/kotlin/core/libc, /work/lwjgl3-parent/modules/lwjgl/core/src/templates/kotlin/core/libffi, /work/lwjgl3-parent/modules/lwjgl/core/src/templates/kotlin/core/linux, /work/lwjgl3-parent/modules/lwjgl/core/src/templates/kotlin/core/macos, /work/lwjgl3-parent/modules/lwjgl/core/src/templates/kotlin/core/templates, /work/lwjgl3-parent/modules/lwjgl/core/src/templates/kotlin/core/windows, /work/lwjgl3-parent/modules/lwjgl/core/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/tootle/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/zstd/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/jemalloc/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/opengles/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/tinyfd/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/stb/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/odbc/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/bgfx/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/par/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/glfw/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/rpmalloc/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/shaderc/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/sse/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/libdivide/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/opencl/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/lz4/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/meow/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/nfd/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/egl/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/vma/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/vulkan/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/spvc/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/driftfx/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/openal/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/nanovg/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/remotery/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/nuklear/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/openvr/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/meshoptimizer/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/jawt/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/lmdb/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/xxhash/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/tinyexr/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/cuda/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/llvm/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/assimp/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/opus/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/opengl/src/templates/kotlin, /work/lwjgl3-parent/modules/lwjgl/yoga/src/templates/kotlin] => [/work/lwjgl3-parent/bin/classes/templates]
+  [kotlinc] info: kotlinc-jvm 1.5.21 (JRE 17.0.20.1+1-1-22.04-Ubuntu)
+  [kotlinc] info: PERF: templates-java-production, 1350 files (273582 lines)
+  [kotlinc] info: PERF: INIT: Compiler initialized in 209500 ms
+  [kotlinc] info: PERF:         ANALYZE   77706 ms    3520.732 loc/s
+  [kotlinc] info: PERF:        GENERATE   58664 ms    4663.542 loc/s
+  [kotlinc] info: PERF: GC time for G1 Young Generation is 1364 ms, 112 collections
+  [kotlinc] info: PERF: GC time for G1 Old Generation is 0 ms, 0 collections
+  [kotlinc] info: PERF: JIT time is 160915 ms
+  [kotlinc] info: PERF: Find Java class performed 18 times, total time 12 ms
+  [kotlinc] info: PERF: Type info performed 386853 times, total time 78775 ms
+  [kotlinc] info: PERF: Call resolve performed 163695 times, total time 70230 ms
+  [kotlinc] info: PERF: Binary class from Kotlin file performed 761 times, total time 3151 ms
+  [kotlinc] info: PERF: Find Java class performed 7 times, total time 2 ms
+    [touch] Creating /work/lwjgl3-parent/bin/classes/templates/touch.txt
+
+BUILD SUCCESSFUL
+Total time: 6 minutes 39 seconds

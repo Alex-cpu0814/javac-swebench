@@ -1,0 +1,50 @@
+{
+  "template_version": "1.0",
+  "case_number": "056",
+  "instance_id": "LWJGL__lwjgl3-673",
+  "instance_file": "official_swebench/instance_056.json",
+  "repo_url": "https://github.com/LWJGL/lwjgl3.git",
+  "base_commit": "307ebed6ef6ba420b2165ddb2ec21dd9a37479df",
+  "fix_commit": "ce56fc6c805ea671a4cf4e79abbd331688adfb6d",
+  "image": "yutu0814/javac-case-056-lwjgl3:benchmark-v1",
+  "source_file": "modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkFramebufferCreateInfo.java",
+  "test_file": "modules/lwjgl/vulkan/src/test/java/org/lwjgl/vulkan/VkFramebufferCreateInfoTest.java",
+  "FAIL_TO_PASS": [
+    "org.lwjgl.vulkan.VkFramebufferCreateInfoTest::testNullAttachmentsPreserveAttachmentCount",
+    "org.lwjgl.vulkan.VkFramebufferCreateInfoTest::testNullAttachmentsPassGeneratedValidation"
+  ],
+  "PASS_TO_PASS": [
+    "org.lwjgl.vulkan.VulkanTest::testParse"
+  ],
+  "oracle_type": "java_struct_behavior",
+  "evaluator_mode": "standard_ant_clean_base_runtime_injection",
+  "model_evaluator_verified": true,
+  "scope": [
+    "Standard Ant cold source build of Core and Vulkan: Kotlin generator/templates, regenerated bindings, all enabled Java sources and current JNI",
+    "Linux x86_64/OpenJDK17; Ubuntu libffi-dev 3.4.2-4 PIC archive is an explicit external dependency adaptation",
+    "Two issue-derived Java struct tests and one existing VulkanTest.testParse control; no real VkDevice or Vulkan driver downcall",
+    "No Base project binaries or Maven LWJGL native library reused during grading",
+    "Ant's Linux native target also unconditionally builds unused par and nuklear libraries",
+    "The validator test allows validate(long) to be absent; it does not alone establish every Vulkan API entry point is correct",
+    "Fix source and reference changes were visible during test design; no blinded-generation or independent-review claim"
+  ],
+  "python_version": "3.10",
+  "python_sha256": "system_python",
+  "extra_apt_packages": [],
+  "runtime_assets": [
+    {
+      "source": "evaluator/case_adapter.sh",
+      "target": "/benchmark/case_adapter.sh"
+    },
+    {
+      "source": "evaluator/build_project.py",
+      "target": "/benchmark/build_project.py"
+    },
+    {
+      "source": "evaluator/test_runner.py",
+      "target": "/benchmark/test_runner.py"
+    }
+  ],
+  "image_id": "sha256:866ae42ecde1bbcaa0581fabe2380bdea159ed944f565066b7abe1c2922a7669",
+  "image_digest": "sha256:866ae42ecde1bbcaa0581fabe2380bdea159ed944f565066b7abe1c2922a7669"
+}

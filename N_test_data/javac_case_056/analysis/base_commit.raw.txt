@@ -1,0 +1,36 @@
+tree 83a28858db144771eba8efa867c71616e0788342
+parent 4474889fac5b6f3a39145d4ab746264407a9597c
+author Ioannis Tsakpinis <iotsakp@gmail.com> 1629625048 +0300
+committer Ioannis Tsakpinis <iotsakp@gmail.com> 1629625219 +0300
+gpgsig -----BEGIN PGP SIGNATURE-----
+ 
+ iQEzBAABCAAdFiEEcNrXB05QnPrCHQ/wTFhU/vqA3B4FAmEiG4MACgkQTFhU/vqA
+ 3B5Qdgf7BrjmqKS6zob+kJUx5WfT78bzaUpBjlpb3jipLAdwZaxE5BBax/A8+3FV
+ UeGXFINoej4bfjYz3uo2FhznaZPFo8LRB7Ct5GINdgDAAvLbgQHJvPouAMcGaHkv
+ YH1CCIToQ3rPdTcYd5lEzW6OuqtMbjotp24ES801wbBxxnwWGK/nQPWV/3VNB4Rl
+ GDD+u1poO90mHar/ppgqkq61EuFCsoC0Q9glFDQdZIt8qyTLLej0j8w84O+KeBeI
+ d0uKDAz/2t01a/WUk3+i0h81nZkUegkO95GXRzb7nPsZMq105hAM8Ck+rv+tryBA
+ vH5s4Oj7xX9zPwn7bSw4rrgBW7B7GA==
+ =djlt
+ -----END PGP SIGNATURE-----
+
+build: migrate Linux builds to Ubuntu 18.04 & GCC 7.5
+
+Cons: older GLIBC versions no longer supported
+Pros: newer compiler, easier maintenance
+
+This change was forced by the Github Actions deprecation of Ubuntu 16.04
+runners. The only reliable/safe way to guarantee compatibility with old
+GLIBC versions is building natives on a system that uses an old GLIBC.
+Even on 16.04 though, we had to use the .symver workaround to avoid the
+memcpy from GLIBC 2.14. On 18.04, we'd have to forcibly downgrade many
+more symbols. An attempt was made and although it proved technically
+possible, the maintenance overhead would be too great (and there's
+GLIBCXX to worry about too). LWJGL simply doesn't have the human power
+that would be required and the project is already far behind schedule.
+
+Users that would like to deploy their applications on old Linux systems
+will now have to build and bundle custom LWJGL natives. The recommended
+approach is launching an old Linux distribution in a VM/container,
+cloning the required LWJGL-CI repositories and running the corresponding
+Github Action workflow scripts manually.

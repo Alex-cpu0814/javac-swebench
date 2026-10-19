@@ -1,0 +1,44 @@
+[
+  {
+    "source": "ant-init.log",
+    "archive": "ant-init.raw.log",
+    "sha256": "ec991858f718aed87eeeb09a1861b13b62009401651fbd8e00671d26158b4db1",
+    "size": 7160
+  },
+  {
+    "source": "ant-compile-templates.log",
+    "archive": "ant-compile-templates.raw.log",
+    "sha256": "d913236b2bf2b8595045a68897f6f1a6780259468ddc502ccc9a6047c1984b57",
+    "size": 5890
+  },
+  {
+    "source": "ant-compile-parent.log",
+    "archive": "ant-compile-parent.raw.log",
+    "sha256": "a394ccbac3115460c892b4cb739792033d7e46dbe6a034296a4277a0ad61043e",
+    "size": 46007
+  },
+  {
+    "source": "test-parent.log",
+    "archive": "testng-report-infrastructure.raw.log",
+    "sha256": "3e06b23e7d223adb657cfdae9cca258917d94921dd480a74e3c151b6b4838920",
+    "size": 170
+  },
+  {
+    "source": "test-parent-detail.log",
+    "archive": "base-tests.raw.log",
+    "sha256": "f48d71551740ea02113ecbe2f4c926ec9b23fdd4b0060d697bb47cf01199f304",
+    "size": 1907
+  },
+  {
+    "source": "test-fixed-detail.log",
+    "archive": "fix-tests.raw.log",
+    "sha256": "7fc6d2812a2e0e6cf2460a5a324dfdbe7a898e7adf1b9b8752fa026da672b316",
+    "size": 246
+  },
+  {
+    "source": "vulkan-parent-repro.log",
+    "archive": "original-validator-repro.raw.log",
+    "sha256": "762800669e8426e4c78f54873ebe8775342f21259d87129c8060123ed390dfec",
+    "size": 380
+  }
+]

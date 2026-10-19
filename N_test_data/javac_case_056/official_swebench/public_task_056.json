@@ -1,0 +1,9 @@
+{
+  "instance_id": "LWJGL__lwjgl3-673",
+  "repo": "LWJGL/lwjgl3",
+  "base_commit": "307ebed6ef6ba420b2165ddb2ec21dd9a37479df",
+  "problem_statement": "LWJGL's Vulkan bindings do not support specifying a nonzero attachmentCount with NULL pAttachments for an imageless framebuffer. In imageless mode, pAttachments is ignored, but the attachment count must still be supplied. Setting pAttachments to null should preserve an explicitly supplied count. The reporter also observes a NullPointerException in LWJGL checks after manually setting the count through VkFramebufferCreateInfo.nattachmentCount. The Java binding should accept the imageless configuration instead of resetting the count or rejecting the null pointer.\n\nReported module: Vulkan; LWJGL 3.3.0 snapshot on Linux. Original report: https://github.com/LWJGL/lwjgl3/issues/673 .",
+  "hints_text": null,
+  "created_at": "2021-08-17",
+  "version": "3.3.0"
+}

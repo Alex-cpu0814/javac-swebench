@@ -1,0 +1,22 @@
+{
+  "status": "image_published_github_pending",
+  "image": "yutu0814/javac-case-056-lwjgl3:benchmark-v1",
+  "local_image_id": "sha256:866ae42ecde1bbcaa0581fabe2380bdea159ed944f565066b7abe1c2922a7669",
+  "docker_hub": "https://hub.docker.com/r/yutu0814/javac-case-056-lwjgl3",
+  "github_repository": "Alex-cpu0814/javac-swebench",
+  "github_case_path": "N_test_data/javac_case_056",
+  "github_additional_paths": [
+    "README.md"
+  ],
+  "image_published": true,
+  "github_published": false,
+  "created_at_utc": "2026-10-19T03:29:38.242826+00:00",
+  "image_payload": "Pinned public LWJGL Base source, toolchain, third-party dependencies; no Fix commit, gold/test patch or evaluation entrypoint",
+  "github_payload": "This case's records, source snapshots, patches, evaluator scripts and verification logs, plus the dataset README entry",
+  "registry_pull_verified": true,
+  "published_image_audit_passed": true,
+  "digest": "sha256:866ae42ecde1bbcaa0581fabe2380bdea159ed944f565066b7abe1c2922a7669",
+  "image_published_at_utc": "2026-10-19T03:34:04.675400+00:00",
+  "authorization_confirmed": true,
+  "historical_auto_review_rejection": "Automatic review requires explicit confirmation of this image payload and destination; push was not executed"
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "test_patch_generation_record_1.0",
+  "instance_id": "LWJGL__lwjgl3-673",
+  "golden_patch_visible": true,
+  "fix_source_visible": true,
+  "execution_feedback_visible": true,
+  "generation_method": "Iterative assistant/user discussion; user executed Docker commands",
+  "generation_attempt": null,
+  "repair_rounds": null,
+  "temperature": null,
+  "seed": null,
+  "counts_note": "No reliable candidate/repair/token counts were recorded; not inferred",
+  "validation_repeats_per_revision": 1,
+  "independent_reviewer": null,
+  "base_result": "fail",
+  "fix_result": "pass",
+  "review_result": "user_accepted_two_test_design",
+  "packaging_timestamp_utc": "2026-10-19T03:08:57.127697+00:00"
+}

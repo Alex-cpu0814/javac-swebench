@@ -1,0 +1,145 @@
+{
+  "dataset_schema_version": "1.0",
+  "source_case": "056",
+  "dataset_variant": "N_test_data",
+  "instance_id": "LWJGL__lwjgl3-673",
+  "repo": "LWJGL/lwjgl3",
+  "base_commit": "307ebed6ef6ba420b2165ddb2ec21dd9a37479df",
+  "fix_commit": "ce56fc6c805ea671a4cf4e79abbd331688adfb6d",
+  "test_source": "synthetic_issue_derived_java_struct_regression",
+  "test_files": [
+    "modules/lwjgl/vulkan/src/test/java/org/lwjgl/vulkan/VkFramebufferCreateInfoTest.java"
+  ],
+  "project_version": "3.3.0",
+  "FAIL_TO_PASS": [
+    "org.lwjgl.vulkan.VkFramebufferCreateInfoTest::testNullAttachmentsPreserveAttachmentCount",
+    "org.lwjgl.vulkan.VkFramebufferCreateInfoTest::testNullAttachmentsPassGeneratedValidation"
+  ],
+  "PASS_TO_PASS": [
+    "org.lwjgl.vulkan.VulkanTest::testParse"
+  ],
+  "PASS_TO_PASS_COUNT": 1,
+  "standard_layout": true,
+  "verification": {
+    "base_fails": true,
+    "fix_passes": true,
+    "docker_verified": true,
+    "runtime_verified": true,
+    "historical_targeted_runs_per_revision": 1,
+    "fresh_network_none_repeats_per_revision": 1,
+    "model_evaluator_verified": true,
+    "clean_base_image_verified": true,
+    "full_fix_build_verified": true,
+    "full_base_build_verified": true,
+    "generator_regeneration_verified": true,
+    "enabled_modules": [
+      "core",
+      "vulkan"
+    ],
+    "current_jni_built_from_source": true,
+    "project_binary_reuse": false,
+    "PASS_TO_PASS_verified": true,
+    "image": "yutu0814/javac-case-056-lwjgl3:benchmark-v1",
+    "image_id": "sha256:866ae42ecde1bbcaa0581fabe2380bdea159ed944f565066b7abe1c2922a7669",
+    "image_build_id": "case-056-build-1",
+    "base_run_id": "case-056-base-1",
+    "gold_run_id": "case-056-gold-1",
+    "test_tamper_run_id": "case-056-tamper-1",
+    "test_tamper_rejected": true,
+    "base_grading": {
+      "tests_observed": 3,
+      "FAIL_TO_PASS": {
+        "expected": 2,
+        "passed": 0,
+        "failed": 2,
+        "skipped": 0,
+        "missing": 0
+      },
+      "PASS_TO_PASS": {
+        "expected": 1,
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0,
+        "missing": 0
+      },
+      "unexpected_failures": 2
+    },
+    "gold_grading": {
+      "tests_observed": 3,
+      "FAIL_TO_PASS": {
+        "expected": 2,
+        "passed": 2,
+        "failed": 0,
+        "skipped": 0,
+        "missing": 0
+      },
+      "PASS_TO_PASS": {
+        "expected": 1,
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0,
+        "missing": 0
+      },
+      "unexpected_failures": 0
+    },
+    "evaluation_assets_injected_at_runtime": true,
+    "image_contains_fix_commit": false,
+    "image_contains_gold_patch": false,
+    "image_contains_test_patch": false,
+    "independent_review_accepted": false,
+    "image_published": true,
+    "github_published": false,
+    "formal_case_completed": true,
+    "published_image_digest": "sha256:866ae42ecde1bbcaa0581fabe2380bdea159ed944f565066b7abe1c2922a7669",
+    "registry_pull_verified": true,
+    "published_image_audit_passed": true
+  },
+  "patch_provenance": {
+    "reference_commit": "ce56fc6c805ea671a4cf4e79abbd331688adfb6d",
+    "first_parent": "307ebed6ef6ba420b2165ddb2ec21dd9a37479df",
+    "official_diff_complete": true,
+    "changed_file_count": 16,
+    "source": "Local git diff of the two pinned commit trees; raw commit parent checked",
+    "gold_sha256": "326c6b4cdd6cd026bebf83b8e9704144a94bbb96b85cac860da1eb14a66a87e5",
+    "test_patch_sha256": "b0ad097a60eeee6b60c8207c3157c8385c4f569699e25815f74de4d56afad527",
+    "test_source": "synthetic_issue_derived_java_struct_regression",
+    "information_boundary": "Issue, Fix metadata, Fix source and reference changes were visible during discussion/test design"
+  },
+  "scope": [
+    "Standard Ant cold source build of Core and Vulkan: Kotlin generator/templates, regenerated bindings, all enabled Java sources and current JNI",
+    "Linux x86_64/OpenJDK17; Ubuntu libffi-dev 3.4.2-4 PIC archive is an explicit external dependency adaptation",
+    "Two issue-derived Java struct tests and one existing VulkanTest.testParse control; no real VkDevice or Vulkan driver downcall",
+    "No Base project binaries or Maven LWJGL native library reused during grading",
+    "Ant's Linux native target also unconditionally builds unused par and nuklear libraries",
+    "The validator test allows validate(long) to be absent; it does not alone establish every Vulkan API entry point is correct",
+    "Fix source and reference changes were visible during test design; no blinded-generation or independent-review claim"
+  ],
+  "status": "image_published_github_pending",
+  "created_at_provenance": "GitHub official issue #673 created_at: 2021-08-17T09:48:06Z",
+  "duplicate_source_cases": [
+    56,
+    57
+  ],
+  "publication": {
+    "status": "image_published_github_pending",
+    "image": "yutu0814/javac-case-056-lwjgl3:benchmark-v1",
+    "local_image_id": "sha256:866ae42ecde1bbcaa0581fabe2380bdea159ed944f565066b7abe1c2922a7669",
+    "docker_hub": "https://hub.docker.com/r/yutu0814/javac-case-056-lwjgl3",
+    "github_repository": "Alex-cpu0814/javac-swebench",
+    "github_case_path": "N_test_data/javac_case_056",
+    "github_additional_paths": [
+      "README.md"
+    ],
+    "image_published": true,
+    "github_published": false,
+    "created_at_utc": "2026-10-19T03:29:38.242826+00:00",
+    "image_payload": "Pinned public LWJGL Base source, toolchain, third-party dependencies; no Fix commit, gold/test patch or evaluation entrypoint",
+    "github_payload": "This case's records, source snapshots, patches, evaluator scripts and verification logs, plus the dataset README entry",
+    "registry_pull_verified": true,
+    "published_image_audit_passed": true,
+    "digest": "sha256:866ae42ecde1bbcaa0581fabe2380bdea159ed944f565066b7abe1c2922a7669",
+    "image_published_at_utc": "2026-10-19T03:34:04.675400+00:00",
+    "authorization_confirmed": true,
+    "historical_auto_review_rejection": "Automatic review requires explicit confirmation of this image payload and destination; push was not executed"
+  }
+}

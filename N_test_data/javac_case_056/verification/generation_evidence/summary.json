@@ -1,0 +1,19 @@
+{
+  "instance_id": "LWJGL__lwjgl3-673",
+  "evidence_source": "E:\\CLB_Swe-bench\\javac-swebench\\N_test_data\\java_case_056_new",
+  "imported_at_utc": "2026-10-19T03:08:57.127697+00:00",
+  "rerun_during_organization": false,
+  "base": {
+    "passed": 0,
+    "failed": 2,
+    "failures": [
+      "AssertionError: expected [2] but found [0]",
+      "NullPointerException in Checks.check / VkFramebufferCreateInfo.validate"
+    ]
+  },
+  "fix": {
+    "passed": 2,
+    "failed": 0
+  },
+  "verification_scope": "single_generated_struct_recompilation_with_base_binary_dependencies"
+}

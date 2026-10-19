@@ -1,0 +1,102 @@
+[
+  {
+    "path": "build.xml",
+    "sha256": "177d964b5e85e9ba934dd95a12541a9682fc9a1ccfd33306b300ed51bc6ddae8",
+    "commit": "307ebed6ef6ba420b2165ddb2ec21dd9a37479df"
+  },
+  {
+    "path": "config/build-bindings.xml",
+    "sha256": "c17df42359256c04484db30d2c2ca03e7292b0373e6adacbe958dd5963175238",
+    "commit": "307ebed6ef6ba420b2165ddb2ec21dd9a37479df"
+  },
+  {
+    "path": "gradle.properties",
+    "sha256": "03ca3ef389bd0604082f3477421b76744939215e47759bd27ff484516eed75c0",
+    "commit": "307ebed6ef6ba420b2165ddb2ec21dd9a37479df"
+  },
+  {
+    "path": "modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/KHRCreateRenderpass2.java",
+    "sha256": "e914683dc2a5923fb0f7b5a9c3cc00a4218d23dca04cd498ba36e64fdedecd81",
+    "commit": "307ebed6ef6ba420b2165ddb2ec21dd9a37479df"
+  },
+  {
+    "path": "modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/KHRDisplaySwapchain.java",
+    "sha256": "fda44e48f92333f2cde9cbecb4fc8d520ef6069754ee466b15564a79b268d9e3",
+    "commit": "307ebed6ef6ba420b2165ddb2ec21dd9a37479df"
+  },
+  {
+    "path": "modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/KHRSwapchain.java",
+    "sha256": "d4788d84dd0038db981e8fb7e3e0711424e9e1ec2234d67aaa96f2d49a69ac05",
+    "commit": "307ebed6ef6ba420b2165ddb2ec21dd9a37479df"
+  },
+  {
+    "path": "modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VK10.java",
+    "sha256": "3c051008a8361325d39abde94d81529bb07d76eb54c9ba4c8b8d4a7673823d1b",
+    "commit": "307ebed6ef6ba420b2165ddb2ec21dd9a37479df"
+  },
+  {
+    "path": "modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VK12.java",
+    "sha256": "6d4089335ed4acdf74c9be641fafbf4263cd9485599effda857a9f780164a18c",
+    "commit": "307ebed6ef6ba420b2165ddb2ec21dd9a37479df"
+  },
+  {
+    "path": "modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkBufferCreateInfo.java",
+    "sha256": "42466441be515db7403c278b72ba7b14f41aab8a42f42b28fa027156654b15f0",
+    "commit": "307ebed6ef6ba420b2165ddb2ec21dd9a37479df"
+  },
+  {
+    "path": "modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkFramebufferCreateInfo.java",
+    "sha256": "42463d0857dbdca06537370c97219a03692366a831fe9005607fc63917f9bab0",
+    "commit": "307ebed6ef6ba420b2165ddb2ec21dd9a37479df"
+  },
+  {
+    "path": "modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkImageCreateInfo.java",
+    "sha256": "c8c6ead1b8448a70cd047b7c42e5c8d679d8f5c7c3e0264ef3b1edf05ce804f3",
+    "commit": "307ebed6ef6ba420b2165ddb2ec21dd9a37479df"
+  },
+  {
+    "path": "modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkPhysicalDeviceImageDrmFormatModifierInfoEXT.java",
+    "sha256": "b20f44774a3f4ada5e0fc5320af271350da86ef2f343c094957bf6f479e83baa",
+    "commit": "307ebed6ef6ba420b2165ddb2ec21dd9a37479df"
+  },
+  {
+    "path": "modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkPipelineDiscardRectangleStateCreateInfoEXT.java",
+    "sha256": "f7c47165f7f1b5685d666c67a5fdbe4ba9841413389acaadd6499d004be69aad",
+    "commit": "307ebed6ef6ba420b2165ddb2ec21dd9a37479df"
+  },
+  {
+    "path": "modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkPipelineViewportExclusiveScissorStateCreateInfoNV.java",
+    "sha256": "26353cf73535fda1af09942b0747880ad9b8257801a174c926c65a9c635b5e75",
+    "commit": "307ebed6ef6ba420b2165ddb2ec21dd9a37479df"
+  },
+  {
+    "path": "modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkPipelineViewportShadingRateImageStateCreateInfoNV.java",
+    "sha256": "d10f37bfd77d120a97fa5819db49009c834fab47084765ee9aa94dae1bca5b82",
+    "commit": "307ebed6ef6ba420b2165ddb2ec21dd9a37479df"
+  },
+  {
+    "path": "modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkRenderPassBeginInfo.java",
+    "sha256": "ece0adb2e9c2749df780a7abb7d1fb3c27b711dbf7e5227568f552912d6ce835",
+    "commit": "307ebed6ef6ba420b2165ddb2ec21dd9a37479df"
+  },
+  {
+    "path": "modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkSwapchainCreateInfoKHR.java",
+    "sha256": "cd5925fc6e7e39b0e6a1580c86c8e2debd9aef869df283e403704a0d8d04dc11",
+    "commit": "307ebed6ef6ba420b2165ddb2ec21dd9a37479df"
+  },
+  {
+    "path": "modules/lwjgl/vulkan/src/templates/kotlin/vulkan/ExtensionTypes.kt",
+    "sha256": "6e62feb09dab9b9056f16da651db98efe7db751b2a43813bec1e68676a8d2eb9",
+    "commit": "307ebed6ef6ba420b2165ddb2ec21dd9a37479df"
+  },
+  {
+    "path": "modules/lwjgl/vulkan/src/templates/kotlin/vulkan/VKTypes.kt",
+    "sha256": "f2400b788c9d989163341901b491fa24b544ff807124c2991e6cad26d8fd35c6",
+    "commit": "307ebed6ef6ba420b2165ddb2ec21dd9a37479df"
+  },
+  {
+    "path": "modules/lwjgl/vulkan/src/test/java/org/lwjgl/vulkan/VulkanTest.java",
+    "sha256": "9d6d81112eccb610324276e35d5429030cfc0c0521004318a6eaae81c744a985",
+    "commit": "307ebed6ef6ba420b2165ddb2ec21dd9a37479df"
+  }
+]

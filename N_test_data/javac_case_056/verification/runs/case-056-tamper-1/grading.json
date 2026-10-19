@@ -1,0 +1,13 @@
+{
+  "schema_version": "3.0",
+  "run_id": "case-056-tamper-1",
+  "tests_observed": 0,
+  "FAIL_TO_PASS": {
+    "org.lwjgl.vulkan.VkFramebufferCreateInfoTest::testNullAttachmentsPreserveAttachmentCount": "MISSING",
+    "org.lwjgl.vulkan.VkFramebufferCreateInfoTest::testNullAttachmentsPassGeneratedValidation": "MISSING"
+  },
+  "PASS_TO_PASS": {
+    "org.lwjgl.vulkan.VulkanTest::testParse": "MISSING"
+  },
+  "unexpected_failures": []
+}

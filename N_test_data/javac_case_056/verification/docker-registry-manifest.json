@@ -1,0 +1,6 @@
+{
+  "direct_manifest_cli_status": "network_timeout",
+  "digest_pull_verified": true,
+  "digest": "sha256:866ae42ecde1bbcaa0581fabe2380bdea159ed944f565066b7abe1c2922a7669",
+  "verification_method": "docker daemon pull by immutable digest and subsequent network-none audit"
+}

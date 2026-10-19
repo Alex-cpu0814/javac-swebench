@@ -1,0 +1,12 @@
+{
+  "base_commit": "307ebed6ef6ba420b2165ddb2ec21dd9a37479df",
+  "working_tree_clean": true,
+  "fix_commit_present": false,
+  "model_patch_present": false,
+  "test_patch_present": false,
+  "gold_patch_present": false,
+  "evaluation_assets_injected_at_runtime": true,
+  "project_binaries_present": false,
+  "current_jni_compiled_during_each_evaluation": true,
+  "network_disabled_during_audit": true
+}

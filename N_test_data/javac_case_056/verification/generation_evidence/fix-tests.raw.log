@@ -1,0 +1,8 @@
+===== RUN testNullAttachmentsPreserveAttachmentCount =====
+PASS: testNullAttachmentsPreserveAttachmentCount
+
+===== RUN testNullAttachmentsPassGeneratedValidation =====
+PASS: testNullAttachmentsPassGeneratedValidation
+
+
+RESULT: passed=2, failed=0

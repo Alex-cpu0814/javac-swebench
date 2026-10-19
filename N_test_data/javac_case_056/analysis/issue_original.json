@@ -1,0 +1,9 @@
+{
+  "number": 673,
+  "html_url": "https://github.com/LWJGL/lwjgl3/issues/673",
+  "title": "Vulkan: VkFramebufferCreateInfo doesnt allow for just passing the attachmentCount",
+  "body": "### Environment\r\n\r\n* LWJGL version: `3.3.0` \r\n* LWJGL build #: `SNAPSHOT`\r\n* Java version: `java.version`\r\n* Platform: `Linux`\r\n* Module: `Vulkan`\r\n\r\n### Description Of Issue\r\n\r\nfor ImagelessFramebuffers (A Core feature of vulkan 1.2), you need to be able to specify just the count of attachments. Specifying the attachments causes problems within Khronos Validation Layers. we have tried `VkFramebufferCreateInfo.nattachmentCount(framebufferInfo.address(), 2);` but this unfortunately doesn't work due to the checks causing a NullPointerException",
+  "created_at": "2021-08-17T09:48:06Z",
+  "updated_at": "2021-08-22T19:09:35Z",
+  "state": "closed"
+}

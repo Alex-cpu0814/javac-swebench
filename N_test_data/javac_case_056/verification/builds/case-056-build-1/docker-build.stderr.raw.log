@@ -1,0 +1,204 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 2.83kB 0.0s done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/ubuntu:22.04@sha256:5ec03bb3441e8b0bf3b4f9cd4629a1ae763010dc3035bb8da3ae6cf026486401
+#2 DONE 0.1s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 96B 0.0s done
+#3 DONE 0.1s
+
+#4 [ 1/10] FROM docker.io/library/ubuntu:22.04@sha256:5ec03bb3441e8b0bf3b4f9cd4629a1ae763010dc3035bb8da3ae6cf026486401
+#4 resolve docker.io/library/ubuntu:22.04@sha256:5ec03bb3441e8b0bf3b4f9cd4629a1ae763010dc3035bb8da3ae6cf026486401 0.0s done
+#4 DONE 0.0s
+
+#5 [ 2/10] RUN apt-get update && apt-get install -y --no-install-recommends ant ca-certificates git openjdk-17-jdk-headless gcc g++ libx11-dev make unzip python3 && apt-get clean && rm -rf /var/lib/apt/lists/*
+#5 CACHED
+
+#6 [ 3/10] RUN apt-get update && apt-get install -y --no-install-recommends libffi-dev=3.4.2-4 && apt-get clean && rm -rf /var/lib/apt/lists/* && ln -s /usr/bin/python3 /usr/local/bin/python
+#6 CACHED
+
+#7 [ 4/10] WORKDIR /testbed
+#7 CACHED
+
+#8 [internal] load build context
+#8 transferring context: 86.52MB 3.8s done
+#8 DONE 3.8s
+
+#9 [ 5/10] ADD base-git.tar.gz /testbed/.git/
+#9 DONE 0.1s
+
+#10 [ 6/10] RUN git config core.bare false && git config core.autocrlf false && git checkout --detach "307ebed6ef6ba420b2165ddb2ec21dd9a37479df" && test -z "$(git status --porcelain)"
+#10 2.016 HEAD is now at 307ebed build: migrate Linux builds to Ubuntu 18.04 & GCC 7.5
+#10 DONE 2.1s
+
+#11 [ 7/10] ADD dependency-cache.tar.gz /testbed/bin/libs/
+#11 DONE 0.7s
+
+#12 [ 8/10] RUN python3 - <<'PY'
+#12 0.621 Buildfile: /testbed/build.xml
+#12 0.975 
+#12 0.975 init:
+#12 0.994     [mkdir] Created dir: /testbed/bin/classes/ant
+#12 1.048 [javac: Custom Ant Tasks] Compiling 2 source files to /testbed/bin/classes/ant
+#12 1.131 [javac: Custom Ant Tasks] warning: [options] bootstrap class path not set in conjunction with -source 8
+#12 1.638 [javac: Custom Ant Tasks] 1 warning
+#12 1.691 
+#12 1.691 check-dependencies:
+#12 1.725 
+#12 1.725 update-dependencies:
+#12 1.752 
+#12 1.752 -lib-download:
+#12 4.230 
+#12 4.230 -kotlinc-download:
+#12 4.280 
+#12 4.280 -compile-generator:
+#12 4.284 [Generator] Compiling Kotlin generator...
+#12 4.284     [mkdir] Created dir: /testbed/bin/classes/generator
+#12 5.217   [kotlinc] Compiling [/testbed/modules/generator/src/main/kotlin] => [/testbed/bin/classes/generator]
+#12 5.500   [kotlinc] info: kotlinc-jvm 1.5.21 (JRE 17.0.20.1+1-1-22.04-Ubuntu)
+#12 27.98   [kotlinc] info: PERF: generator-java-production, 20 files (10220 lines)
+#12 27.98   [kotlinc] info: PERF: INIT: Compiler initialized in 511 ms
+#12 27.98   [kotlinc] info: PERF:         ANALYZE   14733 ms     693.681 loc/s
+#12 27.98   [kotlinc] info: PERF:        GENERATE    7169 ms    1425.582 loc/s
+#12 27.98   [kotlinc] info: PERF: GC time for G1 Young Generation is 194 ms, 26 collections
+#12 27.98   [kotlinc] info: PERF: GC time for G1 Old Generation is 0 ms, 0 collections
+#12 27.98   [kotlinc] info: PERF: JIT time is 100731 ms
+#12 27.98   [kotlinc] info: PERF: Find Java class performed 18 times, total time 9 ms
+#12 27.98   [kotlinc] info: PERF: Type info performed 31346 times, total time 10597 ms
+#12 27.98   [kotlinc] info: PERF: Call resolve performed 18104 times, total time 8167 ms
+#12 27.98   [kotlinc] info: PERF: Binary class from Kotlin file performed 370 times, total time 74 ms
+#12 27.98     [touch] Creating /testbed/bin/classes/generator/touch.txt
+#12 27.99 [javac: Generator Tools] Compiling 6 source files to /testbed/bin/classes/generator
+#12 27.99 [javac: Generator Tools] warning: [options] bootstrap class path not set in conjunction with -source 8
+#12 28.72 [javac: Generator Tools] 1 warning
+#12 28.72 
+#12 28.72 compile-templates:
+#12 28.72 [Templates] Compiling Kotlin templates. This will take 1-2 minutes...
+#12 28.73     [mkdir] Created dir: /testbed/bin/classes/templates
+#12 28.74   [kotlinc] Compiling [/testbed/modules/lwjgl/core/src/templates/kotlin/core/jni, /testbed/modules/lwjgl/core/src/templates/kotlin/core/libc, /testbed/modules/lwjgl/core/src/templates/kotlin/core/libffi, /testbed/modules/lwjgl/core/src/templates/kotlin/core/linux, /testbed/modules/lwjgl/core/src/templates/kotlin/core/macos, /testbed/modules/lwjgl/core/src/templates/kotlin/core/templates, /testbed/modules/lwjgl/core/src/templates/kotlin/core/windows, /testbed/modules/lwjgl/core/src/templates/kotlin, /testbed/modules/lwjgl/vulkan/src/templates/kotlin] => [/testbed/bin/classes/templates]
+#12 28.74   [kotlinc] info: kotlinc-jvm 1.5.21 (JRE 17.0.20.1+1-1-22.04-Ubuntu)
+#12 48.81   [kotlinc] info: PERF: templates-java-production, 256 files (81701 lines)
+#12 48.81   [kotlinc] info: PERF: INIT: Compiler initialized in 365 ms
+#12 48.81   [kotlinc] info: PERF:         ANALYZE   13652 ms    5984.544 loc/s
+#12 48.81   [kotlinc] info: PERF:        GENERATE    6004 ms   13607.761 loc/s
+#12 48.81   [kotlinc] info: PERF: GC time for G1 Young Generation is 309 ms, 41 collections
+#12 48.81   [kotlinc] info: PERF: GC time for G1 Old Generation is 0 ms, 0 collections
+#12 48.81   [kotlinc] info: PERF: JIT time is 137769 ms
+#12 48.81   [kotlinc] info: PERF: Find Java class performed 18 times, total time 9 ms
+#12 48.81   [kotlinc] info: PERF: Type info performed 97850 times, total time 22905 ms
+#12 48.81   [kotlinc] info: PERF: Call resolve performed 43506 times, total time 19148 ms
+#12 48.81   [kotlinc] info: PERF: Binary class from Kotlin file performed 725 times, total time 124 ms
+#12 48.81   [kotlinc] info: PERF: Find Java class performed 6 times, total time 2 ms
+#12 48.81     [touch] Creating /testbed/bin/classes/templates/touch.txt
+#12 48.81 
+#12 48.81 BUILD SUCCESSFUL
+#12 48.81 Total time: 48 seconds
+#12 49.10 Buildfile: /testbed/build.xml
+#12 49.45 
+#12 49.45 init:
+#12 49.57 
+#12 49.57 check-dependencies:
+#12 49.62 
+#12 49.62 generate:
+#12 53.40 [Generator] 	UPDATING: modules/lwjgl/core/src/generated/java/org/lwjgl/system/JNI.java
+#12 53.40 [Generator] 	UPDATING: modules/lwjgl/core/src/generated/c/org_lwjgl_system_JNI.c
+#12 56.70 
+#12 56.70 compile:
+#12 56.71     [mkdir] Created dir: /testbed/bin/classes/lwjgl/core
+#12 56.74 [javac: core] Compiling 135 source files to /testbed/bin/classes/lwjgl/core
+#12 56.81 [javac: core] warning: [options] bootstrap class path not set in conjunction with -source 8
+#12 60.93 [javac: core] /testbed/modules/lwjgl/core/src/main/java/org/lwjgl/system/SharedLibraryLoader.java:283: warning: [try] auto-closeable resource ignored is never referenced in body of corresponding try statement
+#12 60.93 [javac: core]                 try (FileChannel ignored = extract(file, resource)) {
+#12 60.94 [javac: core]                                  ^
+#12 62.80 [javac: core] 2 warnings
+#12 62.82     [mkdir] Created dir: /testbed/bin/classes/lwjgl/core/META-INF/versions/9
+#12 62.82     [mkdir] Created dir: /testbed/bin/classes/lwjgl/core/META-INF/versions/10
+#12 62.83 [javac: Core - Java 9] Compiling 3 source files to /testbed/bin/classes/lwjgl/core/META-INF/versions/9
+#12 63.27 [javac: Core - Java 10] Compiling 2 source files to /testbed/bin/classes/lwjgl/core/META-INF/versions/10
+#12 63.41     [mkdir] Created dir: /testbed/bin/classes/lwjgl/assimp
+#12 63.42     [mkdir] Created dir: /testbed/bin/classes/lwjgl/cuda
+#12 63.42     [mkdir] Created dir: /testbed/bin/classes/lwjgl/bullet
+#12 63.42     [mkdir] Created dir: /testbed/bin/classes/lwjgl/driftfx
+#12 63.42     [mkdir] Created dir: /testbed/bin/classes/lwjgl/nanovg
+#12 63.43     [mkdir] Created dir: /testbed/bin/classes/lwjgl/egl
+#12 63.43     [mkdir] Created dir: /testbed/bin/classes/lwjgl/bgfx
+#12 63.43     [mkdir] Created dir: /testbed/bin/classes/lwjgl/jemalloc
+#12 63.43     [mkdir] Created dir: /testbed/bin/classes/lwjgl/nfd
+#12 63.43     [mkdir] Created dir: /testbed/bin/classes/lwjgl/nuklear
+#12 63.44     [mkdir] Created dir: /testbed/bin/classes/lwjgl/openal
+#12 63.44     [mkdir] Created dir: /testbed/bin/classes/lwjgl/lmdb
+#12 63.44     [mkdir] Created dir: /testbed/bin/classes/lwjgl/meow
+#12 63.44     [mkdir] Created dir: /testbed/bin/classes/lwjgl/remotery
+#12 63.45     [mkdir] Created dir: /testbed/bin/classes/lwjgl/libdivide
+#12 63.45     [mkdir] Created dir: /testbed/bin/classes/lwjgl/llvm
+#12 63.45     [mkdir] Created dir: /testbed/bin/classes/lwjgl/meshoptimizer
+#12 63.45     [mkdir] Created dir: /testbed/bin/classes/lwjgl/jawt
+#12 63.45     [mkdir] Created dir: /testbed/bin/classes/lwjgl/vulkan
+#12 63.45     [mkdir] Created dir: /testbed/bin/classes/lwjgl/lz4
+#12 63.46     [mkdir] Created dir: /testbed/bin/classes/lwjgl/odbc
+#12 63.46     [mkdir] Created dir: /testbed/bin/classes/lwjgl/xxhash
+#12 63.46     [mkdir] Created dir: /testbed/bin/classes/lwjgl/tinyexr
+#12 63.46     [mkdir] Created dir: /testbed/bin/classes/lwjgl/opengles
+#12 63.46     [mkdir] Created dir: /testbed/bin/classes/lwjgl/opus
+#12 63.46     [mkdir] Created dir: /testbed/bin/classes/lwjgl/stb
+#12 63.46     [mkdir] Created dir: /testbed/bin/classes/lwjgl/par
+#12 63.46     [mkdir] Created dir: /testbed/bin/classes/lwjgl/rpmalloc
+#12 63.46     [mkdir] Created dir: /testbed/bin/classes/lwjgl/sse
+#12 63.46     [mkdir] Created dir: /testbed/bin/classes/lwjgl/opencl
+#12 63.47     [mkdir] Created dir: /testbed/bin/classes/lwjgl/yoga
+#12 63.47     [mkdir] Created dir: /testbed/bin/classes/lwjgl/spvc
+#12 63.47     [mkdir] Created dir: /testbed/bin/classes/lwjgl/tootle
+#12 63.47     [mkdir] Created dir: /testbed/bin/classes/lwjgl/zstd
+#12 63.47     [mkdir] Created dir: /testbed/bin/classes/lwjgl/tinyfd
+#12 63.47     [mkdir] Created dir: /testbed/bin/classes/lwjgl/shaderc
+#12 63.47     [mkdir] Created dir: /testbed/bin/classes/lwjgl/openvr
+#12 63.58 [javac: vulkan] Compiling 949 source files to /testbed/bin/classes/lwjgl/vulkan
+#12 63.60 [javac: vulkan] warning: [options] bootstrap class path not set in conjunction with -source 8
+#12 71.92 [javac: vulkan] 1 warning
+#12 71.92     [mkdir] Created dir: /testbed/bin/classes/lwjgl/vma
+#12 71.92     [mkdir] Created dir: /testbed/bin/classes/lwjgl/opengl
+#12 71.92     [mkdir] Created dir: /testbed/bin/classes/lwjgl/ovr
+#12 71.92     [mkdir] Created dir: /testbed/bin/classes/lwjgl/glfw
+#12 71.92 
+#12 71.92 compile-native:
+#12 71.92     [mkdir] Created dir: /testbed/bin/linux/x64
+#12 71.95 
+#12 71.95 compile-native-platform:
+#12 71.97      [echo] Building with GCC v11.0 (command: gcc)
+#12 71.97     [mkdir] Created dir: /testbed/bin/linux/x64/core
+#12 71.98     [mkdir] Created dir: /testbed/bin/linux/x64/nuklear
+#12 71.98     [mkdir] Created dir: /testbed/bin/linux/x64/par
+#12 72.47       [gcc] Linking lwjgl_par
+#12 72.47     [mkdir] Created dir: /testbed/bin/libs/native/linux/x64/${module.par.path}
+#12 72.67       [gcc] Linking lwjgl
+#12 73.22       [gcc] Linking lwjgl_nuklear
+#12 73.22     [mkdir] Created dir: /testbed/bin/libs/native/linux/x64/${module.nuklear.path}
+#12 73.42    [Linker] lto-wrapper: warning: using serial compilation of 5 LTRANS jobs
+#12 78.20 
+#12 78.20 BUILD SUCCESSFUL
+#12 78.20 Total time: 29 seconds
+#12 DONE 78.3s
+
+#13 [ 9/10] RUN python3 - <<'PY'
+#13 DONE 0.5s
+
+#14 [10/10] RUN git restore --source="307ebed6ef6ba420b2165ddb2ec21dd9a37479df" --worktree -- .     && test "$(git rev-parse HEAD)" = "307ebed6ef6ba420b2165ddb2ec21dd9a37479df"     && test -z "$(git status --porcelain)"     && mkdir -p /benchmark /inputs /results
+#14 DONE 0.7s
+
+#15 exporting to image
+#15 exporting layers
+#15 exporting layers 2.6s done
+#15 exporting manifest sha256:f9419ac865231e05c9a59259494a99a7e7347bd34d572b213b03d5b21b2f699e 0.0s done
+#15 exporting config sha256:7da3ba62dc2762812c168f1a2b7f25e10e0fd2ed1354abcc4a763228332db3ed 0.0s done
+#15 exporting attestation manifest sha256:bd92e741a5ddb8a9cb6b01798a7faf5b88ee50864bb184341fc0781e6cfe31c3 0.0s done
+#15 exporting manifest list sha256:866ae42ecde1bbcaa0581fabe2380bdea159ed944f565066b7abe1c2922a7669 0.0s done
+#15 naming to docker.io/yutu0814/javac-case-056-lwjgl3:benchmark-v1 done
+#15 unpacking to docker.io/yutu0814/javac-case-056-lwjgl3:benchmark-v1
+#15 unpacking to docker.io/yutu0814/javac-case-056-lwjgl3:benchmark-v1 3.0s done
+#15 DONE 5.8s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/ndqcogm6rh6pgu3aqrjryxknk

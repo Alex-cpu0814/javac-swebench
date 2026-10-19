@@ -1,6 +1,6 @@
 # Java-C SWE-bench-compatible cases
 
-This repository contains eighteen Java-C cross-language bug cases converted to a
+This repository contains nineteen Java-C cross-language bug cases converted to a
 SWE-bench-compatible record format. Cases are separated by test provenance:
 `Y_test_data/` contains Fix commits with extractable official regression tests;
 `N_test_data/` contains cases whose protected tests were constructed, adapted,
@@ -21,11 +21,22 @@ or wrapped during dataset production.
 | Y | 200 | `MDSplus__mdsplus-2375` | 2375 | 1 | 1 |
 | N | 053 | `LWJGL__lwjgl3-879` | 879 | 1 | 3 |
 | N | 054 | `LWJGL__lwjgl3-755` | 755 | 2 | 30 |
+| N | 056 | `LWJGL__lwjgl3-673` | 673 | 2 | 1 |
 | N | 093 | `ninia__jep-79` | 79 | 1 | 130 |
 | N | 094 | `ninia__jep-40` | 40 | 1 | 95 |
 | N | 096 | `ninia__jep-22` | 22 | 1 | 78 |
 | N | 098 | `ninia__jep-17` | 17 | 1 | 78 |
 | N | 099 | `ninia__jep-17-cache` | 17 | 1 | 78 |
+
+Case [N/056](N_test_data/javac_case_056/README.md) packages `LWJGL__lwjgl3-673`
+with two issue-derived Java struct tests and one existing Vulkan P2P. Standard
+Ant cold builds regenerate bindings and compile Core/Vulkan/current JNI. Base
+fails both target tests, official Fix passes all three, and protected-test
+precreation is rejected. Published clean Base image:
+`yutu0814/javac-case-056-lwjgl3:benchmark-v1` (digest
+`sha256:866ae42ecde1bbcaa0581fabe2380bdea159ed944f565066b7abe1c2922a7669`).
+It uses a declared Ubuntu libffi PIC dependency and does not exercise a real
+Vulkan device. Fix was visible during test design; no blind-generation claim.
 
 Case 099 verifies the upstream fix that moves JEP's Java-method cache from
 process-global state into each Jep interpreter. Its protected child-JVM test

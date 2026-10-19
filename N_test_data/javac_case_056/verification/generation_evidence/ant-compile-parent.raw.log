@@ -1,0 +1,583 @@
+Buildfile: /work/lwjgl3-parent/build.xml
+
+init:
+ [override] Build type: release/3.3.0
+ [override] Build offline: true
+
+check-dependencies:
+
+generate:
+
+compile:
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/core
+[javac: core] Compiling 135 source files to /work/lwjgl3-parent/bin/classes/lwjgl/core
+[javac: core] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: core] /work/lwjgl3-parent/modules/lwjgl/core/src/main/java/org/lwjgl/system/SharedLibraryLoader.java:283: warning: [try] auto-closeable resource ignored is never referenced in body of corresponding try statement
+[javac: core]                 try (FileChannel ignored = extract(file, resource)) {
+[javac: core]                                  ^
+[javac: core] 2 warnings
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/core/META-INF/versions/9
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/core/META-INF/versions/10
+[javac: Core - Java 9] Compiling 3 source files to /work/lwjgl3-parent/bin/classes/lwjgl/core/META-INF/versions/9
+[javac: Core - Java 10] Compiling 2 source files to /work/lwjgl3-parent/bin/classes/lwjgl/core/META-INF/versions/10
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/nuklear
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/meshoptimizer
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/meow
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/nfd
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/nanovg
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/llvm
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/bullet
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/odbc
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/jemalloc
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/lz4
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/jawt
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/driftfx
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/cuda
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/libdivide
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/egl
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/bgfx
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/assimp
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/openal
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/opencl
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/lmdb
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/opengles
+[javac: nfd] Compiling 4 source files to /work/lwjgl3-parent/bin/classes/lwjgl/nfd
+[javac: nfd] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: meow] Compiling 7 source files to /work/lwjgl3-parent/bin/classes/lwjgl/meow
+[javac: jawt] Compiling 8 source files to /work/lwjgl3-parent/bin/classes/lwjgl/jawt
+[javac: libdivide] Compiling 10 source files to /work/lwjgl3-parent/bin/classes/lwjgl/libdivide
+[javac: meow] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: meshoptimizer] Compiling 13 source files to /work/lwjgl3-parent/bin/classes/lwjgl/meshoptimizer
+[javac: lmdb] Compiling 12 source files to /work/lwjgl3-parent/bin/classes/lwjgl/lmdb
+[javac: jawt] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: odbc] Compiling 16 source files to /work/lwjgl3-parent/bin/classes/lwjgl/odbc
+[javac: libdivide] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: lz4] Compiling 15 source files to /work/lwjgl3-parent/bin/classes/lwjgl/lz4
+[javac: lmdb] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: meshoptimizer] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: odbc] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: lz4] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: jemalloc] Compiling 22 source files to /work/lwjgl3-parent/bin/classes/lwjgl/jemalloc
+[javac: nanovg] Compiling 31 source files to /work/lwjgl3-parent/bin/classes/lwjgl/nanovg
+[javac: driftfx] Compiling 25 source files to /work/lwjgl3-parent/bin/classes/lwjgl/driftfx
+[javac: jemalloc] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: nfd] 1 warning
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/openvr
+[javac: meow] 1 warning
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/opus
+[javac: driftfx] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: nanovg] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: cuda] Compiling 50 source files to /work/lwjgl3-parent/bin/classes/lwjgl/cuda
+[javac: opus] Compiling 5 source files to /work/lwjgl3-parent/bin/classes/lwjgl/opus
+[javac: bgfx] Compiling 55 source files to /work/lwjgl3-parent/bin/classes/lwjgl/bgfx
+[javac: opus] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: openal] Compiling 57 source files to /work/lwjgl3-parent/bin/classes/lwjgl/openal
+[javac: assimp] Compiling 59 source files to /work/lwjgl3-parent/bin/classes/lwjgl/assimp
+[javac: jawt] 1 warning
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/par
+[javac: libdivide] 1 warning
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/remotery
+[javac: lmdb] 1 warning
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/rpmalloc
+[javac: cuda] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: meshoptimizer] 1 warning
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/shaderc
+[javac: bgfx] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: remotery] Compiling 14 source files to /work/lwjgl3-parent/bin/classes/lwjgl/remotery
+[javac: odbc] 1 warning
+[javac: openal] warning: [options] bootstrap class path not set in conjunction with -source 8
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/spvc
+[javac: par] Compiling 18 source files to /work/lwjgl3-parent/bin/classes/lwjgl/par
+[javac: assimp] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: rpmalloc] Compiling 11 source files to /work/lwjgl3-parent/bin/classes/lwjgl/rpmalloc
+[javac: shaderc] Compiling 7 source files to /work/lwjgl3-parent/bin/classes/lwjgl/shaderc
+[javac: remotery] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: lz4] 1 warning
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/sse
+[javac: shaderc] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: rpmalloc] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: par] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/DriftFXSurface.java:16: error: package com.sun.javafx.geom does not exist
+[javac: driftfx] import com.sun.javafx.geom.BaseBounds;
+[javac: driftfx]                           ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/DriftFXSurface.java:17: error: package com.sun.javafx.geom.transform does not exist
+[javac: driftfx] import com.sun.javafx.geom.transform.BaseTransform;
+[javac: driftfx]                                     ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/DriftFXSurface.java:18: error: package com.sun.javafx.jmx does not exist
+[javac: driftfx] import com.sun.javafx.jmx.MXNodeAlgorithm;
+[javac: driftfx]                          ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/DriftFXSurface.java:19: error: package com.sun.javafx.jmx does not exist
+[javac: driftfx] import com.sun.javafx.jmx.MXNodeAlgorithmContext;
+[javac: driftfx]                          ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/DriftFXSurface.java:20: error: package com.sun.javafx.scene does not exist
+[javac: driftfx] import com.sun.javafx.scene.DirtyBits;
+[javac: driftfx]                            ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/DriftFXSurface.java:21: error: package com.sun.javafx.sg.prism does not exist
+[javac: driftfx] import com.sun.javafx.sg.prism.NGNode;
+[javac: driftfx]                               ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/DriftFXSurface.java:23: error: package javafx.scene does not exist
+[javac: driftfx] import javafx.scene.Scene;
+[javac: driftfx]                    ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/BaseDriftFXSurface.java:26: error: package javafx.application does not exist
+[javac: driftfx] import javafx.application.Platform;
+[javac: driftfx]                          ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/BaseDriftFXSurface.java:27: error: package javafx.beans.property does not exist
+[javac: driftfx] import javafx.beans.property.DoubleProperty;
+[javac: driftfx]                             ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/BaseDriftFXSurface.java:28: error: package javafx.beans.property does not exist
+[javac: driftfx] import javafx.beans.property.ObjectProperty;
+[javac: driftfx]                             ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/BaseDriftFXSurface.java:29: error: package javafx.beans.property does not exist
+[javac: driftfx] import javafx.beans.property.ReadOnlyDoubleProperty;
+[javac: driftfx]                             ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/BaseDriftFXSurface.java:30: error: package javafx.beans.property does not exist
+[javac: driftfx] import javafx.beans.property.ReadOnlyDoubleWrapper;
+[javac: driftfx]                             ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/BaseDriftFXSurface.java:31: error: package javafx.beans.property does not exist
+[javac: driftfx] import javafx.beans.property.SimpleDoubleProperty;
+[javac: driftfx]                             ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/BaseDriftFXSurface.java:32: error: package javafx.beans.property does not exist
+[javac: driftfx] import javafx.beans.property.SimpleObjectProperty;
+[javac: driftfx]                             ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/BaseDriftFXSurface.java:33: error: package javafx.scene does not exist
+[javac: driftfx] import javafx.scene.Node;
+[javac: driftfx]                    ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/BaseDriftFXSurface.java:36: error: cannot find symbol
+[javac: driftfx] public abstract class BaseDriftFXSurface extends Node {
+[javac: driftfx]                                                  ^
+[javac: driftfx]   symbol: class Node
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/BaseDriftFXSurface.java:96: error: cannot find symbol
+[javac: driftfx] 	private ObjectProperty<TransferMode> transferMode = new SimpleObjectProperty<>(this, "transferMode",
+[javac: driftfx] 	        ^
+[javac: driftfx]   symbol:   class ObjectProperty
+[javac: driftfx]   location: class BaseDriftFXSurface
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/BaseDriftFXSurface.java:101: error: cannot find symbol
+[javac: driftfx] 	private final ReadOnlyDoubleWrapper screenScaleFactor = new ReadOnlyDoubleWrapper(this, "screenScaleFactor", 1.0);
+[javac: driftfx] 	              ^
+[javac: driftfx]   symbol:   class ReadOnlyDoubleWrapper
+[javac: driftfx]   location: class BaseDriftFXSurface
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/BaseDriftFXSurface.java:102: error: cannot find symbol
+[javac: driftfx] 	private final DoubleProperty userScaleFactor = new SimpleDoubleProperty(this, "userScaleFactor", 1.0);
+[javac: driftfx] 	              ^
+[javac: driftfx]   symbol:   class DoubleProperty
+[javac: driftfx]   location: class BaseDriftFXSurface
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/BaseDriftFXSurface.java:105: error: cannot find symbol
+[javac: driftfx] 	private ReadOnlyDoubleWrapper width;
+[javac: driftfx] 	        ^
+[javac: driftfx]   symbol:   class ReadOnlyDoubleWrapper
+[javac: driftfx]   location: class BaseDriftFXSurface
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/BaseDriftFXSurface.java:108: error: cannot find symbol
+[javac: driftfx] 	private ReadOnlyDoubleWrapper height;
+[javac: driftfx] 	        ^
+[javac: driftfx]   symbol:   class ReadOnlyDoubleWrapper
+[javac: driftfx]   location: class BaseDriftFXSurface
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/internal/ScreenObserver.java:3: error: package com.sun.javafx.stage does not exist
+[javac: driftfx] import com.sun.javafx.stage.ScreenHelper;
+[javac: driftfx]                            ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/internal/ScreenObserver.java:5: error: package javafx.scene does not exist
+[javac: driftfx] import javafx.scene.Node;
+[javac: driftfx]                    ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/internal/ScreenObserver.java:6: error: package javafx.stage does not exist
+[javac: driftfx] import javafx.stage.Screen;
+[javac: driftfx]                    ^
+[javac: opus] 1 warning
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/internal/BaseScreenObserver.java:17: error: package javafx.beans.binding does not exist
+[javac: driftfx] import javafx.beans.binding.Bindings;
+[javac: driftfx]                            ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/internal/BaseScreenObserver.java:18: error: package javafx.beans.binding does not exist
+[javac: driftfx] import javafx.beans.binding.ObjectBinding;
+[javac: driftfx]                            ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/internal/BaseScreenObserver.java:19: error: package javafx.beans.property does not exist
+[javac: driftfx] import javafx.beans.property.ReadOnlyDoubleProperty;
+[javac: driftfx]                             ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/internal/BaseScreenObserver.java:20: error: package javafx.beans.property does not exist
+[javac: driftfx] import javafx.beans.property.ReadOnlyDoubleWrapper;
+[javac: driftfx]                             ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/internal/BaseScreenObserver.java:21: error: package javafx.beans.property does not exist
+[javac: driftfx] import javafx.beans.property.ReadOnlyObjectProperty;
+[javac: driftfx]                             ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/internal/BaseScreenObserver.java:22: error: package javafx.beans.property does not exist
+[javac: driftfx] import javafx.beans.property.ReadOnlyObjectWrapper;
+[javac: driftfx]                             ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/internal/BaseScreenObserver.java:23: error: package javafx.beans.value does not exist
+[javac: driftfx] import javafx.beans.value.ObservableValue;
+[javac: driftfx]                          ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/internal/BaseScreenObserver.java:24: error: package javafx.geometry does not exist
+[javac: driftfx] import javafx.geometry.Point2D;
+[javac: driftfx]                       ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/internal/BaseScreenObserver.java:25: error: package javafx.scene does not exist
+[javac: driftfx] import javafx.scene.Node;
+[javac: driftfx]                    ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/internal/BaseScreenObserver.java:26: error: package javafx.scene does not exist
+[javac: driftfx] import javafx.scene.Scene;
+[javac: driftfx]                    ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/internal/BaseScreenObserver.java:27: error: package javafx.stage does not exist
+[javac: driftfx] import javafx.stage.Screen;
+[javac: driftfx]                    ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/internal/BaseScreenObserver.java:28: error: package javafx.stage does not exist
+[javac: driftfx] import javafx.stage.Window;
+[javac: driftfx]                    ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/BaseDriftFXSurface.java:142: error: cannot find symbol
+[javac: driftfx] 	public ObjectProperty<TransferMode> transferModeProperty() {
+[javac: driftfx] 	       ^
+[javac: driftfx]   symbol:   class ObjectProperty
+[javac: driftfx]   location: class BaseDriftFXSurface
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/BaseDriftFXSurface.java:154: error: cannot find symbol
+[javac: driftfx] 	public ReadOnlyDoubleProperty screenScaleFactorProperty() {
+[javac: driftfx] 	       ^
+[javac: driftfx]   symbol:   class ReadOnlyDoubleProperty
+[javac: driftfx]   location: class BaseDriftFXSurface
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/BaseDriftFXSurface.java:162: error: cannot find symbol
+[javac: driftfx] 	public DoubleProperty userScaleFactorProperty() {
+[javac: driftfx] 	       ^
+[javac: driftfx]   symbol:   class DoubleProperty
+[javac: driftfx]   location: class BaseDriftFXSurface
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/BaseDriftFXSurface.java:227: error: cannot find symbol
+[javac: driftfx] 	public final ReadOnlyDoubleProperty widthProperty() {
+[javac: driftfx] 	             ^
+[javac: driftfx]   symbol:   class ReadOnlyDoubleProperty
+[javac: driftfx]   location: class BaseDriftFXSurface
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/BaseDriftFXSurface.java:272: error: cannot find symbol
+[javac: driftfx] 	public final ReadOnlyDoubleProperty heightProperty() {
+[javac: driftfx] 	             ^
+[javac: driftfx]   symbol:   class ReadOnlyDoubleProperty
+[javac: driftfx]   location: class BaseDriftFXSurface
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/BaseDriftFXSurface.java:353: error: package com.sun.javafx.geom does not exist
+[javac: driftfx] 	public com.sun.javafx.geom.BaseBounds drift_computeGeomBounds(com.sun.javafx.geom.BaseBounds bounds, com.sun.javafx.geom.transform.BaseTransform tx) {
+[javac: driftfx] 	                                                                                 ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/BaseDriftFXSurface.java:353: error: package com.sun.javafx.geom.transform does not exist
+[javac: driftfx] 	public com.sun.javafx.geom.BaseBounds drift_computeGeomBounds(com.sun.javafx.geom.BaseBounds bounds, com.sun.javafx.geom.transform.BaseTransform tx) {
+[javac: driftfx] 	                                                                                                                                  ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/BaseDriftFXSurface.java:353: error: package com.sun.javafx.geom does not exist
+[javac: driftfx] 	public com.sun.javafx.geom.BaseBounds drift_computeGeomBounds(com.sun.javafx.geom.BaseBounds bounds, com.sun.javafx.geom.transform.BaseTransform tx) {
+[javac: driftfx] 	                          ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/BaseDriftFXSurface.java:368: error: package com.sun.javafx.sg.prism does not exist
+[javac: driftfx] 	protected abstract com.sun.javafx.sg.prism.NGNode drift_createPeer();
+[javac: driftfx] 	                                          ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/BaseDriftFXSurface.java:371: error: package com.sun.javafx.scene does not exist
+[javac: driftfx] 	protected abstract void drift_markDirty(com.sun.javafx.scene.DirtyBits dirtyBit);
+[javac: driftfx] 	                                                            ^
+[javac: sse] Compiling 4 source files to /work/lwjgl3-parent/bin/classes/lwjgl/sse
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/impl/NGDriftFXSurface.java:28: error: package com.sun.javafx.font does not exist
+[javac: driftfx] import com.sun.javafx.font.FontStrike;
+[javac: driftfx]                           ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/impl/NGDriftFXSurface.java:29: error: package com.sun.javafx.font does not exist
+[javac: driftfx] import com.sun.javafx.font.PGFont;
+[javac: driftfx]                           ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/impl/NGDriftFXSurface.java:30: error: package com.sun.javafx.geom does not exist
+[javac: driftfx] import com.sun.javafx.geom.Point2D;
+[javac: driftfx]                           ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/impl/NGDriftFXSurface.java:31: error: package com.sun.javafx.geom.transform does not exist
+[javac: driftfx] import com.sun.javafx.geom.transform.BaseTransform;
+[javac: driftfx]                                     ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/impl/NGDriftFXSurface.java:32: error: package com.sun.javafx.scene.text does not exist
+[javac: driftfx] import com.sun.javafx.scene.text.GlyphList;
+[javac: driftfx]                                 ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/impl/NGDriftFXSurface.java:33: error: package com.sun.javafx.scene.text does not exist
+[javac: driftfx] import com.sun.javafx.scene.text.TextLayout;
+[javac: driftfx]                                 ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/impl/NGDriftFXSurface.java:34: error: package com.sun.javafx.scene.text does not exist
+[javac: driftfx] import com.sun.javafx.scene.text.TextLayoutFactory;
+[javac: driftfx]                                 ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/impl/NGDriftFXSurface.java:35: error: package com.sun.javafx.sg.prism does not exist
+[javac: driftfx] import com.sun.javafx.sg.prism.NGNode;
+[javac: driftfx]                               ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/impl/NGDriftFXSurface.java:36: error: package com.sun.javafx.tk does not exist
+[javac: driftfx] import com.sun.javafx.tk.Toolkit;
+[javac: driftfx]                         ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/impl/NGDriftFXSurface.java:37: error: package com.sun.prism does not exist
+[javac: driftfx] import com.sun.prism.Graphics;
+[javac: driftfx]                     ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/impl/NGDriftFXSurface.java:38: error: package com.sun.prism does not exist
+[javac: driftfx] import com.sun.prism.PixelFormat;
+[javac: driftfx]                     ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/impl/NGDriftFXSurface.java:39: error: package com.sun.prism does not exist
+[javac: driftfx] import com.sun.prism.ResourceFactory;
+[javac: driftfx]                     ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/impl/NGDriftFXSurface.java:40: error: package com.sun.prism does not exist
+[javac: driftfx] import com.sun.prism.Texture;
+[javac: driftfx]                     ^
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/stb
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/impl/NGDriftFXSurface.java:41: error: package com.sun.prism.paint does not exist
+[javac: driftfx] import com.sun.prism.paint.Color;
+[javac: driftfx]                           ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/impl/NGDriftFXSurface.java:42: error: package com.sun.prism.paint does not exist
+[javac: driftfx] import com.sun.prism.paint.Paint;
+[javac: driftfx]                           ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/impl/NGDriftFXSurface.java:44: error: package javafx.scene.text does not exist
+[javac: driftfx] import javafx.scene.text.Font;
+[javac: driftfx]                         ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/impl/NGDriftFXSurface.java:45: error: package javafx.scene.text does not exist
+[javac: driftfx] import javafx.scene.text.TextAlignment;
+[javac: driftfx]                         ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/impl/NGDriftFXSurface.java:49: error: cannot find symbol
+[javac: driftfx] public class NGDriftFXSurface extends NGNode {
+[javac: driftfx]                                       ^
+[javac: driftfx]   symbol: class NGNode
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/impl/NGDriftFXSurface.java:55: error: cannot find symbol
+[javac: driftfx] 	private ResourceFactory resourceFactory;
+[javac: driftfx] 	        ^
+[javac: driftfx]   symbol:   class ResourceFactory
+[javac: driftfx]   location: class NGDriftFXSurface
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/impl/NGDriftFXSurface.java:60: error: cannot find symbol
+[javac: driftfx] 	private Texture currentTexture;
+[javac: driftfx] 	        ^
+[javac: driftfx]   symbol:   class Texture
+[javac: driftfx]   location: class NGDriftFXSurface
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/impl/NGDriftFXSurface.java:65: error: cannot find symbol
+[javac: driftfx] 	private Texture renderedTexture;
+[javac: driftfx] 	        ^
+[javac: driftfx]   symbol:   class Texture
+[javac: driftfx]   location: class NGDriftFXSurface
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/impl/NGDriftFXSurface.java:102: error: cannot find symbol
+[javac: driftfx] 	private void renderPlaceholder(Graphics g)
+[javac: driftfx] 	                               ^
+[javac: driftfx]   symbol:   class Graphics
+[javac: driftfx]   location: class NGDriftFXSurface
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/impl/NGDriftFXSurface.java:116: error: cannot find symbol
+[javac: driftfx] 	private Texture createTexture(Graphics g, Frame frame) {
+[javac: driftfx] 	                              ^
+[javac: driftfx]   symbol:   class Graphics
+[javac: driftfx]   location: class NGDriftFXSurface
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/impl/NGDriftFXSurface.java:116: error: cannot find symbol
+[javac: driftfx] 	private Texture createTexture(Graphics g, Frame frame) {
+[javac: driftfx] 	        ^
+[javac: driftfx]   symbol:   class Texture
+[javac: driftfx]   location: class NGDriftFXSurface
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/impl/NGDriftFXSurface.java:258: error: cannot find symbol
+[javac: driftfx] 	private void renderFrame(Graphics g, Frame frame) {
+[javac: driftfx] 	                         ^
+[javac: driftfx]   symbol:   class Graphics
+[javac: driftfx]   location: class NGDriftFXSurface
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/impl/NGDriftFXSurface.java:288: error: cannot find symbol
+[javac: driftfx] 	private void drawStats(Graphics g) {
+[javac: driftfx] 	                       ^
+[javac: driftfx]   symbol:   class Graphics
+[javac: driftfx]   location: class NGDriftFXSurface
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/impl/NGDriftFXSurface.java:330: error: cannot find symbol
+[javac: driftfx] 	private void drawTexture(Graphics g, Frame frame, Texture t) {
+[javac: driftfx] 	                         ^
+[javac: driftfx]   symbol:   class Graphics
+[javac: driftfx]   location: class NGDriftFXSurface
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/impl/NGDriftFXSurface.java:330: error: cannot find symbol
+[javac: driftfx] 	private void drawTexture(Graphics g, Frame frame, Texture t) {
+[javac: driftfx] 	                                                  ^
+[javac: driftfx]   symbol:   class Texture
+[javac: driftfx]   location: class NGDriftFXSurface
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/impl/NGDriftFXSurface.java:370: error: cannot find symbol
+[javac: driftfx] 	protected void renderContent(Graphics g) {
+[javac: driftfx] 	                             ^
+[javac: driftfx]   symbol:   class Graphics
+[javac: driftfx]   location: class NGDriftFXSurface
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/internal/ScreenObserver.java:10: error: cannot find symbol
+[javac: driftfx] 	public ScreenObserver(Node node) {
+[javac: driftfx] 	                      ^
+[javac: driftfx]   symbol:   class Node
+[javac: driftfx]   location: class ScreenObserver
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/internal/ScreenObserver.java:15: error: cannot find symbol
+[javac: driftfx] 	protected double getRenderScale(Screen screen) {
+[javac: driftfx] 	                                ^
+[javac: driftfx]   symbol:   class Screen
+[javac: driftfx]   location: class ScreenObserver
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/internal/BaseScreenObserver.java:34: error: cannot find symbol
+[javac: driftfx] 	private final ReadOnlyObjectWrapper<Screen> currentScreen = new ReadOnlyObjectWrapper<>();
+[javac: driftfx] 	              ^
+[javac: driftfx]   symbol:   class ReadOnlyObjectWrapper
+[javac: driftfx]   location: class BaseScreenObserver
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/internal/BaseScreenObserver.java:34: error: cannot find symbol
+[javac: driftfx] 	private final ReadOnlyObjectWrapper<Screen> currentScreen = new ReadOnlyObjectWrapper<>();
+[javac: driftfx] 	                                    ^
+[javac: driftfx]   symbol:   class Screen
+[javac: driftfx]   location: class BaseScreenObserver
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/internal/BaseScreenObserver.java:35: error: cannot find symbol
+[javac: driftfx] 	private final ReadOnlyDoubleWrapper currentRenderScale = new ReadOnlyDoubleWrapper(1.0);
+[javac: driftfx] 	              ^
+[javac: driftfx]   symbol:   class ReadOnlyDoubleWrapper
+[javac: driftfx]   location: class BaseScreenObserver
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/internal/BaseScreenObserver.java:37: error: cannot find symbol
+[javac: driftfx] 	public ReadOnlyObjectProperty<Screen> currentScreenProperty() {
+[javac: driftfx] 	       ^
+[javac: driftfx]   symbol:   class ReadOnlyObjectProperty
+[javac: driftfx]   location: class BaseScreenObserver
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/internal/BaseScreenObserver.java:37: error: cannot find symbol
+[javac: driftfx] 	public ReadOnlyObjectProperty<Screen> currentScreenProperty() {
+[javac: driftfx] 	                              ^
+[javac: driftfx]   symbol:   class Screen
+[javac: driftfx]   location: class BaseScreenObserver
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/internal/BaseScreenObserver.java:41: error: cannot find symbol
+[javac: driftfx] 	public Screen getCurrentScreen() {
+[javac: driftfx] 	       ^
+[javac: driftfx]   symbol:   class Screen
+[javac: driftfx]   location: class BaseScreenObserver
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/internal/BaseScreenObserver.java:45: error: cannot find symbol
+[javac: driftfx] 	public final ReadOnlyDoubleProperty currentRenderScaleProperty() {
+[javac: driftfx] 	             ^
+[javac: driftfx]   symbol:   class ReadOnlyDoubleProperty
+[javac: driftfx]   location: class BaseScreenObserver
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/internal/BaseScreenObserver.java:53: error: cannot find symbol
+[javac: driftfx] 	private static <T, V> ObjectBinding<V> flatMap(ObservableValue<T> obs, Function<T, ObservableValue<V>> map) {
+[javac: driftfx] 	                                               ^
+[javac: driftfx]   symbol:   class ObservableValue
+[javac: driftfx]   location: class BaseScreenObserver
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/internal/BaseScreenObserver.java:53: error: cannot find symbol
+[javac: driftfx] 	private static <T, V> ObjectBinding<V> flatMap(ObservableValue<T> obs, Function<T, ObservableValue<V>> map) {
+[javac: driftfx] 	                                                                                   ^
+[javac: driftfx]   symbol:   class ObservableValue
+[javac: driftfx]   location: class BaseScreenObserver
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/internal/BaseScreenObserver.java:53: error: cannot find symbol
+[javac: driftfx] 	private static <T, V> ObjectBinding<V> flatMap(ObservableValue<T> obs, Function<T, ObservableValue<V>> map) {
+[javac: driftfx] 	                      ^
+[javac: driftfx]   symbol:   class ObjectBinding
+[javac: driftfx]   location: class BaseScreenObserver
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/internal/BaseScreenObserver.java:82: error: cannot find symbol
+[javac: driftfx] 	public BaseScreenObserver(Node node) {
+[javac: driftfx] 	                          ^
+[javac: driftfx]   symbol:   class Node
+[javac: driftfx]   location: class BaseScreenObserver
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/internal/BaseScreenObserver.java:103: error: cannot find symbol
+[javac: driftfx] 	protected abstract double getRenderScale(Screen screen);
+[javac: driftfx] 	                                         ^
+[javac: driftfx]   symbol:   class Screen
+[javac: driftfx]   location: class BaseScreenObserver
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/DriftFXSurface.java:97: error: cannot find symbol
+[javac: driftfx] 	public BaseBounds impl_computeGeomBounds(BaseBounds bounds, BaseTransform tx) {
+[javac: driftfx] 	                                         ^
+[javac: driftfx]   symbol:   class BaseBounds
+[javac: driftfx]   location: class DriftFXSurface
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/DriftFXSurface.java:97: error: cannot find symbol
+[javac: driftfx] 	public BaseBounds impl_computeGeomBounds(BaseBounds bounds, BaseTransform tx) {
+[javac: driftfx] 	                                                            ^
+[javac: driftfx]   symbol:   class BaseTransform
+[javac: driftfx]   location: class DriftFXSurface
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/DriftFXSurface.java:97: error: cannot find symbol
+[javac: driftfx] 	public BaseBounds impl_computeGeomBounds(BaseBounds bounds, BaseTransform tx) {
+[javac: driftfx] 	       ^
+[javac: driftfx]   symbol:   class BaseBounds
+[javac: driftfx]   location: class DriftFXSurface
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/DriftFXSurface.java:107: error: cannot find symbol
+[javac: driftfx] 	public Object impl_processMXNode(MXNodeAlgorithm alg, MXNodeAlgorithmContext ctx) {
+[javac: driftfx] 	                                 ^
+[javac: driftfx]   symbol:   class MXNodeAlgorithm
+[javac: driftfx]   location: class DriftFXSurface
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/DriftFXSurface.java:107: error: cannot find symbol
+[javac: driftfx] 	public Object impl_processMXNode(MXNodeAlgorithm alg, MXNodeAlgorithmContext ctx) {
+[javac: driftfx] 	                                                      ^
+[javac: driftfx]   symbol:   class MXNodeAlgorithmContext
+[javac: driftfx]   location: class DriftFXSurface
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/DriftFXSurface.java:112: error: cannot find symbol
+[javac: driftfx] 	protected NGNode impl_createPeer() {
+[javac: driftfx] 	          ^
+[javac: driftfx]   symbol:   class NGNode
+[javac: driftfx]   location: class DriftFXSurface
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/DriftFXSurface.java:118: error: cannot find symbol
+[javac: driftfx] 	protected NGNode drift_createPeer() {
+[javac: driftfx] 	          ^
+[javac: driftfx]   symbol:   class NGNode
+[javac: driftfx]   location: class DriftFXSurface
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/DriftFXSurface.java:123: error: cannot find symbol
+[javac: driftfx] 	protected void drift_markDirty(DirtyBits dirtyBit) {
+[javac: driftfx] 	                               ^
+[javac: driftfx]   symbol:   class DirtyBits
+[javac: driftfx]   location: class DriftFXSurface
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/internal/DriftUtil.java:3: error: package com.sun.javafx.font does not exist
+[javac: driftfx] import com.sun.javafx.font.PGFont;
+[javac: driftfx]                           ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/internal/DriftUtil.java:5: error: package javafx.scene.text does not exist
+[javac: driftfx] import javafx.scene.text.Font;
+[javac: driftfx]                         ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/internal/DriftUtil.java:8: error: cannot find symbol
+[javac: driftfx] 	public static PGFont getFont(Font font) {
+[javac: driftfx] 	                             ^
+[javac: driftfx]   symbol:   class Font
+[javac: driftfx]   location: class DriftUtil
+[javac: nuklear] Compiling 103 source files to /work/lwjgl3-parent/bin/classes/lwjgl/nuklear
+[javac: opencl] Compiling 100 source files to /work/lwjgl3-parent/bin/classes/lwjgl/opencl
+[javac: sse] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: spvc] Compiling 19 source files to /work/lwjgl3-parent/bin/classes/lwjgl/spvc
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/internal/BaseScreenObserver.java:99: warning: [cast] redundant cast to double
+[javac: driftfx] 			return (double) getRenderScale(getCurrentScreen());
+[javac: driftfx] 			       ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/impl/NGDriftFXSurface.java:104: warning: [cast] redundant cast to float
+[javac: driftfx] 		float width = (float) surfaceData.width;
+[javac: driftfx] 		              ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/impl/NGDriftFXSurface.java:105: warning: [cast] redundant cast to float
+[javac: driftfx] 		float height = (float) surfaceData.height;
+[javac: driftfx] 		               ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/impl/NGDriftFXSurface.java:336: warning: [cast] redundant cast to float
+[javac: driftfx] 		float textureRatio = t.getContentWidth() / (float) t.getContentHeight();
+[javac: driftfx] 		                                           ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/internal/GraphicsPipelineUtil.java:83: warning: [cast] redundant cast to long
+[javac: driftfx] 				return (long) mD3DTextureGetNativeSourceHandle.invoke(texture);
+[javac: driftfx] 				       ^
+[javac: driftfx] /work/lwjgl3-parent/modules/lwjgl/driftfx/src/main/java/org/eclipse/fx/drift/internal/GraphicsPipelineUtil.java:286: warning: [cast] redundant cast to long
+[javac: driftfx] 				return (long) mD3DTextureGetNativeSourceHandle.invoke(texture);
+[javac: driftfx] 				       ^
+[javac: driftfx] 100 errors
+[javac: driftfx] 7 warnings
+[javac: driftfx] only showing the first 100 errors, of 207 total; use -Xmaxerrs if you would like to see more
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/tinyexr
+[javac: spvc] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: llvm] Compiling 122 source files to /work/lwjgl3-parent/bin/classes/lwjgl/llvm
+[javac: sse] 1 warning
+[javac: jemalloc] 1 warning
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/tinyfd
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/tootle
+[javac: tinyexr] Compiling 10 source files to /work/lwjgl3-parent/bin/classes/lwjgl/tinyexr
+[javac: tinyfd] Compiling 2 source files to /work/lwjgl3-parent/bin/classes/lwjgl/tinyfd
+[javac: tootle] Compiling 2 source files to /work/lwjgl3-parent/bin/classes/lwjgl/tootle
+[javac: tinyfd] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: shaderc] 1 warning
+[javac: tootle] warning: [options] bootstrap class path not set in conjunction with -source 8
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/vulkan
+[javac: tinyexr] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: stb] Compiling 37 source files to /work/lwjgl3-parent/bin/classes/lwjgl/stb
+[javac: egl] Compiling 143 source files to /work/lwjgl3-parent/bin/classes/lwjgl/egl
+[javac: tinyfd] 1 warning
+[javac: tootle] 1 warning
+[javac: rpmalloc] 1 warning
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/xxhash
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/yoga
+    [mkdir] Created dir: /work/lwjgl3-parent/bin/classes/lwjgl/zstd
+[javac: opencl] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: remotery] 1 warning
+[javac: nuklear] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: openvr] Compiling 112 source files to /work/lwjgl3-parent/bin/classes/lwjgl/openvr
+[javac: nanovg] 1 warning
+[javac: stb] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: xxhash] Compiling 10 source files to /work/lwjgl3-parent/bin/classes/lwjgl/xxhash
+[javac: xxhash] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: par] 1 warning
+[javac: zstd] Compiling 23 source files to /work/lwjgl3-parent/bin/classes/lwjgl/zstd
+[javac: yoga] Compiling 25 source files to /work/lwjgl3-parent/bin/classes/lwjgl/yoga
+[javac: llvm] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: tinyexr] 1 warning
+[javac: zstd] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: yoga] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: spvc] 1 warning
+[javac: openvr] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: egl] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: xxhash] 1 warning
+[javac: openal] 1 warning
+[javac: cuda] 1 warning
+[javac: opengles] Compiling 246 source files to /work/lwjgl3-parent/bin/classes/lwjgl/opengles
+[javac: bgfx] 1 warning
+[javac: zstd] 1 warning
+[javac: assimp] 1 warning
+[javac: stb] 1 warning
+[javac: yoga] 1 warning
+[javac: opengles] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: opencl] 1 warning
+[javac: nuklear] 1 warning
+[javac: llvm] 1 warning
+[javac: openvr] 1 warning
+[javac: egl] 1 warning
+[javac: opengles] 1 warning
+[javac: vulkan] Compiling 949 source files to /work/lwjgl3-parent/bin/classes/lwjgl/vulkan
+[javac: vulkan] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: vulkan] 1 warning
+
+BUILD FAILED
+/work/lwjgl3-parent/build.xml:478: The following error occurred while executing this line:
+/work/lwjgl3-parent/build.xml:417: Compile failed; see the compiler error output for details.
+
+Total time: 16 minutes 1 second

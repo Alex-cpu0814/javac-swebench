@@ -1,0 +1,29 @@
+===== RUN testNullAttachmentsPreserveAttachmentCount =====
+FAIL: testNullAttachmentsPreserveAttachmentCount
+java.lang.AssertionError: Setting pAttachments to NULL must not clear attachmentCount expected [2] but found [0]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:907)
+	at org.lwjgl.vulkan.VkFramebufferCreateInfoTest.testNullAttachmentsPreserveAttachmentCount(VkFramebufferCreateInfoTest.java:30)
+	at RunVkFramebufferCreateInfoTests.lambda$main$0(RunVkFramebufferCreateInfoTests.java:10)
+	at RunVkFramebufferCreateInfoTests.run(RunVkFramebufferCreateInfoTests.java:33)
+	at RunVkFramebufferCreateInfoTests.main(RunVkFramebufferCreateInfoTests.java:7)
+
+===== RUN testNullAttachmentsPassGeneratedValidation =====
+FAIL: testNullAttachmentsPassGeneratedValidation
+java.lang.NullPointerException
+	at org.lwjgl.system.Checks.check(Checks.java:188)
+	at org.lwjgl.vulkan.VkFramebufferCreateInfo.validate(VkFramebufferCreateInfo.java:459)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.lwjgl.vulkan.VkFramebufferCreateInfoTest.testNullAttachmentsPassGeneratedValidation(VkFramebufferCreateInfoTest.java:60)
+	at RunVkFramebufferCreateInfoTests.lambda$main$1(RunVkFramebufferCreateInfoTests.java:16)
+	at RunVkFramebufferCreateInfoTests.run(RunVkFramebufferCreateInfoTests.java:33)
+	at RunVkFramebufferCreateInfoTests.main(RunVkFramebufferCreateInfoTests.java:13)
+
+
+RESULT: passed=0, failed=2

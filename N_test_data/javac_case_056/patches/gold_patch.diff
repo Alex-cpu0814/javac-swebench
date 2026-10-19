@@ -1,0 +1,930 @@
+diff --git a/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/KHRCreateRenderpass2.java b/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/KHRCreateRenderpass2.java
+index 64663f4..c78275e 100644
+--- a/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/KHRCreateRenderpass2.java
++++ b/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/KHRCreateRenderpass2.java
+@@ -148,7 +148,6 @@ public class KHRCreateRenderpass2 {
+         long __functionAddress = commandBuffer.getCapabilities().vkCmdBeginRenderPass2KHR;
+         if (CHECKS) {
+             check(__functionAddress);
+-            VkRenderPassBeginInfo.validate(pRenderPassBegin);
+         }
+         callPPPV(commandBuffer.address(), pRenderPassBegin, pSubpassBeginInfo, __functionAddress);
+     }
+diff --git a/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/KHRDisplaySwapchain.java b/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/KHRDisplaySwapchain.java
+index 8cb8279..9974690 100644
+--- a/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/KHRDisplaySwapchain.java
++++ b/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/KHRDisplaySwapchain.java
+@@ -92,7 +92,6 @@ public class KHRDisplaySwapchain {
+         long __functionAddress = device.getCapabilities().vkCreateSharedSwapchainsKHR;
+         if (CHECKS) {
+             check(__functionAddress);
+-            VkSwapchainCreateInfoKHR.validate(pCreateInfos, swapchainCount);
+             if (pAllocator != NULL) { VkAllocationCallbacks.validate(pAllocator); }
+         }
+         return callPPPPI(device.address(), swapchainCount, pCreateInfos, pAllocator, pSwapchains, __functionAddress);
+@@ -177,7 +176,6 @@ public class KHRDisplaySwapchain {
+         if (CHECKS) {
+             check(__functionAddress);
+             check(pSwapchains, pCreateInfos.remaining());
+-            VkSwapchainCreateInfoKHR.validate(pCreateInfos.address(), pCreateInfos.remaining());
+             if (pAllocator != null) { VkAllocationCallbacks.validate(pAllocator.address()); }
+         }
+         return callPPPPI(device.address(), pCreateInfos.remaining(), pCreateInfos.address(), memAddressSafe(pAllocator), pSwapchains, __functionAddress);
+diff --git a/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/KHRSwapchain.java b/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/KHRSwapchain.java
+index ca8f001..7d6a348 100644
+--- a/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/KHRSwapchain.java
++++ b/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/KHRSwapchain.java
+@@ -190,7 +190,6 @@ public class KHRSwapchain {
+         long __functionAddress = device.getCapabilities().vkCreateSwapchainKHR;
+         if (CHECKS) {
+             check(__functionAddress);
+-            VkSwapchainCreateInfoKHR.validate(pCreateInfo);
+             if (pAllocator != NULL) { VkAllocationCallbacks.validate(pAllocator); }
+         }
+         return callPPPPI(device.address(), pCreateInfo, pAllocator, pSwapchain, __functionAddress);
+@@ -927,7 +926,6 @@ public class KHRSwapchain {
+         if (CHECKS) {
+             check(__functionAddress);
+             check(pSwapchain, 1);
+-            VkSwapchainCreateInfoKHR.validate(pCreateInfo.address());
+             if (pAllocator != null) { VkAllocationCallbacks.validate(pAllocator.address()); }
+         }
+         return callPPPPI(device.address(), pCreateInfo.address(), memAddressSafe(pAllocator), pSwapchain, __functionAddress);
+diff --git a/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VK10.java b/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VK10.java
+index 0443a6a..7ebbbfd 100644
+--- a/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VK10.java
++++ b/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VK10.java
+@@ -7124,7 +7124,6 @@ public class VK10 {
+     public static int nvkCreateBuffer(VkDevice device, long pCreateInfo, long pAllocator, long pBuffer) {
+         long __functionAddress = device.getCapabilities().vkCreateBuffer;
+         if (CHECKS) {
+-            VkBufferCreateInfo.validate(pCreateInfo);
+             if (pAllocator != NULL) { VkAllocationCallbacks.validate(pAllocator); }
+         }
+         return callPPPPI(device.address(), pCreateInfo, pAllocator, pBuffer, __functionAddress);
+@@ -7380,7 +7379,6 @@ public class VK10 {
+     public static int nvkCreateImage(VkDevice device, long pCreateInfo, long pAllocator, long pImage) {
+         long __functionAddress = device.getCapabilities().vkCreateImage;
+         if (CHECKS) {
+-            VkImageCreateInfo.validate(pCreateInfo);
+             if (pAllocator != NULL) { VkAllocationCallbacks.validate(pAllocator); }
+         }
+         return callPPPPI(device.address(), pCreateInfo, pAllocator, pImage, __functionAddress);
+@@ -9269,7 +9267,6 @@ public class VK10 {
+     public static int nvkCreateFramebuffer(VkDevice device, long pCreateInfo, long pAllocator, long pFramebuffer) {
+         long __functionAddress = device.getCapabilities().vkCreateFramebuffer;
+         if (CHECKS) {
+-            VkFramebufferCreateInfo.validate(pCreateInfo);
+             if (pAllocator != NULL) { VkAllocationCallbacks.validate(pAllocator); }
+         }
+         return callPPPPI(device.address(), pCreateInfo, pAllocator, pFramebuffer, __functionAddress);
+@@ -15026,9 +15023,6 @@ public class VK10 {
+     /** Unsafe version of: {@link #vkCmdBeginRenderPass CmdBeginRenderPass} */
+     public static void nvkCmdBeginRenderPass(VkCommandBuffer commandBuffer, long pRenderPassBegin, int contents) {
+         long __functionAddress = commandBuffer.getCapabilities().vkCmdBeginRenderPass;
+-        if (CHECKS) {
+-            VkRenderPassBeginInfo.validate(pRenderPassBegin);
+-        }
+         callPPV(commandBuffer.address(), pRenderPassBegin, contents, __functionAddress);
+     }
+ 
+@@ -15665,7 +15659,6 @@ public class VK10 {
+         long __functionAddress = device.getCapabilities().vkCreateBuffer;
+         if (CHECKS) {
+             check(pBuffer, 1);
+-            VkBufferCreateInfo.validate(pCreateInfo.address());
+             if (pAllocator != null) { VkAllocationCallbacks.validate(pAllocator.address()); }
+         }
+         return callPPPPI(device.address(), pCreateInfo.address(), memAddressSafe(pAllocator), pBuffer, __functionAddress);
+@@ -15688,7 +15681,6 @@ public class VK10 {
+         long __functionAddress = device.getCapabilities().vkCreateImage;
+         if (CHECKS) {
+             check(pImage, 1);
+-            VkImageCreateInfo.validate(pCreateInfo.address());
+             if (pAllocator != null) { VkAllocationCallbacks.validate(pAllocator.address()); }
+         }
+         return callPPPPI(device.address(), pCreateInfo.address(), memAddressSafe(pAllocator), pImage, __functionAddress);
+@@ -15831,7 +15823,6 @@ public class VK10 {
+         long __functionAddress = device.getCapabilities().vkCreateFramebuffer;
+         if (CHECKS) {
+             check(pFramebuffer, 1);
+-            VkFramebufferCreateInfo.validate(pCreateInfo.address());
+             if (pAllocator != null) { VkAllocationCallbacks.validate(pAllocator.address()); }
+         }
+         return callPPPPI(device.address(), pCreateInfo.address(), memAddressSafe(pAllocator), pFramebuffer, __functionAddress);
+diff --git a/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VK12.java b/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VK12.java
+index 5f4f7e5..667d48e 100644
+--- a/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VK12.java
++++ b/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VK12.java
+@@ -982,7 +982,6 @@ public class VK12 extends VK11 {
+         long __functionAddress = commandBuffer.getCapabilities().vkCmdBeginRenderPass2;
+         if (CHECKS) {
+             check(__functionAddress);
+-            VkRenderPassBeginInfo.validate(pRenderPassBegin);
+         }
+         callPPPV(commandBuffer.address(), pRenderPassBegin, pSubpassBeginInfo, __functionAddress);
+     }
+diff --git a/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkBufferCreateInfo.java b/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkBufferCreateInfo.java
+index c983960..12350f7 100644
+--- a/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkBufferCreateInfo.java
++++ b/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkBufferCreateInfo.java
+@@ -12,7 +12,6 @@ import java.nio.*;
+ import org.lwjgl.*;
+ import org.lwjgl.system.*;
+ 
+-import static org.lwjgl.system.Checks.*;
+ import static org.lwjgl.system.MemoryUtil.*;
+ import static org.lwjgl.system.MemoryStack.*;
+ 
+@@ -164,6 +163,8 @@ public class VkBufferCreateInfo extends Struct implements NativeResource {
+     public VkBufferCreateInfo usage(@NativeType("VkBufferUsageFlags") int value) { nusage(address(), value); return this; }
+     /** Sets the specified value to the {@link #sharingMode} field. */
+     public VkBufferCreateInfo sharingMode(@NativeType("VkSharingMode") int value) { nsharingMode(address(), value); return this; }
++    /** Sets the specified value to the {@link #queueFamilyIndexCount} field. */
++    public VkBufferCreateInfo queueFamilyIndexCount(@NativeType("uint32_t") int value) { nqueueFamilyIndexCount(address(), value); return this; }
+     /** Sets the address of the specified {@link IntBuffer} to the {@link #pQueueFamilyIndices} field. */
+     public VkBufferCreateInfo pQueueFamilyIndices(@Nullable @NativeType("uint32_t const *") IntBuffer value) { npQueueFamilyIndices(address(), value); return this; }
+ 
+@@ -175,6 +176,7 @@ public class VkBufferCreateInfo extends Struct implements NativeResource {
+         long size,
+         int usage,
+         int sharingMode,
++        int queueFamilyIndexCount,
+         @Nullable IntBuffer pQueueFamilyIndices
+     ) {
+         sType(sType);
+@@ -183,6 +185,7 @@ public class VkBufferCreateInfo extends Struct implements NativeResource {
+         size(size);
+         usage(usage);
+         sharingMode(sharingMode);
++        queueFamilyIndexCount(queueFamilyIndexCount);
+         pQueueFamilyIndices(pQueueFamilyIndices);
+ 
+         return this;
+@@ -375,30 +378,7 @@ public class VkBufferCreateInfo extends Struct implements NativeResource {
+     /** Sets the specified value to the {@code queueFamilyIndexCount} field of the specified {@code struct}. */
+     public static void nqueueFamilyIndexCount(long struct, int value) { UNSAFE.putInt(null, struct + VkBufferCreateInfo.QUEUEFAMILYINDEXCOUNT, value); }
+     /** Unsafe version of {@link #pQueueFamilyIndices(IntBuffer) pQueueFamilyIndices}. */
+-    public static void npQueueFamilyIndices(long struct, @Nullable IntBuffer value) { memPutAddress(struct + VkBufferCreateInfo.PQUEUEFAMILYINDICES, memAddressSafe(value)); nqueueFamilyIndexCount(struct, value == null ? 0 : value.remaining()); }
+-
+-    /**
+-     * Validates pointer members that should not be {@code NULL}.
+-     *
+-     * @param struct the struct to validate
+-     */
+-    public static void validate(long struct) {
+-        if (nqueueFamilyIndexCount(struct) != 0) {
+-            check(memGetAddress(struct + VkBufferCreateInfo.PQUEUEFAMILYINDICES));
+-        }
+-    }
+-
+-    /**
+-     * Calls {@link #validate(long)} for each struct contained in the specified struct array.
+-     *
+-     * @param array the struct array to validate
+-     * @param count the number of structs in {@code array}
+-     */
+-    public static void validate(long array, int count) {
+-        for (int i = 0; i < count; i++) {
+-            validate(array + Integer.toUnsignedLong(i) * SIZEOF);
+-        }
+-    }
++    public static void npQueueFamilyIndices(long struct, @Nullable IntBuffer value) { memPutAddress(struct + VkBufferCreateInfo.PQUEUEFAMILYINDICES, memAddressSafe(value)); if (value != null) { nqueueFamilyIndexCount(struct, value.remaining()); } }
+ 
+     // -----------------------------------
+ 
+@@ -476,6 +456,8 @@ public class VkBufferCreateInfo extends Struct implements NativeResource {
+         public VkBufferCreateInfo.Buffer usage(@NativeType("VkBufferUsageFlags") int value) { VkBufferCreateInfo.nusage(address(), value); return this; }
+         /** Sets the specified value to the {@link VkBufferCreateInfo#sharingMode} field. */
+         public VkBufferCreateInfo.Buffer sharingMode(@NativeType("VkSharingMode") int value) { VkBufferCreateInfo.nsharingMode(address(), value); return this; }
++        /** Sets the specified value to the {@link VkBufferCreateInfo#queueFamilyIndexCount} field. */
++        public VkBufferCreateInfo.Buffer queueFamilyIndexCount(@NativeType("uint32_t") int value) { VkBufferCreateInfo.nqueueFamilyIndexCount(address(), value); return this; }
+         /** Sets the address of the specified {@link IntBuffer} to the {@link VkBufferCreateInfo#pQueueFamilyIndices} field. */
+         public VkBufferCreateInfo.Buffer pQueueFamilyIndices(@Nullable @NativeType("uint32_t const *") IntBuffer value) { VkBufferCreateInfo.npQueueFamilyIndices(address(), value); return this; }
+ 
+diff --git a/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkFramebufferCreateInfo.java b/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkFramebufferCreateInfo.java
+index 9a517c3..72f830b 100644
+--- a/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkFramebufferCreateInfo.java
++++ b/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkFramebufferCreateInfo.java
+@@ -12,7 +12,6 @@ import java.nio.*;
+ import org.lwjgl.*;
+ import org.lwjgl.system.*;
+ 
+-import static org.lwjgl.system.Checks.*;
+ import static org.lwjgl.system.MemoryUtil.*;
+ import static org.lwjgl.system.MemoryStack.*;
+ 
+@@ -224,6 +223,8 @@ public class VkFramebufferCreateInfo extends Struct implements NativeResource {
+     public VkFramebufferCreateInfo flags(@NativeType("VkFramebufferCreateFlags") int value) { nflags(address(), value); return this; }
+     /** Sets the specified value to the {@link #renderPass} field. */
+     public VkFramebufferCreateInfo renderPass(@NativeType("VkRenderPass") long value) { nrenderPass(address(), value); return this; }
++    /** Sets the specified value to the {@link #attachmentCount} field. */
++    public VkFramebufferCreateInfo attachmentCount(@NativeType("uint32_t") int value) { nattachmentCount(address(), value); return this; }
+     /** Sets the address of the specified {@link LongBuffer} to the {@link #pAttachments} field. */
+     public VkFramebufferCreateInfo pAttachments(@Nullable @NativeType("VkImageView const *") LongBuffer value) { npAttachments(address(), value); return this; }
+     /** Sets the specified value to the {@link #width} field. */
+@@ -239,6 +240,7 @@ public class VkFramebufferCreateInfo extends Struct implements NativeResource {
+         long pNext,
+         int flags,
+         long renderPass,
++        int attachmentCount,
+         @Nullable LongBuffer pAttachments,
+         int width,
+         int height,
+@@ -248,6 +250,7 @@ public class VkFramebufferCreateInfo extends Struct implements NativeResource {
+         pNext(pNext);
+         flags(flags);
+         renderPass(renderPass);
++        attachmentCount(attachmentCount);
+         pAttachments(pAttachments);
+         width(width);
+         height(height);
+@@ -441,7 +444,7 @@ public class VkFramebufferCreateInfo extends Struct implements NativeResource {
+     /** Sets the specified value to the {@code attachmentCount} field of the specified {@code struct}. */
+     public static void nattachmentCount(long struct, int value) { UNSAFE.putInt(null, struct + VkFramebufferCreateInfo.ATTACHMENTCOUNT, value); }
+     /** Unsafe version of {@link #pAttachments(LongBuffer) pAttachments}. */
+-    public static void npAttachments(long struct, @Nullable LongBuffer value) { memPutAddress(struct + VkFramebufferCreateInfo.PATTACHMENTS, memAddressSafe(value)); nattachmentCount(struct, value == null ? 0 : value.remaining()); }
++    public static void npAttachments(long struct, @Nullable LongBuffer value) { memPutAddress(struct + VkFramebufferCreateInfo.PATTACHMENTS, memAddressSafe(value)); if (value != null) { nattachmentCount(struct, value.remaining()); } }
+     /** Unsafe version of {@link #width(int) width}. */
+     public static void nwidth(long struct, int value) { UNSAFE.putInt(null, struct + VkFramebufferCreateInfo.WIDTH, value); }
+     /** Unsafe version of {@link #height(int) height}. */
+@@ -449,29 +452,6 @@ public class VkFramebufferCreateInfo extends Struct implements NativeResource {
+     /** Unsafe version of {@link #layers(int) layers}. */
+     public static void nlayers(long struct, int value) { UNSAFE.putInt(null, struct + VkFramebufferCreateInfo.LAYERS, value); }
+ 
+-    /**
+-     * Validates pointer members that should not be {@code NULL}.
+-     *
+-     * @param struct the struct to validate
+-     */
+-    public static void validate(long struct) {
+-        if (nattachmentCount(struct) != 0) {
+-            check(memGetAddress(struct + VkFramebufferCreateInfo.PATTACHMENTS));
+-        }
+-    }
+-
+-    /**
+-     * Calls {@link #validate(long)} for each struct contained in the specified struct array.
+-     *
+-     * @param array the struct array to validate
+-     * @param count the number of structs in {@code array}
+-     */
+-    public static void validate(long array, int count) {
+-        for (int i = 0; i < count; i++) {
+-            validate(array + Integer.toUnsignedLong(i) * SIZEOF);
+-        }
+-    }
+-
+     // -----------------------------------
+ 
+     /** An array of {@link VkFramebufferCreateInfo} structs. */
+@@ -547,6 +527,8 @@ public class VkFramebufferCreateInfo extends Struct implements NativeResource {
+         public VkFramebufferCreateInfo.Buffer flags(@NativeType("VkFramebufferCreateFlags") int value) { VkFramebufferCreateInfo.nflags(address(), value); return this; }
+         /** Sets the specified value to the {@link VkFramebufferCreateInfo#renderPass} field. */
+         public VkFramebufferCreateInfo.Buffer renderPass(@NativeType("VkRenderPass") long value) { VkFramebufferCreateInfo.nrenderPass(address(), value); return this; }
++        /** Sets the specified value to the {@link VkFramebufferCreateInfo#attachmentCount} field. */
++        public VkFramebufferCreateInfo.Buffer attachmentCount(@NativeType("uint32_t") int value) { VkFramebufferCreateInfo.nattachmentCount(address(), value); return this; }
+         /** Sets the address of the specified {@link LongBuffer} to the {@link VkFramebufferCreateInfo#pAttachments} field. */
+         public VkFramebufferCreateInfo.Buffer pAttachments(@Nullable @NativeType("VkImageView const *") LongBuffer value) { VkFramebufferCreateInfo.npAttachments(address(), value); return this; }
+         /** Sets the specified value to the {@link VkFramebufferCreateInfo#width} field. */
+diff --git a/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkImageCreateInfo.java b/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkImageCreateInfo.java
+index aa8ba02..782cd1a 100644
+--- a/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkImageCreateInfo.java
++++ b/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkImageCreateInfo.java
+@@ -12,7 +12,6 @@ import java.nio.*;
+ import org.lwjgl.*;
+ import org.lwjgl.system.*;
+ 
+-import static org.lwjgl.system.Checks.*;
+ import static org.lwjgl.system.MemoryUtil.*;
+ import static org.lwjgl.system.MemoryStack.*;
+ 
+@@ -387,6 +386,8 @@ public class VkImageCreateInfo extends Struct implements NativeResource {
+     public VkImageCreateInfo usage(@NativeType("VkImageUsageFlags") int value) { nusage(address(), value); return this; }
+     /** Sets the specified value to the {@link #sharingMode} field. */
+     public VkImageCreateInfo sharingMode(@NativeType("VkSharingMode") int value) { nsharingMode(address(), value); return this; }
++    /** Sets the specified value to the {@link #queueFamilyIndexCount} field. */
++    public VkImageCreateInfo queueFamilyIndexCount(@NativeType("uint32_t") int value) { nqueueFamilyIndexCount(address(), value); return this; }
+     /** Sets the address of the specified {@link IntBuffer} to the {@link #pQueueFamilyIndices} field. */
+     public VkImageCreateInfo pQueueFamilyIndices(@Nullable @NativeType("uint32_t const *") IntBuffer value) { npQueueFamilyIndices(address(), value); return this; }
+     /** Sets the specified value to the {@link #initialLayout} field. */
+@@ -406,6 +407,7 @@ public class VkImageCreateInfo extends Struct implements NativeResource {
+         int tiling,
+         int usage,
+         int sharingMode,
++        int queueFamilyIndexCount,
+         @Nullable IntBuffer pQueueFamilyIndices,
+         int initialLayout
+     ) {
+@@ -421,6 +423,7 @@ public class VkImageCreateInfo extends Struct implements NativeResource {
+         tiling(tiling);
+         usage(usage);
+         sharingMode(sharingMode);
++        queueFamilyIndexCount(queueFamilyIndexCount);
+         pQueueFamilyIndices(pQueueFamilyIndices);
+         initialLayout(initialLayout);
+ 
+@@ -640,33 +643,10 @@ public class VkImageCreateInfo extends Struct implements NativeResource {
+     /** Sets the specified value to the {@code queueFamilyIndexCount} field of the specified {@code struct}. */
+     public static void nqueueFamilyIndexCount(long struct, int value) { UNSAFE.putInt(null, struct + VkImageCreateInfo.QUEUEFAMILYINDEXCOUNT, value); }
+     /** Unsafe version of {@link #pQueueFamilyIndices(IntBuffer) pQueueFamilyIndices}. */
+-    public static void npQueueFamilyIndices(long struct, @Nullable IntBuffer value) { memPutAddress(struct + VkImageCreateInfo.PQUEUEFAMILYINDICES, memAddressSafe(value)); nqueueFamilyIndexCount(struct, value == null ? 0 : value.remaining()); }
++    public static void npQueueFamilyIndices(long struct, @Nullable IntBuffer value) { memPutAddress(struct + VkImageCreateInfo.PQUEUEFAMILYINDICES, memAddressSafe(value)); if (value != null) { nqueueFamilyIndexCount(struct, value.remaining()); } }
+     /** Unsafe version of {@link #initialLayout(int) initialLayout}. */
+     public static void ninitialLayout(long struct, int value) { UNSAFE.putInt(null, struct + VkImageCreateInfo.INITIALLAYOUT, value); }
+ 
+-    /**
+-     * Validates pointer members that should not be {@code NULL}.
+-     *
+-     * @param struct the struct to validate
+-     */
+-    public static void validate(long struct) {
+-        if (nqueueFamilyIndexCount(struct) != 0) {
+-            check(memGetAddress(struct + VkImageCreateInfo.PQUEUEFAMILYINDICES));
+-        }
+-    }
+-
+-    /**
+-     * Calls {@link #validate(long)} for each struct contained in the specified struct array.
+-     *
+-     * @param array the struct array to validate
+-     * @param count the number of structs in {@code array}
+-     */
+-    public static void validate(long array, int count) {
+-        for (int i = 0; i < count; i++) {
+-            validate(array + Integer.toUnsignedLong(i) * SIZEOF);
+-        }
+-    }
+-
+     // -----------------------------------
+ 
+     /** An array of {@link VkImageCreateInfo} structs. */
+@@ -777,6 +757,8 @@ public class VkImageCreateInfo extends Struct implements NativeResource {
+         public VkImageCreateInfo.Buffer usage(@NativeType("VkImageUsageFlags") int value) { VkImageCreateInfo.nusage(address(), value); return this; }
+         /** Sets the specified value to the {@link VkImageCreateInfo#sharingMode} field. */
+         public VkImageCreateInfo.Buffer sharingMode(@NativeType("VkSharingMode") int value) { VkImageCreateInfo.nsharingMode(address(), value); return this; }
++        /** Sets the specified value to the {@link VkImageCreateInfo#queueFamilyIndexCount} field. */
++        public VkImageCreateInfo.Buffer queueFamilyIndexCount(@NativeType("uint32_t") int value) { VkImageCreateInfo.nqueueFamilyIndexCount(address(), value); return this; }
+         /** Sets the address of the specified {@link IntBuffer} to the {@link VkImageCreateInfo#pQueueFamilyIndices} field. */
+         public VkImageCreateInfo.Buffer pQueueFamilyIndices(@Nullable @NativeType("uint32_t const *") IntBuffer value) { VkImageCreateInfo.npQueueFamilyIndices(address(), value); return this; }
+         /** Sets the specified value to the {@link VkImageCreateInfo#initialLayout} field. */
+diff --git a/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkPhysicalDeviceImageDrmFormatModifierInfoEXT.java b/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkPhysicalDeviceImageDrmFormatModifierInfoEXT.java
+index 6029f15..95c3cad 100644
+--- a/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkPhysicalDeviceImageDrmFormatModifierInfoEXT.java
++++ b/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkPhysicalDeviceImageDrmFormatModifierInfoEXT.java
+@@ -12,7 +12,6 @@ import java.nio.*;
+ import org.lwjgl.*;
+ import org.lwjgl.system.*;
+ 
+-import static org.lwjgl.system.Checks.*;
+ import static org.lwjgl.system.MemoryUtil.*;
+ import static org.lwjgl.system.MemoryStack.*;
+ 
+@@ -129,6 +128,8 @@ public class VkPhysicalDeviceImageDrmFormatModifierInfoEXT extends Struct implem
+     public VkPhysicalDeviceImageDrmFormatModifierInfoEXT drmFormatModifier(@NativeType("uint64_t") long value) { ndrmFormatModifier(address(), value); return this; }
+     /** Sets the specified value to the {@link #sharingMode} field. */
+     public VkPhysicalDeviceImageDrmFormatModifierInfoEXT sharingMode(@NativeType("VkSharingMode") int value) { nsharingMode(address(), value); return this; }
++    /** Sets the specified value to the {@link #queueFamilyIndexCount} field. */
++    public VkPhysicalDeviceImageDrmFormatModifierInfoEXT queueFamilyIndexCount(@NativeType("uint32_t") int value) { nqueueFamilyIndexCount(address(), value); return this; }
+     /** Sets the address of the specified {@link IntBuffer} to the {@link #pQueueFamilyIndices} field. */
+     public VkPhysicalDeviceImageDrmFormatModifierInfoEXT pQueueFamilyIndices(@Nullable @NativeType("uint32_t const *") IntBuffer value) { npQueueFamilyIndices(address(), value); return this; }
+ 
+@@ -138,12 +139,14 @@ public class VkPhysicalDeviceImageDrmFormatModifierInfoEXT extends Struct implem
+         long pNext,
+         long drmFormatModifier,
+         int sharingMode,
++        int queueFamilyIndexCount,
+         @Nullable IntBuffer pQueueFamilyIndices
+     ) {
+         sType(sType);
+         pNext(pNext);
+         drmFormatModifier(drmFormatModifier);
+         sharingMode(sharingMode);
++        queueFamilyIndexCount(queueFamilyIndexCount);
+         pQueueFamilyIndices(pQueueFamilyIndices);
+ 
+         return this;
+@@ -328,30 +331,7 @@ public class VkPhysicalDeviceImageDrmFormatModifierInfoEXT extends Struct implem
+     /** Sets the specified value to the {@code queueFamilyIndexCount} field of the specified {@code struct}. */
+     public static void nqueueFamilyIndexCount(long struct, int value) { UNSAFE.putInt(null, struct + VkPhysicalDeviceImageDrmFormatModifierInfoEXT.QUEUEFAMILYINDEXCOUNT, value); }
+     /** Unsafe version of {@link #pQueueFamilyIndices(IntBuffer) pQueueFamilyIndices}. */
+-    public static void npQueueFamilyIndices(long struct, @Nullable IntBuffer value) { memPutAddress(struct + VkPhysicalDeviceImageDrmFormatModifierInfoEXT.PQUEUEFAMILYINDICES, memAddressSafe(value)); nqueueFamilyIndexCount(struct, value == null ? 0 : value.remaining()); }
+-
+-    /**
+-     * Validates pointer members that should not be {@code NULL}.
+-     *
+-     * @param struct the struct to validate
+-     */
+-    public static void validate(long struct) {
+-        if (nqueueFamilyIndexCount(struct) != 0) {
+-            check(memGetAddress(struct + VkPhysicalDeviceImageDrmFormatModifierInfoEXT.PQUEUEFAMILYINDICES));
+-        }
+-    }
+-
+-    /**
+-     * Calls {@link #validate(long)} for each struct contained in the specified struct array.
+-     *
+-     * @param array the struct array to validate
+-     * @param count the number of structs in {@code array}
+-     */
+-    public static void validate(long array, int count) {
+-        for (int i = 0; i < count; i++) {
+-            validate(array + Integer.toUnsignedLong(i) * SIZEOF);
+-        }
+-    }
++    public static void npQueueFamilyIndices(long struct, @Nullable IntBuffer value) { memPutAddress(struct + VkPhysicalDeviceImageDrmFormatModifierInfoEXT.PQUEUEFAMILYINDICES, memAddressSafe(value)); if (value != null) { nqueueFamilyIndexCount(struct, value.remaining()); } }
+ 
+     // -----------------------------------
+ 
+@@ -419,6 +399,8 @@ public class VkPhysicalDeviceImageDrmFormatModifierInfoEXT extends Struct implem
+         public VkPhysicalDeviceImageDrmFormatModifierInfoEXT.Buffer drmFormatModifier(@NativeType("uint64_t") long value) { VkPhysicalDeviceImageDrmFormatModifierInfoEXT.ndrmFormatModifier(address(), value); return this; }
+         /** Sets the specified value to the {@link VkPhysicalDeviceImageDrmFormatModifierInfoEXT#sharingMode} field. */
+         public VkPhysicalDeviceImageDrmFormatModifierInfoEXT.Buffer sharingMode(@NativeType("VkSharingMode") int value) { VkPhysicalDeviceImageDrmFormatModifierInfoEXT.nsharingMode(address(), value); return this; }
++        /** Sets the specified value to the {@link VkPhysicalDeviceImageDrmFormatModifierInfoEXT#queueFamilyIndexCount} field. */
++        public VkPhysicalDeviceImageDrmFormatModifierInfoEXT.Buffer queueFamilyIndexCount(@NativeType("uint32_t") int value) { VkPhysicalDeviceImageDrmFormatModifierInfoEXT.nqueueFamilyIndexCount(address(), value); return this; }
+         /** Sets the address of the specified {@link IntBuffer} to the {@link VkPhysicalDeviceImageDrmFormatModifierInfoEXT#pQueueFamilyIndices} field. */
+         public VkPhysicalDeviceImageDrmFormatModifierInfoEXT.Buffer pQueueFamilyIndices(@Nullable @NativeType("uint32_t const *") IntBuffer value) { VkPhysicalDeviceImageDrmFormatModifierInfoEXT.npQueueFamilyIndices(address(), value); return this; }
+ 
+diff --git a/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkPipelineDiscardRectangleStateCreateInfoEXT.java b/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkPipelineDiscardRectangleStateCreateInfoEXT.java
+index daf6376..34aaa5d 100644
+--- a/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkPipelineDiscardRectangleStateCreateInfoEXT.java
++++ b/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkPipelineDiscardRectangleStateCreateInfoEXT.java
+@@ -12,7 +12,6 @@ import java.nio.*;
+ import org.lwjgl.*;
+ import org.lwjgl.system.*;
+ 
+-import static org.lwjgl.system.Checks.*;
+ import static org.lwjgl.system.MemoryUtil.*;
+ import static org.lwjgl.system.MemoryStack.*;
+ 
+@@ -134,6 +133,8 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends Struct impleme
+     public VkPipelineDiscardRectangleStateCreateInfoEXT flags(@NativeType("VkPipelineDiscardRectangleStateCreateFlagsEXT") int value) { nflags(address(), value); return this; }
+     /** Sets the specified value to the {@link #discardRectangleMode} field. */
+     public VkPipelineDiscardRectangleStateCreateInfoEXT discardRectangleMode(@NativeType("VkDiscardRectangleModeEXT") int value) { ndiscardRectangleMode(address(), value); return this; }
++    /** Sets the specified value to the {@link #discardRectangleCount} field. */
++    public VkPipelineDiscardRectangleStateCreateInfoEXT discardRectangleCount(@NativeType("uint32_t") int value) { ndiscardRectangleCount(address(), value); return this; }
+     /** Sets the address of the specified {@link VkRect2D.Buffer} to the {@link #pDiscardRectangles} field. */
+     public VkPipelineDiscardRectangleStateCreateInfoEXT pDiscardRectangles(@Nullable @NativeType("VkRect2D const *") VkRect2D.Buffer value) { npDiscardRectangles(address(), value); return this; }
+ 
+@@ -143,12 +144,14 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends Struct impleme
+         long pNext,
+         int flags,
+         int discardRectangleMode,
++        int discardRectangleCount,
+         @Nullable VkRect2D.Buffer pDiscardRectangles
+     ) {
+         sType(sType);
+         pNext(pNext);
+         flags(flags);
+         discardRectangleMode(discardRectangleMode);
++        discardRectangleCount(discardRectangleCount);
+         pDiscardRectangles(pDiscardRectangles);
+ 
+         return this;
+@@ -333,30 +336,7 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends Struct impleme
+     /** Sets the specified value to the {@code discardRectangleCount} field of the specified {@code struct}. */
+     public static void ndiscardRectangleCount(long struct, int value) { UNSAFE.putInt(null, struct + VkPipelineDiscardRectangleStateCreateInfoEXT.DISCARDRECTANGLECOUNT, value); }
+     /** Unsafe version of {@link #pDiscardRectangles(VkRect2D.Buffer) pDiscardRectangles}. */
+-    public static void npDiscardRectangles(long struct, @Nullable VkRect2D.Buffer value) { memPutAddress(struct + VkPipelineDiscardRectangleStateCreateInfoEXT.PDISCARDRECTANGLES, memAddressSafe(value)); ndiscardRectangleCount(struct, value == null ? 0 : value.remaining()); }
+-
+-    /**
+-     * Validates pointer members that should not be {@code NULL}.
+-     *
+-     * @param struct the struct to validate
+-     */
+-    public static void validate(long struct) {
+-        if (ndiscardRectangleCount(struct) != 0) {
+-            check(memGetAddress(struct + VkPipelineDiscardRectangleStateCreateInfoEXT.PDISCARDRECTANGLES));
+-        }
+-    }
+-
+-    /**
+-     * Calls {@link #validate(long)} for each struct contained in the specified struct array.
+-     *
+-     * @param array the struct array to validate
+-     * @param count the number of structs in {@code array}
+-     */
+-    public static void validate(long array, int count) {
+-        for (int i = 0; i < count; i++) {
+-            validate(array + Integer.toUnsignedLong(i) * SIZEOF);
+-        }
+-    }
++    public static void npDiscardRectangles(long struct, @Nullable VkRect2D.Buffer value) { memPutAddress(struct + VkPipelineDiscardRectangleStateCreateInfoEXT.PDISCARDRECTANGLES, memAddressSafe(value)); if (value != null) { ndiscardRectangleCount(struct, value.remaining()); } }
+ 
+     // -----------------------------------
+ 
+@@ -424,6 +404,8 @@ public class VkPipelineDiscardRectangleStateCreateInfoEXT extends Struct impleme
+         public VkPipelineDiscardRectangleStateCreateInfoEXT.Buffer flags(@NativeType("VkPipelineDiscardRectangleStateCreateFlagsEXT") int value) { VkPipelineDiscardRectangleStateCreateInfoEXT.nflags(address(), value); return this; }
+         /** Sets the specified value to the {@link VkPipelineDiscardRectangleStateCreateInfoEXT#discardRectangleMode} field. */
+         public VkPipelineDiscardRectangleStateCreateInfoEXT.Buffer discardRectangleMode(@NativeType("VkDiscardRectangleModeEXT") int value) { VkPipelineDiscardRectangleStateCreateInfoEXT.ndiscardRectangleMode(address(), value); return this; }
++        /** Sets the specified value to the {@link VkPipelineDiscardRectangleStateCreateInfoEXT#discardRectangleCount} field. */
++        public VkPipelineDiscardRectangleStateCreateInfoEXT.Buffer discardRectangleCount(@NativeType("uint32_t") int value) { VkPipelineDiscardRectangleStateCreateInfoEXT.ndiscardRectangleCount(address(), value); return this; }
+         /** Sets the address of the specified {@link VkRect2D.Buffer} to the {@link VkPipelineDiscardRectangleStateCreateInfoEXT#pDiscardRectangles} field. */
+         public VkPipelineDiscardRectangleStateCreateInfoEXT.Buffer pDiscardRectangles(@Nullable @NativeType("VkRect2D const *") VkRect2D.Buffer value) { VkPipelineDiscardRectangleStateCreateInfoEXT.npDiscardRectangles(address(), value); return this; }
+ 
+diff --git a/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkPipelineViewportExclusiveScissorStateCreateInfoNV.java b/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkPipelineViewportExclusiveScissorStateCreateInfoNV.java
+index b6bd33a..b29ac3f 100644
+--- a/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkPipelineViewportExclusiveScissorStateCreateInfoNV.java
++++ b/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkPipelineViewportExclusiveScissorStateCreateInfoNV.java
+@@ -12,7 +12,6 @@ import java.nio.*;
+ import org.lwjgl.*;
+ import org.lwjgl.system.*;
+ 
+-import static org.lwjgl.system.Checks.*;
+ import static org.lwjgl.system.MemoryUtil.*;
+ import static org.lwjgl.system.MemoryStack.*;
+ 
+@@ -116,6 +115,8 @@ public class VkPipelineViewportExclusiveScissorStateCreateInfoNV extends Struct
+     public VkPipelineViewportExclusiveScissorStateCreateInfoNV sType(@NativeType("VkStructureType") int value) { nsType(address(), value); return this; }
+     /** Sets the specified value to the {@link #pNext} field. */
+     public VkPipelineViewportExclusiveScissorStateCreateInfoNV pNext(@NativeType("void const *") long value) { npNext(address(), value); return this; }
++    /** Sets the specified value to the {@link #exclusiveScissorCount} field. */
++    public VkPipelineViewportExclusiveScissorStateCreateInfoNV exclusiveScissorCount(@NativeType("uint32_t") int value) { nexclusiveScissorCount(address(), value); return this; }
+     /** Sets the address of the specified {@link VkRect2D.Buffer} to the {@link #pExclusiveScissors} field. */
+     public VkPipelineViewportExclusiveScissorStateCreateInfoNV pExclusiveScissors(@Nullable @NativeType("VkRect2D const *") VkRect2D.Buffer value) { npExclusiveScissors(address(), value); return this; }
+ 
+@@ -123,10 +124,12 @@ public class VkPipelineViewportExclusiveScissorStateCreateInfoNV extends Struct
+     public VkPipelineViewportExclusiveScissorStateCreateInfoNV set(
+         int sType,
+         long pNext,
++        int exclusiveScissorCount,
+         @Nullable VkRect2D.Buffer pExclusiveScissors
+     ) {
+         sType(sType);
+         pNext(pNext);
++        exclusiveScissorCount(exclusiveScissorCount);
+         pExclusiveScissors(pExclusiveScissors);
+ 
+         return this;
+@@ -303,30 +306,7 @@ public class VkPipelineViewportExclusiveScissorStateCreateInfoNV extends Struct
+     /** Sets the specified value to the {@code exclusiveScissorCount} field of the specified {@code struct}. */
+     public static void nexclusiveScissorCount(long struct, int value) { UNSAFE.putInt(null, struct + VkPipelineViewportExclusiveScissorStateCreateInfoNV.EXCLUSIVESCISSORCOUNT, value); }
+     /** Unsafe version of {@link #pExclusiveScissors(VkRect2D.Buffer) pExclusiveScissors}. */
+-    public static void npExclusiveScissors(long struct, @Nullable VkRect2D.Buffer value) { memPutAddress(struct + VkPipelineViewportExclusiveScissorStateCreateInfoNV.PEXCLUSIVESCISSORS, memAddressSafe(value)); nexclusiveScissorCount(struct, value == null ? 0 : value.remaining()); }
+-
+-    /**
+-     * Validates pointer members that should not be {@code NULL}.
+-     *
+-     * @param struct the struct to validate
+-     */
+-    public static void validate(long struct) {
+-        if (nexclusiveScissorCount(struct) != 0) {
+-            check(memGetAddress(struct + VkPipelineViewportExclusiveScissorStateCreateInfoNV.PEXCLUSIVESCISSORS));
+-        }
+-    }
+-
+-    /**
+-     * Calls {@link #validate(long)} for each struct contained in the specified struct array.
+-     *
+-     * @param array the struct array to validate
+-     * @param count the number of structs in {@code array}
+-     */
+-    public static void validate(long array, int count) {
+-        for (int i = 0; i < count; i++) {
+-            validate(array + Integer.toUnsignedLong(i) * SIZEOF);
+-        }
+-    }
++    public static void npExclusiveScissors(long struct, @Nullable VkRect2D.Buffer value) { memPutAddress(struct + VkPipelineViewportExclusiveScissorStateCreateInfoNV.PEXCLUSIVESCISSORS, memAddressSafe(value)); if (value != null) { nexclusiveScissorCount(struct, value.remaining()); } }
+ 
+     // -----------------------------------
+ 
+@@ -384,6 +364,8 @@ public class VkPipelineViewportExclusiveScissorStateCreateInfoNV extends Struct
+         public VkPipelineViewportExclusiveScissorStateCreateInfoNV.Buffer sType(@NativeType("VkStructureType") int value) { VkPipelineViewportExclusiveScissorStateCreateInfoNV.nsType(address(), value); return this; }
+         /** Sets the specified value to the {@link VkPipelineViewportExclusiveScissorStateCreateInfoNV#pNext} field. */
+         public VkPipelineViewportExclusiveScissorStateCreateInfoNV.Buffer pNext(@NativeType("void const *") long value) { VkPipelineViewportExclusiveScissorStateCreateInfoNV.npNext(address(), value); return this; }
++        /** Sets the specified value to the {@link VkPipelineViewportExclusiveScissorStateCreateInfoNV#exclusiveScissorCount} field. */
++        public VkPipelineViewportExclusiveScissorStateCreateInfoNV.Buffer exclusiveScissorCount(@NativeType("uint32_t") int value) { VkPipelineViewportExclusiveScissorStateCreateInfoNV.nexclusiveScissorCount(address(), value); return this; }
+         /** Sets the address of the specified {@link VkRect2D.Buffer} to the {@link VkPipelineViewportExclusiveScissorStateCreateInfoNV#pExclusiveScissors} field. */
+         public VkPipelineViewportExclusiveScissorStateCreateInfoNV.Buffer pExclusiveScissors(@Nullable @NativeType("VkRect2D const *") VkRect2D.Buffer value) { VkPipelineViewportExclusiveScissorStateCreateInfoNV.npExclusiveScissors(address(), value); return this; }
+ 
+diff --git a/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkPipelineViewportShadingRateImageStateCreateInfoNV.java b/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkPipelineViewportShadingRateImageStateCreateInfoNV.java
+index 6506912..12e9032 100644
+--- a/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkPipelineViewportShadingRateImageStateCreateInfoNV.java
++++ b/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkPipelineViewportShadingRateImageStateCreateInfoNV.java
+@@ -12,7 +12,6 @@ import java.nio.*;
+ import org.lwjgl.*;
+ import org.lwjgl.system.*;
+ 
+-import static org.lwjgl.system.Checks.*;
+ import static org.lwjgl.system.MemoryUtil.*;
+ import static org.lwjgl.system.MemoryStack.*;
+ 
+@@ -123,6 +122,8 @@ public class VkPipelineViewportShadingRateImageStateCreateInfoNV extends Struct
+     public VkPipelineViewportShadingRateImageStateCreateInfoNV pNext(@NativeType("void const *") long value) { npNext(address(), value); return this; }
+     /** Sets the specified value to the {@link #shadingRateImageEnable} field. */
+     public VkPipelineViewportShadingRateImageStateCreateInfoNV shadingRateImageEnable(@NativeType("VkBool32") boolean value) { nshadingRateImageEnable(address(), value ? 1 : 0); return this; }
++    /** Sets the specified value to the {@link #viewportCount} field. */
++    public VkPipelineViewportShadingRateImageStateCreateInfoNV viewportCount(@NativeType("uint32_t") int value) { nviewportCount(address(), value); return this; }
+     /** Sets the address of the specified {@link VkShadingRatePaletteNV.Buffer} to the {@link #pShadingRatePalettes} field. */
+     public VkPipelineViewportShadingRateImageStateCreateInfoNV pShadingRatePalettes(@Nullable @NativeType("VkShadingRatePaletteNV const *") VkShadingRatePaletteNV.Buffer value) { npShadingRatePalettes(address(), value); return this; }
+ 
+@@ -131,11 +132,13 @@ public class VkPipelineViewportShadingRateImageStateCreateInfoNV extends Struct
+         int sType,
+         long pNext,
+         boolean shadingRateImageEnable,
++        int viewportCount,
+         @Nullable VkShadingRatePaletteNV.Buffer pShadingRatePalettes
+     ) {
+         sType(sType);
+         pNext(pNext);
+         shadingRateImageEnable(shadingRateImageEnable);
++        viewportCount(viewportCount);
+         pShadingRatePalettes(pShadingRatePalettes);
+ 
+         return this;
+@@ -316,33 +319,7 @@ public class VkPipelineViewportShadingRateImageStateCreateInfoNV extends Struct
+     /** Sets the specified value to the {@code viewportCount} field of the specified {@code struct}. */
+     public static void nviewportCount(long struct, int value) { UNSAFE.putInt(null, struct + VkPipelineViewportShadingRateImageStateCreateInfoNV.VIEWPORTCOUNT, value); }
+     /** Unsafe version of {@link #pShadingRatePalettes(VkShadingRatePaletteNV.Buffer) pShadingRatePalettes}. */
+-    public static void npShadingRatePalettes(long struct, @Nullable VkShadingRatePaletteNV.Buffer value) { memPutAddress(struct + VkPipelineViewportShadingRateImageStateCreateInfoNV.PSHADINGRATEPALETTES, memAddressSafe(value)); nviewportCount(struct, value == null ? 0 : value.remaining()); }
+-
+-    /**
+-     * Validates pointer members that should not be {@code NULL}.
+-     *
+-     * @param struct the struct to validate
+-     */
+-    public static void validate(long struct) {
+-        int viewportCount = nviewportCount(struct);
+-        if (viewportCount != 0) {
+-            long pShadingRatePalettes = memGetAddress(struct + VkPipelineViewportShadingRateImageStateCreateInfoNV.PSHADINGRATEPALETTES);
+-            check(pShadingRatePalettes);
+-            VkShadingRatePaletteNV.validate(pShadingRatePalettes, viewportCount);
+-        }
+-    }
+-
+-    /**
+-     * Calls {@link #validate(long)} for each struct contained in the specified struct array.
+-     *
+-     * @param array the struct array to validate
+-     * @param count the number of structs in {@code array}
+-     */
+-    public static void validate(long array, int count) {
+-        for (int i = 0; i < count; i++) {
+-            validate(array + Integer.toUnsignedLong(i) * SIZEOF);
+-        }
+-    }
++    public static void npShadingRatePalettes(long struct, @Nullable VkShadingRatePaletteNV.Buffer value) { memPutAddress(struct + VkPipelineViewportShadingRateImageStateCreateInfoNV.PSHADINGRATEPALETTES, memAddressSafe(value)); if (value != null) { nviewportCount(struct, value.remaining()); } }
+ 
+     // -----------------------------------
+ 
+@@ -405,6 +382,8 @@ public class VkPipelineViewportShadingRateImageStateCreateInfoNV extends Struct
+         public VkPipelineViewportShadingRateImageStateCreateInfoNV.Buffer pNext(@NativeType("void const *") long value) { VkPipelineViewportShadingRateImageStateCreateInfoNV.npNext(address(), value); return this; }
+         /** Sets the specified value to the {@link VkPipelineViewportShadingRateImageStateCreateInfoNV#shadingRateImageEnable} field. */
+         public VkPipelineViewportShadingRateImageStateCreateInfoNV.Buffer shadingRateImageEnable(@NativeType("VkBool32") boolean value) { VkPipelineViewportShadingRateImageStateCreateInfoNV.nshadingRateImageEnable(address(), value ? 1 : 0); return this; }
++        /** Sets the specified value to the {@link VkPipelineViewportShadingRateImageStateCreateInfoNV#viewportCount} field. */
++        public VkPipelineViewportShadingRateImageStateCreateInfoNV.Buffer viewportCount(@NativeType("uint32_t") int value) { VkPipelineViewportShadingRateImageStateCreateInfoNV.nviewportCount(address(), value); return this; }
+         /** Sets the address of the specified {@link VkShadingRatePaletteNV.Buffer} to the {@link VkPipelineViewportShadingRateImageStateCreateInfoNV#pShadingRatePalettes} field. */
+         public VkPipelineViewportShadingRateImageStateCreateInfoNV.Buffer pShadingRatePalettes(@Nullable @NativeType("VkShadingRatePaletteNV const *") VkShadingRatePaletteNV.Buffer value) { VkPipelineViewportShadingRateImageStateCreateInfoNV.npShadingRatePalettes(address(), value); return this; }
+ 
+diff --git a/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkRenderPassBeginInfo.java b/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkRenderPassBeginInfo.java
+index 57b2ab4..a1ad50a 100644
+--- a/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkRenderPassBeginInfo.java
++++ b/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkRenderPassBeginInfo.java
+@@ -12,7 +12,6 @@ import java.nio.*;
+ import org.lwjgl.*;
+ import org.lwjgl.system.*;
+ 
+-import static org.lwjgl.system.Checks.*;
+ import static org.lwjgl.system.MemoryUtil.*;
+ import static org.lwjgl.system.MemoryStack.*;
+ 
+@@ -177,6 +176,8 @@ public class VkRenderPassBeginInfo extends Struct implements NativeResource {
+     public VkRenderPassBeginInfo renderArea(VkRect2D value) { nrenderArea(address(), value); return this; }
+     /** Passes the {@link #renderArea} field to the specified {@link java.util.function.Consumer Consumer}. */
+     public VkRenderPassBeginInfo renderArea(java.util.function.Consumer<VkRect2D> consumer) { consumer.accept(renderArea()); return this; }
++    /** Sets the specified value to the {@link #clearValueCount} field. */
++    public VkRenderPassBeginInfo clearValueCount(@NativeType("uint32_t") int value) { nclearValueCount(address(), value); return this; }
+     /** Sets the address of the specified {@link VkClearValue.Buffer} to the {@link #pClearValues} field. */
+     public VkRenderPassBeginInfo pClearValues(@Nullable @NativeType("VkClearValue const *") VkClearValue.Buffer value) { npClearValues(address(), value); return this; }
+ 
+@@ -187,6 +188,7 @@ public class VkRenderPassBeginInfo extends Struct implements NativeResource {
+         long renderPass,
+         long framebuffer,
+         VkRect2D renderArea,
++        int clearValueCount,
+         @Nullable VkClearValue.Buffer pClearValues
+     ) {
+         sType(sType);
+@@ -194,6 +196,7 @@ public class VkRenderPassBeginInfo extends Struct implements NativeResource {
+         renderPass(renderPass);
+         framebuffer(framebuffer);
+         renderArea(renderArea);
++        clearValueCount(clearValueCount);
+         pClearValues(pClearValues);
+ 
+         return this;
+@@ -382,30 +385,7 @@ public class VkRenderPassBeginInfo extends Struct implements NativeResource {
+     /** Sets the specified value to the {@code clearValueCount} field of the specified {@code struct}. */
+     public static void nclearValueCount(long struct, int value) { UNSAFE.putInt(null, struct + VkRenderPassBeginInfo.CLEARVALUECOUNT, value); }
+     /** Unsafe version of {@link #pClearValues(VkClearValue.Buffer) pClearValues}. */
+-    public static void npClearValues(long struct, @Nullable VkClearValue.Buffer value) { memPutAddress(struct + VkRenderPassBeginInfo.PCLEARVALUES, memAddressSafe(value)); nclearValueCount(struct, value == null ? 0 : value.remaining()); }
+-
+-    /**
+-     * Validates pointer members that should not be {@code NULL}.
+-     *
+-     * @param struct the struct to validate
+-     */
+-    public static void validate(long struct) {
+-        if (nclearValueCount(struct) != 0) {
+-            check(memGetAddress(struct + VkRenderPassBeginInfo.PCLEARVALUES));
+-        }
+-    }
+-
+-    /**
+-     * Calls {@link #validate(long)} for each struct contained in the specified struct array.
+-     *
+-     * @param array the struct array to validate
+-     * @param count the number of structs in {@code array}
+-     */
+-    public static void validate(long array, int count) {
+-        for (int i = 0; i < count; i++) {
+-            validate(array + Integer.toUnsignedLong(i) * SIZEOF);
+-        }
+-    }
++    public static void npClearValues(long struct, @Nullable VkClearValue.Buffer value) { memPutAddress(struct + VkRenderPassBeginInfo.PCLEARVALUES, memAddressSafe(value)); if (value != null) { nclearValueCount(struct, value.remaining()); } }
+ 
+     // -----------------------------------
+ 
+@@ -479,6 +459,8 @@ public class VkRenderPassBeginInfo extends Struct implements NativeResource {
+         public VkRenderPassBeginInfo.Buffer renderArea(VkRect2D value) { VkRenderPassBeginInfo.nrenderArea(address(), value); return this; }
+         /** Passes the {@link VkRenderPassBeginInfo#renderArea} field to the specified {@link java.util.function.Consumer Consumer}. */
+         public VkRenderPassBeginInfo.Buffer renderArea(java.util.function.Consumer<VkRect2D> consumer) { consumer.accept(renderArea()); return this; }
++        /** Sets the specified value to the {@link VkRenderPassBeginInfo#clearValueCount} field. */
++        public VkRenderPassBeginInfo.Buffer clearValueCount(@NativeType("uint32_t") int value) { VkRenderPassBeginInfo.nclearValueCount(address(), value); return this; }
+         /** Sets the address of the specified {@link VkClearValue.Buffer} to the {@link VkRenderPassBeginInfo#pClearValues} field. */
+         public VkRenderPassBeginInfo.Buffer pClearValues(@Nullable @NativeType("VkClearValue const *") VkClearValue.Buffer value) { VkRenderPassBeginInfo.npClearValues(address(), value); return this; }
+ 
+diff --git a/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkSwapchainCreateInfoKHR.java b/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkSwapchainCreateInfoKHR.java
+index ccbd64c..082f82e 100644
+--- a/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkSwapchainCreateInfoKHR.java
++++ b/modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkSwapchainCreateInfoKHR.java
+@@ -12,7 +12,6 @@ import java.nio.*;
+ import org.lwjgl.*;
+ import org.lwjgl.system.*;
+ 
+-import static org.lwjgl.system.Checks.*;
+ import static org.lwjgl.system.MemoryUtil.*;
+ import static org.lwjgl.system.MemoryStack.*;
+ 
+@@ -250,6 +249,8 @@ public class VkSwapchainCreateInfoKHR extends Struct implements NativeResource {
+     public VkSwapchainCreateInfoKHR imageUsage(@NativeType("VkImageUsageFlags") int value) { nimageUsage(address(), value); return this; }
+     /** Sets the specified value to the {@link #imageSharingMode} field. */
+     public VkSwapchainCreateInfoKHR imageSharingMode(@NativeType("VkSharingMode") int value) { nimageSharingMode(address(), value); return this; }
++    /** Sets the specified value to the {@link #queueFamilyIndexCount} field. */
++    public VkSwapchainCreateInfoKHR queueFamilyIndexCount(@NativeType("uint32_t") int value) { nqueueFamilyIndexCount(address(), value); return this; }
+     /** Sets the address of the specified {@link IntBuffer} to the {@link #pQueueFamilyIndices} field. */
+     public VkSwapchainCreateInfoKHR pQueueFamilyIndices(@Nullable @NativeType("uint32_t const *") IntBuffer value) { npQueueFamilyIndices(address(), value); return this; }
+     /** Sets the specified value to the {@link #preTransform} field. */
+@@ -276,6 +277,7 @@ public class VkSwapchainCreateInfoKHR extends Struct implements NativeResource {
+         int imageArrayLayers,
+         int imageUsage,
+         int imageSharingMode,
++        int queueFamilyIndexCount,
+         @Nullable IntBuffer pQueueFamilyIndices,
+         int preTransform,
+         int compositeAlpha,
+@@ -294,6 +296,7 @@ public class VkSwapchainCreateInfoKHR extends Struct implements NativeResource {
+         imageArrayLayers(imageArrayLayers);
+         imageUsage(imageUsage);
+         imageSharingMode(imageSharingMode);
++        queueFamilyIndexCount(queueFamilyIndexCount);
+         pQueueFamilyIndices(pQueueFamilyIndices);
+         preTransform(preTransform);
+         compositeAlpha(compositeAlpha);
+@@ -521,7 +524,7 @@ public class VkSwapchainCreateInfoKHR extends Struct implements NativeResource {
+     /** Sets the specified value to the {@code queueFamilyIndexCount} field of the specified {@code struct}. */
+     public static void nqueueFamilyIndexCount(long struct, int value) { UNSAFE.putInt(null, struct + VkSwapchainCreateInfoKHR.QUEUEFAMILYINDEXCOUNT, value); }
+     /** Unsafe version of {@link #pQueueFamilyIndices(IntBuffer) pQueueFamilyIndices}. */
+-    public static void npQueueFamilyIndices(long struct, @Nullable IntBuffer value) { memPutAddress(struct + VkSwapchainCreateInfoKHR.PQUEUEFAMILYINDICES, memAddressSafe(value)); nqueueFamilyIndexCount(struct, value == null ? 0 : value.remaining()); }
++    public static void npQueueFamilyIndices(long struct, @Nullable IntBuffer value) { memPutAddress(struct + VkSwapchainCreateInfoKHR.PQUEUEFAMILYINDICES, memAddressSafe(value)); if (value != null) { nqueueFamilyIndexCount(struct, value.remaining()); } }
+     /** Unsafe version of {@link #preTransform(int) preTransform}. */
+     public static void npreTransform(long struct, int value) { UNSAFE.putInt(null, struct + VkSwapchainCreateInfoKHR.PRETRANSFORM, value); }
+     /** Unsafe version of {@link #compositeAlpha(int) compositeAlpha}. */
+@@ -533,29 +536,6 @@ public class VkSwapchainCreateInfoKHR extends Struct implements NativeResource {
+     /** Unsafe version of {@link #oldSwapchain(long) oldSwapchain}. */
+     public static void noldSwapchain(long struct, long value) { UNSAFE.putLong(null, struct + VkSwapchainCreateInfoKHR.OLDSWAPCHAIN, value); }
+ 
+-    /**
+-     * Validates pointer members that should not be {@code NULL}.
+-     *
+-     * @param struct the struct to validate
+-     */
+-    public static void validate(long struct) {
+-        if (nqueueFamilyIndexCount(struct) != 0) {
+-            check(memGetAddress(struct + VkSwapchainCreateInfoKHR.PQUEUEFAMILYINDICES));
+-        }
+-    }
+-
+-    /**
+-     * Calls {@link #validate(long)} for each struct contained in the specified struct array.
+-     *
+-     * @param array the struct array to validate
+-     * @param count the number of structs in {@code array}
+-     */
+-    public static void validate(long array, int count) {
+-        for (int i = 0; i < count; i++) {
+-            validate(array + Integer.toUnsignedLong(i) * SIZEOF);
+-        }
+-    }
+-
+     // -----------------------------------
+ 
+     /** An array of {@link VkSwapchainCreateInfoKHR} structs. */
+@@ -673,6 +653,8 @@ public class VkSwapchainCreateInfoKHR extends Struct implements NativeResource {
+         public VkSwapchainCreateInfoKHR.Buffer imageUsage(@NativeType("VkImageUsageFlags") int value) { VkSwapchainCreateInfoKHR.nimageUsage(address(), value); return this; }
+         /** Sets the specified value to the {@link VkSwapchainCreateInfoKHR#imageSharingMode} field. */
+         public VkSwapchainCreateInfoKHR.Buffer imageSharingMode(@NativeType("VkSharingMode") int value) { VkSwapchainCreateInfoKHR.nimageSharingMode(address(), value); return this; }
++        /** Sets the specified value to the {@link VkSwapchainCreateInfoKHR#queueFamilyIndexCount} field. */
++        public VkSwapchainCreateInfoKHR.Buffer queueFamilyIndexCount(@NativeType("uint32_t") int value) { VkSwapchainCreateInfoKHR.nqueueFamilyIndexCount(address(), value); return this; }
+         /** Sets the address of the specified {@link IntBuffer} to the {@link VkSwapchainCreateInfoKHR#pQueueFamilyIndices} field. */
+         public VkSwapchainCreateInfoKHR.Buffer pQueueFamilyIndices(@Nullable @NativeType("uint32_t const *") IntBuffer value) { VkSwapchainCreateInfoKHR.npQueueFamilyIndices(address(), value); return this; }
+         /** Sets the specified value to the {@link VkSwapchainCreateInfoKHR#preTransform} field. */
+diff --git a/modules/lwjgl/vulkan/src/templates/kotlin/vulkan/ExtensionTypes.kt b/modules/lwjgl/vulkan/src/templates/kotlin/vulkan/ExtensionTypes.kt
+index 81dbccb..e3c5a11 100644
+--- a/modules/lwjgl/vulkan/src/templates/kotlin/vulkan/ExtensionTypes.kt
++++ b/modules/lwjgl/vulkan/src/templates/kotlin/vulkan/ExtensionTypes.kt
+@@ -365,7 +365,7 @@ val VkSwapchainCreateInfoKHR = struct(Module.VULKAN, "VkSwapchainCreateInfoKHR")
+     VkImageUsageFlags("imageUsage", "a bitmask of {@code VkImageUsageFlagBits} describing the intended usage of the (acquired) swapchain images.")
+     VkSharingMode("imageSharingMode", "the sharing mode used for the image(s) of the swapchain.")
+     AutoSize("pQueueFamilyIndices", optional = true)..uint32_t("queueFamilyIndexCount", "the number of queue families having access to the image(s) of the swapchain when {@code imageSharingMode} is #SHARING_MODE_CONCURRENT.")
+-    uint32_t.const.p("pQueueFamilyIndices", "a pointer to an array of queue family indices having access to the images(s) of the swapchain when {@code imageSharingMode} is #SHARING_MODE_CONCURRENT.")
++    nullable..uint32_t.const.p("pQueueFamilyIndices", "a pointer to an array of queue family indices having access to the images(s) of the swapchain when {@code imageSharingMode} is #SHARING_MODE_CONCURRENT.")
+     VkSurfaceTransformFlagBitsKHR("preTransform", "a {@code VkSurfaceTransformFlagBitsKHR} value describing the transform, relative to the presentation engine&#8217;s natural orientation, applied to the image content prior to presentation. If it does not match the {@code currentTransform} value returned by {@code vkGetPhysicalDeviceSurfaceCapabilitiesKHR}, the presentation engine will transform the image content as part of the presentation operation.")
+     VkCompositeAlphaFlagBitsKHR("compositeAlpha", "a {@code VkCompositeAlphaFlagBitsKHR} value indicating the alpha compositing mode to use when this surface is composited together with other surfaces on certain window systems.")
+     VkPresentModeKHR("presentMode", "the presentation mode the swapchain will use. A swapchain&#8217;s present mode determines how incoming present requests will be processed and queued internally.")
+@@ -2986,7 +2986,7 @@ val VkPipelineDiscardRectangleStateCreateInfoEXT = struct(Module.VULKAN, "VkPipe
+     VkPipelineDiscardRectangleStateCreateFlagsEXT("flags", "reserved for future use.")
+     VkDiscardRectangleModeEXT("discardRectangleMode", "a {@code VkDiscardRectangleModeEXT} value determining whether the discard rectangle test is inclusive or exclusive.")
+     AutoSize("pDiscardRectangles", optional = true)..uint32_t("discardRectangleCount", "the number of discard rectangles to use.")
+-    VkRect2D.const.p("pDiscardRectangles", "a pointer to an array of ##VkRect2D structures defining discard rectangles.")
++    nullable..VkRect2D.const.p("pDiscardRectangles", "a pointer to an array of ##VkRect2D structures defining discard rectangles.")
+ }
+ 
+ val VkPhysicalDeviceConservativeRasterizationPropertiesEXT = struct(Module.VULKAN, "VkPhysicalDeviceConservativeRasterizationPropertiesEXT", mutable = false) {
+@@ -5810,7 +5810,7 @@ val VkPhysicalDeviceImageDrmFormatModifierInfoEXT = struct(Module.VULKAN, "VkPhy
+     uint64_t("drmFormatModifier", "the image&#8217;s <em>Linux DRM format modifier</em>, corresponding to ##VkImageDrmFormatModifierExplicitCreateInfoEXT{@code ::modifier} or to ##VkImageDrmFormatModifierListCreateInfoEXT{@code ::pModifiers}.")
+     VkSharingMode("sharingMode", "specifies how the image will be accessed by multiple queue families.")
+     AutoSize("pQueueFamilyIndices", optional = true)..uint32_t("queueFamilyIndexCount", "the number of entries in the {@code pQueueFamilyIndices} array.")
+-    uint32_t.const.p("pQueueFamilyIndices", "a list of queue families that will access the image (ignored if {@code sharingMode} is not #SHARING_MODE_CONCURRENT).")
++    nullable..uint32_t.const.p("pQueueFamilyIndices", "a list of queue families that will access the image (ignored if {@code sharingMode} is not #SHARING_MODE_CONCURRENT).")
+ }
+ 
+ val VkImageDrmFormatModifierListCreateInfoEXT = struct(Module.VULKAN, "VkImageDrmFormatModifierListCreateInfoEXT") {
+@@ -6130,7 +6130,7 @@ val VkPipelineViewportShadingRateImageStateCreateInfoNV = struct(Module.VULKAN,
+     nullable..opaque_const_p("pNext", "{@code NULL} or a pointer to a structure extending this structure.")
+     VkBool32("shadingRateImageEnable", "specifies whether shading rate image and palettes are used during rasterization.")
+     AutoSize("pShadingRatePalettes", optional = true)..uint32_t("viewportCount", "specifies the number of per-viewport palettes used to translate values stored in shading rate images.")
+-    VkShadingRatePaletteNV.const.p("pShadingRatePalettes", "a pointer to an array of ##VkShadingRatePaletteNV structures defining the palette for each viewport. If the shading rate palette state is dynamic, this member is ignored.")
++    nullable..VkShadingRatePaletteNV.const.p("pShadingRatePalettes", "a pointer to an array of ##VkShadingRatePaletteNV structures defining the palette for each viewport. If the shading rate palette state is dynamic, this member is ignored.")
+ }
+ 
+ val VkPhysicalDeviceShadingRateImageFeaturesNV = struct(Module.VULKAN, "VkPhysicalDeviceShadingRateImageFeaturesNV") {
+@@ -7426,7 +7426,7 @@ val VkPipelineViewportExclusiveScissorStateCreateInfoNV = struct(Module.VULKAN,
+     VkStructureType("sType", "the type of this structure.")
+     nullable..opaque_const_p("pNext", "{@code NULL} or a pointer to a structure extending this structure.")
+     AutoSize("pExclusiveScissors", optional = true)..uint32_t("exclusiveScissorCount", "the number of exclusive scissor rectangles.")
+-    VkRect2D.const.p("pExclusiveScissors", "a pointer to an array of ##VkRect2D structures defining exclusive scissor rectangles.")
++    nullable..VkRect2D.const.p("pExclusiveScissors", "a pointer to an array of ##VkRect2D structures defining exclusive scissor rectangles.")
+ }
+ 
+ val VkPhysicalDeviceExclusiveScissorFeaturesNV = struct(Module.VULKAN, "VkPhysicalDeviceExclusiveScissorFeaturesNV") {
+diff --git a/modules/lwjgl/vulkan/src/templates/kotlin/vulkan/VKTypes.kt b/modules/lwjgl/vulkan/src/templates/kotlin/vulkan/VKTypes.kt
+index ebcfc4a..3dbd470 100644
+--- a/modules/lwjgl/vulkan/src/templates/kotlin/vulkan/VKTypes.kt
++++ b/modules/lwjgl/vulkan/src/templates/kotlin/vulkan/VKTypes.kt
+@@ -2292,7 +2292,7 @@ val VkBufferCreateInfo = struct(Module.VULKAN, "VkBufferCreateInfo") {
+     VkBufferUsageFlags("usage", "a bitmask of {@code VkBufferUsageFlagBits} specifying allowed usages of the buffer.")
+     VkSharingMode("sharingMode", "a {@code VkSharingMode} value specifying the sharing mode of the buffer when it will be accessed by multiple queue families.")
+     AutoSize("pQueueFamilyIndices", optional = true)..uint32_t("queueFamilyIndexCount", "the number of entries in the {@code pQueueFamilyIndices} array.")
+-    uint32_t.const.p("pQueueFamilyIndices", "a list of queue families that will access this buffer (ignored if {@code sharingMode} is not #SHARING_MODE_CONCURRENT).")
++    nullable..uint32_t.const.p("pQueueFamilyIndices", "a list of queue families that will access this buffer (ignored if {@code sharingMode} is not #SHARING_MODE_CONCURRENT).")
+ }
+ 
+ val VkBufferViewCreateInfo = struct(Module.VULKAN, "VkBufferViewCreateInfo") {
+@@ -2549,7 +2549,7 @@ val VkImageCreateInfo = struct(Module.VULKAN, "VkImageCreateInfo") {
+     VkImageUsageFlags("usage", "a bitmask of {@code VkImageUsageFlagBits} describing the intended usage of the image.")
+     VkSharingMode("sharingMode", "a {@code VkSharingMode} value specifying the sharing mode of the image when it will be accessed by multiple queue families.")
+     AutoSize("pQueueFamilyIndices", optional = true)..uint32_t("queueFamilyIndexCount", "the number of entries in the {@code pQueueFamilyIndices} array.")
+-    uint32_t.const.p("pQueueFamilyIndices", "a list of queue families that will access this image (ignored if {@code sharingMode} is not #SHARING_MODE_CONCURRENT).")
++    nullable..uint32_t.const.p("pQueueFamilyIndices", "a list of queue families that will access this image (ignored if {@code sharingMode} is not #SHARING_MODE_CONCURRENT).")
+     VkImageLayout("initialLayout", "a {@code VkImageLayout} value specifying the initial {@code VkImageLayout} of all image subresources of the image. See <a target=\"_blank\" href=\"https://www.khronos.org/registry/vulkan/specs/1.2-extensions/html/vkspec.html\\#resources-image-layouts\">Image Layouts</a>.")
+ }
+ 
+@@ -4496,7 +4496,7 @@ val VkFramebufferCreateInfo = struct(Module.VULKAN, "VkFramebufferCreateInfo") {
+     VkFramebufferCreateFlags("flags", "a bitmask of {@code VkFramebufferCreateFlagBits}")
+     VkRenderPass("renderPass", "a render pass defining what render passes the framebuffer will be compatible with. See <a target=\"_blank\" href=\"https://www.khronos.org/registry/vulkan/specs/1.2-extensions/html/vkspec.html\\#renderpass-compatibility\">Render Pass Compatibility</a> for details.")
+     AutoSize("pAttachments", optional = true)..uint32_t("attachmentCount", "the number of attachments.")
+-    VkImageView.const.p("pAttachments", "a pointer to an array of {@code VkImageView} handles, each of which will be used as the corresponding attachment in a render pass instance. If {@code flags} includes #FRAMEBUFFER_CREATE_IMAGELESS_BIT, this parameter is ignored.")
++    nullable..VkImageView.const.p("pAttachments", "a pointer to an array of {@code VkImageView} handles, each of which will be used as the corresponding attachment in a render pass instance. If {@code flags} includes #FRAMEBUFFER_CREATE_IMAGELESS_BIT, this parameter is ignored.")
+     uint32_t("width", "{@code width}, {@code height} and {@code layers} define the dimensions of the framebuffer. If the render pass uses multiview, then {@code layers} <b>must</b> be one and each attachment requires a number of layers that is greater than the maximum bit index set in the view mask in the subpasses in which it is used.")
+     uint32_t("height", "see {@code width}")
+     uint32_t("layers", "see {@code width}")
+@@ -5210,7 +5210,7 @@ val VkRenderPassBeginInfo = struct(Module.VULKAN, "VkRenderPassBeginInfo") {
+     VkFramebuffer("framebuffer", "the framebuffer containing the attachments that are used with the render pass.")
+     VkRect2D("renderArea", "the render area that is affected by the render pass instance, and is described in more detail below.")
+     AutoSize("pClearValues", optional = true)..uint32_t("clearValueCount", "the number of elements in {@code pClearValues}.")
+-    VkClearValue.const.p("pClearValues", "a pointer to an array of {@code clearValueCount} ##VkClearValue structures that contains clear values for each attachment, if the attachment uses a {@code loadOp} value of #ATTACHMENT_LOAD_OP_CLEAR or if the attachment has a depth/stencil format and uses a {@code stencilLoadOp} value of #ATTACHMENT_LOAD_OP_CLEAR. The array is indexed by attachment number. Only elements corresponding to cleared attachments are used. Other elements of {@code pClearValues} are ignored.")
++    nullable..VkClearValue.const.p("pClearValues", "a pointer to an array of {@code clearValueCount} ##VkClearValue structures that contains clear values for each attachment, if the attachment uses a {@code loadOp} value of #ATTACHMENT_LOAD_OP_CLEAR or if the attachment has a depth/stencil format and uses a {@code stencilLoadOp} value of #ATTACHMENT_LOAD_OP_CLEAR. The array is indexed by attachment number. Only elements corresponding to cleared attachments are used. Other elements of {@code pClearValues} are ignored.")
+ }
+ 
+ val VkPhysicalDeviceSubgroupProperties = struct(Module.VULKAN, "VkPhysicalDeviceSubgroupProperties", mutable = false) {

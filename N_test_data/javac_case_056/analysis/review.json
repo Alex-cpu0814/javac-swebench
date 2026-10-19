@@ -1,0 +1,20 @@
+{
+  "status": "execution_verified_not_independently_reviewed",
+  "reviewer": null,
+  "checks": [
+    "cold standard Ant Base/Fix",
+    "network-none runtime",
+    "existing Vulkan regression",
+    "clean Base image audit",
+    "protected-test precreation rejected"
+  ],
+  "limitations": [
+    "Standard Ant cold source build of Core and Vulkan: Kotlin generator/templates, regenerated bindings, all enabled Java sources and current JNI",
+    "Linux x86_64/OpenJDK17; Ubuntu libffi-dev 3.4.2-4 PIC archive is an explicit external dependency adaptation",
+    "Two issue-derived Java struct tests and one existing VulkanTest.testParse control; no real VkDevice or Vulkan driver downcall",
+    "No Base project binaries or Maven LWJGL native library reused during grading",
+    "Ant's Linux native target also unconditionally builds unused par and nuklear libraries",
+    "The validator test allows validate(long) to be absent; it does not alone establish every Vulkan API entry point is correct",
+    "Fix source and reference changes were visible during test design; no blinded-generation or independent-review claim"
+  ]
+}

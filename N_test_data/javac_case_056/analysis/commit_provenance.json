@@ -1,0 +1,26 @@
+{
+  "base_commit": "307ebed6ef6ba420b2165ddb2ec21dd9a37479df",
+  "fix_commit": "ce56fc6c805ea671a4cf4e79abbd331688adfb6d",
+  "raw_fix_parent": "307ebed6ef6ba420b2165ddb2ec21dd9a37479df",
+  "changed_files": [
+    "modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/KHRCreateRenderpass2.java",
+    "modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/KHRDisplaySwapchain.java",
+    "modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/KHRSwapchain.java",
+    "modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VK10.java",
+    "modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VK12.java",
+    "modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkBufferCreateInfo.java",
+    "modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkFramebufferCreateInfo.java",
+    "modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkImageCreateInfo.java",
+    "modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkPhysicalDeviceImageDrmFormatModifierInfoEXT.java",
+    "modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkPipelineDiscardRectangleStateCreateInfoEXT.java",
+    "modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkPipelineViewportExclusiveScissorStateCreateInfoNV.java",
+    "modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkPipelineViewportShadingRateImageStateCreateInfoNV.java",
+    "modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkRenderPassBeginInfo.java",
+    "modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkSwapchainCreateInfoKHR.java",
+    "modules/lwjgl/vulkan/src/templates/kotlin/vulkan/ExtensionTypes.kt",
+    "modules/lwjgl/vulkan/src/templates/kotlin/vulkan/VKTypes.kt"
+  ],
+  "reference_commit_message": "fix(Vulkan): respect more noautovalidity attribs. Close #673",
+  "shallow_history": true,
+  "extraction_method": "Explicit tree-to-tree diff, not shallow git show --stat"
+}

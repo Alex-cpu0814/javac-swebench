@@ -1,0 +1,10 @@
+LWJGL=3.3.0 SNAPSHOT
+JAVA=17.0.20.1
+OS_ARCH=amd64
+ATTACHMENT_COUNT=2
+P_ATTACHMENTS=NULL
+CALLING_OLD_GENERATED_VALIDATE
+Exception in thread "main" java.lang.NullPointerException
+	at org.lwjgl.system.Checks.check(Checks.java:188)
+	at org.lwjgl.vulkan.VkFramebufferCreateInfo.validate(VkFramebufferCreateInfo.java:459)
+	at VulkanFramebufferRepro.main(VulkanFramebufferRepro.java:25)

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-10-19T03:25:35 GMT" name="Command line suite" finished-at="2026-10-19T03:25:35 GMT" duration-ms="117">
+    <groups>
+    </groups>
+    <test started-at="2026-10-19T03:25:35 GMT" name="Command line test" finished-at="2026-10-19T03:25:35 GMT" duration-ms="117">
+      <class name="org.lwjgl.vulkan.VkFramebufferCreateInfoTest">
+        <test-method signature="testNullAttachmentsPassGeneratedValidation()[pri:0, instance:org.lwjgl.vulkan.VkFramebufferCreateInfoTest@dc24521]" started-at="2026-10-19T03:25:35 GMT" name="testNullAttachmentsPassGeneratedValidation" finished-at="2026-10-19T03:25:35 GMT" duration-ms="67" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNullAttachmentsPassGeneratedValidation -->
+        <test-method signature="testNullAttachmentsPreserveAttachmentCount()[pri:0, instance:org.lwjgl.vulkan.VkFramebufferCreateInfoTest@dc24521]" started-at="2026-10-19T03:25:35 GMT" name="testNullAttachmentsPreserveAttachmentCount" finished-at="2026-10-19T03:25:35 GMT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNullAttachmentsPreserveAttachmentCount -->
+      </class> <!-- org.lwjgl.vulkan.VkFramebufferCreateInfoTest -->
+      <class name="org.lwjgl.vulkan.VulkanTest">
+        <test-method signature="testParse()[pri:0, instance:org.lwjgl.vulkan.VulkanTest@544fe44c]" started-at="2026-10-19T03:25:35 GMT" name="testParse" finished-at="2026-10-19T03:25:35 GMT" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testParse -->
+      </class> <!-- org.lwjgl.vulkan.VulkanTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>

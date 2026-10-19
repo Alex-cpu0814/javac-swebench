@@ -1,7 +1,9 @@
 {
   "instance_id": "LWJGL__lwjgl3-673",
-  "validated_at_utc": "2026-10-19T03:42:56.554444+00:00",
+  "validated_at_utc": "2026-10-19T04:14:33.060999+00:00",
   "checks": {
+    "default_image_pinned_to_published_digest": true,
+    "local_build_uses_separate_tag": true,
     "standard_layout": true,
     "test_count": true,
     "p2p_record_consistent": true,

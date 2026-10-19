@@ -35,6 +35,9 @@ fails both target tests, official Fix passes all three, and protected-test
 precreation is rejected. Published clean Base image:
 `yutu0814/javac-case-056-lwjgl3:benchmark-v1` (digest
 `sha256:866ae42ecde1bbcaa0581fabe2380bdea159ed944f565066b7abe1c2922a7669`).
+Its evaluator defaults to the immutable `repository@sha256:...` reference.
+See the [case quick start](N_test_data/javac_case_056/README.md) for prerequisites,
+digest-pinned pull, reference-patch verification and candidate-patch evaluation.
 It uses a declared Ubuntu libffi PIC dependency and does not exercise a real
 Vulkan device. Fix was visible during test design; no blind-generation claim.
 

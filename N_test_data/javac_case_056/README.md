@@ -21,14 +21,41 @@ evaluator/         干净 Base 镜像构建、运行时注入、标准 Ant 评�
 verification/      历史日志及独立镜像的构建、审计、Base/Fix/篡改控制
 ```
 
-镜像已发布到 Docker Hub，按不可变 digest 拉取及干净 Base 审计均通过：
+使用要求：Docker（Linux 容器模式）、Git、宿主机 Python 3.10 或更新版本。
+镜像平台为 `linux/amd64`，ARM64/Apple Silicon 尚未验证。宿主机无需安装 Java、
+Ant、GCC 或 Vulkan 驱动。第一次拉取镜像需要网络，拉取后评测容器断网编译、测试。
+
+从公开仓库下载文件，并按不可变 digest 拉取已发布镜像：
 
 ```powershell
-docker pull yutu0814/javac-case-056-lwjgl3:benchmark-v1
-python evaluator/evaluate_model_patch.py --patch C:\path\candidate.diff
+git clone https://github.com/Alex-cpu0814/javac-swebench.git
+cd javac-swebench/N_test_data/javac_case_056
+docker pull yutu0814/javac-case-056-lwjgl3@sha256:866ae42ecde1bbcaa0581fabe2380bdea159ed944f565066b7abe1c2922a7669
 ```
 
-镜像 digest：`sha256:866ae42ecde1bbcaa0581fabe2380bdea159ed944f565066b7abe1c2922a7669`。
+先用官方修复补丁验证环境：
+
+```powershell
+python evaluator/evaluate_model_patch.py --patch patches/gold_patch.diff
+```
+
+预期 `status=resolved`，两个 FAIL_TO_PASS 和一个 PASS_TO_PASS 全部通过，退出码为 0。
+评测模型补丁时，将补丁保存为文件，再执行（替换为实际路径）：
+
+```powershell
+python evaluator/evaluate_model_patch.py --patch C:/path/candidate.diff
+```
+
+结果保存在 `verification/runs/<run-id>/`；`summary.json` 给出状态及计数，
+`grading.json` 给出逐项结果，`project-build.raw.log` 和 `tests.raw.log` 保存构建和测试日志。
+退出码 0 表示 resolved，1 表示 unresolved，2 表示基础设施错误。
+
+评测器默认使用上述 digest；即使 `benchmark-v1` 标签以后改变，也不会跟随改变。
+`--image` 可显式指定其他镜像，结果会记录实际引用。镜像默认入口是 Bash，
+直接 `docker run` 不会自动评测；完整评测由上述脚本注入补丁、受保护测试和评测器。
+镜像自身不包含修复补丁或受保护测试。
+
+Docker Hub：[yutu0814/javac-case-056-lwjgl3](https://hub.docker.com/r/yutu0814/javac-case-056-lwjgl3)。
 
 Base: `307ebed6ef6ba420b2165ddb2ec21dd9a37479df`  
 Fix: `ce56fc6c805ea671a4cf4e79abbd331688adfb6d`  

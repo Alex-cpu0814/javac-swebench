@@ -25,7 +25,7 @@ def main():
     parser.add_argument("--timeout", type=int, default=2400)
     args = parser.parse_args()
     config = json.loads((CASE / "evaluator/case_config.json").read_text(encoding="utf-8"))
-    image = args.image or config["image"]
+    image = args.image or config["build_image"]
     build_id = args.build_id or new_identifier("case-056-build")
     if not build_id or any(c not in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789._-" for c in build_id):
         raise SystemExit("Invalid build ID")

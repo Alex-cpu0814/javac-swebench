@@ -30,6 +30,13 @@ def main() -> int:
     args = parser.parse_args()
     errors = []
     checks = {}
+    checks["default_image_pinned_to_published_digest"] = (
+        CONFIG["image"] == "yutu0814/javac-case-056-lwjgl3@" + CONFIG["image_digest"]
+        and CONFIG["image_digest"] == "sha256:866ae42ecde1bbcaa0581fabe2380bdea159ed944f565066b7abe1c2922a7669"
+    )
+    checks["local_build_uses_separate_tag"] = (
+        CONFIG["build_image"] == "yutu0814/javac-case-056-lwjgl3:local-rebuild"
+    )
     official = CASE / "official_swebench"
     checksummed = [
         "instance_056.json", "instance_056.jsonl", "public_task_056.json", "metadata.json",

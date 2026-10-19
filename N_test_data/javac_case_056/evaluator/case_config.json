@@ -6,7 +6,8 @@
   "repo_url": "https://github.com/LWJGL/lwjgl3.git",
   "base_commit": "307ebed6ef6ba420b2165ddb2ec21dd9a37479df",
   "fix_commit": "ce56fc6c805ea671a4cf4e79abbd331688adfb6d",
-  "image": "yutu0814/javac-case-056-lwjgl3:benchmark-v1",
+  "image": "yutu0814/javac-case-056-lwjgl3@sha256:866ae42ecde1bbcaa0581fabe2380bdea159ed944f565066b7abe1c2922a7669",
+  "build_image": "yutu0814/javac-case-056-lwjgl3:local-rebuild",
   "source_file": "modules/lwjgl/vulkan/src/generated/java/org/lwjgl/vulkan/VkFramebufferCreateInfo.java",
   "test_file": "modules/lwjgl/vulkan/src/test/java/org/lwjgl/vulkan/VkFramebufferCreateInfoTest.java",
   "FAIL_TO_PASS": [

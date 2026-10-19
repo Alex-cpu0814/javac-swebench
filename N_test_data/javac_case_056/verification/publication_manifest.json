@@ -2,8 +2,8 @@
   "files": [
     {
       "path": "README.md",
-      "size": 11758,
-      "sha256": "18d311b2efe2c1b07f67acb11e28465192fc353e72f86e085eebe324f5e862ca"
+      "size": 11998,
+      "sha256": "7887878ce6cc9ed16ff1197ac4b7f414bf515f3bcfbd610fe47a4defc773efa7"
     },
     {
       "path": "N_test_data/javac_case_056/.gitattributes",
@@ -207,8 +207,8 @@
     },
     {
       "path": "N_test_data/javac_case_056/evaluator/build_model_evaluator.py",
-      "size": 7304,
-      "sha256": "3b4842892c2b7200d58fc4b3008cf9300e2c3979f1ba54bb514a7eb862f74abd"
+      "size": 7310,
+      "sha256": "f7c10a3cf6014e9ec0e61ff84149b5a89bee1ae8e6fc1324ec70165287411e98"
     },
     {
       "path": "N_test_data/javac_case_056/evaluator/build_project.py",
@@ -222,8 +222,8 @@
     },
     {
       "path": "N_test_data/javac_case_056/evaluator/case_config.json",
-      "size": 2475,
-      "sha256": "c30425d96780138fe19f6051bc40c2426c4390ec46b92c12a43a10cd0410063f"
+      "size": 2599,
+      "sha256": "e1518034c92beee24ae1852ed0fce3fe35681655aa8ec5e5805f518e1c1a8890"
     },
     {
       "path": "N_test_data/javac_case_056/evaluator/evaluate_model_patch.py",
@@ -252,8 +252,8 @@
     },
     {
       "path": "N_test_data/javac_case_056/evaluator/README.md",
-      "size": 1652,
-      "sha256": "8e7205e7c58af1acdf3f6077c7d0a30fbe2ce3b3cce0d7578df64d9580a336a3"
+      "size": 2701,
+      "sha256": "e3c717c35ee86c4197eacbcd1bec100759e22118a1d03fb622b5673f7043efe6"
     },
     {
       "path": "N_test_data/javac_case_056/evaluator/run_evaluation.sh",
@@ -272,8 +272,8 @@
     },
     {
       "path": "N_test_data/javac_case_056/evaluator/validate_package.py",
-      "size": 8103,
-      "sha256": "39d946ed5174de4586329ab2ff0b461855260a37fbe2cb43200050ce4f1a4fc7"
+      "size": 8500,
+      "sha256": "610d616848e04603d9a611c75b17a37d85d281619a108fdd5449d273a97f277c"
     },
     {
       "path": "N_test_data/javac_case_056/official_swebench/instance_056.json",
@@ -317,8 +317,8 @@
     },
     {
       "path": "N_test_data/javac_case_056/README.md",
-      "size": 2227,
-      "sha256": "b9307cb3367ef650b0ffafc4f720402266085df8bfc67fca6de468d8d3b18faf"
+      "size": 3700,
+      "sha256": "faf92d0bd5f491a3b5d20ab5b8c1a80bced6078923f0ef7d5f1af001580ee21d"
     },
     {
       "path": "N_test_data/javac_case_056/verification/builds/case-056-build-1/dependency-cache-manifest.json",
@@ -452,8 +452,8 @@
     },
     {
       "path": "N_test_data/javac_case_056/verification/layout_validation.json",
-      "size": 594,
-      "sha256": "a14d81d5498d78c5c13b002992508309a855e08e975c56b38348337aaf3dfdc7"
+      "size": 691,
+      "sha256": "981eee1f063036dceb8ff610d1f8b5f0f6a5eb968110b155dbdcbfaab847efb3"
     },
     {
       "path": "N_test_data/javac_case_056/verification/publication.json",
@@ -549,6 +549,86 @@
       "path": "N_test_data/javac_case_056/verification/runs/case-056-base-1/tests.raw.log",
       "size": 406,
       "sha256": "98b791726657ba6d21bf25486fd5a2aea76f68d6c2793394aecb4f5434f75461"
+    },
+    {
+      "path": "N_test_data/javac_case_056/verification/runs/case-056-digest-default-gold-1/docker-run.stderr.raw.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "N_test_data/javac_case_056/verification/runs/case-056-digest-default-gold-1/docker-run.stdout.raw.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "N_test_data/javac_case_056/verification/runs/case-056-digest-default-gold-1/events.jsonl",
+      "size": 3808,
+      "sha256": "0b5b9faa8ad91cd7d07ded1d64e68d2674fdaebc19d5e9baf6f9c10c9d0a3ed7"
+    },
+    {
+      "path": "N_test_data/javac_case_056/verification/runs/case-056-digest-default-gold-1/grading.json",
+      "size": 444,
+      "sha256": "2705ea3931a2c300b97b6efc43df2090454eb636026c17d67a5fbd5932a082a2"
+    },
+    {
+      "path": "N_test_data/javac_case_056/verification/runs/case-056-digest-default-gold-1/model-patch.raw.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "N_test_data/javac_case_056/verification/runs/case-056-digest-default-gold-1/phase.json",
+      "size": 112,
+      "sha256": "38c57ed2e59de48bba847bb87a2989bf0f95fdb4b2d8aacec162667001d72a22"
+    },
+    {
+      "path": "N_test_data/javac_case_056/verification/runs/case-056-digest-default-gold-1/project-build.raw.log",
+      "size": 9239,
+      "sha256": "0e8216847acbe2b56eaeb991ed6000bd7a9431553158e5444fc64b6255f18222"
+    },
+    {
+      "path": "N_test_data/javac_case_056/verification/runs/case-056-digest-default-gold-1/runner.stderr.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "N_test_data/javac_case_056/verification/runs/case-056-digest-default-gold-1/runner.stdout.log",
+      "size": 595,
+      "sha256": "43f54f5c9c9d8c6d2fc90d68e4efcc137311b7ba016ea9bd463e6b98b22fe792"
+    },
+    {
+      "path": "N_test_data/javac_case_056/verification/runs/case-056-digest-default-gold-1/sanitized_results.json",
+      "size": 685,
+      "sha256": "82424510d605f8884cea23e014b356b10be4c6205d61102a5ba2800dea27b3e3"
+    },
+    {
+      "path": "N_test_data/javac_case_056/verification/runs/case-056-digest-default-gold-1/summary.json",
+      "size": 1826,
+      "sha256": "40d080eddbf0730c67c96c354bc9a53a8f0517f16603d77dc2ac69694a63b52f"
+    },
+    {
+      "path": "N_test_data/javac_case_056/verification/runs/case-056-digest-default-gold-1/test-patch.raw.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "N_test_data/javac_case_056/verification/runs/case-056-digest-default-gold-1/test_compilation.private.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "N_test_data/javac_case_056/verification/runs/case-056-digest-default-gold-1/testng/testng-results.xml",
+      "size": 1962,
+      "sha256": "93fd9be18f681fb86a2f9636001cc89b601829f571b1ac478a9f71fb2656f07b"
+    },
+    {
+      "path": "N_test_data/javac_case_056/verification/runs/case-056-digest-default-gold-1/testng.private.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "N_test_data/javac_case_056/verification/runs/case-056-digest-default-gold-1/tests.raw.log",
+      "size": 406,
+      "sha256": "ab0d7450d3f50d52c144067c9e7b1e68cb15573179bb8f340a66ab1f1a28a997"
     },
     {
       "path": "N_test_data/javac_case_056/verification/runs/case-056-gold-1/docker-run.stderr.raw.log",
@@ -672,10 +752,10 @@
     },
     {
       "path": "N_test_data/javac_case_056/verification/runs/latest.json",
-      "size": 106,
-      "sha256": "36b812ceb92a78bae0aed8bd16a0534de0beb260a8d1d8307847149c66e7a8e4"
+      "size": 136,
+      "sha256": "b351b81fd6db385f9399ea3ea9db19a9e0c6fd9645afc935e73614cef8b26d25"
     }
   ],
-  "count": 135,
-  "bytes": 4529130
+  "count": 151,
+  "bytes": 4551623
 }

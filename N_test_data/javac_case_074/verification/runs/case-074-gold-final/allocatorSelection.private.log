@@ -1,0 +1,4 @@
+attempted_library=libjemalloc.so loaded=true
+pointer_size=8 bits64=true
+attempted_library=libjemalloc.so loaded=true
+[PASS] allocatorSelection

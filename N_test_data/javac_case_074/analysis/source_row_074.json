@@ -1,0 +1,36 @@
+{
+  "instance_id": "LWJGL__lwjgl3-115",
+  "source_case": "074",
+  "language_pair": "Java-C",
+  "repo": "LWJGL/lwjgl3",
+  "base_commit": "1fa5a394949cad836a104d8e5093f734d26ff8e1",
+  "fix_commit": "4fb6618bfd8990b8a0b805f589a76ff4a1b56684",
+  "commit_url": "https://github.com/LWJGL/lwjgl3/commit/4fb6618bfd8990b8a0b805f589a76ff4a1b56684",
+  "issue_url": "https://github.com/LWJGL/lwjgl3/issues/115",
+  "problem_statement": "On a 64-bit JVM, initializing LWJGL Pointer can cause the allocator to look for the 32-bit jemalloc library even though the process uses 64-bit pointers. Correct the initialization ordering so allocator selection uses the actual pointer width, while preserving the normal pointer-size result.",
+  "test_source": "synthetic_issue_derived_pointer_initialization_probe",
+  "test_files": [
+    "config/tests/case074/org/lwjgl/PointerBuffer.java",
+    "config/tests/case074/org/lwjgl/system/MemoryAccess.java",
+    "config/tests/case074/org/lwjgl/system/MemoryUtil.java",
+    "config/tests/case074/org/lwjgl/system/AllocatorProbe.java",
+    "config/tests/case074/org/lwjgl/system/PointerInitializationProbe.java",
+    "config/tests/case074/pointer_size.c",
+    "config/tests/case074/jemalloc_stub.c"
+  ],
+  "FAIL_TO_PASS": [
+    "org.lwjgl.system.PointerInitializationProbe::allocatorSelection"
+  ],
+  "PASS_TO_PASS": [
+    "org.lwjgl.system.PointerInitializationProbe::pointerWidth"
+  ],
+  "verification_status": "focused_reproduction_and_exact_commit_evaluator_verified_linux_equivalent_published",
+  "verification": {
+    "focused_reproduction_verified": true,
+    "exact_commit_evaluator_verified": true,
+    "base_run_id": "case-074-base-final",
+    "gold_run_id": "case-074-gold-final",
+    "test_tamper_run_id": "case-074-tamper-final",
+    "image_published": true
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "build_id": "case-074-build-final",
+  "image": "local/javac-case-074-lwjgl3:benchmark-v1",
+  "base_commit": "1fa5a394949cad836a104d8e5093f734d26ff8e1",
+  "status": "success",
+  "image_id": "sha256:bf12eb7755f877cb56804e10e4a1336856d076f7fe76c92935124febce443226",
+  "clean_base_verified": true,
+  "fix_object_absent": true,
+  "protected_tests_absent": true,
+  "project_binaries_absent": true
+}

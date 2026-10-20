@@ -1,0 +1,4 @@
+attempted_library=libjemalloc32.so loaded=false
+pointer_size=8 bits64=true
+attempted_library=libjemalloc32.so loaded=false
+[PASS] pointerWidth

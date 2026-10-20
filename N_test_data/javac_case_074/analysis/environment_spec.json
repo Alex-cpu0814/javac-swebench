@@ -1,0 +1,26 @@
+{
+  "instance_id": "LWJGL__lwjgl3-115",
+  "task_level": "Pointer initialization to JNI pointer width and allocator-name selection",
+  "validation_type": "runtime_class_initialization_and_library_selection",
+  "environment": "Linux x86_64; Eclipse Temurin Java 8; protected JNI and loadable jemalloc stub",
+  "python_version_target": "3.10+",
+  "java_requirement": "JDK 8",
+  "build_system": "Compile candidate Pointer.java from exact Base with protected stubs; full Ant/Kotlin build excluded",
+  "test_execution": "Two protected Java main-mode tests in separate JVMs",
+  "runtime_verified": true,
+  "reproduction_status": "focused_reproduction_and_exact_commit_evaluator_verified_linux_equivalent_published",
+  "base_commit": "1fa5a394949cad836a104d8e5093f734d26ff8e1",
+  "fix_commit": "4fb6618bfd8990b8a0b805f589a76ff4a1b56684",
+  "test_source": "synthetic_issue_derived_pointer_initialization_probe",
+  "FAIL_TO_PASS": [
+    "org.lwjgl.system.PointerInitializationProbe::allocatorSelection"
+  ],
+  "PASS_TO_PASS_COUNT": 1,
+  "verification": {
+    "exact_commit_evaluator_verified": true,
+    "clean_base_image_verified": true,
+    "full_ant_build_verified": false,
+    "original_windows_dll_verified": false,
+    "image_published": true
+  }
+}

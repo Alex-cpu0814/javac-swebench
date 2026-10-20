@@ -1,0 +1,15 @@
+{
+  "base_commit": "1fa5a394949cad836a104d8e5093f734d26ff8e1",
+  "fix_commit": "4fb6618bfd8990b8a0b805f589a76ff4a1b56684",
+  "pointer_path": "modules/core/src/main/java/org/lwjgl/system/Pointer.java",
+  "files": {
+    "base": {
+      "sha256": "3903517e459d28f4bcb42d84d6999b5bf8ae97877cb2d60751610927f25f91b5",
+      "source": "1fa5a394949cad836a104d8e5093f734d26ff8e1:modules/core/src/main/java/org/lwjgl/system/Pointer.java"
+    },
+    "fixed": {
+      "sha256": "84bf1f107a0666f61f74902dfcae6e180a930057d1858c2aa70695422bcec4df",
+      "source": "4fb6618bfd8990b8a0b805f589a76ff4a1b56684:modules/core/src/main/java/org/lwjgl/system/Pointer.java"
+    }
+  }
+}

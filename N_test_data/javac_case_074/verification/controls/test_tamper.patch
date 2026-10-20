@@ -1,0 +1,7 @@
+diff --git a/config/tests/case074/org/lwjgl/system/PointerInitializationProbe.java b/config/tests/case074/org/lwjgl/system/PointerInitializationProbe.java
+new file mode 100644
+--- /dev/null
++++ b/config/tests/case074/org/lwjgl/system/PointerInitializationProbe.java
+@@ -0,0 +1,2 @@
++package org.lwjgl.system;
++public final class PointerInitializationProbe {}

@@ -1,0 +1,47 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 679B 0.0s done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/eclipse-temurin:8-jdk-jammy
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 74B 0.0s done
+#3 DONE 0.0s
+
+#4 [1/5] FROM docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:185d4ef919b98cd195690c33f3fd93bd49c66c70f0b662e54566c0dbaebea6ce
+#4 resolve docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:185d4ef919b98cd195690c33f3fd93bd49c66c70f0b662e54566c0dbaebea6ce 0.0s done
+#4 DONE 0.0s
+
+#5 [2/5] RUN apt-get update     && apt-get install -y --no-install-recommends git python3 gcc libc6-dev     && rm -rf /var/lib/apt/lists/*
+#5 CACHED
+
+#6 [3/5] WORKDIR /testbed
+#6 DONE 0.0s
+
+#7 [internal] load build context
+#7 transferring context: 1.62MB 0.1s done
+#7 DONE 0.2s
+
+#8 [4/5] ADD base-git.tar.gz /testbed/.git/
+#8 DONE 0.1s
+
+#9 [5/5] RUN git config core.bare false     && git config core.autocrlf false     && git checkout --detach "1fa5a394949cad836a104d8e5093f734d26ff8e1"     && test -z "$(git status --porcelain)"     && mkdir -p /benchmark /inputs /results
+#9 0.299 HEAD is now at 1fa5a39 Update jemalloc version
+#9 DONE 0.4s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.3s done
+#10 exporting manifest sha256:a7abe041bb5ec341963d6a39184ed4b90b13f1e33b0f97c5bca93442451c2701 0.0s done
+#10 exporting config sha256:9501f87dac5eadff8f05357a484dd9058ac3ac6cd8be1ed4c943f43c733392bf 0.0s done
+#10 exporting attestation manifest sha256:4e0352d4d26eff90271aac0c3eb2b9f675fd2638d8e4e45b46cc7d28329fced2 0.0s done
+#10 exporting manifest list sha256:bf12eb7755f877cb56804e10e4a1336856d076f7fe76c92935124febce443226 0.0s done
+#10 naming to docker.io/local/javac-case-074-lwjgl3:benchmark-v1 done
+#10 unpacking to docker.io/local/javac-case-074-lwjgl3:benchmark-v1
+#10 unpacking to docker.io/local/javac-case-074-lwjgl3:benchmark-v1 0.2s done
+#10 DONE 0.6s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/qe4lbc4pnnil9negfld9g0ac0

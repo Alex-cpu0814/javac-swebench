@@ -1,0 +1,5 @@
+attempted_library=libjemalloc32.so loaded=false
+pointer_size=8 bits64=true
+attempted_library=libjemalloc32.so loaded=false
+Exception in thread "main" java.lang.AssertionError: 64-bit JVM selected the wrong jemalloc library
+	at org.lwjgl.system.PointerInitializationProbe.main(PointerInitializationProbe.java:26)

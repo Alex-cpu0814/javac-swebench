@@ -1,0 +1,12 @@
+{
+  "schema_version": "3.0",
+  "run_id": "case-074-tamper-final",
+  "tests_observed": 0,
+  "FAIL_TO_PASS": {
+    "org.lwjgl.system.PointerInitializationProbe::allocatorSelection": "MISSING"
+  },
+  "PASS_TO_PASS": {
+    "org.lwjgl.system.PointerInitializationProbe::pointerWidth": "MISSING"
+  },
+  "unexpected_failures": []
+}

@@ -1,0 +1,42 @@
+{
+  "template_version": "1.0",
+  "case_number": "074",
+  "instance_id": "LWJGL__lwjgl3-115",
+  "instance_file": "official_swebench/instance_074.json",
+  "repo_url": "https://github.com/LWJGL/lwjgl3.git",
+  "base_commit": "1fa5a394949cad836a104d8e5093f734d26ff8e1",
+  "fix_commit": "4fb6618bfd8990b8a0b805f589a76ff4a1b56684",
+  "image": "yutu0814/javac-case-074-lwjgl3@sha256:bf12eb7755f877cb56804e10e4a1336856d076f7fe76c92935124febce443226",
+  "build_image": "local/javac-case-074-lwjgl3:benchmark-v1",
+  "oracle_type": "runtime_behavior",
+  "evaluator_mode": "isolated_exact_base_pointer_initialization_probe",
+  "runtime_assets": [
+    {
+      "source": "evaluator/case_adapter.sh",
+      "target": "/benchmark/case_adapter.sh"
+    },
+    {
+      "source": "evaluator/build_project.py",
+      "target": "/benchmark/build_project.py"
+    },
+    {
+      "source": "evaluator/test_runner.py",
+      "target": "/benchmark/test_runner.py"
+    }
+  ],
+  "FAIL_TO_PASS": [
+    "org.lwjgl.system.PointerInitializationProbe::allocatorSelection"
+  ],
+  "PASS_TO_PASS": [
+    "org.lwjgl.system.PointerInitializationProbe::pointerWidth"
+  ],
+  "scope": [
+    "Linux x86_64, Java 8, exact parent source checkout",
+    "Compiles candidate Pointer.java with protected small MemoryUtil/MemoryAccess/allocator stubs",
+    "Native pointer width is returned by a protected JNI fixture; only 64-bit jemalloc stub exists",
+    "Full 2015 Ant/Kotlin build and real jemalloc library are outside this evaluator",
+    "Reference Fix was visible when the protected tests were designed"
+  ],
+  "model_evaluator_verified": true,
+  "image_id": "sha256:bf12eb7755f877cb56804e10e4a1336856d076f7fe76c92935124febce443226"
+}

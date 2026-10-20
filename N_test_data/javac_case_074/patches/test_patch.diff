@@ -1,0 +1,126 @@
+diff --git a/config/tests/case074/org/lwjgl/PointerBuffer.java b/config/tests/case074/org/lwjgl/PointerBuffer.java
+new file mode 100644
+--- /dev/null
++++ b/config/tests/case074/org/lwjgl/PointerBuffer.java
+@@ -0,0 +1,4 @@
++package org.lwjgl;
++
++/** Needed only by the upstream Pointer.java Javadoc and import. */
++public final class PointerBuffer {}
+diff --git a/config/tests/case074/org/lwjgl/system/MemoryAccess.java b/config/tests/case074/org/lwjgl/system/MemoryAccess.java
+new file mode 100644
+--- /dev/null
++++ b/config/tests/case074/org/lwjgl/system/MemoryAccess.java
+@@ -0,0 +1,10 @@
++package org.lwjgl.system;
++
++/** Focused replacement for the large upstream class. */
++final class MemoryAccess {
++    static {
++        System.load("/results/libpointerprobe.so");
++    }
++
++    static native int getPointerSize();
++}
+diff --git a/config/tests/case074/org/lwjgl/system/MemoryUtil.java b/config/tests/case074/org/lwjgl/system/MemoryUtil.java
+new file mode 100644
+--- /dev/null
++++ b/config/tests/case074/org/lwjgl/system/MemoryUtil.java
+@@ -0,0 +1,13 @@
++package org.lwjgl.system;
++
++/** Keeps the upstream initialization dependency relevant to issue #115. */
++final class MemoryUtil {
++    static {
++        System.load("/results/libpointerprobe.so");
++        AllocatorProbe.initialize();
++    }
++
++    static native int memGetPointerSize();
++
++    static void initialize() {}
++}
+diff --git a/config/tests/case074/org/lwjgl/system/AllocatorProbe.java b/config/tests/case074/org/lwjgl/system/AllocatorProbe.java
+new file mode 100644
+--- /dev/null
++++ b/config/tests/case074/org/lwjgl/system/AllocatorProbe.java
+@@ -0,0 +1,19 @@
++package org.lwjgl.system;
++
++/** Mimics the exact architecture choice in the pinned jemalloc Kotlin template. */
++final class AllocatorProbe {
++    static String attempted;
++    static boolean loaded;
++
++    static void initialize() {
++        String name = Pointer.BITS64 ? "jemalloc" : "jemalloc32";
++        attempted = "lib" + name + ".so";
++        try {
++            System.loadLibrary(name);
++            loaded = true;
++        } catch (UnsatisfiedLinkError error) {
++            loaded = false;
++        }
++        System.out.println("attempted_library=" + attempted + " loaded=" + loaded);
++    }
++}
+diff --git a/config/tests/case074/org/lwjgl/system/PointerInitializationProbe.java b/config/tests/case074/org/lwjgl/system/PointerInitializationProbe.java
+new file mode 100644
+--- /dev/null
++++ b/config/tests/case074/org/lwjgl/system/PointerInitializationProbe.java
+@@ -0,0 +1,29 @@
++package org.lwjgl.system;
++
++/** Protected issue-derived tests, run in separate JVMs. */
++public final class PointerInitializationProbe {
++    public static void main(String[] args) {
++        if (args.length != 1)
++            throw new IllegalArgumentException("Expected one test mode");
++        if (!System.getProperty("os.arch").contains("64"))
++            throw new AssertionError("A 64-bit JVM is required");
++
++        int size = Pointer.POINTER_SIZE;
++        MemoryUtil.initialize();
++        System.out.println("pointer_size=" + size + " bits64=" + Pointer.BITS64);
++        System.out.println("attempted_library=" + AllocatorProbe.attempted
++                + " loaded=" + AllocatorProbe.loaded);
++
++        if (size != 8 || !Pointer.BITS64)
++            throw new AssertionError("Native pointer width is incorrect");
++        if ("pointerWidth".equals(args[0])) {
++            System.out.println("[PASS] pointerWidth");
++            return;
++        }
++        if (!"allocatorSelection".equals(args[0]))
++            throw new IllegalArgumentException("Unknown mode: " + args[0]);
++        if (!"libjemalloc.so".equals(AllocatorProbe.attempted) || !AllocatorProbe.loaded)
++            throw new AssertionError("64-bit JVM selected the wrong jemalloc library");
++        System.out.println("[PASS] allocatorSelection");
++    }
++}
+diff --git a/config/tests/case074/pointer_size.c b/config/tests/case074/pointer_size.c
+new file mode 100644
+--- /dev/null
++++ b/config/tests/case074/pointer_size.c
+@@ -0,0 +1,14 @@
++#include <jni.h>
++
++/* Same JNI signatures and sizeof(void *) result as the two pinned C revisions. */
++JNIEXPORT jint JNICALL Java_org_lwjgl_system_MemoryUtil_memGetPointerSize(JNIEnv *env, jclass clazz) {
++    (void)env;
++    (void)clazz;
++    return (jint)sizeof(void *);
++}
++
++JNIEXPORT jint JNICALL Java_org_lwjgl_system_MemoryAccess_getPointerSize(JNIEnv *env, jclass clazz) {
++    (void)env;
++    (void)clazz;
++    return (jint)sizeof(void *);
++}
+diff --git a/config/tests/case074/jemalloc_stub.c b/config/tests/case074/jemalloc_stub.c
+new file mode 100644
+--- /dev/null
++++ b/config/tests/case074/jemalloc_stub.c
+@@ -0,0 +1,2 @@
++/* A loadable 64-bit library to make the wrong 32-bit selection observable. */
++int jemalloc_probe_stub(void) { return 64; }

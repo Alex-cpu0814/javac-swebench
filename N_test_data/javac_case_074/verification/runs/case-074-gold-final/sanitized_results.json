@@ -1,0 +1,15 @@
+{
+  "oracle_type": "runtime_behavior",
+  "phase": "runtime",
+  "infrastructure_error": false,
+  "tests": {
+    "org.lwjgl.system.PointerInitializationProbe::pointerWidth": {
+      "status": "passed",
+      "exit_code": 0
+    },
+    "org.lwjgl.system.PointerInitializationProbe::allocatorSelection": {
+      "status": "passed",
+      "exit_code": 0
+    }
+  }
+}

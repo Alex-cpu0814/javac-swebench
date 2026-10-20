@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+verification/runs/*/libpointerprobe.so
+verification/runs/*/libjemalloc.so
+verification/runs/*/test-classes/

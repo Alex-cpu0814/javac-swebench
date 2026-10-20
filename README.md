@@ -1,6 +1,6 @@
 # Java-C SWE-bench-compatible cases
 
-This repository contains twenty-one Java-C cross-language bug cases converted to a
+This repository contains twenty-two Java-C cross-language bug cases converted to a
 SWE-bench-compatible record format. Cases are separated by test provenance:
 `Y_test_data/` contains Fix commits with extractable official regression tests;
 `N_test_data/` contains cases whose protected tests were constructed, adapted,
@@ -24,6 +24,7 @@ or wrapped during dataset production.
 | N | 056 | `LWJGL__lwjgl3-673` | 673 | 2 | 1 |
 | N | 062 | `LWJGL__lwjgl3-496` | 496 | 1 | 1 |
 | N | 068 | `LWJGL__lwjgl3-418` | 418 | 1 | 1 |
+| N | 074 | `LWJGL__lwjgl3-115` | 115 | 1 | 1 |
 | N | 093 | `ninia__jep-79` | 79 | 1 | 130 |
 | N | 094 | `ninia__jep-40` | 40 | 1 | 95 |
 | N | 096 | `ninia__jep-22` | 22 | 1 | 78 |
@@ -96,6 +97,10 @@ The published image `yutu0814/javac-case-054-lwjgl3:benchmark-v1` (digest `sha25
 ## Case 068
 
 Case 068 checks the OpenVR `WaitGetPoses` optional game-pose buffer through a controlled native function-pointer stub. The exact Base source fails the null-buffer test with an NPE while the non-null control passes; the full upstream Fix passes both. The clean Base evaluator image and protected-test conflict control are verified. The Kotlin generator and full Ant build are outside this case's oracle. Published image: [`yutu0814/javac-case-068-lwjgl3:benchmark-v1`](https://hub.docker.com/r/yutu0814/javac-case-068-lwjgl3), digest `sha256:30a5258e746b1190c9b5d6c6aacbbaa04bdd0f11f4aff0b5605a3eeb8445dfaa`. See `N_test_data/javac_case_068/README.md` for evaluation steps.
+
+## Case 074
+
+Case 074 checks the initialization-order bug behind LWJGL issue #115. On Linux x86_64, the exact Base `Pointer.java` selects the missing 32-bit jemalloc name while retaining the correct 8-byte native pointer width; the upstream Fix selects the loadable 64-bit name. This is a Linux equivalent of the issue's Windows `jemalloc32.dll` error, not an exact replay of its exception or startup stack. The isolated evaluator's Base, Fix and protected-test-conflict controls are verified. It compiles candidate `Pointer.java` with protected stubs, not the complete 2015 Ant/Kotlin project. The evaluator image is [published on Docker Hub](https://hub.docker.com/r/yutu0814/javac-case-074-lwjgl3) and pinned by digest. See `N_test_data/javac_case_074/README.md`.
 
 ## Case 092
 

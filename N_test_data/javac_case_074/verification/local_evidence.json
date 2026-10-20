@@ -1,0 +1,36 @@
+{
+  "instance_id": "LWJGL__lwjgl3-115",
+  "base_commit": "1fa5a394949cad836a104d8e5093f734d26ff8e1",
+  "fix_commit": "4fb6618bfd8990b8a0b805f589a76ff4a1b56684",
+  "image_id": "sha256:bf12eb7755f877cb56804e10e4a1336856d076f7fe76c92935124febce443226",
+  "clean_base_image_verified": true,
+  "official_diff_exact": true,
+  "base_grading": {
+    "schema_version": "3.0",
+    "run_id": "case-074-base-final",
+    "tests_observed": 2,
+    "FAIL_TO_PASS": {
+      "org.lwjgl.system.PointerInitializationProbe::allocatorSelection": "FAILED"
+    },
+    "PASS_TO_PASS": {
+      "org.lwjgl.system.PointerInitializationProbe::pointerWidth": "PASSED"
+    },
+    "unexpected_failures": [
+      "org.lwjgl.system.PointerInitializationProbe::allocatorSelection"
+    ]
+  },
+  "gold_grading": {
+    "schema_version": "3.0",
+    "run_id": "case-074-gold-final",
+    "tests_observed": 2,
+    "FAIL_TO_PASS": {
+      "org.lwjgl.system.PointerInitializationProbe::allocatorSelection": "PASSED"
+    },
+    "PASS_TO_PASS": {
+      "org.lwjgl.system.PointerInitializationProbe::pointerWidth": "PASSED"
+    },
+    "unexpected_failures": []
+  },
+  "test_tamper_rejected": true,
+  "status": "published_completed"
+}

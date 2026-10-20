@@ -1,0 +1,9 @@
+{
+  "instance_id": "LWJGL__lwjgl3-115",
+  "repo": "LWJGL/lwjgl3",
+  "base_commit": "1fa5a394949cad836a104d8e5093f734d26ff8e1",
+  "problem_statement": "On a 64-bit JVM, initializing LWJGL Pointer can cause the allocator to look for the 32-bit jemalloc library even though the process uses 64-bit pointers. Correct the initialization ordering so allocator selection uses the actual pointer width, while preserving the normal pointer-size result.",
+  "hints_text": null,
+  "created_at": "2015-11-13",
+  "version": "3.0.0b"
+}

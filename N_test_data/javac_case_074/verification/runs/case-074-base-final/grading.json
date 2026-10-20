@@ -1,0 +1,14 @@
+{
+  "schema_version": "3.0",
+  "run_id": "case-074-base-final",
+  "tests_observed": 2,
+  "FAIL_TO_PASS": {
+    "org.lwjgl.system.PointerInitializationProbe::allocatorSelection": "FAILED"
+  },
+  "PASS_TO_PASS": {
+    "org.lwjgl.system.PointerInitializationProbe::pointerWidth": "PASSED"
+  },
+  "unexpected_failures": [
+    "org.lwjgl.system.PointerInitializationProbe::allocatorSelection"
+  ]
+}

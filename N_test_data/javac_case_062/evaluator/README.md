@@ -1,0 +1,5 @@
+# Candidate patch evaluator
+
+The evaluator follows the same runtime patch-injection contract as adjacent cases: clean Base image, candidate patch, protected test patch, source build, two selected test nodes, and structured grading. `build_model_evaluator.py` prepares a shallow Base-only Git store; the image contains no Fix object or protected test. The Ant source build regenerates bindings and compiles current Java/JNI code.
+
+Build and run commands are in the case README. `prepare_dependencies.py` downloads the compiler and Java dependencies declared by the Base commit and checks pinned hashes. The bundled dyncall source archive is from LWJGL-CI's 2018 rev. 291; the image builds its three static libraries from source. `build_model_evaluator.py` produces the local tag `local/javac-case-062-lwjgl3:benchmark-v1`. The evaluator defaults to the published immutable digest `yutu0814/javac-case-062-lwjgl3@sha256:a6b182c03068ba6e408878304674f3a8ae922f42b6399c3f1b82fd34166a40a5`. Base, gold, and protected-test conflict controls were run against this exact image ID.

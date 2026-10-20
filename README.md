@@ -1,6 +1,6 @@
 # Java-C SWE-bench-compatible cases
 
-This repository contains nineteen Java-C cross-language bug cases converted to a
+This repository contains twenty Java-C cross-language bug cases converted to a
 SWE-bench-compatible record format. Cases are separated by test provenance:
 `Y_test_data/` contains Fix commits with extractable official regression tests;
 `N_test_data/` contains cases whose protected tests were constructed, adapted,
@@ -22,6 +22,7 @@ or wrapped during dataset production.
 | N | 053 | `LWJGL__lwjgl3-879` | 879 | 1 | 3 |
 | N | 054 | `LWJGL__lwjgl3-755` | 755 | 2 | 30 |
 | N | 056 | `LWJGL__lwjgl3-673` | 673 | 2 | 1 |
+| N | 062 | `LWJGL__lwjgl3-496` | 496 | 1 | 1 |
 | N | 093 | `ninia__jep-79` | 79 | 1 | 130 |
 | N | 094 | `ninia__jep-40` | 40 | 1 | 95 |
 | N | 096 | `ninia__jep-22` | 22 | 1 | 78 |
@@ -40,6 +41,14 @@ See the [case quick start](N_test_data/javac_case_056/README.md) for prerequisit
 digest-pinned pull, reference-patch verification and candidate-patch evaluation.
 It uses a declared Ubuntu libffi PIC dependency and does not exercise a real
 Vulkan device. Fix was visible during test design; no blind-generation claim.
+
+Case [N/062](N_test_data/javac_case_062/README.md) packages the LWJGL
+`clang_getCString` struct-by-value bug. The exact Base fails its issue-derived
+binding test while the direct CXString control passes; the complete Fix passes
+both. The published clean-Base Docker evaluator and protected-test conflict
+control are verified. Pull the image at immutable digest
+`yutu0814/javac-case-062-lwjgl3@sha256:a6b182c03068ba6e408878304674f3a8ae922f42b6399c3f1b82fd34166a40a5`.
+See the [case quick start](N_test_data/javac_case_062/README.md).
 
 Case 099 verifies the upstream fix that moves JEP's Java-method cache from
 process-global state into each Jep interpreter. Its protected child-JVM test

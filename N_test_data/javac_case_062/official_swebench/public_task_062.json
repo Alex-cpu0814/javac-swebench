@@ -1,0 +1,9 @@
+{
+  "instance_id": "LWJGL__lwjgl3-496",
+  "repo": "LWJGL/lwjgl3",
+  "base_commit": "2c8811383487cd827f375abdc534a5d40a174edc",
+  "problem_statement": "On Linux x86_64, LWJGL LLVM/Clang bindings pass CXString struct arguments incorrectly by value. A valid CXString obtained from clang_getTranslationUnitSpelling can be read through its data pointer, but clang_getCString returns an incorrect string. The generator and generated Java/JNI bindings should pass struct-by-value arguments according to the native ABI. See https://github.com/LWJGL/lwjgl3/issues/496 .",
+  "hints_text": null,
+  "created_at": "2019-08-22",
+  "version": "3.2.2"
+}

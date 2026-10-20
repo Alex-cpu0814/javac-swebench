@@ -1,0 +1,33 @@
+{
+  "instance_id": "LWJGL__lwjgl3-496",
+  "source_case": "062",
+  "language_pair": "Java-C",
+  "repo": "LWJGL/lwjgl3",
+  "base_commit": "2c8811383487cd827f375abdc534a5d40a174edc",
+  "fix_commit": "50869cf9638ef2225a5ca141bf89d617a920a762",
+  "commit_url": "https://github.com/LWJGL/lwjgl3/commit/50869cf9638ef2225a5ca141bf89d617a920a762",
+  "issue_url": "https://github.com/LWJGL/lwjgl3/issues/496",
+  "problem_statement": "On Linux x86_64, LWJGL LLVM/Clang bindings pass CXString struct arguments incorrectly by value. A valid CXString obtained from clang_getTranslationUnitSpelling can be read through its data pointer, but clang_getCString returns an incorrect string. The generator and generated Java/JNI bindings should pass struct-by-value arguments according to the native ABI. See https://github.com/LWJGL/lwjgl3/issues/496 .",
+  "test_source": "synthetic_issue_derived_java_native_regression",
+  "test_files": [
+    "modules/lwjgl/llvm/src/test/java/org/lwjgl/llvm/ClangCStringRegressionTest.java",
+    "config/tests/clang_cstring_fixture.c"
+  ],
+  "FAIL_TO_PASS": [
+    "org.lwjgl.llvm.ClangCStringRegressionTest::binding"
+  ],
+  "PASS_TO_PASS": [
+    "org.lwjgl.llvm.ClangCStringRegressionTest::direct"
+  ],
+  "verification_status": "release_and_exact_commit_verified_local",
+  "verification": {
+    "release_comparison_verified": true,
+    "release_base": "3.2.2",
+    "release_fix": "3.2.3",
+    "release_base_log": "verification/release_comparison/cstring-3.2.2.log",
+    "release_fix_log": "verification/release_comparison/cstring-3.2.3.log",
+    "exact_commit_evaluator_verified": true,
+    "formal_case_completed": true,
+    "image_published": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": "3.0",
+  "run_id": "case-062-gold-final",
+  "tests_observed": 2,
+  "FAIL_TO_PASS": {
+    "org.lwjgl.llvm.ClangCStringRegressionTest::binding": "PASSED"
+  },
+  "PASS_TO_PASS": {
+    "org.lwjgl.llvm.ClangCStringRegressionTest::direct": "PASSED"
+  },
+  "unexpected_failures": []
+}

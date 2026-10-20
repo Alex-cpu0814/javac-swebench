@@ -1,0 +1,1 @@
+{"oracle_type": "runtime_behavior", "phase": "call", "infrastructure_error": false, "tests": {"org.lwjgl.llvm.ClangCStringRegressionTest::direct": {"status": "passed", "exit_code": 0}, "org.lwjgl.llvm.ClangCStringRegressionTest::binding": {"status": "failed", "exit_code": 1}}}

@@ -1,0 +1,36 @@
+{
+  "template_version": "1.0",
+  "case_number": "062",
+  "instance_id": "LWJGL__lwjgl3-496",
+  "instance_file": "official_swebench/instance_062.json",
+  "repo_url": "https://github.com/LWJGL/lwjgl3.git",
+  "base_commit": "2c8811383487cd827f375abdc534a5d40a174edc",
+  "fix_commit": "50869cf9638ef2225a5ca141bf89d617a920a762",
+  "image": "yutu0814/javac-case-062-lwjgl3@sha256:a6b182c03068ba6e408878304674f3a8ae922f42b6399c3f1b82fd34166a40a5",
+  "build_image": "local/javac-case-062-lwjgl3:benchmark-v1",
+  "oracle_type": "runtime_behavior",
+  "runtime_assets": [
+    {
+      "source": "evaluator/case_adapter.sh",
+      "target": "/benchmark/case_adapter.sh"
+    },
+    {
+      "source": "evaluator/build_project.py",
+      "target": "/benchmark/build_project.py"
+    },
+    {
+      "source": "evaluator/test_runner.py",
+      "target": "/benchmark/test_runner.py"
+    }
+  ],
+  "python_version": "3.10",
+  "python_sha256": "system_python",
+  "extra_apt_packages": [],
+  "FAIL_TO_PASS": [
+    "org.lwjgl.llvm.ClangCStringRegressionTest::binding"
+  ],
+  "PASS_TO_PASS": [
+    "org.lwjgl.llvm.ClangCStringRegressionTest::direct"
+  ],
+  "model_evaluator_verified": true
+}

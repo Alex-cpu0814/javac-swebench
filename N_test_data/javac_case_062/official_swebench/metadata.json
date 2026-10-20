@@ -1,0 +1,95 @@
+{
+  "dataset_schema_version": "1.0",
+  "source_case": "062",
+  "dataset_variant": "N_test_data",
+  "test_source": "synthetic_issue_derived_java_native_regression",
+  "PASS_TO_PASS_COUNT": 1,
+  "FAIL_TO_PASS": [
+    "org.lwjgl.llvm.ClangCStringRegressionTest::binding"
+  ],
+  "PASS_TO_PASS": [
+    "org.lwjgl.llvm.ClangCStringRegressionTest::direct"
+  ],
+  "standard_layout": true,
+  "verification": {
+    "release_comparison_verified": true,
+    "release_base": "3.2.2",
+    "release_fix": "3.2.3",
+    "release_base_log": "verification/release_comparison/cstring-3.2.2.log",
+    "release_fix_log": "verification/release_comparison/cstring-3.2.3.log",
+    "base_fails": true,
+    "fix_passes": true,
+    "docker_verified": true,
+    "runtime_verified": true,
+    "model_evaluator_verified": true,
+    "clean_base_image_verified": true,
+    "full_base_build_verified": true,
+    "full_fix_build_verified": true,
+    "generator_regeneration_verified": true,
+    "current_jni_built_from_source": true,
+    "project_binary_reuse": false,
+    "PASS_TO_PASS_verified": true,
+    "exact_commit_evaluator_verified": true,
+    "base_run_id": "case-062-base-final",
+    "gold_run_id": "case-062-gold-final",
+    "test_tamper_run_id": "case-062-tamper-final",
+    "test_tamper_rejected": true,
+    "image": "local/javac-case-062-lwjgl3:benchmark-v1",
+    "image_id": "sha256:a6b182c03068ba6e408878304674f3a8ae922f42b6399c3f1b82fd34166a40a5",
+    "image_build_id": "case-062-build-final-default",
+    "base_grading": {
+      "FAIL_TO_PASS": {"org.lwjgl.llvm.ClangCStringRegressionTest::binding": "FAILED"},
+      "PASS_TO_PASS": {"org.lwjgl.llvm.ClangCStringRegressionTest::direct": "PASSED"}
+    },
+    "gold_grading": {
+      "FAIL_TO_PASS": {"org.lwjgl.llvm.ClangCStringRegressionTest::binding": "PASSED"},
+      "PASS_TO_PASS": {"org.lwjgl.llvm.ClangCStringRegressionTest::direct": "PASSED"}
+    },
+    "formal_case_completed": true,
+    "image_published": true,
+    "registry_pull_verified": true,
+    "registry_public_access_verified": true,
+    "published_image_audit_passed": true,
+    "published_image_digest": "sha256:a6b182c03068ba6e408878304674f3a8ae922f42b6399c3f1b82fd34166a40a5"
+  },
+  "base_commit": "2c8811383487cd827f375abdc534a5d40a174edc",
+  "fix_commit": "50869cf9638ef2225a5ca141bf89d617a920a762",
+  "repo": "LWJGL/lwjgl3",
+  "patch_provenance": {
+    "source": "Local git diff of pinned Fix and its sole parent",
+    "official_diff_complete": true,
+    "changed_file_count": 14,
+    "information_boundary": "Fix and reference patch known during test design"
+  },
+  "instance_id": "LWJGL__lwjgl3-496",
+  "test_files": [
+    "modules/lwjgl/llvm/src/test/java/org/lwjgl/llvm/ClangCStringRegressionTest.java",
+    "config/tests/clang_cstring_fixture.c"
+  ],
+  "project_version": "3.2.2",
+  "scope": [
+    "Linux x86_64; Java 11; LLVM/Clang native ABI",
+    "Standard Ant cold source build of Core and LLVM: Kotlin generator/templates, regenerated bindings, Java and current JNI",
+    "Kotlin 1.3.50 and Maven artifacts pinned by SHA-256; LWJGL-CI dyncall 2018 rev. 291 built from pinned source",
+    "Ubuntu libffi PIC archive and libclang 14 are explicit external dependency adaptations",
+    "One issue-derived LLVM/Clang binding test and one direct CXString control; no broad Clang API coverage",
+    "Fix source and reference changes were visible during test design; no blinded-generation or independent-review claim",
+    "Published image is digest-pinned; candidate evaluation still runs with no container network"
+  ],
+  "status": "published_completed",
+  "publication": {
+    "status": "published_completed",
+    "image": "yutu0814/javac-case-062-lwjgl3:benchmark-v1",
+    "digest": "sha256:a6b182c03068ba6e408878304674f3a8ae922f42b6399c3f1b82fd34166a40a5",
+    "docker_hub": "https://hub.docker.com/r/yutu0814/javac-case-062-lwjgl3",
+    "github_repository": "Alex-cpu0814/javac-swebench",
+    "github_case_path": "N_test_data/javac_case_062",
+    "github_case_url": "https://github.com/Alex-cpu0814/javac-swebench/tree/main/N_test_data/javac_case_062",
+    "image_published": true,
+    "github_published": true,
+    "registry_pull_verified": true,
+    "registry_public_access_verified": true,
+    "published_image_audit_passed": true,
+    "github_publication_method": "isolated Git clone; case 062 and root README only"
+  }
+}

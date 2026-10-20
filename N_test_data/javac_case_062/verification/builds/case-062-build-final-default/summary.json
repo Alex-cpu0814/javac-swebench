@@ -1,0 +1,16 @@
+{
+  "build_id": "case-062-build-final-default",
+  "status": "success",
+  "image": {
+    "name": "local/javac-case-062-lwjgl3:benchmark-v1",
+    "id": "sha256:a6b182c03068ba6e408878304674f3a8ae922f42b6399c3f1b82fd34166a40a5",
+    "repo_digests": [
+      "local/javac-case-062-lwjgl3@sha256:a6b182c03068ba6e408878304674f3a8ae922f42b6399c3f1b82fd34166a40a5"
+    ]
+  },
+  "started_at": "2026-10-20T04:44:15.547Z",
+  "base_commit": "2c8811383487cd827f375abdc534a5d40a174edc",
+  "instance_id": "LWJGL__lwjgl3-496",
+  "reason": "standard_base_build_and_clean_image_audit_passed",
+  "finished_at": "2026-10-20T04:44:40.033Z"
+}

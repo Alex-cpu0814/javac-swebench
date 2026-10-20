@@ -1,0 +1,466 @@
+[
+  {
+    "path": "java/commons-math3.jar",
+    "sha256": "1e56d7b058d28b65abd256b8458e3885b674c1d588fa43cd7d1cbb9c7ef2b308"
+  },
+  {
+    "path": "java/jcommander.jar",
+    "sha256": "e0de160b129b2414087e01fe845609cd55caec6820cfd4d0c90fabcc7bdb8c1e"
+  },
+  {
+    "path": "java/jmh-core.jar",
+    "sha256": "79aecd73ffb5d95d88b1ac36b505fa30ae3e83788e936838e2be9a51074fd2dd"
+  },
+  {
+    "path": "java/jmh-generator-annprocess.jar",
+    "sha256": "c5636ecbc617732f5acf41f94521cf6ae4f5bc6ad3512e82416fbbaabe805fe5"
+  },
+  {
+    "path": "java/joml.jar",
+    "sha256": "324005d2d924de9003c75627eea2123cc5a1e6905e01510cc5948b0978bf4709"
+  },
+  {
+    "path": "java/jopt-simple.jar",
+    "sha256": "df26cc58f235f477db07f753ba5a3ab243ebe5789d9f89ecf68dd62ea9a66c28"
+  },
+  {
+    "path": "java/jsr305.jar",
+    "sha256": "766ad2a0783f2687962c8ad74ceecc38a28b9f72a2d085ee438b7813e928d0c7"
+  },
+  {
+    "path": "java/testng.jar",
+    "sha256": "7266b68b9668ea0c4e86e384fd72ccaa29a20a2538b20c586fd3902f008b114e"
+  },
+  {
+    "path": "kotlinc/bin/kapt",
+    "sha256": "4df1dcb1e81b3212476dcaa9192994f053e9832ff0a2de82d119e0bb4b105040"
+  },
+  {
+    "path": "kotlinc/bin/kapt.bat",
+    "sha256": "658fd23475bd60f7adc4c3c76dbd1dd738ceec9549cba80690e068c553e71185"
+  },
+  {
+    "path": "kotlinc/bin/kotlin",
+    "sha256": "c61f1228f0bae319c95dacb041d118fbb3b628fcf3e0ff8942d9b34cdc523184"
+  },
+  {
+    "path": "kotlinc/bin/kotlin-dce-js",
+    "sha256": "8dd472237d5380deeb0791685d62d1f03b95595803eb5300ea8aa6ed07072c53"
+  },
+  {
+    "path": "kotlinc/bin/kotlin-dce-js.bat",
+    "sha256": "f8b21d9b52128d6287665dd53b6e30472e92bac7bed5d8508c3c0fb8edb8c627"
+  },
+  {
+    "path": "kotlinc/bin/kotlin.bat",
+    "sha256": "b67f78f935faa755dd49dcf2836a30a2eadf360e0eb7ff135f53e84017e8f056"
+  },
+  {
+    "path": "kotlinc/bin/kotlinc",
+    "sha256": "00ffd219dcb0fd9d99d927002743ae30d6108f7fb56c8c057dd60c3a4f39dd76"
+  },
+  {
+    "path": "kotlinc/bin/kotlinc-js",
+    "sha256": "3e60f48379b867e905296e7ff5cedcfb8379e72cb7507b3321a3542d180e1449"
+  },
+  {
+    "path": "kotlinc/bin/kotlinc-js.bat",
+    "sha256": "a6da3376b1501d9fc883f61c2406f5324a9b0289442adf91dd3e61a3eb60ed66"
+  },
+  {
+    "path": "kotlinc/bin/kotlinc-jvm",
+    "sha256": "9214edaa1514988a8e297adab9edbcdca31bd2286daffed97ae1dccfb5c5fc7b"
+  },
+  {
+    "path": "kotlinc/bin/kotlinc-jvm.bat",
+    "sha256": "36caea509570bdc216b3f7b21fe77cb0b74e54a530caf7853f770c94806f8a64"
+  },
+  {
+    "path": "kotlinc/bin/kotlinc.bat",
+    "sha256": "80cbfcd8e258942c42ced8ee9dd2ec919f9eac26cd69843cdaf9d4192ad83b6f"
+  },
+  {
+    "path": "kotlinc/build.txt",
+    "sha256": "fb67337e7f65b8e044849916b11f923a2277b87641d14f5bdb0acc0ee97693e0"
+  },
+  {
+    "path": "kotlinc/lib/allopen-compiler-plugin.jar",
+    "sha256": "2bf45168133f500291c60139b2f134f4a76e76d80c732aa545b2ed8648fc9a65"
+  },
+  {
+    "path": "kotlinc/lib/android-extensions-compiler.jar",
+    "sha256": "515fe66ae84bbf9c8b98b2fbb22f2474f88180d8ba7ea71211e46b0530ee11e7"
+  },
+  {
+    "path": "kotlinc/lib/android-extensions-runtime.jar",
+    "sha256": "dff7cf61e085368dd7c7fe0e07e7bd3da4bb9b0015a1ee3bf531d67adea793d6"
+  },
+  {
+    "path": "kotlinc/lib/annotations-13.0.jar",
+    "sha256": "ace2a10dc8e2d5fd34925ecac03e4988b2c0f851650c94b8cef49ba1bd111478"
+  },
+  {
+    "path": "kotlinc/lib/atomicfu-common-0.11.12.jar",
+    "sha256": "ef78e68140c10c3e186b67c219877c01ccd98ccd505b2463f86aec3ed243da0e"
+  },
+  {
+    "path": "kotlinc/lib/config-1.3.1.jar",
+    "sha256": "e6fadfc6108220d3a6b86aa7e4e16c9e7bb857ba58955886308bb13972264af0"
+  },
+  {
+    "path": "kotlinc/lib/jvm-abi-gen.jar",
+    "sha256": "e8f19e939c09f2af460b2f021a292db2f78fb5382da9b7fbfb2e04a45bd917a9"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-annotation-processing-cli.jar",
+    "sha256": "8faa489512fe5b9a04978dd4d5a42ce4d1159a1ac0c833ac7f428b2fe9770d33"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-annotation-processing-runtime.jar",
+    "sha256": "814d54c4b7e4b11cfe040d59039485bef428e23bf04714f3cd92470537300e5c"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-annotation-processing.jar",
+    "sha256": "141b04c6972d16451147c0ccdb2ba6991b10cdbd85017dc7ca4d283c7218de3f"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-annotations-android.jar",
+    "sha256": "df49beaaba6b76dea058981071fc28f2bf2e98a22bc9bebb4a83800848e139a2"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-annotations-jvm-sources.jar",
+    "sha256": "eea63129adeae054df2f3a6a2084f86063e7abcb82f83d117ce2e1da01cd8cae"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-annotations-jvm.jar",
+    "sha256": "52c493a571c9ca958a78081a815d4187186a640ff1d8257168f8c73baa8b68af"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-ant.jar",
+    "sha256": "7380228bbd62520c5ef9c6c8fac320825aa57b085074e9805e81e347c76bbab5"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-compiler.jar",
+    "sha256": "7ce90b90b616f70ec40cc47e085dc41ab8edd204524b1c651d037eeea4a4e010"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-daemon-client-new.jar",
+    "sha256": "ade5b9c90ff6b408598246654574fdf56c8ce2c3ba3df45c1917248854f10146"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-daemon-client.jar",
+    "sha256": "54353e8827fc9852bff8ecfee438ef4128b6fc403e52fe9534cfd954aa6ea046"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-daemon.jar",
+    "sha256": "afe73fa31e5a7d568245e557427ddcf0ca3aa5acc66b652e117dea6b3bddaa94"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-imports-dumper-compiler-plugin.jar",
+    "sha256": "d853f2f40eeece1d58b335a91e5a99e364a0d32dfd3c3d50fed38f6c131dea4c"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-main-kts.jar",
+    "sha256": "275cd1787934c05bb46edc958cb23ad69f0830b7c79074ce192f4b5ab5a01304"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-preloader.jar",
+    "sha256": "46e54b02a169aa9a53a210e0c2ead38c3d2de9b9cdc8467c050372802f9673e4"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-reflect-sources.jar",
+    "sha256": "13e35d31921fcf69b8355a91eff5a591a907ca4aa693e94015a462ccbad9792a"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-reflect.jar",
+    "sha256": "c6dd653c38301d0bdd77be29b7f038c96e115d1e902910c7485364e7f466ddb7"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-runner.jar",
+    "sha256": "3ea711e2f403bfd3ca48339a8e79920d88420f4ea9d064507a37c81c87ec915e"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-script-runtime-sources.jar",
+    "sha256": "c1ea8d9a865405986fc91a0ec4d4465840decd8fe7a8a7b8207b8f4f21b26cfe"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-script-runtime.jar",
+    "sha256": "f6fd04b7b697b8c923b4a39bdfc2d9c54ceeacfe35f15881b41a1c546ee6bee8"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-scripting-common.jar",
+    "sha256": "a893f5893a75547c5dc1deafc00c19b10d9e80f1c6f73e31d7432188f8184b86"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-scripting-compiler-impl.jar",
+    "sha256": "e7f57a18ef20fc671637e19c00e10de568a7cb9f0d3d19d23af92a5f04c02ca1"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-scripting-compiler.jar",
+    "sha256": "0c9ae25107edb24845fe875d5d285b1afd267896296aac6491cae43601d962f9"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-scripting-jvm.jar",
+    "sha256": "00f0b03bf909f69f1cb999bba21f85031fd60cf1025535d4770204301818d4b2"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-source-sections-compiler-plugin.jar",
+    "sha256": "5ea3bb9cc57f53959fdde32d30f2d87ec434690b6e08175396a899a54cfe6af0"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-stdlib-jdk7-sources.jar",
+    "sha256": "fd5fe9fb592bd0398ebc4700d01f398a95f4f599d802106db4185096f6f5b200"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-stdlib-jdk7.jar",
+    "sha256": "40bc989946a9868489c0a505f90b02b0e26f8954741c99f00610fc53d6926904"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-stdlib-jdk8-sources.jar",
+    "sha256": "3ec22977996af7317ef8e98a451d18231f9c03cc0771d4846c0e93a522774c53"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-stdlib-jdk8.jar",
+    "sha256": "e782b244ceba782b4e921af08c2e306b3912ab508ef310d88e743c6b5d45862f"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-stdlib-js-sources.jar",
+    "sha256": "1b3e7e7e5d4d6fac1d1ab07bafd3edb4624ddce7a70eaea851a9f3a79ca7701e"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-stdlib-js.jar",
+    "sha256": "3c83bc52af3d8562307089db775420a0342a3a11e4498659ec0d77bce66bcb95"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-stdlib-sources.jar",
+    "sha256": "fae43b0a073fc0ed8303c3670474db075e28af3f73160d48ad3c50d147eba7a5"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-stdlib.jar",
+    "sha256": "144e7168753a90dd183cf90772c712cd3318e7cd5f223b49e2df9ea4e5b37647"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-test-js-sources.jar",
+    "sha256": "c89f4a33de654e9796bb90ddebfca306a68b051dcd6224201fd05eed7d9e3aca"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-test-js.jar",
+    "sha256": "024225e104541f4d4fb0d88d5cb28585e9317cf002893ff01649880b428a58fc"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-test-junit-sources.jar",
+    "sha256": "ba80a56e19f6477d008b655e8d544683b8de4ab1f96976303a196280b33b0644"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-test-junit.jar",
+    "sha256": "68b5e29171b255cf6128099c166bf9f5c7ffdea700a661a13419e4792e3594b0"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-test-junit5-sources.jar",
+    "sha256": "5e5e766a0e18ea27ae9720e99c3d5a0cad1839a08cbe4f43188070d685f2023f"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-test-junit5.jar",
+    "sha256": "374a436f4208b4e15c4f1ac70d67f3d61b62e29704ff5a37a59d535d45e350da"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-test-sources.jar",
+    "sha256": "b40c98672dd072c0db16353c989c77f20454ed9d614c71099fda725e2a244485"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-test-testng-sources.jar",
+    "sha256": "37e4f75a6e3ba359c622e7ca0c354a3a3858d4595de777666fd90049f648eace"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-test-testng.jar",
+    "sha256": "55a7077ef5e418c61efa69e14eb876f0567306a776a9f62b16d6ff936310c608"
+  },
+  {
+    "path": "kotlinc/lib/kotlin-test.jar",
+    "sha256": "9fc9492514b3fc17445af49a882bfd0ac16c1ae72c64027308f7bf6f94a2120d"
+  },
+  {
+    "path": "kotlinc/lib/kotlinx-coroutines-core-1.0.1.jar",
+    "sha256": "1bbc516011181c35c23552f39584d9e1dcc46c2c38486c8e71d56060a6722a12"
+  },
+  {
+    "path": "kotlinc/lib/kotlinx-coroutines-core-common-1.0.1.jar",
+    "sha256": "1fb02f239ac87ab97d2b6478dca2ef769d4d20390a1e4d77ccf40bd4b45cf043"
+  },
+  {
+    "path": "kotlinc/lib/kotlinx-coroutines-io-0.1.1.jar",
+    "sha256": "770e2bdaa008421cc5c057e2648a23ad50eb32a8aaa9e5116e2e7e73b18447f9"
+  },
+  {
+    "path": "kotlinc/lib/kotlinx-coroutines-io-jvm-0.1.1.jar",
+    "sha256": "0b36e896b7efe54141d8d1f14a4902338ef90190d7c3670c10101271c5dc963e"
+  },
+  {
+    "path": "kotlinc/lib/kotlinx-coroutines-jdk8-1.0.1.jar",
+    "sha256": "bd6f6098d752312d82446587efa68bfdf0faa14cf8c99d00a5128f85c888a270"
+  },
+  {
+    "path": "kotlinc/lib/kotlinx-io-0.1.1.jar",
+    "sha256": "8601ff4639f672f16b42825af8eab939b32b37fffa00a55247308e43840f5cd5"
+  },
+  {
+    "path": "kotlinc/lib/kotlinx-io-jvm-0.1.1.jar",
+    "sha256": "866003a483c5f715fe316bf30d42699a60eb5eaf7c9c553805340ccb5a9ce0a2"
+  },
+  {
+    "path": "kotlinc/lib/kotlinx-serialization-compiler-plugin.jar",
+    "sha256": "0ef62c778b57ad90b6177a2f32648273223d4f05a2b851b3e9264a8ab2cb3e5c"
+  },
+  {
+    "path": "kotlinc/lib/ktor-network-1.0.1.jar",
+    "sha256": "c046c9f7046294e113a40e3d64a58e16cfd048732f8b65cd266d2cbd9d7b150b"
+  },
+  {
+    "path": "kotlinc/lib/ktor-utils-1.0.1.jar",
+    "sha256": "429b42129d8c31deb137e7639088c6b9abc2b78ada8613e30b6ab82d1c8f6077"
+  },
+  {
+    "path": "kotlinc/lib/ktor-utils-jvm-1.0.1.jar",
+    "sha256": "7f2b7f3ea5a79a9a7f1c279a47f339bc0b415d395db0947945ff16d7dba7093e"
+  },
+  {
+    "path": "kotlinc/lib/mutability-annotations-compat.jar",
+    "sha256": "c7525ed4117120a4f7a9a19d59248158a7613c6290d86b0d0b11e463e0c18607"
+  },
+  {
+    "path": "kotlinc/lib/noarg-compiler-plugin.jar",
+    "sha256": "427e0e0b081bf5aa8437a34c7984d8afa9c91323fb01ca542c08e8bcd40b869e"
+  },
+  {
+    "path": "kotlinc/lib/sam-with-receiver-compiler-plugin.jar",
+    "sha256": "298d34f72859170e86ad1af4915dc43c35beb42820bd9b260d006c7e89c52a5d"
+  },
+  {
+    "path": "kotlinc/lib/slf4j-api-1.7.25.jar",
+    "sha256": "18c4a0095d5c1da6b817592e767bb23d29dd2f560ad74df75ff3961dbde25b79"
+  },
+  {
+    "path": "kotlinc/lib/trove4j.jar",
+    "sha256": "1ceb65d29e465c1b744186334e31bb6acd677e19be0955c66f1fd9d67eed82f1"
+  },
+  {
+    "path": "kotlinc/license/COPYRIGHT.txt",
+    "sha256": "05158b0da905c136f96c984b9953d62d8ae623d4fd7d61e9a222dc4e654ee4e5"
+  },
+  {
+    "path": "kotlinc/license/LICENSE.txt",
+    "sha256": "9180316c10e1fee6df267d4db522ea333a9d5242891602abce67486b709af125"
+  },
+  {
+    "path": "kotlinc/license/NOTICE.txt",
+    "sha256": "2cadc7e1eb4f6c8704694404c0cfc959efbd96215748087fa88d3434012ec1ec"
+  },
+  {
+    "path": "kotlinc/license/README.md",
+    "sha256": "74687245ecee0ec5608390fb228bb3103c68fe5720518680e92024a28c575a3c"
+  },
+  {
+    "path": "kotlinc/license/third_party/aosp_license.txt",
+    "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+  },
+  {
+    "path": "kotlinc/license/third_party/args4j_LICENSE.txt",
+    "sha256": "0fbe4bc607adab72fd174806c2c3a750d628ad14b114c806d7b030046c584c8a"
+  },
+  {
+    "path": "kotlinc/license/third_party/asm_license.txt",
+    "sha256": "07a5e41b8de28f5d1d4bf0a0fadbb5c425e1b982b4e89dfb715aa6630ac87f6c"
+  },
+  {
+    "path": "kotlinc/license/third_party/boost_LICENSE.txt",
+    "sha256": "36266a8fd073568394cb81cdb2b124f7fdae2c64c1a7ed09db34b4d22efa2951"
+  },
+  {
+    "path": "kotlinc/license/third_party/closure-compiler_LICENSE.txt",
+    "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+  },
+  {
+    "path": "kotlinc/license/third_party/dart_LICENSE.txt",
+    "sha256": "71e1d81b36104b948fecb1869a539a47be0e42d94b1a71cbbda1484bca853ffa"
+  },
+  {
+    "path": "kotlinc/license/third_party/guava_license.txt",
+    "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+  },
+  {
+    "path": "kotlinc/license/third_party/gwt_license.txt",
+    "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+  },
+  {
+    "path": "kotlinc/license/third_party/jquery_license.txt",
+    "sha256": "470785d8d6292d694ea3b89f5e1ec38f50fa4b0c0e225b74c3ec9ffb09e4f78f"
+  },
+  {
+    "path": "kotlinc/license/third_party/jshashtable_license.txt",
+    "sha256": "fa5a30cb5a64600010f6570929c9fd2f3a90ef5bf279a5ab63fa859433aa9a84"
+  },
+  {
+    "path": "kotlinc/license/third_party/maven_LICENSE.txt",
+    "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+  },
+  {
+    "path": "kotlinc/license/third_party/pcollections_LICENSE.txt",
+    "sha256": "c6b1c794d0cff0c861d4fd50821c26d8b3fcbad713470f014295909df14c7afc"
+  },
+  {
+    "path": "kotlinc/license/third_party/prototype_license.txt",
+    "sha256": "c83b10a0dde5e34a5b9579fd342a5f3c2ba3616ed1c4691846bf740d6af73411"
+  },
+  {
+    "path": "kotlinc/license/third_party/qunit_license.txt",
+    "sha256": "9f9bd295d859164069817752114c3498d1a02549839e00da9a7467a5151e24d9"
+  },
+  {
+    "path": "kotlinc/license/third_party/rhino_LICENSE.txt",
+    "sha256": "c9a30baab7b018143e29b2437788b096d9b0ecd42d9c750e542693c982b20642"
+  },
+  {
+    "path": "kotlinc/license/third_party/scala_license.txt",
+    "sha256": "667021a4f4ee00b088395fa725cdafc21d121a2d03ba6a65e9663d0096d4cfb7"
+  },
+  {
+    "path": "kotlinc/license/third_party/testdata/dagger_license.txt",
+    "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+  },
+  {
+    "path": "kotlinc/license/third_party/testdata/eclipse_distribution_license.txt",
+    "sha256": "fd2bae086a4eff074e342a2bbc44a39708a0c0337155b8781199f0f8ee374f41"
+  },
+  {
+    "path": "kotlinc/license/third_party/testdata/eclipse_license.txt",
+    "sha256": "b04f965d63da633797b5b271da079b474a41794de6334468c02b51054f85f6ac"
+  },
+  {
+    "path": "kotlinc/license/third_party/testdata/findbugs_license.txt",
+    "sha256": "3eafff004db4da4c1b844c4d6190f8dfc3b4b653fa06fad203822b53eb4bd087"
+  },
+  {
+    "path": "kotlinc/license/third_party/testdata/gradle_license.txt",
+    "sha256": "d53954e15cb6088e20a42e83bc5ae2ef3df5a1af676f2bd9cdaaaeb3cb6f3550"
+  },
+  {
+    "path": "kotlinc/license/third_party/testdata/lombok_license.txt",
+    "sha256": "45fb465e2eed9f0f35704d31967a57c00cb314a52fa6a88a06116232e8687bd4"
+  },
+  {
+    "path": "kotlinc/license/third_party/testdata/rxjava_license.txt",
+    "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+  },
+  {
+    "path": "kotlinc/license/third_party/testdata/spring_license.txt",
+    "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+  },
+  {
+    "path": "kotlinc/license/third_party/trove_license.txt",
+    "sha256": "538a50f757a3f3013091ad1c445eeb2449f08828f3febfc159265837a4ec2e1a"
+  },
+  {
+    "path": "kotlinc/license/third_party/trove_readme_license.txt",
+    "sha256": "ef69672b70acf29a1c03c6d41811b04ec5f0b2b59b8c9b5dfdae8810459ca4dc"
+  }
+]

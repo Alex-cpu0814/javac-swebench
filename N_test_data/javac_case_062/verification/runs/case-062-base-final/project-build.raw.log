@@ -1,0 +1,139 @@
+{"phase": "source_build", "command": ["ant", "-Dbuild.type=release/3.2.2", "-Dbuild.offline=true", "-Dbinding.llvm=true", "-Dbinding.assimp=false", "-Dbinding.bgfx=false", "-Dbinding.bullet=false", "-Dbinding.cuda=false", "-Dbinding.egl=false", "-Dbinding.glfw=false", "-Dbinding.jawt=false", "-Dbinding.jemalloc=false", "-Dbinding.libdivide=false", "-Dbinding.lmdb=false", "-Dbinding.lz4=false", "-Dbinding.meow=false", "-Dbinding.nanovg=false", "-Dbinding.nfd=false", "-Dbinding.nuklear=false", "-Dbinding.odbc=false", "-Dbinding.openal=false", "-Dbinding.opencl=false", "-Dbinding.opengl=false", "-Dbinding.opengles=false", "-Dbinding.openvr=false", "-Dbinding.opus=false", "-Dbinding.ovr=false", "-Dbinding.par=false", "-Dbinding.remotery=false", "-Dbinding.rpmalloc=false", "-Dbinding.shaderc=false", "-Dbinding.sse=false", "-Dbinding.stb=false", "-Dbinding.tinyexr=false", "-Dbinding.tinyfd=false", "-Dbinding.tootle=false", "-Dbinding.vma=false", "-Dbinding.vulkan=false", "-Dbinding.xxhash=false", "-Dbinding.yoga=false", "-Dbinding.zstd=false", "clean-kotlin", "clean-java", "clean-native", "compile-templates", "compile-native"]}
+Buildfile: /testbed/build.xml
+
+clean-kotlin:
+
+clean-java:
+
+clean-native:
+
+bindings:
+   [script] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+
+check-dependencies:
+
+-compile-generator:
+[Generator] Compiling Kotlin generator...
+    [mkdir] Created dir: /testbed/bin/classes/generator
+  [kotlinc] Compiling [/testbed/modules/generator/src/main/kotlin] => [/testbed/bin/classes/generator]
+  [kotlinc] info: kotlinc-jvm 1.3.50 (JRE 11.0.32.1+1-post-1ubuntu1-22.04-Ubuntu)
+  [kotlinc] info: PERF: INIT: Compiler initialized in 1014 ms
+  [kotlinc] info: PERF: ANALYZE: 20 files (10132 lines) in targets [generator-java-production]in 20104 ms - 503.979 loc/s
+  [kotlinc] info: PERF: GENERATE: 20 files (10132 lines) target generator-java-production in 8769 ms - 1155.434 loc/s
+  [kotlinc] info: PERF: GC time for G1 Young Generation is 429 ms
+  [kotlinc] info: PERF: GC time for G1 Old Generation is 0 ms
+  [kotlinc] info: PERF: JIT time is 145103 ms
+  [kotlinc] info: PERF: Find Java class performed 19 times, total time 28 ms
+  [kotlinc] info: PERF: Type info performed 32047 times, total time 14251 ms
+  [kotlinc] info: PERF: Call resolve performed 17845 times, total time 10576 ms
+  [kotlinc] info: PERF: Binary class from Kotlin file performed 320 times, total time 120 ms
+    [touch] Creating /testbed/bin/classes/generator/touch.txt
+[javac: Generator Tools] Compiling 6 source files to /testbed/bin/classes/generator
+[javac: Generator Tools] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: Generator Tools] 1 warning
+
+compile-templates:
+[Templates] Compiling Kotlin templates. This will take 1-2 minutes...
+    [mkdir] Created dir: /testbed/bin/classes/templates
+  [kotlinc] Compiling [/testbed/modules/lwjgl/core/src/templates/kotlin/core/dyncall, /testbed/modules/lwjgl/core/src/templates/kotlin/core/jni, /testbed/modules/lwjgl/core/src/templates/kotlin/core/libc, /testbed/modules/lwjgl/core/src/templates/kotlin/core/linux, /testbed/modules/lwjgl/core/src/templates/kotlin/core/macos, /testbed/modules/lwjgl/core/src/templates/kotlin/core/templates, /testbed/modules/lwjgl/core/src/templates/kotlin/core/windows, /testbed/modules/lwjgl/core/src/templates/kotlin, /testbed/modules/lwjgl/llvm/src/templates/kotlin] => [/testbed/bin/classes/templates]
+  [kotlinc] info: kotlinc-jvm 1.3.50 (JRE 11.0.32.1+1-post-1ubuntu1-22.04-Ubuntu)
+  [kotlinc] info: PERF: INIT: Compiler initialized in 186 ms
+  [kotlinc] info: PERF: ANALYZE: 60 files (24217 lines) in targets [templates-java-production]in 8907 ms - 2718.873 loc/s
+  [kotlinc] info: PERF: GENERATE: 60 files (24217 lines) target templates-java-production in 2164 ms - 11190.850 loc/s
+  [kotlinc] info: PERF: GC time for G1 Young Generation is 665 ms
+  [kotlinc] info: PERF: GC time for G1 Old Generation is 0 ms
+  [kotlinc] info: PERF: JIT time is 175120 ms
+  [kotlinc] info: PERF: Find Java class performed 19 times, total time 28 ms
+  [kotlinc] info: PERF: Type info performed 66894 times, total time 22363 ms
+  [kotlinc] info: PERF: Call resolve performed 31547 times, total time 17765 ms
+  [kotlinc] info: PERF: Binary class from Kotlin file performed 570 times, total time 172 ms
+  [kotlinc] info: PERF: Find Java class performed 6 times, total time 3 ms
+    [touch] Creating /testbed/bin/classes/templates/touch.txt
+
+bindings:
+   [script] Warning: Nashorn engine is planned to be removed from a future JDK release
+
+init:
+
+check-dependencies:
+
+generate:
+[Generator] 	UPDATING: modules/lwjgl/core/src/generated/java/org/lwjgl/system/JNI.java
+[Generator] 	UPDATING: modules/lwjgl/core/src/generated/c/org_lwjgl_system_JNI.c
+
+compile:
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/core
+[javac: core] Compiling 88 source files to /testbed/bin/classes/lwjgl/core
+[javac: core] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: core] /testbed/modules/lwjgl/core/src/main/java/org/lwjgl/system/SharedLibraryLoader.java:283: warning: [try] auto-closeable resource ignored is never referenced in body of corresponding try statement
+[javac: core]                 try (FileChannel ignored = extract(file, resource)) {
+[javac: core]                                  ^
+[javac: core] 2 warnings
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/core/META-INF/versions/9
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/core/META-INF/versions/10
+[javac: Core - Java 9] Compiling 3 source files to /testbed/bin/classes/lwjgl/core/META-INF/versions/9
+[javac: Core - Java 10] Compiling 2 source files to /testbed/bin/classes/lwjgl/core/META-INF/versions/10
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/llvm
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/bullet
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/jemalloc
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/cuda
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/nuklear
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/libdivide
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/bgfx
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/jawt
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/stb
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/sse
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/shaderc
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/rpmalloc
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/remotery
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/par
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/nanovg
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/nfd
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/lmdb
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/opencl
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/assimp
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/openvr
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/opus
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/openal
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/lz4
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/meow
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/egl
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/odbc
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/zstd
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/yoga
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/xxhash
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/vulkan
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/tootle
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/tinyfd
+[javac: llvm] Compiling 122 source files to /testbed/bin/classes/lwjgl/llvm
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/tinyexr
+[javac: llvm] warning: [options] bootstrap class path not set in conjunction with -source 8
+[javac: llvm] 1 warning
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/opengles
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/vma
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/ovr
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/glfw
+    [mkdir] Created dir: /testbed/bin/classes/lwjgl/opengl
+
+compile-native:
+    [mkdir] Created dir: /testbed/bin/linux/x64
+
+compile-native-platform:
+     [echo] Building with GCC v11.0 (command: gcc)
+    [mkdir] Created dir: /testbed/bin/linux/x64/llvm
+    [mkdir] Created dir: /testbed/bin/linux/x64/core
+    [mkdir] Created dir: /testbed/bin/linux/x64/par
+    [mkdir] Created dir: /testbed/bin/linux/x64/nuklear
+      [gcc] Linking lwjgl_llvm
+    [mkdir] Created dir: /testbed/bin/libs/native/linux/x64/org/lwjgl/llvm
+      [gcc] Linking lwjgl_par
+    [mkdir] Created dir: /testbed/bin/libs/native/linux/x64/${module.par.path}
+      [gcc] Linking lwjgl
+      [gcc] Linking lwjgl_nuklear
+    [mkdir] Created dir: /testbed/bin/libs/native/linux/x64/${module.nuklear.path}
+   [Linker] lto-wrapper: warning: using serial compilation of 5 LTRANS jobs
+
+BUILD SUCCESSFUL
+Total time: 1 minute 1 second

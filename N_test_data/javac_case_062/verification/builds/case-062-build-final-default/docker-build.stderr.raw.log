@@ -1,0 +1,111 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 2.00kB 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/ubuntu:22.04
+#2 DONE 0.1s
+
+#3 [internal] load .dockerignore
+#3 transferring context:
+#3 transferring context: 141B 0.0s done
+#3 DONE 0.0s
+
+#4 [ 1/11] FROM docker.io/library/ubuntu:22.04@sha256:0a9887931b0e38af2e3487ed39e29436b0535c4f3f52e57745baaf79d1898956
+#4 resolve docker.io/library/ubuntu:22.04@sha256:0a9887931b0e38af2e3487ed39e29436b0535c4f3f52e57745baaf79d1898956 0.0s done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 65.98MB 3.1s done
+#5 DONE 3.1s
+
+#6 [ 2/11] RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates     && sed -i 's|http://archive.ubuntu.com|https://mirrors.aliyun.com|g; s|http://security.ubuntu.com|https://mirrors.aliyun.com|g' /etc/apt/sources.list     && apt-get update && apt-get install -y --no-install-recommends        ant git python3 openjdk-11-jdk-headless gcc g++ make libclang-14-dev libffi-dev     && ln -s /usr/bin/python3 /usr/local/bin/python     && test -r /usr/lib/llvm-14/lib/libclang.so     && rm -rf /var/lib/apt/lists/*
+#6 CACHED
+
+#7 [ 3/11] RUN apt-get update && apt-get install -y --no-install-recommends libx11-dev     && rm -rf /var/lib/apt/lists/*
+#7 CACHED
+
+#8 [ 4/11] WORKDIR /testbed
+#8 CACHED
+
+#9 [ 5/11] ADD base-git.tar.gz /testbed/.git/
+#9 DONE 0.1s
+
+#10 [ 6/11] RUN git config core.bare false && git config core.autocrlf false     && git checkout --detach "2c8811383487cd827f375abdc534a5d40a174edc" && test -z "$(git status --porcelain)"
+#10 0.685 HEAD is now at 2c88113 build: fix forEachBinding macro
+#10 DONE 0.9s
+
+#11 [ 7/11] ADD dependency-cache.tar.gz /testbed/bin/libs/
+#11 DONE 0.5s
+
+#12 [ 8/11] ADD dyncall-source.tar.gz /opt/
+#12 DONE 0.2s
+
+#13 [ 9/11] COPY normalize_dyncall.py /tmp/normalize_dyncall.py
+#13 DONE 0.0s
+
+#14 [10/11] RUN python3 /tmp/normalize_dyncall.py && cd /opt/dyncall && ./configure && make -j2     && mkdir -p /testbed/bin/libs/native/linux/x64/org/lwjgl     && cp dyncall/libdyncall_s.a dyncallback/libdyncallback_s.a dynload/libdynload_s.a /testbed/bin/libs/native/linux/x64/org/lwjgl/
+#14 0.244 Normalized CRLF in 585 dyncall text files
+#14 0.335 Configuration written to Makefile.config
+#14 0.337 cd dyncall && make all
+#14 0.337 cd dyncallback && make all
+#14 0.339 make[1]: Entering directory '/opt/dyncall/dyncall'
+#14 0.339 cc -fPIC   -c -o dyncall_vector.o dyncall_vector.c
+#14 0.339 make[1]: Entering directory '/opt/dyncall/dyncallback'
+#14 0.339 cc -fPIC -I/opt/dyncall/./dyncallback/../dyncall    -c -o dyncall_alloc_wx.o dyncall_alloc_wx.c
+#14 0.355 cc -fPIC   -c -o dyncall_api.o dyncall_api.c
+#14 0.357 cc -fPIC -I/opt/dyncall/./dyncallback/../dyncall    -c -o dyncall_args.o dyncall_args.c
+#14 0.374 cc -fPIC -I/opt/dyncall/./dyncallback/../dyncall    -c -o dyncall_callback.o dyncall_callback.c
+#14 0.378 cc -fPIC   -c -o dyncall_callvm.o dyncall_callvm.c
+#14 0.387 cc    -c -o dyncall_callback_arch.o dyncall_callback_arch.S
+#14 0.396 cc -fPIC -I/opt/dyncall/./dyncallback/../dyncall    -c -o dyncall_thunk.o dyncall_thunk.c
+#14 0.399 cc -fPIC   -c -o dyncall_callvm_base.o dyncall_callvm_base.c
+#14 0.407 ar rv libdyncallback_s.a dyncall_alloc_wx.o dyncall_args.o dyncall_callback.o dyncall_callback_arch.o dyncall_thunk.o
+#14 0.408 ar: creating libdyncallback_s.a
+#14 0.409 a - dyncall_alloc_wx.o
+#14 0.409 a - dyncall_args.o
+#14 0.409 a - dyncall_callback.o
+#14 0.409 a - dyncall_callback_arch.o
+#14 0.409 a - dyncall_thunk.o
+#14 0.410 cc    -c -o dyncall_call.o dyncall_call.S
+#14 0.410 make[1]: Leaving directory '/opt/dyncall/dyncallback'
+#14 0.410 cd dynload && make all
+#14 0.412 make[1]: Entering directory '/opt/dyncall/dynload'
+#14 0.412 cc -fPIC   -c -o dynload.o dynload.c
+#14 0.417 cc -fPIC   -c -o dyncall_callf.o dyncall_callf.c
+#14 0.431 cc -fPIC   -c -o dynload_syms.o dynload_syms.c
+#14 0.436 cc -fPIC   -c -o dyncall_struct.o dyncall_struct.c
+#14 0.460 ar rv libdynload_s.a dynload.o dynload_syms.o
+#14 0.462 ar: creating libdynload_s.a
+#14 0.462 a - dynload.o
+#14 0.462 a - dynload_syms.o
+#14 0.463 make[1]: Leaving directory '/opt/dyncall/dynload'
+#14 0.464 ar rv libdyncall_s.a dyncall_vector.o dyncall_api.o dyncall_callvm.o dyncall_callvm_base.o dyncall_call.o dyncall_callf.o dyncall_struct.o
+#14 0.465 ar: creating libdyncall_s.a
+#14 0.465 a - dyncall_vector.o
+#14 0.465 a - dyncall_api.o
+#14 0.465 a - dyncall_callvm.o
+#14 0.465 a - dyncall_callvm_base.o
+#14 0.465 a - dyncall_call.o
+#14 0.465 a - dyncall_callf.o
+#14 0.465 a - dyncall_struct.o
+#14 0.467 make[1]: Leaving directory '/opt/dyncall/dyncall'
+#14 DONE 0.5s
+
+#15 [11/11] RUN mkdir -p bin/libs/native/linux/x64/org/lwjgl     && cp /usr/lib/x86_64-linux-gnu/libffi_pic.a bin/libs/native/linux/x64/org/lwjgl/libffi.a     && git restore --source="2c8811383487cd827f375abdc534a5d40a174edc" --worktree -- .     && test "$(git rev-parse HEAD)" = "2c8811383487cd827f375abdc534a5d40a174edc"     && test -z "$(git status --porcelain)"     && mkdir -p /benchmark /inputs /results
+#15 DONE 0.5s
+
+#16 exporting to image
+#16 exporting layers
+#16 exporting layers 1.8s done
+#16 exporting manifest sha256:dc0aa6872eaa425ac2ceabf6ea2411e7142d1ce2cf11016e0e475f1b78d91661 0.0s done
+#16 exporting config sha256:be0ffe537fb95be01cd58fa35b4f974eecf344ed75c1716aedc5d07c47cf2839 0.0s done
+#16 exporting attestation manifest sha256:4b46dd861d71856063fcd3502d4adc97e12006d2ff5bf7414e287ecce82334c2 0.0s done
+#16 exporting manifest list sha256:a6b182c03068ba6e408878304674f3a8ae922f42b6399c3f1b82fd34166a40a5 0.0s done
+#16 naming to docker.io/local/javac-case-062-lwjgl3:benchmark-v1 done
+#16 unpacking to docker.io/local/javac-case-062-lwjgl3:benchmark-v1
+#16 unpacking to docker.io/local/javac-case-062-lwjgl3:benchmark-v1 1.4s done
+#16 DONE 3.3s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/k6kmleg31oc3gi1pwita435jj

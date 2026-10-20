@@ -1,0 +1,6 @@
+diff --git a/.case062-base-control b/.case062-base-control
+new file mode 100644
+--- /dev/null
++++ b/.case062-base-control
+@@ -0,0 +1 @@
++base control

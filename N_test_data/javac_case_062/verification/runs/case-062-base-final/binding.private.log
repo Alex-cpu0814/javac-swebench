@@ -1,0 +1,2 @@
+test=binding expected=/testbed/config/tests/clang_cstring_fixture.c actual=p??x
+[FAIL] String mismatch

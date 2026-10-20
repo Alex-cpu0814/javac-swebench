@@ -1,0 +1,4 @@
+* text eol=lf
+*.tar.gz binary
+*.diff -whitespace
+*.patch -whitespace

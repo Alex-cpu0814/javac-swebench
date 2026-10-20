@@ -1,0 +1,24 @@
+{
+  "environment": "Docker Linux amd64, Java 11.0.32.1, libclang 14",
+  "comparison_type": "Maven release binaries, not exact commits",
+  "logs": {
+    "3.2.2": {
+      "file": "verification/release_comparison/cstring-3.2.2.log",
+      "sha256": "85391abf7272e41b5dc1e661b9a8b1b8fe9a7d4f61f231afd4a4f4db97f14f3b",
+      "exit_code": 1,
+      "expected_line": true,
+      "workaround_line": true,
+      "mismatch": true,
+      "passed": false
+    },
+    "3.2.3": {
+      "file": "verification/release_comparison/cstring-3.2.3.log",
+      "sha256": "0677cde7d287b0530e85b7e9d0f28ad9d8bff1ff7677349ea10cec1d93101b77",
+      "exit_code": 0,
+      "expected_line": true,
+      "workaround_line": true,
+      "mismatch": false,
+      "passed": true
+    }
+  }
+}

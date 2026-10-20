@@ -1,0 +1,4 @@
+*
+!Dockerfile
+!base-git.tar.gz
+!dependency-cache.tar.gz

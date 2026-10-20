@@ -1,0 +1,9 @@
+LWJGL=3.2.2 build 10
+Java=11.0.32.1
+Platform=Linux/amd64
+expected="/app/repro.c"
+workaround="/app/repro.c"
+[CALL] clang_getCString
+clang_getCString="\ufffd\ufffd5$}r"
+[MISMATCH] Valid CXString, incorrect clang_getCString result.
+exit_code=1

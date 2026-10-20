@@ -1,0 +1,2 @@
+error: modules/lwjgl/llvm/src/test/java/org/lwjgl/llvm/ClangCStringRegressionTest.java: already exists in working directory
+error: config/tests/clang_cstring_fixture.c: already exists in working directory

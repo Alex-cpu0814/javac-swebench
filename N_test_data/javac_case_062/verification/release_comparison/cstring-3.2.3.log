@@ -1,0 +1,9 @@
+LWJGL=3.2.3 build 13
+Java=11.0.32.1
+Platform=Linux/amd64
+expected="/app/repro.c"
+workaround="/app/repro.c"
+[CALL] clang_getCString
+clang_getCString="/app/repro.c"
+[PASS] clang_getCString returned the expected text.
+exit_code=0

@@ -1,0 +1,12 @@
+{
+  "image": "yutu0814/javac-case-068-lwjgl3:benchmark-v1",
+  "digest": "sha256:30a5258e746b1190c9b5d6c6aacbbaa04bdd0f11f4aff0b5605a3eeb8445dfaa",
+  "anonymous_registry_manifest_status": 200,
+  "digest_pull_succeeded": true,
+  "pinned_base_commit": "2c007161cff7ba12023ae48dd28a7856c0c6da3d",
+  "working_tree_clean": true,
+  "protected_test_absent": true,
+  "fix_commit_object_absent": true,
+  "network_disabled_during_image_audit": true,
+  "verified_at_utc": "2026-10-20T11:54:25Z"
+}

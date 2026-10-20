@@ -1,0 +1,68 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.86kB 0.1s done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/eclipse-temurin:8-jdk-jammy
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 32B
+#3 transferring context: 74B 0.1s done
+#3 DONE 0.2s
+
+#4 [1/6] FROM docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:185d4ef919b98cd195690c33f3fd93bd49c66c70f0b662e54566c0dbaebea6ce
+#4 resolve docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:185d4ef919b98cd195690c33f3fd93bd49c66c70f0b662e54566c0dbaebea6ce 0.0s done
+#4 DONE 0.0s
+
+#5 [2/6] RUN apt-get update     && apt-get install -y --no-install-recommends git python3 gcc libc6-dev     && rm -rf /var/lib/apt/lists/*
+#5 CACHED
+
+#6 [internal] load build context
+#6 transferring context: 9.10MB 2.5s done
+#6 DONE 2.5s
+
+#7 [3/6] RUN mkdir -p /opt/benchmark/lib && set -eux;     version=3.2.0;     for artifact in lwjgl lwjgl-openvr; do       for classifier in '' '-natives-linux'; do         file="$artifact-$version$classifier.jar";         curl -fsSL --retry 3 -o "/opt/benchmark/lib/$file"           "https://repo.maven.apache.org/maven2/org/lwjgl/$artifact/$version/$file";       done;     done;     curl -fsSL --retry 3 -o /opt/benchmark/lib/jsr305.jar       https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar;     printf '%s\n'       '766ad2a0783f2687962c8ad74ceecc38a28b9f72a2d085ee438b7813e928d0c7  /opt/benchmark/lib/jsr305.jar'       '97af9a688081bbdf0cf208b93f02b58fe2db0504ee7333e54780c4b6f70694f8  /opt/benchmark/lib/lwjgl-3.2.0.jar'       '08ca6d394ef7ac97002bc939642dc285c7f61c94a69070fa9a916921fee637ab  /opt/benchmark/lib/lwjgl-3.2.0-natives-linux.jar'       '117a98d2ae5503f0af291ff84325f12eebfd3ea73941060e8181720840812143  /opt/benchmark/lib/lwjgl-openvr-3.2.0.jar'       '5144df18be5868ad4bb8b9ab5174275f860b4c34bd2b4f01539973f81a6fbb8b  /opt/benchmark/lib/lwjgl-openvr-3.2.0-natives-linux.jar'       | sha256sum -c -
+#7 0.236 + version=3.2.0
+#7 0.236 + file=lwjgl-3.2.0.jar
+#7 0.236 + curl -fsSL --retry 3 -o /opt/benchmark/lib/lwjgl-3.2.0.jar https://repo.maven.apache.org/maven2/org/lwjgl/lwjgl/3.2.0/lwjgl-3.2.0.jar
+#7 1.122 + file=lwjgl-3.2.0-natives-linux.jar
+#7 1.122 + curl -fsSL --retry 3 -o /opt/benchmark/lib/lwjgl-3.2.0-natives-linux.jar https://repo.maven.apache.org/maven2/org/lwjgl/lwjgl/3.2.0/lwjgl-3.2.0-natives-linux.jar
+#7 1.770 + file=lwjgl-openvr-3.2.0.jar
+#7 1.770 + curl -fsSL --retry 3 -o /opt/benchmark/lib/lwjgl-openvr-3.2.0.jar https://repo.maven.apache.org/maven2/org/lwjgl/lwjgl-openvr/3.2.0/lwjgl-openvr-3.2.0.jar
+#7 2.572 + file=lwjgl-openvr-3.2.0-natives-linux.jar
+#7 2.572 + curl -fsSL --retry 3 -o /opt/benchmark/lib/lwjgl-openvr-3.2.0-natives-linux.jar https://repo.maven.apache.org/maven2/org/lwjgl/lwjgl-openvr/3.2.0/lwjgl-openvr-3.2.0-natives-linux.jar
+#7 3.172 + curl -fsSL --retry 3 -o /opt/benchmark/lib/jsr305.jar https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar
+#7 3.578 + printf %s\n 766ad2a0783f2687962c8ad74ceecc38a28b9f72a2d085ee438b7813e928d0c7  /opt/benchmark/lib/jsr305.jar 97af9a688081bbdf0cf208b93f02b58fe2db0504ee7333e54780c4b6f70694f8  /opt/benchmark/lib/lwjgl-3.2.0.jar 08ca6d394ef7ac97002bc939642dc285c7f61c94a69070fa9a916921fee637ab  /opt/benchmark/lib/lwjgl-3.2.0-natives-linux.jar 117a98d2ae5503f0af291ff84325f12eebfd3ea73941060e8181720840812143  /opt/benchmark/lib/lwjgl-openvr-3.2.0.jar 5144df18be5868ad4bb8b9ab5174275f860b4c34bd2b4f01539973f81a6fbb8b  /opt/benchmark/lib/lwjgl-openvr-3.2.0-natives-linux.jar
+#7 3.579 + sha256sum -c -
+#7 3.583 /opt/benchmark/lib/jsr305.jar: OK
+#7 3.583 /opt/benchmark/lib/lwjgl-3.2.0.jar: OK
+#7 3.583 /opt/benchmark/lib/lwjgl-3.2.0-natives-linux.jar: OK
+#7 3.585 /opt/benchmark/lib/lwjgl-openvr-3.2.0.jar: OK
+#7 3.585 /opt/benchmark/lib/lwjgl-openvr-3.2.0-natives-linux.jar: OK
+#7 DONE 3.6s
+
+#8 [4/6] WORKDIR /testbed
+#8 DONE 0.0s
+
+#9 [5/6] ADD base-git.tar.gz /testbed/.git/
+#9 DONE 0.1s
+
+#10 [6/6] RUN git config core.bare false     && git config core.autocrlf false     && git checkout --detach "2c007161cff7ba12023ae48dd28a7856c0c6da3d"     && test -z "$(git status --porcelain)"     && mkdir -p /benchmark /inputs /results
+#10 0.677 HEAD is now at 2c00716 feat(tinyexr): update to latest version
+#10 DONE 0.9s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 1.6s done
+#11 exporting manifest sha256:b31b0d2e9e3e288adce7b77bd08c7eb922aeecc2092009250e6a91f99a55bcb7 0.0s done
+#11 exporting config sha256:31c5793453bf88eb8727e8cd037654bb4ca5b6fa177f4b215a05016ae9d55402 0.0s done
+#11 exporting attestation manifest sha256:b2ac41039835ef776729ef4feaa40f6657bf9374535d198e530bb51fa016e146 0.0s done
+#11 exporting manifest list sha256:30a5258e746b1190c9b5d6c6aacbbaa04bdd0f11f4aff0b5605a3eeb8445dfaa 0.0s done
+#11 naming to docker.io/local/javac-case-068-lwjgl3:benchmark-v1 done
+#11 unpacking to docker.io/local/javac-case-068-lwjgl3:benchmark-v1
+#11 unpacking to docker.io/local/javac-case-068-lwjgl3:benchmark-v1 1.0s done
+#11 DONE 2.7s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/3an52nv78ip7292l6vpzkphz2

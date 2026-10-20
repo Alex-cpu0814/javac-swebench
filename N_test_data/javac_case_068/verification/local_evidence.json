@@ -1,0 +1,36 @@
+{
+  "instance_id": "LWJGL__lwjgl3-418",
+  "base_commit": "2c007161cff7ba12023ae48dd28a7856c0c6da3d",
+  "fix_commit": "1ae772163cf3eb432cf6f327db5bf5b7fe9aad5f",
+  "image_id": "sha256:30a5258e746b1190c9b5d6c6aacbbaa04bdd0f11f4aff0b5605a3eeb8445dfaa",
+  "clean_base_image_verified": true,
+  "official_diff_exact": true,
+  "base_grading": {
+    "schema_version": "3.0",
+    "run_id": "case-068-base-final",
+    "tests_observed": 2,
+    "FAIL_TO_PASS": {
+      "org.lwjgl.openvr.VRCompositorNullGamePoseTest::nullGamePose": "FAILED"
+    },
+    "PASS_TO_PASS": {
+      "org.lwjgl.openvr.VRCompositorNullGamePoseTest::nonNullGamePose": "PASSED"
+    },
+    "unexpected_failures": [
+      "org.lwjgl.openvr.VRCompositorNullGamePoseTest::nullGamePose"
+    ]
+  },
+  "gold_grading": {
+    "schema_version": "3.0",
+    "run_id": "case-068-gold-final",
+    "tests_observed": 2,
+    "FAIL_TO_PASS": {
+      "org.lwjgl.openvr.VRCompositorNullGamePoseTest::nullGamePose": "PASSED"
+    },
+    "PASS_TO_PASS": {
+      "org.lwjgl.openvr.VRCompositorNullGamePoseTest::nonNullGamePose": "PASSED"
+    },
+    "unexpected_failures": []
+  },
+  "test_tamper_rejected": true,
+  "status": "published_completed"
+}

@@ -1,6 +1,6 @@
 # Java-C SWE-bench-compatible cases
 
-This repository contains twenty Java-C cross-language bug cases converted to a
+This repository contains twenty-one Java-C cross-language bug cases converted to a
 SWE-bench-compatible record format. Cases are separated by test provenance:
 `Y_test_data/` contains Fix commits with extractable official regression tests;
 `N_test_data/` contains cases whose protected tests were constructed, adapted,
@@ -23,6 +23,7 @@ or wrapped during dataset production.
 | N | 054 | `LWJGL__lwjgl3-755` | 755 | 2 | 30 |
 | N | 056 | `LWJGL__lwjgl3-673` | 673 | 2 | 1 |
 | N | 062 | `LWJGL__lwjgl3-496` | 496 | 1 | 1 |
+| N | 068 | `LWJGL__lwjgl3-418` | 418 | 1 | 1 |
 | N | 093 | `ninia__jep-79` | 79 | 1 | 130 |
 | N | 094 | `ninia__jep-40` | 40 | 1 | 95 |
 | N | 096 | `ninia__jep-22` | 22 | 1 | 78 |
@@ -91,6 +92,10 @@ See `N_test_data/javac_case_053/README.md` for the accepted scope and evidence.
 Case 054 verifies public Java/native Vulkan debug naming with a controlled test provider. Its human-approved scope is Linux x86_64/JDK17 and an explicit Ubuntu libffi PIC dependency adaptation. Two target tests fail on Base and pass on official Fix; 29 existing core tests and one device-naming control remain passing. It does not reproduce the original Windows driver crash or establish real-GPU compatibility. Base source version is 3.3.2; the report used 3.3.1.
 
 The published image `yutu0814/javac-case-054-lwjgl3:benchmark-v1` (digest `sha256:e3c1ac3197df69e047650a2806f0b923582058de8ca78b1c816657130f104bb4`) passed clean-Base audit and standard evaluator Base/Fix/protected-test-tamper controls. Pull it with `docker pull yutu0814/javac-case-054-lwjgl3:benchmark-v1`. See `N_test_data/javac_case_054/README.md`.
+
+## Case 068
+
+Case 068 checks the OpenVR `WaitGetPoses` optional game-pose buffer through a controlled native function-pointer stub. The exact Base source fails the null-buffer test with an NPE while the non-null control passes; the full upstream Fix passes both. The clean Base evaluator image and protected-test conflict control are verified. The Kotlin generator and full Ant build are outside this case's oracle. Published image: [`yutu0814/javac-case-068-lwjgl3:benchmark-v1`](https://hub.docker.com/r/yutu0814/javac-case-068-lwjgl3), digest `sha256:30a5258e746b1190c9b5d6c6aacbbaa04bdd0f11f4aff0b5605a3eeb8445dfaa`. See `N_test_data/javac_case_068/README.md` for evaluation steps.
 
 ## Case 092
 

@@ -1,0 +1,42 @@
+{
+  "template_version": "1.0",
+  "case_number": "068",
+  "instance_id": "LWJGL__lwjgl3-418",
+  "instance_file": "official_swebench/instance_068.json",
+  "repo_url": "https://github.com/LWJGL/lwjgl3.git",
+  "base_commit": "2c007161cff7ba12023ae48dd28a7856c0c6da3d",
+  "fix_commit": "1ae772163cf3eb432cf6f327db5bf5b7fe9aad5f",
+  "image": "yutu0814/javac-case-068-lwjgl3@sha256:30a5258e746b1190c9b5d6c6aacbbaa04bdd0f11f4aff0b5605a3eeb8445dfaa",
+  "build_image": "local/javac-case-068-lwjgl3:benchmark-v1",
+  "oracle_type": "runtime_behavior",
+  "evaluator_mode": "isolated_exact_base_generated_java_compile",
+  "runtime_assets": [
+    {
+      "source": "evaluator/case_adapter.sh",
+      "target": "/benchmark/case_adapter.sh"
+    },
+    {
+      "source": "evaluator/build_project.py",
+      "target": "/benchmark/build_project.py"
+    },
+    {
+      "source": "evaluator/test_runner.py",
+      "target": "/benchmark/test_runner.py"
+    }
+  ],
+  "FAIL_TO_PASS": [
+    "org.lwjgl.openvr.VRCompositorNullGamePoseTest::nullGamePose"
+  ],
+  "PASS_TO_PASS": [
+    "org.lwjgl.openvr.VRCompositorNullGamePoseTest::nonNullGamePose"
+  ],
+  "scope": [
+    "Linux x86_64, Java 8, exact LWJGL parent source checkout",
+    "Compiles candidate generated VRCompositor.java; dependencies use LWJGL 3.2.0 release JARs",
+    "Native function table is supplied by a protected C stub; no SteamVR, headset or graphics display",
+    "Kotlin template regeneration and the full Ant project build are outside this evaluator",
+    "Reference Fix was visible when the protected tests were designed"
+  ],
+  "model_evaluator_verified": true,
+  "image_id": "sha256:30a5258e746b1190c9b5d6c6aacbbaa04bdd0f11f4aff0b5605a3eeb8445dfaa"
+}

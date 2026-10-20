@@ -1,0 +1,5 @@
+[CALL] VRCompositor_WaitGetPoses(render, null)
+[BUG] NullPointerException before native call; calls=0
+java.lang.NullPointerException
+	at org.lwjgl.openvr.VRCompositor.VRCompositor_WaitGetPoses(VRCompositor.java:75)
+	at Repro.main(Repro.java:27)

@@ -1,0 +1,12 @@
+{
+  "schema_version": "3.0",
+  "run_id": "case-068-tamper-final",
+  "tests_observed": 0,
+  "FAIL_TO_PASS": {
+    "org.lwjgl.openvr.VRCompositorNullGamePoseTest::nullGamePose": "MISSING"
+  },
+  "PASS_TO_PASS": {
+    "org.lwjgl.openvr.VRCompositorNullGamePoseTest::nonNullGamePose": "MISSING"
+  },
+  "unexpected_failures": []
+}

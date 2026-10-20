@@ -1,0 +1,14 @@
+{
+  "schema_version": "3.0",
+  "run_id": "case-068-base-final",
+  "tests_observed": 2,
+  "FAIL_TO_PASS": {
+    "org.lwjgl.openvr.VRCompositorNullGamePoseTest::nullGamePose": "FAILED"
+  },
+  "PASS_TO_PASS": {
+    "org.lwjgl.openvr.VRCompositorNullGamePoseTest::nonNullGamePose": "PASSED"
+  },
+  "unexpected_failures": [
+    "org.lwjgl.openvr.VRCompositorNullGamePoseTest::nullGamePose"
+  ]
+}

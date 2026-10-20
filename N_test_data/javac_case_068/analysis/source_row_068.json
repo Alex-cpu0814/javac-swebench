@@ -1,0 +1,31 @@
+{
+  "instance_id": "LWJGL__lwjgl3-418",
+  "source_case": "068",
+  "language_pair": "Java-C",
+  "repo": "LWJGL/lwjgl3",
+  "base_commit": "2c007161cff7ba12023ae48dd28a7856c0c6da3d",
+  "fix_commit": "1ae772163cf3eb432cf6f327db5bf5b7fe9aad5f",
+  "commit_url": "https://github.com/LWJGL/lwjgl3/commit/1ae772163cf3eb432cf6f327db5bf5b7fe9aad5f",
+  "issue_url": "https://github.com/LWJGL/lwjgl3/issues/418",
+  "problem_statement": "The OpenVR VRCompositor_WaitGetPoses Java wrapper throws NullPointerException when callers omit the optional game-pose output buffer. A valid render-pose buffer with a null game-pose buffer should be forwarded to the native compositor as a null pointer and a zero count. The ordinary non-null game-pose call must keep working. Update the binding and its generator template accordingly.",
+  "test_source": "synthetic_issue_derived_java_native_stub",
+  "test_files": [
+    "modules/lwjgl/openvr/src/test/java/org/lwjgl/openvr/VRCompositorNullGamePoseTest.java",
+    "config/tests/vrprobe.c"
+  ],
+  "FAIL_TO_PASS": [
+    "org.lwjgl.openvr.VRCompositorNullGamePoseTest::nullGamePose"
+  ],
+  "PASS_TO_PASS": [
+    "org.lwjgl.openvr.VRCompositorNullGamePoseTest::nonNullGamePose"
+  ],
+  "verification_status": "source_overlay_and_exact_commit_evaluator_verified_published",
+  "verification": {
+    "source_overlay_comparison_verified": true,
+    "exact_commit_evaluator_verified": true,
+    "base_run_id": "case-068-base-final",
+    "gold_run_id": "case-068-gold-final",
+    "test_tamper_run_id": "case-068-tamper-final",
+    "image_published": true
+  }
+}

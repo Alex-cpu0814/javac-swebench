@@ -1,0 +1,5 @@
+[FAIL] nullGamePose: NPE before native call; calls=0
+java.lang.NullPointerException
+	at org.lwjgl.openvr.VRCompositor.VRCompositor_WaitGetPoses(VRCompositor.java:75)
+	at org.lwjgl.openvr.VRCompositorNullGamePoseTest.run(VRCompositorNullGamePoseTest.java:33)
+	at org.lwjgl.openvr.VRCompositorNullGamePoseTest.main(VRCompositorNullGamePoseTest.java:63)

@@ -1,0 +1,11 @@
+{
+  "build_id": "case-068-build-final",
+  "image": "local/javac-case-068-lwjgl3:benchmark-v1",
+  "base_commit": "2c007161cff7ba12023ae48dd28a7856c0c6da3d",
+  "status": "success",
+  "image_id": "sha256:30a5258e746b1190c9b5d6c6aacbbaa04bdd0f11f4aff0b5605a3eeb8445dfaa",
+  "clean_base_verified": true,
+  "fix_object_absent": true,
+  "protected_tests_absent": true,
+  "project_binaries_absent": true
+}

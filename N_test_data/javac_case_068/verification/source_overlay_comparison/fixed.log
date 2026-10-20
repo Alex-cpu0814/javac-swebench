@@ -1,0 +1,3 @@
+[CALL] VRCompositor_WaitGetPoses(render, null)
+[NATIVE] result=418 calls=1 renderAddress=138452434000896 renderCount=1 gameAddress=0 gameCount=0
+[PASS] null game pose was forwarded as pointer=0, count=0

@@ -1,0 +1,1 @@
+{"phase": "source_build", "command": ["javac", "-source", "8", "-target", "8", "-encoding", "UTF-8", "-cp", "/opt/benchmark/lib/*", "-d", "/testbed/bin/classes/benchmark", "/testbed/modules/lwjgl/openvr/src/generated/java/org/lwjgl/openvr/VRCompositor.java"]}

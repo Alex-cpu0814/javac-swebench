@@ -1,0 +1,7 @@
+diff --git a/modules/lwjgl/openvr/src/test/java/org/lwjgl/openvr/VRCompositorNullGamePoseTest.java b/modules/lwjgl/openvr/src/test/java/org/lwjgl/openvr/VRCompositorNullGamePoseTest.java
+new file mode 100644
+--- /dev/null
++++ b/modules/lwjgl/openvr/src/test/java/org/lwjgl/openvr/VRCompositorNullGamePoseTest.java
+@@ -0,0 +1,2 @@
++package org.lwjgl.openvr;
++public final class VRCompositorNullGamePoseTest {}

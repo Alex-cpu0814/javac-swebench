@@ -1,0 +1,31 @@
+{
+  "instance_id": "LWJGL__lwjgl3-418",
+  "task_level": "Java wrapper to JNI function-pointer boundary",
+  "validation_type": "runtime_null_pointer_and_count_forwarding",
+  "environment": "Linux x86_64; Eclipse Temurin Java 8; LWJGL 3.2.0 Java/native dependencies",
+  "python_version_target": "3.10+",
+  "java_requirement": "JDK 8",
+  "build_system": "Compile current generated VRCompositor.java from exact Base plus candidate patch; full Ant generator build not included",
+  "test_execution": "Two protected Java main-mode tests through a controlled native C function table",
+  "runtime_verified": true,
+  "reproduction_status": "source_overlay_and_exact_commit_evaluator_verified_local",
+  "base_commit": "2c007161cff7ba12023ae48dd28a7856c0c6da3d",
+  "fix_commit": "1ae772163cf3eb432cf6f327db5bf5b7fe9aad5f",
+  "test_source": "synthetic_issue_derived_java_native_stub",
+  "test_files": [
+    "modules/lwjgl/openvr/src/test/java/org/lwjgl/openvr/VRCompositorNullGamePoseTest.java",
+    "config/tests/vrprobe.c"
+  ],
+  "FAIL_TO_PASS": [
+    "org.lwjgl.openvr.VRCompositorNullGamePoseTest::nullGamePose"
+  ],
+  "PASS_TO_PASS_COUNT": 1,
+  "verification": {
+    "exact_commit_evaluator_verified": true,
+    "clean_base_image_verified": true,
+    "generator_regeneration_verified": false,
+    "full_ant_build_verified": false,
+    "real_steamvr_verified": false,
+    "image_published": false
+  }
+}

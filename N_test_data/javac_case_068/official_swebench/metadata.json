@@ -1,0 +1,90 @@
+{
+  "dataset_schema_version": "1.0",
+  "source_case": "068",
+  "dataset_variant": "N_test_data",
+  "instance_id": "LWJGL__lwjgl3-418",
+  "repo": "LWJGL/lwjgl3",
+  "base_commit": "2c007161cff7ba12023ae48dd28a7856c0c6da3d",
+  "fix_commit": "1ae772163cf3eb432cf6f327db5bf5b7fe9aad5f",
+  "test_source": "synthetic_issue_derived_java_native_stub",
+  "test_files": [
+    "modules/lwjgl/openvr/src/test/java/org/lwjgl/openvr/VRCompositorNullGamePoseTest.java",
+    "config/tests/vrprobe.c"
+  ],
+  "FAIL_TO_PASS": [
+    "org.lwjgl.openvr.VRCompositorNullGamePoseTest::nullGamePose"
+  ],
+  "PASS_TO_PASS": [
+    "org.lwjgl.openvr.VRCompositorNullGamePoseTest::nonNullGamePose"
+  ],
+  "PASS_TO_PASS_COUNT": 1,
+  "standard_layout": true,
+  "patch_provenance": {
+    "source": "Local git diff of pinned Fix and its sole parent",
+    "official_diff_complete": true,
+    "changed_file_count": 3,
+    "information_boundary": "Fix and reference patch known during test design"
+  },
+  "scope": [
+    "Linux x86_64, Java 8, exact parent source checkout",
+    "Candidate-generated VRCompositor.java compiled against LWJGL 3.2.0 release JARs",
+    "Native function-pointer stub checks actual null pointer and zero count; no real SteamVR call",
+    "Kotlin template regeneration and full Ant build are not part of automated grading",
+    "Fix source was visible during test design; no independent or blinded test-design claim"
+  ],
+  "verification": {
+    "source_overlay_comparison_verified": true,
+    "exact_commit_evaluator_verified": true,
+    "base_fails": true,
+    "fix_passes": true,
+    "docker_verified": true,
+    "runtime_verified": true,
+    "model_evaluator_verified": true,
+    "PASS_TO_PASS_verified": true,
+    "test_tamper_rejected": true,
+    "clean_base_image_verified": true,
+    "full_ant_build_verified": false,
+    "generator_regeneration_verified": false,
+    "real_steamvr_verified": false,
+    "current_generated_binding_compiled_from_source": true,
+    "formal_case_completed": true,
+    "base_run_id": "case-068-base-final",
+    "gold_run_id": "case-068-gold-final",
+    "test_tamper_run_id": "case-068-tamper-final",
+    "image_build_id": "case-068-build-final",
+    "image": "local/javac-case-068-lwjgl3:benchmark-v1",
+    "image_id": "sha256:30a5258e746b1190c9b5d6c6aacbbaa04bdd0f11f4aff0b5605a3eeb8445dfaa",
+    "base_grading": {
+      "FAIL_TO_PASS": {
+        "org.lwjgl.openvr.VRCompositorNullGamePoseTest::nullGamePose": "FAILED"
+      },
+      "PASS_TO_PASS": {
+        "org.lwjgl.openvr.VRCompositorNullGamePoseTest::nonNullGamePose": "PASSED"
+      }
+    },
+    "gold_grading": {
+      "FAIL_TO_PASS": {
+        "org.lwjgl.openvr.VRCompositorNullGamePoseTest::nullGamePose": "PASSED"
+      },
+      "PASS_TO_PASS": {
+        "org.lwjgl.openvr.VRCompositorNullGamePoseTest::nonNullGamePose": "PASSED"
+      }
+    }
+  },
+  "status": "published_completed",
+  "publication": {
+    "status": "published_completed",
+    "image": "yutu0814/javac-case-068-lwjgl3:benchmark-v1",
+    "digest": "sha256:30a5258e746b1190c9b5d6c6aacbbaa04bdd0f11f4aff0b5605a3eeb8445dfaa",
+    "docker_hub": "https://hub.docker.com/r/yutu0814/javac-case-068-lwjgl3",
+    "github_repository": "Alex-cpu0814/javac-swebench",
+    "github_case_path": "N_test_data/javac_case_068",
+    "github_case_url": "https://github.com/Alex-cpu0814/javac-swebench/tree/main/N_test_data/javac_case_068",
+    "image_published": true,
+    "github_published": true,
+    "registry_pull_verified": true,
+    "registry_public_access_verified": true,
+    "published_image_audit_passed": true,
+    "github_publication_method": "case-scoped commit from existing working tree; unrelated changes excluded"
+  }
+}

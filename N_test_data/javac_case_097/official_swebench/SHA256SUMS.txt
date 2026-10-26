@@ -35,7 +35,7 @@ a35e12b1e8693121e232e26325f8dab894256c7c697e02e358bad64466a92432  ../patches/tes
 d09d651c7714943f5fec34275391be96130fe9f7265f6819dac34a23afbef779  ../patches/test_source/tests/jep_pipe.py
 5097c415128ba7d7847a620800965d3bbe2519d154390cbdd6ab0cb4a02ba4c0  ../patches/test_source/tests/test_close_lifecycle.py
 666fdbaf7b59878ab78f1a120a5fa2dafd16dbf0bf9f29b5b74f672573ca9e01  ../patches/test_source/tests/test_close_terminated_thread.py
-83264d2efda5cf3c306e808f7179d7df20f4d52106ca9910e6f07f3fdbfaf5dc  ../README.md
+ad9c85f8afff3a5567f3598b9bf0c381e56f21483a540c8199ba4293f9dd97d3  ../README.md
 8874fdcca5c1af2c56b9f74a6ebddec6568d283f6cf801094243219263941311  ../verification/builds/case-096-build-1/docker-build.stderr.raw.log
 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  ../verification/builds/case-096-build-1/docker-build.stdout.raw.log
 d5fbfeca3abe6656052baede983aff4ec7cac5aa363c29b16501ec0ea60bb7eb  ../verification/builds/case-096-build-1/events.jsonl
@@ -50,7 +50,7 @@ d282c5be2e7f4aa2de5dc35bae72caf5050584cecd15fa4fb25fb18d6aa6f055  ../verificatio
 54f8f08c44b1e2205772b487b789a196e6b2c215bb83a2917c7bf7ca080350bd  ../verification/controls/close_noop.patch
 7190e4b63d901a344c5dc946bf91c4a68c3b578b89ae9f27f6f747368d950e8f  ../verification/controls/negative_patch.diff
 4b02435b85db9a019e58cd605638a93ac60c546c527c4a27bbfbd884181ce0cd  ../verification/controls/test_tamper.patch
-83baea8faea08f5fd040baf28ac8a51176c5b700490dd92b9a49d5e2fcdbb16e  ../verification/docker_publication.json
+3ef86e503750c8f3d3dccef0225a56e5670452308930b5a2ef50efd73ff1efed  ../verification/docker_publication.json
 cbf36ea1bbf1ce5aaf25b9fbb073c74df9319a2b0761b7af3c0d9116d585e33f  ../verification/local_evidence.json
 a0a7c8b17e0db54d6e474ad14eb51d517fc0fd843c03e070ca59f23702fb8241  ../verification/README.md
 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  ../verification/runs/case-096-base-control/docker-run.stderr.raw.log

@@ -1,0 +1,9 @@
+{
+  "repository": "yutu0814/javac-case-097-jep",
+  "tag": "benchmark-v3",
+  "digest": "sha256:8377bd71afd8d7673a7effb4473bbf204e57a1cad7c41fcc54caa11d3c7c1657",
+  "image": "yutu0814/javac-case-097-jep@sha256:8377bd71afd8d7673a7effb4473bbf204e57a1cad7c41fcc54caa11d3c7c1657",
+  "anonymous_http_status": 200,
+  "digest_pull_verified": true,
+  "previous_repository": "yutu0814/javac-case-096-jep"
+}

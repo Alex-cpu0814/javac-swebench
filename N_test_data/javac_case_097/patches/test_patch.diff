@@ -1,0 +1,239 @@
+diff --git a/src/jep/test/CloseLifecycleSupport.java b/src/jep/test/CloseLifecycleSupport.java
+new file mode 100644
+--- /dev/null
++++ b/src/jep/test/CloseLifecycleSupport.java
+@@ -0,0 +1,52 @@
++package jep.test;
++
++import jep.Jep;
++import jep.JepException;
++import java.nio.charset.StandardCharsets;
++import java.nio.file.Files;
++import java.nio.file.Path;
++import java.util.Collections;
++import java.util.Locale;
++
++final class CloseLifecycleSupport {
++    private CloseLifecycleSupport() {}
++
++    static Path newMarker() throws Exception {
++        Path marker = Files.createTempFile("jep-close-097-", ".txt");
++        Files.delete(marker);
++        return marker;
++    }
++
++    static void installSentinel(Jep jep, Path marker) throws Exception {
++        jep.set("_case097_marker", marker.toAbsolutePath().toString());
++        jep.eval("import os");
++        jep.eval("_case097_fd = os.open(_case097_marker, os.O_WRONLY | os.O_CREAT | os.O_APPEND, 384)");
++        jep.eval("class _CloseSentinel(object):\n"
++            + "    def __del__(self, writer=os.write, closer=os.close, descriptor=_case097_fd):\n"
++            + "        writer(descriptor, b'CLOSED\\n')\n"
++            + "        closer(descriptor)\n");
++        jep.eval("_case097_sentinel = _CloseSentinel()");
++        jep.eval("_case097_value = 42");
++        Object value = jep.getValue("_case097_value");
++        if (!(value instanceof Number) || ((Number)value).intValue() != 42)
++            throw new AssertionError("Interpreter initialization did not complete");
++    }
++
++    static void assertNativeClosed(Path marker) throws Exception {
++        if (!Files.exists(marker)
++            || !Files.readAllLines(marker, StandardCharsets.UTF_8).equals(Collections.singletonList("CLOSED")))
++            throw new AssertionError("Python sub-interpreter was not torn down exactly once");
++    }
++
++    static void assertUseRejected(Jep jep) throws Exception {
++        try {
++            jep.eval("_case097_value = 99");
++        } catch (JepException expected) {
++            if (expected.getMessage() != null
++                && expected.getMessage().toLowerCase(Locale.ROOT).contains("closed"))
++                return;
++            throw new AssertionError("Use failed for a reason other than closed state", expected);
++        }
++        throw new AssertionError("Closed interpreter remained usable");
++    }
++}
+diff --git a/src/jep/test/TestCloseLifecycle.java b/src/jep/test/TestCloseLifecycle.java
+new file mode 100644
+--- /dev/null
++++ b/src/jep/test/TestCloseLifecycle.java
+@@ -0,0 +1,36 @@
++package jep.test;
++
++import jep.Jep;
++import java.nio.file.Files;
++import java.nio.file.Path;
++
++public final class TestCloseLifecycle {
++    public static void main(String[] args) throws Exception {
++        if (args.length != 1 || !("same-thread".equals(args[0]) || "double-close".equals(args[0])))
++            throw new AssertionError("Expected a close lifecycle mode");
++        Path marker = CloseLifecycleSupport.newMarker();
++        try {
++            Jep jep = new Jep(false, ".");
++            CloseLifecycleSupport.installSentinel(jep, marker);
++            jep.close();
++            CloseLifecycleSupport.assertNativeClosed(marker);
++            CloseLifecycleSupport.assertUseRejected(jep);
++            if ("double-close".equals(args[0])) {
++                jep.close();
++                CloseLifecycleSupport.assertNativeClosed(marker);
++            }
++            // A fresh interpreter must still work on the same owner thread.
++            Jep next = new Jep(false, ".");
++            try {
++                next.eval("value = 42");
++                if (((Number)next.getValue("value")).intValue() != 42)
++                    throw new AssertionError("New interpreter did not work after close");
++            } finally {
++                next.close();
++            }
++        } finally {
++            Files.deleteIfExists(marker);
++        }
++        System.out.println("LIFECYCLE_OK:" + args[0]);
++    }
++}
+diff --git a/src/jep/test/TestCloseTerminatedThread.java b/src/jep/test/TestCloseTerminatedThread.java
+new file mode 100644
+--- /dev/null
++++ b/src/jep/test/TestCloseTerminatedThread.java
+@@ -0,0 +1,46 @@
++package jep.test;
++
++import jep.Jep;
++import java.nio.file.Files;
++import java.nio.file.Path;
++
++public final class TestCloseTerminatedThread {
++    public static void main(String[] args) throws Exception {
++        for (int i = 0; i < 3; i++) {
++            final Path marker = CloseLifecycleSupport.newMarker();
++            final Jep[] holder = new Jep[1];
++            final Throwable[] failure = new Throwable[1];
++            Thread creator = new Thread(new Runnable() {
++                @Override
++                public void run() {
++                    try {
++                        holder[0] = new Jep(false, ".");
++                        CloseLifecycleSupport.installSentinel(holder[0], marker);
++                    } catch (Throwable error) {
++                        failure[0] = error;
++                    }
++                }
++            }, "jep-creator-" + i);
++            creator.setDaemon(true);
++            try {
++                creator.start();
++                creator.join(15000);
++                if (creator.isAlive())
++                    throw new AssertionError("Creator thread did not terminate within 15 seconds");
++                if (failure[0] != null)
++                    throw new AssertionError("Jep creation failed", failure[0]);
++                if (holder[0] == null)
++                    throw new AssertionError("Jep instance was not created");
++                System.out.println("CLOSING:" + i);
++                System.out.flush();
++                holder[0].close();
++                CloseLifecycleSupport.assertNativeClosed(marker);
++                CloseLifecycleSupport.assertUseRejected(holder[0]);
++                System.out.println("CLOSE_STEP:" + i);
++            } finally {
++                Files.deleteIfExists(marker);
++            }
++        }
++        System.out.println("CLOSE_OK");
++    }
++}
+diff --git a/tests/__init__.py b/tests/__init__.py
+--- a/tests/__init__.py
++++ b/tests/__init__.py
+@@ -11,3 +11,6 @@
+ from .test_dir import *
+ from .test_numpy import *
+ 
++
++from .test_close_terminated_thread import *
++from .test_close_lifecycle import *
+diff --git a/tests/jep_pipe.py b/tests/jep_pipe.py
+new file mode 100644
+--- /dev/null
++++ b/tests/jep_pipe.py
+@@ -0,0 +1,44 @@
++from __future__ import print_function
++
++import os
++import subprocess
++
++
++def run_child(argv, expected_markers=(), timeout_seconds=60, log_name=None):
++    process = subprocess.Popen(argv, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
++    timed_out = False
++    try:
++        stdout, stderr = process.communicate(timeout=timeout_seconds)
++    except subprocess.TimeoutExpired:
++        timed_out = True
++        process.kill()
++        stdout, stderr = process.communicate()
++    out = stdout.decode("utf-8", "replace")
++    err = stderr.decode("utf-8", "replace")
++    diagnostics = "exit={0}\nstdout:\n{1}\nstderr:\n{2}".format(process.returncode, out, err)
++    directory = os.environ.get("BENCHMARK_CHILD_LOG_DIR")
++    if directory and log_name:
++        if not os.path.isdir(directory):
++            os.makedirs(directory)
++        with open(os.path.join(directory, log_name + ".log"), "w", encoding="utf-8") as log:
++            log.write(diagnostics)
++    if timed_out:
++        raise AssertionError("Child process timed out after {0}s\n{1}".format(timeout_seconds, diagnostics))
++    if process.returncode != 0:
++        raise AssertionError("Child JVM failed\n" + diagnostics)
++    lines = out.splitlines()
++    for marker in expected_markers:
++        if lines.count(marker) != 1:
++            raise AssertionError("Missing or duplicate completion marker: {0}\n{1}".format(marker, diagnostics))
++    return stdout
++
++
++def jep_pipe(argv):
++    return run_child(argv)
++
++
++def build_java_process_cmd(java_test_name, *args):
++    from java.lang import System
++    return ["java", "-ea", "-cp", System.getProperty("java.class.path"),
++            "-Djava.library.path=" + System.getProperty("java.library.path"),
++            "-XX:ErrorFile=/results/hs_err-%p.log", java_test_name] + list(args)
+diff --git a/tests/test_close_lifecycle.py b/tests/test_close_lifecycle.py
+new file mode 100644
+--- /dev/null
++++ b/tests/test_close_lifecycle.py
+@@ -0,0 +1,12 @@
++import unittest
++from tests.jep_pipe import build_java_process_cmd, run_child
++
++
++class TestCloseLifecycle(unittest.TestCase):
++    def test_same_thread_close(self):
++        run_child(build_java_process_cmd("jep.test.TestCloseLifecycle", "same-thread"),
++                  ["LIFECYCLE_OK:same-thread"], log_name="same-thread")
++
++    def test_double_close(self):
++        run_child(build_java_process_cmd("jep.test.TestCloseLifecycle", "double-close"),
++                  ["LIFECYCLE_OK:double-close"], log_name="double-close")
+diff --git a/tests/test_close_terminated_thread.py b/tests/test_close_terminated_thread.py
+new file mode 100644
+--- /dev/null
++++ b/tests/test_close_terminated_thread.py
+@@ -0,0 +1,9 @@
++import unittest
++from tests.jep_pipe import build_java_process_cmd, run_child
++
++
++class TestCloseTerminatedThread(unittest.TestCase):
++    def test_close_terminated_thread(self):
++        run_child(build_java_process_cmd("jep.test.TestCloseTerminatedThread"),
++                  ["CLOSE_STEP:0", "CLOSE_STEP:1", "CLOSE_STEP:2", "CLOSE_OK"],
++                  log_name="terminated-thread")

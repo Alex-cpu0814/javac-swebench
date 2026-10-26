@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+*.local.json
+verification/runs/case-097-gold-lifecycle-check/

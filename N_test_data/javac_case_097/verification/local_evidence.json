@@ -1,0 +1,24 @@
+{
+  "case_number": "097",
+  "instance_id": "ninia__jep-22",
+  "previous_case_number": "096",
+  "test_patch_sha256": "f935b43c807e0e2fdf00ed0f82dcd4b86c6ad09493ee61f70ce24ad6306c1113",
+  "runs": {
+    "gold": "case-097-gold-lifecycle-final",
+    "base": "case-097-base-lifecycle-final",
+    "close-noop": "case-097-close-noop-lifecycle-final",
+    "close-flag-only": "case-097-close-flag-only-lifecycle-final",
+    "tamper": "case-097-tamper-lifecycle-final"
+  },
+  "base_fails": true,
+  "fix_passes": true,
+  "PASS_TO_PASS_COUNT": 80,
+  "same_thread_close_verified": true,
+  "double_close_verified": true,
+  "native_teardown_verified": true,
+  "no_op_close_rejected": true,
+  "flag_only_close_rejected": true,
+  "test_tamper_rejected": true,
+  "published_digest_smoke_run_id": "case-097-gold-published-digest",
+  "image": "yutu0814/javac-case-097-jep@sha256:8377bd71afd8d7673a7effb4473bbf204e57a1cad7c41fcc54caa11d3c7c1657"
+}

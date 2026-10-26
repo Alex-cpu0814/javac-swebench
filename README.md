@@ -27,7 +27,7 @@ or wrapped during dataset production.
 | N | 074 | `LWJGL__lwjgl3-115` | 115 | 1 | 1 |
 | N | 093 | `ninia__jep-79` | 79 | 1 | 130 |
 | N | 094 | `ninia__jep-40` | 40 | 1 | 95 |
-| N | 096 | `ninia__jep-22` | 22 | 1 | 78 |
+| N | 097 | `ninia__jep-22` | 22 | 1 | 80 |
 | N | 098 | `ninia__jep-17` | 17 | 1 | 78 |
 | N | 099 | `ninia__jep-17-cache` | 17 | 1 | 78 |
 

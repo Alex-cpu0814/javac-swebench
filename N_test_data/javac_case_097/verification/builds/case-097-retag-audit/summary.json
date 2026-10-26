@@ -1,0 +1,19 @@
+{
+  "kind": "image_retag_audit",
+  "build_id": "case-097-retag-audit",
+  "status": "success",
+  "base_commit": "e4f13ea277ce4809688dde766cc9fd173ec6f63d",
+  "image": {
+    "name": "yutu0814/javac-case-097-jep:benchmark-v3",
+    "id": "sha256:8377bd71afd8d7673a7effb4473bbf204e57a1cad7c41fcc54caa11d3c7c1657",
+    "repo_digests": [
+      "yutu0814/javac-case-096-jep@sha256:8377bd71afd8d7673a7effb4473bbf204e57a1cad7c41fcc54caa11d3c7c1657",
+      "yutu0814/javac-case-097-jep@sha256:8377bd71afd8d7673a7effb4473bbf204e57a1cad7c41fcc54caa11d3c7c1657"
+    ]
+  },
+  "source_image": "yutu0814/javac-case-096-jep@sha256:8377bd71afd8d7673a7effb4473bbf204e57a1cad7c41fcc54caa11d3c7c1657",
+  "clean_base_verified": true,
+  "fix_object_absent": true,
+  "protected_tests_absent": true,
+  "project_binaries_absent": true
+}

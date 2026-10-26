@@ -1,0 +1,25 @@
+exit=-6
+stdout:
+CLOSING:0
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007543bab0f123, pid=518, tid=0x00007543bbb22640
+#
+# JRE version: OpenJDK Runtime Environment (8.0_502-b07) (build 1.8.0_502-b07)
+# Java VM: OpenJDK 64-Bit Server VM (25.502-b07 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# V  [libjvm.so+0x70f123]  ThreadStateTransition::transition_from_native(JavaThread*, JavaThreadState) [clone .constprop.112]+0x13
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# An error report file with more information is saved as:
+# /results/hs_err-518.log
+#
+# If you would like to submit a bug report, please visit:
+#   https://github.com/adoptium/adoptium-support/issues
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+stderr:

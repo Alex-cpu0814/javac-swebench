@@ -1,0 +1,141 @@
+test_read_file (test_array.TestArray) ... ok
+test_slice (test_array.TestArray) ... ok
+test_bool_array (test_call.TestTypes) ... ok
+test_double (test_call.TestTypes) ... ok
+test_enum (test_call.TestTypes) ... ok
+test_equals (test_call.TestTypes) ... ok
+test_float (test_call.TestTypes) ... ok
+test_float_array (test_call.TestTypes) ... ok
+test_getobj (test_call.TestTypes) ... ok
+test_getstring_array (test_call.TestTypes) ... ok
+test_int_array (test_call.TestTypes) ... ok
+test_intobj (test_call.TestTypes) ... ok
+test_long (test_call.TestTypes) ... ok
+test_object_array (test_call.TestTypes) ... ok
+test_short_array (test_call.TestTypes) ... ok
+test_string (test_call.TestTypes) ... ok
+test_string_string_array (test_call.TestTypes) ... ok
+test_double_close (test_close_lifecycle.TestCloseLifecycle) ... FAIL
+test_same_thread_close (test_close_lifecycle.TestCloseLifecycle) ... FAIL
+test_close_terminated_thread (test_close_terminated_thread.TestCloseTerminatedThread) ... FAIL
+test_date_compare (test_compare.TestCompare) ... ok
+test_int_compare (test_compare.TestCompare) ... ok
+test_dir_list (test_dir.TestDir) ... ok
+test_arithmetic_error (test_exceptions.TestExceptions) ... ok
+test_import_error (test_exceptions.TestExceptions) ... ok
+test_index_error (test_exceptions.TestExceptions) ... ok
+test_io_error (test_exceptions.TestExceptions) ... ok
+test_io_exception (test_exceptions.TestExceptions) ... ok
+test_null_pointer_exception (test_exceptions.TestExceptions) ... ok
+test_number_format (test_exceptions.TestExceptions) ... ok
+test_type_error (test_exceptions.TestExceptions) ... ok
+test_value_err (test_exceptions.TestExceptions) ... ok
+test_class_import (test_import.TestImport) ... ok
+test_java_sql (test_import.TestImport) ... ok
+test_not_found (test_import.TestImport) ... ok
+test_restricted_classloader (test_import.TestImport) ... ok
+test_without_restricted_classloader (test_import.TestImport) ... ok
+test_batch (test_jdbc.TestJdbc) ... ok
+test_datetime (test_jdbc.TestJdbc) ... ok
+test_dbapi_primitives (test_jdbc.TestJdbc) ... ok
+test_java_sql (test_jdbc.TestJdbc) ... ok
+test_add (test_lists.TestLists) ... ok
+test_addequals (test_lists.TestLists) ... ok
+test_contains (test_lists.TestLists) ... ok
+test_getitem (test_lists.TestLists) ... ok
+test_getslice (test_lists.TestLists) ... ok
+test_len (test_lists.TestLists) ... ok
+test_loop (test_lists.TestLists) ... ok
+test_multiply (test_lists.TestLists) ... ok
+test_multiplyequals (test_lists.TestLists) ... ok
+test_sequence (test_lists.TestLists) ... ok
+test_setitem (test_lists.TestLists) ... ok
+test_setslice (test_lists.TestLists) ... ok
+test_map (test_maps.TestMaps) ... ok
+testArgReturn (test_numpy.TestNumpy) ... ok
+testArrayParams (test_numpy.TestNumpy) ... ok
+testMultiDimensional (test_numpy.TestNumpy) ... ok
+testSetGet (test_numpy.TestNumpy) ... ok
+test_byte_value (test_regressions.TestRegressions) ... ok
+test_out (test_regressions.TestRegressions) ... ok
+test_boolean_field (test_types.TestFields) ... ok
+test_byte_field (test_types.TestFields) ... ok
+test_char_field (test_types.TestFields) ... ok
+test_class_field (test_types.TestFields) ... ok
+test_double_field (test_types.TestFields) ... ok
+test_equals (test_types.TestFields) ... ok
+test_float_field (test_types.TestFields) ... ok
+test_int_field (test_types.TestFields) ... ok
+test_long_field (test_types.TestFields) ... ok
+test_short_field (test_types.TestFields) ... ok
+test_static_boolean_field (test_types.TestFields) ... ok
+test_static_byte_field (test_types.TestFields) ... ok
+test_static_char_field (test_types.TestFields) ... ok
+test_static_class_field (test_types.TestFields) ... ok
+test_static_double_field (test_types.TestFields) ... ok
+test_static_float_field (test_types.TestFields) ... ok
+test_static_int_field (test_types.TestFields) ... ok
+test_static_long_field (test_types.TestFields) ... ok
+test_static_short_field (test_types.TestFields) ... ok
+test_static_string (test_types.TestFields) ... ok
+test_string (test_types.TestFields) ... ok
+
+======================================================================
+FAIL: test_double_close (test_close_lifecycle.TestCloseLifecycle)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/testbed/tests/test_close_lifecycle.py", line 12, in test_double_close
+    ["LIFECYCLE_OK:double-close"], log_name="double-close")
+  File "./tests/jep_pipe.py", line 28, in run_child
+    raise AssertionError("Child JVM failed\n" + diagnostics)
+AssertionError: Child JVM failed
+exit=1
+stdout:
+
+stderr:
+Exception in thread "main" java.lang.AssertionError: Python sub-interpreter was not torn down exactly once
+	at jep.test.CloseLifecycleSupport.assertNativeClosed(CloseLifecycleSupport.java:38)
+	at jep.test.TestCloseLifecycle.main(TestCloseLifecycle.java:16)
+
+
+======================================================================
+FAIL: test_same_thread_close (test_close_lifecycle.TestCloseLifecycle)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/testbed/tests/test_close_lifecycle.py", line 8, in test_same_thread_close
+    ["LIFECYCLE_OK:same-thread"], log_name="same-thread")
+  File "./tests/jep_pipe.py", line 28, in run_child
+    raise AssertionError("Child JVM failed\n" + diagnostics)
+AssertionError: Child JVM failed
+exit=1
+stdout:
+
+stderr:
+Exception in thread "main" java.lang.AssertionError: Python sub-interpreter was not torn down exactly once
+	at jep.test.CloseLifecycleSupport.assertNativeClosed(CloseLifecycleSupport.java:38)
+	at jep.test.TestCloseLifecycle.main(TestCloseLifecycle.java:16)
+
+
+======================================================================
+FAIL: test_close_terminated_thread (test_close_terminated_thread.TestCloseTerminatedThread)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/testbed/tests/test_close_terminated_thread.py", line 9, in test_close_terminated_thread
+    log_name="terminated-thread")
+  File "./tests/jep_pipe.py", line 28, in run_child
+    raise AssertionError("Child JVM failed\n" + diagnostics)
+AssertionError: Child JVM failed
+exit=1
+stdout:
+CLOSING:0
+
+stderr:
+Exception in thread "main" java.lang.AssertionError: Python sub-interpreter was not torn down exactly once
+	at jep.test.CloseLifecycleSupport.assertNativeClosed(CloseLifecycleSupport.java:38)
+	at jep.test.TestCloseTerminatedThread.main(TestCloseTerminatedThread.java:37)
+
+
+----------------------------------------------------------------------
+Ran 81 tests in 0.723s
+
+FAILED (failures=3)

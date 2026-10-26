@@ -1,0 +1,17 @@
+exit=0
+stdout:
+CLOSING:0
+CLOSE_STEP:0
+CLOSING:1
+CLOSE_STEP:1
+CLOSING:2
+CLOSE_STEP:2
+CLOSE_OK
+
+stderr:
+JEP THREAD WARNING: Unsafe close() of Python sub-interpreter by thread main.
+Please close() from the creating thread to ensure stability.
+JEP THREAD WARNING: Unsafe close() of Python sub-interpreter by thread main.
+Please close() from the creating thread to ensure stability.
+JEP THREAD WARNING: Unsafe close() of Python sub-interpreter by thread main.
+Please close() from the creating thread to ensure stability.

@@ -1,0 +1,7 @@
+diff --git a/src/jep/test/TestCloseTerminatedThread.java b/src/jep/test/TestCloseTerminatedThread.java
+new file mode 100644
+--- /dev/null
++++ b/src/jep/test/TestCloseTerminatedThread.java
+@@ -0,0 +1,2 @@
++package jep.test;
++public class TestCloseTerminatedThread {}

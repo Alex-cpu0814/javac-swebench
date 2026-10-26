@@ -1,0 +1,63 @@
+{
+  "schema_version": "3.0",
+  "kind": "patch_evaluation",
+  "run_id": "case-097-close-noop-lifecycle-final",
+  "label": null,
+  "instance_id": "ninia__jep-22",
+  "status": "unresolved",
+  "reason": "expected_test_failed_skipped_or_missing",
+  "started_at": "2026-10-26T09:16:41.909Z",
+  "finished_at": "2026-10-26T09:16:49.538Z",
+  "duration_ms": 7625,
+  "application_order": [
+    "model_patch",
+    "test_patch",
+    "tests"
+  ],
+  "model_patch_sha256": "54f8f08c44b1e2205772b487b789a196e6b2c215bb83a2917c7bf7ca080350bd",
+  "test_patch_sha256": "f935b43c807e0e2fdf00ed0f82dcd4b86c6ad09493ee61f70ce24ad6306c1113",
+  "image": {
+    "name": "yutu0814/javac-case-097-jep:benchmark-v3",
+    "id": "sha256:8377bd71afd8d7673a7effb4473bbf204e57a1cad7c41fcc54caa11d3c7c1657",
+    "repo_digests": [
+      "yutu0814/javac-case-096-jep@sha256:8377bd71afd8d7673a7effb4473bbf204e57a1cad7c41fcc54caa11d3c7c1657",
+      "yutu0814/javac-case-097-jep@sha256:8377bd71afd8d7673a7effb4473bbf204e57a1cad7c41fcc54caa11d3c7c1657"
+    ]
+  },
+  "container_exit_code": 0,
+  "phase": {
+    "phase": "tests_complete",
+    "outcome": "completed",
+    "reason": "tests_completed",
+    "test_exit_code": 0,
+    "instance_id": "ninia__jep-22"
+  },
+  "grading": {
+    "tests_observed": 81,
+    "FAIL_TO_PASS": {
+      "expected": 1,
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0,
+      "missing": 0
+    },
+    "PASS_TO_PASS": {
+      "expected": 80,
+      "passed": 78,
+      "failed": 2,
+      "skipped": 0,
+      "missing": 0
+    },
+    "unexpected_failures": 3
+  },
+  "logs": {
+    "events": "events.jsonl",
+    "docker_stdout": "docker-run.stdout.raw.log",
+    "docker_stderr": "docker-run.stderr.raw.log",
+    "model_patch": "model-patch.raw.log",
+    "test_patch": "test-patch.raw.log",
+    "project_build": "project-build.raw.log",
+    "tests": "tests.raw.log",
+    "grading": "grading.json"
+  }
+}

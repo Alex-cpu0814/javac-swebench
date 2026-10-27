@@ -1,0 +1,63 @@
+{
+  "verified_at": "2026-10-27T05:35:45.599709+00:00",
+  "change": "Reuse jep_pipe for child JVM execution and retain the success marker assertion",
+  "test_patch_sha256": "7cab6f4c9310cb87f14febb93adc6cec85467a5a41ef7e0ffcd7d6ecd685825f",
+  "image_id": "sha256:502cb2beb42e3c90413016c2d2ab33dc53fec30912f04ef8eadd47caeae629ee",
+  "clean_base_audit": {
+    "base_commit": "b1ab138dd6d492c7547e24d0b117aeafb112613d",
+    "working_tree_clean": true,
+    "fix_commit_present": false,
+    "protected_test_files_present": false,
+    "build_directory_present": false,
+    "python": "3.4.10",
+    "java": "1.8.0_502"
+  },
+  "runs": {
+    "base": {
+      "summary": "runs/case-099-jep-pipe-base-20261027/summary.json",
+      "summary_sha256": "9412bc744133b2c631f70cfdb2b2298390a8b0f1f7d265f0222e16ea9472e442",
+      "status": "unresolved",
+      "grading": {
+        "tests_observed": 79,
+        "FAIL_TO_PASS": {
+          "expected": 1,
+          "passed": 0,
+          "failed": 1,
+          "skipped": 0,
+          "missing": 0
+        },
+        "PASS_TO_PASS": {
+          "expected": 78,
+          "passed": 78,
+          "failed": 0,
+          "skipped": 0,
+          "missing": 0
+        },
+        "unexpected_failures": 1
+      }
+    },
+    "gold": {
+      "summary": "runs/case-099-jep-pipe-gold-20261027/summary.json",
+      "summary_sha256": "efa0d8b9f30df3ffba5749ed132347001b806d13f63548669ce29c154ccbec18",
+      "status": "resolved",
+      "grading": {
+        "tests_observed": 79,
+        "FAIL_TO_PASS": {
+          "expected": 1,
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0,
+          "missing": 0
+        },
+        "PASS_TO_PASS": {
+          "expected": 78,
+          "passed": 78,
+          "failed": 0,
+          "skipped": 0,
+          "missing": 0
+        },
+        "unexpected_failures": 0
+      }
+    }
+  }
+}

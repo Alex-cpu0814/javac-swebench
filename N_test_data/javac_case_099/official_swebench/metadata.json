@@ -135,7 +135,7 @@
     "tests/__init__.py"
   ],
   "project_version": "3.4.0",
-  "model_evaluator_image": "javac-case-099-jep:benchmark-v1",
+  "model_evaluator_image": "yutu0814/javac-case-099-jep:benchmark-v1",
   "notes": [
     "Commit 778b516 fixes Issue #17 by moving the fully-qualified Java class method cache from process-global state into each Jep interpreter.",
     "The protected test creates two same-named classes with different methods through separate URLClassLoaders and runs them in sequential Jep instances inside a child JVM.",

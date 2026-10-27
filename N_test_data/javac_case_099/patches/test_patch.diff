@@ -154,31 +154,19 @@ new file mode 100644
 index 0000000..0000000
 --- /dev/null
 +++ b/tests/test_classloader_method_cache.py
-@@ -0,0 +1,27 @@
+@@ -0,0 +1,15 @@
 +from __future__ import print_function
 +
-+import subprocess
 +import unittest
 +
-+from tests.jep_pipe import build_java_process_cmd
++from tests.jep_pipe import build_java_process_cmd, jep_pipe
 +
 +
 +class TestClassLoaderMethodCache(unittest.TestCase):
 +
 +    def test_classloader_method_cache(self):
-+        process = subprocess.Popen(
-+            build_java_process_cmd("jep.test.TestClassLoaderMethodCache"),
-+            stdout=subprocess.PIPE,
-+            stderr=subprocess.PIPE
++        stdout = jep_pipe(
++            build_java_process_cmd("jep.test.TestClassLoaderMethodCache")
 +        )
-+        stdout, stderr = process.communicate()
-+        if process.returncode != 0:
-+            raise AssertionError(
-+                "child JVM failed with exit code {0}\nstdout:\n{1}\nstderr:\n{2}".format(
-+                    process.returncode,
-+                    stdout.decode("utf-8", "replace"),
-+                    stderr.decode("utf-8", "replace")
-+                )
-+            )
 +        if b"CLASSLOADER_CACHE_OK" not in stdout:
 +            raise AssertionError("classloader cache marker missing")

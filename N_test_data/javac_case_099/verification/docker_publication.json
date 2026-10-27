@@ -1,0 +1,12 @@
+{
+  "published_at": "2026-10-27T05:40:08.988290+00:00",
+  "repository": "yutu0814/javac-case-099-jep",
+  "tag": "benchmark-v1",
+  "digest": "sha256:502cb2beb42e3c90413016c2d2ab33dc53fec30912f04ef8eadd47caeae629ee",
+  "immutable_reference": "yutu0814/javac-case-099-jep@sha256:502cb2beb42e3c90413016c2d2ab33dc53fec30912f04ef8eadd47caeae629ee",
+  "publication_type": "repush_existing_validated_clean_base_image",
+  "rebuilt": false,
+  "patches_injected_at_runtime": true,
+  "anonymous_tag_http_status": 200,
+  "validation_record": "helper_reuse_validation.json"
+}

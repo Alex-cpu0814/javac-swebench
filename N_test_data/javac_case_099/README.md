@@ -15,6 +15,18 @@ The protected test builds two versions of the same Java class name with differen
 
 The test runs inside a child JVM so a native failure cannot terminate the Python test runner. The Docker evaluator uses OpenJDK 8 and Python 3.4.10, matching the Base tree's supported environment.
 
+The Python test reuses `jep_pipe()` for child process execution and error
+reporting, then checks the success marker. The 2026-10-27 Docker runs confirm
+that Base fails only this regression and Gold passes all 79 tests; see
+`verification/helper_reuse_validation.json`.
+
+The published image is `yutu0814/javac-case-099-jep:benchmark-v1`, with immutable
+reference
+`yutu0814/javac-case-099-jep@sha256:502cb2beb42e3c90413016c2d2ab33dc53fec30912f04ef8eadd47caeae629ee`.
+This release reuses the validated clean Base image; patches and test assets are
+injected at runtime. Publication details are in
+`verification/docker_publication.json`.
+
 ## Directory contract
 
 - `analysis/`: source-row mapping, provenance, environment, and case analysis.

@@ -1,0 +1,5 @@
+evaluator/image/context/
+analysis/work/
+analysis/upstream_discovery/testclasses/
+__pycache__/
+*.pyc

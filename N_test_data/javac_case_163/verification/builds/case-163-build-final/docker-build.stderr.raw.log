@@ -1,0 +1,94 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.58kB 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/local/case163-junixsocket:builder
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/centos@sha256:a93df2e96e07f56ea48f215425c6f1673ab922927894595bb5c0ee4c5a955133
+#3 ...
+
+#4 [auth] library/centos:pull token for registry-1.docker.io
+#4 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/centos@sha256:a93df2e96e07f56ea48f215425c6f1673ab922927894595bb5c0ee4c5a955133
+#3 ...
+
+#5 [auth] library/centos:pull token for registry-1.docker.io
+#5 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/centos@sha256:a93df2e96e07f56ea48f215425c6f1673ab922927894595bb5c0ee4c5a955133
+#3 DONE 11.2s
+
+#6 [internal] load .dockerignore
+#6 transferring context: 76B 0.0s done
+#6 DONE 0.0s
+
+#7 [internal] load build context
+#7 DONE 0.0s
+
+#8 [stage-1  1/10] FROM docker.io/local/case163-junixsocket:builder@sha256:b8a43709d20e50fbcd5a4f12065457815aec1e7ff795cf479ee6d14f3ed1c71f
+#8 resolve docker.io/local/case163-junixsocket:builder@sha256:b8a43709d20e50fbcd5a4f12065457815aec1e7ff795cf479ee6d14f3ed1c71f 0.0s done
+#8 DONE 0.0s
+
+#9 [auth] library/centos:pull token for registry-1.docker.io
+#9 DONE 0.0s
+
+#10 [legacy 1/1] FROM docker.io/library/centos@sha256:a93df2e96e07f56ea48f215425c6f1673ab922927894595bb5c0ee4c5a955133
+#10 resolve docker.io/library/centos@sha256:a93df2e96e07f56ea48f215425c6f1673ab922927894595bb5c0ee4c5a955133
+#10 ...
+
+#11 [auth] library/centos:pull token for registry-1.docker.io
+#11 DONE 0.0s
+
+#10 [legacy 1/1] FROM docker.io/library/centos@sha256:a93df2e96e07f56ea48f215425c6f1673ab922927894595bb5c0ee4c5a955133
+#10 resolve docker.io/library/centos@sha256:a93df2e96e07f56ea48f215425c6f1673ab922927894595bb5c0ee4c5a955133 11.6s done
+#10 DONE 11.6s
+
+#7 [internal] load build context
+#7 transferring context: 1.05MB 0.1s
+#7 transferring context: 114.95MB 5.2s
+#7 transferring context: 115.47MB 5.2s done
+#7 DONE 5.2s
+
+#12 [stage-1  3/10] COPY --from=legacy / /opt/legacy/
+#12 CACHED
+
+#13 [stage-1  7/10] COPY context/annotations-3.0.1.jar /opt/deps/annotations.jar
+#13 CACHED
+
+#14 [stage-1  4/10] ADD context/OpenJDK8U-jdk_x64_linux_hotspot_8u292b10.tar.gz /opt/java/
+#14 CACHED
+
+#15 [stage-1  5/10] COPY context/qemu-x86_64-static /opt/tools/qemu-x86_64-static
+#15 CACHED
+
+#16 [stage-1  9/10] RUN chmod 0755 /opt/tools/qemu-x86_64-static     && ln -s /usr/bin/python3 /usr/local/bin/python     && mkdir -p /benchmark /inputs /results     && git -C /testbed config core.autocrlf false     && test "$(git -C /testbed rev-parse HEAD)" = "90716d6008c5c9cfa8a061f3d23531acaea29777"     && test -z "$(git -C /testbed status --porcelain)"     && /opt/tools/qemu-x86_64-static -L /opt/legacy /opt/legacy/lib64/libc.so.6     && /opt/tools/qemu-x86_64-static -L /opt/legacy /opt/java/jdk8u292-b10/bin/java        -Xint -Xmx64m -XX:+UseSerialGC -XX:ActiveProcessorCount=2 -version
+#16 CACHED
+
+#17 [stage-1  2/10] RUN apt-get -o Acquire::Check-Valid-Until=false update     && apt-get install -y --no-install-recommends git python3     && apt-get clean && rm -rf /var/lib/apt/lists/*
+#17 CACHED
+
+#18 [stage-1  8/10] ADD context/base-source.tar /testbed/
+#18 CACHED
+
+#19 [stage-1  6/10] COPY context/junit-platform-console-standalone-1.6.0-M1.jar /opt/deps/junit-console.jar
+#19 CACHED
+
+#20 [stage-1 10/10] WORKDIR /testbed
+#20 CACHED
+
+#21 exporting to image
+#21 exporting layers 0.0s done
+#21 exporting manifest sha256:52ca116b7ceaa493657e09331682065b71d9625567b0de216413b8f772e5ba8f done
+#21 exporting config sha256:ac907d574839fd946af473feb9863b9ae7aa5da405e03002b5d1232a1a81230b done
+#21 exporting attestation manifest sha256:8ad88005698ff6b9c5830bfc1179bd33858999bda6aa34b6af430443fcbcf5bd 0.0s done
+#21 exporting manifest list sha256:c8b7c236569b9eb461c66197356b0b109088ce31fd0f0057f5441a3afb99e497
+#21 exporting manifest list sha256:c8b7c236569b9eb461c66197356b0b109088ce31fd0f0057f5441a3afb99e497 0.0s done
+#21 naming to docker.io/local/javac-case-163-junixsocket:benchmark-v1 done
+#21 unpacking to docker.io/local/javac-case-163-junixsocket:benchmark-v1 0.0s done
+#21 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/szdm5cjb4f4pb1qi7qnmcki2r

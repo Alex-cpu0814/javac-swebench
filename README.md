@@ -1,6 +1,6 @@
 # Java-C SWE-bench-compatible cases
 
-This repository contains twenty-two Java-C cross-language bug cases converted to a
+This repository contains twenty-four Java-C cross-language bug cases converted to a
 SWE-bench-compatible record format. Cases are separated by test provenance:
 `Y_test_data/` contains Fix commits with extractable official regression tests;
 `N_test_data/` contains cases whose protected tests were constructed, adapted,
@@ -30,6 +30,10 @@ or wrapped during dataset production.
 | N | 097 | `ninia__jep-22` | 22 | 1 | 80 |
 | N | 098 | `ninia__jep-17` | 17 | 1 | 78 |
 | N | 099 | `ninia__jep-17-cache` | 17 | 1 | 78 |
+| N | 163 | `kohlschutter__junixsocket-81` | 81 | 1 | 35 |
+| N | 170 | `kohlschutter__junixsocket-140` | 140 | 2 | 41 |
+
+Case [N/163](N_test_data/javac_case_163/README.md) reproduces the old-glibc native `stat` crash with 1 target and 35 preservation tests. Case [N/170](N_test_data/javac_case_170/README.md) exercises real noexec library-loading fallback with 2 target and 41 preservation tests. Both clean-Base images are published as `yutu0814/javac-case-163-junixsocket:benchmark-v1` and `yutu0814/javac-case-170-junixsocket:benchmark-v1`; evaluators pin immutable Docker Hub digests. Each case includes six validated protection/repair controls and a published-image quick start.
 
 Case [N/056](N_test_data/javac_case_056/README.md) packages `LWJGL__lwjgl3-673`
 with two issue-derived Java struct tests and one existing Vulkan P2P. Standard

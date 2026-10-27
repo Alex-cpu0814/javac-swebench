@@ -1,0 +1,85 @@
+
+Thanks for using JUnit! Support its development at https://junit.org/sponsoring
+
+.
++-- JUnit Jupiter [OK]
+| +-- EndOfFileTest [OK]
+| | +-- clientWriteToSocketClosedByClient() [OK]
+| | +-- clientWriteToSocketClosedByServer() [OK]
+| | +-- bidirectionalSanity() [OK]
+| | +-- serverWriteToSocketClosedByClient() [OK]
+| | +-- serverWriteToSocketClosedByServer() [OK]
+| | +-- clientReadEof() [OK]
+| | '-- serverReadEof() [OK]
+| +-- TcpNoDelayTest [OK]
+| | +-- testDefaultImpl() [OK]
+| | '-- testStrictImpl() [OK]
+| +-- ServerSocketCloseTest [OK]
+| | +-- testUnblockAcceptsWithSoTimeout() [OK]
+| | '-- testUnblockAcceptsWithoutSoTimeout() [OK]
+| +-- FileDescriptorsTest [OK]
+| | +-- testNoAncillaryReceiveBuffer() [OK]
+| | +-- testSendRecvFileDescriptors() [OK]
+| | +-- testBadFileDescriptor() [OK]
+| | +-- testAncillaryReceiveBufferTooSmall() [OK]
+| | +-- testFileInputStreamPartiallyConsumed() [OK]
+| | '-- testFileInputStream() [OK]
+| +-- AcceptTimeoutTest [OK]
+| | +-- testCatchTimeout() [OK]
+| | '-- testTimeoutAfterDelay() [OK]
+| +-- SoTimeoutTest [OK]
+| | +-- issue14Fail() [OK]
+| | '-- issue14Pass() [OK]
+| +-- AFUNIXSocketAddressTest [OK]
+| | '-- testPort() [OK]
+| +-- BufferOverflowTest [OK]
+| | +-- writeOverflow() [OK]
+| | +-- readUpTo() [OK]
+| | '-- readOutOfBounds() [OK]
+| +-- AvailableTest [OK]
+| | +-- testAvailableAtClient() [OK]
+| | '-- testAvailableAtServer() [X] expected: <22> but was: <23>
+| +-- EndOfFileJavaTest [OK]
+| | +-- clientWriteToSocketClosedByClient() [OK]
+| | +-- clientWriteToSocketClosedByServer() [OK]
+| | +-- bidirectionalSanity() [OK]
+| | +-- serverWriteToSocketClosedByClient() [OK]
+| | +-- serverWriteToSocketClosedByServer() [OK]
+| | +-- clientReadEof() [OK]
+| | '-- serverReadEof() [OK]
+| +-- PeerCredentialsTest [OK]
+| | '-- testSameProcess() [OK]
+| '-- CancelAcceptTest [OK]
+|   '-- issue6test1() [OK]
+'-- JUnit Vintage [OK]
+
+Failures (1):
+  JUnit Jupiter:AvailableTest:testAvailableAtServer()
+    MethodSource [className = 'org.newsclub.net.unix.AvailableTest', methodName = 'testAvailableAtServer', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <22> but was: <23>
+       org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+       org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:510)
+       org.newsclub.net.unix.AvailableTest.receiveBytes(AvailableTest.java:61)
+       org.newsclub.net.unix.AvailableTest.lambda$testAvailableAtServer$1(AvailableTest.java:140)
+       org.junit.jupiter.api.AssertTimeout.lambda$assertTimeout$0(AssertTimeout.java:49)
+       org.junit.jupiter.api.AssertTimeout.assertTimeout(AssertTimeout.java:78)
+       org.junit.jupiter.api.AssertTimeout.assertTimeout(AssertTimeout.java:66)
+       [...]
+
+Test run finished after 5341 ms
+[        14 containers found      ]
+[         0 containers skipped    ]
+[        14 containers started    ]
+[         0 containers aborted    ]
+[        14 containers successful ]
+[         0 containers failed     ]
+[        36 tests found           ]
+[         0 tests skipped         ]
+[        36 tests started         ]
+[         0 tests aborted         ]
+[        35 tests successful      ]
+[         1 tests failed          ]
+

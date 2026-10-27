@@ -1,0 +1,23 @@
+{
+  "status": "built_and_audited",
+  "image": "local/javac-case-170-junixsocket:benchmark-v1",
+  "image_id": "sha256:1a70b55b3d05b7f18257b238ba0ab246f055b03023eb9483d1cafc58703fbde3",
+  "base_commit": "71a134bce58a22fb17a7a14f00799196c0c71a60",
+  "fix_object_absent": true,
+  "private_tests_absent": true,
+  "compiled_project_absent": true,
+  "context_sha256": {
+    "animal-sniffer-annotations-1.23.jar": "9ffe526bf43a6348e9d8b33b9cd6f580a7f5eed0cf055913007eda263de974d0",
+    "base-source.tar": "3a9a6e9a840a78d70080bdb7bbc99d5728b7adf1ac355fee80e1f5c4c3eff72a",
+    "compiler-annotations-1.6.3.jar": "5f7e6949e47c10675c6522c134d55839a2223296ce8f184a32c19403170ef653",
+    "error_prone_annotations-2.22.0.jar": "82a027b86541f58d1f9ee020cdf6bebe82acc7a267d3c53a2ea5cd6335932bbd",
+    "junit-platform-console-standalone-1.10.0.jar": "8192d377bdb53969273ca3805af0eef3b864690f7818300c0d39ac7758da39a0",
+    "junixsocket-native-common-2.8.0.jar": "88213e301b8c0b1d743f1e1926b5f5f36257b28ecf352bf9578d8c126039b557",
+    "kohlschutter-test-util-1.6.3.jar": "d7a87b17c05b7558efebb1ff36c739bb52c21433a1647e69d0a6116edf6e72d9",
+    "kohlschutter-util-1.6.3.jar": "2775cde3790a9a26cb0aeff7a79b2311e56a2ff9fb0fa7f53f003ec8f4e4a024",
+    "org.eclipse.jdt.annotation-2.2.700.jar": "525b777435de57aa8f7d140d552ddc40ad9c6ad753f9d2bab7dd2101de60e431"
+  },
+  "dockerfile_sha256": "509e6b6518893af47ad96224077933b0010de9197929ff7d1fcfc45c6948fb89",
+  "builder_sha256": "3b245d3ccc4c05f38a48ef9f8a28e52908e6a8c16c52a6ea0b2787c9485f291f",
+  "audit_log_sha256": "438c7a25113b21d7feb5d596ab41d845352ac53d5e1feff1df618abc2d468ec3"
+}

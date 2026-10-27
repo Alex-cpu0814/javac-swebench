@@ -1,0 +1,13 @@
+--- a/junixsocket-common/src/main/java/org/newsclub/net/unix/NativeLibraryLoader.java
++++ b/junixsocket-common/src/main/java/org/newsclub/net/unix/NativeLibraryLoader.java
+@@ -194,8 +194,8 @@
+         try {
+           System.load(libFile.getAbsolutePath());
+         } catch (UnsatisfiedLinkError e) {
+-          String message = e.getMessage().toLowerCase(Locale.getDefault());
+-          if (!message.contains("perm")) {
++          // Exhaust the three configured locations independently of diagnostic text.
++          if (attempt == 2) {
+             throw e;
+           }
+ 

@@ -1,0 +1,6 @@
+diff --git a/benchmark_negative_marker.txt b/benchmark_negative_marker.txt
+new file mode 100644
+--- /dev/null
++++ b/benchmark_negative_marker.txt
+@@ -0,0 +1 @@
++negative-control

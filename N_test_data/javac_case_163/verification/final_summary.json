@@ -1,0 +1,62 @@
+{
+  "status": "verified",
+  "test_patch_sha256": "71e4aa501df5bd7e1e675d0baf2473c1ecbf6ad5f4462deb36cb12d2cb634c3d",
+  "image_id": "sha256:c8b7c236569b9eb461c66197356b0b109088ce31fd0f0057f5441a3afb99e497",
+  "evaluation_assets_sha256": {
+    "evaluator/case_adapter.sh": "ab8cc705dbc2a43db6abb73539fd9a2005b9331cd3fccd3edeaf1556a672a22f",
+    "evaluator/build_project.py": "9f2c56bd88bc1d51ab2222fffb41e99140ee473a083f4678ac7046e55a79f948",
+    "evaluator/run_case_tests.py": "5cf4a49f43ed836a59275db14b2bd4e2c1d321c1e625a3eefead4a9e1b732ae2",
+    "evaluator/upstream_tests.json": "89c5b49c7775b32ebd60a250674923b101d55b06af060873d4e4746d5313e306",
+    "evaluator/run_evaluation.sh": "e65da2cf6d001eaad430032c987e6acd4ddd2ef94ca87de24a0f332b08832bc9",
+    "evaluator/case_config.json": "e357437f508dcfa9b823501e13ae1ad076803e68fcb03fad3c9cbf88ef60511c",
+    "evaluator/evaluate_model_patch.py": "398d18ec14e55e0d1c52e585c7205cf6bc4eec97dd440e4ecc3bdf3d0272798c",
+    "evaluator/logging_v3.py": "add904e35fde3b61f757d2e9129fc33545591646f14011a93da4455e293aeb5f"
+  },
+  "fail_to_pass_count": 1,
+  "pass_to_pass_count": 35,
+  "upstream_pass_to_pass_count": 34,
+  "controls": {
+    "tamper": {
+      "run_id": "case-163-tamper-published",
+      "summary": "runs/case-163-tamper-published/summary.json",
+      "status": "unresolved",
+      "reason": "candidate_conflicts_with_test_patch",
+      "summary_sha256": "958521d2dba22559fb6e4d0c21906da07b83339b4616d7dfd2cbc6d0d8d9794c"
+    },
+    "upstream-tamper": {
+      "run_id": "case-163-upstream-tamper-published",
+      "summary": "runs/case-163-upstream-tamper-published/summary.json",
+      "status": "unresolved",
+      "reason": "project_build_failed",
+      "summary_sha256": "a11d346408376d908a92ad456d48ee933f9a6afe833f8ef329db9c3c20ef6db0"
+    },
+    "port-regression": {
+      "run_id": "case-163-port-regression-published",
+      "summary": "runs/case-163-port-regression-published/summary.json",
+      "status": "unresolved",
+      "reason": "expected_test_failed_skipped_or_missing",
+      "summary_sha256": "457d1b4a5470067ac8503299255d4c242ca87c541d3d2294508b6e282b38e921"
+    },
+    "alternative": {
+      "run_id": "case-163-alternative-published",
+      "summary": "runs/case-163-alternative-published/summary.json",
+      "status": "resolved",
+      "reason": "all_expected_tests_passed",
+      "summary_sha256": "b11ff328397c7418f770664600cd0af91cb3980d6aac3728b3f9bf180d0372a6"
+    },
+    "base": {
+      "run_id": "case-163-base-published",
+      "summary": "runs/case-163-base-published/summary.json",
+      "status": "unresolved",
+      "reason": "expected_test_failed_skipped_or_missing",
+      "summary_sha256": "b4dad2fc696e935618a5cac3b12a117585a5cadbcbe6af4258edc013732ac7f6"
+    },
+    "gold": {
+      "run_id": "case-163-gold-published",
+      "summary": "runs/case-163-gold-published/summary.json",
+      "status": "resolved",
+      "reason": "all_expected_tests_passed",
+      "summary_sha256": "1e44eda2890e31362782cc92ee754fcd15db5851186c3f9ff99be8c2d1961760"
+    }
+  }
+}

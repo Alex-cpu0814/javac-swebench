@@ -1,0 +1,34 @@
+{
+  "instance_id": "kohlschutter__junixsocket-81",
+  "task_level": "integration",
+  "validation_type": "real_automatic_loader_child_jvm_and_upstream_junit",
+  "environment": "Linux_x86_64_glibc_2_23_build_and_QEMU_glibc_2_12_runtime",
+  "python_version_target": "3.5+",
+  "java_requirement": "AdoptOpenJDK 8u292",
+  "build_system": "core_Java_and_JNI_source_adapter_using_candidate_native_POM_and_AOL_options; full_Maven_packaging_not_claimed",
+  "test_execution": "runtime_injected_case_adapter",
+  "runtime_verified": true,
+  "reproduction_status": "resolved",
+  "base_commit": "90716d6008c5c9cfa8a061f3d23531acaea29777",
+  "fix_commit": "77a4f0c8cd641fc5dfcb62922981c32393c8e079",
+  "test_source": "synthetic_issue_81_child_jvm_plus_unchanged_upstream_junit",
+  "test_files": [
+    "junixsocket-common/src/test/java/org/newsclub/net/unix/Issue81GlibcProbe.java"
+  ],
+  "FAIL_TO_PASS": [
+    "org.newsclub.net.unix.Issue81CompatibilityTest.testAutomaticFallbackOldGlibc"
+  ],
+  "PASS_TO_PASS_COUNT": 35,
+  "verification": {
+    "docker_verified": true,
+    "model_evaluator_verified": true,
+    "base_fails": true,
+    "fix_passes": true,
+    "status": "resolved",
+    "evaluation_assets_injected_at_runtime": true,
+    "image_contains_test_patch": false,
+    "image_contains_gold_patch": false,
+    "image_contains_fix_commit": false,
+    "model_evaluator_verification_type": "isolated_base_gold_mutation_and_tamper_controls"
+  }
+}

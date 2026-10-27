@@ -1,0 +1,212 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 518B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:185d4ef919b98cd195690c33f3fd93bd49c66c70f0b662e54566c0dbaebea6ce
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/6] FROM docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:185d4ef919b98cd195690c33f3fd93bd49c66c70f0b662e54566c0dbaebea6ce
+#4 resolve docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:185d4ef919b98cd195690c33f3fd93bd49c66c70f0b662e54566c0dbaebea6ce 0.0s done
+#4 CACHED
+
+#5 [internal] load build context
+#5 transferring context: 11.00MB 0.7s done
+#5 DONE 0.7s
+
+#6 [2/6] RUN apt-get update && apt-get install -y --no-install-recommends git python3 ca-certificates && rm -rf /var/lib/apt/lists/*
+#6 2.322 Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+#6 2.378 Get:2 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
+#6 3.849 Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+#6 5.425 Get:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+#6 5.439 Get:5 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [4,430 kB]
+#6 7.122 Get:6 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
+#6 8.947 Get:7 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1,325 kB]
+#6 9.555 Get:8 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
+#6 10.48 Get:9 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [96.8 kB]
+#6 12.19 Get:10 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1,792 kB]
+#6 14.31 Get:11 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [7,955 kB]
+#6 16.37 Get:12 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
+#6 19.96 Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [4,759 kB]
+#6 23.41 Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [8,243 kB]
+#6 25.02 Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [104 kB]
+#6 27.77 Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1,628 kB]
+#6 28.84 Get:17 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [35.6 kB]
+#6 30.19 Get:18 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [82.9 kB]
+#6 30.20 Fetched 49.0 MB in 30s (1,651 kB/s)
+#6 30.20 Reading package lists...
+#6 31.25 Reading package lists...
+#6 32.32 Building dependency tree...
+#6 32.53 Reading state information...
+#6 32.77 The following additional packages will be installed:
+#6 32.77   git-man libcurl3-gnutls liberror-perl libgdbm-compat4 libgdbm6 libmpdec3
+#6 32.77   libperl5.34 libpython3-stdlib libpython3.10-minimal libpython3.10-stdlib
+#6 32.77   media-types perl perl-modules-5.34 python3-minimal python3.10
+#6 32.77   python3.10-minimal
+#6 32.77 Suggested packages:
+#6 32.77   gettext-base git-daemon-run | git-daemon-sysvinit git-doc git-email git-gui
+#6 32.77   gitk gitweb git-cvs git-mediawiki git-svn gdbm-l10n perl-doc
+#6 32.77   libterm-readline-gnu-perl | libterm-readline-perl-perl make
+#6 32.77   libtap-harness-archive-perl python3-doc python3-tk python3-venv
+#6 32.77   python3.10-venv python3.10-doc binutils binfmt-support
+#6 32.77 Recommended packages:
+#6 32.77   patch less ssh-client netbase
+#6 32.87 The following NEW packages will be installed:
+#6 32.87   git git-man libcurl3-gnutls liberror-perl libgdbm-compat4 libgdbm6 libmpdec3
+#6 32.87   libperl5.34 libpython3-stdlib libpython3.10-minimal libpython3.10-stdlib
+#6 32.87   media-types perl perl-modules-5.34 python3 python3-minimal python3.10
+#6 32.87   python3.10-minimal
+#6 32.87 The following packages will be upgraded:
+#6 32.87   ca-certificates
+#6 35.03 1 upgraded, 18 newly installed, 0 to remove and 4 not upgraded.
+#6 35.03 Need to get 18.2 MB of archives.
+#6 35.03 After this operation, 90.8 MB of additional disk space will be used.
+#6 35.03 Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3.10-minimal amd64 3.10.12-1~22.04.18 [817 kB]
+#6 37.58 Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3.10-minimal amd64 3.10.12-1~22.04.18 [2,277 kB]
+#6 38.53 Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-minimal amd64 3.10.6-1~22.04.1 [24.3 kB]
+#6 39.45 Get:4 http://archive.ubuntu.com/ubuntu jammy/main amd64 media-types all 7.0.0 [25.5 kB]
+#6 40.80 Get:5 http://archive.ubuntu.com/ubuntu jammy/main amd64 libmpdec3 amd64 2.5.1-2build2 [86.8 kB]
+#6 43.08 Get:6 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3.10-stdlib amd64 3.10.12-1~22.04.18 [1,850 kB]
+#6 45.20 Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3.10 amd64 3.10.12-1~22.04.18 [508 kB]
+#6 45.84 Get:8 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3-stdlib amd64 3.10.6-1~22.04.1 [6,812 B]
+#6 46.72 Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3 amd64 3.10.6-1~22.04.1 [22.8 kB]
+#6 49.40 Get:10 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 perl-modules-5.34 all 5.34.0-3ubuntu1.9 [2,977 kB]
+#6 50.47 Get:11 http://archive.ubuntu.com/ubuntu jammy/main amd64 libgdbm6 amd64 1.23-1 [33.9 kB]
+#6 51.09 Get:12 http://archive.ubuntu.com/ubuntu jammy/main amd64 libgdbm-compat4 amd64 1.23-1 [6,606 B]
+#6 53.87 Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libperl5.34 amd64 5.34.0-3ubuntu1.9 [4,796 kB]
+#6 55.80 Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 perl amd64 5.34.0-3ubuntu1.9 [232 kB]
+#6 57.40 Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 ca-certificates all 20260816ubuntu0.22.04.1 [140 kB]
+#6 59.28 Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcurl3-gnutls amd64 7.81.0-1ubuntu1.30 [287 kB]
+#6 60.27 Get:17 http://archive.ubuntu.com/ubuntu jammy/main amd64 liberror-perl all 0.17029-1 [26.5 kB]
+#6 62.46 Get:18 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 git-man all 1:2.34.1-1ubuntu1.18 [954 kB]
+#6 65.31 Get:19 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 git amd64 1:2.34.1-1ubuntu1.18 [3,174 kB]
+#6 65.56 debconf: delaying package configuration, since apt-utils is not installed
+#6 65.58 Fetched 18.2 MB in 33s (561 kB/s)
+#6 65.60 Selecting previously unselected package libpython3.10-minimal:amd64.
+#6 65.60 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7915 files and directories currently installed.)
+#6 65.63 Preparing to unpack .../libpython3.10-minimal_3.10.12-1~22.04.18_amd64.deb ...
+#6 65.64 Unpacking libpython3.10-minimal:amd64 (3.10.12-1~22.04.18) ...
+#6 65.70 Selecting previously unselected package python3.10-minimal.
+#6 65.70 Preparing to unpack .../python3.10-minimal_3.10.12-1~22.04.18_amd64.deb ...
+#6 65.70 Unpacking python3.10-minimal (3.10.12-1~22.04.18) ...
+#6 65.76 Setting up libpython3.10-minimal:amd64 (3.10.12-1~22.04.18) ...
+#6 65.77 Setting up python3.10-minimal (3.10.12-1~22.04.18) ...
+#6 66.32 Selecting previously unselected package python3-minimal.
+#6 66.32 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 8211 files and directories currently installed.)
+#6 66.32 Preparing to unpack .../0-python3-minimal_3.10.6-1~22.04.1_amd64.deb ...
+#6 66.33 Unpacking python3-minimal (3.10.6-1~22.04.1) ...
+#6 66.36 Selecting previously unselected package media-types.
+#6 66.36 Preparing to unpack .../1-media-types_7.0.0_all.deb ...
+#6 66.36 Unpacking media-types (7.0.0) ...
+#6 66.39 Selecting previously unselected package libmpdec3:amd64.
+#6 66.39 Preparing to unpack .../2-libmpdec3_2.5.1-2build2_amd64.deb ...
+#6 66.40 Unpacking libmpdec3:amd64 (2.5.1-2build2) ...
+#6 66.42 Selecting previously unselected package libpython3.10-stdlib:amd64.
+#6 66.42 Preparing to unpack .../3-libpython3.10-stdlib_3.10.12-1~22.04.18_amd64.deb ...
+#6 66.43 Unpacking libpython3.10-stdlib:amd64 (3.10.12-1~22.04.18) ...
+#6 66.52 Selecting previously unselected package python3.10.
+#6 66.52 Preparing to unpack .../4-python3.10_3.10.12-1~22.04.18_amd64.deb ...
+#6 66.52 Unpacking python3.10 (3.10.12-1~22.04.18) ...
+#6 66.55 Selecting previously unselected package libpython3-stdlib:amd64.
+#6 66.55 Preparing to unpack .../5-libpython3-stdlib_3.10.6-1~22.04.1_amd64.deb ...
+#6 66.55 Unpacking libpython3-stdlib:amd64 (3.10.6-1~22.04.1) ...
+#6 66.58 Setting up python3-minimal (3.10.6-1~22.04.1) ...
+#6 66.74 Selecting previously unselected package python3.
+#6 66.74 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 8613 files and directories currently installed.)
+#6 66.74 Preparing to unpack .../00-python3_3.10.6-1~22.04.1_amd64.deb ...
+#6 66.75 Unpacking python3 (3.10.6-1~22.04.1) ...
+#6 66.77 Selecting previously unselected package perl-modules-5.34.
+#6 66.77 Preparing to unpack .../01-perl-modules-5.34_5.34.0-3ubuntu1.9_all.deb ...
+#6 66.77 Unpacking perl-modules-5.34 (5.34.0-3ubuntu1.9) ...
+#6 67.01 Selecting previously unselected package libgdbm6:amd64.
+#6 67.01 Preparing to unpack .../02-libgdbm6_1.23-1_amd64.deb ...
+#6 67.02 Unpacking libgdbm6:amd64 (1.23-1) ...
+#6 67.05 Selecting previously unselected package libgdbm-compat4:amd64.
+#6 67.05 Preparing to unpack .../03-libgdbm-compat4_1.23-1_amd64.deb ...
+#6 67.05 Unpacking libgdbm-compat4:amd64 (1.23-1) ...
+#6 67.09 Selecting previously unselected package libperl5.34:amd64.
+#6 67.09 Preparing to unpack .../04-libperl5.34_5.34.0-3ubuntu1.9_amd64.deb ...
+#6 67.09 Unpacking libperl5.34:amd64 (5.34.0-3ubuntu1.9) ...
+#6 67.30 Selecting previously unselected package perl.
+#6 67.30 Preparing to unpack .../05-perl_5.34.0-3ubuntu1.9_amd64.deb ...
+#6 67.31 Unpacking perl (5.34.0-3ubuntu1.9) ...
+#6 67.35 Preparing to unpack .../06-ca-certificates_20260816ubuntu0.22.04.1_all.deb ...
+#6 67.36 Unpacking ca-certificates (20260816ubuntu0.22.04.1) over (20260601~22.04.1) ...
+#6 67.65 Selecting previously unselected package libcurl3-gnutls:amd64.
+#6 67.65 Preparing to unpack .../07-libcurl3-gnutls_7.81.0-1ubuntu1.30_amd64.deb ...
+#6 67.65 Unpacking libcurl3-gnutls:amd64 (7.81.0-1ubuntu1.30) ...
+#6 67.68 Selecting previously unselected package liberror-perl.
+#6 67.68 Preparing to unpack .../08-liberror-perl_0.17029-1_all.deb ...
+#6 67.68 Unpacking liberror-perl (0.17029-1) ...
+#6 67.71 Selecting previously unselected package git-man.
+#6 67.71 Preparing to unpack .../09-git-man_1%3a2.34.1-1ubuntu1.18_all.deb ...
+#6 67.71 Unpacking git-man (1:2.34.1-1ubuntu1.18) ...
+#6 67.76 Selecting previously unselected package git.
+#6 67.76 Preparing to unpack .../10-git_1%3a2.34.1-1ubuntu1.18_amd64.deb ...
+#6 67.76 Unpacking git (1:2.34.1-1ubuntu1.18) ...
+#6 67.90 Setting up media-types (7.0.0) ...
+#6 67.91 Setting up libcurl3-gnutls:amd64 (7.81.0-1ubuntu1.30) ...
+#6 67.91 Setting up perl-modules-5.34 (5.34.0-3ubuntu1.9) ...
+#6 67.92 Setting up ca-certificates (20260816ubuntu0.22.04.1) ...
+#6 68.00 debconf: unable to initialize frontend: Dialog
+#6 68.00 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#6 68.00 debconf: falling back to frontend: Readline
+#6 69.17 Updating certificates in /etc/ssl/certs...
+#6 69.88 rehash: warning: skipping ca-certificates.crt,it does not contain exactly one certificate or CRL
+#6 69.92 4 added, 5 removed; done.
+#6 69.94 Setting up libmpdec3:amd64 (2.5.1-2build2) ...
+#6 69.95 Setting up git-man (1:2.34.1-1ubuntu1.18) ...
+#6 69.96 Setting up libgdbm6:amd64 (1.23-1) ...
+#6 69.97 Setting up libpython3.10-stdlib:amd64 (3.10.12-1~22.04.18) ...
+#6 69.98 Setting up libgdbm-compat4:amd64 (1.23-1) ...
+#6 69.98 Setting up libpython3-stdlib:amd64 (3.10.6-1~22.04.1) ...
+#6 69.99 Setting up libperl5.34:amd64 (5.34.0-3ubuntu1.9) ...
+#6 70.00 Setting up python3.10 (3.10.12-1~22.04.18) ...
+#6 70.56 Setting up python3 (3.10.6-1~22.04.1) ...
+#6 70.57 running python rtupdate hooks for python3.10...
+#6 70.57 running python post-rtupdate hooks for python3.10...
+#6 70.64 Setting up perl (5.34.0-3ubuntu1.9) ...
+#6 70.66 Setting up liberror-perl (0.17029-1) ...
+#6 70.67 Setting up git (1:2.34.1-1ubuntu1.18) ...
+#6 70.68 Processing triggers for libc-bin (2.35-0ubuntu3.15) ...
+#6 70.73 Processing triggers for ca-certificates (20260816ubuntu0.22.04.1) ...
+#6 70.74 Updating certificates in /etc/ssl/certs...
+#6 71.14 0 added, 0 removed; done.
+#6 71.14 Running hooks in /etc/ca-certificates/update.d...
+#6 71.15 done.
+#6 DONE 71.2s
+
+#7 [3/6] COPY context/*.jar /opt/deps/
+#7 DONE 0.1s
+
+#8 [4/6] ADD context/base-source.tar /testbed/
+#8 DONE 0.4s
+
+#9 [5/6] WORKDIR /testbed
+#9 DONE 0.0s
+
+#10 [6/6] RUN git config --global --add safe.directory /testbed && git status --porcelain && java -version && python3 --version
+#10 0.270 openjdk version "1.8.0_504"
+#10 0.270 OpenJDK Runtime Environment (Temurin)(build 1.8.0_504-b01)
+#10 0.270 OpenJDK 64-Bit Server VM (Temurin)(build 25.504-b01, mixed mode)
+#10 0.287 Python 3.10.12
+#10 DONE 0.3s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 3.4s done
+#11 exporting manifest sha256:f90cef691d4f335756fe0e9bcf5477fac984dd2c6621dacd708fa1f7387979ee 0.0s done
+#11 exporting config sha256:6b2b8ca97c3ee0b37986d5f502c0509a8631b8d34dfd5a72db5e58c1e4967255 0.0s done
+#11 exporting attestation manifest sha256:d8cc32eacc559417e5b74858bc3fff9f42e23ed3028044b4c0d1d8d322e23f58 0.0s done
+#11 exporting manifest list sha256:406c7b00f6976f2bdbd8be8d064f14f3e6a7c06a029f9c7671818ee036102f1e 0.0s done
+#11 naming to docker.io/local/javac-case-170-junixsocket:benchmark-v1 done
+#11 unpacking to docker.io/local/javac-case-170-junixsocket:benchmark-v1
+#11 unpacking to docker.io/local/javac-case-170-junixsocket:benchmark-v1 1.2s done
+#11 DONE 4.7s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/jqq28kea4flxwo7ixxzwr86js

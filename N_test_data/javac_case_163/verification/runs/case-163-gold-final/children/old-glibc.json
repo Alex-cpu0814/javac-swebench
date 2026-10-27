@@ -1,0 +1,20 @@
+{
+  "timed_out": false,
+  "command": [
+    "/opt/tools/qemu-x86_64-static",
+    "-L",
+    "/opt/legacy",
+    "/opt/java/jdk8u292-b10/bin/java",
+    "-Xint",
+    "-Xms16m",
+    "-Xmx64m",
+    "-XX:+UseSerialGC",
+    "-XX:ActiveProcessorCount=2",
+    "-cp",
+    "/testbed/target/case163/classes:/testbed/target/case163/testclasses",
+    "org.newsclub.net.unix.Issue81GlibcProbe"
+  ],
+  "exit_code": 0,
+  "stdout_sha256": "6313121af7c057b94d58986b19c2bf8a95318b8ddd49233987001ac24465e302",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

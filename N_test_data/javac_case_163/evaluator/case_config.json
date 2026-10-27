@@ -1,0 +1,32 @@
+{
+  "template_version": "1.0",
+  "case_number": "163",
+  "instance_id": "kohlschutter__junixsocket-81",
+  "instance_file": "official_swebench/instance_163.json",
+  "repo_url": "https://github.com/kohlschutter/junixsocket.git",
+  "base_commit": "90716d6008c5c9cfa8a061f3d23531acaea29777",
+  "fix_commit": "77a4f0c8cd641fc5dfcb62922981c32393c8e079",
+  "image": "yutu0814/javac-case-163-junixsocket@sha256:c8b7c236569b9eb461c66197356b0b109088ce31fd0f0057f5441a3afb99e497",
+  "python_version": "3.5",
+  "python_sha256": "ubuntu-system-package",
+  "extra_apt_packages": [],
+  "runtime_assets": [
+    {
+      "source": "evaluator/case_adapter.sh",
+      "target": "/benchmark/case_adapter.sh"
+    },
+    {
+      "source": "evaluator/build_project.py",
+      "target": "/benchmark/build_project.py"
+    },
+    {
+      "source": "evaluator/run_case_tests.py",
+      "target": "/benchmark/run_case_tests.py"
+    },
+    {
+      "source": "evaluator/upstream_tests.json",
+      "target": "/benchmark/upstream_tests.json"
+    }
+  ],
+  "build_image": "local/javac-case-163-junixsocket:benchmark-v1"
+}

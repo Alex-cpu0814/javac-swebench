@@ -1,0 +1,31 @@
+{
+  "image_id": "sha256:406c7b00f6976f2bdbd8be8d064f14f3e6a7c06a029f9c7671818ee036102f1e",
+  "exit_code": 1,
+  "command": [
+    "C:\\Users\\\u7389\u5154\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe",
+    "run",
+    "--rm",
+    "--network",
+    "none",
+    "--cap-drop",
+    "ALL",
+    "--security-opt",
+    "no-new-privileges",
+    "--mount",
+    "type=bind,source=E:\\CLB_Swe-bench\\javac-swebench\\N_test_data\\javac_case_170\\evaluator,target=/benchmark,readonly",
+    "--mount",
+    "type=bind,source=E:\\CLB_Swe-bench\\javac-swebench\\N_test_data\\javac_case_170\\patches,target=/inputs,readonly",
+    "--mount",
+    "type=bind,source=E:\\CLB_Swe-bench\\javac-swebench\\N_test_data\\javac_case_170\\verification\\discovery\\base-junit-discovery-v1,target=/results",
+    "sha256:406c7b00f6976f2bdbd8be8d064f14f3e6a7c06a029f9c7671818ee036102f1e",
+    "bash",
+    "-c",
+    "git apply /inputs/test_patch.diff && python3 /benchmark/build_project.py > /results/build.raw.log 2>&1 && python3 /benchmark/run_case_tests.py --discover > /results/discovery.json"
+  ],
+  "assets_sha256": {
+    "patches/test_patch.diff": "1284e65b695d456cbf7c4211053eeefd8dee03dcd8ec06948097a6b7bf8fe245",
+    "evaluator/build_project.py": "e35f0b62d671609b4c543bb2d52e2fd83ee5b6491c75079393433b60e46bad57",
+    "evaluator/run_case_tests.py": "a7ef9f8473f896d653aecdc4af7f8cc200a5200ac94e2385f16b5cab5b37f697",
+    "evaluator/upstream_tests.json": "84f3add5d793ebe2c43d782bdf4bdd982e03f9a083aaded8789e2b3df324c112"
+  }
+}

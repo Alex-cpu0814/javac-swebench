@@ -1,0 +1,20 @@
+{
+  "base_commit": "71a134bce58a22fb17a7a14f00799196c0c71a60",
+  "fix_commit": "09548dadf52ba6b4f939d0260c391503f478a6a5",
+  "exact_upstream_diff_sha256": "27545cc3b6ae4db392e28fb1c5a99378771517826c5009629d8c0c44cbe2818b",
+  "command": [
+    "git",
+    "diff",
+    "--binary",
+    "71a134bce58a22fb17a7a14f00799196c0c71a60",
+    "09548dadf52ba6b4f939d0260c391503f478a6a5"
+  ],
+  "changed_paths": [
+    "junixsocket-common/src/main/java/org/newsclub/net/unix/NativeLibraryLoader.java"
+  ],
+  "additions": 0,
+  "deletions": 6,
+  "test_patch_authorship": "dataset_construction_with_fix_visible",
+  "gold_authorship": "upstream",
+  "model_patch_example_is_model_generated": false
+}

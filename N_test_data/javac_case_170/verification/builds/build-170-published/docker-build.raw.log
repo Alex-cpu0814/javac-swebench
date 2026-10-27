@@ -1,0 +1,49 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 518B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:185d4ef919b98cd195690c33f3fd93bd49c66c70f0b662e54566c0dbaebea6ce
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context:
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/6] FROM docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:185d4ef919b98cd195690c33f3fd93bd49c66c70f0b662e54566c0dbaebea6ce
+#4 resolve docker.io/library/eclipse-temurin:8-jdk-jammy@sha256:185d4ef919b98cd195690c33f3fd93bd49c66c70f0b662e54566c0dbaebea6ce 0.0s done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 11.00MB 1.0s done
+#5 DONE 1.0s
+
+#6 [2/6] RUN apt-get update && apt-get install -y --no-install-recommends git python3 ca-certificates && rm -rf /var/lib/apt/lists/*
+#6 CACHED
+
+#7 [3/6] COPY context/*.jar /opt/deps/
+#7 CACHED
+
+#8 [4/6] ADD context/base-source.tar /testbed/
+#8 CACHED
+
+#9 [5/6] WORKDIR /testbed
+#9 CACHED
+
+#10 [6/6] RUN git config --global --add safe.directory /testbed && git status --porcelain && java -version && python3 --version
+#10 CACHED
+
+#11 exporting to image
+#11 exporting layers 0.0s done
+#11 exporting manifest sha256:f90cef691d4f335756fe0e9bcf5477fac984dd2c6621dacd708fa1f7387979ee done
+#11 exporting config sha256:6b2b8ca97c3ee0b37986d5f502c0509a8631b8d34dfd5a72db5e58c1e4967255 done
+#11 exporting attestation manifest sha256:63b2be8a78b6f4865edbf2e05afb8f791dbb43b979e6b7dfec4abebf443cd3ab 0.0s done
+#11 exporting manifest list sha256:1a70b55b3d05b7f18257b238ba0ab246f055b03023eb9483d1cafc58703fbde3 0.0s done
+#11 naming to docker.io/local/javac-case-170-junixsocket:benchmark-v1
+#11 naming to docker.io/local/javac-case-170-junixsocket:benchmark-v1 done
+#11 unpacking to docker.io/local/javac-case-170-junixsocket:benchmark-v1 0.0s done
+#11 DONE 0.2s
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/w7hjrj8he7ifwjw3qvnfkqq7a

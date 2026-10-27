@@ -1,0 +1,1 @@
+/opt/java/jdk8u292-b10/bin/java: symbol lookup error: /tmp/libtmp5739580431422278166libjunixsocket-native-2.3.2.so: undefined symbol: stat

@@ -1,0 +1,37 @@
+{
+  "recorded_at": "2026-10-27T07:59:42.031127+00:00",
+  "command": [
+    "C:\\Users\\\u7389\u5154\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.exe",
+    "run",
+    "--rm",
+    "--network",
+    "none",
+    "--cap-drop",
+    "ALL",
+    "--security-opt",
+    "no-new-privileges",
+    "--mount",
+    "type=volume,source=case163-jdk-8u292,target=/opt/jdk,readonly",
+    "--mount",
+    "type=bind,source=E:\\CLB_Swe-bench\\javac-swebench\\N_test_data\\javac_case_163_new\\sources\\base,target=/source,readonly",
+    "--mount",
+    "type=bind,source=E:\\CLB_Swe-bench\\javac-swebench\\N_test_data\\javac_case_163_new\\assets,target=/deps,readonly",
+    "--mount",
+    "type=bind,source=E:\\CLB_Swe-bench\\javac-swebench\\N_test_data\\javac_case_163_new\\artifacts_issue81\\base\\classes,target=/classes,readonly",
+    "--mount",
+    "type=bind,source=E:\\CLB_Swe-bench\\javac-swebench\\N_test_data\\javac_case_163\\analysis\\discover_upstream.sh,target=/discover.sh,readonly",
+    "--mount",
+    "type=bind,source=E:\\CLB_Swe-bench\\javac-swebench\\N_test_data\\javac_case_163\\analysis\\upstream_discovery,target=/output",
+    "local/case163-junixsocket:builder",
+    "/bin/bash",
+    "/discover.sh"
+  ],
+  "exit_code": 1,
+  "status": "completed",
+  "elapsed_seconds": 16.86,
+  "harness_sha256": {
+    "tests/SocketProbe.java": "21583be32e90d2ea08eaa39755d8d6146f802d9168857869b12357868817d2ee",
+    "scripts/build_probe.sh": "59edebaa78758c305e4961205abbe251c3a3a8641f893fdc04f8cc648d40a358",
+    "scripts/run_experiment.py": "e0eb596444b993fe2ab338573aad65f8f54becb29680513944fed1290df6306d"
+  }
+}

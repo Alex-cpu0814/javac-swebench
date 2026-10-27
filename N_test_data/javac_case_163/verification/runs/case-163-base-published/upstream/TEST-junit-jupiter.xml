@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="JUnit Jupiter" tests="34" skipped="0" failures="0" errors="0" time="3.07" hostname="&lt;unknown host&gt;" timestamp="2026-10-27T10:18:01">
+<properties>
+<property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+<property name="file.encoding" value="UTF-8"/>
+<property name="file.encoding.pkg" value="sun.io"/>
+<property name="file.separator" value="/"/>
+<property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+<property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+<property name="java.class.path" value="/testbed/target/case163/classes:/testbed/target/case163/testclasses:/opt/deps/junit-console.jar:/opt/deps/annotations.jar"/>
+<property name="java.class.version" value="52.0"/>
+<property name="java.endorsed.dirs" value="/opt/java/jdk8u292-b10/jre/lib/endorsed"/>
+<property name="java.ext.dirs" value="/opt/java/jdk8u292-b10/jre/lib/ext:/usr/java/packages/lib/ext"/>
+<property name="java.home" value="/opt/java/jdk8u292-b10/jre"/>
+<property name="java.io.tmpdir" value="/tmp"/>
+<property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
+<property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+<property name="java.runtime.version" value="1.8.0_292-b10"/>
+<property name="java.specification.name" value="Java Platform API Specification"/>
+<property name="java.specification.vendor" value="Oracle Corporation"/>
+<property name="java.specification.version" value="1.8"/>
+<property name="java.vendor" value="AdoptOpenJDK"/>
+<property name="java.vendor.url" value="https://adoptopenjdk.net/"/>
+<property name="java.vendor.url.bug" value="https://github.com/AdoptOpenJDK/openjdk-support/issues"/>
+<property name="java.version" value="1.8.0_292"/>
+<property name="java.vm.info" value="mixed mode"/>
+<property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+<property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+<property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+<property name="java.vm.specification.version" value="1.8"/>
+<property name="java.vm.vendor" value="AdoptOpenJDK"/>
+<property name="java.vm.version" value="25.292-b10"/>
+<property name="line.separator" value="
+"/>
+<property name="os.arch" value="amd64"/>
+<property name="os.name" value="Linux"/>
+<property name="os.version" value="6.18.33.2-microsoft-standard-WSL2"/>
+<property name="path.separator" value=":"/>
+<property name="sun.arch.data.model" value="64"/>
+<property name="sun.boot.class.path" value="/opt/java/jdk8u292-b10/jre/lib/resources.jar:/opt/java/jdk8u292-b10/jre/lib/rt.jar:/opt/java/jdk8u292-b10/jre/lib/sunrsasign.jar:/opt/java/jdk8u292-b10/jre/lib/jsse.jar:/opt/java/jdk8u292-b10/jre/lib/jce.jar:/opt/java/jdk8u292-b10/jre/lib/charsets.jar:/opt/java/jdk8u292-b10/jre/lib/jfr.jar:/opt/java/jdk8u292-b10/jre/classes"/>
+<property name="sun.boot.library.path" value="/opt/java/jdk8u292-b10/jre/lib/amd64"/>
+<property name="sun.cpu.endian" value="little"/>
+<property name="sun.cpu.isalist" value=""/>
+<property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+<property name="sun.java.command" value="org.junit.platform.console.ConsoleLauncher --disable-ansi-colors --reports-dir /results/upstream --details summary --fail-if-no-tests --select-method org.newsclub.net.unix.AFUNIXSocketAddressTest#testPort --select-method org.newsclub.net.unix.AcceptTimeoutTest#testCatchTimeout --select-method org.newsclub.net.unix.AcceptTimeoutTest#testTimeoutAfterDelay --select-method org.newsclub.net.unix.BufferOverflowTest#readOutOfBounds --select-method org.newsclub.net.unix.BufferOverflowTest#readUpTo --select-method org.newsclub.net.unix.BufferOverflowTest#writeOverflow --select-method org.newsclub.net.unix.CancelAcceptTest#issue6test1 --select-method org.newsclub.net.unix.EndOfFileJavaTest#bidirectionalSanity --select-method org.newsclub.net.unix.EndOfFileJavaTest#clientReadEof --select-method org.newsclub.net.unix.EndOfFileJavaTest#clientWriteToSocketClosedByClient --select-method org.newsclub.net.unix.EndOfFileJavaTest#clientWriteToSocketClosedByServer --select-method org.newsclub.net.unix.EndOfFileJavaTest#serverReadEof --select-method org.newsclub.net.unix.EndOfFileJavaTest#serverWriteToSocketClosedByClient --select-method org.newsclub.net.unix.EndOfFileJavaTest#serverWriteToSocketClosedByServer --select-method org.newsclub.net.unix.EndOfFileTest#bidirectionalSanity --select-method org.newsclub.net.unix.EndOfFileTest#clientReadEof --select-method org.newsclub.net.unix.EndOfFileTest#clientWriteToSocketClosedByClient --select-method org.newsclub.net.unix.EndOfFileTest#clientWriteToSocketClosedByServer --select-method org.newsclub.net.unix.EndOfFileTest#serverReadEof --select-method org.newsclub.net.unix.EndOfFileTest#serverWriteToSocketClosedByClient --select-method org.newsclub.net.unix.EndOfFileTest#serverWriteToSocketClosedByServer --select-method org.newsclub.net.unix.FileDescriptorsTest#testAncillaryReceiveBufferTooSmall --select-method org.newsclub.net.unix.FileDescriptorsTest#testBadFileDescriptor --select-method org.newsclub.net.unix.FileDescriptorsTest#testFileInputStream --select-method org.newsclub.net.unix.FileDescriptorsTest#testFileInputStreamPartiallyConsumed --select-method org.newsclub.net.unix.FileDescriptorsTest#testNoAncillaryReceiveBuffer --select-method org.newsclub.net.unix.FileDescriptorsTest#testSendRecvFileDescriptors --select-method org.newsclub.net.unix.PeerCredentialsTest#testSameProcess --select-method org.newsclub.net.unix.ServerSocketCloseTest#testUnblockAcceptsWithSoTimeout --select-method org.newsclub.net.unix.ServerSocketCloseTest#testUnblockAcceptsWithoutSoTimeout --select-method org.newsclub.net.unix.SoTimeoutTest#issue14Fail --select-method org.newsclub.net.unix.SoTimeoutTest#issue14Pass --select-method org.newsclub.net.unix.TcpNoDelayTest#testDefaultImpl --select-method org.newsclub.net.unix.TcpNoDelayTest#testStrictImpl"/>
+<property name="sun.java.launcher" value="SUN_STANDARD"/>
+<property name="sun.jnu.encoding" value="UTF-8"/>
+<property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+<property name="sun.os.patch.level" value="unknown"/>
+<property name="user.dir" value="/testbed"/>
+<property name="user.home" value="/root"/>
+<property name="user.language" value="en"/>
+<property name="user.name" value="root"/>
+<property name="user.timezone" value="Etc/UTC"/>
+</properties>
+<testcase name="testPort()" classname="org.newsclub.net.unix.AFUNIXSocketAddressTest" time="0.03">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.AFUNIXSocketAddressTest]/[method:testPort()]
+display-name: testPort()
+]]></system-out>
+</testcase>
+<testcase name="testCatchTimeout()" classname="org.newsclub.net.unix.AcceptTimeoutTest" time="0.535">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.AcceptTimeoutTest]/[method:testCatchTimeout()]
+display-name: testCatchTimeout()
+]]></system-out>
+</testcase>
+<testcase name="testTimeoutAfterDelay()" classname="org.newsclub.net.unix.AcceptTimeoutTest" time="0.053">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.AcceptTimeoutTest]/[method:testTimeoutAfterDelay()]
+display-name: testTimeoutAfterDelay()
+]]></system-out>
+</testcase>
+<testcase name="readOutOfBounds()" classname="org.newsclub.net.unix.BufferOverflowTest" time="0.103">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.BufferOverflowTest]/[method:readOutOfBounds()]
+display-name: readOutOfBounds()
+]]></system-out>
+</testcase>
+<testcase name="readUpTo()" classname="org.newsclub.net.unix.BufferOverflowTest" time="0.102">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.BufferOverflowTest]/[method:readUpTo()]
+display-name: readUpTo()
+]]></system-out>
+</testcase>
+<testcase name="writeOverflow()" classname="org.newsclub.net.unix.BufferOverflowTest" time="0.102">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.BufferOverflowTest]/[method:writeOverflow()]
+display-name: writeOverflow()
+]]></system-out>
+</testcase>
+<testcase name="issue6test1()" classname="org.newsclub.net.unix.CancelAcceptTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.CancelAcceptTest]/[method:issue6test1()]
+display-name: issue6test1()
+]]></system-out>
+</testcase>
+<testcase name="bidirectionalSanity()" classname="org.newsclub.net.unix.EndOfFileJavaTest" time="0.005">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.EndOfFileJavaTest]/[method:bidirectionalSanity()]
+display-name: bidirectionalSanity()
+]]></system-out>
+</testcase>
+<testcase name="clientReadEof()" classname="org.newsclub.net.unix.EndOfFileJavaTest" time="0.102">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.EndOfFileJavaTest]/[method:clientReadEof()]
+display-name: clientReadEof()
+]]></system-out>
+</testcase>
+<testcase name="clientWriteToSocketClosedByClient()" classname="org.newsclub.net.unix.EndOfFileJavaTest" time="0.103">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.EndOfFileJavaTest]/[method:clientWriteToSocketClosedByClient()]
+display-name: clientWriteToSocketClosedByClient()
+]]></system-out>
+</testcase>
+<testcase name="clientWriteToSocketClosedByServer()" classname="org.newsclub.net.unix.EndOfFileJavaTest" time="0.102">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.EndOfFileJavaTest]/[method:clientWriteToSocketClosedByServer()]
+display-name: clientWriteToSocketClosedByServer()
+]]></system-out>
+</testcase>
+<testcase name="serverReadEof()" classname="org.newsclub.net.unix.EndOfFileJavaTest" time="0.102">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.EndOfFileJavaTest]/[method:serverReadEof()]
+display-name: serverReadEof()
+]]></system-out>
+</testcase>
+<testcase name="serverWriteToSocketClosedByClient()" classname="org.newsclub.net.unix.EndOfFileJavaTest" time="0.203">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.EndOfFileJavaTest]/[method:serverWriteToSocketClosedByClient()]
+display-name: serverWriteToSocketClosedByClient()
+]]></system-out>
+</testcase>
+<testcase name="serverWriteToSocketClosedByServer()" classname="org.newsclub.net.unix.EndOfFileJavaTest" time="0.103">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.EndOfFileJavaTest]/[method:serverWriteToSocketClosedByServer()]
+display-name: serverWriteToSocketClosedByServer()
+]]></system-out>
+</testcase>
+<testcase name="bidirectionalSanity()" classname="org.newsclub.net.unix.EndOfFileTest" time="0.103">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.EndOfFileTest]/[method:bidirectionalSanity()]
+display-name: bidirectionalSanity()
+]]></system-out>
+</testcase>
+<testcase name="clientReadEof()" classname="org.newsclub.net.unix.EndOfFileTest" time="0.203">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.EndOfFileTest]/[method:clientReadEof()]
+display-name: clientReadEof()
+]]></system-out>
+</testcase>
+<testcase name="clientWriteToSocketClosedByClient()" classname="org.newsclub.net.unix.EndOfFileTest" time="0.202">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.EndOfFileTest]/[method:clientWriteToSocketClosedByClient()]
+display-name: clientWriteToSocketClosedByClient()
+]]></system-out>
+</testcase>
+<testcase name="clientWriteToSocketClosedByServer()" classname="org.newsclub.net.unix.EndOfFileTest" time="0.203">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.EndOfFileTest]/[method:clientWriteToSocketClosedByServer()]
+display-name: clientWriteToSocketClosedByServer()
+]]></system-out>
+</testcase>
+<testcase name="serverReadEof()" classname="org.newsclub.net.unix.EndOfFileTest" time="0.203">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.EndOfFileTest]/[method:serverReadEof()]
+display-name: serverReadEof()
+]]></system-out>
+</testcase>
+<testcase name="serverWriteToSocketClosedByClient()" classname="org.newsclub.net.unix.EndOfFileTest" time="0.203">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.EndOfFileTest]/[method:serverWriteToSocketClosedByClient()]
+display-name: serverWriteToSocketClosedByClient()
+]]></system-out>
+</testcase>
+<testcase name="serverWriteToSocketClosedByServer()" classname="org.newsclub.net.unix.EndOfFileTest" time="0.203">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.EndOfFileTest]/[method:serverWriteToSocketClosedByServer()]
+display-name: serverWriteToSocketClosedByServer()
+]]></system-out>
+</testcase>
+<testcase name="testAncillaryReceiveBufferTooSmall()" classname="org.newsclub.net.unix.FileDescriptorsTest" time="0.002">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.FileDescriptorsTest]/[method:testAncillaryReceiveBufferTooSmall()]
+display-name: testAncillaryReceiveBufferTooSmall()
+]]></system-out>
+</testcase>
+<testcase name="testBadFileDescriptor()" classname="org.newsclub.net.unix.FileDescriptorsTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.FileDescriptorsTest]/[method:testBadFileDescriptor()]
+display-name: testBadFileDescriptor()
+]]></system-out>
+</testcase>
+<testcase name="testFileInputStream()" classname="org.newsclub.net.unix.FileDescriptorsTest" time="0.003">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.FileDescriptorsTest]/[method:testFileInputStream()]
+display-name: testFileInputStream()
+]]></system-out>
+</testcase>
+<testcase name="testFileInputStreamPartiallyConsumed()" classname="org.newsclub.net.unix.FileDescriptorsTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.FileDescriptorsTest]/[method:testFileInputStreamPartiallyConsumed()]
+display-name: testFileInputStreamPartiallyConsumed()
+]]></system-out>
+</testcase>
+<testcase name="testNoAncillaryReceiveBuffer()" classname="org.newsclub.net.unix.FileDescriptorsTest" time="0.002">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.FileDescriptorsTest]/[method:testNoAncillaryReceiveBuffer()]
+display-name: testNoAncillaryReceiveBuffer()
+]]></system-out>
+</testcase>
+<testcase name="testSendRecvFileDescriptors()" classname="org.newsclub.net.unix.FileDescriptorsTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.FileDescriptorsTest]/[method:testSendRecvFileDescriptors()]
+display-name: testSendRecvFileDescriptors()
+]]></system-out>
+</testcase>
+<testcase name="testSameProcess()" classname="org.newsclub.net.unix.PeerCredentialsTest" time="0.003">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.PeerCredentialsTest]/[method:testSameProcess()]
+display-name: testSameProcess()
+]]></system-out>
+</testcase>
+<testcase name="testUnblockAcceptsWithSoTimeout()" classname="org.newsclub.net.unix.ServerSocketCloseTest" time="0.043">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.ServerSocketCloseTest]/[method:testUnblockAcceptsWithSoTimeout()]
+display-name: testUnblockAcceptsWithSoTimeout()
+]]></system-out>
+</testcase>
+<testcase name="testUnblockAcceptsWithoutSoTimeout()" classname="org.newsclub.net.unix.ServerSocketCloseTest" time="0.006">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.ServerSocketCloseTest]/[method:testUnblockAcceptsWithoutSoTimeout()]
+display-name: testUnblockAcceptsWithoutSoTimeout()
+]]></system-out>
+</testcase>
+<testcase name="issue14Fail()" classname="org.newsclub.net.unix.SoTimeoutTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.SoTimeoutTest]/[method:issue14Fail()]
+display-name: issue14Fail()
+]]></system-out>
+</testcase>
+<testcase name="issue14Pass()" classname="org.newsclub.net.unix.SoTimeoutTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.SoTimeoutTest]/[method:issue14Pass()]
+display-name: issue14Pass()
+]]></system-out>
+</testcase>
+<testcase name="testDefaultImpl()" classname="org.newsclub.net.unix.TcpNoDelayTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.TcpNoDelayTest]/[method:testDefaultImpl()]
+display-name: testDefaultImpl()
+]]></system-out>
+</testcase>
+<testcase name="testStrictImpl()" classname="org.newsclub.net.unix.TcpNoDelayTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.TcpNoDelayTest]/[method:testStrictImpl()]
+display-name: testStrictImpl()
+]]></system-out>
+</testcase>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]
+display-name: JUnit Jupiter
+]]></system-out>
+</testsuite>

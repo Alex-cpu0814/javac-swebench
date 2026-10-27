@@ -1,0 +1,30 @@
+{
+  "command": [
+    "java",
+    "-Xmx128m",
+    "-XX:+UseSerialGC",
+    "-XX:ActiveProcessorCount=2",
+    "-jar",
+    "/opt/deps/junit-platform-console-standalone-1.10.0.jar",
+    "execute",
+    "--disable-ansi-colors",
+    "--details=summary",
+    "--class-path",
+    "/testbed/target/case170/classes:/testbed/target/case170/testclasses:/opt/deps/animal-sniffer-annotations-1.23.jar:/opt/deps/compiler-annotations-1.6.3.jar:/opt/deps/error_prone_annotations-2.22.0.jar:/opt/deps/junit-platform-console-standalone-1.10.0.jar:/opt/deps/junixsocket-native-common-2.8.0.jar:/opt/deps/kohlschutter-test-util-1.6.3.jar:/opt/deps/kohlschutter-util-1.6.3.jar:/opt/deps/org.eclipse.jdt.annotation-2.2.700.jar",
+    "--reports-dir",
+    "/results/junit",
+    "--select-class",
+    "org.newsclub.net.unix.AFUNIXSocketAddressTest",
+    "--select-class",
+    "org.newsclub.net.unix.domain.SocketTest",
+    "--select-class",
+    "org.newsclub.net.unix.domain.ReadWriteTest",
+    "--select-class",
+    "org.newsclub.net.unix.domain.SocketFactoryTest",
+    "--select-class",
+    "org.newsclub.net.unix.domain.SocketAddressTest"
+  ],
+  "cwd": "/testbed",
+  "exit_code": 1,
+  "timeout": false
+}

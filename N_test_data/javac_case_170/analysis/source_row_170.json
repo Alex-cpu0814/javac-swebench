@@ -1,0 +1,22 @@
+{
+  "instance_id": "kohlschutter__junixsocket-140",
+  "source_case": "170",
+  "language_pair": "Java-C",
+  "repo": "kohlschutter/junixsocket",
+  "base_commit": "71a134bce58a22fb17a7a14f00799196c0c71a60",
+  "fix_commit": "09548dadf52ba6b4f939d0260c391503f478a6a5",
+  "commit_url": "https://github.com/kohlschutter/junixsocket/commit/09548dadf52ba6b4f939d0260c391503f478a6a5",
+  "issue_url": "https://github.com/kohlschutter/junixsocket/issues/140",
+  "problem_statement": "junixsocket cannot initialize its native socket implementation on Linux when its temporary directory is mounted noexec, even though another writable directory permits loading native libraries.\n\nIssue #140 reports the problem with junixsocket 2.7.2 and 2.8.0 on RHEL 9.2. With a noexec temporary directory, extracting a shared library can succeed while System.load fails with an UnsatisfiedLinkError, for example \"failed to map segment from shared object\". Subsequent socket operations fail because the native implementation was not initialized.\n\nFix automatic native-library loading so it can recover from an unsuccessful temporary-directory load using the existing alternate writable locations. It should also recover when both the temporary directory and the home directory prohibit execution but the working directory permits loading. Do not require application users to disable security controls or supply a manual library override. Preserve normal loading and real Unix-domain socket I/O; when every location prohibits loading, initialization must still fail rather than reporting success.\n",
+  "test_source": "synthetic_issue140_real_noexec_and_unchanged_upstream_JUnit",
+  "test_files": [
+    "benchmark-tests/org/newsclub/net/unix/NoexecProbe.java"
+  ],
+  "FAIL_TO_PASS": [
+    "benchmark.noexec.noexec_home_fallback",
+    "benchmark.noexec.noexec_cwd_fallback"
+  ],
+  "PASS_TO_PASS_COUNT": 41,
+  "verification_status": "resolved",
+  "source_selection": "user_provided_commit"
+}

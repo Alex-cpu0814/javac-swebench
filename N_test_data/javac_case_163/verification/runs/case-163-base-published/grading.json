@@ -1,0 +1,48 @@
+{
+  "schema_version": "3.0",
+  "run_id": "case-163-base-published",
+  "tests_observed": 36,
+  "FAIL_TO_PASS": {
+    "org.newsclub.net.unix.Issue81CompatibilityTest.testAutomaticFallbackOldGlibc": "FAILED"
+  },
+  "PASS_TO_PASS": {
+    "org.newsclub.net.unix.Issue81CompatibilityTest.testModernGlibcRoundTrip": "PASSED",
+    "org.newsclub.net.unix.AFUNIXSocketAddressTest.testPort": "PASSED",
+    "org.newsclub.net.unix.AcceptTimeoutTest.testCatchTimeout": "PASSED",
+    "org.newsclub.net.unix.AcceptTimeoutTest.testTimeoutAfterDelay": "PASSED",
+    "org.newsclub.net.unix.BufferOverflowTest.readOutOfBounds": "PASSED",
+    "org.newsclub.net.unix.BufferOverflowTest.readUpTo": "PASSED",
+    "org.newsclub.net.unix.BufferOverflowTest.writeOverflow": "PASSED",
+    "org.newsclub.net.unix.CancelAcceptTest.issue6test1": "PASSED",
+    "org.newsclub.net.unix.EndOfFileJavaTest.bidirectionalSanity": "PASSED",
+    "org.newsclub.net.unix.EndOfFileJavaTest.clientReadEof": "PASSED",
+    "org.newsclub.net.unix.EndOfFileJavaTest.clientWriteToSocketClosedByClient": "PASSED",
+    "org.newsclub.net.unix.EndOfFileJavaTest.clientWriteToSocketClosedByServer": "PASSED",
+    "org.newsclub.net.unix.EndOfFileJavaTest.serverReadEof": "PASSED",
+    "org.newsclub.net.unix.EndOfFileJavaTest.serverWriteToSocketClosedByClient": "PASSED",
+    "org.newsclub.net.unix.EndOfFileJavaTest.serverWriteToSocketClosedByServer": "PASSED",
+    "org.newsclub.net.unix.EndOfFileTest.bidirectionalSanity": "PASSED",
+    "org.newsclub.net.unix.EndOfFileTest.clientReadEof": "PASSED",
+    "org.newsclub.net.unix.EndOfFileTest.clientWriteToSocketClosedByClient": "PASSED",
+    "org.newsclub.net.unix.EndOfFileTest.clientWriteToSocketClosedByServer": "PASSED",
+    "org.newsclub.net.unix.EndOfFileTest.serverReadEof": "PASSED",
+    "org.newsclub.net.unix.EndOfFileTest.serverWriteToSocketClosedByClient": "PASSED",
+    "org.newsclub.net.unix.EndOfFileTest.serverWriteToSocketClosedByServer": "PASSED",
+    "org.newsclub.net.unix.FileDescriptorsTest.testAncillaryReceiveBufferTooSmall": "PASSED",
+    "org.newsclub.net.unix.FileDescriptorsTest.testBadFileDescriptor": "PASSED",
+    "org.newsclub.net.unix.FileDescriptorsTest.testFileInputStream": "PASSED",
+    "org.newsclub.net.unix.FileDescriptorsTest.testFileInputStreamPartiallyConsumed": "PASSED",
+    "org.newsclub.net.unix.FileDescriptorsTest.testNoAncillaryReceiveBuffer": "PASSED",
+    "org.newsclub.net.unix.FileDescriptorsTest.testSendRecvFileDescriptors": "PASSED",
+    "org.newsclub.net.unix.PeerCredentialsTest.testSameProcess": "PASSED",
+    "org.newsclub.net.unix.ServerSocketCloseTest.testUnblockAcceptsWithSoTimeout": "PASSED",
+    "org.newsclub.net.unix.ServerSocketCloseTest.testUnblockAcceptsWithoutSoTimeout": "PASSED",
+    "org.newsclub.net.unix.SoTimeoutTest.issue14Fail": "PASSED",
+    "org.newsclub.net.unix.SoTimeoutTest.issue14Pass": "PASSED",
+    "org.newsclub.net.unix.TcpNoDelayTest.testDefaultImpl": "PASSED",
+    "org.newsclub.net.unix.TcpNoDelayTest.testStrictImpl": "PASSED"
+  },
+  "unexpected_failures": [
+    "org.newsclub.net.unix.Issue81CompatibilityTest.testAutomaticFallbackOldGlibc"
+  ]
+}

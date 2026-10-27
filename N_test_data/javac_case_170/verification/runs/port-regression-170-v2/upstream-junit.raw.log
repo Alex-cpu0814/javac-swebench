@@ -1,0 +1,55 @@
+
+Thanks for using JUnit! Support its development at https://junit.org/sponsoring
+
+org.newsclub.net.unix.AFUNIXSocket.isSupported(): true
+CAPABILITY_PEER_CREDENTIALS: true
+CAPABILITY_ANCILLARY_MESSAGES: true
+CAPABILITY_FILE_DESCRIPTORS: true
+CAPABILITY_ABSTRACT_NAMESPACE: true
+CAPABILITY_UNIX_DATAGRAMS: true
+CAPABILITY_NATIVE_SOCKETPAIR: true
+CAPABILITY_FD_AS_REDIRECT: false
+CAPABILITY_TIPC: false
+CAPABILITY_UNIX_DOMAIN: true
+CAPABILITY_VSOCK: false
+CAPABILITY_VSOCK_DGRAM: false
+CAPABILITY_ZERO_LENGTH_SEND: true
+CAPABILITY_UNSAFE: true
+CAPABILITY_LARGE_PORTS: true
+CAPABILITY_DARWIN: false
+
+Starting mini selftest...
+Using temporary address: org.newsclub.net.unix.AFUNIXSocketAddress[path=/tmp/jux9177151417060102333.sock]
+Server accepted client connection
+Data exchange succeeded
+mini selftest passed
+
+Failures (1):
+  JUnit Jupiter:SocketAddressTest:testLargePort()
+    MethodSource [className = 'org.newsclub.net.unix.domain.SocketAddressTest', methodName = 'testLargePort', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <544444> but was: <544445>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:527)
+       org.newsclub.net.unix.domain.SocketAddressTest.testLargePort(SocketAddressTest.java:73)
+       java.lang.reflect.Method.invoke(Method.java:498)
+       java.util.ArrayList.forEach(ArrayList.java:1259)
+       java.util.ArrayList.forEach(ArrayList.java:1259)
+
+Test run finished after 315 ms
+[         8 containers found      ]
+[         0 containers skipped    ]
+[         8 containers started    ]
+[         0 containers aborted    ]
+[         8 containers successful ]
+[         0 containers failed     ]
+[        39 tests found           ]
+[         0 tests skipped         ]
+[        39 tests started         ]
+[         0 tests aborted         ]
+[        38 tests successful      ]
+[         1 tests failed          ]
+

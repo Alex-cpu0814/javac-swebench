@@ -1,0 +1,22 @@
+[
+  {
+    "name": "OpenJDK8U-jdk_x64_linux_hotspot_8u292b10.tar.gz",
+    "url": "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u292-b10/OpenJDK8U-jdk_x64_linux_hotspot_8u292b10.tar.gz",
+    "sha256": "0949505fcf42a1765558048451bb2a22e84b3635b1a31dd6191780eeccaa4ada"
+  },
+  {
+    "name": "qemu-x86_64-static",
+    "url": "https://github.com/multiarch/qemu-user-static/releases/download/v7.2.0-1/qemu-x86_64-static",
+    "sha256": "7132ffd39aef71c26d3344cc0c7dffc530e10e3e720c58c8279a97ef6fdd7784"
+  },
+  {
+    "name": "junit-platform-console-standalone-1.6.0-M1.jar",
+    "url": "https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-console-standalone/1.6.0-M1/junit-platform-console-standalone-1.6.0-M1.jar",
+    "sha256": "e86b2abb61724235c281cc4325329a68fe8731f84bb5628b8fbb2a09d52b117e"
+  },
+  {
+    "name": "annotations-3.0.1.jar",
+    "url": "https://repo.maven.apache.org/maven2/com/google/code/findbugs/annotations/3.0.1/annotations-3.0.1.jar",
+    "sha256": "6b47ff0a6de0ce17cbedc3abb0828ca5bce3009d53ea47b3723ff023c4742f79"
+  }
+]

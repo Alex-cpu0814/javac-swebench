@@ -1,0 +1,70 @@
+{
+  "source": "isolated_latest_GitHub_main_publication_clone",
+  "expected_prior_github_commit": "ed6ca295278e5381a38fc9d2fa12f712e8547d52",
+  "uses_published_digest": true,
+  "clean_source_cache": true,
+  "results": {
+    "base": {
+      "run_id": "consumer-base-170",
+      "status": "unresolved",
+      "image": {
+        "name": "yutu0814/javac-case-170-junixsocket@sha256:1a70b55b3d05b7f18257b238ba0ab246f055b03023eb9483d1cafc58703fbde3",
+        "id": "sha256:1a70b55b3d05b7f18257b238ba0ab246f055b03023eb9483d1cafc58703fbde3",
+        "repo_digests": [
+          "local/javac-case-170-junixsocket@sha256:1a70b55b3d05b7f18257b238ba0ab246f055b03023eb9483d1cafc58703fbde3",
+          "yutu0814/javac-case-170-junixsocket@sha256:1a70b55b3d05b7f18257b238ba0ab246f055b03023eb9483d1cafc58703fbde3"
+        ]
+      },
+      "grading": {
+        "tests_observed": 43,
+        "FAIL_TO_PASS": {
+          "expected": 2,
+          "passed": 0,
+          "failed": 2,
+          "skipped": 0,
+          "missing": 0
+        },
+        "PASS_TO_PASS": {
+          "expected": 41,
+          "passed": 41,
+          "failed": 0,
+          "skipped": 0,
+          "missing": 0
+        },
+        "unexpected_failures": 2
+      },
+      "summary_sha256": "8165d405772664082dd9955df5601e5a949082c451730a3831f31db1d0a3f4c2"
+    },
+    "gold": {
+      "run_id": "consumer-gold-170",
+      "status": "resolved",
+      "image": {
+        "name": "yutu0814/javac-case-170-junixsocket@sha256:1a70b55b3d05b7f18257b238ba0ab246f055b03023eb9483d1cafc58703fbde3",
+        "id": "sha256:1a70b55b3d05b7f18257b238ba0ab246f055b03023eb9483d1cafc58703fbde3",
+        "repo_digests": [
+          "local/javac-case-170-junixsocket@sha256:1a70b55b3d05b7f18257b238ba0ab246f055b03023eb9483d1cafc58703fbde3",
+          "yutu0814/javac-case-170-junixsocket@sha256:1a70b55b3d05b7f18257b238ba0ab246f055b03023eb9483d1cafc58703fbde3"
+        ]
+      },
+      "grading": {
+        "tests_observed": 43,
+        "FAIL_TO_PASS": {
+          "expected": 2,
+          "passed": 2,
+          "failed": 0,
+          "skipped": 0,
+          "missing": 0
+        },
+        "PASS_TO_PASS": {
+          "expected": 41,
+          "passed": 41,
+          "failed": 0,
+          "skipped": 0,
+          "missing": 0
+        },
+        "unexpected_failures": 0
+      },
+      "summary_sha256": "7fff3ffe2d467f32a48a6cb15cf3966dd7cf1bca63e4cc9477c9b8b7c12b347c"
+    }
+  }
+}

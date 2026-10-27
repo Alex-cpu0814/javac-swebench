@@ -1,0 +1,18 @@
+{
+  "command": [
+    "java",
+    "-Xmx128m",
+    "-XX:+UseSerialGC",
+    "-XX:ActiveProcessorCount=2",
+    "-Djava.io.tmpdir=/case-noexec/noexec_cwd_fallback0",
+    "-Dorg.newsclub.net.unix.library.tmpdir=/case-noexec/noexec_cwd_fallback0",
+    "-Duser.home=/case-noexec/noexec_cwd_fallback1",
+    "-Duser.dir=/case-exec/noexec_cwd_fallback2",
+    "-cp",
+    "/testbed/target/case170/classes:/testbed/target/case170/testclasses:/opt/deps/animal-sniffer-annotations-1.23.jar:/opt/deps/compiler-annotations-1.6.3.jar:/opt/deps/error_prone_annotations-2.22.0.jar:/opt/deps/junit-platform-console-standalone-1.10.0.jar:/opt/deps/junixsocket-native-common-2.8.0.jar:/opt/deps/kohlschutter-test-util-1.6.3.jar:/opt/deps/kohlschutter-util-1.6.3.jar:/opt/deps/org.eclipse.jdt.annotation-2.2.700.jar",
+    "org.newsclub.net.unix.NoexecProbe"
+  ],
+  "cwd": "/case-exec/noexec_cwd_fallback2",
+  "exit_code": 0,
+  "timeout": false
+}

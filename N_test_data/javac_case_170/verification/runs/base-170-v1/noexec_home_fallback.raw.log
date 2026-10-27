@@ -1,0 +1,66 @@
+JAVA=1.8.0_504
+LOADER_ORIGIN=file:/testbed/target/case170/classes/
+WRITABLE=/case-noexec/noexec_home_fallback0
+WRITABLE=/case-exec/noexec_home_fallback1
+WRITABLE=/case-exec/noexec_home_fallback2
+MOUNT=/case-exec rw,nosuid,nodev,relatime
+MOUNT=/case-noexec rw,nosuid,nodev,noexec,relatime
+BEFORE_SOCKET
+java.lang.UnsatisfiedLinkError: Could not load native library junixsocket-native for architecture [amd64-Linux]
+	at org.newsclub.net.unix.NativeLibraryLoader.initCantLoadLibraryError(NativeLibraryLoader.java:370)
+	at org.newsclub.net.unix.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:352)
+	at org.newsclub.net.unix.NativeUnixSocket.<clinit>(NativeUnixSocket.java:87)
+	at org.newsclub.net.unix.AFSocketAddress.<clinit>(AFSocketAddress.java:65)
+	at org.newsclub.net.unix.NoexecProbe.main(NoexecProbe.java:43)
+	Suppressed: java.lang.Exception: No library specified with -Dorg.newsclub.net.unix.library.override=
+		at org.newsclub.net.unix.NativeLibraryLoader.loadLibraryOverride(NativeLibraryLoader.java:279)
+		at org.newsclub.net.unix.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:328)
+		... 3 more
+	Suppressed: java.io.FileNotFoundException: Could not find resource /META-INF/maven/com.kohlschutter.junixsocket/junixsocket-common/pom.properties relative to class org.newsclub.net.unix.NativeLibraryLoader
+		at org.newsclub.net.unix.NativeLibraryLoader.getArtifactVersion(NativeLibraryLoader.java:99)
+		at org.newsclub.net.unix.NativeLibraryLoader.initLibraryCandidates(NativeLibraryLoader.java:382)
+		at org.newsclub.net.unix.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:334)
+		... 3 more
+	Suppressed: java.lang.ClassNotFoundException: org.newsclub.lib.junixsocket.custom.NarMetadata
+		at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+		at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+		at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352)
+		at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+		at java.lang.Class.forName0(Native Method)
+		at java.lang.Class.forName(Class.java:264)
+		at org.newsclub.net.unix.NativeLibraryLoader.tryProviderClass(NativeLibraryLoader.java:72)
+		at org.newsclub.net.unix.NativeLibraryLoader.initLibraryCandidates(NativeLibraryLoader.java:391)
+		at org.newsclub.net.unix.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:334)
+		... 3 more
+	Suppressed: java.lang.UnsatisfiedLinkError: /case-noexec/noexec_home_fallback0/libtmp7487308320843035017libjunixsocket-native-2.8.0.so: /case-noexec/noexec_home_fallback0/libtmp7487308320843035017libjunixsocket-native-2.8.0.so: failed to map segment from shared object
+		at java.lang.ClassLoader$NativeLibrary.load(Native Method)
+		at java.lang.ClassLoader.loadLibrary0(ClassLoader.java:1934)
+		at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1817)
+		at java.lang.Runtime.load0(Runtime.java:782)
+		at java.lang.System.load(System.java:1100)
+		at org.newsclub.net.unix.NativeLibraryLoader$ClasspathLibraryCandidate.load(NativeLibraryLoader.java:195)
+		at org.newsclub.net.unix.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:339)
+		... 3 more
+	Suppressed: java.lang.UnsatisfiedLinkError: /case-noexec/noexec_home_fallback0/libtmp6738084995032958791libjunixsocket-native-2.8.0.so: /case-noexec/noexec_home_fallback0/libtmp6738084995032958791libjunixsocket-native-2.8.0.so: failed to map segment from shared object
+		at java.lang.ClassLoader$NativeLibrary.load(Native Method)
+		at java.lang.ClassLoader.loadLibrary0(ClassLoader.java:1934)
+		at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1817)
+		at java.lang.Runtime.load0(Runtime.java:782)
+		at java.lang.System.load(System.java:1100)
+		at org.newsclub.net.unix.NativeLibraryLoader$ClasspathLibraryCandidate.load(NativeLibraryLoader.java:195)
+		at org.newsclub.net.unix.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:339)
+		... 3 more
+	Suppressed: java.lang.UnsatisfiedLinkError: no junixsocket-native in java.library.path
+		at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1860)
+		at java.lang.Runtime.loadLibrary0(Runtime.java:843)
+		at java.lang.System.loadLibrary(System.java:1136)
+		at org.newsclub.net.unix.NativeLibraryLoader$StandardLibraryCandidate.load(NativeLibraryLoader.java:140)
+		at org.newsclub.net.unix.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:339)
+		... 3 more
+Exception in thread "main" java.lang.UnsatisfiedLinkError: org.newsclub.net.unix.NativeUnixSocket.initServerImpl(Ljava/net/ServerSocket;Lorg/newsclub/net/unix/AFSocketImpl;)V
+	at org.newsclub.net.unix.NativeUnixSocket.initServerImpl(Native Method)
+	at org.newsclub.net.unix.AFServerSocket.<init>(AFServerSocket.java:96)
+	at org.newsclub.net.unix.AFUNIXServerSocket.<init>(AFUNIXServerSocket.java:49)
+	at org.newsclub.net.unix.AFServerSocket.bindOn(AFServerSocket.java:185)
+	at org.newsclub.net.unix.AFUNIXServerSocket.bindOn(AFUNIXServerSocket.java:87)
+	at org.newsclub.net.unix.NoexecProbe.main(NoexecProbe.java:44)

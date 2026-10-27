@@ -1,0 +1,72 @@
+{
+  "schema_version": "3.0",
+  "kind": "patch_evaluation",
+  "run_id": "case-163-upstream-tamper-final",
+  "label": "upstream-tamper",
+  "instance_id": "kohlschutter__junixsocket-81",
+  "status": "unresolved",
+  "reason": "project_build_failed",
+  "started_at": "2026-10-27T08:24:08.432Z",
+  "finished_at": "2026-10-27T08:24:09.588Z",
+  "duration_ms": 1156,
+  "application_order": [
+    "model_patch",
+    "test_patch",
+    "tests"
+  ],
+  "model_patch_sha256": "d31a68de1c353027e4124337a994bfd5163fb7fa93a98201f3d8ae005dce8fdc",
+  "test_patch_sha256": "71e4aa501df5bd7e1e675d0baf2473c1ecbf6ad5f4462deb36cb12d2cb634c3d",
+  "evaluation_assets_sha256": {
+    "evaluator/run_evaluation.sh": "e65da2cf6d001eaad430032c987e6acd4ddd2ef94ca87de24a0f332b08832bc9",
+    "evaluator/case_config.json": "b218785ee5e0e864934565747ed116db25c3ff66ceb085f6a31a4d7c0f6ea961",
+    "evaluator/evaluate_model_patch.py": "398d18ec14e55e0d1c52e585c7205cf6bc4eec97dd440e4ecc3bdf3d0272798c",
+    "evaluator/logging_v3.py": "add904e35fde3b61f757d2e9129fc33545591646f14011a93da4455e293aeb5f",
+    "evaluator/case_adapter.sh": "ab8cc705dbc2a43db6abb73539fd9a2005b9331cd3fccd3edeaf1556a672a22f",
+    "evaluator/build_project.py": "9f2c56bd88bc1d51ab2222fffb41e99140ee473a083f4678ac7046e55a79f948",
+    "evaluator/run_case_tests.py": "5cf4a49f43ed836a59275db14b2bd4e2c1d321c1e625a3eefead4a9e1b732ae2",
+    "evaluator/upstream_tests.json": "89c5b49c7775b32ebd60a250674923b101d55b06af060873d4e4746d5313e306"
+  },
+  "image": {
+    "name": "local/javac-case-163-junixsocket:benchmark-v1",
+    "id": "sha256:c8b7c236569b9eb461c66197356b0b109088ce31fd0f0057f5441a3afb99e497",
+    "repo_digests": [
+      "local/javac-case-163-junixsocket@sha256:c8b7c236569b9eb461c66197356b0b109088ce31fd0f0057f5441a3afb99e497"
+    ]
+  },
+  "container_exit_code": 1,
+  "phase": {
+    "phase": "project_build",
+    "outcome": "unresolved",
+    "reason": "project_build_failed",
+    "test_exit_code": null,
+    "instance_id": "kohlschutter__junixsocket-81"
+  },
+  "grading": {
+    "tests_observed": 0,
+    "FAIL_TO_PASS": {
+      "expected": 1,
+      "passed": 0,
+      "failed": 0,
+      "skipped": 0,
+      "missing": 1
+    },
+    "PASS_TO_PASS": {
+      "expected": 35,
+      "passed": 0,
+      "failed": 0,
+      "skipped": 0,
+      "missing": 35
+    },
+    "unexpected_failures": 0
+  },
+  "logs": {
+    "events": "events.jsonl",
+    "docker_stdout": "docker-run.stdout.raw.log",
+    "docker_stderr": "docker-run.stderr.raw.log",
+    "model_patch": "model-patch.raw.log",
+    "test_patch": "test-patch.raw.log",
+    "project_build": "project-build.raw.log",
+    "tests": null,
+    "grading": "grading.json"
+  }
+}

@@ -1,0 +1,18 @@
+Python 3.5.2
+GNU C Library stable release version 2.12, by Roland McGrath et al.
+Copyright (C) 2010 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+Compiled by GNU CC version 4.4.7 20120313 (Red Hat 4.4.7-23).
+Compiled on a Linux 2.6.32 system on 2018-06-19.
+Available extensions:
+	The C stubs add-on version 2.1.2.
+	crypt add-on version 2.1 by Michael Glad and others
+	GNU Libidn by Simon Josefsson
+	Native POSIX Threads Library by Ulrich Drepper et al
+	BIND-8.2.3-T5B
+	RT using linux kernel aio
+libc ABIs: UNIQUE IFUNC
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/libc/bugs.html>.

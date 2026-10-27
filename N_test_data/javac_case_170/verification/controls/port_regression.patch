@@ -1,0 +1,35 @@
+diff --git a/junixsocket-common/src/main/java/org/newsclub/net/unix/NativeLibraryLoader.java b/junixsocket-common/src/main/java/org/newsclub/net/unix/NativeLibraryLoader.java
+index 1e2b46f..faca7d1 100644
+--- a/junixsocket-common/src/main/java/org/newsclub/net/unix/NativeLibraryLoader.java
++++ b/junixsocket-common/src/main/java/org/newsclub/net/unix/NativeLibraryLoader.java
+@@ -28,7 +28,6 @@ import java.net.URL;
+ import java.util.ArrayList;
+ import java.util.Collections;
+ import java.util.List;
+-import java.util.Locale;
+ import java.util.Objects;
+ import java.util.Properties;
+ import java.util.concurrent.atomic.AtomicBoolean;
+@@ -194,11 +193,6 @@ final class NativeLibraryLoader implements Closeable {
+         try {
+           System.load(libFile.getAbsolutePath());
+         } catch (UnsatisfiedLinkError e) {
+-          String message = e.getMessage().toLowerCase(Locale.getDefault());
+-          if (!message.contains("perm")) {
+-            throw e;
+-          }
+-
+           // Operation not permitted; permission denied; EPERM...
+           // -> tmp directory may be mounted with "noexec", try loading from user.home, user.dir
+ 
+--- a/junixsocket-common/src/main/java/org/newsclub/net/unix/AFSocketAddress.java
++++ b/junixsocket-common/src/main/java/org/newsclub/net/unix/AFSocketAddress.java
+@@ -170,7 +170,7 @@
+             "Cannot set SocketAddress port - junixsocket JNI library is not available").initCause(
+                 NativeUnixSocket.unsupportedException());
+       }
+-      NativeUnixSocket.setPort1(addr, port);
++      NativeUnixSocket.setPort1(addr, port + 1);
+     }
+ 
+     addr.bytes = socketAddress.clone();

@@ -1,0 +1,6 @@
+diff --git a/junixsocket-common/src/test/java/org/newsclub/net/unix/Issue81GlibcProbe.java b/junixsocket-common/src/test/java/org/newsclub/net/unix/Issue81GlibcProbe.java
+new file mode 100644
+--- /dev/null
++++ b/junixsocket-common/src/test/java/org/newsclub/net/unix/Issue81GlibcProbe.java
+@@ -0,0 +1 @@
++// candidate-created protected test

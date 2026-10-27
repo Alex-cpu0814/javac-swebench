@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="JUnit Jupiter" tests="39" skipped="0" failures="0" errors="0" time="0.255" hostname="&lt;unknown host&gt;" timestamp="2026-10-27T10:00:19">
+<properties>
+<property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+<property name="file.encoding" value="UTF-8"/>
+<property name="file.encoding.pkg" value="sun.io"/>
+<property name="file.separator" value="/"/>
+<property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+<property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+<property name="java.class.path" value="/opt/deps/junit-platform-console-standalone-1.10.0.jar"/>
+<property name="java.class.version" value="52.0"/>
+<property name="java.endorsed.dirs" value="/opt/java/openjdk/jre/lib/endorsed"/>
+<property name="java.ext.dirs" value="/opt/java/openjdk/jre/lib/ext:/usr/java/packages/lib/ext"/>
+<property name="java.home" value="/opt/java/openjdk/jre"/>
+<property name="java.io.tmpdir" value="/tmp"/>
+<property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
+<property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+<property name="java.runtime.version" value="1.8.0_504-b01"/>
+<property name="java.specification.maintenance.version" value="6"/>
+<property name="java.specification.name" value="Java Platform API Specification"/>
+<property name="java.specification.vendor" value="Oracle Corporation"/>
+<property name="java.specification.version" value="1.8"/>
+<property name="java.vendor" value="Temurin"/>
+<property name="java.vendor.url" value="https://adoptium.net/"/>
+<property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+<property name="java.version" value="1.8.0_504"/>
+<property name="java.vm.info" value="mixed mode"/>
+<property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+<property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+<property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+<property name="java.vm.specification.version" value="1.8"/>
+<property name="java.vm.vendor" value="Temurin"/>
+<property name="java.vm.version" value="25.504-b01"/>
+<property name="line.separator" value="
+"/>
+<property name="os.arch" value="amd64"/>
+<property name="os.name" value="Linux"/>
+<property name="os.version" value="6.18.33.2-microsoft-standard-WSL2"/>
+<property name="path.separator" value=":"/>
+<property name="sun.arch.data.model" value="64"/>
+<property name="sun.boot.class.path" value="/opt/java/openjdk/jre/lib/resources.jar:/opt/java/openjdk/jre/lib/rt.jar:/opt/java/openjdk/jre/lib/sunrsasign.jar:/opt/java/openjdk/jre/lib/jsse.jar:/opt/java/openjdk/jre/lib/jce.jar:/opt/java/openjdk/jre/lib/charsets.jar:/opt/java/openjdk/jre/lib/jfr.jar:/opt/java/openjdk/jre/classes"/>
+<property name="sun.boot.library.path" value="/opt/java/openjdk/jre/lib/amd64"/>
+<property name="sun.cpu.endian" value="little"/>
+<property name="sun.cpu.isalist" value=""/>
+<property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+<property name="sun.java.command" value="/opt/deps/junit-platform-console-standalone-1.10.0.jar execute --disable-ansi-colors --details=summary --class-path /testbed/target/case170/classes:/testbed/target/case170/testclasses:/opt/deps/animal-sniffer-annotations-1.23.jar:/opt/deps/compiler-annotations-1.6.3.jar:/opt/deps/error_prone_annotations-2.22.0.jar:/opt/deps/junit-platform-console-standalone-1.10.0.jar:/opt/deps/junixsocket-native-common-2.8.0.jar:/opt/deps/kohlschutter-test-util-1.6.3.jar:/opt/deps/kohlschutter-util-1.6.3.jar:/opt/deps/org.eclipse.jdt.annotation-2.2.700.jar --reports-dir /results/junit --select-class org.newsclub.net.unix.AFUNIXSocketAddressTest --select-class org.newsclub.net.unix.domain.SocketTest --select-class org.newsclub.net.unix.domain.ReadWriteTest --select-class org.newsclub.net.unix.domain.SocketFactoryTest --select-class org.newsclub.net.unix.domain.SocketAddressTest"/>
+<property name="sun.java.launcher" value="SUN_STANDARD"/>
+<property name="sun.jnu.encoding" value="UTF-8"/>
+<property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+<property name="sun.os.patch.level" value="unknown"/>
+<property name="user.dir" value="/testbed"/>
+<property name="user.home" value="/root"/>
+<property name="user.language" value="en"/>
+<property name="user.name" value="root"/>
+<property name="user.timezone" value="Etc/UTC"/>
+</properties>
+<testcase name="testReceivedFileDescriptorsUnconnected()" classname="org.newsclub.net.unix.domain.SocketTest" time="0.002">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.domain.SocketTest]/[method:testReceivedFileDescriptorsUnconnected()]
+display-name: testReceivedFileDescriptorsUnconnected()
+]]></system-out>
+</testcase>
+<testcase name="testSupports()" classname="org.newsclub.net.unix.domain.SocketTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.domain.SocketTest]/[method:testSupports()]
+display-name: testSupports()
+]]></system-out>
+</testcase>
+<testcase name="testURISchemeCeateSocketWithInvalidHostname()" classname="org.newsclub.net.unix.domain.SocketFactoryTest" time="0.002">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.domain.SocketFactoryTest]/[method:testURISchemeCeateSocketWithInvalidHostname()]
+display-name: testURISchemeCeateSocketWithInvalidHostname()
+]]></system-out>
+</testcase>
+<testcase name="testReceiveDataByteForByteSendByteForByte()" classname="org.newsclub.net.unix.domain.ReadWriteTest" time="0.004">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.domain.ReadWriteTest]/[method:testReceiveDataByteForByteSendByteForByte()]
+display-name: testReceiveDataByteForByteSendByteForByte()
+]]></system-out>
+</testcase>
+<testcase name="testVersion()" classname="org.newsclub.net.unix.domain.SocketTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.domain.SocketTest]/[method:testVersion()]
+display-name: testVersion()
+]]></system-out>
+</testcase>
+<testcase name="testReceiveDataByteForByteSendWithByteArray()" classname="org.newsclub.net.unix.domain.ReadWriteTest" time="0.003">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.domain.ReadWriteTest]/[method:testReceiveDataByteForByteSendWithByteArray()]
+display-name: testReceiveDataByteForByteSendWithByteArray()
+]]></system-out>
+</testcase>
+<testcase name="testEmptyAddress()" classname="org.newsclub.net.unix.domain.SocketAddressTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.domain.SocketAddressTest]/[method:testEmptyAddress()]
+display-name: testEmptyAddress()
+]]></system-out>
+</testcase>
+<testcase name="testSupported()" classname="org.newsclub.net.unix.domain.SocketTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.domain.SocketTest]/[method:testSupported()]
+display-name: testSupported()
+]]></system-out>
+</testcase>
+<testcase name="testURITemplateWithPortNumber()" classname="org.newsclub.net.unix.AFUNIXSocketAddressTest" time="0.002">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.AFUNIXSocketAddressTest]/[method:testURITemplateWithPortNumber()]
+display-name: testURITemplateWithPortNumber()
+]]></system-out>
+</testcase>
+<testcase name="testByteConstructor()" classname="org.newsclub.net.unix.domain.SocketAddressTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.domain.SocketAddressTest]/[method:testByteConstructor()]
+display-name: testByteConstructor()
+]]></system-out>
+</testcase>
+<testcase name="testUnconnectedSocket()" classname="org.newsclub.net.unix.domain.SocketTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.domain.SocketTest]/[method:testUnconnectedSocket()]
+display-name: testUnconnectedSocket()
+]]></system-out>
+</testcase>
+<testcase name="testCraftDeserialization()" classname="org.newsclub.net.unix.AFUNIXSocketAddressTest" time="0.013">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.AFUNIXSocketAddressTest]/[method:testCraftDeserialization()]
+display-name: testCraftDeserialization()
+]]></system-out>
+</testcase>
+<testcase name="testPath()" classname="org.newsclub.net.unix.domain.SocketAddressTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.domain.SocketAddressTest]/[method:testPath()]
+display-name: testPath()
+]]></system-out>
+</testcase>
+<testcase name="testFactoryArg()" classname="org.newsclub.net.unix.domain.SocketFactoryTest" time="0.003">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.domain.SocketFactoryTest]/[method:testFactoryArg()]
+display-name: testFactoryArg()
+]]></system-out>
+</testcase>
+<testcase name="testReceiveWithByteArraySendWithByteArray()" classname="org.newsclub.net.unix.domain.ReadWriteTest" time="0.004">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.domain.ReadWriteTest]/[method:testReceiveWithByteArraySendWithByteArray()]
+display-name: testReceiveWithByteArraySendWithByteArray()
+]]></system-out>
+</testcase>
+<testcase name="testURITemplate()" classname="org.newsclub.net.unix.AFUNIXSocketAddressTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.AFUNIXSocketAddressTest]/[method:testURITemplate()]
+display-name: testURITemplate()
+]]></system-out>
+</testcase>
+<testcase name="testInetAddress()" classname="org.newsclub.net.unix.domain.SocketAddressTest" time="0.003">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.domain.SocketAddressTest]/[method:testInetAddress()]
+display-name: testInetAddress()
+]]></system-out>
+</testcase>
+<testcase name="testLargePort()" classname="org.newsclub.net.unix.domain.SocketAddressTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.domain.SocketAddressTest]/[method:testLargePort()]
+display-name: testLargePort()
+]]></system-out>
+</testcase>
+<testcase name="testAbstractNamespace()" classname="org.newsclub.net.unix.domain.SocketAddressTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.domain.SocketAddressTest]/[method:testAbstractNamespace()]
+display-name: testAbstractNamespace()
+]]></system-out>
+</testcase>
+<testcase name="testCloseable()" classname="org.newsclub.net.unix.domain.SocketTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.domain.SocketTest]/[method:testCloseable()]
+display-name: testCloseable()
+]]></system-out>
+</testcase>
+<testcase name="testUnixScheme()" classname="org.newsclub.net.unix.AFUNIXSocketAddressTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.AFUNIXSocketAddressTest]/[method:testUnixScheme()]
+display-name: testUnixScheme()
+]]></system-out>
+</testcase>
+<testcase name="testMain()" classname="org.newsclub.net.unix.domain.SocketTest" time="0.007">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.domain.SocketTest]/[method:testMain()]
+display-name: testMain()
+]]></system-out>
+</testcase>
+<testcase name="testURISchemeCeateSocketWithHostnameValidCases()" classname="org.newsclub.net.unix.domain.SocketFactoryTest" time="0.004">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.domain.SocketFactoryTest]/[method:testURISchemeCeateSocketWithHostnameValidCases()]
+display-name: testURISchemeCeateSocketWithHostnameValidCases()
+]]></system-out>
+</testcase>
+<testcase name="testLegacyConstructor()" classname="org.newsclub.net.unix.domain.SocketAddressTest" time="0.002">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.domain.SocketAddressTest]/[method:testLegacyConstructor()]
+display-name: testLegacyConstructor()
+]]></system-out>
+</testcase>
+<testcase name="testSystemProperty()" classname="org.newsclub.net.unix.domain.SocketFactoryTest" time="0.002">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.domain.SocketFactoryTest]/[method:testSystemProperty()]
+display-name: testSystemProperty()
+]]></system-out>
+</testcase>
+<testcase name="testURISchemeCeateSocketThenConnect()" classname="org.newsclub.net.unix.domain.SocketFactoryTest" time="0.003">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.domain.SocketFactoryTest]/[method:testURISchemeCeateSocketThenConnect()]
+display-name: testURISchemeCeateSocketThenConnect()
+]]></system-out>
+</testcase>
+<testcase name="testAbstractNamespace()" classname="org.newsclub.net.unix.AFUNIXSocketAddressTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.AFUNIXSocketAddressTest]/[method:testAbstractNamespace()]
+display-name: testAbstractNamespace()
+]]></system-out>
+</testcase>
+<testcase name="testBindBadArguments()" classname="org.newsclub.net.unix.domain.SocketTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.domain.SocketTest]/[method:testBindBadArguments()]
+display-name: testBindBadArguments()
+]]></system-out>
+</testcase>
+<testcase name="testURISchemeCeateSocketWithIllegalArguments()" classname="org.newsclub.net.unix.domain.SocketFactoryTest" time="0.002">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.domain.SocketFactoryTest]/[method:testURISchemeCeateSocketWithIllegalArguments()]
+display-name: testURISchemeCeateSocketWithIllegalArguments()
+]]></system-out>
+</testcase>
+<testcase name="testConnectBadArguments()" classname="org.newsclub.net.unix.domain.SocketTest" time="0.012">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.domain.SocketTest]/[method:testConnectBadArguments()]
+display-name: testConnectBadArguments()
+]]></system-out>
+</testcase>
+<testcase name="testLoadedLibrary()" classname="org.newsclub.net.unix.domain.SocketTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.domain.SocketTest]/[method:testLoadedLibrary()]
+display-name: testLoadedLibrary()
+]]></system-out>
+</testcase>
+<testcase name="testFileScheme()" classname="org.newsclub.net.unix.AFUNIXSocketAddressTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.AFUNIXSocketAddressTest]/[method:testFileScheme()]
+display-name: testFileScheme()
+]]></system-out>
+</testcase>
+<testcase name="testHttpUnix()" classname="org.newsclub.net.unix.AFUNIXSocketAddressTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.AFUNIXSocketAddressTest]/[method:testHttpUnix()]
+display-name: testHttpUnix()
+]]></system-out>
+</testcase>
+<testcase name="testPort()" classname="org.newsclub.net.unix.domain.SocketAddressTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.domain.SocketAddressTest]/[method:testPort()]
+display-name: testPort()
+]]></system-out>
+</testcase>
+<testcase name="testSocatString()" classname="org.newsclub.net.unix.AFUNIXSocketAddressTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.AFUNIXSocketAddressTest]/[method:testSocatString()]
+display-name: testSocatString()
+]]></system-out>
+</testcase>
+<testcase name="testSchemesAvailable()" classname="org.newsclub.net.unix.AFUNIXSocketAddressTest" time="0.072">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.AFUNIXSocketAddressTest]/[method:testSchemesAvailable()]
+display-name: testSchemesAvailable()
+]]></system-out>
+</testcase>
+<testcase name="testParseURIandBack()" classname="org.newsclub.net.unix.AFUNIXSocketAddressTest" time="0.003">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.AFUNIXSocketAddressTest]/[method:testParseURIandBack()]
+display-name: testParseURIandBack()
+]]></system-out>
+</testcase>
+<testcase name="testReceiveWithByteArraySendByteForByte()" classname="org.newsclub.net.unix.domain.ReadWriteTest" time="0.01">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.domain.ReadWriteTest]/[method:testReceiveWithByteArraySendByteForByte()]
+display-name: testReceiveWithByteArraySendByteForByte()
+]]></system-out>
+</testcase>
+<testcase name="testSerialize()" classname="org.newsclub.net.unix.AFUNIXSocketAddressTest" time="0.004">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:org.newsclub.net.unix.AFUNIXSocketAddressTest]/[method:testSerialize()]
+display-name: testSerialize()
+]]></system-out>
+</testcase>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]
+display-name: JUnit Jupiter
+]]></system-out>
+</testsuite>

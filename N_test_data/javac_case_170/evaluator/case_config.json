@@ -1,0 +1,31 @@
+{
+  "template_version": "1.0",
+  "case_number": "170",
+  "instance_id": "kohlschutter__junixsocket-140",
+  "instance_file": "official_swebench/instance_170.json",
+  "repo_url": "https://github.com/kohlschutter/junixsocket.git",
+  "base_commit": "71a134bce58a22fb17a7a14f00799196c0c71a60",
+  "fix_commit": "09548dadf52ba6b4f939d0260c391503f478a6a5",
+  "image": "yutu0814/javac-case-170-junixsocket@sha256:1a70b55b3d05b7f18257b238ba0ab246f055b03023eb9483d1cafc58703fbde3",
+  "python_version": "3.10",
+  "extra_apt_packages": [],
+  "runtime_assets": [
+    {
+      "source": "evaluator/case_adapter.sh",
+      "target": "/benchmark/case_adapter.sh"
+    },
+    {
+      "source": "evaluator/build_project.py",
+      "target": "/benchmark/build_project.py"
+    },
+    {
+      "source": "evaluator/run_case_tests.py",
+      "target": "/benchmark/run_case_tests.py"
+    },
+    {
+      "source": "evaluator/upstream_tests.json",
+      "target": "/benchmark/upstream_tests.json"
+    }
+  ],
+  "build_image": "local/javac-case-170-junixsocket:benchmark-v1"
+}

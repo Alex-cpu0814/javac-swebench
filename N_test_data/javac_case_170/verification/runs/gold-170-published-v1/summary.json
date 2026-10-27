@@ -1,0 +1,73 @@
+{
+  "schema_version": "3.0",
+  "kind": "patch_evaluation",
+  "run_id": "gold-170-published-v1",
+  "label": "gold",
+  "instance_id": "kohlschutter__junixsocket-140",
+  "status": "resolved",
+  "reason": "all_expected_tests_passed",
+  "started_at": "2026-10-27T10:19:48.347Z",
+  "finished_at": "2026-10-27T10:19:56.816Z",
+  "duration_ms": 8468,
+  "application_order": [
+    "model_patch",
+    "test_patch",
+    "tests"
+  ],
+  "model_patch_sha256": "27545cc3b6ae4db392e28fb1c5a99378771517826c5009629d8c0c44cbe2818b",
+  "test_patch_sha256": "1284e65b695d456cbf7c4211053eeefd8dee03dcd8ec06948097a6b7bf8fe245",
+  "evaluation_assets_sha256": {
+    "evaluator/run_evaluation.sh": "e65da2cf6d001eaad430032c987e6acd4ddd2ef94ca87de24a0f332b08832bc9",
+    "evaluator/case_config.json": "d677fbf095eba5c1a36e4129e2df9da0ada5c5d330968f863d47f4c59735328f",
+    "evaluator/evaluate_model_patch.py": "e47a4f8ef17f7b9dcdc29e1c50a2fb90fdb8c5ce676c2769f4b616c3b7ca5ad7",
+    "evaluator/logging_v3.py": "add904e35fde3b61f757d2e9129fc33545591646f14011a93da4455e293aeb5f",
+    "evaluator/case_adapter.sh": "ab8cc705dbc2a43db6abb73539fd9a2005b9331cd3fccd3edeaf1556a672a22f",
+    "evaluator/build_project.py": "e31436b544f765e0dc2d2dcb992c554a2b19f4ab8c5bddcdc65d1d70fd071ac0",
+    "evaluator/run_case_tests.py": "a7ef9f8473f896d653aecdc4af7f8cc200a5200ac94e2385f16b5cab5b37f697",
+    "evaluator/upstream_tests.json": "c60fd73bc92480d14cd391a85ee38620ec472eab8b84bffd255786271757b07f"
+  },
+  "image": {
+    "name": "yutu0814/javac-case-170-junixsocket@sha256:1a70b55b3d05b7f18257b238ba0ab246f055b03023eb9483d1cafc58703fbde3",
+    "id": "sha256:1a70b55b3d05b7f18257b238ba0ab246f055b03023eb9483d1cafc58703fbde3",
+    "repo_digests": [
+      "local/javac-case-170-junixsocket@sha256:1a70b55b3d05b7f18257b238ba0ab246f055b03023eb9483d1cafc58703fbde3",
+      "yutu0814/javac-case-170-junixsocket@sha256:1a70b55b3d05b7f18257b238ba0ab246f055b03023eb9483d1cafc58703fbde3"
+    ]
+  },
+  "container_exit_code": 0,
+  "phase": {
+    "phase": "tests_complete",
+    "outcome": "completed",
+    "reason": "tests_completed",
+    "test_exit_code": 0,
+    "instance_id": "kohlschutter__junixsocket-140"
+  },
+  "grading": {
+    "tests_observed": 43,
+    "FAIL_TO_PASS": {
+      "expected": 2,
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "missing": 0
+    },
+    "PASS_TO_PASS": {
+      "expected": 41,
+      "passed": 41,
+      "failed": 0,
+      "skipped": 0,
+      "missing": 0
+    },
+    "unexpected_failures": 0
+  },
+  "logs": {
+    "events": "events.jsonl",
+    "docker_stdout": "docker-run.stdout.raw.log",
+    "docker_stderr": "docker-run.stderr.raw.log",
+    "model_patch": "model-patch.raw.log",
+    "test_patch": "test-patch.raw.log",
+    "project_build": "project-build.raw.log",
+    "tests": "tests.raw.log",
+    "grading": "grading.json"
+  }
+}

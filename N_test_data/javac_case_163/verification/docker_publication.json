@@ -1,0 +1,13 @@
+{
+  "published_at": "2026-10-27T10:16:00.4092556Z",
+  "repository": "yutu0814/javac-case-163-junixsocket",
+  "tag": "benchmark-v1",
+  "digest": "sha256:c8b7c236569b9eb461c66197356b0b109088ce31fd0f0057f5441a3afb99e497",
+  "immutable_reference": "yutu0814/javac-case-163-junixsocket@sha256:c8b7c236569b9eb461c66197356b0b109088ce31fd0f0057f5441a3afb99e497",
+  "publication_type": "published_existing_validated_clean_base_image",
+  "rebuilt": false,
+  "anonymous_manifest_http_status": 200,
+  "patches_injected_at_runtime": true,
+  "github_repository": "https://github.com/Alex-cpu0814/javac-swebench",
+  "original_image_id": "sha256:c8b7c236569b9eb461c66197356b0b109088ce31fd0f0057f5441a3afb99e497"
+}

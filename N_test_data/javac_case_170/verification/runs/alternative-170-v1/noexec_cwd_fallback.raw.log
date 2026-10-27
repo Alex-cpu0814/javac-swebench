@@ -1,0 +1,13 @@
+JAVA=1.8.0_504
+LOADER_ORIGIN=file:/testbed/target/case170/classes/
+WRITABLE=/case-noexec/noexec_cwd_fallback0
+WRITABLE=/case-noexec/noexec_cwd_fallback1
+WRITABLE=/case-exec/noexec_cwd_fallback2
+MOUNT=/case-exec rw,nosuid,nodev,relatime
+MOUNT=/case-noexec rw,nosuid,nodev,noexec,relatime
+BEFORE_SOCKET
+ROUNDTRIP_OK=0
+ROUNDTRIP_OK=1
+ROUNDTRIP_OK=2
+NATIVE_MAPPING=/case-exec/noexec_cwd_fallback2/libtmp6210878204378246575libjunixsocket-native-2.8.0.so (deleted)
+NOEXEC_PROBE_OK

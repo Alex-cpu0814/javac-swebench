@@ -1,0 +1,146 @@
+The push refers to repository [docker.io/yutu0814/javac-case-170-junixsocket]
+5f5bf1d5bc0b: Waiting
+44136fa355b3: Waiting
+dcff042be2a2: Waiting
+cf1a5487baaf: Waiting
+5f5bf1d5bc0b: Waiting
+44136fa355b3: Waiting
+dcff042be2a2: Waiting
+cf1a5487baaf: Waiting
+5f5bf1d5bc0b: Waiting
+44136fa355b3: Waiting
+dcff042be2a2: Waiting
+cf1a5487baaf: Waiting
+5f5bf1d5bc0b: Waiting
+44136fa355b3: Waiting
+dcff042be2a2: Waiting
+cf1a5487baaf: Waiting
+cf1a5487baaf: Waiting
+5f5bf1d5bc0b: Waiting
+44136fa355b3: Waiting
+dcff042be2a2: Waiting
+5f5bf1d5bc0b: Waiting
+44136fa355b3: Waiting
+dcff042be2a2: Waiting
+cf1a5487baaf: Waiting
+5f5bf1d5bc0b: Waiting
+44136fa355b3: Waiting
+dcff042be2a2: Waiting
+cf1a5487baaf: Waiting
+5f5bf1d5bc0b: Waiting
+44136fa355b3: Waiting
+dcff042be2a2: Waiting
+cf1a5487baaf: Waiting
+cf1a5487baaf: Waiting
+5f5bf1d5bc0b: Waiting
+44136fa355b3: Waiting
+dcff042be2a2: Waiting
+dcff042be2a2: Waiting
+cf1a5487baaf: Waiting
+5f5bf1d5bc0b: Waiting
+44136fa355b3: Waiting
+5f5bf1d5bc0b: Waiting
+44136fa355b3: Waiting
+dcff042be2a2: Waiting
+cf1a5487baaf: Waiting
+5f5bf1d5bc0b: Waiting
+44136fa355b3: Waiting
+dcff042be2a2: Waiting
+cf1a5487baaf: Waiting
+5f5bf1d5bc0b: Waiting
+44136fa355b3: Waiting
+dcff042be2a2: Waiting
+cf1a5487baaf: Waiting
+cf1a5487baaf: Waiting
+5f5bf1d5bc0b: Waiting
+44136fa355b3: Waiting
+dcff042be2a2: Waiting
+cf1a5487baaf: Waiting
+5f5bf1d5bc0b: Waiting
+44136fa355b3: Waiting
+dcff042be2a2: Waiting
+44136fa355b3: Waiting
+dcff042be2a2: Waiting
+cf1a5487baaf: Waiting
+5f5bf1d5bc0b: Waiting
+5f5bf1d5bc0b: Waiting
+44136fa355b3: Waiting
+dcff042be2a2: Waiting
+cf1a5487baaf: Waiting
+5f5bf1d5bc0b: Waiting
+44136fa355b3: Waiting
+dcff042be2a2: Waiting
+cf1a5487baaf: Waiting
+5f5bf1d5bc0b: Waiting
+44136fa355b3: Waiting
+dcff042be2a2: Waiting
+cf1a5487baaf: Layer already exists
+2233e22c50a3: Waiting
+bacfe231afbf: Waiting
+dcff042be2a2: Waiting
+2233e22c50a3: Waiting
+bacfe231afbf: Waiting
+5f5bf1d5bc0b: Waiting
+44136fa355b3: Waiting
+2233e22c50a3: Waiting
+bacfe231afbf: Waiting
+5f5bf1d5bc0b: Waiting
+44136fa355b3: Waiting
+dcff042be2a2: Waiting
+5f5bf1d5bc0b: Waiting
+44136fa355b3: Already exists
+dcff042be2a2: Layer already exists
+583b6e1f5023: Waiting
+2233e22c50a3: Waiting
+bacfe231afbf: Waiting
+5af940864667: Waiting
+5af940864667: Waiting
+5f5bf1d5bc0b: Waiting
+583b6e1f5023: Waiting
+2233e22c50a3: Waiting
+bacfe231afbf: Waiting
+583b6e1f5023: Waiting
+2233e22c50a3: Waiting
+bacfe231afbf: Waiting
+5af940864667: Waiting
+5f5bf1d5bc0b: Waiting
+5f5bf1d5bc0b: Waiting
+8a6683d4f4de: Waiting
+583b6e1f5023: Waiting
+2233e22c50a3: Layer already exists
+bacfe231afbf: Waiting
+5af940864667: Waiting
+bacfe231afbf: Layer already exists
+5af940864667: Waiting
+5f5bf1d5bc0b: Waiting
+8a6683d4f4de: Waiting
+09fb4fe714de: Waiting
+583b6e1f5023: Waiting
+5af940864667: Waiting
+5f5bf1d5bc0b: Waiting
+8a6683d4f4de: Waiting
+09fb4fe714de: Waiting
+583b6e1f5023: Waiting
+5f5bf1d5bc0b: Waiting
+8a6683d4f4de: Waiting
+09fb4fe714de: Waiting
+583b6e1f5023: Waiting
+5af940864667: Waiting
+6b397c89f209: Waiting
+5af940864667: Layer already exists
+5f5bf1d5bc0b: Waiting
+8a6683d4f4de: Layer already exists
+09fb4fe714de: Layer already exists
+583b6e1f5023: Waiting
+4f4fb700ef54: Waiting
+583b6e1f5023: Waiting
+4f4fb700ef54: Waiting
+6b397c89f209: Waiting
+583b6e1f5023: Waiting
+4f4fb700ef54: Waiting
+6b397c89f209: Waiting
+583b6e1f5023: Layer already exists
+4f4fb700ef54: Layer already exists
+6b397c89f209: Layer already exists
+5f5bf1d5bc0b: Pushed
+benchmark-v1: digest: sha256:1a70b55b3d05b7f18257b238ba0ab246f055b03023eb9483d1cafc58703fbde3 size: 856

@@ -1,0 +1,6 @@
+diff --git a/benchmark-tests/org/newsclub/net/unix/NoexecProbe.java b/benchmark-tests/org/newsclub/net/unix/NoexecProbe.java
+new file mode 100644
+--- /dev/null
++++ b/benchmark-tests/org/newsclub/net/unix/NoexecProbe.java
+@@ -0,0 +1 @@
++// candidate-created protected test

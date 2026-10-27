@@ -1,0 +1,13 @@
+--- a/junixsocket-native/src/main/c/org_newsclub_net_unix_NativeUnixSocket.c
++++ b/junixsocket-native/src/main/c/org_newsclub_net_unix_NativeUnixSocket.c
+@@ -183,6 +183,10 @@
+ #  define socket_errno (errno = WSAGetLastError())
+ #else
+ #  define socket_errno errno
++#endif
++
++#if __GLIBC__ && __CROSSCLANG_NODEPS__
++# define stat(...) __xstat(1, __VA_ARGS__)
+ #endif
+ 
+ typedef enum {

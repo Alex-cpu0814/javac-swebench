@@ -1,0 +1,11 @@
+{
+  "base_commit": "90716d6008c5c9cfa8a061f3d23531acaea29777",
+  "fix_commit_absent": true,
+  "assets": {
+    "annotations-3.0.1.jar": "6b47ff0a6de0ce17cbedc3abb0828ca5bce3009d53ea47b3723ff023c4742f79",
+    "base-source.tar": "7b12612223e91af51e310c58e3fc5de8a747092a351c5ad7669085a18e94e92d",
+    "junit-platform-console-standalone-1.6.0-M1.jar": "e86b2abb61724235c281cc4325329a68fe8731f84bb5628b8fbb2a09d52b117e",
+    "OpenJDK8U-jdk_x64_linux_hotspot_8u292b10.tar.gz": "0949505fcf42a1765558048451bb2a22e84b3635b1a31dd6191780eeccaa4ada",
+    "qemu-x86_64-static": "7132ffd39aef71c26d3344cc0c7dffc530e10e3e720c58c8279a97ef6fdd7784"
+  }
+}

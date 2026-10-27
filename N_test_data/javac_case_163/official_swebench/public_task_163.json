@@ -1,0 +1,10 @@
+{
+  "instance_id": "kohlschutter__junixsocket-81",
+  "repo": "kohlschutter/junixsocket",
+  "base_commit": "90716d6008c5c9cfa8a061f3d23531acaea29777",
+  "problem_statement": "junixsocket can terminate the JVM when binding a Unix-domain socket on Linux with an older glibc.\n\nOn x86_64 systems with glibc 2.12, the normal packaged native library can fail to load because it requires GLIBC_2.14. The library loader then falls back to its nodeps variant. Calling AFUNIXServerSocket.bind() subsequently terminates Java with a native dynamic-linker error:\n\njava: symbol lookup error: ...libjunixsocket-native-2.3.2.so: undefined symbol: stat\n\nThis is the issue reported for multiple releases in #81 (the title names 2.2.0; this checkout reports version 2.3.2). The same application works on newer glibc systems.\n\nFix the native compatibility problem so the normal automatic library-loading path supports binding, connecting, exchanging data in both directions, and closing Unix-domain sockets on the older system. Preserve existing behavior on supported newer systems. Do not require application users to provide a preload workaround or replace the native socket implementation.\n",
+  "hints_text": "",
+  "created_at": "2020-07-24",
+  "version": "2.3.2",
+  "issue_url": "https://github.com/kohlschutter/junixsocket/issues/81"
+}

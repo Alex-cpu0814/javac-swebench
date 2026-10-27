@@ -1,0 +1,72 @@
+{
+  "schema_version": "3.0",
+  "kind": "patch_evaluation",
+  "run_id": "gold-170-v2",
+  "label": "gold",
+  "instance_id": "kohlschutter__junixsocket-140",
+  "status": "resolved",
+  "reason": "all_expected_tests_passed",
+  "started_at": "2026-10-27T10:00:30.230Z",
+  "finished_at": "2026-10-27T10:00:38.010Z",
+  "duration_ms": 7780,
+  "application_order": [
+    "model_patch",
+    "test_patch",
+    "tests"
+  ],
+  "model_patch_sha256": "27545cc3b6ae4db392e28fb1c5a99378771517826c5009629d8c0c44cbe2818b",
+  "test_patch_sha256": "1284e65b695d456cbf7c4211053eeefd8dee03dcd8ec06948097a6b7bf8fe245",
+  "evaluation_assets_sha256": {
+    "evaluator/run_evaluation.sh": "e65da2cf6d001eaad430032c987e6acd4ddd2ef94ca87de24a0f332b08832bc9",
+    "evaluator/case_config.json": "388d5567af85767c2fa17bcd63a46830a828fa73edc1d8b5fd7d6923697407ce",
+    "evaluator/evaluate_model_patch.py": "e47a4f8ef17f7b9dcdc29e1c50a2fb90fdb8c5ce676c2769f4b616c3b7ca5ad7",
+    "evaluator/logging_v3.py": "add904e35fde3b61f757d2e9129fc33545591646f14011a93da4455e293aeb5f",
+    "evaluator/case_adapter.sh": "ab8cc705dbc2a43db6abb73539fd9a2005b9331cd3fccd3edeaf1556a672a22f",
+    "evaluator/build_project.py": "e31436b544f765e0dc2d2dcb992c554a2b19f4ab8c5bddcdc65d1d70fd071ac0",
+    "evaluator/run_case_tests.py": "a7ef9f8473f896d653aecdc4af7f8cc200a5200ac94e2385f16b5cab5b37f697",
+    "evaluator/upstream_tests.json": "c60fd73bc92480d14cd391a85ee38620ec472eab8b84bffd255786271757b07f"
+  },
+  "image": {
+    "name": "local/javac-case-170-junixsocket:benchmark-v1",
+    "id": "sha256:406c7b00f6976f2bdbd8be8d064f14f3e6a7c06a029f9c7671818ee036102f1e",
+    "repo_digests": [
+      "local/javac-case-170-junixsocket@sha256:406c7b00f6976f2bdbd8be8d064f14f3e6a7c06a029f9c7671818ee036102f1e"
+    ]
+  },
+  "container_exit_code": 0,
+  "phase": {
+    "phase": "tests_complete",
+    "outcome": "completed",
+    "reason": "tests_completed",
+    "test_exit_code": 0,
+    "instance_id": "kohlschutter__junixsocket-140"
+  },
+  "grading": {
+    "tests_observed": 43,
+    "FAIL_TO_PASS": {
+      "expected": 2,
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "missing": 0
+    },
+    "PASS_TO_PASS": {
+      "expected": 41,
+      "passed": 41,
+      "failed": 0,
+      "skipped": 0,
+      "missing": 0
+    },
+    "unexpected_failures": 0
+  },
+  "logs": {
+    "events": "events.jsonl",
+    "docker_stdout": "docker-run.stdout.raw.log",
+    "docker_stderr": "docker-run.stderr.raw.log",
+    "model_patch": "model-patch.raw.log",
+    "test_patch": "test-patch.raw.log",
+    "project_build": "project-build.raw.log",
+    "tests": "tests.raw.log",
+    "grading": "grading.json"
+  }
+}
